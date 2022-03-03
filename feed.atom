@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://www.quartz-scheduler.net</id>
+    <title>Quartz.NET</title>
+    <updated>2022-03-03T21:50:33.793Z</updated>
+    <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
+    <link rel="alternate" href="https://www.quartz-scheduler.net"/>
+    <link rel="self" href="https://www.quartz-scheduler.net/feed.atom"/>
+    <subtitle>Open-source scheduling framework for .NET.</subtitle>
+    <entry>
+        <title type="html"><![CDATA[Quartz.NET 2.0 Released]]></title>
+        <id>https://www.quartz-scheduler.net/2012/04/09/quartznet-2-0-released/</id>
+        <link href="https://www.quartz-scheduler.net/2012/04/09/quartznet-2-0-released/">
+        </link>
+        <updated>2012-04-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Quartz.NET 2.0 has finally been released. Quartz.NET 2.0 introduces a new more interfaced based model of operating with the API, lots of performance improvements and bug fixes to issues found in 1.0.x line.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Quartz.NET 2.0.1 Released]]></title>
+        <id>https://www.quartz-scheduler.net/2012/04/22/quartznet-2-0-1-released/</id>
+        <link href="https://www.quartz-scheduler.net/2012/04/22/quartznet-2-0-1-released/">
+        </link>
+        <updated>2012-04-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ObjectUtils.SetPropertyValue fails with explicitly implemented interface members]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Quartz.NET 2.1 Released]]></title>
+        <id>https://www.quartz-scheduler.net/2012/12/31/quartznet-2-1-released/</id>
+        <link href="https://www.quartz-scheduler.net/2012/12/31/quartznet-2-1-released/">
+        </link>
+        <updated>2012-12-31T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[NthIncludedDayTrigger was removed as it was accidentally left behind even though being legacy and replaced by DailyTimeIntervalTrigger.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Quartz.NET 2.1.1 Released]]></title>
+        <id>https://www.quartz-scheduler.net/2013/01/05/quartznet-2-1-1-released/</id>
+        <link href="https://www.quartz-scheduler.net/2013/01/05/quartznet-2-1-1-released/">
+        </link>
+        <updated>2013-01-05T00:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Quartz.NET 2.1.2 Released]]></title>
+        <id>https://www.quartz-scheduler.net/2013/01/13/quartznet-2-1-2-released/</id>
+        <link href="https://www.quartz-scheduler.net/2013/01/13/quartznet-2-1-2-released/">
+        </link>
+        <updated>2013-01-13T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[This is a maintenance release fixing issue where .NET 4.0 DLLs required 4.5 runtime due to ilmerge missing special framework parameter.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Quartz.NET 2.2 Released]]></title>
+        <id>https://www.quartz-scheduler.net/2013/10/09/quartznet-2-2-released/</id>
+        <link href="https://www.quartz-scheduler.net/2013/10/09/quartznet-2-2-released/">
+        </link>
+        <updated>2013-10-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[this script adds a new column SCHEDTIME to table QRTZFIRED_TRIGGERS
+file contains the alter command for SQL Server and other database samples in comments]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Quartz.NET 2.2.1 Released]]></title>
+        <id>https://www.quartz-scheduler.net/2013/11/24/quartznet-2-2-1-released/</id>
+        <link href="https://www.quartz-scheduler.net/2013/11/24/quartznet-2-2-1-released/">
+        </link>
+        <updated>2013-11-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Quarts server does not properly log possible exception when starting the service
+DailyTimeIntervalTrigger GetFireTimeAfter produces incorrect result when date is in the past
+batchTriggerAcquisitionMaxCount acquires one trigger unless batchTriggerAcquisitionFireAheadTimeWindow is also set
+Oracle ODP Managed provider should set BindByName to true for OracleCommands]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Website has moved to using GitHub pages]]></title>
+        <id>https://www.quartz-scheduler.net/2014/01/06/website-moved-gihub-pages/</id>
+        <link href="https://www.quartz-scheduler.net/2014/01/06/website-moved-gihub-pages/">
+        </link>
+        <updated>2014-01-06T00:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The tutorial has been updated to include 2.x API changes]]></title>
+        <id>https://www.quartz-scheduler.net/2014/01/07/tutorial-updated-with-2-x-api-changes/</id>
+        <link href="https://www.quartz-scheduler.net/2014/01/07/tutorial-updated-with-2-x-api-changes/">
+        </link>
+        <updated>2014-01-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[With the latest switch to GitHub Pages it's been a joy to create content. There tutorial has now been split
+to two separate tutorials for Quartz.NET 1.x and 2.x respectively.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Quartz.NET 2.2.2 Released]]></title>
+        <id>https://www.quartz-scheduler.net/2014/02/09/quartznet-2-2-2-released/</id>
+        <link href="https://www.quartz-scheduler.net/2014/02/09/quartznet-2-2-2-released/">
+        </link>
+        <updated>2014-02-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Make SQL Server table create script Azure SQL compliant
+Add missing clustered index for QRTZBLOBTRIGGERS table
+** You need to manually add this to existing installation (tables created with old script), see ALTER TABLE [dbo].QRTZBLOBTRIGGERS WITH NOCHECK ADD... in script]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Quartz.NET 2.2.3 Released]]></title>
+        <id>https://www.quartz-scheduler.net/2014/03/30/quartznet-2-2-3-released/</id>
+        <link href="https://www.quartz-scheduler.net/2014/03/30/quartznet-2-2-3-released/">
+        </link>
+        <updated>2014-03-30T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[NEW FEATURES]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Quartz.NET 2.2.4 Released]]></title>
+        <id>https://www.quartz-scheduler.net/2014/07/27/quartznet-2-2-4-released/</id>
+        <link href="https://www.quartz-scheduler.net/2014/07/27/quartznet-2-2-4-released/">
+        </link>
+        <updated>2014-07-27T00:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Quartz.NET 2.3 Released]]></title>
+        <id>https://www.quartz-scheduler.net/2014/11/08/quartznet-2-3-released/</id>
+        <link href="https://www.quartz-scheduler.net/2014/11/08/quartznet-2-3-released/">
+        </link>
+        <updated>2014-11-08T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[This is a bug fix release with some changes that warrant a minor version increment.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Quartz.NET 2.3.1 Released]]></title>
+        <id>https://www.quartz-scheduler.net/2015/01/15/quartznet-2-3-1-released/</id>
+        <link href="https://www.quartz-scheduler.net/2015/01/15/quartznet-2-3-1-released/">
+        </link>
+        <updated>2015-01-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[under .NET 4.0 should now be finally fixed.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Quartz.NET 2.3.2 Released]]></title>
+        <id>https://www.quartz-scheduler.net/2015/01/15/quartznet-2-3-2-released/</id>
+        <link href="https://www.quartz-scheduler.net/2015/01/15/quartznet-2-3-2-released/">
+        </link>
+        <updated>2015-01-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[CalendarIntervalTrigger and DailyTimeIntervalTrigger produce incorrect schedule builders
+Incorrect multiplication factor in DailyTimeIntervalScheduleBuilder.EndingDailyAfterCount()
+AnnualCalendar SetDayExcluded does not update internal data structures if base calendar excludes date
+Ensure IDriverDelegate members in StdAdoDelegate are virtual
+Several XML documentation spelling error fixes]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Quartz.NET 2.3.3 Released]]></title>
+        <id>https://www.quartz-scheduler.net/2015/07/09/quartznet-2-3-3-released/</id>
+        <link href="https://www.quartz-scheduler.net/2015/07/09/quartznet-2-3-3-released/">
+        </link>
+        <updated>2015-07-09T00:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Quartz.NET 3.0 Alpha 1 Released]]></title>
+        <id>https://www.quartz-scheduler.net/2016/08/16/quartznet-3-0-alpha1-released/</id>
+        <link href="https://www.quartz-scheduler.net/2016/08/16/quartznet-3-0-alpha1-released/">
+        </link>
+        <updated>2016-08-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[This is the first alpha release from the long-awaited v3 branch. This is a big overhaul (and still in progress). Internals are being modernized whilst still trying to keep sane upgrade path.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Quartz.NET 2.4 Released]]></title>
+        <id>https://www.quartz-scheduler.net/2016/08/18/quartznet-2-4-released/</id>
+        <link href="https://www.quartz-scheduler.net/2016/08/18/quartznet-2-4-released/">
+        </link>
+        <updated>2016-08-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[NEW FEATURE]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Quartz.NET 2.4.1 Released]]></title>
+        <id>https://www.quartz-scheduler.net/2016/08/24/quartznet-2-4-1-released/</id>
+        <link href="https://www.quartz-scheduler.net/2016/08/24/quartznet-2-4-1-released/">
+        </link>
+        <updated>2016-08-24T00:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Quartz.NET 3.0 Alpha 2 Released]]></title>
+        <id>https://www.quartz-scheduler.net/2016/08/24/quartznet-3-0-alpha2-released/</id>
+        <link href="https://www.quartz-scheduler.net/2016/08/24/quartznet-3-0-alpha2-released/">
+        </link>
+        <updated>2016-08-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[This is the second alpha of v3. This release fixes problems with schedule signaling when AdoJobStore is in use.
+This release removes the last bits of Quartz's usage of thread local storage and thus makes async-based operations a lot safer.]]></summary>
+    </entry>
+</feed>
