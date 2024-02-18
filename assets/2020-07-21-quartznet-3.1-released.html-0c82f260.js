@@ -1,0 +1,1 @@
+import{_ as t,r,o as n,c as o,a}from"./app-cb4c34a4.js";const c={};function s(_,l){const e=r("Redirect");return n(),o("div",null,[a(e,{to:"/2020/07/24/quartznet-3-1-released"})])}const m=t(c,[["render",s],["__file","2020-07-21-quartznet-3.1-released.html.vue"]]);export{m as default};

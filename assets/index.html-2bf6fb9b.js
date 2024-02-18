@@ -1,0 +1,1 @@
+const a=JSON.parse('{"key":"v-c6fe0650","path":"/documentation/quartz-1.x/","title":"","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":1708249181000,"contributors":[{"name":"Marko Lahma","email":"marko.lahma@gmail.com","commits":1}]},"filePathRelative":"documentation/quartz-1.x/README.md"}');export{a as data};

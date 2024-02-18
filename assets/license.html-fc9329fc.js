@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-fdb0fa9e","path":"/license.html","title":"License","lang":"en-US","frontmatter":{"title":"License"},"headers":[],"git":{"updatedTime":1708249181000,"contributors":[{"name":"Marko Lahma","email":"marko.lahma@gmail.com","commits":1}]},"filePathRelative":"license.md"}');export{e as data};
