@@ -1,0 +1,1 @@
+import{_ as n,r as t,o as a,c as r,a as c,w as s,d as e}from"./app-D5nNabMk.js";const l={};function d(_,i){const o=t("router-link");return a(),r("div",null,[c(o,{to:"/download"},{default:s(()=>[e("See download and installation instructions")]),_:1}),e(". ")])}const f=n(l,[["render",d],["__file","Download.vue"]]);export{f as default};

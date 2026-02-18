@@ -1,0 +1,1 @@
+import{_ as e}from"./app-D5nNabMk.js";const t={name:"Redirect",props:{to:{type:String,required:!0}},beforeMount(){document.location.replace(this.to)}};function r(o,c,n,i,s,p){return null}const a=e(t,[["render",r],["__file","Redirect.vue"]]);export{a as default};

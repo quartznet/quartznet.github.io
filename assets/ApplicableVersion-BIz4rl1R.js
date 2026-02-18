@@ -1,0 +1,1 @@
+import{_ as t,o,c as s,b as e}from"./app-D5nNabMk.js";const c={},i={class:"custom-block tip"},n=e("p",{class:"custom-block-title"}," Version compatibility ",-1),a=e("p",null," This documentation relates to Quartz version 3.0 and later. ",-1),l=[n,a];function r(_,p){return o(),s("div",i,l)}const u=t(c,[["render",r],["__file","ApplicableVersion.vue"]]);export{u as default};
