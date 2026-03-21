@@ -1,0 +1,1 @@
+import{_ as o,o as s,c,a as e}from"./app-CdJFpOL-.js";const a={},n={class:"custom-block tip"};function r(i,t){return s(),c("div",n,[...t[0]||(t[0]=[e("p",{class:"custom-block-title"}," Version compatibility ",-1),e("p",null," This documentation relates to Quartz version 3.0 and later. ",-1)])])}const p=o(a,[["render",r]]);export{p as default};

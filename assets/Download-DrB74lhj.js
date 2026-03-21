@@ -1,0 +1,1 @@
+import{_ as n,r,o as s,c as a,b as l,w as d,e}from"./app-CdJFpOL-.js";const i={};function c(_,o){const t=r("router-link");return s(),a("div",null,[l(t,{to:"/download"},{default:d(()=>[...o[0]||(o[0]=[e("See download and installation instructions",-1)])]),_:1}),o[1]||(o[1]=e(". ",-1))])}const f=n(i,[["render",c]]);export{f as default};

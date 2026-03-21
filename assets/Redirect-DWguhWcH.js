@@ -1,0 +1,1 @@
+import{_ as e}from"./app-CdJFpOL-.js";const t={name:"Redirect",props:{to:{type:String,required:!0}},beforeMount(){document.location.replace(this.to)}};function r(o,n,c,s,p,a){return null}const u=e(t,[["render",r]]);export{u as default};
