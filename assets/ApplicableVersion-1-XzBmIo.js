@@ -1,0 +1,1 @@
+import{c as e,i as t,r as n,t as r}from"./app-BC-ZBHj0.js";var i={},a={class:`custom-block tip`};function o(r,i){return e(),t(`div`,a,[...i[0]||=[n(`p`,{class:`custom-block-title`},` Version compatibility `,-1),n(`p`,null,` This documentation relates to Quartz version 3.0 and later. `,-1)]])}var s=r(i,[[`render`,o]]);export{s as default};

@@ -1,0 +1,1 @@
+import{c as e,d as t,i as n,o as r,s as i,t as a,u as o}from"./app-BC-ZBHj0.js";var s={};function c(a,s){let c=o(`router-link`);return e(),n(`div`,null,[i(c,{to:`/download`},{default:t(()=>[...s[0]||=[r(`See download and installation instructions`,-1)]]),_:1}),s[1]||=r(`. `,-1)])}var l=a(s,[[`render`,c]]);export{l as default};

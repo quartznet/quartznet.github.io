@@ -1,0 +1,1 @@
+import{t as e}from"./app-BC-ZBHj0.js";var t={name:`Redirect`,props:{to:{type:String,required:!0}},beforeMount(){document.location.replace(this.to)}};function n(e,t,n,r,i,a){return null}var r=e(t,[[`render`,n]]);export{r as default};
