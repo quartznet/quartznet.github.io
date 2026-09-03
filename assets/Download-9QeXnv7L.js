@@ -1,0 +1,1 @@
+import{d as e,l as t,m as n,p as r,s as i,t as a,u as o}from"./app-BsOuDHI-.js";var s={};function c(a,s){let c=r(`router-link`);return e(),i(`div`,null,[o(c,{to:`/download`},{default:n(()=>[...s[0]||=[t(`See download and installation instructions`,-1)]]),_:1}),s[1]||=t(`. `,-1)])}var l=a(s,[[`render`,c]]);export{l as default};
