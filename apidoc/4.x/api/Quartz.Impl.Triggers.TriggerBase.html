@@ -1,0 +1,1688 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TriggerBase | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TriggerBase | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="The base abstract class to be extended by all triggers.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Impl_Triggers_TriggerBase.md&amp;value=---%0Auid%3A%20Quartz.Impl.Triggers.TriggerBase%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Impl.Triggers.TriggerBase">
+
+
+
+  <h1 id="Quartz_Impl_Triggers_TriggerBase" data-uid="Quartz.Impl.Triggers.TriggerBase" class="text-break">
+Class TriggerBase  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<a class="xref" href="Quartz.Impl.html">Impl</a>.<a class="xref" href="Quartz.Impl.Triggers.html">Triggers</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The base abstract class to be extended by all triggers.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Serializable]
+public abstract class TriggerBase : IOperableTrigger, IMutableTrigger, ITrigger, IEquatable&lt;TriggerBase&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">TriggerBase</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Quartz.Extensibility.IOperableTrigger.html">IOperableTrigger</a></div>
+      <div><a class="xref" href="Quartz.Extensibility.IMutableTrigger.html">IMutableTrigger</a></div>
+      <div><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html">TriggerBase</a>&gt;</div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Quartz.Impl.Triggers.CalendarIntervalTriggerImpl.html">CalendarIntervalTriggerImpl</a></div>
+      <div><a class="xref" href="Quartz.Impl.Triggers.CronTriggerImpl.html">CronTriggerImpl</a></div>
+      <div><a class="xref" href="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.html">DailyTimeIntervalTriggerImpl</a></div>
+      <div><a class="xref" href="Quartz.Impl.Triggers.RecurrenceTriggerImpl.html">RecurrenceTriggerImpl</a></div>
+      <div><a class="xref" href="Quartz.Impl.Triggers.SimpleTriggerImpl.html">SimpleTriggerImpl</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_Impl_Triggers_TriggerBase_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s have a name and group associated with them, which
+should uniquely identify them within a single <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.
+</p>
+<p>
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s are the 'mechanism' by which <a class="xref" href="Quartz.IJob.html">IJob</a> s
+are scheduled. Many <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> s can point to the same <a class="xref" href="Quartz.IJob.html">IJob</a>,
+but a single <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> can only point to one <a class="xref" href="Quartz.IJob.html">IJob</a>.
+</p>
+<p>
+Triggers can 'send' parameters/data to <a class="xref" href="Quartz.IJob.html">IJob</a>s by placing contents
+into the <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_JobDataMap">JobDataMap</a> on the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>.
+</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase__ctor_" data-uid="Quartz.Impl.Triggers.TriggerBase.#ctor*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase__ctor_System_TimeProvider_" data-uid="Quartz.Impl.Triggers.TriggerBase.#ctor(System.TimeProvider)">
+  TriggerBase(TimeProvider?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L531"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> with no specified name, group, or <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TriggerBase(TimeProvider? timeProvider = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeprovider">TimeProvider</a></dt>
+    <dd><p>Time provider instance to use, defaults to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeprovider.system">System</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_TriggerBase__ctor_System_TimeProvider__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Note that <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_Key">Key</a> and <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_JobKey">JobKey</a> must be set before
+the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> can be placed into a <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_CalendarName_" data-uid="Quartz.Impl.Triggers.TriggerBase.CalendarName*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_CalendarName" data-uid="Quartz.Impl.Triggers.TriggerBase.CalendarName">
+  CalendarName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L248"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get or set  the <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> with the given name with
+this Trigger. Use <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when setting to dis-associate a Calendar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string? CalendarName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_TriggerBase_CalendarName_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>An empty or whitespace-only name is stored as <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>. Every job store reads
+a non-null calendar name as &quot;this trigger observes a calendar&quot; and silently drops the fire
+when no such calendar exists, so a blank name has to mean no calendar rather than a calendar
+nothing can find. The value is not trimmed: a calendar is looked up by its exact stored name.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_Description_" data-uid="Quartz.Impl.Triggers.TriggerBase.Description*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_Description" data-uid="Quartz.Impl.Triggers.TriggerBase.Description">
+  Description
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L236"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get or set the description given to the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> instance by
+its creator (if any).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string? Description { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_EndTimeUtc_" data-uid="Quartz.Impl.Triggers.TriggerBase.EndTimeUtc*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_EndTimeUtc" data-uid="Quartz.Impl.Triggers.TriggerBase.EndTimeUtc">
+  EndTimeUtc
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L458"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets and sets the date/time on which the trigger must stop firing. This
+defines the final boundary for trigger firings 舒 the trigger will
+not fire after this date and time. If this value is null, no end time
+boundary is assumed, and the trigger can continue indefinitely.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DateTimeOffset? EndTimeUtc { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_TriggerBase_EndTimeUtc_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The end time is inclusive, for every trigger type: it is the last instant at which the
+trigger may fire, so a fire time exactly equal to it is one the trigger fires, and the first
+instant after it is where the schedule stops.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_ExecutionGroup_" data-uid="Quartz.Impl.Triggers.TriggerBase.ExecutionGroup*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_ExecutionGroup" data-uid="Quartz.Impl.Triggers.TriggerBase.ExecutionGroup">
+  ExecutionGroup
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L263"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the execution group for this trigger. Execution groups allow
+thread limits to be configured - per node or across the cluster - so that
+resource-intensive jobs do not saturate all available threads.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? ExecutionGroup { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_TriggerBase_ExecutionGroup_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> value means the trigger has no execution group
+(the default, backward-compatible behavior).</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_FinalFireTimeUtc_" data-uid="Quartz.Impl.Triggers.TriggerBase.FinalFireTimeUtc*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_FinalFireTimeUtc" data-uid="Quartz.Impl.Triggers.TriggerBase.FinalFireTimeUtc">
+  FinalFireTimeUtc
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L405"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the last UTC time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> will fire, if
+the Trigger will repeat indefinitely, null will be returned.</p>
+<p>
+Note that the return time *may* be in the past.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract DateTimeOffset? FinalFireTimeUtc { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_FireInstanceId_" data-uid="Quartz.Impl.Triggers.TriggerBase.FireInstanceId*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_FireInstanceId" data-uid="Quartz.Impl.Triggers.TriggerBase.FireInstanceId">
+  FireInstanceId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L435"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The identity of one firing of this trigger, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if it has not been
+fired.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string? FireInstanceId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_TriggerBase_FireInstanceId_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Written by a job store as it hands the trigger to the scheduler, and read back to recognise
+the firing when the job completes; it is what
+<a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_InterruptFireInstance_System_String_System_Threading_CancellationToken_">InterruptFireInstance(string, CancellationToken)</a> names. A trigger a caller built, and a trigger
+read back out of a store, have never been fired and answer <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> — so this is
+not an identity to key anything on outside the fire path.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_HasAdditionalProperties_" data-uid="Quartz.Impl.Triggers.TriggerBase.HasAdditionalProperties*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_HasAdditionalProperties" data-uid="Quartz.Impl.Triggers.TriggerBase.HasAdditionalProperties">
+  HasAdditionalProperties
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L872"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance has additional properties
+that should be considered when for example saving to database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool HasAdditionalProperties { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if this instance has additional properties; otherwise, <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_TriggerBase_HasAdditionalProperties_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If trigger implementation has additional properties that need to be saved
+with base properties you need to make your class override this property with value true.
+Returning true will effectively mean that ADOJobStore needs to serialize
+this trigger instance to make sure additional properties are also saved.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_HasMillisecondPrecision_" data-uid="Quartz.Impl.Triggers.TriggerBase.HasMillisecondPrecision*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_HasMillisecondPrecision" data-uid="Quartz.Impl.Triggers.TriggerBase.HasMillisecondPrecision">
+  HasMillisecondPrecision
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L517"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this trigger's fire times are meaningful to the millisecond. A trigger that says no
+has its start time rounded down to the second.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract bool HasMillisecondPrecision { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_TriggerBase_HasMillisecondPrecision_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This is how a trigger describes its own schedule to <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html">TriggerBase</a>, not
+something a caller reads: nothing outside the trigger acted on it.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_JobDataMap_" data-uid="Quartz.Impl.Triggers.TriggerBase.JobDataMap*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_JobDataMap" data-uid="Quartz.Impl.Triggers.TriggerBase.JobDataMap">
+  JobDataMap
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L384"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get or set the <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_JobDataMap">JobDataMap</a> that is associated with the
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>.</p>
+<p>
+Changes made to this map during job execution are not re-persisted, and
+in fact typically result in an illegal state.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual JobDataMap JobDataMap { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_JobKey_" data-uid="Quartz.Impl.Triggers.TriggerBase.JobKey*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_JobKey" data-uid="Quartz.Impl.Triggers.TriggerBase.JobKey">
+  JobKey
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the key of the job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobKey JobKey { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.JobKey.html">JobKey</a></dt>
+    <dd><p>The key of the job.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_Key_" data-uid="Quartz.Impl.Triggers.TriggerBase.Key*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_Key" data-uid="Quartz.Impl.Triggers.TriggerBase.Key">
+  Key
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the key of the trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TriggerKey Key { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></dt>
+    <dd><p>The key of the trigger.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_MayFireAgain_" data-uid="Quartz.Impl.Triggers.TriggerBase.MayFireAgain*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_MayFireAgain" data-uid="Quartz.Impl.Triggers.TriggerBase.MayFireAgain">
+  MayFireAgain
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L785"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Used by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> to determine whether or not
+it is possible for this <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> to fire again.</p>
+<p>
+If the returned value is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> then the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>
+may remove the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> from the <a class="xref" href="Quartz.Extensibility.IJobStore.html">IJobStore</a>.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool MayFireAgain { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_MisfireInstructionCode_" data-uid="Quartz.Impl.Triggers.TriggerBase.MisfireInstructionCode*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_MisfireInstructionCode" data-uid="Quartz.Impl.Triggers.TriggerBase.MisfireInstructionCode">
+  MisfireInstructionCode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L420"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get or set the raw code of the instruction the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> follows when this
+trigger misses a firing. The concrete trigger type validates the code against its own
+family's range.</p>
+<p>
+If not explicitly set, the code is zero — "instruction not set" — and the scheduler applies
+the family's smart policy. The named values are on the per-family enums, such as
+<a class="xref" href="Quartz.CronTriggerMisfireInstruction.html">CronTriggerMisfireInstruction</a> and <a class="xref" href="Quartz.SimpleTriggerMisfireInstruction.html">SimpleTriggerMisfireInstruction</a>.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int MisfireInstructionCode { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_UpdateAfterMisfire_Quartz_ICalendar_">UpdateAfterMisfire(ICalendar?)</a></div>
+    <div><a class="xref" href="Quartz.ISimpleTrigger.html">ISimpleTrigger</a></div>
+    <div><a class="xref" href="Quartz.ICronTrigger.html">ICronTrigger</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_NextFireTimeUtc_" data-uid="Quartz.Impl.Triggers.TriggerBase.NextFireTimeUtc*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_NextFireTimeUtc" data-uid="Quartz.Impl.Triggers.TriggerBase.NextFireTimeUtc">
+  NextFireTimeUtc
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L803"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the next time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> is scheduled to fire. If
+the trigger will not fire again, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> will be returned.  Note that
+the time returned can possibly be in the past, if the time that was computed
+for the trigger to next fire has already arrived, but the scheduler has not yet
+been able to fire the trigger (which would likely be due to lack of resources
+e.g. threads).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract DateTimeOffset? NextFireTimeUtc { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_TriggerBase_NextFireTimeUtc_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The value returned is not guaranteed to be valid until after the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+has been added to the scheduler.</p>
+<p>
+<b>The setter should not be used by client code.</b> The scheduler advances this as it fires
+the trigger; assigning it yourself corrupts the schedule.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_PreferredNode_" data-uid="Quartz.Impl.Triggers.TriggerBase.PreferredNode*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_PreferredNode" data-uid="Quartz.Impl.Triggers.TriggerBase.PreferredNode">
+  PreferredNode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L296"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets which cluster node this trigger prefers to run on. Only that node acquires
+the trigger, with automatic failover while it is down.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PreferredNode PreferredNode { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.PreferredNode.html">PreferredNode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_TriggerBase_PreferredNode_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a class="xref" href="Quartz.PreferredNode.html#Quartz_PreferredNode_None">None</a> means the trigger has no node preference
+(the default, backward-compatible behavior).</p>
+<p>The value is recorded as given, automatic-pin flag included, so a pin survives being
+copied from one trigger to another as the pin it was.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_PreviousFireTimeUtc_" data-uid="Quartz.Impl.Triggers.TriggerBase.PreviousFireTimeUtc*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_PreviousFireTimeUtc" data-uid="Quartz.Impl.Triggers.TriggerBase.PreviousFireTimeUtc">
+  PreviousFireTimeUtc
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L445"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The previous time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> fired.
+If the trigger has not yet fired, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> will be returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract DateTimeOffset? PreviousFireTimeUtc { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_TriggerBase_PreviousFireTimeUtc_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><b>The setter should not be used by client code.</b> The scheduler records this as it fires
+the trigger; assigning it yourself corrupts the schedule.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_Priority_" data-uid="Quartz.Impl.Triggers.TriggerBase.Priority*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_Priority" data-uid="Quartz.Impl.Triggers.TriggerBase.Priority">
+  Priority
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L549"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The priority of a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> acts as a tie breaker such that if
+two <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s have the same scheduled fire time, then Quartz
+will do its best to give the one with the higher priority first access
+to a worker thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int Priority { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_TriggerBase_Priority_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If not explicitly set, the default value is <i>5</i>.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_RetryAttempt_" data-uid="Quartz.Impl.Triggers.TriggerBase.RetryAttempt*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_RetryAttempt" data-uid="Quartz.Impl.Triggers.TriggerBase.RetryAttempt">
+  RetryAttempt
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L362"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How many times the occurrence currently being executed has already been retried. <code>0</code> on
+a regular fire.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RetryAttempt { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_TriggerBase_RetryAttempt_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><b>The setter should not be used by client code.</b> The scheduler advances it as retries are
+scheduled and clears it when the occurrence is done with; a job store assigns it when
+restoring a trigger from its row.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_RetryPolicy_" data-uid="Quartz.Impl.Triggers.TriggerBase.RetryPolicy*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_RetryPolicy" data-uid="Quartz.Impl.Triggers.TriggerBase.RetryPolicy">
+  RetryPolicy
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L335"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets how the scheduler re-fires this trigger when its job fails.
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> — the default — means a failed job is reported and the trigger waits
+for its next scheduled occurrence.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RetryPolicy? RetryPolicy { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.RetryPolicy.html">RetryPolicy</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_TriggerBase_RetryPolicy_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Held as the policy's stored string form, which is what the trigger's row and a serialized
+trigger both carry; the value is parsed on first read and kept for as long as the string
+does not change.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.RetryPolicy.html">RetryPolicy</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_StartTimeUtc_" data-uid="Quartz.Impl.Triggers.TriggerBase.StartTimeUtc*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_StartTimeUtc" data-uid="Quartz.Impl.Triggers.TriggerBase.StartTimeUtc">
+  StartTimeUtc
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L486"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The time at which the trigger's scheduling should start.  May or may not
+be the first actual fire time of the trigger, depending upon the type of
+trigger and the settings of the other properties of the trigger.  However
+the first actual first time will not be before this date.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DateTimeOffset StartTimeUtc { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_TriggerBase_StartTimeUtc_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Setting a value in the past may cause a new trigger to compute a first
+fire time that is in the past, which may cause an immediate misfire
+of the trigger.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_Clone_" data-uid="Quartz.Impl.Triggers.TriggerBase.Clone*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_Clone" data-uid="Quartz.Impl.Triggers.TriggerBase.Clone">
+  Clone()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L937"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new object that is a copy of the current instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ITrigger Clone()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></dt>
+    <dd><p>A new object that is a copy of this instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_ComputeFirstFireTimeUtc_" data-uid="Quartz.Impl.Triggers.TriggerBase.ComputeFirstFireTimeUtc*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_ComputeFirstFireTimeUtc_Quartz_ICalendar_" data-uid="Quartz.Impl.Triggers.TriggerBase.ComputeFirstFireTimeUtc(Quartz.ICalendar)">
+  ComputeFirstFireTimeUtc(ICalendar?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L584"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method should not be used by the Quartz client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract DateTimeOffset? ComputeFirstFireTimeUtc(ICalendar? calendar)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>calendar</code> <a class="xref" href="Quartz.ICalendar.html">ICalendar</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd><p>The first time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> will be fired
+by the scheduler, which is also the same value <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_NextFireTimeUtc">NextFireTimeUtc</a>
+will return (until after the first firing of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_TriggerBase_ComputeFirstFireTimeUtc_Quartz_ICalendar__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Called by the scheduler at the time a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> is first
+added to the scheduler, in order to have the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+compute its first fire time, based on any associated calendar.
+</p>
+<p>
+After this method has been called, <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_NextFireTimeUtc">NextFireTimeUtc</a>
+should return a valid answer.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_Equals_" data-uid="Quartz.Impl.Triggers.TriggerBase.Equals*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_Equals_Quartz_Impl_Triggers_TriggerBase_" data-uid="Quartz.Impl.Triggers.TriggerBase.Equals(Quartz.Impl.Triggers.TriggerBase)">
+  Equals(TriggerBase?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L896"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Trigger equality is based upon the equality of the TriggerKey.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool Equals(TriggerBase? trigger)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>trigger</code> <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html">TriggerBase</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>true if the key of this Trigger equals that of the given Trigger</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_Equals_" data-uid="Quartz.Impl.Triggers.TriggerBase.Equals*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_Equals_System_Object_" data-uid="Quartz.Impl.Triggers.TriggerBase.Equals(System.Object)">
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L887"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> is equal to the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> to compare with the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>true if the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> is equal to the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>; otherwise, false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_ExecutionComplete_" data-uid="Quartz.Impl.Triggers.TriggerBase.ExecutionComplete*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_ExecutionComplete_Quartz_IJobExecutionContext_Quartz_JobExecutionException_" data-uid="Quartz.Impl.Triggers.TriggerBase.ExecutionComplete(Quartz.IJobExecutionContext,Quartz.JobExecutionException)">
+  ExecutionComplete(IJobExecutionContext, JobExecutionException?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L605"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method should not be used by the Quartz client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual SchedulerInstruction ExecutionComplete(IJobExecutionContext context, JobExecutionException? result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></dt>
+    <dd><p>is the <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a> that was used by the
+<a class="xref" href="Quartz.IJob.html">IJob</a>'s<a class="xref" href="Quartz.IJob.html#Quartz_IJob_Execute_Quartz_IJobExecutionContext_System_Threading_CancellationToken_">Execute(IJobExecutionContext, CancellationToken)</a> method.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Quartz.JobExecutionException.html">JobExecutionException</a></dt>
+    <dd><p>is the <a class="xref" href="Quartz.JobExecutionException.html">JobExecutionException</a> thrown by the
+<a class="xref" href="Quartz.IJob.html">IJob</a>, if any (may be null).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.SchedulerInstruction.html">SchedulerInstruction</a></dt>
+    <dd><p>One of the <a class="xref" href="Quartz.SchedulerInstruction.html">SchedulerInstruction</a> members.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_TriggerBase_ExecutionComplete_Quartz_IJobExecutionContext_Quartz_JobExecutionException__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Called after the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> has executed the
+<a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> associated with the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+in order to get the final instruction code from the trigger.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.SchedulerInstruction.html">SchedulerInstruction</a></div>
+    <div><a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_Triggered_Quartz_ICalendar_">Triggered(ICalendar?)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_GetFireTimeAfter_" data-uid="Quartz.Impl.Triggers.TriggerBase.GetFireTimeAfter*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_GetFireTimeAfter_System_Nullable_System_DateTimeOffset__" data-uid="Quartz.Impl.Triggers.TriggerBase.GetFireTimeAfter(System.Nullable{System.DateTimeOffset})">
+  GetFireTimeAfter(DateTimeOffset?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L810"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the next time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> will fire,
+after the given time. If the trigger will not fire after the given time,
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> will be returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract DateTimeOffset? GetFireTimeAfter(DateTimeOffset? afterTime)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>afterTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_GetHashCode_" data-uid="Quartz.Impl.Triggers.TriggerBase.GetHashCode*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_GetHashCode" data-uid="Quartz.Impl.Triggers.TriggerBase.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L920"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Serves as a hash function for a particular type. <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">GetHashCode()</a> is suitable for use in hashing algorithms and data structures like a hash table.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Sonar&quot;, &quot;S3249:Classes directly extending object should not call base in GetHashCode&quot;, Justification = &quot;Only reached by a trigger with no key, which equals nothing at all; see the remarks.&quot;)]
+public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A hash code for the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_TriggerBase_GetHashCode_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The identity hash is for a trigger that has no key yet — one a builder is still assembling, or
+one deserialized before its key is written back. <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_Equals_Quartz_Impl_Triggers_TriggerBase_">Equals(TriggerBase?)</a> answers
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> for every comparison a keyless trigger takes part in, including with
+itself, so it imposes no obligation on the hash at all; returning a constant instead would put
+every keyless trigger in one bucket for no gain. Once there is a key, the key is the hash, and
+that is the case the equality contract is about.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_GetScheduleBuilder_" data-uid="Quartz.Impl.Triggers.TriggerBase.GetScheduleBuilder*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_GetScheduleBuilder" data-uid="Quartz.Impl.Triggers.TriggerBase.GetScheduleBuilder">
+  GetScheduleBuilder()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L230"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get a <a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a> that is configured to produce a
+schedule identical to this trigger's schedule.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract IScheduleBuilder GetScheduleBuilder()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_GetTriggerBuilder_" data-uid="Quartz.Impl.Triggers.TriggerBase.GetTriggerBuilder*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_GetTriggerBuilder" data-uid="Quartz.Impl.Triggers.TriggerBase.GetTriggerBuilder">
+  GetTriggerBuilder()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get a <a class="xref" href="Quartz.TriggerBuilder.html">TriggerBuilder</a> that is configured to produce a
+trigger identical to this one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TriggerBuilder&lt;IJob&gt; GetTriggerBuilder()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.TriggerBuilder-1.html">TriggerBuilder</a>&lt;<a class="xref" href="Quartz.IJob.html">IJob</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_TriggerBase_GetTriggerBuilder_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>An interface member where its twin
+<a class="xref" href="Quartz.JobDetailExtensions.html#Quartz_JobDetailExtensions_GetJobBuilder_Quartz_IJobDetail_">GetJobBuilder(IJobDetail)</a> is an extension, and the asymmetry is the
+difference between the two rebuilds rather than an unfinished move. A detail's builder can be
+filled in from the detail's public state alone, so an extension can write it once for every
+implementation. A trigger's cannot: the builder has to be created against the trigger's own
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeprovider">TimeProvider</a>, so that the rebuilt trigger computes its fire times from
+the same reading of &quot;now&quot; — and a trigger's clock is not part of this interface, because
+nothing else has any business reading it.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_GetScheduleBuilder">GetScheduleBuilder</a>()</div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_RetryFired_" data-uid="Quartz.Impl.Triggers.TriggerBase.RetryFired*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_RetryFired_Quartz_ICalendar_" data-uid="Quartz.Impl.Triggers.TriggerBase.RetryFired(Quartz.ICalendar)">
+  RetryFired(ICalendar?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L755"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method should not be used by the Quartz client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void RetryFired(ICalendar? calendar)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>calendar</code> <a class="xref" href="Quartz.ICalendar.html">ICalendar</a></dt>
+    <dd><p>The calendar the trigger observes, if any.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_TriggerBase_RetryFired_Quartz_ICalendar__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Called by a job store when it is firing a retry rather than a scheduled occurrence — that is,
+when the trigger's next fire time is a retry instant <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_ExecutionComplete_Quartz_IJobExecutionContext_Quartz_JobExecutionException_">ExecutionComplete(IJobExecutionContext, JobExecutionException?)</a> put
+there. It advances <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_NextFireTimeUtc">NextFireTimeUtc</a> past the retry to the occurrence the
+schedule actually calls for, applying the trigger's calendar exactly as
+<a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_Triggered_Quartz_ICalendar_">Triggered(ICalendar?)</a> does.
+</p>
+<p>
+Unlike <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_Triggered_Quartz_ICalendar_">Triggered(ICalendar?)</a> it touches no counter and does not move
+<a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_PreviousFireTimeUtc">PreviousFireTimeUtc</a>: a retry is another attempt at an occurrence that has
+already been counted, so it must not burn a repeat count or a recurrence rule's <code>COUNT</code>
+slot, and it reports the original occurrence as its scheduled fire time.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_Triggered_Quartz_ICalendar_">Triggered(ICalendar?)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_ToString_" data-uid="Quartz.Impl.Triggers.TriggerBase.ToString*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_ToString" data-uid="Quartz.Impl.Triggers.TriggerBase.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L877"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Return a simple string representation of this object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_Triggered_" data-uid="Quartz.Impl.Triggers.TriggerBase.Triggered*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_Triggered_Quartz_ICalendar_" data-uid="Quartz.Impl.Triggers.TriggerBase.Triggered(Quartz.ICalendar)">
+  Triggered(ICalendar?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L561"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method should not be used by the Quartz client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void Triggered(ICalendar? calendar)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>calendar</code> <a class="xref" href="Quartz.ICalendar.html">ICalendar</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_TriggerBase_Triggered_Quartz_ICalendar__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Called when the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> has decided to 'fire'
+the trigger (Execute the associated <a class="xref" href="Quartz.IJob.html">IJob</a>), in order to
+give the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> a chance to update itself for its next
+triggering (if any).</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.JobExecutionException.html">JobExecutionException</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_UpdateAfterMisfire_" data-uid="Quartz.Impl.Triggers.TriggerBase.UpdateAfterMisfire*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_UpdateAfterMisfire_Quartz_ICalendar_" data-uid="Quartz.Impl.Triggers.TriggerBase.UpdateAfterMisfire(Quartz.ICalendar)">
+  UpdateAfterMisfire(ICalendar?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L829"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method should not be used by the Quartz client.</p>
+<p>
+To be implemented by the concrete classes that extend this class.
+</p>
+<p>
+The implementation should update the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>'s state according to the misfire
+instruction the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> was built with, read as
+<a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_MisfireInstructionCode">MisfireInstructionCode</a>.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void UpdateAfterMisfire(ICalendar? calendar)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>calendar</code> <a class="xref" href="Quartz.ICalendar.html">ICalendar</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_UpdateWithNewCalendar_" data-uid="Quartz.Impl.Triggers.TriggerBase.UpdateWithNewCalendar*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_UpdateWithNewCalendar_Quartz_ICalendar_System_TimeSpan_" data-uid="Quartz.Impl.Triggers.TriggerBase.UpdateWithNewCalendar(Quartz.ICalendar,System.TimeSpan)">
+  UpdateWithNewCalendar(ICalendar, TimeSpan)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L840"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method should not be used by the Quartz client.</p>
+<p>
+The implementation should update the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>'s state
+based on the given new version of the associated <a class="xref" href="Quartz.ICalendar.html">ICalendar</a>
+(the state should be updated so that it's next fire time is appropriate
+given the Calendar's new settings).
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void UpdateWithNewCalendar(ICalendar calendar, TimeSpan misfireThreshold)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>calendar</code> <a class="xref" href="Quartz.ICalendar.html">ICalendar</a></dt>
+    <dd></dd>
+    <dt><code>misfireThreshold</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_Validate_" data-uid="Quartz.Impl.Triggers.TriggerBase.Validate*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_Validate" data-uid="Quartz.Impl.Triggers.TriggerBase.Validate">
+  Validate()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L846"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Validates whether the properties of the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> are
+valid for submission into a <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Validate()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_Triggers_TriggerBase_ValidateMisfireInstruction_" data-uid="Quartz.Impl.Triggers.TriggerBase.ValidateMisfireInstruction*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_TriggerBase_ValidateMisfireInstruction_System_Int32_" data-uid="Quartz.Impl.Triggers.TriggerBase.ValidateMisfireInstruction(System.Int32)">
+  ValidateMisfireInstruction(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L816"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Validates the misfire instruction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract bool ValidateMisfireInstruction(int misfireInstruction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>misfireInstruction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The misfire instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 id="seealso">See Also</h2>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ISimpleTrigger.html">ISimpleTrigger</a></div>
+      <div><a class="xref" href="Quartz.ICronTrigger.html">ICronTrigger</a></div>
+      <div><a class="xref" href="Quartz.IDailyTimeIntervalTrigger.html">IDailyTimeIntervalTrigger</a></div>
+      <div><a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_JobDataMap">JobDataMap</a></div>
+      <div><a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></div>
+  </div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/TriggerBase.cs/#L55" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

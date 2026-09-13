@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TriggerFiredUpdate | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TriggerFiredUpdate | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Every row change one trigger fire makes, gathered into one value so that  can issue them in as few round trips as the provider allows.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Impl_AdoJobStore_TriggerFiredUpdate.md&amp;value=---%0Auid%3A%20Quartz.Impl.AdoJobStore.TriggerFiredUpdate%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Impl.AdoJobStore.TriggerFiredUpdate">
+
+
+
+  <h1 id="Quartz_Impl_AdoJobStore_TriggerFiredUpdate" data-uid="Quartz.Impl.AdoJobStore.TriggerFiredUpdate" class="text-break">
+Class TriggerFiredUpdate  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/TriggerFiredUpdate.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<a class="xref" href="Quartz.Impl.html">Impl</a>.<a class="xref" href="Quartz.Impl.AdoJobStore.html">AdoJobStore</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Every row change one trigger fire makes, gathered into one value so that
+<a class="xref" href="Quartz.Impl.AdoJobStore.IDriverDelegate.html#Quartz_Impl_AdoJobStore_IDriverDelegate_ApplyTriggerFired_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_Impl_AdoJobStore_TriggerFiredUpdate_System_Threading_CancellationToken_">ApplyTriggerFired(ConnectionAndTransactionHolder, TriggerFiredUpdate, CancellationToken)</a> can issue them in as few round trips as the
+provider allows.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed record TriggerFiredUpdate : IEquatable&lt;TriggerFiredUpdate&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">TriggerFiredUpdate</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Quartz.Impl.AdoJobStore.TriggerFiredUpdate.html">TriggerFiredUpdate</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_Impl_AdoJobStore_TriggerFiredUpdate_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>The store decides all of this before a single statement goes out: it has read the trigger's stored
+state and type, read the job, and applied the trigger's own <code>Triggered</code> transition in memory.
+What is left is a set of writes with no read between them, which is exactly what a
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbbatch">DbBatch</a> is for.</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_Impl_AdoJobStore_TriggerFiredUpdate_BlockJobTriggers_" data-uid="Quartz.Impl.AdoJobStore.TriggerFiredUpdate.BlockJobTriggers*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_TriggerFiredUpdate_BlockJobTriggers" data-uid="Quartz.Impl.AdoJobStore.TriggerFiredUpdate.BlockJobTriggers">
+  BlockJobTriggers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/TriggerFiredUpdate.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the job's other triggers have to be moved into their blocked states, which they do for a
+job that disallows concurrent execution.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required bool BlockJobTriggers { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_TriggerFiredUpdate_ClearMisfireOriginalFireTime_" data-uid="Quartz.Impl.AdoJobStore.TriggerFiredUpdate.ClearMisfireOriginalFireTime*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_TriggerFiredUpdate_ClearMisfireOriginalFireTime" data-uid="Quartz.Impl.AdoJobStore.TriggerFiredUpdate.ClearMisfireOriginalFireTime">
+  ClearMisfireOriginalFireTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/TriggerFiredUpdate.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the trigger's recorded original fire time has to be cleared, which it does when this
+fire is the recovery of a misfire and the recorded time has now been reported to the job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required bool ClearMisfireOriginalFireTime { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_TriggerFiredUpdate_JobDetail_" data-uid="Quartz.Impl.AdoJobStore.TriggerFiredUpdate.JobDetail*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_TriggerFiredUpdate_JobDetail" data-uid="Quartz.Impl.AdoJobStore.TriggerFiredUpdate.JobDetail">
+  JobDetail
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/TriggerFiredUpdate.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The job the trigger fires. Its concurrency and recovery flags are copied onto the fired-trigger
+row, and it is what the trigger's persistence delegate is handed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required IJobDetail JobDetail { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_TriggerFiredUpdate_NewState_" data-uid="Quartz.Impl.AdoJobStore.TriggerFiredUpdate.NewState*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_TriggerFiredUpdate_NewState" data-uid="Quartz.Impl.AdoJobStore.TriggerFiredUpdate.NewState">
+  NewState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/TriggerFiredUpdate.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The state to store on the trigger's own row.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required StoredTriggerState NewState { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.Extensibility.StoredTriggerState.html">StoredTriggerState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_TriggerFiredUpdate_ScheduledFireTimeUtc_" data-uid="Quartz.Impl.AdoJobStore.TriggerFiredUpdate.ScheduledFireTimeUtc*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_TriggerFiredUpdate_ScheduledFireTimeUtc" data-uid="Quartz.Impl.AdoJobStore.TriggerFiredUpdate.ScheduledFireTimeUtc">
+  ScheduledFireTimeUtc
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/TriggerFiredUpdate.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The time the fire was scheduled for, which is the trigger's next fire time as it stood
+<em>before</em> the fire advanced it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required DateTimeOffset? ScheduledFireTimeUtc { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_AdoJobStore_TriggerFiredUpdate_ScheduledFireTimeUtc_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Carried explicitly rather than read off <a class="xref" href="Quartz.Impl.AdoJobStore.TriggerFiredUpdate.html#Quartz_Impl_AdoJobStore_TriggerFiredUpdate_Trigger">Trigger</a>, because by the time this update
+is applied the trigger has already moved on to its following fire time. That used to be
+expressed as an ordering constraint — the fired-trigger row had to be written before
+<code>Triggered</code> ran — which is precisely the kind of constraint a batch cannot honour.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_TriggerFiredUpdate_StoredTriggerType_" data-uid="Quartz.Impl.AdoJobStore.TriggerFiredUpdate.StoredTriggerType*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_TriggerFiredUpdate_StoredTriggerType" data-uid="Quartz.Impl.AdoJobStore.TriggerFiredUpdate.StoredTriggerType">
+  StoredTriggerType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/TriggerFiredUpdate.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The type discriminator the trigger's row holds, read before the fire.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required string StoredTriggerType { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_AdoJobStore_TriggerFiredUpdate_StoredTriggerType_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Passed rather than read again: knowing it is the only reason the write path used to issue a
+<code>SELECT TRIGGER_TYPE</code> of its own. It is compared with the discriminator of the delegate
+that handles the trigger now, and a mismatch — which the fire path cannot produce, but a
+subclass firing a rebuilt trigger could — falls back to moving the row between type tables.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_TriggerFiredUpdate_Trigger_" data-uid="Quartz.Impl.AdoJobStore.TriggerFiredUpdate.Trigger*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_TriggerFiredUpdate_Trigger" data-uid="Quartz.Impl.AdoJobStore.TriggerFiredUpdate.Trigger">
+  Trigger
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/TriggerFiredUpdate.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The trigger that fired, already advanced past the fire by <a class="xref" href="Quartz.Extensibility.IOperableTrigger.html#Quartz_Extensibility_IOperableTrigger_Triggered_Quartz_ICalendar_">Triggered(ICalendar?)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required IOperableTrigger Trigger { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.Extensibility.IOperableTrigger.html">IOperableTrigger</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/TriggerFiredUpdate.cs/#L37" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

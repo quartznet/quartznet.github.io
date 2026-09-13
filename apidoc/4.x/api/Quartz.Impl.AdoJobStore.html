@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace Quartz.Impl.AdoJobStore | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace Quartz.Impl.AdoJobStore | Quartz.NET 4.x API reference ">
+      
+      
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Impl.AdoJobStore">
+
+  <h1 id="Quartz_Impl_AdoJobStore" data-uid="Quartz.Impl.AdoJobStore" class="text-break">Namespace Quartz.Impl.AdoJobStore</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html">AdoConstants</a></dt>
+      <dd><p>The table, column and state names of the standard Quartz database schema, for
+<a class="xref" href="Quartz.Impl.AdoJobStore.IDriverDelegate.html">IDriverDelegate</a> and <a class="xref" href="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.html">ITriggerPersistenceDelegate</a> implementations
+that read and write it.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.CalendarIntervalTriggerPersistenceDelegate.html">CalendarIntervalTriggerPersistenceDelegate</a></dt>
+      <dd><p>Persist a CalendarIntervalTriggerImpl by converting internal fields to and from
+SimplePropertiesTriggerProperties.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></dt>
+      <dd><p>Unit of work for AdoJobStore operations.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.CronTriggerPersistenceDelegate.html">CronTriggerPersistenceDelegate</a></dt>
+      <dd><p>Persist a CronTriggerImpl.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.DailyTimeIntervalTriggerPersistenceDelegate.html">DailyTimeIntervalTriggerPersistenceDelegate</a></dt>
+      <dd><p>Persist a DailyTimeIntervalTrigger by converting internal fields to and from
+SimplePropertiesTriggerProperties.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.DbLockHandler.html">DbLockHandler</a></dt>
+      <dd><p>Base class for database based lock handlers for providing thread/resource locking
+in order to protect resources from being altered by multiple threads at the
+same time.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.DriverDelegateContext.html">DriverDelegateContext</a></dt>
+      <dd><p>The settings a <a class="xref" href="Quartz.Impl.AdoJobStore.IDriverDelegate.html">IDriverDelegate</a> works from, handed to
+<a class="xref" href="Quartz.Impl.AdoJobStore.IDriverDelegate.html#Quartz_Impl_AdoJobStore_IDriverDelegate_Initialize_Quartz_Impl_AdoJobStore_DriverDelegateContext_">Initialize(DriverDelegateContext)</a> once by the job store before the delegate is used.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.FirebirdDelegate.html">FirebirdDelegate</a></dt>
+      <dd><p>Delegate implementation for Firebird.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.FiredTriggerQuery.html">FiredTriggerQuery</a></dt>
+      <dd><p>Selects rows of the FIRED_TRIGGERS table, for both
+<a class="xref" href="Quartz.Impl.AdoJobStore.IDriverDelegate.html#Quartz_Impl_AdoJobStore_IDriverDelegate_SelectFiredTriggerRecords_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_Impl_AdoJobStore_FiredTriggerQuery_System_Threading_CancellationToken_">SelectFiredTriggerRecords(ConnectionAndTransactionHolder, FiredTriggerQuery, CancellationToken)</a> and
+<a class="xref" href="Quartz.Impl.AdoJobStore.IDriverDelegate.html#Quartz_Impl_AdoJobStore_IDriverDelegate_DeleteFiredTriggers_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_Impl_AdoJobStore_FiredTriggerQuery_System_Threading_CancellationToken_">DeleteFiredTriggers(ConnectionAndTransactionHolder, FiredTriggerQuery, CancellationToken)</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.FiredTriggerRecord.html">FiredTriggerRecord</a></dt>
+      <dd><p>One row of the FIRED_TRIGGERS table: a firing a scheduler instance has reserved, is running, or has
+been blocked from running.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.InvalidConfigurationException.html">InvalidConfigurationException</a></dt>
+      <dd><p>Exception class for when a driver delegate cannot be found for a given
+configuration, or lack thereof.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.LockException.html">LockException</a></dt>
+      <dd><p>Exception class for when there is a failure obtaining or releasing a
+resource lock.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.LockHandlerContext.html">LockHandlerContext</a></dt>
+      <dd><p>The identity of the scheduler a lock handler locks for and the environment it locks in, handed to
+<a class="xref" href="Quartz.Impl.AdoJobStore.ILockHandler.html#Quartz_Impl_AdoJobStore_ILockHandler_Initialize_Quartz_Impl_AdoJobStore_LockHandlerContext_">Initialize(LockHandlerContext)</a> once by the job store before the handler is used.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.MySQLDelegate.html">MySQLDelegate</a></dt>
+      <dd><p>This is a driver delegate for the MySQL ADO.NET driver.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.NoSuchDelegateException.html">NoSuchDelegateException</a></dt>
+      <dd><p>Exception class for when a driver delegate cannot be found for a given
+configuration, or lack thereof.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.OracleDelegate.html">OracleDelegate</a></dt>
+      <dd><p>This is a driver delegate for the Oracle database.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.PostgreSQLDelegate.html">PostgreSQLDelegate</a></dt>
+      <dd><p>This is a driver delegate for the PostgreSQL ADO.NET driver.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.PostgreSqlSelectForUpdateLockHandler.html">PostgreSqlSelectForUpdateLockHandler</a></dt>
+      <dd><p>PostgreSQL-specific row lock handler that uses INSERT ... ON CONFLICT DO NOTHING
+to handle race conditions when multiple threads try to insert the same lock row.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.PreferredNodeTransition.html">PreferredNodeTransition</a></dt>
+      <dd><p>The compare-and-swap <a class="xref" href="Quartz.Impl.AdoJobStore.IDriverDelegate.html#Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateTriggerPreferredNodeConditional_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_TriggerKey_Quartz_Impl_AdoJobStore_PreferredNodeTransition_System_Threading_CancellationToken_">UpdateTriggerPreferredNodeConditional(ConnectionAndTransactionHolder, TriggerKey, PreferredNodeTransition, CancellationToken)</a> attempts:
+the pin the caller observed, and the pin it wants to put in its place.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.RecurrenceTriggerPersistenceDelegate.html">RecurrenceTriggerPersistenceDelegate</a></dt>
+      <dd><p>Persist a <a class="xref" href="Quartz.Impl.Triggers.RecurrenceTriggerImpl.html">RecurrenceTriggerImpl</a> by converting internal fields to and from
+<a class="xref" href="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerProperties.html">SimplePropertiesTriggerProperties</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.SQLiteDelegate.html">SQLiteDelegate</a></dt>
+      <dd><p>This is a driver delegate for the SQLiteDelegate ADO.NET driver.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.SchedulerStateRecord.html">SchedulerStateRecord</a></dt>
+      <dd><p>Conveys a scheduler-instance state record.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.SelectForUpdateLockHandler.html">SelectForUpdateLockHandler</a></dt>
+      <dd><p>Database based lock handler that takes the lock by issuing
+<code>SELECT ... FOR UPDATE</code> against the lock row.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateBase.html">SimplePropertiesTriggerPersistenceDelegateBase</a></dt>
+      <dd><p>A base implementation of <a class="xref" href="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.html">ITriggerPersistenceDelegate</a> that persists
+trigger fields in the &quot;QRTZ_SIMPROP_TRIGGERS&quot; table.  This allows extending
+concrete classes to simply implement a couple methods that do the work of
+getting/setting the trigger's fields, and creating the <a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a>
+for the particular type of trigger.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerProperties.html">SimplePropertiesTriggerProperties</a></dt>
+      <dd><p>One row of QRTZ_SIMPROP_TRIGGERS: the generic column set a trigger's own properties are stored in.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.SimpleTriggerPersistenceDelegate.html">SimpleTriggerPersistenceDelegate</a></dt>
+      <dd><p>Persists the extended properties of an <a class="xref" href="Quartz.ISimpleTrigger.html">ISimpleTrigger</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.SqlServerDelegate.html">SqlServerDelegate</a></dt>
+      <dd><p>A SQL Server specific driver delegate.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.SqlServerMemoryOptimizedUpdateRowLockHandler.html">SqlServerMemoryOptimizedUpdateRowLockHandler</a></dt>
+      <dd><p>Update-based lock handler for SQL Server memory-optimized tables, which need the
+<code>WITH (SNAPSHOT)</code> hint on the locking update.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoDelegate.html">StdAdoDelegate</a></dt>
+      <dd><p>This is meant to be an abstract base class for most, if not all, <a class="xref" href="Quartz.Impl.AdoJobStore.IDriverDelegate.html">IDriverDelegate</a>
+implementations. Subclasses should override only those methods that need
+special handling for the DBMS driver in question.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.StoredTriggerHeader.html">StoredTriggerHeader</a></dt>
+      <dd><p>The parts of a stored trigger row a state transition decides on: the trigger's stored state, the job
+it fires, when it fires next, and which type table holds its schedule.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.StoredTriggerStates.html">StoredTriggerStates</a></dt>
+      <dd><p>Translates between <a class="xref" href="Quartz.Extensibility.StoredTriggerState.html">StoredTriggerState</a> and the strings the trigger state columns hold.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.TriggerAcquisitionCriteria.html">TriggerAcquisitionCriteria</a></dt>
+      <dd><p>What <a class="xref" href="Quartz.Impl.AdoJobStore.IDriverDelegate.html#Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggersToAcquire_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_Impl_AdoJobStore_TriggerAcquisitionCriteria_System_Threading_CancellationToken_">SelectTriggersToAcquire(ConnectionAndTransactionHolder, TriggerAcquisitionCriteria, CancellationToken)</a> should consider when picking the next
+triggers to fire.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.TriggerFiredUpdate.html">TriggerFiredUpdate</a></dt>
+      <dd><p>Every row change one trigger fire makes, gathered into one value so that
+<a class="xref" href="Quartz.Impl.AdoJobStore.IDriverDelegate.html#Quartz_Impl_AdoJobStore_IDriverDelegate_ApplyTriggerFired_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_Impl_AdoJobStore_TriggerFiredUpdate_System_Threading_CancellationToken_">ApplyTriggerFired(ConnectionAndTransactionHolder, TriggerFiredUpdate, CancellationToken)</a> can issue them in as few round trips as the
+provider allows.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.TriggerPersistenceDelegateContext.html">TriggerPersistenceDelegateContext</a></dt>
+      <dd><p>The settings a <a class="xref" href="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.html">ITriggerPersistenceDelegate</a> works from, handed to
+<a class="xref" href="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.html#Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate_Initialize_Quartz_Impl_AdoJobStore_TriggerPersistenceDelegateContext_">Initialize(TriggerPersistenceDelegateContext)</a> once by the driver delegate before the
+persistence delegate is used.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.TriggerPropertyBundle.html">TriggerPropertyBundle</a></dt>
+      <dd><p>What a trigger persistence delegate reads back for one trigger: the schedule builder that
+recreates its schedule, and optionally an applier that restores trigger state the schedule
+builder cannot carry, such as how many times the trigger has fired.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.UpdateRowLockHandler.html">UpdateRowLockHandler</a></dt>
+      <dd><p>Provide thread/resource locking in order to protect
+resources from being altered by multiple threads at the same time using
+a db row update.</p>
+</dd>
+    </dl>
+    <h3 id="structs">
+Structs
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.MisfiredTriggerBatch.html">MisfiredTriggerBatch</a></dt>
+      <dd><p>One pass worth of misfired triggers, as returned by
+<a class="xref" href="Quartz.Impl.AdoJobStore.IDriverDelegate.html#Quartz_Impl_AdoJobStore_IDriverDelegate_SelectMisfiredTriggersToRecover_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_Extensibility_StoredTriggerState_System_DateTimeOffset_System_Int32_System_Threading_CancellationToken_">SelectMisfiredTriggersToRecover(ConnectionAndTransactionHolder, StoredTriggerState, DateTimeOffset, int, CancellationToken)</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.MisfiredTriggerUpdate.html">MisfiredTriggerUpdate</a></dt>
+      <dd><p>A single trigger's pending misfire update, as applied in a batch by
+<a class="xref" href="Quartz.Impl.AdoJobStore.IDriverDelegate.html#Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateMisfiredTriggers_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_Collections_Generic_IReadOnlyList_Quartz_Impl_AdoJobStore_MisfiredTriggerUpdate__System_Threading_CancellationToken_">UpdateMisfiredTriggers(ConnectionAndTransactionHolder, IReadOnlyList&lt;MisfiredTriggerUpdate&gt;, CancellationToken)</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.SqlRowLimit.html">SqlRowLimit</a></dt>
+      <dd><p>How a dialect says &quot;at most this many rows&quot;, as a slot the statement has for it rather than as an
+edit to finished SQL.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.SqlStatement.html">SqlStatement</a></dt>
+      <dd><p>A statement and the parameters bound to it, kept as data rather than issued, so that the same
+definition can go out either as a standalone command or as one command of a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbbatch">DbBatch</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.SqlStatementParameter.html">SqlStatementParameter</a></dt>
+      <dd><p>One parameter of a <a class="xref" href="Quartz.Impl.AdoJobStore.SqlStatement.html">SqlStatement</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.TriggerAcquireResult.html">TriggerAcquireResult</a></dt>
+      <dd><p>One candidate returned by <a class="xref" href="Quartz.Impl.AdoJobStore.IDriverDelegate.html#Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggersToAcquire_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_Impl_AdoJobStore_TriggerAcquisitionCriteria_System_Threading_CancellationToken_">SelectTriggersToAcquire(ConnectionAndTransactionHolder, TriggerAcquisitionCriteria, CancellationToken)</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.TriggerAcquisitionSqlShape.html">TriggerAcquisitionSqlShape</a></dt>
+      <dd><p>Everything about one acquisition attempt that changes the text of the statement, and nothing that
+does not.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.TriggerExecutionState.html">TriggerExecutionState</a></dt>
+      <dd><p>A trigger's stored state together with whether it currently has an execution in flight.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.TriggerStateTransition.html">TriggerStateTransition</a></dt>
+      <dd><p>One conditional trigger-state change: rows currently in <a class="xref" href="Quartz.Impl.AdoJobStore.TriggerStateTransition.html#Quartz_Impl_AdoJobStore_TriggerStateTransition_From">From</a> become
+<a class="xref" href="Quartz.Impl.AdoJobStore.TriggerStateTransition.html#Quartz_Impl_AdoJobStore_TriggerStateTransition_To">To</a>, and rows in any other state are left alone.</p>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.IDbAccessor.html">IDbAccessor</a></dt>
+      <dd><p>Service interface or modifying <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idbcommand">IDbCommand</a> parameters
+and resultset values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.IDriverDelegate.html">IDriverDelegate</a></dt>
+      <dd><p>This is the base interface for all driver delegate classes.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.ILockHandler.html">ILockHandler</a></dt>
+      <dd><p>An interface for providing thread/resource locking in order to protect
+resources from being altered by multiple threads at the same time.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.html">ITriggerPersistenceDelegate</a></dt>
+      <dd><p>An interface which provides an implementation for storing a particular
+type of <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>'s extended properties.</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Quartz.Impl.AdoJobStore.SchedulerLock.html">SchedulerLock</a></dt>
+      <dd><p>The locks a job store takes to serialize access to the scheduling data it shares with the other
+nodes of a cluster.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

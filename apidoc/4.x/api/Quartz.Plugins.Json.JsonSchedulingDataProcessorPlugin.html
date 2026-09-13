@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class JsonSchedulingDataProcessorPlugin | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class JsonSchedulingDataProcessorPlugin | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="This plugin loads JSON file(s) to add jobs and schedule them with triggers as the scheduler is initialized, and can optionally periodically scan the file for changes.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Plugins_Json_JsonSchedulingDataProcessorPlugin.md&amp;value=---%0Auid%3A%20Quartz.Plugins.Json.JsonSchedulingDataProcessorPlugin%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Plugins.Json.JsonSchedulingDataProcessorPlugin">
+
+
+
+  <h1 id="Quartz_Plugins_Json_JsonSchedulingDataProcessorPlugin" data-uid="Quartz.Plugins.Json.JsonSchedulingDataProcessorPlugin" class="text-break">
+Class JsonSchedulingDataProcessorPlugin  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Plugins/Plugins/Json/JsonSchedulingDataProcessorPlugin.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<a class="xref" href="Quartz.Plugins.html">Plugins</a>.<a class="xref" href="Quartz.Plugins.Json.html">Json</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.Plugins.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>This plugin loads JSON file(s) to add jobs and schedule them with triggers
+as the scheduler is initialized, and can optionally periodically scan the
+file for changes.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class JsonSchedulingDataProcessorPlugin : ISchedulerPlugin, IFileScanListener</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">JsonSchedulingDataProcessorPlugin</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Quartz.Extensibility.ISchedulerPlugin.html">ISchedulerPlugin</a></div>
+      <div><a class="xref" href="Quartz.Jobs.IFileScanListener.html">IFileScanListener</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_Plugins_Json_JsonSchedulingDataProcessorPlugin_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+This is the JSON analog of <a class="xref" href="Quartz.Plugins.Xml.XmlSchedulingDataProcessorPlugin.html">XmlSchedulingDataProcessorPlugin</a>, and
+the maintained one: JSON is where a scheduling file gains what the schedule gains — daily time
+interval triggers, retry policies and execution groups are readable here and are not in the frozen
+XML schema. The two plugins have one surface deliberately, so a file format is the only thing that
+differs between them.
+</p>
+<p>
+The periodically scanning of files for changes is not currently supported in a
+clustered environment.
+</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Quartz_Plugins_Json_JsonSchedulingDataProcessorPlugin__ctor_" data-uid="Quartz.Plugins.Json.JsonSchedulingDataProcessorPlugin.#ctor*"></a>
+
+  <h3 id="Quartz_Plugins_Json_JsonSchedulingDataProcessorPlugin__ctor" data-uid="Quartz.Plugins.Json.JsonSchedulingDataProcessorPlugin.#ctor">
+  JsonSchedulingDataProcessorPlugin()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Plugins/Plugins/Json/JsonSchedulingDataProcessorPlugin.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates the plugin with the static logger, a reflecting type loader and the system clock, for a
+plugin the loader built from a <code>quartz.plugin.&lt;name&gt;.type</code> key and so had nothing to
+inject into.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JsonSchedulingDataProcessorPlugin()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Plugins_Json_JsonSchedulingDataProcessorPlugin__ctor_" data-uid="Quartz.Plugins.Json.JsonSchedulingDataProcessorPlugin.#ctor*"></a>
+
+  <h3 id="Quartz_Plugins_Json_JsonSchedulingDataProcessorPlugin__ctor_Microsoft_Extensions_Logging_ILogger_Quartz_Plugins_Json_JsonSchedulingDataProcessorPlugin__Quartz_Extensibility_ITypeLoader_System_TimeProvider_" data-uid="Quartz.Plugins.Json.JsonSchedulingDataProcessorPlugin.#ctor(Microsoft.Extensions.Logging.ILogger{Quartz.Plugins.Json.JsonSchedulingDataProcessorPlugin},Quartz.Extensibility.ITypeLoader,System.TimeProvider)">
+  JsonSchedulingDataProcessorPlugin(ILogger&lt;JsonSchedulingDataProcessorPlugin&gt;, ITypeLoader, TimeProvider)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Plugins/Plugins/Json/JsonSchedulingDataProcessorPlugin.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates the plugin with what a container resolved, which is what
+<code>UseJsonSchedulingConfiguration</code> uses.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JsonSchedulingDataProcessorPlugin(ILogger&lt;JsonSchedulingDataProcessorPlugin&gt; logger, ITypeLoader typeLoader, TimeProvider timeProvider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="Quartz.Plugins.Json.JsonSchedulingDataProcessorPlugin.html">JsonSchedulingDataProcessorPlugin</a>&gt;</dt>
+    <dd><p>Where the plugin reports what it loaded and what it could not.</p>
+</dd>
+    <dt><code>typeLoader</code> <a class="xref" href="Quartz.Extensibility.ITypeLoader.html">ITypeLoader</a></dt>
+    <dd><p>Resolves the job types the file names as strings.</p>
+</dd>
+    <dt><code>timeProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeprovider">TimeProvider</a></dt>
+    <dd><p>The clock the scanned files' timestamps are compared against.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_Plugins_Json_JsonSchedulingDataProcessorPlugin_FileUpdated_" data-uid="Quartz.Plugins.Json.JsonSchedulingDataProcessorPlugin.FileUpdated*"></a>
+
+  <h3 id="Quartz_Plugins_Json_JsonSchedulingDataProcessorPlugin_FileUpdated_System_String_System_Threading_CancellationToken_" data-uid="Quartz.Plugins.Json.JsonSchedulingDataProcessorPlugin.FileUpdated(System.String,System.Threading.CancellationToken)">
+  FileUpdated(string, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Plugins/Plugins/Json/JsonSchedulingDataProcessorPlugin.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Informs that certain file has been updated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask FileUpdated(string fileName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Plugins_Json_JsonSchedulingDataProcessorPlugin_Initialize_" data-uid="Quartz.Plugins.Json.JsonSchedulingDataProcessorPlugin.Initialize*"></a>
+
+  <h3 id="Quartz_Plugins_Json_JsonSchedulingDataProcessorPlugin_Initialize_System_String_Quartz_IScheduler_System_Threading_CancellationToken_" data-uid="Quartz.Plugins.Json.JsonSchedulingDataProcessorPlugin.Initialize(System.String,Quartz.IScheduler,System.Threading.CancellationToken)">
+  Initialize(string, IScheduler, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Plugins/Plugins/Json/JsonSchedulingDataProcessorPlugin.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called during creation of the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> in order to give
+the <a class="xref" href="Quartz.Extensibility.ISchedulerPlugin.html">ISchedulerPlugin</a> a chance to Initialize.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask Initialize(string pluginName, IScheduler scheduler, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pluginName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name by which the plugin is identified.</p>
+</dd>
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler to which the plugin is registered.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Plugins_Json_JsonSchedulingDataProcessorPlugin_Initialize_System_String_Quartz_IScheduler_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>At this point, the Scheduler's <a class="xref" href="Quartz.Extensibility.IJobStore.html">IJobStore</a> is not yet</p>
+<p>
+If you need direct access your plugin, you can have it explicitly put a
+reference to itself in the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>'s
+<a class="xref" href="Quartz.SchedulerContext.html">SchedulerContext</a> as part of its
+<a class="xref" href="Quartz.Extensibility.ISchedulerPlugin.html#Quartz_Extensibility_ISchedulerPlugin_Initialize_System_String_Quartz_IScheduler_System_Threading_CancellationToken_">Initialize(string, IScheduler, CancellationToken)</a> method.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_Plugins_Json_JsonSchedulingDataProcessorPlugin_Start_" data-uid="Quartz.Plugins.Json.JsonSchedulingDataProcessorPlugin.Start*"></a>
+
+  <h3 id="Quartz_Plugins_Json_JsonSchedulingDataProcessorPlugin_Start_System_Threading_CancellationToken_" data-uid="Quartz.Plugins.Json.JsonSchedulingDataProcessorPlugin.Start(System.Threading.CancellationToken)">
+  Start(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Plugins/Plugins/Json/JsonSchedulingDataProcessorPlugin.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the associated <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> is started, in order
+to let the plug-in know it can now make calls into the scheduler if it
+needs to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask Start(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Plugins_Json_JsonSchedulingDataProcessorPlugin_Start_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Does nothing unless the plugin says otherwise. Most plugins do all their work in
+<a class="xref" href="Quartz.Extensibility.ISchedulerPlugin.html#Quartz_Extensibility_ISchedulerPlugin_Initialize_System_String_Quartz_IScheduler_System_Threading_CancellationToken_">Initialize(string, IScheduler, CancellationToken)</a> — attaching a listener, registering a resolver — and have nothing to say
+at the two lifecycle moments; implement this only when there is something that cannot happen until
+the scheduler is running.</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Plugins/Plugins/Json/JsonSchedulingDataProcessorPlugin.cs/#L50" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

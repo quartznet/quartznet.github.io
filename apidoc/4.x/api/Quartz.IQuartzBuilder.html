@@ -1,0 +1,2197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IQuartzBuilder | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IQuartzBuilder | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Configures a scheduler and the services it is built from.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_IQuartzBuilder.md&amp;value=---%0Auid%3A%20Quartz.IQuartzBuilder%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.IQuartzBuilder">
+
+
+
+  <h1 id="Quartz_IQuartzBuilder" data-uid="Quartz.IQuartzBuilder" class="text-break">
+Interface IQuartzBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Configures a scheduler and the services it is built from.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IQuartzBuilder</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Quartz.PluginConfigurationExtensions.html#Quartz_PluginConfigurationExtensions_UseJobHistoryLogging_Quartz_IQuartzBuilder_System_Action_Quartz_JobHistoryLoggingOptions__">PluginConfigurationExtensions.UseJobHistoryLogging(IQuartzBuilder, Action&lt;JobHistoryLoggingOptions&gt;?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PluginConfigurationExtensions.html#Quartz_PluginConfigurationExtensions_UseJsonSchedulingConfiguration_Quartz_IQuartzBuilder_System_Action_Quartz_FileSchedulingOptions__">PluginConfigurationExtensions.UseJsonSchedulingConfiguration(IQuartzBuilder, Action&lt;FileSchedulingOptions&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PluginConfigurationExtensions.html#Quartz_PluginConfigurationExtensions_UseJsonSchedulingConfiguration_Quartz_IQuartzBuilder_System_String___">PluginConfigurationExtensions.UseJsonSchedulingConfiguration(IQuartzBuilder, params string[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PluginConfigurationExtensions.html#Quartz_PluginConfigurationExtensions_UseStructuredJobLogging_Quartz_IQuartzBuilder_System_Action_Quartz_JobHistoryLoggingOptions__">PluginConfigurationExtensions.UseStructuredJobLogging(IQuartzBuilder, Action&lt;JobHistoryLoggingOptions&gt;?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PluginConfigurationExtensions.html#Quartz_PluginConfigurationExtensions_UseStructuredTriggerLogging_Quartz_IQuartzBuilder_System_Action_Quartz_TriggerHistoryLoggingOptions__">PluginConfigurationExtensions.UseStructuredTriggerLogging(IQuartzBuilder, Action&lt;TriggerHistoryLoggingOptions&gt;?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PluginConfigurationExtensions.html#Quartz_PluginConfigurationExtensions_UseTriggerHistoryLogging_Quartz_IQuartzBuilder_System_Action_Quartz_TriggerHistoryLoggingOptions__">PluginConfigurationExtensions.UseTriggerHistoryLogging(IQuartzBuilder, Action&lt;TriggerHistoryLoggingOptions&gt;?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PluginConfigurationExtensions.html#Quartz_PluginConfigurationExtensions_UseXmlSchedulingConfiguration_Quartz_IQuartzBuilder_System_Action_Quartz_FileSchedulingOptions__">PluginConfigurationExtensions.UseXmlSchedulingConfiguration(IQuartzBuilder, Action&lt;FileSchedulingOptions&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PluginConfigurationExtensions.html#Quartz_PluginConfigurationExtensions_UseXmlSchedulingConfiguration_Quartz_IQuartzBuilder_System_String___">PluginConfigurationExtensions.UseXmlSchedulingConfiguration(IQuartzBuilder, params string[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.QuartzBuilderExtensions.html#Quartz_QuartzBuilderExtensions_AddCalendar_Quartz_IQuartzBuilder_System_String_Quartz_ICalendar_Quartz_AddCalendarOptions_">QuartzBuilderExtensions.AddCalendar(IQuartzBuilder, string, ICalendar, AddCalendarOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.QuartzBuilderExtensions.html#Quartz_QuartzBuilderExtensions_AddCalendar_Quartz_IQuartzBuilder_System_String_System_Func_System_IServiceProvider_Quartz_ICalendar__Quartz_AddCalendarOptions_">QuartzBuilderExtensions.AddCalendar(IQuartzBuilder, string, Func&lt;IServiceProvider, ICalendar&gt;, AddCalendarOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.QuartzBuilderExtensions.html#Quartz_QuartzBuilderExtensions_AddCalendar__1_Quartz_IQuartzBuilder_System_String_Quartz_AddCalendarOptions_System_Action_System_IServiceProvider___0__">QuartzBuilderExtensions.AddCalendar&lt;T&gt;(IQuartzBuilder, string, AddCalendarOptions, Action&lt;IServiceProvider, T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.QuartzBuilderExtensions.html#Quartz_QuartzBuilderExtensions_AddCalendar__1_Quartz_IQuartzBuilder_System_String_Quartz_AddCalendarOptions_System_Action___0__">QuartzBuilderExtensions.AddCalendar&lt;T&gt;(IQuartzBuilder, string, AddCalendarOptions, Action&lt;T&gt;?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.QuartzBuilderExtensions.html#Quartz_QuartzBuilderExtensions_AddJob_Quartz_IQuartzBuilder_System_Type_System_Action_Quartz_IJobConfigurator_Quartz_IJob___">QuartzBuilderExtensions.AddJob(IQuartzBuilder, Type, Action&lt;IJobConfigurator&lt;IJob&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.QuartzBuilderExtensions.html#Quartz_QuartzBuilderExtensions_AddJob_Quartz_IQuartzBuilder_System_Type_System_Action_System_IServiceProvider_Quartz_IJobConfigurator_Quartz_IJob___">QuartzBuilderExtensions.AddJob(IQuartzBuilder, Type, Action&lt;IServiceProvider, IJobConfigurator&lt;IJob&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.QuartzBuilderExtensions.html#Quartz_QuartzBuilderExtensions_AddJobTimeout_Quartz_IQuartzBuilder_System_Nullable_System_TimeSpan__">QuartzBuilderExtensions.AddJobTimeout(IQuartzBuilder, TimeSpan?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.QuartzBuilderExtensions.html#Quartz_QuartzBuilderExtensions_AddJobType__1_Quartz_IQuartzBuilder_">QuartzBuilderExtensions.AddJobType&lt;TJob&gt;(IQuartzBuilder)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.QuartzBuilderExtensions.html#Quartz_QuartzBuilderExtensions_AddJobType__1_Quartz_IQuartzBuilder_Microsoft_Extensions_DependencyInjection_ServiceLifetime_">QuartzBuilderExtensions.AddJobType&lt;TJob&gt;(IQuartzBuilder, ServiceLifetime)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.QuartzBuilderExtensions.html#Quartz_QuartzBuilderExtensions_AddJobType__1_Quartz_IQuartzBuilder_System_Func_System_IServiceProvider___0__">QuartzBuilderExtensions.AddJobType&lt;TJob&gt;(IQuartzBuilder, Func&lt;IServiceProvider, TJob&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.QuartzBuilderExtensions.html#Quartz_QuartzBuilderExtensions_AddJobType__1_Quartz_IQuartzBuilder_System_Func_System_IServiceProvider___0__Microsoft_Extensions_DependencyInjection_ServiceLifetime_">QuartzBuilderExtensions.AddJobType&lt;TJob&gt;(IQuartzBuilder, Func&lt;IServiceProvider, TJob&gt;, ServiceLifetime)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.QuartzBuilderExtensions.html#Quartz_QuartzBuilderExtensions_AddJobType__2_Quartz_IQuartzBuilder_">QuartzBuilderExtensions.AddJobType&lt;TJob, TImplementation&gt;(IQuartzBuilder)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.QuartzBuilderExtensions.html#Quartz_QuartzBuilderExtensions_AddJobType__2_Quartz_IQuartzBuilder_Microsoft_Extensions_DependencyInjection_ServiceLifetime_">QuartzBuilderExtensions.AddJobType&lt;TJob, TImplementation&gt;(IQuartzBuilder, ServiceLifetime)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.QuartzBuilderExtensions.html#Quartz_QuartzBuilderExtensions_AddJob__1_Quartz_IQuartzBuilder_System_Action_Quartz_IJobConfigurator___0___">QuartzBuilderExtensions.AddJob&lt;T&gt;(IQuartzBuilder, Action&lt;IJobConfigurator&lt;T&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.QuartzBuilderExtensions.html#Quartz_QuartzBuilderExtensions_AddJob__1_Quartz_IQuartzBuilder_System_Action_System_IServiceProvider_Quartz_IJobConfigurator___0___">QuartzBuilderExtensions.AddJob&lt;T&gt;(IQuartzBuilder, Action&lt;IServiceProvider, IJobConfigurator&lt;T&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.QuartzBuilderExtensions.html#Quartz_QuartzBuilderExtensions_AddTrigger_Quartz_IQuartzBuilder_System_Action_Quartz_ITriggerConfigurator_Quartz_IJob___">QuartzBuilderExtensions.AddTrigger(IQuartzBuilder, Action&lt;ITriggerConfigurator&lt;IJob&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.QuartzBuilderExtensions.html#Quartz_QuartzBuilderExtensions_AddTrigger_Quartz_IQuartzBuilder_System_Action_System_IServiceProvider_Quartz_ITriggerConfigurator_Quartz_IJob___">QuartzBuilderExtensions.AddTrigger(IQuartzBuilder, Action&lt;IServiceProvider, ITriggerConfigurator&lt;IJob&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.QuartzBuilderExtensions.html#Quartz_QuartzBuilderExtensions_AddTrigger__1_Quartz_IQuartzBuilder_System_Action_Quartz_ITriggerConfigurator___0___">QuartzBuilderExtensions.AddTrigger&lt;TJob&gt;(IQuartzBuilder, Action&lt;ITriggerConfigurator&lt;TJob&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.QuartzBuilderExtensions.html#Quartz_QuartzBuilderExtensions_AddTrigger__1_Quartz_IQuartzBuilder_System_Action_System_IServiceProvider_Quartz_ITriggerConfigurator___0___">QuartzBuilderExtensions.AddTrigger&lt;TJob&gt;(IQuartzBuilder, Action&lt;IServiceProvider, ITriggerConfigurator&lt;TJob&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.QuartzBuilderExtensions.html#Quartz_QuartzBuilderExtensions_ConfigureJobScope_Quartz_IQuartzBuilder_System_Action_Microsoft_Extensions_DependencyInjection_IServiceScope_Quartz_Extensibility_TriggerFiredBundle_Quartz_IScheduler__">QuartzBuilderExtensions.ConfigureJobScope(IQuartzBuilder, Action&lt;IServiceScope, TriggerFiredBundle, IScheduler&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.QuartzBuilderExtensions.html#Quartz_QuartzBuilderExtensions_ScheduleJob__1_Quartz_IQuartzBuilder_System_Action_Quartz_ITriggerConfigurator___0___System_Action_Quartz_IJobConfigurator___0___">QuartzBuilderExtensions.ScheduleJob&lt;T&gt;(IQuartzBuilder, Action&lt;ITriggerConfigurator&lt;T&gt;&gt;, Action&lt;IJobConfigurator&lt;T&gt;&gt;?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.QuartzBuilderExtensions.html#Quartz_QuartzBuilderExtensions_ScheduleJob__1_Quartz_IQuartzBuilder_System_Action_System_IServiceProvider_Quartz_ITriggerConfigurator___0___System_Action_System_IServiceProvider_Quartz_IJobConfigurator___0___">QuartzBuilderExtensions.ScheduleJob&lt;T&gt;(IQuartzBuilder, Action&lt;IServiceProvider, ITriggerConfigurator&lt;T&gt;&gt;, Action&lt;IServiceProvider, IJobConfigurator&lt;T&gt;&gt;?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.QuartzBuilderExtensions.html#Quartz_QuartzBuilderExtensions_UseSimpleTypeLoader_Quartz_IQuartzBuilder_">QuartzBuilderExtensions.UseSimpleTypeLoader(IQuartzBuilder)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.QuartzBuilderExtensions.html#Quartz_QuartzBuilderExtensions_UseTypeLoader_Quartz_IQuartzBuilder_System_Action_Quartz_TypeLoaderOptions__">QuartzBuilderExtensions.UseTypeLoader(IQuartzBuilder, Action&lt;TypeLoaderOptions&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.QuartzHealthCheckExtensions.html#Quartz_QuartzHealthCheckExtensions_AddQuartzHealthChecks_Quartz_IQuartzBuilder_System_Action_Quartz_QuartzHealthCheckOptions__">QuartzHealthCheckExtensions.AddQuartzHealthChecks(IQuartzBuilder, Action&lt;QuartzHealthCheckOptions&gt;?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.TimeZonePluginConfigurationExtensions.html#Quartz_TimeZonePluginConfigurationExtensions_UseTimeZoneConverter_Quartz_IQuartzBuilder_">TimeZonePluginConfigurationExtensions.UseTimeZoneConverter(IQuartzBuilder)</a>
+  </div>
+  </dd></dl>
+
+
+
+  <h2 id="Quartz_IQuartzBuilder_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Every member configures typed options or registers a service — nothing writes configuration
+strings. The option names are the same words as the configuration keys, so
+<code>Quartz:ThreadPool:MaxConcurrency</code> and <a class="xref" href="Quartz.ThreadPoolOptions.html#Quartz_ThreadPoolOptions_MaxConcurrency">MaxConcurrency</a> are the
+same setting said two ways, and code-first and file-based configuration describe one vocabulary
+rather than two.
+</p>
+<p>
+Members return the builder so configuration can be chained.
+</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_IQuartzBuilder_SchedulerName_" data-uid="Quartz.IQuartzBuilder.SchedulerName*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_SchedulerName" data-uid="Quartz.IQuartzBuilder.SchedulerName">
+  SchedulerName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The name this scheduler was registered under, or an empty string for the default scheduler.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string SchedulerName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_SchedulerName_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This is also the service key its components are registered under and the name of its options,
+so a named scheduler's registrations and configuration always agree.</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_Services_" data-uid="Quartz.IQuartzBuilder.Services*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_Services" data-uid="Quartz.IQuartzBuilder.Services">
+  Services
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The services this scheduler is built from. Register your own implementations here to replace
+the defaults — anything registered wins over Quartz's own registration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IServiceCollection Services { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_IQuartzBuilder_AddJobListener_" data-uid="Quartz.IQuartzBuilder.AddJobListener*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_AddJobListener__1_System_Collections_Generic_IReadOnlyCollection_Quartz_IMatcher_Quartz_JobKey___" data-uid="Quartz.IQuartzBuilder.AddJobListener``1(System.Collections.Generic.IReadOnlyCollection{Quartz.IMatcher{Quartz.JobKey}})">
+  AddJobListener&lt;T&gt;(params IReadOnlyCollection&lt;IMatcher&lt;JobKey&gt;&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L389"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder AddJobListener&lt;T&gt;(params IReadOnlyCollection&lt;IMatcher&lt;JobKey&gt;&gt; matchers) where T : class, IJobListener</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matchers</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_AddJobListener__1_System_Collections_Generic_IReadOnlyCollection_Quartz_IMatcher_Quartz_JobKey____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The listener's shape is checked here, while the application is still writing its configuration.
+Every member of <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a>, <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> and
+<a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> has a default implementation, so a public method that carries a
+notification's name but not its signature still compiles — it just stops implementing anything,
+and the default runs in its place with nothing to say the method is dead. Such a listener is
+refused with a <a class="xref" href="Quartz.SchedulerConfigException.html">SchedulerConfigException</a> naming the member and the signature it
+should have.</p>
+<p>
+What is examined is <code class="typeparamref">T</code>: for an instance overload that is the type the call
+was written with rather than the instance's own, so a listener handed over as its base type is
+checked as that base, and a factory overload declared as the interface has nothing to examine at
+all. Neither escapes — the listener's runtime type is checked again when it is attached to a
+scheduler, which is only a later moment to hear about it.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_AddJobListener_" data-uid="Quartz.IQuartzBuilder.AddJobListener*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_AddJobListener__1_System_Func_System_IServiceProvider___0__System_Collections_Generic_IReadOnlyCollection_Quartz_IMatcher_Quartz_JobKey___" data-uid="Quartz.IQuartzBuilder.AddJobListener``1(System.Func{System.IServiceProvider,``0},System.Collections.Generic.IReadOnlyCollection{Quartz.IMatcher{Quartz.JobKey}})">
+  AddJobListener&lt;T&gt;(Func&lt;IServiceProvider, T&gt;, params IReadOnlyCollection&lt;IMatcher&lt;JobKey&gt;&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L397"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder AddJobListener&lt;T&gt;(Func&lt;IServiceProvider, T&gt; factory, params IReadOnlyCollection&lt;IMatcher&lt;JobKey&gt;&gt; matchers) where T : class, IJobListener</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>factory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, T&gt;</dt>
+    <dd></dd>
+    <dt><code>matchers</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_AddJobListener__1_System_Func_System_IServiceProvider___0__System_Collections_Generic_IReadOnlyCollection_Quartz_IMatcher_Quartz_JobKey____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The listener's shape is checked here, while the application is still writing its configuration.
+Every member of <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a>, <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> and
+<a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> has a default implementation, so a public method that carries a
+notification's name but not its signature still compiles — it just stops implementing anything,
+and the default runs in its place with nothing to say the method is dead. Such a listener is
+refused with a <a class="xref" href="Quartz.SchedulerConfigException.html">SchedulerConfigException</a> naming the member and the signature it
+should have.</p>
+<p>
+What is examined is <code class="typeparamref">T</code>: for an instance overload that is the type the call
+was written with rather than the instance's own, so a listener handed over as its base type is
+checked as that base, and a factory overload declared as the interface has nothing to examine at
+all. Neither escapes — the listener's runtime type is checked again when it is attached to a
+scheduler, which is only a later moment to hear about it.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_AddJobListener_" data-uid="Quartz.IQuartzBuilder.AddJobListener*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_AddJobListener__1___0_System_Collections_Generic_IReadOnlyCollection_Quartz_IMatcher_Quartz_JobKey___" data-uid="Quartz.IQuartzBuilder.AddJobListener``1(``0,System.Collections.Generic.IReadOnlyCollection{Quartz.IMatcher{Quartz.JobKey}})">
+  AddJobListener&lt;T&gt;(T, params IReadOnlyCollection&lt;IMatcher&lt;JobKey&gt;&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L393"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder AddJobListener&lt;T&gt;(T listener, params IReadOnlyCollection&lt;IMatcher&lt;JobKey&gt;&gt; matchers) where T : class, IJobListener</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>listener</code> <span class="xref">T</span></dt>
+    <dd></dd>
+    <dt><code>matchers</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_AddJobListener__1___0_System_Collections_Generic_IReadOnlyCollection_Quartz_IMatcher_Quartz_JobKey____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The listener's shape is checked here, while the application is still writing its configuration.
+Every member of <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a>, <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> and
+<a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> has a default implementation, so a public method that carries a
+notification's name but not its signature still compiles — it just stops implementing anything,
+and the default runs in its place with nothing to say the method is dead. Such a listener is
+refused with a <a class="xref" href="Quartz.SchedulerConfigException.html">SchedulerConfigException</a> naming the member and the signature it
+should have.</p>
+<p>
+What is examined is <code class="typeparamref">T</code>: for an instance overload that is the type the call
+was written with rather than the instance's own, so a listener handed over as its base type is
+checked as that base, and a factory overload declared as the interface has nothing to examine at
+all. Neither escapes — the listener's runtime type is checked again when it is attached to a
+scheduler, which is only a later moment to hear about it.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_AddJobMiddleware_" data-uid="Quartz.IQuartzBuilder.AddJobMiddleware*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_AddJobMiddleware__1" data-uid="Quartz.IQuartzBuilder.AddJobMiddleware``1">
+  AddJobMiddleware&lt;T&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L448"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a middleware the container builds, which wraps every job this scheduler executes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder AddJobMiddleware&lt;T&gt;() where T : class, IJobExecutionMiddleware</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The middleware's type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_AddJobMiddleware__1_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Middleware is where a cross-cutting concern lives — a log scope, a tenant context, a timeout, a
+translation of what a library throws. A listener cannot do any of those: it is notified before
+and after the job rather than around it, so it can neither wrap the call, decline to make it, nor
+see what it threw. See <a class="xref" href="Quartz.IJobExecutionMiddleware.html">IJobExecutionMiddleware</a> for what a middleware may and may
+not decide.
+</p>
+<p>
+Middleware runs in registration order, outermost first, so the first registered is the first to
+see a firing and the last to see its result. Each call adds a stage: registering the same type
+twice puts it in the chain twice, the same way registering the same job twice schedules it twice.
+</p>
+<p>
+One instance is built per scheduler and shared by every firing, so a middleware must keep no
+per-firing state in a field. It is registered for this scheduler alone, like its listeners and
+its job store, so a named scheduler's middleware wraps only its own executions.
+</p>
+<p>
+That instance is built <em>from the container's root</em>, when the scheduler's resources are,
+so its constructor dependencies must be singletons. A scoped one throws
+<code>Cannot resolve scoped service … from root provider</code> where scope validation is on — the
+Host's default in Development — and becomes a captive dependency living as long as the scheduler
+where it is not. Take <code>IServiceScopeFactory</code> and open a scope inside <code>Invoke</code> instead,
+or read the firing's own scope through <a class="xref" href="Quartz.IJobExecutionContextAccessor.html">IJobExecutionContextAccessor</a>.
+</p>
+<p>
+A middleware registered through <code>ConfigureAllQuartzSchedulers</code> always composes <em>inside</em>
+one registered here, whichever call was written first: a scheduler's own callback runs before what
+every scheduler was told, so a library's wrapper sits within the application's.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_AddJobMiddleware_" data-uid="Quartz.IQuartzBuilder.AddJobMiddleware*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_AddJobMiddleware__1_System_Func_System_IServiceProvider___0__" data-uid="Quartz.IQuartzBuilder.AddJobMiddleware``1(System.Func{System.IServiceProvider,``0})">
+  AddJobMiddleware&lt;T&gt;(Func&lt;IServiceProvider, T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L454"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder AddJobMiddleware&lt;T&gt;(Func&lt;IServiceProvider, T&gt; factory) where T : class, IJobExecutionMiddleware</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>factory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, T&gt;</dt>
+    <dd><p>Builds the middleware from this scheduler's view of the container.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The middleware's type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_AddJobMiddleware__1_System_Func_System_IServiceProvider___0___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Middleware is where a cross-cutting concern lives — a log scope, a tenant context, a timeout, a
+translation of what a library throws. A listener cannot do any of those: it is notified before
+and after the job rather than around it, so it can neither wrap the call, decline to make it, nor
+see what it threw. See <a class="xref" href="Quartz.IJobExecutionMiddleware.html">IJobExecutionMiddleware</a> for what a middleware may and may
+not decide.
+</p>
+<p>
+Middleware runs in registration order, outermost first, so the first registered is the first to
+see a firing and the last to see its result. Each call adds a stage: registering the same type
+twice puts it in the chain twice, the same way registering the same job twice schedules it twice.
+</p>
+<p>
+One instance is built per scheduler and shared by every firing, so a middleware must keep no
+per-firing state in a field. It is registered for this scheduler alone, like its listeners and
+its job store, so a named scheduler's middleware wraps only its own executions.
+</p>
+<p>
+That instance is built <em>from the container's root</em>, when the scheduler's resources are,
+so its constructor dependencies must be singletons. A scoped one throws
+<code>Cannot resolve scoped service … from root provider</code> where scope validation is on — the
+Host's default in Development — and becomes a captive dependency living as long as the scheduler
+where it is not. Take <code>IServiceScopeFactory</code> and open a scope inside <code>Invoke</code> instead,
+or read the firing's own scope through <a class="xref" href="Quartz.IJobExecutionContextAccessor.html">IJobExecutionContextAccessor</a>.
+</p>
+<p>
+A middleware registered through <code>ConfigureAllQuartzSchedulers</code> always composes <em>inside</em>
+one registered here, whichever call was written first: a scheduler's own callback runs before what
+every scheduler was told, so a library's wrapper sits within the application's.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_AddJobMiddleware_" data-uid="Quartz.IQuartzBuilder.AddJobMiddleware*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_AddJobMiddleware__1___0_" data-uid="Quartz.IQuartzBuilder.AddJobMiddleware``1(``0)">
+  AddJobMiddleware&lt;T&gt;(T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L460"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder AddJobMiddleware&lt;T&gt;(T middleware) where T : class, IJobExecutionMiddleware</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>middleware</code> <span class="xref">T</span></dt>
+    <dd><p>The middleware, already built.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The middleware's type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_AddJobMiddleware__1___0__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Middleware is where a cross-cutting concern lives — a log scope, a tenant context, a timeout, a
+translation of what a library throws. A listener cannot do any of those: it is notified before
+and after the job rather than around it, so it can neither wrap the call, decline to make it, nor
+see what it threw. See <a class="xref" href="Quartz.IJobExecutionMiddleware.html">IJobExecutionMiddleware</a> for what a middleware may and may
+not decide.
+</p>
+<p>
+Middleware runs in registration order, outermost first, so the first registered is the first to
+see a firing and the last to see its result. Each call adds a stage: registering the same type
+twice puts it in the chain twice, the same way registering the same job twice schedules it twice.
+</p>
+<p>
+One instance is built per scheduler and shared by every firing, so a middleware must keep no
+per-firing state in a field. It is registered for this scheduler alone, like its listeners and
+its job store, so a named scheduler's middleware wraps only its own executions.
+</p>
+<p>
+That instance is built <em>from the container's root</em>, when the scheduler's resources are,
+so its constructor dependencies must be singletons. A scoped one throws
+<code>Cannot resolve scoped service … from root provider</code> where scope validation is on — the
+Host's default in Development — and becomes a captive dependency living as long as the scheduler
+where it is not. Take <code>IServiceScopeFactory</code> and open a scope inside <code>Invoke</code> instead,
+or read the firing's own scope through <a class="xref" href="Quartz.IJobExecutionContextAccessor.html">IJobExecutionContextAccessor</a>.
+</p>
+<p>
+A middleware registered through <code>ConfigureAllQuartzSchedulers</code> always composes <em>inside</em>
+one registered here, whichever call was written first: a scheduler's own callback runs before what
+every scheduler was told, so a library's wrapper sits within the application's.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_AddPlugin_" data-uid="Quartz.IQuartzBuilder.AddPlugin*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_AddPlugin__1_System_Func_System_IServiceProvider___0__System_String_" data-uid="Quartz.IQuartzBuilder.AddPlugin``1(System.Func{System.IServiceProvider,``0},System.String)">
+  AddPlugin&lt;T&gt;(Func&lt;IServiceProvider, T&gt;, string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L333"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a plugin the caller builds and configures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder AddPlugin&lt;T&gt;(Func&lt;IServiceProvider, T&gt; factory, string? name = null) where T : class, ISchedulerPlugin</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>factory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, T&gt;</dt>
+    <dd><p>Builds the plugin.</p>
+</dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name the scheduler knows the plugin by.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The plugin's type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_AddPlugin__1_System_Func_System_IServiceProvider___0__System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The three shapes match the listener trio: the container builds the plugin, the caller builds it,
+or the caller configures options the plugin is given. <code class="paramref">name</code> is how the
+scheduler refers to the plugin, and some plugins derive persisted job and trigger keys from it —
+so it is part of the deployment's identity rather than a label, and it is also the name a
+<code>quartz.plugin.&lt;name&gt;.*</code> key configures the same plugin under. Left unset, the
+plugin's type name is used. Plugins shipped with Quartz use their conventional short name
+(<code>xml</code>, <code>json</code>) for that reason.</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_AddPlugin_" data-uid="Quartz.IQuartzBuilder.AddPlugin*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_AddPlugin__1_System_String_" data-uid="Quartz.IQuartzBuilder.AddPlugin``1(System.String)">
+  AddPlugin&lt;T&gt;(string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L322"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a plugin, which extends the scheduler's behaviour for its whole lifetime.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder AddPlugin&lt;T&gt;(string? name = null) where T : class, ISchedulerPlugin</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name the scheduler knows the plugin by.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The plugin's type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_AddPlugin__1_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The three shapes match the listener trio: the container builds the plugin, the caller builds it,
+or the caller configures options the plugin is given. <code class="paramref">name</code> is how the
+scheduler refers to the plugin, and some plugins derive persisted job and trigger keys from it —
+so it is part of the deployment's identity rather than a label, and it is also the name a
+<code>quartz.plugin.&lt;name&gt;.*</code> key configures the same plugin under. Left unset, the
+plugin's type name is used. Plugins shipped with Quartz use their conventional short name
+(<code>xml</code>, <code>json</code>) for that reason.</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_AddPlugin_" data-uid="Quartz.IQuartzBuilder.AddPlugin*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_AddPlugin__2_System_Action___1__System_String_" data-uid="Quartz.IQuartzBuilder.AddPlugin``2(System.Action{``1},System.String)">
+  AddPlugin&lt;T, TOptions&gt;(Action&lt;TOptions&gt;?, string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L349"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a plugin with configuration of its own.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder AddPlugin&lt;T, TOptions&gt;(Action&lt;TOptions&gt;? configure = null, string? name = null) where T : class, ISchedulerPlugin where TOptions : class</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;TOptions&gt;</dt>
+    <dd><p>Configures the plugin's options.</p>
+</dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name the scheduler knows the plugin by.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The plugin's type.</p>
+</dd>
+    <dt><code>TOptions</code></dt>
+    <dd><p>The plugin's options type, which it takes as a dependency. It is resolved through
+<code>IOptions&lt;TOptions&gt;</code>, so it must keep its public parameterless constructor when the
+application is trimmed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_AddPlugin__2_System_Action___1__System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The three shapes match the listener trio: the container builds the plugin, the caller builds it,
+or the caller configures options the plugin is given. <code class="paramref">name</code> is how the
+scheduler refers to the plugin, and some plugins derive persisted job and trigger keys from it —
+so it is part of the deployment's identity rather than a label, and it is also the name a
+<code>quartz.plugin.&lt;name&gt;.*</code> key configures the same plugin under. Left unset, the
+plugin's type name is used. Plugins shipped with Quartz use their conventional short name
+(<code>xml</code>, <code>json</code>) for that reason.</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_AddSchedulerListener_" data-uid="Quartz.IQuartzBuilder.AddSchedulerListener*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_AddSchedulerListener__1" data-uid="Quartz.IQuartzBuilder.AddSchedulerListener``1">
+  AddSchedulerListener&lt;T&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L377"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a scheduler listener the container builds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder AddSchedulerListener&lt;T&gt;() where T : class, ISchedulerListener</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The listener's type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_AddSchedulerListener__1_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The listener's shape is checked here, while the application is still writing its configuration.
+Every member of <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a>, <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> and
+<a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> has a default implementation, so a public method that carries a
+notification's name but not its signature still compiles — it just stops implementing anything,
+and the default runs in its place with nothing to say the method is dead. Such a listener is
+refused with a <a class="xref" href="Quartz.SchedulerConfigException.html">SchedulerConfigException</a> naming the member and the signature it
+should have.</p>
+<p>
+What is examined is <code class="typeparamref">T</code>: for an instance overload that is the type the call
+was written with rather than the instance's own, so a listener handed over as its base type is
+checked as that base, and a factory overload declared as the interface has nothing to examine at
+all. Neither escapes — the listener's runtime type is checked again when it is attached to a
+scheduler, which is only a later moment to hear about it.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_AddSchedulerListener_" data-uid="Quartz.IQuartzBuilder.AddSchedulerListener*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_AddSchedulerListener__1_System_Func_System_IServiceProvider___0__" data-uid="Quartz.IQuartzBuilder.AddSchedulerListener``1(System.Func{System.IServiceProvider,``0})">
+  AddSchedulerListener&lt;T&gt;(Func&lt;IServiceProvider, T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L385"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder AddSchedulerListener&lt;T&gt;(Func&lt;IServiceProvider, T&gt; factory) where T : class, ISchedulerListener</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>factory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_AddSchedulerListener__1_System_Func_System_IServiceProvider___0___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The listener's shape is checked here, while the application is still writing its configuration.
+Every member of <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a>, <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> and
+<a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> has a default implementation, so a public method that carries a
+notification's name but not its signature still compiles — it just stops implementing anything,
+and the default runs in its place with nothing to say the method is dead. Such a listener is
+refused with a <a class="xref" href="Quartz.SchedulerConfigException.html">SchedulerConfigException</a> naming the member and the signature it
+should have.</p>
+<p>
+What is examined is <code class="typeparamref">T</code>: for an instance overload that is the type the call
+was written with rather than the instance's own, so a listener handed over as its base type is
+checked as that base, and a factory overload declared as the interface has nothing to examine at
+all. Neither escapes — the listener's runtime type is checked again when it is attached to a
+scheduler, which is only a later moment to hear about it.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_AddSchedulerListener_" data-uid="Quartz.IQuartzBuilder.AddSchedulerListener*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_AddSchedulerListener__1___0_" data-uid="Quartz.IQuartzBuilder.AddSchedulerListener``1(``0)">
+  AddSchedulerListener&lt;T&gt;(T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L381"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder AddSchedulerListener&lt;T&gt;(T listener) where T : class, ISchedulerListener</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>listener</code> <span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_AddSchedulerListener__1___0__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The listener's shape is checked here, while the application is still writing its configuration.
+Every member of <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a>, <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> and
+<a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> has a default implementation, so a public method that carries a
+notification's name but not its signature still compiles — it just stops implementing anything,
+and the default runs in its place with nothing to say the method is dead. Such a listener is
+refused with a <a class="xref" href="Quartz.SchedulerConfigException.html">SchedulerConfigException</a> naming the member and the signature it
+should have.</p>
+<p>
+What is examined is <code class="typeparamref">T</code>: for an instance overload that is the type the call
+was written with rather than the instance's own, so a listener handed over as its base type is
+checked as that base, and a factory overload declared as the interface has nothing to examine at
+all. Neither escapes — the listener's runtime type is checked again when it is attached to a
+scheduler, which is only a later moment to hear about it.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_AddTriggerListener_" data-uid="Quartz.IQuartzBuilder.AddTriggerListener*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_AddTriggerListener__1_System_Collections_Generic_IReadOnlyCollection_Quartz_IMatcher_Quartz_TriggerKey___" data-uid="Quartz.IQuartzBuilder.AddTriggerListener``1(System.Collections.Generic.IReadOnlyCollection{Quartz.IMatcher{Quartz.TriggerKey}})">
+  AddTriggerListener&lt;T&gt;(params IReadOnlyCollection&lt;IMatcher&lt;TriggerKey&gt;&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L401"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder AddTriggerListener&lt;T&gt;(params IReadOnlyCollection&lt;IMatcher&lt;TriggerKey&gt;&gt; matchers) where T : class, ITriggerListener</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matchers</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_AddTriggerListener__1_System_Collections_Generic_IReadOnlyCollection_Quartz_IMatcher_Quartz_TriggerKey____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The listener's shape is checked here, while the application is still writing its configuration.
+Every member of <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a>, <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> and
+<a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> has a default implementation, so a public method that carries a
+notification's name but not its signature still compiles — it just stops implementing anything,
+and the default runs in its place with nothing to say the method is dead. Such a listener is
+refused with a <a class="xref" href="Quartz.SchedulerConfigException.html">SchedulerConfigException</a> naming the member and the signature it
+should have.</p>
+<p>
+What is examined is <code class="typeparamref">T</code>: for an instance overload that is the type the call
+was written with rather than the instance's own, so a listener handed over as its base type is
+checked as that base, and a factory overload declared as the interface has nothing to examine at
+all. Neither escapes — the listener's runtime type is checked again when it is attached to a
+scheduler, which is only a later moment to hear about it.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_AddTriggerListener_" data-uid="Quartz.IQuartzBuilder.AddTriggerListener*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_AddTriggerListener__1_System_Func_System_IServiceProvider___0__System_Collections_Generic_IReadOnlyCollection_Quartz_IMatcher_Quartz_TriggerKey___" data-uid="Quartz.IQuartzBuilder.AddTriggerListener``1(System.Func{System.IServiceProvider,``0},System.Collections.Generic.IReadOnlyCollection{Quartz.IMatcher{Quartz.TriggerKey}})">
+  AddTriggerListener&lt;T&gt;(Func&lt;IServiceProvider, T&gt;, params IReadOnlyCollection&lt;IMatcher&lt;TriggerKey&gt;&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L409"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder AddTriggerListener&lt;T&gt;(Func&lt;IServiceProvider, T&gt; factory, params IReadOnlyCollection&lt;IMatcher&lt;TriggerKey&gt;&gt; matchers) where T : class, ITriggerListener</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>factory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, T&gt;</dt>
+    <dd></dd>
+    <dt><code>matchers</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_AddTriggerListener__1_System_Func_System_IServiceProvider___0__System_Collections_Generic_IReadOnlyCollection_Quartz_IMatcher_Quartz_TriggerKey____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The listener's shape is checked here, while the application is still writing its configuration.
+Every member of <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a>, <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> and
+<a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> has a default implementation, so a public method that carries a
+notification's name but not its signature still compiles — it just stops implementing anything,
+and the default runs in its place with nothing to say the method is dead. Such a listener is
+refused with a <a class="xref" href="Quartz.SchedulerConfigException.html">SchedulerConfigException</a> naming the member and the signature it
+should have.</p>
+<p>
+What is examined is <code class="typeparamref">T</code>: for an instance overload that is the type the call
+was written with rather than the instance's own, so a listener handed over as its base type is
+checked as that base, and a factory overload declared as the interface has nothing to examine at
+all. Neither escapes — the listener's runtime type is checked again when it is attached to a
+scheduler, which is only a later moment to hear about it.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_AddTriggerListener_" data-uid="Quartz.IQuartzBuilder.AddTriggerListener*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_AddTriggerListener__1___0_System_Collections_Generic_IReadOnlyCollection_Quartz_IMatcher_Quartz_TriggerKey___" data-uid="Quartz.IQuartzBuilder.AddTriggerListener``1(``0,System.Collections.Generic.IReadOnlyCollection{Quartz.IMatcher{Quartz.TriggerKey}})">
+  AddTriggerListener&lt;T&gt;(T, params IReadOnlyCollection&lt;IMatcher&lt;TriggerKey&gt;&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L405"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder AddTriggerListener&lt;T&gt;(T listener, params IReadOnlyCollection&lt;IMatcher&lt;TriggerKey&gt;&gt; matchers) where T : class, ITriggerListener</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>listener</code> <span class="xref">T</span></dt>
+    <dd></dd>
+    <dt><code>matchers</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_AddTriggerListener__1___0_System_Collections_Generic_IReadOnlyCollection_Quartz_IMatcher_Quartz_TriggerKey____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The listener's shape is checked here, while the application is still writing its configuration.
+Every member of <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a>, <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> and
+<a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> has a default implementation, so a public method that carries a
+notification's name but not its signature still compiles — it just stops implementing anything,
+and the default runs in its place with nothing to say the method is dead. Such a listener is
+refused with a <a class="xref" href="Quartz.SchedulerConfigException.html">SchedulerConfigException</a> naming the member and the signature it
+should have.</p>
+<p>
+What is examined is <code class="typeparamref">T</code>: for an instance overload that is the type the call
+was written with rather than the instance's own, so a listener handed over as its base type is
+checked as that base, and a factory overload declared as the interface has nothing to examine at
+all. Neither escapes — the listener's runtime type is checked again when it is attached to a
+scheduler, which is only a later moment to hear about it.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_ConfigureOptions_" data-uid="Quartz.IQuartzBuilder.ConfigureOptions*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_ConfigureOptions__1_System_Action___0__" data-uid="Quartz.IQuartzBuilder.ConfigureOptions``1(System.Action{``0})">
+  ConfigureOptions&lt;TOptions&gt;(Action&lt;TOptions&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L291"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures an options type belonging to this scheduler, so a component of your own can have
+settings that follow the scheduler it was registered for.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder ConfigureOptions&lt;TOptions&gt;(Action&lt;TOptions&gt;? configure = null) where TOptions : class</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;TOptions&gt;</dt>
+    <dd><p>Configures the options.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TOptions</code></dt>
+    <dd><p>The options type. It is resolved through <code>IOptions&lt;TOptions&gt;</code>, so it must keep its
+public parameterless constructor when the application is trimmed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_ConfigureOptions__1_System_Action___0___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+A component the container builds asks for <code>IOptions&lt;TOptions&gt;</code>, which by itself
+resolves the <em>unnamed</em> instance — so under <code>AddQuartz("reporting", …)</code> it would be
+handed the default scheduler's settings, or defaults. This says the type is a scheduler's own:
+the callback is registered under this scheduler's options name, and the type is declared so that
+resolving it through the scheduler hands back the named instance.
+</p>
+<p>
+Registered whether or not a callback is given: where the options come from is not something
+adding one should change. Calling it repeatedly is harmless — each callback is applied in turn,
+and the declaration is deduplicated.
+</p>
+<p>
+This is the mechanism <a class="xref" href="Quartz.IQuartzBuilder.html#Quartz_IQuartzBuilder_AddPlugin__2_System_Action___1__System_String_">AddPlugin&lt;T, TOptions&gt;(Action&lt;TOptions&gt;?, string?)</a> is built from, available to every
+component: a thread pool, a job store, a lock handler, a listener, a job factory.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_ConfigureScheduler_" data-uid="Quartz.IQuartzBuilder.ConfigureScheduler*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_ConfigureScheduler_System_Action_Quartz_QuartzSchedulerOptions__" data-uid="Quartz.IQuartzBuilder.ConfigureScheduler(System.Action{Quartz.QuartzSchedulerOptions})">
+  ConfigureScheduler(Action&lt;QuartzSchedulerOptions&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures the scheduler itself.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder ConfigureScheduler(Action&lt;QuartzSchedulerOptions&gt; configure)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.QuartzSchedulerOptions.html">QuartzSchedulerOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_UseDefaultThreadPool_" data-uid="Quartz.IQuartzBuilder.UseDefaultThreadPool*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_UseDefaultThreadPool_System_Action_Quartz_ThreadPoolOptions__" data-uid="Quartz.IQuartzBuilder.UseDefaultThreadPool(System.Action{Quartz.ThreadPoolOptions})">
+  UseDefaultThreadPool(Action&lt;ThreadPoolOptions&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses the default thread pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder UseDefaultThreadPool(Action&lt;ThreadPoolOptions&gt;? configure = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.ThreadPoolOptions.html">ThreadPoolOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_UseDefaultThreadPool_" data-uid="Quartz.IQuartzBuilder.UseDefaultThreadPool*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_UseDefaultThreadPool_System_Int32_" data-uid="Quartz.IQuartzBuilder.UseDefaultThreadPool(System.Int32)">
+  UseDefaultThreadPool(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses the default thread pool, limited to the given number of concurrently executing jobs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder UseDefaultThreadPool(int maxConcurrency)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>maxConcurrency</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_UseExecutionLimits_" data-uid="Quartz.IQuartzBuilder.UseExecutionLimits*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_UseExecutionLimits_System_Action_Quartz_ExecutionLimitsBuilder__" data-uid="Quartz.IQuartzBuilder.UseExecutionLimits(System.Action{Quartz.ExecutionLimitsBuilder})">
+  UseExecutionLimits(Action&lt;ExecutionLimitsBuilder&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L467"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures execution group limits, so resource-hungry jobs cannot saturate every thread. Each
+limit is counted on this node or across the cluster, as its <a class="xref" href="Quartz.ExecutionLimitScope.html">ExecutionLimitScope</a> says.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder UseExecutionLimits(Action&lt;ExecutionLimitsBuilder&gt; configure)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.ExecutionLimitsBuilder.html">ExecutionLimitsBuilder</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_UseInMemoryStore_" data-uid="Quartz.IQuartzBuilder.UseInMemoryStore*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_UseInMemoryStore_System_Action_Quartz_InMemoryJobStoreOptions__" data-uid="Quartz.IQuartzBuilder.UseInMemoryStore(System.Action{Quartz.InMemoryJobStoreOptions})">
+  UseInMemoryStore(Action&lt;InMemoryJobStoreOptions&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses the in-memory job store, which does not survive process restarts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder UseInMemoryStore(Action&lt;InMemoryJobStoreOptions&gt;? configure = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.InMemoryJobStoreOptions.html">InMemoryJobStoreOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_UseInMemoryStore_System_Action_Quartz_InMemoryJobStoreOptions___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Takes an options object rather than a sub-builder, unlike
+<a class="xref" href="Quartz.IQuartzBuilder.html#Quartz_IQuartzBuilder_UsePersistentStore_System_Action_Quartz_IPersistentStoreBuilder__">UsePersistentStore(Action&lt;IPersistentStoreBuilder&gt;)</a>: an in-memory store is one
+component with a couple of settings, whereas a database-backed store is a composite that also has
+a data source, a driver delegate, a serializer and a lock handler to choose. The shape says which
+kind of thing is being configured.</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_UseInstanceIdGenerator_" data-uid="Quartz.IQuartzBuilder.UseInstanceIdGenerator*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_UseInstanceIdGenerator_Quartz_Extensibility_IInstanceIdGenerator_" data-uid="Quartz.IQuartzBuilder.UseInstanceIdGenerator(Quartz.Extensibility.IInstanceIdGenerator)">
+  UseInstanceIdGenerator(IInstanceIdGenerator)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses an instance id generator the caller has already built.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder UseInstanceIdGenerator(IInstanceIdGenerator generator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>generator</code> <a class="xref" href="Quartz.Extensibility.IInstanceIdGenerator.html">IInstanceIdGenerator</a></dt>
+    <dd><p>The generator.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_UseInstanceIdGenerator_Quartz_Extensibility_IInstanceIdGenerator__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Choosing a generator says the id is to be generated, so
+<a class="xref" href="Quartz.QuartzSchedulerOptions.html#Quartz_QuartzSchedulerOptions_GenerateInstanceId">GenerateInstanceId</a> is set — the counterpart of writing
+<code>quartz.scheduler.instanceId = AUTO</code> beside the generator's type name. A generator that was
+chosen and then never called would be the configuration equivalent of silence.
+</p>
+<p>
+Only a clustered scheduler generates one: a scheduler that shares its database with nobody has
+nothing to tell itself apart from, so the generator is not called and the id stays
+<code>NON_CLUSTERED</code>.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_UseInstanceIdGenerator_" data-uid="Quartz.IQuartzBuilder.UseInstanceIdGenerator*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_UseInstanceIdGenerator__1" data-uid="Quartz.IQuartzBuilder.UseInstanceIdGenerator``1">
+  UseInstanceIdGenerator&lt;T&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L214"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses a specific instance id generator, which names this node within a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder UseInstanceIdGenerator&lt;T&gt;() where T : class, IInstanceIdGenerator</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The generator's type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_UseInstanceIdGenerator__1_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Choosing a generator says the id is to be generated, so
+<a class="xref" href="Quartz.QuartzSchedulerOptions.html#Quartz_QuartzSchedulerOptions_GenerateInstanceId">GenerateInstanceId</a> is set — the counterpart of writing
+<code>quartz.scheduler.instanceId = AUTO</code> beside the generator's type name. A generator that was
+chosen and then never called would be the configuration equivalent of silence.
+</p>
+<p>
+Only a clustered scheduler generates one: a scheduler that shares its database with nobody has
+nothing to tell itself apart from, so the generator is not called and the id stays
+<code>NON_CLUSTERED</code>.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_UseInstanceIdGenerator_" data-uid="Quartz.IQuartzBuilder.UseInstanceIdGenerator*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_UseInstanceIdGenerator__2_System_Action___1__" data-uid="Quartz.IQuartzBuilder.UseInstanceIdGenerator``2(System.Action{``1})">
+  UseInstanceIdGenerator&lt;T, TOptions&gt;(Action&lt;TOptions&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses an instance id generator with options of its own.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder UseInstanceIdGenerator&lt;T, TOptions&gt;(Action&lt;TOptions&gt;? configure = null) where T : class, IInstanceIdGenerator where TOptions : class</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;TOptions&gt;</dt>
+    <dd><p>Configures the generator's options.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The generator's type.</p>
+</dd>
+    <dt><code>TOptions</code></dt>
+    <dd><p>The generator's options type. It is resolved through <code>IOptions&lt;TOptions&gt;</code>, so it must
+keep its public parameterless constructor when the application is trimmed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_UseInstanceIdGenerator__2_System_Action___1___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Choosing a generator says the id is to be generated, so
+<a class="xref" href="Quartz.QuartzSchedulerOptions.html#Quartz_QuartzSchedulerOptions_GenerateInstanceId">GenerateInstanceId</a> is set — the counterpart of writing
+<code>quartz.scheduler.instanceId = AUTO</code> beside the generator's type name. A generator that was
+chosen and then never called would be the configuration equivalent of silence.
+</p>
+<p>
+Only a clustered scheduler generates one: a scheduler that shares its database with nobody has
+nothing to tell itself apart from, so the generator is not called and the id stays
+<code>NON_CLUSTERED</code>.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_UseJobFactory_" data-uid="Quartz.IQuartzBuilder.UseJobFactory*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_UseJobFactory_Quartz_Extensibility_IJobFactory_" data-uid="Quartz.IQuartzBuilder.UseJobFactory(Quartz.Extensibility.IJobFactory)">
+  UseJobFactory(IJobFactory)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses a job factory the caller has already built.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder UseJobFactory(IJobFactory jobFactory)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>jobFactory</code> <a class="xref" href="Quartz.Extensibility.IJobFactory.html">IJobFactory</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_UseJobFactory_" data-uid="Quartz.IQuartzBuilder.UseJobFactory*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_UseJobFactory__1" data-uid="Quartz.IQuartzBuilder.UseJobFactory``1">
+  UseJobFactory&lt;T&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L183"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses a specific job factory, which decides how job instances are produced.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder UseJobFactory&lt;T&gt;() where T : class, IJobFactory</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_UseJobStore_" data-uid="Quartz.IQuartzBuilder.UseJobStore*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_UseJobStore_Quartz_Extensibility_IJobStore_" data-uid="Quartz.IQuartzBuilder.UseJobStore(Quartz.Extensibility.IJobStore)">
+  UseJobStore(IJobStore)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses a job store the caller has already built.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder UseJobStore(IJobStore jobStore)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>jobStore</code> <a class="xref" href="Quartz.Extensibility.IJobStore.html">IJobStore</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_UseJobStore_Quartz_Extensibility_IJobStore__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>For a store that needs constructing with something the container cannot supply. A store the
+container can build is better selected with <a class="xref" href="Quartz.IQuartzBuilder.html#Quartz_IQuartzBuilder_UseJobStore__1">UseJobStore&lt;T&gt;()</a>,
+<a class="xref" href="Quartz.IQuartzBuilder.html#Quartz_IQuartzBuilder_UsePersistentStore__1_System_Action_Quartz_IPersistentStoreBuilder__">UsePersistentStore&lt;T&gt;(Action&lt;IPersistentStoreBuilder&gt;)</a> or <a class="xref" href="Quartz.IQuartzBuilder.html#Quartz_IQuartzBuilder_UseInMemoryStore_System_Action_Quartz_InMemoryJobStoreOptions__">UseInMemoryStore(Action&lt;InMemoryJobStoreOptions&gt;?)</a>, which let it have
+dependencies of its own.</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_UseJobStore_" data-uid="Quartz.IQuartzBuilder.UseJobStore*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_UseJobStore_System_Func_System_IServiceProvider_Quartz_Extensibility_IJobStore__" data-uid="Quartz.IQuartzBuilder.UseJobStore(System.Func{System.IServiceProvider,Quartz.Extensibility.IJobStore})">
+  UseJobStore(Func&lt;IServiceProvider, IJobStore&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses a job store built by a factory of your own.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder UseJobStore(Func&lt;IServiceProvider, IJobStore&gt; factory)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>factory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="Quartz.Extensibility.IJobStore.html">IJobStore</a>&gt;</dt>
+    <dd><p>Builds the job store.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_UseJobStore_System_Func_System_IServiceProvider_Quartz_Extensibility_IJobStore___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>For a store that needs something the container cannot construct on its own — a decorator around
+another store, or one whose constructor takes values rather than services. The factory is given
+this scheduler's view of the container and runs once, when the scheduler is built.</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_UseJobStore_" data-uid="Quartz.IQuartzBuilder.UseJobStore*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_UseJobStore__1" data-uid="Quartz.IQuartzBuilder.UseJobStore``1">
+  UseJobStore&lt;T&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses a job store of your own, built by the container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder UseJobStore&lt;T&gt;() where T : class, IJobStore</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The job store's type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_UseJobStore__1_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The seam for a store that keeps scheduling data somewhere Quartz has never heard of. It is
+constructed with this scheduler's own collaborators — its signaler, its serializer, its type
+loader — so a store written against them behaves the same under a named scheduler as under the
+default one. <a class="xref" href="Quartz.IQuartzBuilder.html#Quartz_IQuartzBuilder_UseInMemoryStore_System_Action_Quartz_InMemoryJobStoreOptions__">UseInMemoryStore(Action&lt;InMemoryJobStoreOptions&gt;?)</a> and <a class="xref" href="Quartz.IQuartzBuilder.html#Quartz_IQuartzBuilder_UsePersistentStore__1_System_Action_Quartz_IPersistentStoreBuilder__">UsePersistentStore&lt;T&gt;(Action&lt;IPersistentStoreBuilder&gt;)</a> remain the way
+to select the stores Quartz ships, since they configure them as well as choose them.</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_UseJobStore_" data-uid="Quartz.IQuartzBuilder.UseJobStore*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_UseJobStore__2_System_Action___1__" data-uid="Quartz.IQuartzBuilder.UseJobStore``2(System.Action{``1})">
+  UseJobStore&lt;T, TOptions&gt;(Action&lt;TOptions&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses a job store of your own, with options of its own.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder UseJobStore&lt;T, TOptions&gt;(Action&lt;TOptions&gt;? configure = null) where T : class, IJobStore where TOptions : class</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;TOptions&gt;</dt>
+    <dd><p>Configures the store's options.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The job store's type.</p>
+</dd>
+    <dt><code>TOptions</code></dt>
+    <dd><p>The store's options type. It is resolved through <code>IOptions&lt;TOptions&gt;</code>, so it must keep
+its public parameterless constructor when the application is trimmed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_UseJobStore__2_System_Action___1___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Sugar over <a class="xref" href="Quartz.IQuartzBuilder.html#Quartz_IQuartzBuilder_UseJobStore__1">UseJobStore&lt;T&gt;()</a> and <a class="xref" href="Quartz.IQuartzBuilder.html#Quartz_IQuartzBuilder_ConfigureOptions__1_System_Action___0__">ConfigureOptions&lt;TOptions&gt;(Action&lt;TOptions&gt;?)</a>: the options
+are declared as this scheduler's, so a store that takes <code>IOptions&lt;TOptions&gt;</code> is handed
+what was configured for the scheduler it belongs to rather than the unnamed instance.</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_UsePersistentStore_" data-uid="Quartz.IQuartzBuilder.UsePersistentStore*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_UsePersistentStore_System_Action_Quartz_IPersistentStoreBuilder__" data-uid="Quartz.IQuartzBuilder.UsePersistentStore(System.Action{Quartz.IPersistentStoreBuilder})">
+  UsePersistentStore(Action&lt;IPersistentStoreBuilder&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L166"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses a database-backed job store, so jobs and triggers survive restarts and can be clustered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder UsePersistentStore(Action&lt;IPersistentStoreBuilder&gt; configure)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_UsePersistentStore_System_Action_Quartz_IPersistentStoreBuilder___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Takes a sub-builder rather than an options object, unlike <a class="xref" href="Quartz.IQuartzBuilder.html#Quartz_IQuartzBuilder_UseInMemoryStore_System_Action_Quartz_InMemoryJobStoreOptions__">UseInMemoryStore(Action&lt;InMemoryJobStoreOptions&gt;?)</a>: a
+database-backed store is a composite that also has a data source, a driver delegate, a
+serializer and a lock handler to choose.
+</p>
+<p>
+Both stores Quartz ships are reached from here. The default begins the transaction each
+operation runs in and commits or rolls it back;
+<a class="xref" href="Quartz.IPersistentStoreBuilder.html#Quartz_IPersistentStoreBuilder_UseAmbientTransactions">UseAmbientTransactions()</a> inside the callback selects the one
+that runs inside a transaction somebody else owns. <a class="xref" href="Quartz.IQuartzBuilder.html#Quartz_IQuartzBuilder_UsePersistentStore__1_System_Action_Quartz_IPersistentStoreBuilder__">UsePersistentStore&lt;T&gt;(Action&lt;IPersistentStoreBuilder&gt;)</a> is for a
+store neither of those describes.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_UsePersistentStore_" data-uid="Quartz.IQuartzBuilder.UsePersistentStore*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_UsePersistentStore__1_System_Action_Quartz_IPersistentStoreBuilder__" data-uid="Quartz.IQuartzBuilder.UsePersistentStore``1(System.Action{Quartz.IPersistentStoreBuilder})">
+  UsePersistentStore&lt;T&gt;(Action&lt;IPersistentStoreBuilder&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses a specific database-backed job store implementation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder UsePersistentStore&lt;T&gt;(Action&lt;IPersistentStoreBuilder&gt; configure) where T : class, IJobStore</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_UsePersistentStore__1_System_Action_Quartz_IPersistentStoreBuilder___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>For a persistent store of your own. The two Quartz ships are both selected by
+<a class="xref" href="Quartz.IQuartzBuilder.html#Quartz_IQuartzBuilder_UsePersistentStore_System_Action_Quartz_IPersistentStoreBuilder__">UsePersistentStore(Action&lt;IPersistentStoreBuilder&gt;)</a>, which is why naming one of
+them here and also calling <a class="xref" href="Quartz.IPersistentStoreBuilder.html#Quartz_IPersistentStoreBuilder_UseAmbientTransactions">UseAmbientTransactions()</a> is
+reported as the contradiction it is rather than silently resolved.</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_UseThreadPool_" data-uid="Quartz.IQuartzBuilder.UseThreadPool*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_UseThreadPool_Quartz_Extensibility_IThreadPool_" data-uid="Quartz.IQuartzBuilder.UseThreadPool(Quartz.Extensibility.IThreadPool)">
+  UseThreadPool(IThreadPool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses a thread pool the caller has already built.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder UseThreadPool(IThreadPool threadPool)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>threadPool</code> <a class="xref" href="Quartz.Extensibility.IThreadPool.html">IThreadPool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_UseThreadPool_Quartz_Extensibility_IThreadPool__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>For a pool that needs constructing with something the container cannot supply. A pool the
+container can build is better selected with <a class="xref" href="Quartz.IQuartzBuilder.html#Quartz_IQuartzBuilder_UseThreadPool__1">UseThreadPool&lt;T&gt;()</a>, which lets it have
+dependencies of its own.</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_UseThreadPool_" data-uid="Quartz.IQuartzBuilder.UseThreadPool*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_UseThreadPool__1" data-uid="Quartz.IQuartzBuilder.UseThreadPool``1">
+  UseThreadPool&lt;T&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses a specific thread pool implementation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder UseThreadPool&lt;T&gt;() where T : class, IThreadPool</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_UseThreadPool__1_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A pool of your own has options of its own: declare them with
+<a class="xref" href="Quartz.IQuartzBuilder.html#Quartz_IQuartzBuilder_ConfigureOptions__1_System_Action___0__">ConfigureOptions&lt;TOptions&gt;(Action&lt;TOptions&gt;?)</a> and take <code>IOptions&lt;TOptions&gt;</code> through its
+constructor. <a class="xref" href="Quartz.ThreadPoolOptions.html">ThreadPoolOptions</a> belongs to the built-in pools, so it is configured
+on <a class="xref" href="Quartz.IQuartzBuilder.html#Quartz_IQuartzBuilder_UseDefaultThreadPool_System_Action_Quartz_ThreadPoolOptions__">UseDefaultThreadPool(Action&lt;ThreadPoolOptions&gt;?)</a> where it is read.</p>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_UseTimeProvider_" data-uid="Quartz.IQuartzBuilder.UseTimeProvider*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_UseTimeProvider_System_TimeProvider_" data-uid="Quartz.IQuartzBuilder.UseTimeProvider(System.TimeProvider)">
+  UseTimeProvider(TimeProvider)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses a specific time provider. Useful for testing time-dependent scheduling.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder UseTimeProvider(TimeProvider timeProvider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeprovider">TimeProvider</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IQuartzBuilder_UseTimeProvider_System_TimeProvider__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The clock belongs to this scheduler. Handing one to a named scheduler leaves the others on
+whatever they were using, which is what lets one scheduler in a container be driven by a fake
+clock while the rest keep real time.
+</p>
+<p>
+A scheduler that was not given one asks the container, and falls back to
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeprovider.system">System</a>. In full, most specific first:
+</p>
+<ol><li>the provider this scheduler was given here;</li><li>a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeprovider">TimeProvider</a> registered in the container;</li><li>a <code>quartz.timeProvider.type</code> key, which loses to both — code beats
+strings here as it does everywhere else;</li><li><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeprovider.system">System</a>.</li></ol>
+</div>
+
+
+
+
+  <a id="Quartz_IQuartzBuilder_UseTypeLoader_" data-uid="Quartz.IQuartzBuilder.UseTypeLoader*"></a>
+
+  <h3 id="Quartz_IQuartzBuilder_UseTypeLoader__1" data-uid="Quartz.IQuartzBuilder.UseTypeLoader``1">
+  UseTypeLoader&lt;T&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses a specific type loader, which decides how type names are resolved.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQuartzBuilder UseTypeLoader&lt;T&gt;() where T : class, ITypeLoader</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IQuartzBuilder.cs/#L26" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

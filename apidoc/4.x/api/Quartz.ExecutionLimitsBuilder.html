@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ExecutionLimitsBuilder | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ExecutionLimitsBuilder | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Builds the  a scheduler applies when it acquires triggers.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_ExecutionLimitsBuilder.md&amp;value=---%0Auid%3A%20Quartz.ExecutionLimitsBuilder%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.ExecutionLimitsBuilder">
+
+
+
+  <h1 id="Quartz_ExecutionLimitsBuilder" data-uid="Quartz.ExecutionLimitsBuilder" class="text-break">
+Class ExecutionLimitsBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/ExecutionLimitsBuilder.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Builds the <a class="xref" href="Quartz.ExecutionLimits.html">ExecutionLimits</a> a scheduler applies when it acquires triggers.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class ExecutionLimitsBuilder</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ExecutionLimitsBuilder</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+  <h2 id="Quartz_ExecutionLimitsBuilder_examples">Examples</h2>
+  <pre><code class="lang-csharp">ExecutionLimits limits = ExecutionLimitsBuilder.Create()
+    .ForGroup("high-cpu", 2)                                     // two on this node
+    .ForGroup("tenant-acme", 8, ExecutionLimitScope.Cluster)     // eight across the cluster
+    .ForOtherGroups(5)
+    .Build();</code></pre>
+
+
+  <h2 id="Quartz_ExecutionLimitsBuilder_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+The builder is mutable and the <a class="xref" href="Quartz.ExecutionLimits.html">ExecutionLimits</a> that <a class="xref" href="Quartz.ExecutionLimitsBuilder.html#Quartz_ExecutionLimitsBuilder_Build">Build()</a> returns is
+not, so a snapshot handed to <a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_SetExecutionLimits_Quartz_ExecutionLimits_System_Threading_CancellationToken_">SetExecutionLimits(ExecutionLimits?, CancellationToken)</a> cannot change underneath
+the scheduler thread that reads it.
+</p>
+<p>
+<a class="xref" href="Quartz.IQuartzBuilder.html#Quartz_IQuartzBuilder_UseExecutionLimits_System_Action_Quartz_ExecutionLimitsBuilder__">UseExecutionLimits(Action&lt;ExecutionLimitsBuilder&gt;)</a> hands one of these to a callback, which is the
+usual way to configure limits.
+</p>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_ExecutionLimitsBuilder_Build_" data-uid="Quartz.ExecutionLimitsBuilder.Build*"></a>
+
+  <h3 id="Quartz_ExecutionLimitsBuilder_Build" data-uid="Quartz.ExecutionLimitsBuilder.Build">
+  Build()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/ExecutionLimitsBuilder.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes an immutable snapshot of what has been configured so far.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExecutionLimits Build()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ExecutionLimits.html">ExecutionLimits</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_ExecutionLimitsBuilder_Create_" data-uid="Quartz.ExecutionLimitsBuilder.Create*"></a>
+
+  <h3 id="Quartz_ExecutionLimitsBuilder_Create" data-uid="Quartz.ExecutionLimitsBuilder.Create">
+  Create()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/ExecutionLimitsBuilder.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create an ExecutionLimitsBuilder with no limits configured.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ExecutionLimitsBuilder Create()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ExecutionLimitsBuilder.html">ExecutionLimitsBuilder</a></dt>
+    <dd><p>the new ExecutionLimitsBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_ExecutionLimitsBuilder_ForDefaultGroup_" data-uid="Quartz.ExecutionLimitsBuilder.ForDefaultGroup*"></a>
+
+  <h3 id="Quartz_ExecutionLimitsBuilder_ForDefaultGroup_System_Int32_Quartz_ExecutionLimitScope_" data-uid="Quartz.ExecutionLimitsBuilder.ForDefaultGroup(System.Int32,Quartz.ExecutionLimitScope)">
+  ForDefaultGroup(int, ExecutionLimitScope)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/ExecutionLimitsBuilder.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the concurrency limit for triggers that have no execution group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExecutionLimitsBuilder ForDefaultGroup(int maxConcurrent, ExecutionLimitScope scope = ExecutionLimitScope.Node)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>maxConcurrent</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Maximum concurrent threads (must be &gt;= 0), or <code>0</code> to forbid execution.</p>
+</dd>
+    <dt><code>scope</code> <a class="xref" href="Quartz.ExecutionLimitScope.html">ExecutionLimitScope</a></dt>
+    <dd><p>Whether the limit counts what this node runs or what the whole cluster runs.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ExecutionLimitsBuilder.html">ExecutionLimitsBuilder</a></dt>
+    <dd><p>This builder for fluent chaining.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p><code class="paramref">maxConcurrent</code> is negative, or
+<code class="paramref">scope</code> is not one of the defined values.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_ExecutionLimitsBuilder_ForGroup_" data-uid="Quartz.ExecutionLimitsBuilder.ForGroup*"></a>
+
+  <h3 id="Quartz_ExecutionLimitsBuilder_ForGroup_System_String_System_Int32_Quartz_ExecutionLimitScope_" data-uid="Quartz.ExecutionLimitsBuilder.ForGroup(System.String,System.Int32,Quartz.ExecutionLimitScope)">
+  ForGroup(string, int, ExecutionLimitScope)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/ExecutionLimitsBuilder.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the concurrency limit for a named execution group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExecutionLimitsBuilder ForGroup(string group, int maxConcurrent, ExecutionLimitScope scope = ExecutionLimitScope.Node)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>group</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The execution group name.</p>
+</dd>
+    <dt><code>maxConcurrent</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Maximum concurrent threads (must be &gt;= 0), or <code>0</code> to forbid execution.</p>
+</dd>
+    <dt><code>scope</code> <a class="xref" href="Quartz.ExecutionLimitScope.html">ExecutionLimitScope</a></dt>
+    <dd><p>Whether the limit counts what this node runs or what the whole cluster runs.
+Node-scoped unless said otherwise, which is what execution limits have always meant.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ExecutionLimitsBuilder.html">ExecutionLimitsBuilder</a></dt>
+    <dd><p>This builder for fluent chaining.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">group</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p><code class="paramref">group</code> is a reserved name.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p><code class="paramref">maxConcurrent</code> is negative, or
+<code class="paramref">scope</code> is not one of the defined values.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_ExecutionLimitsBuilder_ForOtherGroups_" data-uid="Quartz.ExecutionLimitsBuilder.ForOtherGroups*"></a>
+
+  <h3 id="Quartz_ExecutionLimitsBuilder_ForOtherGroups_System_Int32_Quartz_ExecutionLimitScope_" data-uid="Quartz.ExecutionLimitsBuilder.ForOtherGroups(System.Int32,Quartz.ExecutionLimitScope)">
+  ForOtherGroups(int, ExecutionLimitScope)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/ExecutionLimitsBuilder.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the default concurrency limit applied to any execution group not explicitly configured.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExecutionLimitsBuilder ForOtherGroups(int maxConcurrent, ExecutionLimitScope scope = ExecutionLimitScope.Node)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>maxConcurrent</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Maximum concurrent threads (must be &gt;= 0), or <code>0</code> to forbid execution.</p>
+</dd>
+    <dt><code>scope</code> <a class="xref" href="Quartz.ExecutionLimitScope.html">ExecutionLimitScope</a></dt>
+    <dd><p>Whether the limit counts what this node runs or what the whole cluster runs.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ExecutionLimitsBuilder.html">ExecutionLimitsBuilder</a></dt>
+    <dd><p>This builder for fluent chaining.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_ExecutionLimitsBuilder_ForOtherGroups_System_Int32_Quartz_ExecutionLimitScope__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The catch-all hands each unlisted group an allowance of its own rather than one they share, and
+that holds whichever scope it is declared in: <code>ForOtherGroups(1, ExecutionLimitScope.Cluster)</code>
+lets three unlisted tenants run one job each across the cluster, not one job between them.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p><code class="paramref">maxConcurrent</code> is negative, or
+<code class="paramref">scope</code> is not one of the defined values.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_ExecutionLimitsBuilder_Unlimited_" data-uid="Quartz.ExecutionLimitsBuilder.Unlimited*"></a>
+
+  <h3 id="Quartz_ExecutionLimitsBuilder_Unlimited_System_String_" data-uid="Quartz.ExecutionLimitsBuilder.Unlimited(System.String)">
+  Unlimited(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/ExecutionLimitsBuilder.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Mark a group as having no concurrency limit (unlimited).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExecutionLimitsBuilder Unlimited(string group)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>group</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The execution group name.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ExecutionLimitsBuilder.html">ExecutionLimitsBuilder</a></dt>
+    <dd><p>This builder for fluent chaining.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_ExecutionLimitsBuilder_Unlimited_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This is not the same as leaving the group out: an unlisted group falls back to
+<a class="xref" href="Quartz.ExecutionLimitsBuilder.html#Quartz_ExecutionLimitsBuilder_ForOtherGroups_System_Int32_Quartz_ExecutionLimitScope_">ForOtherGroups(int, ExecutionLimitScope)</a>, while an explicitly unlimited one does not. It takes no scope,
+because unlimited on one node and unlimited across the cluster are the same permission.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">group</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p><code class="paramref">group</code> is a reserved name.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_ExecutionLimitsBuilder_UseTriggerGroupWhenUnset_" data-uid="Quartz.ExecutionLimitsBuilder.UseTriggerGroupWhenUnset*"></a>
+
+  <h3 id="Quartz_ExecutionLimitsBuilder_UseTriggerGroupWhenUnset" data-uid="Quartz.ExecutionLimitsBuilder.UseTriggerGroupWhenUnset">
+  UseTriggerGroupWhenUnset()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/ExecutionLimitsBuilder.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Treats a trigger that carries no execution group as belonging to a group named after its own
+<a class="xref" href="Quartz.Key-1.html#Quartz_Key_1_Group">Group</a>, for the purpose of these limits.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExecutionLimitsBuilder UseTriggerGroupWhenUnset()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ExecutionLimitsBuilder.html">ExecutionLimitsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_ExecutionLimitsBuilder_UseTriggerGroupWhenUnset_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+For a schedule that already partitions work by trigger group — a tenant per group, a subsystem
+per group — this caps each partition without restating every group name as an execution group on
+every trigger. <a class="xref" href="Quartz.ExecutionLimitsBuilder.html#Quartz_ExecutionLimitsBuilder_ForGroup_System_String_System_Int32_Quartz_ExecutionLimitScope_">ForGroup(string, int, ExecutionLimitScope)</a> then names trigger groups, and
+<a class="xref" href="Quartz.ExecutionLimitsBuilder.html#Quartz_ExecutionLimitsBuilder_ForOtherGroups_System_Int32_Quartz_ExecutionLimitScope_">ForOtherGroups(int, ExecutionLimitScope)</a> caps the ones not named.
+</p>
+<p>
+The derivation is applied where a limit is evaluated and nowhere else: the trigger still carries
+no execution group, and the store still persists none. A trigger that does carry one is limited
+by that one. Two consequences worth knowing: ungrouped triggers stop falling under
+<a class="xref" href="Quartz.ExecutionLimitsBuilder.html#Quartz_ExecutionLimitsBuilder_ForDefaultGroup_System_Int32_Quartz_ExecutionLimitScope_">ForDefaultGroup(int, ExecutionLimitScope)</a> — with this on, nothing is ungrouped — and a trigger whose group
+happens to be a name the limits reserve (<code>*</code>, <code>_</code>, <code>null</code>) is left ungrouped
+rather than folded into the bucket that name means.
+</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/ExecutionLimitsBuilder.cs/#L47" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

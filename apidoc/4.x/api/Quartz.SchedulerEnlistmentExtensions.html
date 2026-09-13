@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SchedulerEnlistmentExtensions | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SchedulerEnlistmentExtensions | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Lets application code hand its own ADO.NET connection and transaction to the persistent job store, so that scheduling operations take part in a unit of work the application already owns.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_SchedulerEnlistmentExtensions.md&amp;value=---%0Auid%3A%20Quartz.SchedulerEnlistmentExtensions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.SchedulerEnlistmentExtensions">
+
+
+
+  <h1 id="Quartz_SchedulerEnlistmentExtensions" data-uid="Quartz.SchedulerEnlistmentExtensions" class="text-break">
+Class SchedulerEnlistmentExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SchedulerEnlistmentExtensions.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Lets application code hand its own ADO.NET connection and transaction to the persistent job
+store, so that scheduling operations take part in a unit of work the application already owns.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class SchedulerEnlistmentExtensions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">SchedulerEnlistmentExtensions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_SchedulerEnlistmentExtensions_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Requires the job store to be configured to accept enlisted transactions -
+<code>Configure(o =&gt; o.AcceptEnlistedTransactions = true)</code> on the persistent store builder, or
+<code>quartz.jobStore.acceptEnlistedTransactions</code>. Without it the job store keeps opening its own
+connection and managing its own transaction, and enlisting throws rather than being ignored.
+</p>
+<p>
+Enlisting is the only way to take part: an ambient
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.transactions.transactionscope">TransactionScope</a> on its own is not enough, because a
+connection the job store opens for itself is deliberately kept out of it. Open the connection
+inside the scope and enlist that, which also keeps the transaction from having to be promoted to
+a distributed one.
+</p>
+<p>
+The enlistment flows with the current asynchronous context, so it must be established in the
+same scope as the scheduler calls it should cover - the same rule that applies to
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.transactions.transactionscope">TransactionScope</a>, and for the same reason. In particular,
+establishing it inside an <code>async</code> helper does not carry it back out to the caller.
+</p>
+<p>
+While the enlistment is in effect the job store holds its locks in the caller's transaction, so
+they are only released once that transaction completes. Keep enlisted transactions short: a long
+running one blocks trigger acquisition, the misfire handler and cluster check-in.
+</p>
+<example>
+<pre><code class="lang-csharp">await using var tx = await dbContext.Database.BeginTransactionAsync();
+dbContext.Add(entity);
+await dbContext.SaveChangesAsync();
+<p>using (scheduler.EnlistTransaction(tx.GetDbTransaction()))
+{
+await scheduler.ScheduleJob(job, trigger);
+await tx.CommitAsync();
+}</p></code></pre>
+</example>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_SchedulerEnlistmentExtensions_EnlistConnection_" data-uid="Quartz.SchedulerEnlistmentExtensions.EnlistConnection*"></a>
+
+  <h3 id="Quartz_SchedulerEnlistmentExtensions_EnlistConnection_Quartz_IScheduler_System_Data_Common_DbConnection_System_Data_Common_DbTransaction_" data-uid="Quartz.SchedulerEnlistmentExtensions.EnlistConnection(Quartz.IScheduler,System.Data.Common.DbConnection,System.Data.Common.DbTransaction)">
+  EnlistConnection(IScheduler, DbConnection, DbTransaction?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SchedulerEnlistmentExtensions.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Makes the persistent job store use the given connection, and optionally the given
+transaction, for every operation performed on the current asynchronous flow until the
+returned scope is disposed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDisposable EnlistConnection(this IScheduler scheduler, DbConnection connection, DbTransaction? transaction = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler whose job store should use the connection.</p>
+</dd>
+    <dt><code>connection</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbconnection">DbConnection</a></dt>
+    <dd><p>The connection to use. Opened if it is not open already.</p>
+</dd>
+    <dt><code>transaction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbtransaction">DbTransaction</a></dt>
+    <dd><p>The transaction to enlist in, if any.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></dt>
+    <dd><p>A scope that ends the enlistment when disposed. Dispose it after committing, so that any
+scheduling change the job store recorded is signalled to the scheduler once it is visible.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_SchedulerEnlistmentExtensions_EnlistConnection_Quartz_IScheduler_System_Data_Common_DbConnection_System_Data_Common_DbTransaction__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Pass only a connection when the transaction is an ambient
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.transactions.transactionscope">TransactionScope</a> the connection is already enlisted in.
+Sharing the one connection is what keeps such a scope from being promoted to a distributed
+transaction, which providers like Npgsql do not support at all. That the connection is enlisted
+is established here rather than assumed, so a driver that cannot join the scope is refused
+instead of written through.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.SchedulerException.html">SchedulerException</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.transactions.transactionscope">TransactionScope</a> is current and the connection's driver
+implements no <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbconnection.enlisttransaction">EnlistTransaction(Transaction)</a>, so the connection cannot join it —
+<code>Microsoft.Data.Sqlite</code> is the shipped case. Enlist a
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbtransaction">DbTransaction</a> of the connection's own instead.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_SchedulerEnlistmentExtensions_EnlistTransaction_" data-uid="Quartz.SchedulerEnlistmentExtensions.EnlistTransaction*"></a>
+
+  <h3 id="Quartz_SchedulerEnlistmentExtensions_EnlistTransaction_Quartz_IScheduler_System_Data_Common_DbTransaction_" data-uid="Quartz.SchedulerEnlistmentExtensions.EnlistTransaction(Quartz.IScheduler,System.Data.Common.DbTransaction)">
+  EnlistTransaction(IScheduler, DbTransaction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SchedulerEnlistmentExtensions.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Makes the persistent job store use the given transaction, and the connection it belongs to,
+for every operation performed on the current asynchronous flow until the returned scope is
+disposed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDisposable EnlistTransaction(this IScheduler scheduler, DbTransaction transaction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler whose job store should join the transaction.</p>
+</dd>
+    <dt><code>transaction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbtransaction">DbTransaction</a></dt>
+    <dd><p>The transaction to join. Must still be associated with a connection.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></dt>
+    <dd><p>A scope that ends the enlistment when disposed. Dispose it after committing, so that any
+scheduling change the job store recorded is signalled to the scheduler once it is visible.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SchedulerEnlistmentExtensions.cs/#L74" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

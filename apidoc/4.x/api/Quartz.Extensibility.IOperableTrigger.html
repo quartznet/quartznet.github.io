@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IOperableTrigger | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IOperableTrigger | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Internal interface for managing triggers. This interface should not be used by the Quartz client.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Extensibility_IOperableTrigger.md&amp;value=---%0Auid%3A%20Quartz.Extensibility.IOperableTrigger%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Extensibility.IOperableTrigger">
+
+
+
+  <h1 id="Quartz_Extensibility_IOperableTrigger" data-uid="Quartz.Extensibility.IOperableTrigger" class="text-break">
+Interface IOperableTrigger  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IOperableTrigger.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<a class="xref" href="Quartz.Extensibility.html">Extensibility</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Internal interface for managing triggers. This interface should not be used by the Quartz client.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IOperableTrigger : IMutableTrigger, ITrigger</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Quartz.Extensibility.IMutableTrigger.html#Quartz_Extensibility_IMutableTrigger_Key">IMutableTrigger.Key</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Extensibility.IMutableTrigger.html#Quartz_Extensibility_IMutableTrigger_JobKey">IMutableTrigger.JobKey</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Extensibility.IMutableTrigger.html#Quartz_Extensibility_IMutableTrigger_Description">IMutableTrigger.Description</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Extensibility.IMutableTrigger.html#Quartz_Extensibility_IMutableTrigger_ExecutionGroup">IMutableTrigger.ExecutionGroup</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Extensibility.IMutableTrigger.html#Quartz_Extensibility_IMutableTrigger_PreferredNode">IMutableTrigger.PreferredNode</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Extensibility.IMutableTrigger.html#Quartz_Extensibility_IMutableTrigger_RetryPolicy">IMutableTrigger.RetryPolicy</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Extensibility.IMutableTrigger.html#Quartz_Extensibility_IMutableTrigger_RetryAttempt">IMutableTrigger.RetryAttempt</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Extensibility.IMutableTrigger.html#Quartz_Extensibility_IMutableTrigger_CalendarName">IMutableTrigger.CalendarName</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Extensibility.IMutableTrigger.html#Quartz_Extensibility_IMutableTrigger_JobDataMap">IMutableTrigger.JobDataMap</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Extensibility.IMutableTrigger.html#Quartz_Extensibility_IMutableTrigger_Priority">IMutableTrigger.Priority</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Extensibility.IMutableTrigger.html#Quartz_Extensibility_IMutableTrigger_StartTimeUtc">IMutableTrigger.StartTimeUtc</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Extensibility.IMutableTrigger.html#Quartz_Extensibility_IMutableTrigger_EndTimeUtc">IMutableTrigger.EndTimeUtc</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Extensibility.IMutableTrigger.html#Quartz_Extensibility_IMutableTrigger_NextFireTimeUtc">IMutableTrigger.NextFireTimeUtc</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Extensibility.IMutableTrigger.html#Quartz_Extensibility_IMutableTrigger_PreviousFireTimeUtc">IMutableTrigger.PreviousFireTimeUtc</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Extensibility.IMutableTrigger.html#Quartz_Extensibility_IMutableTrigger_MisfireInstructionCode">IMutableTrigger.MisfireInstructionCode</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_GetTriggerBuilder">ITrigger.GetTriggerBuilder()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_GetScheduleBuilder">ITrigger.GetScheduleBuilder()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_FinalFireTimeUtc">ITrigger.FinalFireTimeUtc</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_MayFireAgain">ITrigger.MayFireAgain</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_GetFireTimeAfter_System_Nullable_System_DateTimeOffset__">ITrigger.GetFireTimeAfter(DateTimeOffset?)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_Clone">ITrigger.Clone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_Extensibility_IOperableTrigger_FireInstanceId_" data-uid="Quartz.Extensibility.IOperableTrigger.FireInstanceId*"></a>
+
+  <h3 id="Quartz_Extensibility_IOperableTrigger_FireInstanceId" data-uid="Quartz.Extensibility.IOperableTrigger.FireInstanceId">
+  FireInstanceId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IOperableTrigger.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The identity of one firing of this trigger, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if it has not been
+fired.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string? FireInstanceId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IOperableTrigger_FireInstanceId_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Written by a job store as it hands the trigger to the scheduler, and read back to recognise
+the firing when the job completes; it is what
+<a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_InterruptFireInstance_System_String_System_Threading_CancellationToken_">InterruptFireInstance(string, CancellationToken)</a> names. A trigger a caller built, and a trigger
+read back out of a store, have never been fired and answer <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> — so this is
+not an identity to key anything on outside the fire path.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_Extensibility_IOperableTrigger_ComputeFirstFireTimeUtc_" data-uid="Quartz.Extensibility.IOperableTrigger.ComputeFirstFireTimeUtc*"></a>
+
+  <h3 id="Quartz_Extensibility_IOperableTrigger_ComputeFirstFireTimeUtc_Quartz_ICalendar_" data-uid="Quartz.Extensibility.IOperableTrigger.ComputeFirstFireTimeUtc(Quartz.ICalendar)">
+  ComputeFirstFireTimeUtc(ICalendar?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IOperableTrigger.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method should not be used by the Quartz client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTimeOffset? ComputeFirstFireTimeUtc(ICalendar? calendar)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>calendar</code> <a class="xref" href="Quartz.ICalendar.html">ICalendar</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd><p>The first time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> will be fired
+by the scheduler, which is also the same value <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_NextFireTimeUtc">NextFireTimeUtc</a>
+will return (until after the first firing of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IOperableTrigger_ComputeFirstFireTimeUtc_Quartz_ICalendar__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Called by the scheduler at the time a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> is first
+added to the scheduler, in order to have the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+compute its first fire time, based on any associated calendar.
+</p>
+<p>
+After this method has been called, <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_NextFireTimeUtc">NextFireTimeUtc</a>
+should return a valid answer.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_Extensibility_IOperableTrigger_ExecutionComplete_" data-uid="Quartz.Extensibility.IOperableTrigger.ExecutionComplete*"></a>
+
+  <h3 id="Quartz_Extensibility_IOperableTrigger_ExecutionComplete_Quartz_IJobExecutionContext_Quartz_JobExecutionException_" data-uid="Quartz.Extensibility.IOperableTrigger.ExecutionComplete(Quartz.IJobExecutionContext,Quartz.JobExecutionException)">
+  ExecutionComplete(IJobExecutionContext, JobExecutionException?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IOperableTrigger.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method should not be used by the Quartz client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">SchedulerInstruction ExecutionComplete(IJobExecutionContext context, JobExecutionException? result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></dt>
+    <dd><p>is the <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a> that was used by the
+<a class="xref" href="Quartz.IJob.html">IJob</a>'s<a class="xref" href="Quartz.IJob.html#Quartz_IJob_Execute_Quartz_IJobExecutionContext_System_Threading_CancellationToken_">Execute(IJobExecutionContext, CancellationToken)</a> method.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Quartz.JobExecutionException.html">JobExecutionException</a></dt>
+    <dd><p>is the <a class="xref" href="Quartz.JobExecutionException.html">JobExecutionException</a> thrown by the
+<a class="xref" href="Quartz.IJob.html">IJob</a>, if any (may be null).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.SchedulerInstruction.html">SchedulerInstruction</a></dt>
+    <dd><p>One of the <a class="xref" href="Quartz.SchedulerInstruction.html">SchedulerInstruction</a> members.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IOperableTrigger_ExecutionComplete_Quartz_IJobExecutionContext_Quartz_JobExecutionException__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Called after the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> has executed the
+<a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> associated with the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+in order to get the final instruction code from the trigger.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.SchedulerInstruction.html#Quartz_SchedulerInstruction_NoInstruction">NoInstruction</a></div>
+    <div><a class="xref" href="Quartz.SchedulerInstruction.html#Quartz_SchedulerInstruction_ReExecuteJob">ReExecuteJob</a></div>
+    <div><a class="xref" href="Quartz.SchedulerInstruction.html#Quartz_SchedulerInstruction_DeleteTrigger">DeleteTrigger</a></div>
+    <div><a class="xref" href="Quartz.SchedulerInstruction.html#Quartz_SchedulerInstruction_SetTriggerComplete">SetTriggerComplete</a></div>
+    <div><a class="xref" href="Quartz.Extensibility.IOperableTrigger.html#Quartz_Extensibility_IOperableTrigger_Triggered_Quartz_ICalendar_">Triggered(ICalendar?)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Extensibility_IOperableTrigger_Triggered_" data-uid="Quartz.Extensibility.IOperableTrigger.Triggered*"></a>
+
+  <h3 id="Quartz_Extensibility_IOperableTrigger_Triggered_Quartz_ICalendar_" data-uid="Quartz.Extensibility.IOperableTrigger.Triggered(Quartz.ICalendar)">
+  Triggered(ICalendar?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IOperableTrigger.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method should not be used by the Quartz client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Triggered(ICalendar? calendar)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>calendar</code> <a class="xref" href="Quartz.ICalendar.html">ICalendar</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IOperableTrigger_Triggered_Quartz_ICalendar__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Called when the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> has decided to 'fire'
+the trigger (Execute the associated <a class="xref" href="Quartz.IJob.html">IJob</a>), in order to
+give the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> a chance to update itself for its next
+triggering (if any).</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.JobExecutionException.html">JobExecutionException</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Extensibility_IOperableTrigger_UpdateAfterMisfire_" data-uid="Quartz.Extensibility.IOperableTrigger.UpdateAfterMisfire*"></a>
+
+  <h3 id="Quartz_Extensibility_IOperableTrigger_UpdateAfterMisfire_Quartz_ICalendar_" data-uid="Quartz.Extensibility.IOperableTrigger.UpdateAfterMisfire(Quartz.ICalendar)">
+  UpdateAfterMisfire(ICalendar?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IOperableTrigger.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method should not be used by the Quartz client.</p>
+<p>
+To be implemented by the concrete classes that extend this class.
+</p>
+<p>
+The implementation should update the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>'s state according to the misfire
+instruction the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> was built with, read as
+<a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_MisfireInstructionCode">MisfireInstructionCode</a>.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void UpdateAfterMisfire(ICalendar? calendar)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>calendar</code> <a class="xref" href="Quartz.ICalendar.html">ICalendar</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IOperableTrigger_UpdateWithNewCalendar_" data-uid="Quartz.Extensibility.IOperableTrigger.UpdateWithNewCalendar*"></a>
+
+  <h3 id="Quartz_Extensibility_IOperableTrigger_UpdateWithNewCalendar_Quartz_ICalendar_System_TimeSpan_" data-uid="Quartz.Extensibility.IOperableTrigger.UpdateWithNewCalendar(Quartz.ICalendar,System.TimeSpan)">
+  UpdateWithNewCalendar(ICalendar, TimeSpan)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IOperableTrigger.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method should not be used by the Quartz client.</p>
+<p>
+The implementation should update the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>'s state
+based on the given new version of the associated <a class="xref" href="Quartz.ICalendar.html">ICalendar</a>
+(the state should be updated so that it's next fire time is appropriate
+given the Calendar's new settings).
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void UpdateWithNewCalendar(ICalendar calendar, TimeSpan misfireThreshold)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>calendar</code> <a class="xref" href="Quartz.ICalendar.html">ICalendar</a></dt>
+    <dd></dd>
+    <dt><code>misfireThreshold</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IOperableTrigger_Validate_" data-uid="Quartz.Extensibility.IOperableTrigger.Validate*"></a>
+
+  <h3 id="Quartz_Extensibility_IOperableTrigger_Validate" data-uid="Quartz.Extensibility.IOperableTrigger.Validate">
+  Validate()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IOperableTrigger.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Validates whether the properties of the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> are
+valid for submission into a <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Validate()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IOperableTrigger.cs/#L6" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

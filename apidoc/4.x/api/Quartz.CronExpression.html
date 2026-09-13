@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CronExpression | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CronExpression | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Provides a parser and evaluator for unix-like cron expressions. Cron expressions provide the ability to specify complex time combinations such as &amp;quot;At 8:00am every Monday through Friday&amp;quot; or &amp;quot;At 1:30am every last Friday of the month&amp;quot;.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.CronExpression">
+
+
+
+  <h1 id="Quartz_CronExpression" data-uid="Quartz.CronExpression" class="text-break">
+Class CronExpression  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides a parser and evaluator for unix-like cron expressions. Cron
+expressions provide the ability to specify complex time combinations such as
+&quot;At 8:00am every Monday through Friday&quot; or &quot;At 1:30am every
+last Friday of the month&quot;.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Serializable]
+public sealed class CronExpression : ISerializable, IEquatable&lt;CronExpression&gt;, IParsable&lt;CronExpression&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">CronExpression</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.iserializable">ISerializable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Quartz.CronExpression.html">CronExpression</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iparsable-1">IParsable</a>&lt;<a class="xref" href="Quartz.CronExpression.html">CronExpression</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_CronExpression_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Cron expressions are comprised of 6 required fields and one optional field
+separated by white space. The fields respectively are described as follows:
+</p>
+<table cellspacing="8">
+<tr>
+<th align="left">Field Name</th>
+<th align="left"> </th>
+<th align="left">Allowed Values</th>
+<th align="left"> </th>
+<th align="left">Allowed Special Characters</th>
+</tr>
+<tr>
+<td align="left">Seconds</td>
+<td align="left"> </td>
+<td align="left">0-59</td>
+<td align="left"> </td>
+<td align="left">, - /// /</td>
+</tr>
+<tr>
+<td align="left">Minutes</td>
+<td align="left"> </td>
+<td align="left">0-59</td>
+<td align="left"> </td>
+<td align="left">, - /// /</td>
+</tr>
+<tr>
+<td align="left">Hours</td>
+<td align="left"> </td>
+<td align="left">0-23</td>
+<td align="left"> </td>
+<td align="left">, - /// /</td>
+</tr>
+<tr>
+<td align="left">Day-of-month</td>
+<td align="left"> </td>
+<td align="left">1-31</td>
+<td align="left"> </td>
+<td align="left">, - /// ? / L W C</td>
+</tr>
+<tr>
+<td align="left">Month</td>
+<td align="left"> </td>
+<td align="left">1-12 or JAN-DEC</td>
+<td align="left"></td>
+<td align="left">, - /// /</td>
+</tr>
+<tr>
+<td align="left">Day-of-Week</td>
+<td align="left"> </td>
+<td align="left">1-7 or SUN-SAT</td>
+<td align="left"></td>
+<td align="left">, - /// ? / L #</td>
+</tr>
+<tr>
+<td align="left">Year (Optional)</td>
+<td align="left"> </td>
+<td align="left">empty, 1970-(the current year plus 100)</td>
+<td align="left"> </td>
+<td align="left">, - /// /</td>
+</tr>
+</table>
+<p>
+The '*' character is used to specify all values. For example, "*"
+in the minute field means "every minute".
+</p>
+<p>
+The '?' character is allowed for the day-of-month and day-of-week fields. It
+is used to specify 'no specific value', and is a synonym for '*' there: both
+say that the field names no days, so the other field decides. When both day
+fields name days the expression fires on the union of the two, and when
+neither does it fires every day.
+</p>
+<p>
+The '-' character is used to specify ranges. For example "10-12" in
+the hour field means "the hours 10, 11 and 12".
+</p>
+<p>
+The ',' character is used to specify additional values. For example
+"MON,WED,FRI" in the day-of-week field means "the days Monday,
+Wednesday, and Friday".
+</p>
+<p>
+The '/' character is used to specify increments. For example "0/15"
+in the seconds field means "the seconds 0, 15, 30, and 45". And
+"5/15" in the seconds field means "the seconds 5, 20, 35, and
+50".  Specifying '*' before the  '/' is equivalent to specifying 0 is
+the value to start with. Essentially, for each field in the expression, there
+is a set of numbers that can be turned on or off. For seconds and minutes,
+the numbers range from 0 to 59. For hours 0 to 23, for days of the month 1 to
+31, and for months 1 to 12. The "/" character simply helps you turn
+on every "nth" value in the given set. Thus, "7/6" in the
+month field only turns on month "7", it does NOT mean every 6th
+month, please note that subtlety.
+</p>
+<p>
+The 'L' character is allowed for the day-of-month and day-of-week fields.
+This character is short-hand for "last", but it has different
+meaning in each of the two fields. For example, the value "L" in
+the day-of-month field means "the last day of the month" - day 31
+for January, day 28 for February on non-leap years. If used in the
+day-of-week field by itself, it simply means "7" or
+"SAT". But if used in the day-of-week field after another value, it
+means "the last xxx day of the month" - for example "6L"
+means "the last friday of the month". You can also specify an offset
+from the last day of the month, such as "L-3" which would mean the third-to-last
+day of the calendar month. <i>When using the 'L' option, it is important not to
+specify lists, or ranges of values, as you'll get confusing/unexpected results.</i>
+</p>
+<p>
+The 'W' character is allowed for the day-of-month field.  This character
+is used to specify the weekday (Monday-Friday) nearest the given day.  As an
+example, if you were to specify "15W" as the value for the
+day-of-month field, the meaning is: "the nearest weekday to the 15th of
+the month". So if the 15th is a Saturday, the trigger will fire on
+Friday the 14th. If the 15th is a Sunday, the trigger will fire on Monday the
+16th. If the 15th is a Tuesday, then it will fire on Tuesday the 15th.
+However, if you specify "1W" as the value for day-of-month, and the
+1st is a Saturday, the trigger will fire on Monday the 3rd, as it will not
+'jump' over the boundary of a month's days.  The 'W' character can only be
+specified when the day-of-month is a single day, not a range or list of days.
+</p>
+<p>
+The 'L' and 'W' characters can also be combined for the day-of-month
+expression to yield 'LW', which translates to "last weekday of the
+month".
+</p>
+<p>
+The '#' character is allowed for the day-of-week field. This character is
+used to specify "the nth" XXX day of the month. For example, the
+value of "6#3" in the day-of-week field means the third Friday of
+the month (day 6 = Friday and "#3" = the 3rd one in the month).
+Other examples: "2#1" = the first Monday of the month and
+"4#5" = the fifth Wednesday of the month. Note that if you specify
+"#5" and there is not 5 of the given day-of-week in the month, then
+no firing will occur that month. If the '#' character is used, there can
+only be one expression in the day-of-week field ("3#1,6#3" is
+not valid, since there are two expressions).
+</p>
+<p>
+The legal characters and the names of months and days of the week are not
+case-sensitive.
+</p>
+<p>
+<b>NOTES:</b>
+<ul>
+<li>Support for specifying both a day-of-week and a day-of-month value is
+not complete (you'll need to use the '?' character in one of these fields).
+</li>
+<li>Overflowing ranges are supported - that is, having a larger number on
+the left-hand side than the right. You might do 22-2 to catch 10 o'clock
+at night until 2 o'clock in the morning, or you might have NOV-FEB. It is
+very important to note that overuse of overflowing ranges creates ranges
+that don't make sense and no effort has been made to determine which
+interpretation CronExpression chooses. An example would be
+"0 0 14-6 ? * FRI-MON". </li>
+</ul>
+
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Quartz_CronExpression__ctor_" data-uid="Quartz.CronExpression.#ctor*"></a>
+
+  <h3 id="Quartz_CronExpression__ctor_System_String_" data-uid="Quartz.CronExpression.#ctor(System.String)">
+  CronExpression(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpression.cs/#L286"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="Quartz.CronExpression.html#Quartz_CronExpression_CronExpressionString">CronExpressionString</a> based on the specified
+parameter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpression(string cronExpression)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cronExpression</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>String representation of the cron expression the new object should represent</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_CronExpression__ctor_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>An <code>@</code> macro - <code>@yearly</code>, <code>@annually</code>, <code>@monthly</code>, <code>@weekly</code>,
+<code>@daily</code>, <code>@midnight</code> or <code>@hourly</code> - is expanded here, which is what puts it
+behind every entry point that reads an expression string. The expansion is what
+<a class="xref" href="Quartz.CronExpression.html#Quartz_CronExpression_CronExpressionString">CronExpressionString</a> then holds, in the same way that it holds
+<code>MON-FRI</code> for a caller who wrote <code>mon-fri</code>.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">cronExpression</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
+    <dd><p><code class="paramref">cronExpression</code> is not a valid cron expression.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_CronExpression__ctor_" data-uid="Quartz.CronExpression.#ctor*"></a>
+
+  <h3 id="Quartz_CronExpression__ctor_System_String_System_TimeZoneInfo_" data-uid="Quartz.CronExpression.#ctor(System.String,System.TimeZoneInfo)">
+  CronExpression(string, TimeZoneInfo?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpression.cs/#L300"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="Quartz.CronExpression.html">CronExpression</a> resolved in the given time zone.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpression(string cronExpression, TimeZoneInfo? timeZone)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cronExpression</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>String representation of the cron expression the new object should represent</p>
+</dd>
+    <dt><code>timeZone</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timezoneinfo">TimeZoneInfo</a></dt>
+    <dd><p>The time zone the expression's times are resolved in;
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> means the system's local time zone.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_CronExpression_CronExpressionString_" data-uid="Quartz.CronExpression.CronExpressionString*"></a>
+
+  <h3 id="Quartz_CronExpression_CronExpressionString" data-uid="Quartz.CronExpression.CronExpressionString">
+  CronExpressionString
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpression.cs/#L2106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the cron expression string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CronExpressionString { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The cron expression string.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpression_TimeZone_" data-uid="Quartz.CronExpression.TimeZone*"></a>
+
+  <h3 id="Quartz_CronExpression_TimeZone" data-uid="Quartz.CronExpression.TimeZone">
+  TimeZone
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpression.cs/#L801"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the time zone the expression's times are resolved in. Defaults to the system's local
+time zone.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeZoneInfo TimeZone { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timezoneinfo">TimeZoneInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_CronExpression_TimeZone_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A <a class="xref" href="Quartz.CronExpression.html">CronExpression</a> is immutable; use <a class="xref" href="Quartz.CronExpression.html#Quartz_CronExpression_WithTimeZone_System_TimeZoneInfo_">WithTimeZone(TimeZoneInfo?)</a> to get a copy
+resolved in another time zone.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_CronExpression_Equals_" data-uid="Quartz.CronExpression.Equals*"></a>
+
+  <h3 id="Quartz_CronExpression_Equals_Quartz_CronExpression_" data-uid="Quartz.CronExpression.Equals(Quartz.CronExpression)">
+  Equals(CronExpression?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpression.cs/#L3355"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Quartz.CronExpression.html">CronExpression</a> is equal to the current <a class="xref" href="Quartz.CronExpression.html">CronExpression</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(CronExpression? other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Quartz.CronExpression.html">CronExpression</a></dt>
+    <dd><p>The <a class="xref" href="Quartz.CronExpression.html">CronExpression</a> to compare with the current <a class="xref" href="Quartz.CronExpression.html">CronExpression</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>true if the specified <a class="xref" href="Quartz.CronExpression.html">CronExpression</a> is equal to the current <a class="xref" href="Quartz.CronExpression.html">CronExpression</a>; otherwise, false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpression_Equals_" data-uid="Quartz.CronExpression.Equals*"></a>
+
+  <h3 id="Quartz_CronExpression_Equals_System_Object_" data-uid="Quartz.CronExpression.Equals(System.Object)">
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpression.cs/#L3369"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> is equal to the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> to compare with the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>true if the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> is equal to the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>; otherwise, false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpression_GetHashCode_" data-uid="Quartz.CronExpression.GetHashCode*"></a>
+
+  <h3 id="Quartz_CronExpression_GetHashCode" data-uid="Quartz.CronExpression.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpression.cs/#L3381"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Serves as a hash function for a particular type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A hash code for the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpression_GetNextInvalidTimeAfter_" data-uid="Quartz.CronExpression.GetNextInvalidTimeAfter*"></a>
+
+  <h3 id="Quartz_CronExpression_GetNextInvalidTimeAfter_System_DateTimeOffset_" data-uid="Quartz.CronExpression.GetNextInvalidTimeAfter(System.DateTimeOffset)">
+  GetNextInvalidTimeAfter(DateTimeOffset)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpression.cs/#L409"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the next date/time <i>after</i> the given date/time which does
+<i>not</i> satisfy the expression.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset? GetNextInvalidTimeAfter(DateTimeOffset date)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>date</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd><p>the date/time at which to begin the search for the next invalid date/time</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd><p>The first whole second at or after <code class="paramref">date</code> that this expression does not
+fire at, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when it fires at every second through to the give-up year.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_CronExpression_GetNextInvalidTimeAfter_System_DateTimeOffset__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The expression fires on whole seconds, so the answer is the first whole second at or after
+<code class="paramref">date</code> that it does not fire at. It is read off the expression's own field
+sets rather than walked to: the complement of a cron field is as enumerable as the field is,
+so a run of firing seconds is stepped over a minute, an hour, a day or a month at a time.
+</p>
+<p>
+An expression can fire at every second there is — <code>* * * * * ?</code> is the plain one — and
+then there is no such time to return. That answers <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> rather than walking a
+century, one second at a time, to the year the scheduler gives up looking for a fire in.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_CronExpression_GetNextValidTimeAfter_" data-uid="Quartz.CronExpression.GetNextValidTimeAfter*"></a>
+
+  <h3 id="Quartz_CronExpression_GetNextValidTimeAfter_System_DateTimeOffset_" data-uid="Quartz.CronExpression.GetNextValidTimeAfter(System.DateTimeOffset)">
+  GetNextValidTimeAfter(DateTimeOffset)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpression.cs/#L384"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the next date/time <i>after</i> the given date/time which
+satisfies the cron expression.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset? GetNextValidTimeAfter(DateTimeOffset date)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>date</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd><p>the date/time at which to begin the search for the next valid date/time</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd><p>the next valid date/time</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpression_GetObjectData_" data-uid="Quartz.CronExpression.GetObjectData*"></a>
+
+  <h3 id="Quartz_CronExpression_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_" data-uid="Quartz.CronExpression.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+  GetObjectData(SerializationInfo, StreamingContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpression.cs/#L351"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Writes this expression's fields into a serialization payload.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SecurityCritical]
+public void GetObjectData(SerializationInfo info, StreamingContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>info</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.serializationinfo">SerializationInfo</a></dt>
+    <dd><p>The payload being written.</p>
+</dd>
+    <dt><code>context</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.streamingcontext">StreamingContext</a></dt>
+    <dd><p>The serialization context.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpression_GetPreviousValidTimeBefore_" data-uid="Quartz.CronExpression.GetPreviousValidTimeBefore*"></a>
+
+  <h3 id="Quartz_CronExpression_GetPreviousValidTimeBefore_System_DateTimeOffset_" data-uid="Quartz.CronExpression.GetPreviousValidTimeBefore(System.DateTimeOffset)">
+  GetPreviousValidTimeBefore(DateTimeOffset)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpression.cs/#L3275"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the latest time before <code class="paramref">endTime</code> that this expression fires at,
+the mirror of <a class="xref" href="Quartz.CronExpression.html#Quartz_CronExpression_GetNextValidTimeAfter_System_DateTimeOffset_">GetNextValidTimeAfter(DateTimeOffset)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset? GetPreviousValidTimeBefore(DateTimeOffset endTime)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>endTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd><p>The instant to search back from; the result is strictly before it.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd><p>The preceding fire time, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when the expression has none.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpression_IsSatisfiedBy_" data-uid="Quartz.CronExpression.IsSatisfiedBy*"></a>
+
+  <h3 id="Quartz_CronExpression_IsSatisfiedBy_System_DateTimeOffset_" data-uid="Quartz.CronExpression.IsSatisfiedBy(System.DateTimeOffset)">
+  IsSatisfiedBy(DateTimeOffset)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpression.cs/#L368"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether the given date satisfies the cron expression.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSatisfiedBy(DateTimeOffset dateUtc)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dateUtc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd><p>The date to evaluate.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>a boolean indicating whether the given date satisfies the cron expression</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_CronExpression_IsSatisfiedBy_System_DateTimeOffset__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Note that  milliseconds are ignored, so two Dates falling on different milliseconds
+of the same second will always have the same result here.</p>
+</div>
+
+
+
+
+  <a id="Quartz_CronExpression_Parse_" data-uid="Quartz.CronExpression.Parse*"></a>
+
+  <h3 id="Quartz_CronExpression_Parse_System_String_" data-uid="Quartz.CronExpression.Parse(System.String)">
+  Parse(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpression.cs/#L836"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Parses a cron expression string into a <a class="xref" href="Quartz.CronExpression.html">CronExpression</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CronExpression Parse(string cronExpression)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cronExpression</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>String representation of the cron expression.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpression.html">CronExpression</a></dt>
+    <dd><p>The parsed expression.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">cronExpression</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
+    <dd><p><code class="paramref">cronExpression</code> is not a valid cron expression.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_CronExpression_Parse_" data-uid="Quartz.CronExpression.Parse*"></a>
+
+  <h3 id="Quartz_CronExpression_Parse_System_String_Quartz_CronFormat_" data-uid="Quartz.CronExpression.Parse(System.String,Quartz.CronFormat)">
+  Parse(string, CronFormat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpression.cs/#L889"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Parses a cron expression string written in the given format into a <a class="xref" href="Quartz.CronExpression.html">CronExpression</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CronExpression Parse(string cronExpression, CronFormat format)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cronExpression</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>String representation of the cron expression.</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="Quartz.CronFormat.html">CronFormat</a></dt>
+    <dd><p>The dialect <code class="paramref">cronExpression</code> is written in.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpression.html">CronExpression</a></dt>
+    <dd><p>The parsed expression.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_CronExpression_Parse_System_String_Quartz_CronFormat__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+<a class="xref" href="Quartz.CronFormat.html#Quartz_CronFormat_Unix">Unix</a> reads the five-field crontab form, whose day-of-week is numbered
+0-7 with both 0 and 7 meaning Sunday. The result is an ordinary <a class="xref" href="Quartz.CronExpression.html">CronExpression</a>
+holding the canonical Quartz spelling of the same schedule, so <code>"30 4 * * 1"</code> becomes
+<code>"0 30 4 ? * MON"</code> and that is what <a class="xref" href="Quartz.CronExpression.html#Quartz_CronExpression_CronExpressionString">CronExpressionString</a>, the dashboard and
+the database show. The format is not recorded anywhere and the original text is not recoverable.
+</p>
+<p>
+A time zone composes: <code>CronExpression.Parse(s, CronFormat.Unix).WithTimeZone(tz)</code>.
+</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">cronExpression</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p><code class="paramref">format</code> is not a cron format.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
+    <dd><p><code class="paramref">cronExpression</code> is not a valid cron expression in <code class="paramref">format</code>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_CronExpression_ParseWithHash_" data-uid="Quartz.CronExpression.ParseWithHash*"></a>
+
+  <h3 id="Quartz_CronExpression_ParseWithHash_System_String_Quartz_CronFormat_System_Int32_" data-uid="Quartz.CronExpression.ParseWithHash(System.String,Quartz.CronFormat,System.Int32)">
+  ParseWithHash(string, CronFormat, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpression.cs/#L1038"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Parses a cron expression string written in the given format, whose <code>H</code> (hash) tokens are
+resolved against the given integer seed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CronExpression ParseWithHash(string cronExpression, CronFormat format, int hashSeed)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cronExpression</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Cron expression that may contain <code>H</code> tokens.</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="Quartz.CronFormat.html">CronFormat</a></dt>
+    <dd><p>The dialect <code class="paramref">cronExpression</code> is written in.</p>
+</dd>
+    <dt><code>hashSeed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>An integer seed the hash values are derived from.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpression.html">CronExpression</a></dt>
+    <dd><p>The parsed expression, with every <code>H</code> token resolved to a value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_CronExpression_ParseWithHash_System_String_Quartz_CronFormat_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The expression is read as the Quartz expression that says the same thing before its <code>H</code>
+tokens are resolved, so a token is hashed over the range the field has in Quartz — an <code>H</code>
+in a five-field day-of-week is spread over 1-7, not 0-7. What comes back is an ordinary
+<a class="xref" href="Quartz.CronExpression.html">CronExpression</a> in the canonical Quartz spelling, as
+<a class="xref" href="Quartz.CronExpression.html#Quartz_CronExpression_Parse_System_String_Quartz_CronFormat_">Parse(string, CronFormat)</a> describes.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">cronExpression</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
+    <dd><p><code class="paramref">cronExpression</code> is not a valid cron expression in <code class="paramref">format</code>.</p>
+</dd>
+  </dl>
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.CronExpression.html#Quartz_CronExpression_ParseWithHash_System_String_System_Int32_">ParseWithHash(string, int)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_CronExpression_ParseWithHash_" data-uid="Quartz.CronExpression.ParseWithHash*"></a>
+
+  <h3 id="Quartz_CronExpression_ParseWithHash_System_String_Quartz_CronFormat_System_String_" data-uid="Quartz.CronExpression.ParseWithHash(System.String,Quartz.CronFormat,System.String)">
+  ParseWithHash(string, CronFormat, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpression.cs/#L1003"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Parses a cron expression string written in the given format, whose <code>H</code> (hash) tokens are
+resolved against the given hash key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CronExpression ParseWithHash(string cronExpression, CronFormat format, string hashKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cronExpression</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Cron expression that may contain <code>H</code> tokens.</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="Quartz.CronFormat.html">CronFormat</a></dt>
+    <dd><p>The dialect <code class="paramref">cronExpression</code> is written in.</p>
+</dd>
+    <dt><code>hashKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A stable string key the hash values are derived from (e.g. the trigger name).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpression.html">CronExpression</a></dt>
+    <dd><p>The parsed expression, with every <code>H</code> token resolved to a value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_CronExpression_ParseWithHash_System_String_Quartz_CronFormat_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The expression is read as the Quartz expression that says the same thing before its <code>H</code>
+tokens are resolved, so a token is hashed over the range the field has in Quartz — an <code>H</code>
+in a five-field day-of-week is spread over 1-7, not 0-7. What comes back is an ordinary
+<a class="xref" href="Quartz.CronExpression.html">CronExpression</a> in the canonical Quartz spelling, as
+<a class="xref" href="Quartz.CronExpression.html#Quartz_CronExpression_Parse_System_String_Quartz_CronFormat_">Parse(string, CronFormat)</a> describes.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">cronExpression</code> or <code class="paramref">hashKey</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
+    <dd><p><code class="paramref">cronExpression</code> is not a valid cron expression in <code class="paramref">format</code>.</p>
+</dd>
+  </dl>
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.CronExpression.html#Quartz_CronExpression_ParseWithHash_System_String_System_String_">ParseWithHash(string, string)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_CronExpression_ParseWithHash_" data-uid="Quartz.CronExpression.ParseWithHash*"></a>
+
+  <h3 id="Quartz_CronExpression_ParseWithHash_System_String_System_Int32_" data-uid="Quartz.CronExpression.ParseWithHash(System.String,System.Int32)">
+  ParseWithHash(string, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpression.cs/#L1020"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Parses a cron expression string whose <code>H</code> (hash) tokens are resolved against the given
+integer seed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CronExpression ParseWithHash(string cronExpression, int hashSeed)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cronExpression</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Cron expression that may contain <code>H</code> tokens.</p>
+</dd>
+    <dt><code>hashSeed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>An integer seed the hash values are derived from.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpression.html">CronExpression</a></dt>
+    <dd><p>The parsed expression, with every <code>H</code> token resolved to a value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">cronExpression</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
+    <dd><p><code class="paramref">cronExpression</code> is not a valid cron expression.</p>
+</dd>
+  </dl>
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.CronExpression.html#Quartz_CronExpression_ResolveHash_System_String_System_Int32_">ResolveHash(string, int)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_CronExpression_ParseWithHash_" data-uid="Quartz.CronExpression.ParseWithHash*"></a>
+
+  <h3 id="Quartz_CronExpression_ParseWithHash_System_String_System_String_" data-uid="Quartz.CronExpression.ParseWithHash(System.String,System.String)">
+  ParseWithHash(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpression.cs/#L978"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Parses a cron expression string whose <code>H</code> (hash) tokens are resolved against the given
+hash key. The key is typically the trigger or job name, so that every trigger written with the
+same expression lands on a different minute instead of all firing at once.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CronExpression ParseWithHash(string cronExpression, string hashKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cronExpression</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Cron expression that may contain <code>H</code> tokens.</p>
+</dd>
+    <dt><code>hashKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A stable string key the hash values are derived from (e.g. the trigger name).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpression.html">CronExpression</a></dt>
+    <dd><p>The parsed expression, with every <code>H</code> token resolved to a value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">cronExpression</code> or <code class="paramref">hashKey</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
+    <dd><p><code class="paramref">cronExpression</code> is not a valid cron expression.</p>
+</dd>
+  </dl>
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.CronExpression.html#Quartz_CronExpression_ResolveHash_System_String_System_String_">ResolveHash(string, string)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_CronExpression_ResolveHash_" data-uid="Quartz.CronExpression.ResolveHash*"></a>
+
+  <h3 id="Quartz_CronExpression_ResolveHash_System_String_System_Int32_" data-uid="Quartz.CronExpression.ResolveHash(System.String,System.Int32)">
+  ResolveHash(string, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpression.cs/#L1160"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resolves H (hash) tokens in a cron expression to deterministic numeric values
+based on the given integer seed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ResolveHash(string cronExpression, int hashSeed)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cronExpression</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Cron expression that may contain H tokens</p>
+</dd>
+    <dt><code>hashSeed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>An integer seed used to derive hash values</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A standard cron expression string with all H tokens resolved to numeric values</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_CronExpression_ResolveHash_System_String_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A leading <code>@</code> macro is expanded first, as the constructor expands it, so a macro means the
+same schedule here as everywhere else.</p>
+</div>
+
+
+
+
+  <a id="Quartz_CronExpression_ResolveHash_" data-uid="Quartz.CronExpression.ResolveHash*"></a>
+
+  <h3 id="Quartz_CronExpression_ResolveHash_System_String_System_String_" data-uid="Quartz.CronExpression.ResolveHash(System.String,System.String)">
+  ResolveHash(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpression.cs/#L1139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resolves H (hash) tokens in a cron expression to deterministic numeric values
+based on the given hash key. The resulting expression is a standard cron expression
+with no H tokens.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ResolveHash(string cronExpression, string hashKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cronExpression</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Cron expression that may contain H tokens</p>
+</dd>
+    <dt><code>hashKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A stable string key used to derive hash values (e.g., trigger name)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A standard cron expression string with all H tokens resolved to numeric values</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_CronExpression_ResolveHash_System_String_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The H symbol can be thought of as a deterministic value over a range, derived from
+a hash of the key. It produces stable scheduling that spreads load across time.
+</p>
+<p>Supported H token forms:</p>
+<ul><li><code>H</code> — hash value within the full range of the field</li><li><code>H(min-max)</code> — hash value within the specified range</li><li><code>H/step</code> — hash-derived offset, then every step</li><li><code>H(min-max)/step</code> — hash-derived offset in range, then every step</li></ul>
+<p>
+A leading <code>@</code> macro is expanded first, as the constructor expands it, so a macro means the
+same schedule here as everywhere else. A macro names a whole schedule and so carries no
+<code>H</code> token; it simply passes through with nothing to resolve.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_CronExpression_ToString_" data-uid="Quartz.CronExpression.ToString*"></a>
+
+  <h3 id="Quartz_CronExpression_ToString" data-uid="Quartz.CronExpression.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpression.cs/#L824"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the string representation of the <a class="xref" href="Quartz.CronExpression.html">CronExpression</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The string representation of the <a class="xref" href="Quartz.CronExpression.html">CronExpression</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpression_TryParse_" data-uid="Quartz.CronExpression.TryParse*"></a>
+
+  <h3 id="Quartz_CronExpression_TryParse_System_String_Quartz_CronExpression__" data-uid="Quartz.CronExpression.TryParse(System.String,Quartz.CronExpression@)">
+  TryParse(string?, out CronExpression?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpression.cs/#L848"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attempts to parse a cron expression string into a <a class="xref" href="Quartz.CronExpression.html">CronExpression</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryParse(string? cronExpression, out CronExpression? result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cronExpression</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>String representation of the cron expression; may be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Quartz.CronExpression.html">CronExpression</a></dt>
+    <dd><p>The parsed expression, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when parsing failed.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when <code class="paramref">cronExpression</code> is a valid cron expression.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpression_TryParse_" data-uid="Quartz.CronExpression.TryParse*"></a>
+
+  <h3 id="Quartz_CronExpression_TryParse_System_String_Quartz_CronFormat_Quartz_CronExpression__" data-uid="Quartz.CronExpression.TryParse(System.String,Quartz.CronFormat,Quartz.CronExpression@)">
+  TryParse(string?, CronFormat, out CronExpression?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpression.cs/#L909"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attempts to parse a cron expression string written in the given format into a
+<a class="xref" href="Quartz.CronExpression.html">CronExpression</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryParse(string? cronExpression, CronFormat format, out CronExpression? result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cronExpression</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>String representation of the cron expression; may be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="Quartz.CronFormat.html">CronFormat</a></dt>
+    <dd><p>The dialect <code class="paramref">cronExpression</code> is written in.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Quartz.CronExpression.html">CronExpression</a></dt>
+    <dd><p>The parsed expression, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when parsing failed.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when <code class="paramref">cronExpression</code> is a valid cron expression in
+<code class="paramref">format</code>. An undefined <code class="paramref">format</code> answers
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> as well: a <code>Try</code> that throws is a <code>Try</code> its caller has to
+wrap, which is the thing it exists to save them.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.CronExpression.html#Quartz_CronExpression_Parse_System_String_Quartz_CronFormat_">Parse(string, CronFormat)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_CronExpression_TryParseWithHash_" data-uid="Quartz.CronExpression.TryParseWithHash*"></a>
+
+  <h3 id="Quartz_CronExpression_TryParseWithHash_System_String_Quartz_CronFormat_System_String_Quartz_CronExpression__" data-uid="Quartz.CronExpression.TryParseWithHash(System.String,Quartz.CronFormat,System.String,Quartz.CronExpression@)">
+  TryParseWithHash(string?, CronFormat, string, out CronExpression?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpression.cs/#L1091"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attempts to parse a cron expression string written in the given format, whose <code>H</code> (hash)
+tokens are resolved against the given hash key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryParseWithHash(string? cronExpression, CronFormat format, string hashKey, out CronExpression? result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cronExpression</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Cron expression that may contain <code>H</code> tokens; may be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="Quartz.CronFormat.html">CronFormat</a></dt>
+    <dd><p>The dialect <code class="paramref">cronExpression</code> is written in.</p>
+</dd>
+    <dt><code>hashKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A stable string key the hash values are derived from (e.g. the trigger name).</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Quartz.CronExpression.html">CronExpression</a></dt>
+    <dd><p>The parsed expression, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when parsing failed.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when <code class="paramref">cronExpression</code> is a valid cron expression in <code class="paramref">format</code> under <code class="paramref">hashKey</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_CronExpression_TryParseWithHash_System_String_Quartz_CronFormat_System_String_Quartz_CronExpression___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The expression is read as the Quartz expression that says the same thing before its <code>H</code>
+tokens are resolved, so a token is hashed over the range the field has in Quartz — an <code>H</code>
+in a five-field day-of-week is spread over 1-7, not 0-7. What comes back is an ordinary
+<a class="xref" href="Quartz.CronExpression.html">CronExpression</a> in the canonical Quartz spelling, as
+<a class="xref" href="Quartz.CronExpression.html#Quartz_CronExpression_Parse_System_String_Quartz_CronFormat_">Parse(string, CronFormat)</a> describes.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">hashKey</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.CronExpression.html#Quartz_CronExpression_TryParseWithHash_System_String_System_String_Quartz_CronExpression__">TryParseWithHash(string?, string, out CronExpression?)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_CronExpression_TryParseWithHash_" data-uid="Quartz.CronExpression.TryParseWithHash*"></a>
+
+  <h3 id="Quartz_CronExpression_TryParseWithHash_System_String_System_String_Quartz_CronExpression__" data-uid="Quartz.CronExpression.TryParseWithHash(System.String,System.String,Quartz.CronExpression@)">
+  TryParseWithHash(string?, string, out CronExpression?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpression.cs/#L1057"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attempts to parse a cron expression string whose <code>H</code> (hash) tokens are resolved against
+the given hash key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryParseWithHash(string? cronExpression, string hashKey, out CronExpression? result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cronExpression</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Cron expression that may contain <code>H</code> tokens; may be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><code>hashKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A stable string key the hash values are derived from (e.g. the trigger name).</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Quartz.CronExpression.html">CronExpression</a></dt>
+    <dd><p>The parsed expression, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when parsing failed.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when <code class="paramref">cronExpression</code> is a valid cron expression under <code class="paramref">hashKey</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_CronExpression_TryParseWithHash_System_String_System_String_Quartz_CronExpression___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>An <code>H</code> token can be malformed in its own right — <code>H(0-60)</code> names a minute that does
+not exist — so the resolution is inside the attempt rather than ahead of it.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">hashKey</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_CronExpression_WithTimeZone_" data-uid="Quartz.CronExpression.WithTimeZone*"></a>
+
+  <h3 id="Quartz_CronExpression_WithTimeZone_System_TimeZoneInfo_" data-uid="Quartz.CronExpression.WithTimeZone(System.TimeZoneInfo)">
+  WithTimeZone(TimeZoneInfo?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpression.cs/#L810"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a copy of this expression resolved in the given time zone.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpression WithTimeZone(TimeZoneInfo? timeZone)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeZone</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timezoneinfo">TimeZoneInfo</a></dt>
+    <dd><p>The time zone the copy's times are resolved in;
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> means the system's local time zone.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpression.html">CronExpression</a></dt>
+    <dd><p>A new <a class="xref" href="Quartz.CronExpression.html">CronExpression</a> with the same expression string, or this
+instance when the time zone would not change.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

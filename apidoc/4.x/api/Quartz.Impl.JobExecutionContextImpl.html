@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class JobExecutionContextImpl | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class JobExecutionContextImpl | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="A context bundle containing handles to various environment information, that is given to a  instance as it is executed, and to a  instance after the execution completes.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Impl_JobExecutionContextImpl.md&amp;value=---%0Auid%3A%20Quartz.Impl.JobExecutionContextImpl%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Impl.JobExecutionContextImpl">
+
+
+
+  <h1 id="Quartz_Impl_JobExecutionContextImpl" data-uid="Quartz.Impl.JobExecutionContextImpl" class="text-break">
+Class JobExecutionContextImpl  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/JobExecutionContextImpl.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<a class="xref" href="Quartz.Impl.html">Impl</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A context bundle containing handles to various environment information, that
+is given to a <a class="xref" href="Quartz.Impl.JobExecutionContextImpl.html#Quartz_Impl_JobExecutionContextImpl_JobDetail">JobDetail</a> instance as it is
+executed, and to a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> instance after the
+execution completes.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class JobExecutionContextImpl : IJobExecutionContext, IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">JobExecutionContextImpl</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Quartz.JobExecutionContextInputExtensions.html#Quartz_JobExecutionContextInputExtensions_GetInput__1_Quartz_IJobExecutionContext_">JobExecutionContextInputExtensions.GetInput&lt;TInput&gt;(IJobExecutionContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.JobExecutionContextInputExtensions.html#Quartz_JobExecutionContextInputExtensions_TryGetInput__1_Quartz_IJobExecutionContext___0__">JobExecutionContextInputExtensions.TryGetInput&lt;TInput&gt;(IJobExecutionContext, out TInput?)</a>
+  </div>
+  </dd></dl>
+
+
+
+  <h2 id="Quartz_Impl_JobExecutionContextImpl_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+The <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> found on this object (via the
+<a class="xref" href="Quartz.Impl.JobExecutionContextImpl.html#Quartz_Impl_JobExecutionContextImpl_MergedJobDataMap">MergedJobDataMap</a> method) serves as a convenience -
+it is a merge of the <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> found on the
+<a class="xref" href="Quartz.Impl.JobExecutionContextImpl.html#Quartz_Impl_JobExecutionContextImpl_JobDetail">JobDetail</a> and the one found on the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>, with
+the value in the latter overriding any same-named values in the former.
+<i>It is thus considered a 'best practice' that the Execute code of a Job
+retrieve data from the JobDataMap found on this object</i>
+</p>
+<p>
+That map is this firing's own copy: writing to it is safe and reaches the job, the middleware and
+the listeners, and none of it is written back to what the job or the trigger has stored.
+</p>
+<p>
+A context exists only inside the process running the job, and only for as long as it runs. The
+scheduler does not hand it out: <a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_QueryFireInstances_Quartz_FireInstanceQuery_System_Threading_CancellationToken_">QueryFireInstances(FireInstanceQuery, CancellationToken)</a> lists firings across the
+cluster as <a class="xref" href="Quartz.FireInstance.html">FireInstance</a> projections, which carry keys, times and the owning node but
+none of the live state below. Code that needs the live state — the job instance, the merged job data,
+the result, the cancellation handle — gets it from an <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> of its own, which is
+handed the context and can keep it for the duration of the execution.
+</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Quartz_Impl_JobExecutionContextImpl__ctor_" data-uid="Quartz.Impl.JobExecutionContextImpl.#ctor*"></a>
+
+  <h3 id="Quartz_Impl_JobExecutionContextImpl__ctor_Quartz_IScheduler_Quartz_Extensibility_TriggerFiredBundle_Quartz_IJob_Quartz_Extensibility_IJobInputSerializer_" data-uid="Quartz.Impl.JobExecutionContextImpl.#ctor(Quartz.IScheduler,Quartz.Extensibility.TriggerFiredBundle,Quartz.IJob,Quartz.Extensibility.IJobInputSerializer)">
+  JobExecutionContextImpl(IScheduler, TriggerFiredBundle, IJob, IJobInputSerializer?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/JobExecutionContextImpl.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a JobExecutionContext with the given context data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobExecutionContextImpl(IScheduler scheduler, TriggerFiredBundle firedBundle, IJob job, IJobInputSerializer? inputSerializer = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler this firing belongs to.</p>
+</dd>
+    <dt><code>firedBundle</code> <a class="xref" href="Quartz.Extensibility.TriggerFiredBundle.html">TriggerFiredBundle</a></dt>
+    <dd><p>What the job store handed back when the trigger fired.</p>
+</dd>
+    <dt><code>job</code> <a class="xref" href="Quartz.IJob.html">IJob</a></dt>
+    <dd><p>The job instance the factory built for this firing.</p>
+</dd>
+    <dt><code>inputSerializer</code> <a class="xref" href="Quartz.Extensibility.IJobInputSerializer.html">IJobInputSerializer</a></dt>
+    <dd><p>What <a class="xref" href="Quartz.JobExecutionContextInputExtensions.html#Quartz_JobExecutionContextInputExtensions_GetInput__1_Quartz_IJobExecutionContext_">GetInput&lt;TInput&gt;(IJobExecutionContext)</a> and an
+<a class="xref" href="Quartz.IJob-1.html">IJob&lt;TInput&gt;</a> read a stored input with. Quartz hands the scheduler's own; a context
+built by hand without one reports a <a class="xref" href="Quartz.SchedulerException.html">SchedulerException</a> if a job asks it for a
+stored input, rather than reflecting its way to an answer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_Impl_JobExecutionContextImpl_Calendar_" data-uid="Quartz.Impl.JobExecutionContextImpl.Calendar*"></a>
+
+  <h3 id="Quartz_Impl_JobExecutionContextImpl_Calendar" data-uid="Quartz.Impl.JobExecutionContextImpl.Calendar">
+  Calendar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/JobExecutionContextImpl.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get a handle to the <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> referenced by the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+instance that fired the <a class="xref" href="Quartz.IJob.html">IJob</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICalendar? Calendar { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_JobExecutionContextImpl_CancellationToken_" data-uid="Quartz.Impl.JobExecutionContextImpl.CancellationToken*"></a>
+
+  <h3 id="Quartz_Impl_JobExecutionContextImpl_CancellationToken" data-uid="Quartz.Impl.JobExecutionContextImpl.CancellationToken">
+  CancellationToken
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/JobExecutionContextImpl.cs/#L372"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the cancellation token which will be cancelled when the job cancellation has been requested via
+<a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_Interrupt_Quartz_JobKey_System_Threading_CancellationToken_">Interrupt(JobKey, CancellationToken)</a>
+or <a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_InterruptFireInstance_System_String_System_Threading_CancellationToken_">InterruptFireInstance(string, CancellationToken)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CancellationToken CancellationToken { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_JobExecutionContextImpl_FireInstanceId_" data-uid="Quartz.Impl.JobExecutionContextImpl.FireInstanceId*"></a>
+
+  <h3 id="Quartz_Impl_JobExecutionContextImpl_FireInstanceId" data-uid="Quartz.Impl.JobExecutionContextImpl.FireInstanceId">
+  FireInstanceId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/JobExecutionContextImpl.cs/#L369"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the unique Id that identifies this particular firing instance of the
+trigger that triggered this job execution.  It is unique to this
+JobExecutionContext instance as well.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string FireInstanceId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the unique fire instance id</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_JobExecutionContextImpl_FireInstanceId_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Never null here, although <a class="xref" href="Quartz.Extensibility.IOperableTrigger.html#Quartz_Extensibility_IOperableTrigger_FireInstanceId">FireInstanceId</a> is: a context exists
+only for a firing, and a store writes the id as it hands the trigger over.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_InterruptFireInstance_System_String_System_Threading_CancellationToken_">InterruptFireInstance</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>)</div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Impl_JobExecutionContextImpl_FireTimeUtc_" data-uid="Quartz.Impl.JobExecutionContextImpl.FireTimeUtc*"></a>
+
+  <h3 id="Quartz_Impl_JobExecutionContextImpl_FireTimeUtc" data-uid="Quartz.Impl.JobExecutionContextImpl.FireTimeUtc">
+  FireTimeUtc
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/JobExecutionContextImpl.cs/#L270"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The actual time the trigger fired. For instance the scheduled time may
+have been 10:00:00 but the actual fire time may have been 10:00:03 if
+the scheduler was too busy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset FireTimeUtc { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd><p>Returns the fireTimeUtc.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.Impl.JobExecutionContextImpl.html#Quartz_Impl_JobExecutionContextImpl_ScheduledFireTimeUtc">ScheduledFireTimeUtc</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Impl_JobExecutionContextImpl_JobDetail_" data-uid="Quartz.Impl.JobExecutionContextImpl.JobDetail*"></a>
+
+  <h3 id="Quartz_Impl_JobExecutionContextImpl_JobDetail" data-uid="Quartz.Impl.JobExecutionContextImpl.JobDetail">
+  JobDetail
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/JobExecutionContextImpl.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the <a class="xref" href="Quartz.Impl.JobExecutionContextImpl.html#Quartz_Impl_JobExecutionContextImpl_JobDetail">JobDetail</a> associated with the <a class="xref" href="Quartz.IJob.html">IJob</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IJobDetail JobDetail { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_JobExecutionContextImpl_JobInstance_" data-uid="Quartz.Impl.JobExecutionContextImpl.JobInstance*"></a>
+
+  <h3 id="Quartz_Impl_JobExecutionContextImpl_JobInstance" data-uid="Quartz.Impl.JobExecutionContextImpl.JobInstance">
+  JobInstance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/JobExecutionContextImpl.cs/#L261"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the instance of the <a class="xref" href="Quartz.IJob.html">IJob</a> that was created for this
+execution.</p>
+<p>
+Note: The Job instance is not available through remote scheduler
+interfaces.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IJob JobInstance { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IJob.html">IJob</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_JobExecutionContextImpl_JobRunTime_" data-uid="Quartz.Impl.JobExecutionContextImpl.JobRunTime*"></a>
+
+  <h3 id="Quartz_Impl_JobExecutionContextImpl_JobRunTime" data-uid="Quartz.Impl.JobExecutionContextImpl.JobRunTime">
+  JobRunTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/JobExecutionContextImpl.cs/#L319"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How long the job has run for.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan JobRunTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_JobExecutionContextImpl_JobRunTime_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Once the job has completed — or thrown — this is what the scheduler measured, from a monotonic
+timestamp, and it is the value <a class="xref" href="Quartz.IJobListener.html">IJobListener</a>s and <a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a>s
+see. That is what the member is for.
+</p>
+<p>
+Read while the job is still running, it is an estimate instead: the wall clock now, less
+<a class="xref" href="Quartz.IJobExecutionContext.html#Quartz_IJobExecutionContext_FireTimeUtc">FireTimeUtc</a>. It is read from <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset.utcnow">UtcNow</a> rather than
+from the scheduler's <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeprovider">TimeProvider</a>, so under a fake clock set to another instant
+it is meaningless and can come out negative. The testing tutorial says more.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_JobExecutionContextImpl_MergedJobDataMap_" data-uid="Quartz.Impl.JobExecutionContextImpl.MergedJobDataMap*"></a>
+
+  <h3 id="Quartz_Impl_JobExecutionContextImpl_MergedJobDataMap" data-uid="Quartz.Impl.JobExecutionContextImpl.MergedJobDataMap">
+  MergedJobDataMap
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/JobExecutionContextImpl.cs/#L211"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the convenience <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> of this execution context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobDataMap MergedJobDataMap { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_JobExecutionContextImpl_MergedJobDataMap_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> found on this object serves as a convenience -
+it is a merge of the <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> found on the
+<a class="xref" href="Quartz.Impl.JobExecutionContextImpl.html#Quartz_Impl_JobExecutionContextImpl_JobDetail">JobDetail</a> and the one found on the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>, with
+the value in the latter overriding any same-named values in the former.
+<i>It is thus considered a 'best practice' that the Execute code of a Job
+retrieve data from the JobDataMap found on this object.</i>
+</p>
+<p>
+<strong>Writing to it is safe, and it is this firing's own channel.</strong> The map is built
+once per firing by copying the two it merges, so a value put into it is visible to the job, to
+the rest of the middleware pipeline and to the listeners for as long as the firing lasts, and is
+seen by nothing else. It is the only per-firing bag there is, and passing something from a
+middleware to a listener is what it is for.
+</p>
+<p>
+<strong>Nothing written here is persisted.</strong> It is a copy: neither the job's nor the
+trigger's stored data map is touched, and the next firing starts from the stored values again.
+Data that has to outlive the firing goes into <a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_JobDataMap">JobDataMap</a> on a job
+marked <a class="xref" href="Quartz.PersistJobDataAfterExecutionAttribute.html">PersistJobDataAfterExecutionAttribute</a>, which is what a job store writes
+back.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_JobExecutionContextImpl_NextFireTimeUtc_" data-uid="Quartz.Impl.JobExecutionContextImpl.NextFireTimeUtc*"></a>
+
+  <h3 id="Quartz_Impl_JobExecutionContextImpl_NextFireTimeUtc" data-uid="Quartz.Impl.JobExecutionContextImpl.NextFireTimeUtc">
+  NextFireTimeUtc
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/JobExecutionContextImpl.cs/#L291"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the next fire time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset? NextFireTimeUtc { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd><p>The next fire time.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_JobExecutionContextImpl_PreviousFireTimeUtc_" data-uid="Quartz.Impl.JobExecutionContextImpl.PreviousFireTimeUtc*"></a>
+
+  <h3 id="Quartz_Impl_JobExecutionContextImpl_PreviousFireTimeUtc" data-uid="Quartz.Impl.JobExecutionContextImpl.PreviousFireTimeUtc">
+  PreviousFireTimeUtc
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/JobExecutionContextImpl.cs/#L285"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the previous fire time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset? PreviousFireTimeUtc { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd><p>The previous fire time.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_JobExecutionContextImpl_Recovering_" data-uid="Quartz.Impl.JobExecutionContextImpl.Recovering*"></a>
+
+  <h3 id="Quartz_Impl_JobExecutionContextImpl_Recovering" data-uid="Quartz.Impl.JobExecutionContextImpl.Recovering">
+  Recovering
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/JobExecutionContextImpl.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If the <a class="xref" href="Quartz.IJob.html">IJob</a> is being re-executed because of a 'recovery'
+situation, this method will return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Recovering { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_JobExecutionContextImpl_RecoveringTriggerKey_" data-uid="Quartz.Impl.JobExecutionContextImpl.RecoveringTriggerKey*"></a>
+
+  <h3 id="Quartz_Impl_JobExecutionContextImpl_RecoveringTriggerKey" data-uid="Quartz.Impl.JobExecutionContextImpl.RecoveringTriggerKey">
+  RecoveringTriggerKey
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/JobExecutionContextImpl.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a> of the originally scheduled and now recovering job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TriggerKey? RecoveringTriggerKey { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_JobExecutionContextImpl_RecoveringTriggerKey_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>When recovering a previously failed job execution this property returns the identity
+of the originally firing trigger. This recovering job will have been scheduled for
+the same firing time as the original job, and so is available via the
+<a class="xref" href="Quartz.IJobExecutionContext.html#Quartz_IJobExecutionContext_ScheduledFireTimeUtc">ScheduledFireTimeUtc</a> property. The original firing time of the job can be
+accessed via the <a class="xref" href="Quartz.SchedulerConstants.html#Quartz_SchedulerConstants_FailedJobOriginalTriggerFireTime">FailedJobOriginalTriggerFireTime</a>
+element of this job's <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_JobExecutionContextImpl_RefireCount_" data-uid="Quartz.Impl.JobExecutionContextImpl.RefireCount*"></a>
+
+  <h3 id="Quartz_Impl_JobExecutionContextImpl_RefireCount" data-uid="Quartz.Impl.JobExecutionContextImpl.RefireCount">
+  RefireCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/JobExecutionContextImpl.cs/#L172"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the refire count.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RefireCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The refire count.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_JobExecutionContextImpl_Result_" data-uid="Quartz.Impl.JobExecutionContextImpl.Result*"></a>
+
+  <h3 id="Quartz_Impl_JobExecutionContextImpl_Result" data-uid="Quartz.Impl.JobExecutionContextImpl.Result">
+  Result
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/JobExecutionContextImpl.cs/#L316"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the result (if any) that the <a class="xref" href="Quartz.IJob.html">IJob</a> set before its
+execution completed (the type of object set as the result is entirely up
+to the particular job).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object? Result { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_JobExecutionContextImpl_Result_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The result itself is meaningless to Quartz, but may be informative
+to <a class="xref" href="Quartz.IJobListener.html">IJobListener</a>s or
+<a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a>s that are watching the job's
+execution.
+</p>
+<p>Set the result (if any) of the <a class="xref" href="Quartz.IJob.html">IJob</a>'s execution (the type of
+object set as the result is entirely up to the particular job).</p>
+<p>
+The result itself is meaningless to Quartz, but may be informative
+to <a class="xref" href="Quartz.IJobListener.html">IJobListener</a>s or
+<a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a>s that are watching the job's
+execution.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_JobExecutionContextImpl_RetryAttempt_" data-uid="Quartz.Impl.JobExecutionContextImpl.RetryAttempt*"></a>
+
+  <h3 id="Quartz_Impl_JobExecutionContextImpl_RetryAttempt" data-uid="Quartz.Impl.JobExecutionContextImpl.RetryAttempt">
+  RetryAttempt
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/JobExecutionContextImpl.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How many times this occurrence has already been retried under the trigger's retry policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RetryAttempt { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_JobExecutionContextImpl_RetryAttempt_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Read from the trigger this firing was handed, which is the copy the job store fired: the store
+wrote the attempt when it scheduled the retry and read it back when it acquired the trigger, so
+this is the count as the store has it and not something the run shell keeps.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_JobExecutionContextImpl_ScheduledFireTimeUtc_" data-uid="Quartz.Impl.JobExecutionContextImpl.ScheduledFireTimeUtc*"></a>
+
+  <h3 id="Quartz_Impl_JobExecutionContextImpl_ScheduledFireTimeUtc" data-uid="Quartz.Impl.JobExecutionContextImpl.ScheduledFireTimeUtc">
+  ScheduledFireTimeUtc
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/JobExecutionContextImpl.cs/#L279"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The scheduled time the trigger fired for. For instance the scheduled
+time may have been 10:00:00 but the actual fire time may have been
+10:00:03 if the scheduler was too busy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset? ScheduledFireTimeUtc { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd><p>Returns the scheduledFireTimeUtc.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.Impl.JobExecutionContextImpl.html#Quartz_Impl_JobExecutionContextImpl_FireTimeUtc">FireTimeUtc</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Impl_JobExecutionContextImpl_Scheduler_" data-uid="Quartz.Impl.JobExecutionContextImpl.Scheduler*"></a>
+
+  <h3 id="Quartz_Impl_JobExecutionContextImpl_Scheduler" data-uid="Quartz.Impl.JobExecutionContextImpl.Scheduler">
+  Scheduler
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/JobExecutionContextImpl.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get a handle to the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> instance that fired the
+<a class="xref" href="Quartz.IJob.html">IJob</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IScheduler Scheduler { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_JobExecutionContextImpl_Trigger_" data-uid="Quartz.Impl.JobExecutionContextImpl.Trigger*"></a>
+
+  <h3 id="Quartz_Impl_JobExecutionContextImpl_Trigger" data-uid="Quartz.Impl.JobExecutionContextImpl.Trigger">
+  Trigger
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/JobExecutionContextImpl.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get a handle to the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> instance that fired the
+<a class="xref" href="Quartz.IJob.html">IJob</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITrigger Trigger { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_Impl_JobExecutionContextImpl_Dispose_" data-uid="Quartz.Impl.JobExecutionContextImpl.Dispose*"></a>
+
+  <h3 id="Quartz_Impl_JobExecutionContextImpl_Dispose" data-uid="Quartz.Impl.JobExecutionContextImpl.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/JobExecutionContextImpl.cs/#L395"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_JobExecutionContextImpl_ToString_" data-uid="Quartz.Impl.JobExecutionContextImpl.ToString*"></a>
+
+  <h3 id="Quartz_Impl_JobExecutionContextImpl_ToString" data-uid="Quartz.Impl.JobExecutionContextImpl.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/JobExecutionContextImpl.cs/#L353"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> that represents the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> that represents the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 id="seealso">See Also</h2>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.Impl.JobExecutionContextImpl.html#Quartz_Impl_JobExecutionContextImpl_JobDetail">JobDetail</a></div>
+      <div><a class="xref" href="Quartz.IScheduler.html">IScheduler</a></div>
+      <div><a class="xref" href="Quartz.IJob.html">IJob</a></div>
+      <div><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></div>
+      <div><a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a></div>
+  </div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/JobExecutionContextImpl.cs/#L65" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

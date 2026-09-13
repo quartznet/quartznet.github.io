@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IThreadPool | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IThreadPool | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="The interface to be implemented by classes that want to provide a thread pool for the &#39;s use.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Extensibility_IThreadPool.md&amp;value=---%0Auid%3A%20Quartz.Extensibility.IThreadPool%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Extensibility.IThreadPool">
+
+
+
+  <h1 id="Quartz_Extensibility_IThreadPool" data-uid="Quartz.Extensibility.IThreadPool" class="text-break">
+Interface IThreadPool  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IThreadPool.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<a class="xref" href="Quartz.Extensibility.html">Extensibility</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The interface to be implemented by classes that want to provide a thread
+pool for the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>'s use.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IThreadPool</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 id="Quartz_Extensibility_IThreadPool_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p><a class="xref" href="Quartz.Extensibility.IThreadPool.html">IThreadPool</a> implementation instances should ideally be made
+for the sole use of Quartz.  Most importantly, when the method
+<a class="xref" href="Quartz.Extensibility.IThreadPool.html#Quartz_Extensibility_IThreadPool_WaitForAvailableThreads_System_Threading_CancellationToken_">WaitForAvailableThreads(CancellationToken)</a> returns a value of 1 or greater,
+there must still be at least one available thread in the pool when the
+method  <a class="xref" href="Quartz.Extensibility.IThreadPool.html#Quartz_Extensibility_IThreadPool_TryRun_System_Func_System_Threading_Tasks_ValueTask__System_Threading_CancellationToken_">TryRun(Func&lt;ValueTask&gt;, CancellationToken)</a> is called a few moments (or
+many moments) later.  If this assumption does not hold true, it may
+result in extra JobStore queries and updates, and if clustering features
+are being used, it may result in greater imbalance of load.</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_Extensibility_IThreadPool_PoolSize_" data-uid="Quartz.Extensibility.IThreadPool.PoolSize*"></a>
+
+  <h3 id="Quartz_Extensibility_IThreadPool_PoolSize" data-uid="Quartz.Extensibility.IThreadPool.PoolSize">
+  PoolSize
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IThreadPool.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the current number of threads in the <a class="xref" href="Quartz.Extensibility.IThreadPool.html">IThreadPool</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int PoolSize { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_Extensibility_IThreadPool_Drain_" data-uid="Quartz.Extensibility.IThreadPool.Drain*"></a>
+
+  <h3 id="Quartz_Extensibility_IThreadPool_Drain_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IThreadPool.Drain(System.Threading.CancellationToken)">
+  Drain(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IThreadPool.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops the pool accepting new work, waits for the work already running to finish, and frees the
+pool's resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;bool&gt; Drain(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancels the wait, not the running work.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the work that was running finished; <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>
+if <code class="paramref">cancellationToken</code> fired first and work is still running.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IThreadPool_Drain_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The bounded form of <a class="xref" href="Quartz.Extensibility.IThreadPool.html#Quartz_Extensibility_IThreadPool_Shutdown_System_Boolean_System_Threading_CancellationToken_">Shutdown(bool, CancellationToken)</a> with <code>waitForJobsToComplete: true</code>: the wait
+ends when <code class="paramref">cancellationToken</code> fires, and the outcome is reported rather than
+thrown. That is what lets a caller say "drain, but give up after this long" and still carry on
+with the rest of its own shutdown — which <a class="xref" href="Quartz.Extensibility.IThreadPool.html#Quartz_Extensibility_IThreadPool_Shutdown_System_Boolean_System_Threading_CancellationToken_">Shutdown(bool, CancellationToken)</a> cannot express, because a wait
+it abandoned by throwing would skip everything the caller still has to tear down.
+</p>
+<p>
+The wait must not block the calling thread. Callers include a host's graceful-shutdown path, and
+an implementation that blocks pins a thread for as long as the slowest job runs.
+</p>
+<p>
+Giving up abandons the wait, never the work: running work is not cancelled, because the pool has
+no means to interrupt it and whether a shutting-down scheduler interrupts its jobs is
+<a class="xref" href="Quartz.ShutdownJobInterruption.html">ShutdownJobInterruption</a>'s decision, already made by the time this is called. The
+pool is left shut down either way, so the answer says what was true when it stopped waiting, not
+what the caller should do about it.
+</p>
+<p>
+The barrier has to cover everything a work item does, and not merely the part of it a caller can
+see: <a class="xref" href="Quartz.Extensibility.IThreadPool.html#Quartz_Extensibility_IThreadPool_TryRun_System_Func_System_Threading_Tasks_ValueTask__System_Threading_CancellationToken_">TryRun(Func&lt;ValueTask&gt;, CancellationToken)</a> is handed the whole of a job's execution, of which the last act is the
+job store update that completes the trigger. A pool that waits for its work items therefore waits
+for those writes too — which a count of executing jobs does not, since a job leaves that count
+before its store update is issued.
+</p>
+<p>
+The default implementation calls <a class="xref" href="Quartz.Extensibility.IThreadPool.html#Quartz_Extensibility_IThreadPool_Shutdown_System_Boolean_System_Threading_CancellationToken_">Shutdown(bool, CancellationToken)</a> with <code>waitForJobsToComplete: true</code>,
+whose wait cannot be given up on, and so it can only report that it drained. That keeps a pool
+written before this member existed correct rather than fast; override it to honour a deadline.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_Extensibility_IThreadPool_Initialize_" data-uid="Quartz.Extensibility.IThreadPool.Initialize*"></a>
+
+  <h3 id="Quartz_Extensibility_IThreadPool_Initialize_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IThreadPool.Initialize(System.Threading.CancellationToken)">
+  Initialize(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IThreadPool.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Must be called before the thread pool is
+used, in order to give the it a chance to Initialize.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask Initialize(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IThreadPool_Initialize_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Typically called by the <a class="xref" href="Quartz.ISchedulerFactory.html">ISchedulerFactory</a>.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Extensibility_IThreadPool_Shutdown_" data-uid="Quartz.Extensibility.IThreadPool.Shutdown*"></a>
+
+  <h3 id="Quartz_Extensibility_IThreadPool_Shutdown_System_Boolean_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IThreadPool.Shutdown(System.Boolean,System.Threading.CancellationToken)">
+  Shutdown(bool, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IThreadPool.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the QuartzScheduler to inform the thread pool
+that it should free up all of it's resources because the scheduler is
+shutting down.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask Shutdown(bool waitForJobsToComplete = true, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>waitForJobsToComplete</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to wait for executing jobs to finish first.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IThreadPool_TryRun_" data-uid="Quartz.Extensibility.IThreadPool.TryRun*"></a>
+
+  <h3 id="Quartz_Extensibility_IThreadPool_TryRun_System_Func_System_Threading_Tasks_ValueTask__System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IThreadPool.TryRun(System.Func{System.Threading.Tasks.ValueTask},System.Threading.CancellationToken)">
+  TryRun(Func&lt;ValueTask&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IThreadPool.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Schedules the given work to run as soon as the pool's concurrency
+rules allow it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;bool&gt; TryRun(Func&lt;ValueTask&gt; action, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a>&gt;</dt>
+    <dd><p>The work to run.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the work was scheduled; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>
+(the pool has been shut down or was never initialized).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IThreadPool_TryRun_System_Func_System_Threading_Tasks_ValueTask__System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The implementation of this interface should not throw exceptions unless
+there is a serious problem (i.e. a serious misconfiguration). If there
+are no available slots, rather it should either queue the action, or
+wait until a slot is available, depending on the desired strategy.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Extensibility_IThreadPool_WaitForAvailableThreads_" data-uid="Quartz.Extensibility.IThreadPool.WaitForAvailableThreads*"></a>
+
+  <h3 id="Quartz_Extensibility_IThreadPool_WaitForAvailableThreads_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IThreadPool.WaitForAvailableThreads(System.Threading.CancellationToken)">
+  WaitForAvailableThreads(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IThreadPool.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines the number of execution slots that are currently available in
+the pool. The scheduler uses the count to size the batch of triggers it
+acquires next.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;int&gt; WaitForAvailableThreads(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd><p>the number of currently available execution slots</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IThreadPool_WaitForAvailableThreads_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The implementation of this method should wait until there is at
+least one available slot. It is awaited by the scheduler's own loop, so an
+implementation must not block the calling thread while it waits.</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IThreadPool.cs/#L59" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

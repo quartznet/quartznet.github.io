@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TriggerConfiguratorExtensions | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TriggerConfiguratorExtensions | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Gives a trigger its schedule, one method per schedule kind.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_TriggerConfiguratorExtensions.md&amp;value=---%0Auid%3A%20Quartz.TriggerConfiguratorExtensions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.TriggerConfiguratorExtensions">
+
+
+
+  <h1 id="Quartz_TriggerConfiguratorExtensions" data-uid="Quartz.TriggerConfiguratorExtensions" class="text-break">
+Class TriggerConfiguratorExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerConfiguratorExtensions.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Gives a trigger its schedule, one method per schedule kind.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class TriggerConfiguratorExtensions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">TriggerConfiguratorExtensions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_TriggerConfiguratorExtensions_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Each method is generic in the receiver and returns it unchanged, so the chain keeps whatever
+type it started with — <a class="xref" href="Quartz.TriggerBuilder-1.html">TriggerBuilder&lt;TJob&gt;</a> when building a trigger directly,
+<a class="xref" href="Quartz.ITriggerConfigurator-1.html">ITriggerConfigurator&lt;TJob&gt;</a> when configuring one through the container — and the
+two read identically.
+</p>
+<p>
+Every kind offers the same two shapes: configure a fresh builder inline, or hand over one that
+was built elsewhere.
+</p>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_TriggerConfiguratorExtensions_WithCalendarIntervalSchedule_" data-uid="Quartz.TriggerConfiguratorExtensions.WithCalendarIntervalSchedule*"></a>
+
+  <h3 id="Quartz_TriggerConfiguratorExtensions_WithCalendarIntervalSchedule__1___0_Quartz_CalendarIntervalScheduleBuilder_" data-uid="Quartz.TriggerConfiguratorExtensions.WithCalendarIntervalSchedule``1(``0,Quartz.CalendarIntervalScheduleBuilder)">
+  WithCalendarIntervalSchedule&lt;TConfigurator&gt;(TConfigurator, CalendarIntervalScheduleBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerConfiguratorExtensions.cs/#L204"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the trigger to fire on the given calendar-interval schedule.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TConfigurator WithCalendarIntervalSchedule&lt;TConfigurator&gt;(this TConfigurator configurator, CalendarIntervalScheduleBuilder schedule) where TConfigurator : ITriggerConfigurator</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configurator</code> <span class="xref">TConfigurator</span></dt>
+    <dd><p>the trigger being configured.</p>
+</dd>
+    <dt><code>schedule</code> <a class="xref" href="Quartz.CalendarIntervalScheduleBuilder.html">CalendarIntervalScheduleBuilder</a></dt>
+    <dd><p>the schedule to use.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TConfigurator</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TConfigurator</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_TriggerConfiguratorExtensions_WithCalendarIntervalSchedule_" data-uid="Quartz.TriggerConfiguratorExtensions.WithCalendarIntervalSchedule*"></a>
+
+  <h3 id="Quartz_TriggerConfiguratorExtensions_WithCalendarIntervalSchedule__1___0_System_Action_Quartz_CalendarIntervalScheduleBuilder__" data-uid="Quartz.TriggerConfiguratorExtensions.WithCalendarIntervalSchedule``1(``0,System.Action{Quartz.CalendarIntervalScheduleBuilder})">
+  WithCalendarIntervalSchedule&lt;TConfigurator&gt;(TConfigurator, Action&lt;CalendarIntervalScheduleBuilder&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerConfiguratorExtensions.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the trigger to fire on a calendar interval — one that counts days, weeks, months or
+years rather than a fixed amount of time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TConfigurator WithCalendarIntervalSchedule&lt;TConfigurator&gt;(this TConfigurator configurator, Action&lt;CalendarIntervalScheduleBuilder&gt;? configure = null) where TConfigurator : ITriggerConfigurator</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configurator</code> <span class="xref">TConfigurator</span></dt>
+    <dd><p>the trigger being configured.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.CalendarIntervalScheduleBuilder.html">CalendarIntervalScheduleBuilder</a>&gt;</dt>
+    <dd><p>configures the schedule.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TConfigurator</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TConfigurator</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_TriggerConfiguratorExtensions_WithCronSchedule_" data-uid="Quartz.TriggerConfiguratorExtensions.WithCronSchedule*"></a>
+
+  <h3 id="Quartz_TriggerConfiguratorExtensions_WithCronSchedule__1___0_Quartz_CronExpression_System_Action_Quartz_CronScheduleBuilder__" data-uid="Quartz.TriggerConfiguratorExtensions.WithCronSchedule``1(``0,Quartz.CronExpression,System.Action{Quartz.CronScheduleBuilder})">
+  WithCronSchedule&lt;TConfigurator&gt;(TConfigurator, CronExpression, Action&lt;CronScheduleBuilder&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerConfiguratorExtensions.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the trigger to fire on a cron schedule defined by an already-built
+<a class="xref" href="Quartz.CronExpression.html">CronExpression</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TConfigurator WithCronSchedule&lt;TConfigurator&gt;(this TConfigurator configurator, CronExpression cronExpression, Action&lt;CronScheduleBuilder&gt;? configure = null) where TConfigurator : ITriggerConfigurator</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configurator</code> <span class="xref">TConfigurator</span></dt>
+    <dd><p>the trigger being configured.</p>
+</dd>
+    <dt><code>cronExpression</code> <a class="xref" href="Quartz.CronExpression.html">CronExpression</a></dt>
+    <dd><p>the cron expression the trigger fires on.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.CronScheduleBuilder.html">CronScheduleBuilder</a>&gt;</dt>
+    <dd><p>configures the rest of the schedule, such as its time zone.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TConfigurator</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TConfigurator</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_TriggerConfiguratorExtensions_WithCronSchedule__1___0_Quartz_CronExpression_System_Action_Quartz_CronScheduleBuilder___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This is also the overload to reach for when the expression carries <code>H</code> (hash) tokens
+that should be spread by something other than the trigger's own key:
+<code>WithCronSchedule(CronExpression.ParseWithHash(expression, hashKey))</code>.</p>
+</div>
+
+
+
+
+  <a id="Quartz_TriggerConfiguratorExtensions_WithCronSchedule_" data-uid="Quartz.TriggerConfiguratorExtensions.WithCronSchedule*"></a>
+
+  <h3 id="Quartz_TriggerConfiguratorExtensions_WithCronSchedule__1___0_Quartz_CronExpressionBuilder_System_Action_Quartz_CronScheduleBuilder__" data-uid="Quartz.TriggerConfiguratorExtensions.WithCronSchedule``1(``0,Quartz.CronExpressionBuilder,System.Action{Quartz.CronScheduleBuilder})">
+  WithCronSchedule&lt;TConfigurator&gt;(TConfigurator, CronExpressionBuilder, Action&lt;CronScheduleBuilder&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerConfiguratorExtensions.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the trigger to fire on a cron schedule assembled with a
+<a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a>, so the fluent chain closes without naming
+<a class="xref" href="Quartz.CronScheduleBuilder.html">CronScheduleBuilder</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TConfigurator WithCronSchedule&lt;TConfigurator&gt;(this TConfigurator configurator, CronExpressionBuilder cronExpression, Action&lt;CronScheduleBuilder&gt;? configure = null) where TConfigurator : ITriggerConfigurator</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configurator</code> <span class="xref">TConfigurator</span></dt>
+    <dd><p>the trigger being configured.</p>
+</dd>
+    <dt><code>cronExpression</code> <a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the builder holding the assembled expression; it is built here.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.CronScheduleBuilder.html">CronScheduleBuilder</a>&gt;</dt>
+    <dd><p>configures the rest of the schedule, such as its time zone.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TConfigurator</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TConfigurator</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_TriggerConfiguratorExtensions_WithCronSchedule_" data-uid="Quartz.TriggerConfiguratorExtensions.WithCronSchedule*"></a>
+
+  <h3 id="Quartz_TriggerConfiguratorExtensions_WithCronSchedule__1___0_Quartz_CronScheduleBuilder_" data-uid="Quartz.TriggerConfiguratorExtensions.WithCronSchedule``1(``0,Quartz.CronScheduleBuilder)">
+  WithCronSchedule&lt;TConfigurator&gt;(TConfigurator, CronScheduleBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerConfiguratorExtensions.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the trigger to fire on the given cron schedule.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TConfigurator WithCronSchedule&lt;TConfigurator&gt;(this TConfigurator configurator, CronScheduleBuilder schedule) where TConfigurator : ITriggerConfigurator</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configurator</code> <span class="xref">TConfigurator</span></dt>
+    <dd><p>the trigger being configured.</p>
+</dd>
+    <dt><code>schedule</code> <a class="xref" href="Quartz.CronScheduleBuilder.html">CronScheduleBuilder</a></dt>
+    <dd><p>the schedule to use.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TConfigurator</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TConfigurator</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_TriggerConfiguratorExtensions_WithCronSchedule__1___0_Quartz_CronScheduleBuilder__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The narrowest of the four, and the one that looks most like <code>WithSchedule</code> with a smaller
+parameter — which it is. It stays because every <code>With…Schedule</code> family has this member, so
+removing it from cron alone would leave one family short of the shape the other four teach, and
+because it is the 3.x spelling a migrating application already has. The other three each say
+something <code>WithSchedule</code> cannot: parse a string, take an expression already parsed (which is
+where a hash key rides), or close a <a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a> chain — and all three
+also apply the <code>configure</code> callback.</p>
+</div>
+
+
+
+
+  <a id="Quartz_TriggerConfiguratorExtensions_WithCronSchedule_" data-uid="Quartz.TriggerConfiguratorExtensions.WithCronSchedule*"></a>
+
+  <h3 id="Quartz_TriggerConfiguratorExtensions_WithCronSchedule__1___0_System_String_System_Action_Quartz_CronScheduleBuilder__" data-uid="Quartz.TriggerConfiguratorExtensions.WithCronSchedule``1(``0,System.String,System.Action{Quartz.CronScheduleBuilder})">
+  WithCronSchedule&lt;TConfigurator&gt;(TConfigurator, string, Action&lt;CronScheduleBuilder&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerConfiguratorExtensions.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the trigger to fire on a cron schedule.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TConfigurator WithCronSchedule&lt;TConfigurator&gt;(this TConfigurator configurator, string cronExpression, Action&lt;CronScheduleBuilder&gt;? configure = null) where TConfigurator : ITriggerConfigurator</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configurator</code> <span class="xref">TConfigurator</span></dt>
+    <dd><p>the trigger being configured.</p>
+</dd>
+    <dt><code>cronExpression</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the cron expression the trigger fires on.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.CronScheduleBuilder.html">CronScheduleBuilder</a>&gt;</dt>
+    <dd><p>configures the rest of the schedule, such as its time zone.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TConfigurator</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TConfigurator</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_TriggerConfiguratorExtensions_WithDailyTimeIntervalSchedule_" data-uid="Quartz.TriggerConfiguratorExtensions.WithDailyTimeIntervalSchedule*"></a>
+
+  <h3 id="Quartz_TriggerConfiguratorExtensions_WithDailyTimeIntervalSchedule__1___0_Quartz_DailyTimeIntervalScheduleBuilder_" data-uid="Quartz.TriggerConfiguratorExtensions.WithDailyTimeIntervalSchedule``1(``0,Quartz.DailyTimeIntervalScheduleBuilder)">
+  WithDailyTimeIntervalSchedule&lt;TConfigurator&gt;(TConfigurator, DailyTimeIntervalScheduleBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerConfiguratorExtensions.cs/#L237"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the trigger to fire on the given daily-time-interval schedule.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TConfigurator WithDailyTimeIntervalSchedule&lt;TConfigurator&gt;(this TConfigurator configurator, DailyTimeIntervalScheduleBuilder schedule) where TConfigurator : ITriggerConfigurator</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configurator</code> <span class="xref">TConfigurator</span></dt>
+    <dd><p>the trigger being configured.</p>
+</dd>
+    <dt><code>schedule</code> <a class="xref" href="Quartz.DailyTimeIntervalScheduleBuilder.html">DailyTimeIntervalScheduleBuilder</a></dt>
+    <dd><p>the schedule to use.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TConfigurator</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TConfigurator</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_TriggerConfiguratorExtensions_WithDailyTimeIntervalSchedule_" data-uid="Quartz.TriggerConfiguratorExtensions.WithDailyTimeIntervalSchedule*"></a>
+
+  <h3 id="Quartz_TriggerConfiguratorExtensions_WithDailyTimeIntervalSchedule__1___0_System_Action_Quartz_DailyTimeIntervalScheduleBuilder__" data-uid="Quartz.TriggerConfiguratorExtensions.WithDailyTimeIntervalSchedule``1(``0,System.Action{Quartz.DailyTimeIntervalScheduleBuilder})">
+  WithDailyTimeIntervalSchedule&lt;TConfigurator&gt;(TConfigurator, Action&lt;DailyTimeIntervalScheduleBuilder&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerConfiguratorExtensions.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the trigger to fire one or more times a day, within a daily time window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TConfigurator WithDailyTimeIntervalSchedule&lt;TConfigurator&gt;(this TConfigurator configurator, Action&lt;DailyTimeIntervalScheduleBuilder&gt;? configure = null) where TConfigurator : ITriggerConfigurator</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configurator</code> <span class="xref">TConfigurator</span></dt>
+    <dd><p>the trigger being configured.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.DailyTimeIntervalScheduleBuilder.html">DailyTimeIntervalScheduleBuilder</a>&gt;</dt>
+    <dd><p>configures the schedule.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TConfigurator</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TConfigurator</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_TriggerConfiguratorExtensions_WithDailyTimeIntervalSchedule__1___0_System_Action_Quartz_DailyTimeIntervalScheduleBuilder___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The interval decides how often the trigger fires inside the window. For a single execution
+per day, call <a class="xref" href="Quartz.DailyTimeIntervalScheduleBuilder.html#Quartz_DailyTimeIntervalScheduleBuilder_EndingDailyAfterCount_System_Int32_">EndingDailyAfterCount(int)</a> with 1
+or set the interval to cover the whole window.</p>
+</div>
+
+
+
+
+  <a id="Quartz_TriggerConfiguratorExtensions_WithRecurrenceSchedule_" data-uid="Quartz.TriggerConfiguratorExtensions.WithRecurrenceSchedule*"></a>
+
+  <h3 id="Quartz_TriggerConfiguratorExtensions_WithRecurrenceSchedule__1___0_Quartz_RecurrenceScheduleBuilder_" data-uid="Quartz.TriggerConfiguratorExtensions.WithRecurrenceSchedule``1(``0,Quartz.RecurrenceScheduleBuilder)">
+  WithRecurrenceSchedule&lt;TConfigurator&gt;(TConfigurator, RecurrenceScheduleBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerConfiguratorExtensions.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the trigger to use the given RFC 5545 RRULE-based schedule.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TConfigurator WithRecurrenceSchedule&lt;TConfigurator&gt;(this TConfigurator configurator, RecurrenceScheduleBuilder schedule) where TConfigurator : ITriggerConfigurator</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configurator</code> <span class="xref">TConfigurator</span></dt>
+    <dd><p>the trigger being configured.</p>
+</dd>
+    <dt><code>schedule</code> <a class="xref" href="Quartz.RecurrenceScheduleBuilder.html">RecurrenceScheduleBuilder</a></dt>
+    <dd><p>the schedule to use.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TConfigurator</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TConfigurator</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_TriggerConfiguratorExtensions_WithRecurrenceSchedule_" data-uid="Quartz.TriggerConfiguratorExtensions.WithRecurrenceSchedule*"></a>
+
+  <h3 id="Quartz_TriggerConfiguratorExtensions_WithRecurrenceSchedule__1___0_System_String_System_Action_Quartz_RecurrenceScheduleBuilder__" data-uid="Quartz.TriggerConfiguratorExtensions.WithRecurrenceSchedule``1(``0,System.String,System.Action{Quartz.RecurrenceScheduleBuilder})">
+  WithRecurrenceSchedule&lt;TConfigurator&gt;(TConfigurator, string, Action&lt;RecurrenceScheduleBuilder&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerConfiguratorExtensions.cs/#L253"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the trigger to use an RFC 5545 RRULE-based schedule.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TConfigurator WithRecurrenceSchedule&lt;TConfigurator&gt;(this TConfigurator configurator, string recurrenceRule, Action&lt;RecurrenceScheduleBuilder&gt;? configure = null) where TConfigurator : ITriggerConfigurator</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configurator</code> <span class="xref">TConfigurator</span></dt>
+    <dd><p>the trigger being configured.</p>
+</dd>
+    <dt><code>recurrenceRule</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>An RFC 5545 RRULE string, e.g. &quot;FREQ=WEEKLY;INTERVAL=2;BYDAY=MO,WE,FR&quot;.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.RecurrenceScheduleBuilder.html">RecurrenceScheduleBuilder</a>&gt;</dt>
+    <dd><p>configures the rest of the schedule, such as its time zone.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TConfigurator</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TConfigurator</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_TriggerConfiguratorExtensions_WithSimpleSchedule_" data-uid="Quartz.TriggerConfiguratorExtensions.WithSimpleSchedule*"></a>
+
+  <h3 id="Quartz_TriggerConfiguratorExtensions_WithSimpleSchedule__1___0_Quartz_SimpleScheduleBuilder_" data-uid="Quartz.TriggerConfiguratorExtensions.WithSimpleSchedule``1(``0,Quartz.SimpleScheduleBuilder)">
+  WithSimpleSchedule&lt;TConfigurator&gt;(TConfigurator, SimpleScheduleBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerConfiguratorExtensions.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the trigger to fire on the given fixed-interval schedule.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TConfigurator WithSimpleSchedule&lt;TConfigurator&gt;(this TConfigurator configurator, SimpleScheduleBuilder schedule) where TConfigurator : ITriggerConfigurator</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configurator</code> <span class="xref">TConfigurator</span></dt>
+    <dd><p>the trigger being configured.</p>
+</dd>
+    <dt><code>schedule</code> <a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></dt>
+    <dd><p>the schedule to use.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TConfigurator</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TConfigurator</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_TriggerConfiguratorExtensions_WithSimpleSchedule_" data-uid="Quartz.TriggerConfiguratorExtensions.WithSimpleSchedule*"></a>
+
+  <h3 id="Quartz_TriggerConfiguratorExtensions_WithSimpleSchedule__1___0_System_Action_Quartz_SimpleScheduleBuilder__" data-uid="Quartz.TriggerConfiguratorExtensions.WithSimpleSchedule``1(``0,System.Action{Quartz.SimpleScheduleBuilder})">
+  WithSimpleSchedule&lt;TConfigurator&gt;(TConfigurator, Action&lt;SimpleScheduleBuilder&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerConfiguratorExtensions.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the trigger to fire on a fixed interval, optionally repeating.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TConfigurator WithSimpleSchedule&lt;TConfigurator&gt;(this TConfigurator configurator, Action&lt;SimpleScheduleBuilder&gt;? configure = null) where TConfigurator : ITriggerConfigurator</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configurator</code> <span class="xref">TConfigurator</span></dt>
+    <dd><p>the trigger being configured.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a>&gt;</dt>
+    <dd><p>configures the schedule; omit for a schedule that fires once.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TConfigurator</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TConfigurator</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_TriggerConfiguratorExtensions_WithSimpleSchedule_" data-uid="Quartz.TriggerConfiguratorExtensions.WithSimpleSchedule*"></a>
+
+  <h3 id="Quartz_TriggerConfiguratorExtensions_WithSimpleSchedule__1___0_System_TimeSpan_System_Nullable_System_Int32__" data-uid="Quartz.TriggerConfiguratorExtensions.WithSimpleSchedule``1(``0,System.TimeSpan,System.Nullable{System.Int32})">
+  WithSimpleSchedule&lt;TConfigurator&gt;(TConfigurator, TimeSpan, int?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerConfiguratorExtensions.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the trigger to fire on a fixed interval, repeating forever unless a repeat count is given.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TConfigurator WithSimpleSchedule&lt;TConfigurator&gt;(this TConfigurator configurator, TimeSpan interval, int? repeatCount = null) where TConfigurator : ITriggerConfigurator</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configurator</code> <span class="xref">TConfigurator</span></dt>
+    <dd><p>the trigger being configured.</p>
+</dd>
+    <dt><code>interval</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>the interval at which the trigger repeats.</p>
+</dd>
+    <dt><code>repeatCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>How many times the trigger repeats <em>after</em> its first firing, so the total number of
+firings is one more than this — the same number
+<a class="xref" href="Quartz.SimpleScheduleBuilder.html#Quartz_SimpleScheduleBuilder_WithRepeatCount_System_Int32_">WithRepeatCount(int)</a> and
+<a class="xref" href="Quartz.ISimpleTrigger.html#Quartz_ISimpleTrigger_RepeatCount">RepeatCount</a> carry, with no arithmetic of its own.
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, the default, repeats forever.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TConfigurator</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TConfigurator</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_TriggerConfiguratorExtensions_WithSimpleSchedule__1___0_System_TimeSpan_System_Nullable_System_Int32___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The shorthand for the schedule almost every fixed-interval trigger wants, so that
+<code>WithSimpleSchedule(x =&gt; x.WithInterval(interval).RepeatForever())</code> can be written
+<code>WithSimpleSchedule(interval)</code>. Reach for the delegate overload when the schedule needs
+more than an interval and a count — a misfire instruction, say.</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerConfiguratorExtensions.cs/#L37" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

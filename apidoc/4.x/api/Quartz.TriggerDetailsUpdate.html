@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TriggerDetailsUpdate | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TriggerDetailsUpdate | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Specifies which trigger properties to update without rescheduling. Only properties explicitly set via the builder methods will be changed.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_TriggerDetailsUpdate.md&amp;value=---%0Auid%3A%20Quartz.TriggerDetailsUpdate%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.TriggerDetailsUpdate">
+
+
+
+  <h1 id="Quartz_TriggerDetailsUpdate" data-uid="Quartz.TriggerDetailsUpdate" class="text-break">
+Class TriggerDetailsUpdate  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerDetailsUpdate.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Specifies which trigger properties to update without rescheduling.
+Only properties explicitly set via the builder methods will be changed.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class TriggerDetailsUpdate</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">TriggerDetailsUpdate</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_TriggerDetailsUpdate_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Most properties here are pure metadata, but the calendar name and the misfire instruction can
+affect firing behavior. Changing them via this API does not recompute fire times — the new
+values take effect starting from the next scheduling evaluation.
+</p>
+<p>
+The misfire instruction is set six ways, and all six earn their place. The five typed overloads
+of <code>WithMisfireInstruction</code> are one per schedule family, and each is load-bearing: the same
+number means a different policy in each family, so naming the family is what lets the store
+reject an update aimed at a trigger of another one rather than silently apply the wrong policy.
+<a class="xref" href="Quartz.TriggerDetailsUpdate.html#Quartz_TriggerDetailsUpdate_WithMisfireInstructionCode_System_Int32_">WithMisfireInstructionCode(int)</a> is the sixth, and it is the only way to set a code on a
+trigger outside the five built-in families — a custom <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> belongs to none of
+them, so every typed overload would be rejected for it — as well as the way to pass a code that
+arrived as a number.
+</p>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_TriggerDetailsUpdate_WithCalendarName_" data-uid="Quartz.TriggerDetailsUpdate.WithCalendarName*"></a>
+
+  <h3 id="Quartz_TriggerDetailsUpdate_WithCalendarName_System_String_" data-uid="Quartz.TriggerDetailsUpdate.WithCalendarName(System.String)">
+  WithCalendarName(string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerDetailsUpdate.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the trigger's associated calendar name, or <code>null</code> to disassociate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TriggerDetailsUpdate WithCalendarName(string? calendarName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>calendarName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.TriggerDetailsUpdate.html">TriggerDetailsUpdate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_TriggerDetailsUpdate_WithCalendarName_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A blank name disassociates as well. The store checks that a non-null name exists before it
+assigns it, so without this a blank name would be rejected as a missing calendar rather than
+clearing the association.</p>
+</div>
+
+
+
+
+  <a id="Quartz_TriggerDetailsUpdate_WithDescription_" data-uid="Quartz.TriggerDetailsUpdate.WithDescription*"></a>
+
+  <h3 id="Quartz_TriggerDetailsUpdate_WithDescription_System_String_" data-uid="Quartz.TriggerDetailsUpdate.WithDescription(System.String)">
+  WithDescription(string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerDetailsUpdate.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the trigger's description.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TriggerDetailsUpdate WithDescription(string? description)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>description</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.TriggerDetailsUpdate.html">TriggerDetailsUpdate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_TriggerDetailsUpdate_WithExecutionGroup_" data-uid="Quartz.TriggerDetailsUpdate.WithExecutionGroup*"></a>
+
+  <h3 id="Quartz_TriggerDetailsUpdate_WithExecutionGroup_System_String_" data-uid="Quartz.TriggerDetailsUpdate.WithExecutionGroup(System.String)">
+  WithExecutionGroup(string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerDetailsUpdate.cs/#L202"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the execution group whose thread limit this trigger's job counts against, or
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to remove it from every group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TriggerDetailsUpdate WithExecutionGroup(string? executionGroup)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionGroup</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.TriggerDetailsUpdate.html">TriggerDetailsUpdate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_TriggerDetailsUpdate_WithExecutionGroup_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The new group applies from the next acquisition cycle; a job already running keeps counting
+against the group it was acquired under.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.ExecutionLimits.html">ExecutionLimits</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_TriggerDetailsUpdate_WithJobDataMap_" data-uid="Quartz.TriggerDetailsUpdate.WithJobDataMap*"></a>
+
+  <h3 id="Quartz_TriggerDetailsUpdate_WithJobDataMap_Quartz_JobDataMap_" data-uid="Quartz.TriggerDetailsUpdate.WithJobDataMap(Quartz.JobDataMap)">
+  WithJobDataMap(JobDataMap)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerDetailsUpdate.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the trigger's <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TriggerDetailsUpdate WithJobDataMap(JobDataMap jobDataMap)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>jobDataMap</code> <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.TriggerDetailsUpdate.html">TriggerDetailsUpdate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_TriggerDetailsUpdate_WithMisfireInstruction_" data-uid="Quartz.TriggerDetailsUpdate.WithMisfireInstruction*"></a>
+
+  <h3 id="Quartz_TriggerDetailsUpdate_WithMisfireInstruction_Quartz_CalendarIntervalTriggerMisfireInstruction_" data-uid="Quartz.TriggerDetailsUpdate.WithMisfireInstruction(Quartz.CalendarIntervalTriggerMisfireInstruction)">
+  WithMisfireInstruction(CalendarIntervalTriggerMisfireInstruction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerDetailsUpdate.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the misfire instruction of a calendar-interval trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TriggerDetailsUpdate WithMisfireInstruction(CalendarIntervalTriggerMisfireInstruction misfireInstruction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>misfireInstruction</code> <a class="xref" href="Quartz.CalendarIntervalTriggerMisfireInstruction.html">CalendarIntervalTriggerMisfireInstruction</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.TriggerDetailsUpdate.html">TriggerDetailsUpdate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_TriggerDetailsUpdate_WithMisfireInstruction_Quartz_CalendarIntervalTriggerMisfireInstruction__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The update is rejected if the trigger the key resolves to is not an
+<a class="xref" href="Quartz.ICalendarIntervalTrigger.html">ICalendarIntervalTrigger</a>.</p>
+</div>
+
+
+
+
+  <a id="Quartz_TriggerDetailsUpdate_WithMisfireInstruction_" data-uid="Quartz.TriggerDetailsUpdate.WithMisfireInstruction*"></a>
+
+  <h3 id="Quartz_TriggerDetailsUpdate_WithMisfireInstruction_Quartz_CronTriggerMisfireInstruction_" data-uid="Quartz.TriggerDetailsUpdate.WithMisfireInstruction(Quartz.CronTriggerMisfireInstruction)">
+  WithMisfireInstruction(CronTriggerMisfireInstruction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerDetailsUpdate.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the misfire instruction of a cron trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TriggerDetailsUpdate WithMisfireInstruction(CronTriggerMisfireInstruction misfireInstruction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>misfireInstruction</code> <a class="xref" href="Quartz.CronTriggerMisfireInstruction.html">CronTriggerMisfireInstruction</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.TriggerDetailsUpdate.html">TriggerDetailsUpdate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_TriggerDetailsUpdate_WithMisfireInstruction_Quartz_CronTriggerMisfireInstruction__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The update is rejected if the trigger the key resolves to is not an
+<a class="xref" href="Quartz.ICronTrigger.html">ICronTrigger</a>.</p>
+</div>
+
+
+
+
+  <a id="Quartz_TriggerDetailsUpdate_WithMisfireInstruction_" data-uid="Quartz.TriggerDetailsUpdate.WithMisfireInstruction*"></a>
+
+  <h3 id="Quartz_TriggerDetailsUpdate_WithMisfireInstruction_Quartz_DailyTimeIntervalTriggerMisfireInstruction_" data-uid="Quartz.TriggerDetailsUpdate.WithMisfireInstruction(Quartz.DailyTimeIntervalTriggerMisfireInstruction)">
+  WithMisfireInstruction(DailyTimeIntervalTriggerMisfireInstruction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerDetailsUpdate.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the misfire instruction of a daily-time-interval trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TriggerDetailsUpdate WithMisfireInstruction(DailyTimeIntervalTriggerMisfireInstruction misfireInstruction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>misfireInstruction</code> <a class="xref" href="Quartz.DailyTimeIntervalTriggerMisfireInstruction.html">DailyTimeIntervalTriggerMisfireInstruction</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.TriggerDetailsUpdate.html">TriggerDetailsUpdate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_TriggerDetailsUpdate_WithMisfireInstruction_Quartz_DailyTimeIntervalTriggerMisfireInstruction__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The update is rejected if the trigger the key resolves to is not an
+<a class="xref" href="Quartz.IDailyTimeIntervalTrigger.html">IDailyTimeIntervalTrigger</a>.</p>
+</div>
+
+
+
+
+  <a id="Quartz_TriggerDetailsUpdate_WithMisfireInstruction_" data-uid="Quartz.TriggerDetailsUpdate.WithMisfireInstruction*"></a>
+
+  <h3 id="Quartz_TriggerDetailsUpdate_WithMisfireInstruction_Quartz_RecurrenceTriggerMisfireInstruction_" data-uid="Quartz.TriggerDetailsUpdate.WithMisfireInstruction(Quartz.RecurrenceTriggerMisfireInstruction)">
+  WithMisfireInstruction(RecurrenceTriggerMisfireInstruction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerDetailsUpdate.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the misfire instruction of a recurrence trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TriggerDetailsUpdate WithMisfireInstruction(RecurrenceTriggerMisfireInstruction misfireInstruction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>misfireInstruction</code> <a class="xref" href="Quartz.RecurrenceTriggerMisfireInstruction.html">RecurrenceTriggerMisfireInstruction</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.TriggerDetailsUpdate.html">TriggerDetailsUpdate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_TriggerDetailsUpdate_WithMisfireInstruction_Quartz_RecurrenceTriggerMisfireInstruction__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The update is rejected if the trigger the key resolves to is not an
+<a class="xref" href="Quartz.IRecurrenceTrigger.html">IRecurrenceTrigger</a>.</p>
+</div>
+
+
+
+
+  <a id="Quartz_TriggerDetailsUpdate_WithMisfireInstruction_" data-uid="Quartz.TriggerDetailsUpdate.WithMisfireInstruction*"></a>
+
+  <h3 id="Quartz_TriggerDetailsUpdate_WithMisfireInstruction_Quartz_SimpleTriggerMisfireInstruction_" data-uid="Quartz.TriggerDetailsUpdate.WithMisfireInstruction(Quartz.SimpleTriggerMisfireInstruction)">
+  WithMisfireInstruction(SimpleTriggerMisfireInstruction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerDetailsUpdate.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the misfire instruction of a simple trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TriggerDetailsUpdate WithMisfireInstruction(SimpleTriggerMisfireInstruction misfireInstruction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>misfireInstruction</code> <a class="xref" href="Quartz.SimpleTriggerMisfireInstruction.html">SimpleTriggerMisfireInstruction</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.TriggerDetailsUpdate.html">TriggerDetailsUpdate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_TriggerDetailsUpdate_WithMisfireInstruction_Quartz_SimpleTriggerMisfireInstruction__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The update is rejected if the trigger the key resolves to is not a
+<a class="xref" href="Quartz.ISimpleTrigger.html">ISimpleTrigger</a>.</p>
+</div>
+
+
+
+
+  <a id="Quartz_TriggerDetailsUpdate_WithMisfireInstructionCode_" data-uid="Quartz.TriggerDetailsUpdate.WithMisfireInstructionCode*"></a>
+
+  <h3 id="Quartz_TriggerDetailsUpdate_WithMisfireInstructionCode_System_Int32_" data-uid="Quartz.TriggerDetailsUpdate.WithMisfireInstructionCode(System.Int32)">
+  WithMisfireInstructionCode(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerDetailsUpdate.cs/#L166"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the trigger's misfire instruction as the raw code a trigger stores, for callers that
+have a number rather than a family — a value read off the wire, from configuration, or from
+<a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_MisfireInstructionCode">MisfireInstructionCode</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TriggerDetailsUpdate WithMisfireInstructionCode(int misfireInstructionCode)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>misfireInstructionCode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.TriggerDetailsUpdate.html">TriggerDetailsUpdate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_TriggerDetailsUpdate_WithMisfireInstructionCode_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Prefer the family-typed <code>WithMisfireInstruction</code> overloads: the same number means a
+different policy in each family, and only the typed form lets the store tell you that the
+key resolved to a trigger of another one. This one names no family and so skips that check
+entirely, which is also what makes it the only way to set a misfire instruction on a trigger
+implementation of your own: such a trigger is in none of the five families, so every typed
+overload would be rejected for it.</p>
+</div>
+
+
+
+
+  <a id="Quartz_TriggerDetailsUpdate_WithPreferredNode_" data-uid="Quartz.TriggerDetailsUpdate.WithPreferredNode*"></a>
+
+  <h3 id="Quartz_TriggerDetailsUpdate_WithPreferredNode_Quartz_PreferredNode_" data-uid="Quartz.TriggerDetailsUpdate.WithPreferredNode(Quartz.PreferredNode)">
+  WithPreferredNode(PreferredNode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerDetailsUpdate.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the trigger's preferred node for cluster node affinity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TriggerDetailsUpdate WithPreferredNode(PreferredNode preferredNode)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>preferredNode</code> <a class="xref" href="Quartz.PreferredNode.html">PreferredNode</a></dt>
+    <dd><p>The pin: <a class="xref" href="Quartz.PreferredNode.html#Quartz_PreferredNode_None">None</a> to clear,
+<a class="xref" href="Quartz.PreferredNode.html#Quartz_PreferredNode_Auto">Auto</a> for auto-pin on first fire, or
+<a class="xref" href="Quartz.PreferredNode.html#Quartz_PreferredNode_For_System_String_">For(string)</a> to name a node.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.TriggerDetailsUpdate.html">TriggerDetailsUpdate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.PreferredNode.html">PreferredNode</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_TriggerDetailsUpdate_WithPriority_" data-uid="Quartz.TriggerDetailsUpdate.WithPriority*"></a>
+
+  <h3 id="Quartz_TriggerDetailsUpdate_WithPriority_System_Int32_" data-uid="Quartz.TriggerDetailsUpdate.WithPriority(System.Int32)">
+  WithPriority(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerDetailsUpdate.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the trigger's priority.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TriggerDetailsUpdate WithPriority(int priority)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>priority</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.TriggerDetailsUpdate.html">TriggerDetailsUpdate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_TriggerDetailsUpdate_WithRetryPolicy_" data-uid="Quartz.TriggerDetailsUpdate.WithRetryPolicy*"></a>
+
+  <h3 id="Quartz_TriggerDetailsUpdate_WithRetryPolicy_Quartz_RetryPolicy_" data-uid="Quartz.TriggerDetailsUpdate.WithRetryPolicy(Quartz.RetryPolicy)">
+  WithRetryPolicy(RetryPolicy?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerDetailsUpdate.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set how the scheduler re-fires the trigger when its job fails, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to
+stop retrying it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TriggerDetailsUpdate WithRetryPolicy(RetryPolicy? retryPolicy)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>retryPolicy</code> <a class="xref" href="Quartz.RetryPolicy.html">RetryPolicy</a></dt>
+    <dd><p>the retry policy, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> for no retries</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.TriggerDetailsUpdate.html">TriggerDetailsUpdate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_TriggerDetailsUpdate_WithRetryPolicy_Quartz_RetryPolicy__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The policy is configuration and is the only half of the retry state an update touches. How
+many times the occurrence in flight has already been retried is the scheduler's to advance
+and clear, so there is deliberately no way to set it here: doing so would either grant a
+running job extra attempts or take away ones it has not used.
+</p>
+<p>
+A new policy applies from the next failure. An occurrence already waiting on a retry keeps
+the schedule it was given.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.RetryPolicy.html">RetryPolicy</a></div>
+    </dd>
+  </dl>
+
+
+  <h2 id="seealso">See Also</h2>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_UpdateTriggerDetails_Quartz_TriggerKey_Quartz_TriggerDetailsUpdate_System_Threading_CancellationToken_">UpdateTriggerDetails</a>(<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>, <a class="xref" href="Quartz.TriggerDetailsUpdate.html">TriggerDetailsUpdate</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>)</div>
+  </div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/TriggerDetailsUpdate.cs/#L25" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

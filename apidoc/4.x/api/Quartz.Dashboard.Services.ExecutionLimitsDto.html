@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ExecutionLimitsDto | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ExecutionLimitsDto | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="The execution limits a scheduler is running with, keyed by the spelling configuration and the HTTP API use for a group: _ for the bucket of triggers that carry no execution group, * for the catch-all applied to groups with no limit of their own, and otherwise the group&#39;s name.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Dashboard_Services_ExecutionLimitsDto.md&amp;value=---%0Auid%3A%20Quartz.Dashboard.Services.ExecutionLimitsDto%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Dashboard.Services.ExecutionLimitsDto">
+
+
+
+  <h1 id="Quartz_Dashboard_Services_ExecutionLimitsDto" data-uid="Quartz.Dashboard.Services.ExecutionLimitsDto" class="text-break">
+Class ExecutionLimitsDto  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L695"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<a class="xref" href="Quartz.Dashboard.html">Dashboard</a>.<a class="xref" href="Quartz.Dashboard.Services.html">Services</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.Dashboard.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The execution limits a scheduler is running with, keyed by the spelling configuration and the HTTP
+API use for a group: <code>_</code> for the bucket of triggers that carry no execution group, <code>*</code> for
+the catch-all applied to groups with no limit of their own, and otherwise the group's name.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed record ExecutionLimitsDto : IEquatable&lt;ExecutionLimitsDto&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ExecutionLimitsDto</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Quartz.Dashboard.Services.ExecutionLimitsDto.html">ExecutionLimitsDto</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_Dashboard_Services_ExecutionLimitsDto_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>The keys are the configuration spellings rather than display text because the overview joins them to
+what is in flight, and a firing carries a group name or nothing at all. Rendering
+<a class="xref" href="Quartz.ExecutionGroupScope.html">ExecutionGroupScope</a>'s three cases as words is the panel's job.</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Quartz_Dashboard_Services_ExecutionLimitsDto__ctor_" data-uid="Quartz.Dashboard.Services.ExecutionLimitsDto.#ctor*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_ExecutionLimitsDto__ctor_System_Collections_Generic_Dictionary_System_String_Quartz_Dashboard_Services_DashboardExecutionLimit__System_Boolean_System_Boolean_" data-uid="Quartz.Dashboard.Services.ExecutionLimitsDto.#ctor(System.Collections.Generic.Dictionary{System.String,Quartz.Dashboard.Services.DashboardExecutionLimit},System.Boolean,System.Boolean)">
+  ExecutionLimitsDto(Dictionary&lt;string, DashboardExecutionLimit&gt;, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L695"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The execution limits a scheduler is running with, keyed by the spelling configuration and the HTTP
+API use for a group: <code>_</code> for the bucket of triggers that carry no execution group, <code>*</code> for
+the catch-all applied to groups with no limit of their own, and otherwise the group's name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExecutionLimitsDto(Dictionary&lt;string, DashboardExecutionLimit&gt; Limits, bool UsesTriggerGroupWhenUnset = false, bool CanReport = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Limits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="Quartz.Dashboard.Services.DashboardExecutionLimit.html">DashboardExecutionLimit</a>&gt;</dt>
+    <dd><p>Each group's limit, with the scope it is counted in. Empty when the scheduler
+limits nothing, which leaves every group unlimited.</p>
+</dd>
+    <dt><code>UsesTriggerGroupWhenUnset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether a trigger that carries no execution group is limited as though it belonged to a group named
+after its own trigger group — <a class="xref" href="Quartz.ExecutionLimits.html#Quartz_ExecutionLimits_UsesTriggerGroupWhenUnset">UsesTriggerGroupWhenUnset</a>. The overview
+applies the same derivation when it counts what is in flight, or its counts and the scheduler's
+would key the same firing differently.</p>
+</dd>
+    <dt><code>CanReport</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the scheduler could answer at all. <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> is not &quot;nothing is limited&quot;: it
+is &quot;this scheduler does not implement execution limits&quot;, and the two must not be shown alike.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Services_ExecutionLimitsDto__ctor_System_Collections_Generic_Dictionary_System_String_Quartz_Dashboard_Services_DashboardExecutionLimit__System_Boolean_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The keys are the configuration spellings rather than display text because the overview joins them to
+what is in flight, and a firing carries a group name or nothing at all. Rendering
+<a class="xref" href="Quartz.ExecutionGroupScope.html">ExecutionGroupScope</a>'s three cases as words is the panel's job.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_Dashboard_Services_ExecutionLimitsDto_CanReport_" data-uid="Quartz.Dashboard.Services.ExecutionLimitsDto.CanReport*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_ExecutionLimitsDto_CanReport" data-uid="Quartz.Dashboard.Services.ExecutionLimitsDto.CanReport">
+  CanReport
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L698"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the scheduler could answer at all. <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> is not &quot;nothing is limited&quot;: it
+is &quot;this scheduler does not implement execution limits&quot;, and the two must not be shown alike.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanReport { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_ExecutionLimitsDto_CannotReport_" data-uid="Quartz.Dashboard.Services.ExecutionLimitsDto.CannotReport*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_ExecutionLimitsDto_CannotReport" data-uid="Quartz.Dashboard.Services.ExecutionLimitsDto.CannotReport">
+  CannotReport
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L705"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The answer for a scheduler whose implementation refuses the question — an <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>
+of an application's own may throw <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a> rather than implement
+limits.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ExecutionLimitsDto CannotReport { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.Dashboard.Services.ExecutionLimitsDto.html">ExecutionLimitsDto</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_ExecutionLimitsDto_Limits_" data-uid="Quartz.Dashboard.Services.ExecutionLimitsDto.Limits*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_ExecutionLimitsDto_Limits" data-uid="Quartz.Dashboard.Services.ExecutionLimitsDto.Limits">
+  Limits
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L696"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Each group's limit, with the scope it is counted in. Empty when the scheduler
+limits nothing, which leaves every group unlimited.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, DashboardExecutionLimit&gt; Limits { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="Quartz.Dashboard.Services.DashboardExecutionLimit.html">DashboardExecutionLimit</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_ExecutionLimitsDto_UsesTriggerGroupWhenUnset_" data-uid="Quartz.Dashboard.Services.ExecutionLimitsDto.UsesTriggerGroupWhenUnset*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_ExecutionLimitsDto_UsesTriggerGroupWhenUnset" data-uid="Quartz.Dashboard.Services.ExecutionLimitsDto.UsesTriggerGroupWhenUnset">
+  UsesTriggerGroupWhenUnset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L697"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether a trigger that carries no execution group is limited as though it belonged to a group named
+after its own trigger group — <a class="xref" href="Quartz.ExecutionLimits.html#Quartz_ExecutionLimits_UsesTriggerGroupWhenUnset">UsesTriggerGroupWhenUnset</a>. The overview
+applies the same derivation when it counts what is in flight, or its counts and the scheduler's
+would key the same firing differently.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UsesTriggerGroupWhenUnset { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L695" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

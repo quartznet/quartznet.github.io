@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IPersistentStoreBuilder | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IPersistentStoreBuilder | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Configures a database-backed job store.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_IPersistentStoreBuilder.md&amp;value=---%0Auid%3A%20Quartz.IPersistentStoreBuilder%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.IPersistentStoreBuilder">
+
+
+
+  <h1 id="Quartz_IPersistentStoreBuilder" data-uid="Quartz.IPersistentStoreBuilder" class="text-break">
+Interface IPersistentStoreBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IPersistentStoreBuilder.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Configures a database-backed job store.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IPersistentStoreBuilder</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Quartz.NewtonsoftJsonConfigurationExtensions.html#Quartz_NewtonsoftJsonConfigurationExtensions_UseNewtonsoftJsonSerializer_Quartz_IPersistentStoreBuilder_System_Action_Quartz_Serialization_Newtonsoft_NewtonsoftJsonSerializerRegistry__System_Boolean_">NewtonsoftJsonConfigurationExtensions.UseNewtonsoftJsonSerializer(IPersistentStoreBuilder, Action&lt;NewtonsoftJsonSerializerRegistry&gt;?, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseFirebird_Quartz_IPersistentStoreBuilder_System_Action_Quartz_DataSourceOptions__">PersistentStoreBuilderExtensions.UseFirebird(IPersistentStoreBuilder, Action&lt;DataSourceOptions&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseFirebird_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String_">PersistentStoreBuilderExtensions.UseFirebird(IPersistentStoreBuilder, DbProviderFactory, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseFirebird_Quartz_IPersistentStoreBuilder_System_String_">PersistentStoreBuilderExtensions.UseFirebird(IPersistentStoreBuilder, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseGenericDatabase_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String_Quartz_Impl_AdoJobStore_Common_DbMetadata_">PersistentStoreBuilderExtensions.UseGenericDatabase(IPersistentStoreBuilder, DbProviderFactory, string, DbMetadata)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseGenericDatabase_Quartz_IPersistentStoreBuilder_System_String_System_Action_Quartz_DataSourceOptions__">PersistentStoreBuilderExtensions.UseGenericDatabase(IPersistentStoreBuilder, string, Action&lt;DataSourceOptions&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseGenericDatabase_Quartz_IPersistentStoreBuilder_System_String_System_Action_Quartz_DataSourceOptions__System_Func_Quartz_Impl_AdoJobStore_Common_DbMetadata__">PersistentStoreBuilderExtensions.UseGenericDatabase(IPersistentStoreBuilder, string, Action&lt;DataSourceOptions&gt;, Func&lt;DbMetadata&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseGenericDatabase_Quartz_IPersistentStoreBuilder_System_String_System_String_">PersistentStoreBuilderExtensions.UseGenericDatabase(IPersistentStoreBuilder, string, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseGenericDatabase_Quartz_IPersistentStoreBuilder_System_String_System_String_System_Func_Quartz_Impl_AdoJobStore_Common_DbMetadata__">PersistentStoreBuilderExtensions.UseGenericDatabase(IPersistentStoreBuilder, string, string, Func&lt;DbMetadata&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseMySql_Quartz_IPersistentStoreBuilder_System_Action_Quartz_DataSourceOptions__">PersistentStoreBuilderExtensions.UseMySql(IPersistentStoreBuilder, Action&lt;DataSourceOptions&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseMySql_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String_">PersistentStoreBuilderExtensions.UseMySql(IPersistentStoreBuilder, DbProviderFactory, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseMySql_Quartz_IPersistentStoreBuilder_System_String_">PersistentStoreBuilderExtensions.UseMySql(IPersistentStoreBuilder, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseMySqlConnector_Quartz_IPersistentStoreBuilder_System_Action_Quartz_DataSourceOptions__">PersistentStoreBuilderExtensions.UseMySqlConnector(IPersistentStoreBuilder, Action&lt;DataSourceOptions&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseMySqlConnector_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String_">PersistentStoreBuilderExtensions.UseMySqlConnector(IPersistentStoreBuilder, DbProviderFactory, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseMySqlConnector_Quartz_IPersistentStoreBuilder_System_String_">PersistentStoreBuilderExtensions.UseMySqlConnector(IPersistentStoreBuilder, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseOracle_Quartz_IPersistentStoreBuilder_System_Action_Quartz_DataSourceOptions__">PersistentStoreBuilderExtensions.UseOracle(IPersistentStoreBuilder, Action&lt;DataSourceOptions&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseOracle_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String_">PersistentStoreBuilderExtensions.UseOracle(IPersistentStoreBuilder, DbProviderFactory, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseOracle_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String_System_Action_System_Data_Common_DbCommand__System_Action_System_Data_Common_DbParameter__">PersistentStoreBuilderExtensions.UseOracle(IPersistentStoreBuilder, DbProviderFactory, string, Action&lt;DbCommand&gt;?, Action&lt;DbParameter&gt;?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseOracle_Quartz_IPersistentStoreBuilder_System_String_">PersistentStoreBuilderExtensions.UseOracle(IPersistentStoreBuilder, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UsePostgres_Quartz_IPersistentStoreBuilder_System_Action_Quartz_DataSourceOptions__">PersistentStoreBuilderExtensions.UsePostgres(IPersistentStoreBuilder, Action&lt;DataSourceOptions&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UsePostgres_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String_">PersistentStoreBuilderExtensions.UsePostgres(IPersistentStoreBuilder, DbProviderFactory, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UsePostgres_Quartz_IPersistentStoreBuilder_System_String_">PersistentStoreBuilderExtensions.UsePostgres(IPersistentStoreBuilder, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseSqlServer_Quartz_IPersistentStoreBuilder_System_Action_Quartz_DataSourceOptions__">PersistentStoreBuilderExtensions.UseSqlServer(IPersistentStoreBuilder, Action&lt;DataSourceOptions&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseSqlServer_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String_">PersistentStoreBuilderExtensions.UseSqlServer(IPersistentStoreBuilder, DbProviderFactory, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseSqlServer_Quartz_IPersistentStoreBuilder_System_String_">PersistentStoreBuilderExtensions.UseSqlServer(IPersistentStoreBuilder, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseSqlite_Quartz_IPersistentStoreBuilder_System_Action_Quartz_DataSourceOptions__">PersistentStoreBuilderExtensions.UseSqlite(IPersistentStoreBuilder, Action&lt;DataSourceOptions&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseSqlite_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String_">PersistentStoreBuilderExtensions.UseSqlite(IPersistentStoreBuilder, DbProviderFactory, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseSqlite_Quartz_IPersistentStoreBuilder_System_String_">PersistentStoreBuilderExtensions.UseSqlite(IPersistentStoreBuilder, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseSystemDataSqlite_Quartz_IPersistentStoreBuilder_System_Action_Quartz_DataSourceOptions__">PersistentStoreBuilderExtensions.UseSystemDataSqlite(IPersistentStoreBuilder, Action&lt;DataSourceOptions&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseSystemDataSqlite_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String_">PersistentStoreBuilderExtensions.UseSystemDataSqlite(IPersistentStoreBuilder, DbProviderFactory, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseSystemDataSqlite_Quartz_IPersistentStoreBuilder_System_String_">PersistentStoreBuilderExtensions.UseSystemDataSqlite(IPersistentStoreBuilder, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.SystemTextJsonConfigurationExtensions.html#Quartz_SystemTextJsonConfigurationExtensions_UseSystemTextJsonSerializer_Quartz_IPersistentStoreBuilder_System_Action_Quartz_Serialization_SystemTextJson_SystemTextJsonSerializerRegistry__">SystemTextJsonConfigurationExtensions.UseSystemTextJsonSerializer(IPersistentStoreBuilder, Action&lt;SystemTextJsonSerializerRegistry&gt;?)</a>
+  </div>
+  </dd></dl>
+
+
+
+  <h2 id="Quartz_IPersistentStoreBuilder_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+A scheduler has one job store and therefore one database, so there is no data source name to
+invent: <code>UseSqlServer(connectionString)</code> says everything. Schedulers that need different
+databases are registered under different names, and their components are keyed accordingly.
+</p>
+<p>
+Serialization and clustering live here rather than on the scheduler because they are properties of
+how the schedule is stored, and mean nothing for an in-memory store.
+</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_IPersistentStoreBuilder_SchedulerName_" data-uid="Quartz.IPersistentStoreBuilder.SchedulerName*"></a>
+
+  <h3 id="Quartz_IPersistentStoreBuilder_SchedulerName" data-uid="Quartz.IPersistentStoreBuilder.SchedulerName">
+  SchedulerName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IPersistentStoreBuilder.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The name of the scheduler this store belongs to, or an empty string for the default scheduler.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string SchedulerName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_IPersistentStoreBuilder_Services_" data-uid="Quartz.IPersistentStoreBuilder.Services*"></a>
+
+  <h3 id="Quartz_IPersistentStoreBuilder_Services" data-uid="Quartz.IPersistentStoreBuilder.Services">
+  Services
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IPersistentStoreBuilder.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The services this scheduler is built from.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IServiceCollection Services { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_IPersistentStoreBuilder_ConfigureStore_" data-uid="Quartz.IPersistentStoreBuilder.ConfigureStore*"></a>
+
+  <h3 id="Quartz_IPersistentStoreBuilder_ConfigureStore_System_Action_Quartz_AdoJobStoreOptions__" data-uid="Quartz.IPersistentStoreBuilder.ConfigureStore(System.Action{Quartz.AdoJobStoreOptions})">
+  ConfigureStore(Action&lt;AdoJobStoreOptions&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IPersistentStoreBuilder.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures the job store itself.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPersistentStoreBuilder ConfigureStore(Action&lt;AdoJobStoreOptions&gt; configure)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.AdoJobStoreOptions.html">AdoJobStoreOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IPersistentStoreBuilder_ConfigureStore_System_Action_Quartz_AdoJobStoreOptions___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>These are the same settings, under the same names, as the <code>Quartz:JobStore</code> configuration
+section. The name says which of the several things in scope here is being configured — the store,
+rather than the scheduler around it or the data source under it.</p>
+</div>
+
+
+
+
+  <a id="Quartz_IPersistentStoreBuilder_ProvisionSchema_" data-uid="Quartz.IPersistentStoreBuilder.ProvisionSchema*"></a>
+
+  <h3 id="Quartz_IPersistentStoreBuilder_ProvisionSchema" data-uid="Quartz.IPersistentStoreBuilder.ProvisionSchema">
+  ProvisionSchema()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IPersistentStoreBuilder.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates whatever this store's schema is missing when the scheduler starts, instead of
+requiring it to be there already.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPersistentStoreBuilder ProvisionSchema()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IPersistentStoreBuilder_ProvisionSchema_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Shorthand for <code>ConfigureStore(options =&gt; options.SchemaProvisioning =
+SchemaProvisioning.CreateIfMissing)</code>, spelled as the decision it is.
+</p>
+<p>
+Only ever creates. Nothing is altered and nothing is dropped, so this cannot turn a mis-typed
+<a class="xref" href="Quartz.AdoJobStoreOptions.html#Quartz_AdoJobStoreOptions_TablePrefix">TablePrefix</a> into data loss — but it will happily create a
+second, empty schema under the mis-typed one, so the prefix is still worth reading twice.
+Neither is it an upgrade: a schema that has every table but is missing a column a later
+release added is left as it is. <code>database/migrations/</code> is what moves a schema forward.
+</p>
+<p>
+The account the store connects with needs permission to create tables and indexes, which a
+production database is usually right not to grant, and which is why this is opt-in rather than
+the default. Several schedulers may call it against one database at once: whichever loses the
+race finds the schema the winner created.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_IPersistentStoreBuilder_UseAmbientTransactions_" data-uid="Quartz.IPersistentStoreBuilder.UseAmbientTransactions*"></a>
+
+  <h3 id="Quartz_IPersistentStoreBuilder_UseAmbientTransactions" data-uid="Quartz.IPersistentStoreBuilder.UseAmbientTransactions">
+  UseAmbientTransactions()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IPersistentStoreBuilder.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Runs the schedule inside a transaction somebody else owns — an application server or another
+framework that manages transactions — instead of one the store begins and commits itself.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPersistentStoreBuilder UseAmbientTransactions()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IPersistentStoreBuilder_UseAmbientTransactions_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This is how the second of the two shipped ADO.NET stores is chosen. Left uncalled,
+<code>UsePersistentStore</code> builds the local-transaction store, which begins the transaction each
+operation runs in and commits or rolls it back; the ambient store does neither, because the
+connections it creates enlist in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.transactions.transaction">Transaction</a> already in
+progress and its owner is what decides whether the scheduler's work is kept. It is
+<code>quartz.jobStore.type = Quartz.Impl.AdoJobStore.ExternalTransactionJobStore, Quartz</code>
+spelled in code — 3.x's <code>JobStoreCMT</code>.
+</p>
+<p>
+Not the same thing as <a class="xref" href="Quartz.AdoJobStoreOptions.html#Quartz_AdoJobStoreOptions_AcceptEnlistedTransactions">AcceptEnlistedTransactions</a>, which leaves
+the local store in charge and only lets an operation join a transaction the application enlisted
+for that flow, managing its own whenever nothing is enlisted. This hands the whole store over.
+</p>
+<p>
+The store requires database locking — an in-process lock would be released before its owner
+commits — and turns it on for itself unless <a class="xref" href="Quartz.IPersistentStoreBuilder.html#Quartz_IPersistentStoreBuilder_UseLockHandler__1">UseLockHandler&lt;T&gt;()</a> supplied one.
+<a class="xref" href="Quartz.AdoJobStoreOptions.html#Quartz_AdoJobStoreOptions_OpenConnection">OpenConnection</a>, which nothing else reads, says whether the
+store opens the connections it creates or leaves that to the transaction's owner.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_IPersistentStoreBuilder_UseClustering_" data-uid="Quartz.IPersistentStoreBuilder.UseClustering*"></a>
+
+  <h3 id="Quartz_IPersistentStoreBuilder_UseClustering_System_Action_Quartz_ClusteringOptions__" data-uid="Quartz.IPersistentStoreBuilder.UseClustering(System.Action{Quartz.ClusteringOptions})">
+  UseClustering(Action&lt;ClusteringOptions&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IPersistentStoreBuilder.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes part in a cluster with every other scheduler sharing this database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPersistentStoreBuilder UseClustering(Action&lt;ClusteringOptions&gt;? configure = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.ClusteringOptions.html">ClusteringOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IPersistentStoreBuilder_UseClustering_System_Action_Quartz_ClusteringOptions___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Clustering requires database locking, which this enables as well — the two have never been
+separable in practice.
+</p>
+<p>
+Everything about clustering is said here, on <a class="xref" href="Quartz.ClusteringOptions.html">ClusteringOptions</a>. The job store has
+no clustering settings of its own to disagree with these, and reports whether it is clustered
+rather than offering a second place to say so.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_IPersistentStoreBuilder_UseConnectionProvider_" data-uid="Quartz.IPersistentStoreBuilder.UseConnectionProvider*"></a>
+
+  <h3 id="Quartz_IPersistentStoreBuilder_UseConnectionProvider_System_Func_System_IServiceProvider_Quartz_Impl_AdoJobStore_Common_IDbProvider__" data-uid="Quartz.IPersistentStoreBuilder.UseConnectionProvider(System.Func{System.IServiceProvider,Quartz.Impl.AdoJobStore.Common.IDbProvider})">
+  UseConnectionProvider(Func&lt;IServiceProvider, IDbProvider&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IPersistentStoreBuilder.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses a connection provider the caller builds, for cases where it needs configuring first.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPersistentStoreBuilder UseConnectionProvider(Func&lt;IServiceProvider, IDbProvider&gt; factory)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>factory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="Quartz.Impl.AdoJobStore.Common.IDbProvider.html">IDbProvider</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IPersistentStoreBuilder_UseConnectionProvider_System_Func_System_IServiceProvider_Quartz_Impl_AdoJobStore_Common_IDbProvider___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This is the code spelling of 3.x's
+<code>quartz.dataSource.&lt;name&gt;.connectionProvider.type</code>, and of
+<code>DBConnectionManager.AddConnectionProvider</code> before it. Reach for it when connections have to
+come from somewhere Quartz cannot describe — a pooled or credential-rotating factory, or a driver
+whose connections need setting up after they are created.
+</p>
+<p>
+Unlike the rest of this builder, this <em>replaces</em> rather than defers: it wins over the
+provider <code>UseSqlServer</code> and its siblings register, in either order, so there is no call
+sequence to get right. It also names this store's data source, so a store configured this way
+needs no <a class="xref" href="Quartz.IPersistentStoreBuilder.html#Quartz_IPersistentStoreBuilder_UseDataSource_System_Action_Quartz_DataSourceOptions__">UseDataSource(Action&lt;DataSourceOptions&gt;)</a> call — though one is still
+useful for the driver delegate the database-specific methods select.
+</p>
+<p>
+The provider belongs to this scheduler alone. Registering <code>IDbProvider</code> against
+<a class="xref" href="Quartz.IPersistentStoreBuilder.html#Quartz_IPersistentStoreBuilder_Services">Services</a> instead would be invisible to a named scheduler, which resolves its
+provider under its own key.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_IPersistentStoreBuilder_UseConnectionProvider_" data-uid="Quartz.IPersistentStoreBuilder.UseConnectionProvider*"></a>
+
+  <h3 id="Quartz_IPersistentStoreBuilder_UseConnectionProvider__1" data-uid="Quartz.IPersistentStoreBuilder.UseConnectionProvider``1">
+  UseConnectionProvider&lt;T&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IPersistentStoreBuilder.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses a connection provider of your own, which decides how connections and commands are made
+rather than leaving that to a connection string and a driver description.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPersistentStoreBuilder UseConnectionProvider&lt;T&gt;() where T : class, IDbProvider</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IPersistentStoreBuilder_UseConnectionProvider__1_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This is the code spelling of 3.x's
+<code>quartz.dataSource.&lt;name&gt;.connectionProvider.type</code>, and of
+<code>DBConnectionManager.AddConnectionProvider</code> before it. Reach for it when connections have to
+come from somewhere Quartz cannot describe — a pooled or credential-rotating factory, or a driver
+whose connections need setting up after they are created.
+</p>
+<p>
+Unlike the rest of this builder, this <em>replaces</em> rather than defers: it wins over the
+provider <code>UseSqlServer</code> and its siblings register, in either order, so there is no call
+sequence to get right. It also names this store's data source, so a store configured this way
+needs no <a class="xref" href="Quartz.IPersistentStoreBuilder.html#Quartz_IPersistentStoreBuilder_UseDataSource_System_Action_Quartz_DataSourceOptions__">UseDataSource(Action&lt;DataSourceOptions&gt;)</a> call — though one is still
+useful for the driver delegate the database-specific methods select.
+</p>
+<p>
+The provider belongs to this scheduler alone. Registering <code>IDbProvider</code> against
+<a class="xref" href="Quartz.IPersistentStoreBuilder.html#Quartz_IPersistentStoreBuilder_Services">Services</a> instead would be invisible to a named scheduler, which resolves its
+provider under its own key.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_IPersistentStoreBuilder_UseDataSource_" data-uid="Quartz.IPersistentStoreBuilder.UseDataSource*"></a>
+
+  <h3 id="Quartz_IPersistentStoreBuilder_UseDataSource_System_Action_Quartz_DataSourceOptions__" data-uid="Quartz.IPersistentStoreBuilder.UseDataSource(System.Action{Quartz.DataSourceOptions})">
+  UseDataSource(Action&lt;DataSourceOptions&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IPersistentStoreBuilder.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Defines this store's data source: which ADO.NET driver, and how to reach the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPersistentStoreBuilder UseDataSource(Action&lt;DataSourceOptions&gt; configure)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.DataSourceOptions.html">DataSourceOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IPersistentStoreBuilder_UseDataSource_System_Action_Quartz_DataSourceOptions___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Prefer the database-specific methods such as <code>UseSqlServer</code>, which also select the matching
+driver delegate. Use this directly only for a provider Quartz does not know about.
+</p>
+<p>
+Where the connection itself comes from is <a class="xref" href="Quartz.DataSourceOptions.html">DataSourceOptions</a>' to say: a connection
+string, the name of one in <code>IConfiguration</code>, or
+<a class="xref" href="Quartz.DataSourceOptions.html#Quartz_DataSourceOptions_UseRegisteredDataSource">UseRegisteredDataSource</a> for a <code>DbDataSource</code> the application
+registered in the container.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_IPersistentStoreBuilder_UseDataSource_" data-uid="Quartz.IPersistentStoreBuilder.UseDataSource*"></a>
+
+  <h3 id="Quartz_IPersistentStoreBuilder_UseDataSource_System_String_" data-uid="Quartz.IPersistentStoreBuilder.UseDataSource(System.String)">
+  UseDataSource(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IPersistentStoreBuilder.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Says which data source this store reads and writes through, by name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPersistentStoreBuilder UseDataSource(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IPersistentStoreBuilder_UseDataSource_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This <em>refers to</em> a data source rather than defining one:
+<a class="xref" href="Quartz.IPersistentStoreBuilder.html#Quartz_IPersistentStoreBuilder_UseDataSource_System_Action_Quartz_DataSourceOptions__">UseDataSource(Action&lt;DataSourceOptions&gt;)</a> defines it, and the two are told apart by
+what they are given rather than by carrying different names. The settings it names are the
+<a class="xref" href="Quartz.DataSourceOptions.html">DataSourceOptions</a> registered under this name — from a
+<code>Quartz:DataSource:&lt;name&gt;</code> configuration section, say, or from another scheduler that
+already configured it.
+</p>
+<p>
+The name defaults to the scheduler's name, or <code>quartz</code> for the default scheduler, so it never
+has to be invented or kept in step by hand. Naming one explicitly is for the cases where the name
+itself matters: two stores that should read the same <code>Quartz:DataSource:&lt;name&gt;</code>
+settings, or settings that live under a name the application chose.
+</p>
+<p>
+Call this before choosing the database, since the name is fixed when the data source is
+configured.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_IPersistentStoreBuilder_UseDriverDelegate_" data-uid="Quartz.IPersistentStoreBuilder.UseDriverDelegate*"></a>
+
+  <h3 id="Quartz_IPersistentStoreBuilder_UseDriverDelegate_System_Func_System_IServiceProvider_Quartz_Impl_AdoJobStore_IDriverDelegate__" data-uid="Quartz.IPersistentStoreBuilder.UseDriverDelegate(System.Func{System.IServiceProvider,Quartz.Impl.AdoJobStore.IDriverDelegate})">
+  UseDriverDelegate(Func&lt;IServiceProvider, IDriverDelegate&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IPersistentStoreBuilder.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses a driver delegate the caller builds, for cases where it needs configuring first.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPersistentStoreBuilder UseDriverDelegate(Func&lt;IServiceProvider, IDriverDelegate&gt; factory)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>factory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="Quartz.Impl.AdoJobStore.IDriverDelegate.html">IDriverDelegate</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IPersistentStoreBuilder_UseDriverDelegate_System_Func_System_IServiceProvider_Quartz_Impl_AdoJobStore_IDriverDelegate___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>As with <a class="xref" href="Quartz.IPersistentStoreBuilder.html#Quartz_IPersistentStoreBuilder_UseSerializer_System_Func_System_IServiceProvider_Quartz_Extensibility_IObjectSerializer__">UseSerializer(Func&lt;IServiceProvider, IObjectSerializer&gt;)</a>, this registers
+under the scheduler's own key, which registering against <a class="xref" href="Quartz.IPersistentStoreBuilder.html#Quartz_IPersistentStoreBuilder_Services">Services</a> would not.</p>
+</div>
+
+
+
+
+  <a id="Quartz_IPersistentStoreBuilder_UseDriverDelegate_" data-uid="Quartz.IPersistentStoreBuilder.UseDriverDelegate*"></a>
+
+  <h3 id="Quartz_IPersistentStoreBuilder_UseDriverDelegate__1" data-uid="Quartz.IPersistentStoreBuilder.UseDriverDelegate``1">
+  UseDriverDelegate&lt;T&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IPersistentStoreBuilder.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses a specific driver delegate, which adapts Quartz's SQL to a particular database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPersistentStoreBuilder UseDriverDelegate&lt;T&gt;() where T : class, IDriverDelegate</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_IPersistentStoreBuilder_UseLockHandler_" data-uid="Quartz.IPersistentStoreBuilder.UseLockHandler*"></a>
+
+  <h3 id="Quartz_IPersistentStoreBuilder_UseLockHandler_System_Func_System_IServiceProvider_Quartz_Impl_AdoJobStore_ILockHandler__" data-uid="Quartz.IPersistentStoreBuilder.UseLockHandler(System.Func{System.IServiceProvider,Quartz.Impl.AdoJobStore.ILockHandler})">
+  UseLockHandler(Func&lt;IServiceProvider, ILockHandler&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IPersistentStoreBuilder.cs/#L240"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses a lock handler the caller builds, for cases where it needs configuring first.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPersistentStoreBuilder UseLockHandler(Func&lt;IServiceProvider, ILockHandler&gt; factory)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>factory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="Quartz.Impl.AdoJobStore.ILockHandler.html">ILockHandler</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IPersistentStoreBuilder_UseLockHandler_System_Func_System_IServiceProvider_Quartz_Impl_AdoJobStore_ILockHandler___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>As with <a class="xref" href="Quartz.IPersistentStoreBuilder.html#Quartz_IPersistentStoreBuilder_UseSerializer_System_Func_System_IServiceProvider_Quartz_Extensibility_IObjectSerializer__">UseSerializer(Func&lt;IServiceProvider, IObjectSerializer&gt;)</a>, this registers
+under the scheduler's own key, which registering against <a class="xref" href="Quartz.IPersistentStoreBuilder.html#Quartz_IPersistentStoreBuilder_Services">Services</a> would not.</p>
+</div>
+
+
+
+
+  <a id="Quartz_IPersistentStoreBuilder_UseLockHandler_" data-uid="Quartz.IPersistentStoreBuilder.UseLockHandler*"></a>
+
+  <h3 id="Quartz_IPersistentStoreBuilder_UseLockHandler__1" data-uid="Quartz.IPersistentStoreBuilder.UseLockHandler``1">
+  UseLockHandler&lt;T&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IPersistentStoreBuilder.cs/#L230"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses a specific lock handler, which decides how competing schedulers serialize their work.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPersistentStoreBuilder UseLockHandler&lt;T&gt;() where T : class, ILockHandler</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IPersistentStoreBuilder_UseLockHandler__1_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Left unset, the store chooses for itself once it knows which database it is talking to: database
+row locks when clustered, and an in-process monitor otherwise.</p>
+</div>
+
+
+
+
+  <a id="Quartz_IPersistentStoreBuilder_UseSerializer_" data-uid="Quartz.IPersistentStoreBuilder.UseSerializer*"></a>
+
+  <h3 id="Quartz_IPersistentStoreBuilder_UseSerializer_System_Func_System_IServiceProvider_Quartz_Extensibility_IObjectSerializer__" data-uid="Quartz.IPersistentStoreBuilder.UseSerializer(System.Func{System.IServiceProvider,Quartz.Extensibility.IObjectSerializer})">
+  UseSerializer(Func&lt;IServiceProvider, IObjectSerializer&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IPersistentStoreBuilder.cs/#L221"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses a serializer the caller builds, for cases where it needs configuring first.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPersistentStoreBuilder UseSerializer(Func&lt;IServiceProvider, IObjectSerializer&gt; factory)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>factory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="Quartz.Extensibility.IObjectSerializer.html">IObjectSerializer</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IPersistentStoreBuilder_UseSerializer_System_Func_System_IServiceProvider_Quartz_Extensibility_IObjectSerializer___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The serializer belongs to this store rather than to the container, so use this rather than
+registering <a class="xref" href="Quartz.Extensibility.IObjectSerializer.html">IObjectSerializer</a> against <a class="xref" href="Quartz.IPersistentStoreBuilder.html#Quartz_IPersistentStoreBuilder_Services">Services</a>: a named scheduler
+resolves its serializer under its own key and would never see an unkeyed registration.</p>
+</div>
+
+
+
+
+  <a id="Quartz_IPersistentStoreBuilder_UseSerializer_" data-uid="Quartz.IPersistentStoreBuilder.UseSerializer*"></a>
+
+  <h3 id="Quartz_IPersistentStoreBuilder_UseSerializer__1" data-uid="Quartz.IPersistentStoreBuilder.UseSerializer``1">
+  UseSerializer&lt;T&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IPersistentStoreBuilder.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses a specific serializer for job data held in the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPersistentStoreBuilder UseSerializer&lt;T&gt;() where T : class, IObjectSerializer</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_IPersistentStoreBuilder_UseTriggerPersistenceDelegate_" data-uid="Quartz.IPersistentStoreBuilder.UseTriggerPersistenceDelegate*"></a>
+
+  <h3 id="Quartz_IPersistentStoreBuilder_UseTriggerPersistenceDelegate_System_Func_System_IServiceProvider_Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate__" data-uid="Quartz.IPersistentStoreBuilder.UseTriggerPersistenceDelegate(System.Func{System.IServiceProvider,Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate})">
+  UseTriggerPersistenceDelegate(Func&lt;IServiceProvider, ITriggerPersistenceDelegate&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IPersistentStoreBuilder.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a trigger persistence delegate the caller builds, for cases where it needs configuring
+first.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPersistentStoreBuilder UseTriggerPersistenceDelegate(Func&lt;IServiceProvider, ITriggerPersistenceDelegate&gt; factory)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>factory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.html">ITriggerPersistenceDelegate</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IPersistentStoreBuilder_UseTriggerPersistenceDelegate_System_Func_System_IServiceProvider_Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>As with <a class="xref" href="Quartz.IPersistentStoreBuilder.html#Quartz_IPersistentStoreBuilder_UseSerializer_System_Func_System_IServiceProvider_Quartz_Extensibility_IObjectSerializer__">UseSerializer(Func&lt;IServiceProvider, IObjectSerializer&gt;)</a>, this registers
+under the scheduler's own key, which registering against <a class="xref" href="Quartz.IPersistentStoreBuilder.html#Quartz_IPersistentStoreBuilder_Services">Services</a> would not.</p>
+</div>
+
+
+
+
+  <a id="Quartz_IPersistentStoreBuilder_UseTriggerPersistenceDelegate_" data-uid="Quartz.IPersistentStoreBuilder.UseTriggerPersistenceDelegate*"></a>
+
+  <h3 id="Quartz_IPersistentStoreBuilder_UseTriggerPersistenceDelegate__1" data-uid="Quartz.IPersistentStoreBuilder.UseTriggerPersistenceDelegate``1">
+  UseTriggerPersistenceDelegate&lt;T&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IPersistentStoreBuilder.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a trigger persistence delegate, which stores and rebuilds a custom trigger type's
+scheduling data in its own tables rather than as a serialized blob.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPersistentStoreBuilder UseTriggerPersistenceDelegate&lt;T&gt;() where T : class, ITriggerPersistenceDelegate</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IPersistentStoreBuilder_UseTriggerPersistenceDelegate__1_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The built-in delegates for the five shipped trigger types are always present; delegates added
+here serve additional trigger types. Call once per delegate — repeated registrations of the
+same type collapse to one.</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/IPersistentStoreBuilder.cs/#L25" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

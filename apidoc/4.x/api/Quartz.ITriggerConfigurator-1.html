@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface ITriggerConfigurator&lt;TJob&gt; | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface ITriggerConfigurator&lt;TJob&gt; | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Configures a trigger for a job of a known type, so that job data can be bound by naming the job&#39;s own properties.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_ITriggerConfigurator_1.md&amp;value=---%0Auid%3A%20Quartz.ITriggerConfigurator%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.ITriggerConfigurator`1">
+
+
+
+  <h1 id="Quartz_ITriggerConfigurator_1" data-uid="Quartz.ITriggerConfigurator`1" class="text-break">
+Interface ITriggerConfigurator&lt;TJob&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/ITriggerConfigurator.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Configures a trigger for a job of a known type, so that job data can be bound by naming the
+job's own properties.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ITriggerConfigurator&lt;TJob&gt; : ITriggerConfigurator where TJob : IJob</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TJob</code></dt>
+    <dd><p>the type of job the trigger fires.</p>
+</dd>
+  </dl>
+
+
+
+
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Quartz.JobInputBuilderExtensions.html#Quartz_JobInputBuilderExtensions_UsingInput__2_Quartz_ITriggerConfigurator___0____1_">JobInputBuilderExtensions.UsingInput&lt;TJob, TInput&gt;(ITriggerConfigurator&lt;TJob&gt;, TInput)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.TriggerConfiguratorExtensions.html#Quartz_TriggerConfiguratorExtensions_WithCalendarIntervalSchedule__1___0_Quartz_CalendarIntervalScheduleBuilder_">TriggerConfiguratorExtensions.WithCalendarIntervalSchedule&lt;TConfigurator&gt;(TConfigurator, CalendarIntervalScheduleBuilder)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.TriggerConfiguratorExtensions.html#Quartz_TriggerConfiguratorExtensions_WithCalendarIntervalSchedule__1___0_System_Action_Quartz_CalendarIntervalScheduleBuilder__">TriggerConfiguratorExtensions.WithCalendarIntervalSchedule&lt;TConfigurator&gt;(TConfigurator, Action&lt;CalendarIntervalScheduleBuilder&gt;?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.TriggerConfiguratorExtensions.html#Quartz_TriggerConfiguratorExtensions_WithCronSchedule__1___0_Quartz_CronExpression_System_Action_Quartz_CronScheduleBuilder__">TriggerConfiguratorExtensions.WithCronSchedule&lt;TConfigurator&gt;(TConfigurator, CronExpression, Action&lt;CronScheduleBuilder&gt;?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.TriggerConfiguratorExtensions.html#Quartz_TriggerConfiguratorExtensions_WithCronSchedule__1___0_Quartz_CronExpressionBuilder_System_Action_Quartz_CronScheduleBuilder__">TriggerConfiguratorExtensions.WithCronSchedule&lt;TConfigurator&gt;(TConfigurator, CronExpressionBuilder, Action&lt;CronScheduleBuilder&gt;?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.TriggerConfiguratorExtensions.html#Quartz_TriggerConfiguratorExtensions_WithCronSchedule__1___0_Quartz_CronScheduleBuilder_">TriggerConfiguratorExtensions.WithCronSchedule&lt;TConfigurator&gt;(TConfigurator, CronScheduleBuilder)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.TriggerConfiguratorExtensions.html#Quartz_TriggerConfiguratorExtensions_WithCronSchedule__1___0_System_String_System_Action_Quartz_CronScheduleBuilder__">TriggerConfiguratorExtensions.WithCronSchedule&lt;TConfigurator&gt;(TConfigurator, string, Action&lt;CronScheduleBuilder&gt;?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.TriggerConfiguratorExtensions.html#Quartz_TriggerConfiguratorExtensions_WithDailyTimeIntervalSchedule__1___0_Quartz_DailyTimeIntervalScheduleBuilder_">TriggerConfiguratorExtensions.WithDailyTimeIntervalSchedule&lt;TConfigurator&gt;(TConfigurator, DailyTimeIntervalScheduleBuilder)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.TriggerConfiguratorExtensions.html#Quartz_TriggerConfiguratorExtensions_WithDailyTimeIntervalSchedule__1___0_System_Action_Quartz_DailyTimeIntervalScheduleBuilder__">TriggerConfiguratorExtensions.WithDailyTimeIntervalSchedule&lt;TConfigurator&gt;(TConfigurator, Action&lt;DailyTimeIntervalScheduleBuilder&gt;?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.TriggerConfiguratorExtensions.html#Quartz_TriggerConfiguratorExtensions_WithRecurrenceSchedule__1___0_Quartz_RecurrenceScheduleBuilder_">TriggerConfiguratorExtensions.WithRecurrenceSchedule&lt;TConfigurator&gt;(TConfigurator, RecurrenceScheduleBuilder)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.TriggerConfiguratorExtensions.html#Quartz_TriggerConfiguratorExtensions_WithRecurrenceSchedule__1___0_System_String_System_Action_Quartz_RecurrenceScheduleBuilder__">TriggerConfiguratorExtensions.WithRecurrenceSchedule&lt;TConfigurator&gt;(TConfigurator, string, Action&lt;RecurrenceScheduleBuilder&gt;?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.TriggerConfiguratorExtensions.html#Quartz_TriggerConfiguratorExtensions_WithSimpleSchedule__1___0_Quartz_SimpleScheduleBuilder_">TriggerConfiguratorExtensions.WithSimpleSchedule&lt;TConfigurator&gt;(TConfigurator, SimpleScheduleBuilder)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.TriggerConfiguratorExtensions.html#Quartz_TriggerConfiguratorExtensions_WithSimpleSchedule__1___0_System_Action_Quartz_SimpleScheduleBuilder__">TriggerConfiguratorExtensions.WithSimpleSchedule&lt;TConfigurator&gt;(TConfigurator, Action&lt;SimpleScheduleBuilder&gt;?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.TriggerConfiguratorExtensions.html#Quartz_TriggerConfiguratorExtensions_WithSimpleSchedule__1___0_System_TimeSpan_System_Nullable_System_Int32__">TriggerConfiguratorExtensions.WithSimpleSchedule&lt;TConfigurator&gt;(TConfigurator, TimeSpan, int?)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_ITriggerConfigurator_1_EndAt_" data-uid="Quartz.ITriggerConfigurator`1.EndAt*"></a>
+
+  <h3 id="Quartz_ITriggerConfigurator_1_EndAt_System_Nullable_System_DateTimeOffset__" data-uid="Quartz.ITriggerConfigurator`1.EndAt(System.Nullable{System.DateTimeOffset})">
+  EndAt(DateTimeOffset?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/ITriggerConfigurator.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the time at which the Trigger will no longer fire - even if it's
+schedule has remaining repeats.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITriggerConfigurator&lt;TJob&gt; EndAt(DateTimeOffset? endTimeUtc)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>endTimeUtc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd><p>the end time for the Trigger.  If null, the end time is indefinite.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ITriggerConfigurator-1.html">ITriggerConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated TriggerBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_ITriggerConfigurator_1_EndAt_System_Nullable_System_DateTimeOffset___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The end time is inclusive: it is the last instant at which the trigger may fire, so a fire
+time that lands exactly on it is one the trigger fires.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_EndTimeUtc">EndTimeUtc</a></div>
+    <div><a class="xref" href="Quartz.DateBuilder.html">DateBuilder</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_ITriggerConfigurator_1_ForJob_" data-uid="Quartz.ITriggerConfigurator`1.ForJob*"></a>
+
+  <h3 id="Quartz_ITriggerConfigurator_1_ForJob_Quartz_IJobDetail_" data-uid="Quartz.ITriggerConfigurator`1.ForJob(Quartz.IJobDetail)">
+  ForJob(IJobDetail)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/ITriggerConfigurator.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the identity of the Job which should be fired by the produced
+Trigger, by extracting the JobKey from the given job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITriggerConfigurator&lt;TJob&gt; ForJob(IJobDetail jobDetail)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>jobDetail</code> <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></dt>
+    <dd><p>the Job to fire.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ITriggerConfigurator-1.html">ITriggerConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated TriggerBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_JobKey">JobKey</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_ITriggerConfigurator_1_ForJob_" data-uid="Quartz.ITriggerConfigurator`1.ForJob*"></a>
+
+  <h3 id="Quartz_ITriggerConfigurator_1_ForJob_Quartz_JobKey_" data-uid="Quartz.ITriggerConfigurator`1.ForJob(Quartz.JobKey)">
+  ForJob(JobKey)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/ITriggerConfigurator.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the identity of the Job which should be fired by the produced
+Trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITriggerConfigurator&lt;TJob&gt; ForJob(JobKey jobKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>jobKey</code> <a class="xref" href="Quartz.JobKey.html">JobKey</a></dt>
+    <dd><p>the identity of the Job to fire.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ITriggerConfigurator-1.html">ITriggerConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated TriggerBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_JobKey">JobKey</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_ITriggerConfigurator_1_ForJob_" data-uid="Quartz.ITriggerConfigurator`1.ForJob*"></a>
+
+  <h3 id="Quartz_ITriggerConfigurator_1_ForJob_System_String_" data-uid="Quartz.ITriggerConfigurator`1.ForJob(System.String)">
+  ForJob(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/ITriggerConfigurator.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the identity of the Job which should be fired by the produced
+Trigger - a <a class="xref" href="Quartz.JobKey.html">JobKey</a> will be produced with the given
+name and default group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITriggerConfigurator&lt;TJob&gt; ForJob(string jobName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>jobName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the name of the job (in default group) to fire.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ITriggerConfigurator-1.html">ITriggerConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated TriggerBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_JobKey">JobKey</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_ITriggerConfigurator_1_ForJob_" data-uid="Quartz.ITriggerConfigurator`1.ForJob*"></a>
+
+  <h3 id="Quartz_ITriggerConfigurator_1_ForJob_System_String_System_String_" data-uid="Quartz.ITriggerConfigurator`1.ForJob(System.String,System.String)">
+  ForJob(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/ITriggerConfigurator.cs/#L226"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the identity of the Job which should be fired by the produced
+Trigger - a <a class="xref" href="Quartz.JobKey.html">JobKey</a> will be produced with the given
+name and group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITriggerConfigurator&lt;TJob&gt; ForJob(string jobName, string jobGroup)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>jobName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the name of the job to fire.</p>
+</dd>
+    <dt><code>jobGroup</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the group of the job to fire.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ITriggerConfigurator-1.html">ITriggerConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated TriggerBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_JobKey">JobKey</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_ITriggerConfigurator_1_StartAt_" data-uid="Quartz.ITriggerConfigurator`1.StartAt*"></a>
+
+  <h3 id="Quartz_ITriggerConfigurator_1_StartAt_System_DateTimeOffset_" data-uid="Quartz.ITriggerConfigurator`1.StartAt(System.DateTimeOffset)">
+  StartAt(DateTimeOffset)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/ITriggerConfigurator.cs/#L158"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the time the Trigger should start at - the trigger may or may
+not fire at this time - depending upon the schedule configured for
+the Trigger.  However the Trigger will NOT fire before this time,
+regardless of the Trigger's schedule.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITriggerConfigurator&lt;TJob&gt; StartAt(DateTimeOffset startTimeUtc)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>startTimeUtc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd><p>the start time for the Trigger.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ITriggerConfigurator-1.html">ITriggerConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated TriggerBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_StartTimeUtc">StartTimeUtc</a></div>
+    <div><a class="xref" href="Quartz.DateBuilder.html">DateBuilder</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_ITriggerConfigurator_1_StartNow_" data-uid="Quartz.ITriggerConfigurator`1.StartNow*"></a>
+
+  <h3 id="Quartz_ITriggerConfigurator_1_StartNow" data-uid="Quartz.ITriggerConfigurator`1.StartNow">
+  StartNow()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/ITriggerConfigurator.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the time the Trigger should start at to the current moment -
+the trigger may or may not fire at this time - depending upon the
+schedule configured for the Trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITriggerConfigurator&lt;TJob&gt; StartNow()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ITriggerConfigurator-1.html">ITriggerConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated TriggerBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_StartTimeUtc">StartTimeUtc</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_ITriggerConfigurator_1_UsingJobData_" data-uid="Quartz.ITriggerConfigurator`1.UsingJobData*"></a>
+
+  <h3 id="Quartz_ITriggerConfigurator_1_UsingJobData_Quartz_JobDataMap_" data-uid="Quartz.ITriggerConfigurator`1.UsingJobData(Quartz.JobDataMap)">
+  UsingJobData(JobDataMap)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/ITriggerConfigurator.cs/#L275"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add the given key-value pair to the Trigger's <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITriggerConfigurator&lt;TJob&gt; UsingJobData(JobDataMap newJobDataMap)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newJobDataMap</code> <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ITriggerConfigurator-1.html">ITriggerConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated TriggerBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_JobDataMap">JobDataMap</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_ITriggerConfigurator_1_UsingJobData_" data-uid="Quartz.ITriggerConfigurator`1.UsingJobData*"></a>
+
+  <h3 id="Quartz_ITriggerConfigurator_1_UsingJobData_System_String_System_Object_" data-uid="Quartz.ITriggerConfigurator`1.UsingJobData(System.String,System.Object)">
+  UsingJobData(string, object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/ITriggerConfigurator.cs/#L288"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add the given key-value pair to the Trigger's <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITriggerConfigurator&lt;TJob&gt; UsingJobData(string key, object? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the key to store the value under</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>the value to store</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ITriggerConfigurator-1.html">ITriggerConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated TriggerBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_ITriggerConfigurator_1_UsingJobData_System_String_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The value is stored as given. A persistent job store can only hold what its serializer
+round-trips, and AdoJobStore's <code>StoreJobDataAsStrings</code> mode only strings.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_JobDataMap">JobDataMap</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_ITriggerConfigurator_1_UsingJobData_" data-uid="Quartz.ITriggerConfigurator`1.UsingJobData*"></a>
+
+  <h3 id="Quartz_ITriggerConfigurator_1_UsingJobData__1_System_Linq_Expressions_Expression_System_Func__0___0_____0_" data-uid="Quartz.ITriggerConfigurator`1.UsingJobData``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},``0)">
+  UsingJobData&lt;TValue&gt;(Expression&lt;Func&lt;TJob, TValue&gt;&gt;, TValue)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/ITriggerConfigurator.cs/#L268"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add a value to the Trigger's <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> under the name of the job property it is
+meant to end up on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITriggerConfigurator&lt;TJob&gt; UsingJobData&lt;TValue&gt;(Expression&lt;Func&lt;TJob, TValue&gt;&gt; jobProperty, TValue value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>jobProperty</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TJob, TValue&gt;&gt;</dt>
+    <dd><p>an expression naming the job property, such as <code>job =&gt; job.Parameter</code></p>
+</dd>
+    <dt><code>value</code> <span class="xref">TValue</span></dt>
+    <dd><p>the value to bind to that property</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ITriggerConfigurator-1.html">ITriggerConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated TriggerBuilder</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TValue</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_ITriggerConfigurator_1_UsingJobData__1_System_Linq_Expressions_Expression_System_Func__0___0_____0__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This is how one job is given different inputs per trigger without spelling its property names:
+trigger data overrides job data in the map the job finally sees.
+</p>
+<p>
+It has to be a public settable property read directly off the job - a path through another property
+has nowhere to land, since the job factory sets properties on the job instance itself. Properties
+inherited from a base job are fine. Whether the property belongs to the job this trigger actually
+fires can only be checked when the trigger was pointed at the job with
+<a class="xref" href="Quartz.ITriggerConfigurator-1.html#Quartz_ITriggerConfigurator_1_ForJob_Quartz_IJobDetail_">ForJob(IJobDetail)</a> and that job's type resolves; pointed at a key, or at a job named
+by a type this process cannot load, the job type only names the properties.
+</p>
+<p>
+The value is stored in the property's own type, so an implicit widening at the call site is undone
+and a value that does not fit is rejected here. An enum property takes the enum's name.
+</p>
+<p>
+The same care applies as to any other job data: a persistent job store can only hold what its
+serializer round-trips, and AdoJobStore's <code>StoreJobDataAsStrings</code> mode only strings. Nothing beyond
+enums is converted for you.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_JobDataMap">JobDataMap</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_ITriggerConfigurator_1_WithCalendarName_" data-uid="Quartz.ITriggerConfigurator`1.WithCalendarName*"></a>
+
+  <h3 id="Quartz_ITriggerConfigurator_1_WithCalendarName_System_String_" data-uid="Quartz.ITriggerConfigurator`1.WithCalendarName(System.String)">
+  WithCalendarName(string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/ITriggerConfigurator.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the name of the <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> that should be applied to this
+Trigger's schedule.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITriggerConfigurator&lt;TJob&gt; WithCalendarName(string? calendarName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>calendarName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the name of the Calendar to reference.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ITriggerConfigurator-1.html">ITriggerConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated TriggerBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></div>
+    <div><a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_CalendarName">CalendarName</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_ITriggerConfigurator_1_WithDescription_" data-uid="Quartz.ITriggerConfigurator`1.WithDescription*"></a>
+
+  <h3 id="Quartz_ITriggerConfigurator_1_WithDescription_System_String_" data-uid="Quartz.ITriggerConfigurator`1.WithDescription(System.String)">
+  WithDescription(string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/ITriggerConfigurator.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the given (human-meaningful) description of the Trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITriggerConfigurator&lt;TJob&gt; WithDescription(string? description)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>description</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the description for the Trigger</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ITriggerConfigurator-1.html">ITriggerConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated TriggerBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_Description">Description</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_ITriggerConfigurator_1_WithExecutionGroup_" data-uid="Quartz.ITriggerConfigurator`1.WithExecutionGroup*"></a>
+
+  <h3 id="Quartz_ITriggerConfigurator_1_WithExecutionGroup_System_String_" data-uid="Quartz.ITriggerConfigurator`1.WithExecutionGroup(System.String)">
+  WithExecutionGroup(string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/ITriggerConfigurator.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the execution group for the Trigger. Execution groups allow thread
+limits to be configured - per node or across the cluster - so that
+resource-intensive jobs do not saturate all available threads.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITriggerConfigurator&lt;TJob&gt; WithExecutionGroup(string? executionGroup)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionGroup</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the execution group name, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to clear</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ITriggerConfigurator-1.html">ITriggerConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated TriggerBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_ExecutionGroup">ExecutionGroup</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_ITriggerConfigurator_1_WithIdentity_" data-uid="Quartz.ITriggerConfigurator`1.WithIdentity*"></a>
+
+  <h3 id="Quartz_ITriggerConfigurator_1_WithIdentity_Quartz_TriggerKey_" data-uid="Quartz.ITriggerConfigurator`1.WithIdentity(Quartz.TriggerKey)">
+  WithIdentity(TriggerKey)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/ITriggerConfigurator.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Use the given TriggerKey to identify the Trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITriggerConfigurator&lt;TJob&gt; WithIdentity(TriggerKey key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></dt>
+    <dd><p>the TriggerKey for the Trigger to be built</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ITriggerConfigurator-1.html">ITriggerConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated TriggerBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_ITriggerConfigurator_1_WithIdentity_Quartz_TriggerKey__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If none of the 'withIdentity' methods are set on the TriggerBuilder,
+then a random, unique TriggerKey will be generated.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></div>
+    <div><a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_Key">Key</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_ITriggerConfigurator_1_WithIdentity_" data-uid="Quartz.ITriggerConfigurator`1.WithIdentity*"></a>
+
+  <h3 id="Quartz_ITriggerConfigurator_1_WithIdentity_System_String_" data-uid="Quartz.ITriggerConfigurator`1.WithIdentity(System.String)">
+  WithIdentity(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/ITriggerConfigurator.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Use a <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a> with the given name and default group to
+identify the Trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITriggerConfigurator&lt;TJob&gt; WithIdentity(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the name element for the Trigger's TriggerKey</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ITriggerConfigurator-1.html">ITriggerConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated TriggerBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_ITriggerConfigurator_1_WithIdentity_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If none of the 'withIdentity' methods are set on the TriggerBuilder,
+then a random, unique TriggerKey will be generated.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></div>
+    <div><a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_Key">Key</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_ITriggerConfigurator_1_WithIdentity_" data-uid="Quartz.ITriggerConfigurator`1.WithIdentity*"></a>
+
+  <h3 id="Quartz_ITriggerConfigurator_1_WithIdentity_System_String_System_String_" data-uid="Quartz.ITriggerConfigurator`1.WithIdentity(System.String,System.String)">
+  WithIdentity(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/ITriggerConfigurator.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Use a TriggerKey with the given name and group to
+identify the Trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITriggerConfigurator&lt;TJob&gt; WithIdentity(string name, string group)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the name element for the Trigger's TriggerKey</p>
+</dd>
+    <dt><code>group</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the group element for the Trigger's TriggerKey</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ITriggerConfigurator-1.html">ITriggerConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated TriggerBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_ITriggerConfigurator_1_WithIdentity_System_String_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If none of the 'withIdentity' methods are set on the TriggerBuilder,
+then a random, unique TriggerKey will be generated.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></div>
+    <div><a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_Key">Key</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_ITriggerConfigurator_1_WithPreferredNode_" data-uid="Quartz.ITriggerConfigurator`1.WithPreferredNode*"></a>
+
+  <h3 id="Quartz_ITriggerConfigurator_1_WithPreferredNode_Quartz_PreferredNode_" data-uid="Quartz.ITriggerConfigurator`1.WithPreferredNode(Quartz.PreferredNode)">
+  WithPreferredNode(PreferredNode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/ITriggerConfigurator.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pin the Trigger to a specific scheduler node, or to the node that first fires it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITriggerConfigurator&lt;TJob&gt; WithPreferredNode(PreferredNode preferredNode)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>preferredNode</code> <a class="xref" href="Quartz.PreferredNode.html">PreferredNode</a></dt>
+    <dd><p>The pin: <a class="xref" href="Quartz.PreferredNode.html#Quartz_PreferredNode_None">None</a> to clear,
+<a class="xref" href="Quartz.PreferredNode.html#Quartz_PreferredNode_Auto">Auto</a> for automatic first-fire pinning, or
+<a class="xref" href="Quartz.PreferredNode.html#Quartz_PreferredNode_For_System_String_">For(string)</a> to name a node.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ITriggerConfigurator-1.html">ITriggerConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated TriggerBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_PreferredNode">PreferredNode</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_ITriggerConfigurator_1_WithPriority_" data-uid="Quartz.ITriggerConfigurator`1.WithPriority*"></a>
+
+  <h3 id="Quartz_ITriggerConfigurator_1_WithPriority_System_Int32_" data-uid="Quartz.ITriggerConfigurator`1.WithPriority(System.Int32)">
+  WithPriority(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/ITriggerConfigurator.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the Trigger's priority.  When more than one Trigger have the same
+fire time, the scheduler will fire the one with the highest priority
+first.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITriggerConfigurator&lt;TJob&gt; WithPriority(int priority)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>priority</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the priority for the Trigger</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ITriggerConfigurator-1.html">ITriggerConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated TriggerBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.TriggerConstants.html#Quartz_TriggerConstants_DefaultPriority">DefaultPriority</a></div>
+    <div><a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_Priority">Priority</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_ITriggerConfigurator_1_WithRetryPolicy_" data-uid="Quartz.ITriggerConfigurator`1.WithRetryPolicy*"></a>
+
+  <h3 id="Quartz_ITriggerConfigurator_1_WithRetryPolicy_Quartz_RetryPolicy_" data-uid="Quartz.ITriggerConfigurator`1.WithRetryPolicy(Quartz.RetryPolicy)">
+  WithRetryPolicy(RetryPolicy?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/ITriggerConfigurator.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set how the scheduler re-fires this trigger when its job fails.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITriggerConfigurator&lt;TJob&gt; WithRetryPolicy(RetryPolicy? retryPolicy)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>retryPolicy</code> <a class="xref" href="Quartz.RetryPolicy.html">RetryPolicy</a></dt>
+    <dd><p>the retry policy, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> for no retries</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ITriggerConfigurator-1.html">ITriggerConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated TriggerBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_ITriggerConfigurator_1_WithRetryPolicy_Quartz_RetryPolicy__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A retry never displaces the trigger's next scheduled occurrence. This is not
+<a class="xref" href="Quartz.JobExecutionException.html#Quartz_JobExecutionException_RefireImmediately">RefireImmediately</a>, which re-runs the job on the same
+thread within the same firing.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_RetryPolicy">RetryPolicy</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_ITriggerConfigurator_1_WithSchedule_" data-uid="Quartz.ITriggerConfigurator`1.WithSchedule*"></a>
+
+  <h3 id="Quartz_ITriggerConfigurator_1_WithSchedule_Quartz_IScheduleBuilder_" data-uid="Quartz.ITriggerConfigurator`1.WithSchedule(Quartz.IScheduleBuilder)">
+  WithSchedule(IScheduleBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/ITriggerConfigurator.cs/#L196"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the <a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a> that will be used to define the
+Trigger's schedule.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITriggerConfigurator&lt;TJob&gt; WithSchedule(IScheduleBuilder scheduleBuilder)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduleBuilder</code> <a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a></dt>
+    <dd><p>the schedule builder to use.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ITriggerConfigurator-1.html">ITriggerConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated TriggerBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_ITriggerConfigurator_1_WithSchedule_Quartz_IScheduleBuilder__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The particular <a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a> used will dictate
+the concrete type of Trigger that is produced by the TriggerBuilder.</p>
+<p>Redeclared so that the chain keeps the job's type; the
+<code>WithXSchedule</code> extension methods do the same for the same reason.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a></div>
+    </dd>
+  </dl>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/ITriggerConfigurator.cs/#L40" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

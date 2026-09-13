@@ -1,0 +1,3012 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IJobStore | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IJobStore | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="The interface to be implemented by classes that want to provide a  and  storage mechanism for a scheduler&#39;s use.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Extensibility_IJobStore.md&amp;value=---%0Auid%3A%20Quartz.Extensibility.IJobStore%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Extensibility.IJobStore">
+
+
+
+  <h1 id="Quartz_Extensibility_IJobStore" data-uid="Quartz.Extensibility.IJobStore" class="text-break">
+Interface IJobStore  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<a class="xref" href="Quartz.Extensibility.html">Extensibility</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The interface to be implemented by classes that want to provide a <a class="xref" href="Quartz.IJob.html">IJob</a>
+and <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> storage mechanism for a scheduler's use.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IJobStore</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 id="Quartz_Extensibility_IJobStore_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Storage of <a class="xref" href="Quartz.IJob.html">IJob</a> s and <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> s should be keyed
+on the combination of their name and group for uniqueness.</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_Extensibility_IJobStore_Clustered_" data-uid="Quartz.Extensibility.IJobStore.Clustered*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_Clustered" data-uid="Quartz.Extensibility.IJobStore.Clustered">
+  Clustered
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the <a class="xref" href="Quartz.Extensibility.IJobStore.html">IJobStore</a> implementation is clustered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Clustered { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IJobStore_Clustered_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Read-only, because being clustered is something a store is rather than something it is told:
+the ADO.NET store reports what <a class="xref" href="Quartz.ClusteringOptions.html#Quartz_ClusteringOptions_Enabled">Enabled</a> says, and a store that
+cannot cluster answers <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> and means it.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_EstimatedTimeToReleaseAndAcquireTrigger_" data-uid="Quartz.Extensibility.IJobStore.EstimatedTimeToReleaseAndAcquireTrigger*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_EstimatedTimeToReleaseAndAcquireTrigger" data-uid="Quartz.Extensibility.IJobStore.EstimatedTimeToReleaseAndAcquireTrigger">
+  EstimatedTimeToReleaseAndAcquireTrigger
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How long the <a class="xref" href="Quartz.Extensibility.IJobStore.html">IJobStore</a> implementation estimates that it will take to
+release a trigger and acquire a new one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TimeSpan EstimatedTimeToReleaseAndAcquireTrigger { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_SupportsPersistence_" data-uid="Quartz.Extensibility.IJobStore.SupportsPersistence*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_SupportsPersistence" data-uid="Quartz.Extensibility.IJobStore.SupportsPersistence">
+  SupportsPersistence
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether job store supports persistence.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool SupportsPersistence { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_Extensibility_IJobStore_AcquireNextTriggers_" data-uid="Quartz.Extensibility.IJobStore.AcquireNextTriggers*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_AcquireNextTriggers_Quartz_Extensibility_TriggerAcquisitionRequest_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.AcquireNextTriggers(Quartz.Extensibility.TriggerAcquisitionRequest,System.Threading.CancellationToken)">
+  AcquireNextTriggers(TriggerAcquisitionRequest, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L820"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Acquires the next triggers to be fired, respecting execution group limits.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;List&lt;IOperableTrigger&gt;&gt; AcquireNextTriggers(TriggerAcquisitionRequest request, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="Quartz.Extensibility.TriggerAcquisitionRequest.html">TriggerAcquisitionRequest</a></dt>
+    <dd><p>What to acquire: the cut-off time, how many, the batching window
+and the per-execution-group capacity still available.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Quartz.Extensibility.IOperableTrigger.html">IOperableTrigger</a>&gt;&gt;</dt>
+    <dd><p>The acquired triggers. The caller copies this list rather than taking it over, so it may be one
+the store keeps.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IJobStore_AcquireNextTriggers_Quartz_Extensibility_TriggerAcquisitionRequest_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The returned list stays the store's. The scheduler's acquisition loop copies it before
+working with it, because it removes entries from its own copy while it waits out the
+first trigger's fire time and would otherwise be editing something the store still holds. A
+store is therefore free to hand back a list it keeps a reference to, or to reuse one between
+calls; it does not have to build a fresh list to be safe. The copy costs the scheduler around ten
+nanoseconds and sixty-four bytes per acquisition attempt (<code>AcquiredTriggerHandoffBenchmark</code>),
+against an attempt that is a database round trip, and is kept in preference to a caller-owns rule
+that every store would have to keep and that would break silently in one that did not (#3344).</p>
+</div>
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_AddCalendar_" data-uid="Quartz.Extensibility.IJobStore.AddCalendar*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_AddCalendar_System_String_Quartz_ICalendar_Quartz_AddCalendarOptions_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.AddCalendar(System.String,Quartz.ICalendar,Quartz.AddCalendarOptions,System.Threading.CancellationToken)">
+  AddCalendar(string, ICalendar, AddCalendarOptions, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L379"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Store the given <a class="xref" href="Quartz.ICalendar.html">ICalendar</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask AddCalendar(string calendarName, ICalendar calendar, AddCalendarOptions options = default, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>calendarName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name.</p>
+</dd>
+    <dt><code>calendar</code> <a class="xref" href="Quartz.ICalendar.html">ICalendar</a></dt>
+    <dd><p>The <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> to be stored.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Quartz.AddCalendarOptions.html">AddCalendarOptions</a></dt>
+    <dd><p>Whether an existing calendar of the same name may be over-written, and whether the triggers
+referencing it have their next fire time re-computed. Defaults to neither.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ObjectAlreadyExistsException.html">ObjectAlreadyExistsException</a></dt>
+    <dd><p>A calendar is already stored under the same name and
+<a class="xref" href="Quartz.AddCalendarOptions.html#Quartz_AddCalendarOptions_Replace">Replace</a> was not asked for.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_AddJob_" data-uid="Quartz.Extensibility.IJobStore.AddJob*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_AddJob_Quartz_IJobDetail_Quartz_AddJobOptions_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.AddJob(Quartz.IJobDetail,Quartz.AddJobOptions,System.Threading.CancellationToken)">
+  AddJob(IJobDetail, AddJobOptions, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Store the given <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask AddJob(IJobDetail job, AddJobOptions options = default, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>job</code> <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></dt>
+    <dd><p>The <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> to be stored.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Quartz.AddJobOptions.html">AddJobOptions</a></dt>
+    <dd><p>How to store it. <a class="xref" href="Quartz.AddJobOptions.html#Quartz_AddJobOptions_Replace">Replace</a> over-writes a job already stored
+under the same key; without it, storing one whose key exists throws
+<a class="xref" href="Quartz.ObjectAlreadyExistsException.html">ObjectAlreadyExistsException</a>.
+<a class="xref" href="Quartz.AddJobOptions.html#Quartz_AddJobOptions_StoreNonDurableWhileAwaitingScheduling">StoreNonDurableWhileAwaitingScheduling</a> is a scheduler-level
+rule that <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> has already applied by the time the store is called, so
+a store neither reads it nor has anything to do about it.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_AddTrigger_" data-uid="Quartz.Extensibility.IJobStore.AddTrigger*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_AddTrigger_Quartz_Extensibility_IOperableTrigger_Quartz_AddTriggerOptions_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.AddTrigger(Quartz.Extensibility.IOperableTrigger,Quartz.AddTriggerOptions,System.Threading.CancellationToken)">
+  AddTrigger(IOperableTrigger, AddTriggerOptions, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L228"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Store the given <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask AddTrigger(IOperableTrigger trigger, AddTriggerOptions options = default, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>trigger</code> <a class="xref" href="Quartz.Extensibility.IOperableTrigger.html">IOperableTrigger</a></dt>
+    <dd><p>The <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> to be stored.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Quartz.AddTriggerOptions.html">AddTriggerOptions</a></dt>
+    <dd><p>How to store it. <a class="xref" href="Quartz.AddTriggerOptions.html#Quartz_AddTriggerOptions_Replace">Replace</a> over-writes a trigger already
+stored under the same key; without it, storing one whose key exists throws
+<a class="xref" href="Quartz.ObjectAlreadyExistsException.html">ObjectAlreadyExistsException</a>.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ObjectAlreadyExistsException.html">ObjectAlreadyExistsException</a></dt>
+    <dd><p>A trigger is already stored under the same key and <a class="xref" href="Quartz.AddTriggerOptions.html#Quartz_AddTriggerOptions_Replace">Replace</a>
+was not asked for.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_Clear_" data-uid="Quartz.Extensibility.IJobStore.Clear*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_Clear_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.Clear(System.Threading.CancellationToken)">
+  Clear(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L363"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clear (delete!) all scheduling data - all <a class="xref" href="Quartz.IJob.html">IJob</a>s, <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s and
+<a class="xref" href="Quartz.ICalendar.html">ICalendar</a>s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask Clear(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_DeleteCalendar_" data-uid="Quartz.Extensibility.IJobStore.DeleteCalendar*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_DeleteCalendar_System_String_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.DeleteCalendar(System.String,System.Threading.CancellationToken)">
+  DeleteCalendar(string, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L396"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Remove (delete) the <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> with the
+given name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;bool&gt; DeleteCalendar(string calendarName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>calendarName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> to be removed.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if a <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> with the given name
+was found and removed from the store.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IJobStore_DeleteCalendar_System_String_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If removal of the <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> would result in
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s pointing to non-existent calendars, then a
+<a class="xref" href="Quartz.JobPersistenceException.html">JobPersistenceException</a> will be thrown.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_DeleteJob_" data-uid="Quartz.Extensibility.IJobStore.DeleteJob*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_DeleteJob_Quartz_JobKey_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.DeleteJob(Quartz.JobKey,System.Threading.CancellationToken)">
+  DeleteJob(JobKey, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Remove (delete) the <a class="xref" href="Quartz.IJob.html">IJob</a> with the given
+key, and any <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> s that reference
+it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;bool&gt; DeleteJob(JobKey jobKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>jobKey</code> <a class="xref" href="Quartz.JobKey.html">JobKey</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if a <a class="xref" href="Quartz.IJob.html">IJob</a> with the given name and
+group was found and removed from the store.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IJobStore_DeleteJob_Quartz_JobKey_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If removal of the <a class="xref" href="Quartz.IJob.html">IJob</a> results in an empty group, the
+group should be removed from the <a class="xref" href="Quartz.Extensibility.IJobStore.html">IJobStore</a>'s list of
+known group names.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_DeleteJobs_" data-uid="Quartz.Extensibility.IJobStore.DeleteJobs*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_DeleteJobs_Quartz_GroupMatcher_Quartz_JobKey__System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.DeleteJobs(Quartz.GroupMatcher{Quartz.JobKey},System.Threading.CancellationToken)">
+  DeleteJobs(GroupMatcher&lt;JobKey&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L198"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Remove (delete) every <a class="xref" href="Quartz.IJob.html">IJob</a> in the matching groups, and any
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s that reference them.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;List&lt;JobKey&gt;&gt; DeleteJobs(GroupMatcher&lt;JobKey&gt; matcher, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matcher</code> <a class="xref" href="Quartz.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;&gt;</dt>
+    <dd><p>The keys this call removed. A group that matched nothing contributes nothing — an empty
+list is the plural of the single-key <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>, not a failure.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IJobStore_DeleteJobs_Quartz_GroupMatcher_Quartz_JobKey__System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The default implementation lists the matching keys and then deletes them, which is two
+operations and so lets a job added in between escape. A store overrides it to resolve the
+keys and delete them under the same lock or connection scope; the answer must not change
+when it does.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.Extensibility.IJobStore.html#Quartz_Extensibility_IJobStore_DeleteJobs_System_Collections_Generic_IReadOnlyCollection_Quartz_JobKey__System_Threading_CancellationToken_">DeleteJobs(IReadOnlyCollection&lt;JobKey&gt;, CancellationToken)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Extensibility_IJobStore_DeleteJobs_" data-uid="Quartz.Extensibility.IJobStore.DeleteJobs*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_DeleteJobs_System_Collections_Generic_IReadOnlyCollection_Quartz_JobKey__System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.DeleteJobs(System.Collections.Generic.IReadOnlyCollection{Quartz.JobKey},System.Threading.CancellationToken)">
+  DeleteJobs(IReadOnlyCollection&lt;JobKey&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Remove (delete) the <a class="xref" href="Quartz.IJob.html">IJob</a>s with the given keys, and any
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s that reference them.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;List&lt;JobKey&gt;&gt; DeleteJobs(IReadOnlyCollection&lt;JobKey&gt; jobKeys, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>jobKeys</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;&gt;</dt>
+    <dd><p>The keys this call removed, in the order they were given. A key that names no job is simply
+absent — the plural of the single-key <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">bool</a>, not a failure.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IJobStore_DeleteJobs_System_Collections_Generic_IReadOnlyCollection_Quartz_JobKey__System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The default implementation walks the set one key at a time. A store overrides it to do the
+walk inside a single lock or connection scope; the answer must not change when it does.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.Extensibility.IJobStore.html#Quartz_Extensibility_IJobStore_DeleteJob_Quartz_JobKey_System_Threading_CancellationToken_">DeleteJob(JobKey, CancellationToken)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Extensibility_IJobStore_DeleteTrigger_" data-uid="Quartz.Extensibility.IJobStore.DeleteTrigger*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_DeleteTrigger_Quartz_TriggerKey_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.DeleteTrigger(Quartz.TriggerKey,System.Threading.CancellationToken)">
+  DeleteTrigger(TriggerKey, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L249"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Remove (delete) the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> with the given key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;bool&gt; DeleteTrigger(TriggerKey triggerKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>triggerKey</code> <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> with the given
+name and group was found and removed from the store.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IJobStore_DeleteTrigger_Quartz_TriggerKey_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+If removal of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> results in an empty group, the
+group should be removed from the <a class="xref" href="Quartz.Extensibility.IJobStore.html">IJobStore</a>'s list of
+known group names.
+</p>
+<p>
+If removal of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> results in an 'orphaned' <a class="xref" href="Quartz.IJob.html">IJob</a>
+that is not 'durable', then the <a class="xref" href="Quartz.IJob.html">IJob</a> should be deleted
+also.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_DeleteTriggers_" data-uid="Quartz.Extensibility.IJobStore.DeleteTriggers*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_DeleteTriggers_Quartz_GroupMatcher_Quartz_TriggerKey__System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.DeleteTriggers(Quartz.GroupMatcher{Quartz.TriggerKey},System.Threading.CancellationToken)">
+  DeleteTriggers(GroupMatcher&lt;TriggerKey&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L284"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Remove (delete) every <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> in the matching groups.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;List&lt;TriggerKey&gt;&gt; DeleteTriggers(GroupMatcher&lt;TriggerKey&gt; matcher, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matcher</code> <a class="xref" href="Quartz.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;&gt;</dt>
+    <dd><p>The keys this call removed. A job left orphaned and non-durable by the removal is deleted
+too, as in the single-key form, but the answer names triggers only.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IJobStore_DeleteTriggers_Quartz_GroupMatcher_Quartz_TriggerKey__System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The default implementation lists the matching keys and then deletes them, which is two
+operations and so lets a trigger added in between escape. A store overrides it to resolve
+the keys and delete them under the same lock or connection scope; the answer must not change
+when it does.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.Extensibility.IJobStore.html#Quartz_Extensibility_IJobStore_DeleteTriggers_System_Collections_Generic_IReadOnlyCollection_Quartz_TriggerKey__System_Threading_CancellationToken_">DeleteTriggers(IReadOnlyCollection&lt;TriggerKey&gt;, CancellationToken)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Extensibility_IJobStore_DeleteTriggers_" data-uid="Quartz.Extensibility.IJobStore.DeleteTriggers*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_DeleteTriggers_System_Collections_Generic_IReadOnlyCollection_Quartz_TriggerKey__System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.DeleteTriggers(System.Collections.Generic.IReadOnlyCollection{Quartz.TriggerKey},System.Threading.CancellationToken)">
+  DeleteTriggers(IReadOnlyCollection&lt;TriggerKey&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L265"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Remove (delete) the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s with the given keys.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;List&lt;TriggerKey&gt;&gt; DeleteTriggers(IReadOnlyCollection&lt;TriggerKey&gt; triggerKeys, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>triggerKeys</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;&gt;</dt>
+    <dd><p>The keys this call removed, in the order they were given. A key that names no trigger is
+simply absent — the plural of the single-key <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">bool</a>, not a failure. A job
+left orphaned and non-durable by the removal is deleted too, as in the single-key form, but
+the answer names triggers only.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IJobStore_DeleteTriggers_System_Collections_Generic_IReadOnlyCollection_Quartz_TriggerKey__System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The default implementation walks the set one key at a time. A store overrides it to do the
+walk inside a single lock or connection scope; the answer must not change when it does.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.Extensibility.IJobStore.html#Quartz_Extensibility_IJobStore_DeleteTrigger_Quartz_TriggerKey_System_Threading_CancellationToken_">DeleteTrigger(TriggerKey, CancellationToken)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Extensibility_IJobStore_Exists_" data-uid="Quartz.Extensibility.IJobStore.Exists*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_Exists_Quartz_JobKey_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.Exists(Quartz.JobKey,System.Threading.CancellationToken)">
+  Exists(JobKey, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L334"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determine whether a <a class="xref" href="Quartz.IJob.html">IJob</a> with the given identifier already
+exists within the scheduler.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;bool&gt; Exists(JobKey jobKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>jobKey</code> <a class="xref" href="Quartz.JobKey.html">JobKey</a></dt>
+    <dd><p>the identifier to check for</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>true if a job exists with the given identifier</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_Exists_" data-uid="Quartz.Extensibility.IJobStore.Exists*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_Exists_Quartz_TriggerKey_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.Exists(Quartz.TriggerKey,System.Threading.CancellationToken)">
+  Exists(TriggerKey, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L343"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determine whether a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> with the given identifier already
+exists within the scheduler.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;bool&gt; Exists(TriggerKey triggerKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>triggerKey</code> <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></dt>
+    <dd><p>the identifier to check for</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>true if a trigger exists with the given identifier</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_Exists_" data-uid="Quartz.Extensibility.IJobStore.Exists*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_Exists_System_String_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.Exists(System.String,System.Threading.CancellationToken)">
+  Exists(string, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L357"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determine whether an <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> with the given name already exists within the
+store.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;bool&gt; Exists(string calendarName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>calendarName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the name to check for</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>true if a calendar is stored under the given name</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IJobStore_Exists_System_String_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Answer this without materializing the calendar. <a class="xref" href="Quartz.Extensibility.IJobStore.html#Quartz_Extensibility_IJobStore_GetCalendar_System_String_System_Threading_CancellationToken_">GetCalendar(string, CancellationToken)</a> can answer it too, but
+only by reading the stored blob and deserializing it to throw it away — which is what a store
+implementing this member as <code>GetCalendar(name) is not null</code> would go on doing.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_GetAcquireRetryDelay_" data-uid="Quartz.Extensibility.IJobStore.GetAcquireRetryDelay*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_GetAcquireRetryDelay_System_Int32_" data-uid="Quartz.Extensibility.IJobStore.GetAcquireRetryDelay(System.Int32)">
+  GetAcquireRetryDelay(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L865"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the amount of time to wait when accessing this job store repeatedly fails.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TimeSpan GetAcquireRetryDelay(int failureCount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>failureCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the number of successive failures seen so far</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>the time to wait before trying again</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IJobStore_GetAcquireRetryDelay_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Called by the executor thread(s) when calls to <code>AcquireNextTriggers</code> fail more than once in succession,
+and the thread thus wants to wait a bit before trying again, to not consume 100% CPU,
+write huge amounts of errors into logs, etc. in cases like the DB being offline/restarting.</p>
+<p>The delay returned by implementations should be between 20 milliseconds and 10 minutes.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_GetCalendar_" data-uid="Quartz.Extensibility.IJobStore.GetCalendar*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_GetCalendar_System_String_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.GetCalendar(System.String,System.Threading.CancellationToken)">
+  GetCalendar(string, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L407"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve the given <a class="xref" href="Quartz.ICalendar.html">ICalendar</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;ICalendar?&gt; GetCalendar(string calendarName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>calendarName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> to be retrieved.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.ICalendar.html">ICalendar</a>&gt;</dt>
+    <dd><p>The desired <a class="xref" href="Quartz.ICalendar.html">ICalendar</a>, or null if there is no
+match.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_GetJob_" data-uid="Quartz.Extensibility.IJobStore.GetJob*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_GetJob_Quartz_JobKey_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.GetJob(Quartz.JobKey,System.Threading.CancellationToken)">
+  GetJob(JobKey, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L212"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> for the given
+<a class="xref" href="Quartz.IJob.html">IJob</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;IJobDetail?&gt; GetJob(JobKey jobKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>jobKey</code> <a class="xref" href="Quartz.JobKey.html">JobKey</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>&gt;</dt>
+    <dd><p>The desired <a class="xref" href="Quartz.IJob.html">IJob</a>, or null if there is no match.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_GetJobs_" data-uid="Quartz.Extensibility.IJobStore.GetJobs*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_GetJobs_System_Collections_Generic_IReadOnlyCollection_Quartz_JobKey__System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.GetJobs(System.Collections.Generic.IReadOnlyCollection{Quartz.JobKey},System.Threading.CancellationToken)">
+  GetJobs(IReadOnlyCollection&lt;JobKey&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L512"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves the given jobs in one round trip. Keys that do not exist are simply
+absent from the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;List&lt;IJobDetail&gt;&gt; GetJobs(IReadOnlyCollection&lt;JobKey&gt; jobKeys, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>jobKeys</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</dt>
+    <dd><p>The keys of the jobs to retrieve.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_GetTrigger_" data-uid="Quartz.Extensibility.IJobStore.GetTrigger*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_GetTrigger_Quartz_TriggerKey_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.GetTrigger(Quartz.TriggerKey,System.Threading.CancellationToken)">
+  GetTrigger(TriggerKey, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L325"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve the given <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;IOperableTrigger?&gt; GetTrigger(TriggerKey triggerKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>triggerKey</code> <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.Extensibility.IOperableTrigger.html">IOperableTrigger</a>&gt;</dt>
+    <dd><p>The desired <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>, or null if there is no
+match.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_GetTriggerState_" data-uid="Quartz.Extensibility.IJobStore.GetTriggerState*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_GetTriggerState_Quartz_TriggerKey_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.GetTriggerState(Quartz.TriggerKey,System.Threading.CancellationToken)">
+  GetTriggerState(TriggerKey, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L534"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the current state of the identified <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;TriggerState&gt; GetTriggerState(TriggerKey triggerKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>triggerKey</code> <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.TriggerState.html">TriggerState</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.TriggerState.html">TriggerState</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Extensibility_IJobStore_GetTriggers_" data-uid="Quartz.Extensibility.IJobStore.GetTriggers*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_GetTriggers_System_Collections_Generic_IReadOnlyCollection_Quartz_TriggerKey__System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.GetTriggers(System.Collections.Generic.IReadOnlyCollection{Quartz.TriggerKey},System.Threading.CancellationToken)">
+  GetTriggers(IReadOnlyCollection&lt;TriggerKey&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L520"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves the given triggers in one round trip. Keys that do not exist are simply
+absent from the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;List&lt;IOperableTrigger&gt;&gt; GetTriggers(IReadOnlyCollection&lt;TriggerKey&gt; triggerKeys, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>triggerKeys</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</dt>
+    <dd><p>The keys of the triggers to retrieve.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Quartz.Extensibility.IOperableTrigger.html">IOperableTrigger</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_GetTriggersForJob_" data-uid="Quartz.Extensibility.IJobStore.GetTriggersForJob*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_GetTriggersForJob_Quartz_JobKey_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.GetTriggersForJob(Quartz.JobKey,System.Threading.CancellationToken)">
+  GetTriggersForJob(JobKey, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L528"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get all the Triggers that are associated to the given Job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;List&lt;IOperableTrigger&gt;&gt; GetTriggersForJob(JobKey jobKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>jobKey</code> <a class="xref" href="Quartz.JobKey.html">JobKey</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Quartz.Extensibility.IOperableTrigger.html">IOperableTrigger</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IJobStore_GetTriggersForJob_Quartz_JobKey_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If there are no matches, a zero-length array should be returned.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_Initialize_" data-uid="Quartz.Extensibility.IJobStore.Initialize*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_Initialize_Quartz_Extensibility_SchedulerIdentity_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.Initialize(Quartz.Extensibility.SchedulerIdentity,System.Threading.CancellationToken)">
+  Initialize(SchedulerIdentity, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called before the <a class="xref" href="Quartz.Extensibility.IJobStore.html">IJobStore</a> is used, to give it a chance to initialize.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask Initialize(SchedulerIdentity identity, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>identity</code> <a class="xref" href="Quartz.Extensibility.SchedulerIdentity.html">SchedulerIdentity</a></dt>
+    <dd><p>The scheduler this store stores for, and the node it is running on. A
+store records the instance id against the firings this node owns, so that
+<a class="xref" href="Quartz.Extensibility.IJobStore.html#Quartz_Extensibility_IJobStore_QueryFireInstances_Quartz_FireInstanceQuery_System_Threading_CancellationToken_">QueryFireInstances(FireInstanceQuery, CancellationToken)</a> can say which node is running what.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IJobStore_Initialize_Quartz_Extensibility_SchedulerIdentity_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Nearly everything a job store needs — the type loader, the signaler, the time provider — is
+supplied through its constructor. What remains here is the scheduler's identity, which is not
+settled until the container has built the graph, and work that has to happen before the
+scheduler runs and cannot be done during construction, such as verifying a database schema.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_PauseAll_" data-uid="Quartz.Extensibility.IJobStore.PauseAll*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_PauseAll_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.PauseAll(System.Threading.CancellationToken)">
+  PauseAll(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L786"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pause all triggers - equivalent of calling <a class="xref" href="Quartz.Extensibility.IJobStore.html#Quartz_Extensibility_IJobStore_PauseTriggerGroups_Quartz_GroupMatcher_Quartz_TriggerKey__System_Threading_CancellationToken_">PauseTriggerGroups(GroupMatcher&lt;TriggerKey&gt;, CancellationToken)</a>
+on every group.</p>
+<p>
+When <a class="xref" href="Quartz.Extensibility.IJobStore.html#Quartz_Extensibility_IJobStore_ResumeAll_System_Threading_CancellationToken_">ResumeAll(CancellationToken)</a> is called (to un-pause), trigger misfire
+instructions WILL be applied.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask PauseAll(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.Extensibility.IJobStore.html#Quartz_Extensibility_IJobStore_ResumeAll_System_Threading_CancellationToken_">ResumeAll(CancellationToken)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Extensibility_IJobStore_PauseJob_" data-uid="Quartz.Extensibility.IJobStore.PauseJob*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_PauseJob_Quartz_JobKey_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.PauseJob(Quartz.JobKey,System.Threading.CancellationToken)">
+  PauseJob(JobKey, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L636"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pause the <a class="xref" href="Quartz.IJob.html">IJob</a> with the given key - by
+pausing all of its current <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;bool&gt; PauseJob(JobKey jobKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>jobKey</code> <a class="xref" href="Quartz.JobKey.html">JobKey</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the job exists — including a job that currently has no
+triggers — <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> if there is no job with the given key.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_PauseJobGroups_" data-uid="Quartz.Extensibility.IJobStore.PauseJobGroups*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_PauseJobGroups_Quartz_GroupMatcher_Quartz_JobKey__System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.PauseJobGroups(Quartz.GroupMatcher{Quartz.JobKey},System.Threading.CancellationToken)">
+  PauseJobGroups(GroupMatcher&lt;JobKey&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L671"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pause the job groups that match - by pausing all of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s of the
+<a class="xref" href="Quartz.IJob.html">IJob</a>s in them.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;List&lt;string&gt;&gt; PauseJobGroups(GroupMatcher&lt;JobKey&gt; matcher, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matcher</code> <a class="xref" href="Quartz.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
+    <dd><p>The names of the job groups that are recorded as paused by this call.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IJobStore_PauseJobGroups_Quartz_GroupMatcher_Quartz_JobKey__System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The JobStore should &quot;remember&quot; that the group is paused, and impose the
+pause on any new jobs that are added to the group while the group is
+paused. That memory is what this answers with — the names of the groups now recorded as
+paused, which is not the set of keys that moved: an equality matcher records a group that
+holds no job yet.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_PauseJobs_" data-uid="Quartz.Extensibility.IJobStore.PauseJobs*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_PauseJobs_System_Collections_Generic_IReadOnlyCollection_Quartz_JobKey__System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.PauseJobs(System.Collections.Generic.IReadOnlyCollection{Quartz.JobKey},System.Threading.CancellationToken)">
+  PauseJobs(IReadOnlyCollection&lt;JobKey&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L652"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pause the <a class="xref" href="Quartz.IJob.html">IJob</a>s with the given keys - by pausing all of their current
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;List&lt;JobKey&gt;&gt; PauseJobs(IReadOnlyCollection&lt;JobKey&gt; jobKeys, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>jobKeys</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;&gt;</dt>
+    <dd><p>The keys this call found, in the order they were given — a job with no triggers is found and
+so is present. A key that names no job is simply absent — the plural of the single-key
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">bool</a>, not a failure.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IJobStore_PauseJobs_System_Collections_Generic_IReadOnlyCollection_Quartz_JobKey__System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The default implementation walks the set one key at a time. A store overrides it to do the
+walk inside a single lock or connection scope; the answer must not change when it does.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.Extensibility.IJobStore.html#Quartz_Extensibility_IJobStore_PauseJob_Quartz_JobKey_System_Threading_CancellationToken_">PauseJob(JobKey, CancellationToken)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Extensibility_IJobStore_PauseTrigger_" data-uid="Quartz.Extensibility.IJobStore.PauseTrigger*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_PauseTrigger_Quartz_TriggerKey_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.PauseTrigger(Quartz.TriggerKey,System.Threading.CancellationToken)">
+  PauseTrigger(TriggerKey, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L593"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pause the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> with the given key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;bool&gt; PauseTrigger(TriggerKey triggerKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>triggerKey</code> <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the trigger exists and was moved into the paused state by this
+call, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> if there is no trigger with the given key, it was already
+paused, or it is in a state that cannot be paused (e.g. complete).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_PauseTriggerGroups_" data-uid="Quartz.Extensibility.IJobStore.PauseTriggerGroups*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_PauseTriggerGroups_Quartz_GroupMatcher_Quartz_TriggerKey__System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.PauseTriggerGroups(Quartz.GroupMatcher{Quartz.TriggerKey},System.Threading.CancellationToken)">
+  PauseTriggerGroups(GroupMatcher&lt;TriggerKey&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L626"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pause the trigger groups that match, and every <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> in them.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;List&lt;string&gt;&gt; PauseTriggerGroups(GroupMatcher&lt;TriggerKey&gt; matcher, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matcher</code> <a class="xref" href="Quartz.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
+    <dd><p>The names of the trigger groups that are recorded as paused by this call.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IJobStore_PauseTriggerGroups_Quartz_GroupMatcher_Quartz_TriggerKey__System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The JobStore should &quot;remember&quot; that the group is paused, and impose the
+pause on any new triggers that are added to the group while the group is
+paused. That memory is what this answers with — the names of the groups now recorded as
+paused, which is not the set of keys that moved: an equality matcher records a group that
+holds no trigger yet.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_PauseTriggers_" data-uid="Quartz.Extensibility.IJobStore.PauseTriggers*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_PauseTriggers_System_Collections_Generic_IReadOnlyCollection_Quartz_TriggerKey__System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.PauseTriggers(System.Collections.Generic.IReadOnlyCollection{Quartz.TriggerKey},System.Threading.CancellationToken)">
+  PauseTriggers(IReadOnlyCollection&lt;TriggerKey&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L608"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pause the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s with the given keys.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;List&lt;TriggerKey&gt;&gt; PauseTriggers(IReadOnlyCollection&lt;TriggerKey&gt; triggerKeys, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>triggerKeys</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;&gt;</dt>
+    <dd><p>The keys this call moved into the paused state, in the order they were given. A key that
+names no trigger, one that was already paused, and one in a state that cannot be paused are
+each simply absent — the plural of the single-key <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">bool</a>, not a failure.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IJobStore_PauseTriggers_System_Collections_Generic_IReadOnlyCollection_Quartz_TriggerKey__System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The default implementation walks the set one key at a time. A store overrides it to do the
+walk inside a single lock or connection scope; the answer must not change when it does.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.Extensibility.IJobStore.html#Quartz_Extensibility_IJobStore_PauseTrigger_Quartz_TriggerKey_System_Threading_CancellationToken_">PauseTrigger(TriggerKey, CancellationToken)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Extensibility_IJobStore_QueryCalendarNames_" data-uid="Quartz.Extensibility.IJobStore.QueryCalendarNames*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_QueryCalendarNames_Quartz_CalendarQuery_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.QueryCalendarNames(Quartz.CalendarQuery,System.Threading.CancellationToken)">
+  QueryCalendarNames(CalendarQuery, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L458"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lists calendar names matching the query, ordered by name (ordinal).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;PagedResult&lt;string&gt;&gt; QueryCalendarNames(CalendarQuery query, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>query</code> <a class="xref" href="Quartz.CalendarQuery.html">CalendarQuery</a></dt>
+    <dd><p>Which names to select and which page of them to return.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.PagedResult-1.html">PagedResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_QueryClusterNodes_" data-uid="Quartz.Extensibility.IJobStore.QueryClusterNodes*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_QueryClusterNodes_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.QueryClusterNodes(System.Threading.CancellationToken)">
+  QueryClusterNodes(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L504"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lists the scheduler nodes this store knows about, as <a class="xref" href="Quartz.ClusterNode.html">ClusterNode</a>s: the current
+node first, then the rest by instance id (ordinal).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;List&lt;ClusterNode&gt;&gt; QueryClusterNodes(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Quartz.ClusterNode.html">ClusterNode</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IJobStore_QueryClusterNodes_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The current node is always in the list, whether or not the store has a record of it yet, and it
+is the only one whose <a class="xref" href="Quartz.ClusterNode.html#Quartz_ClusterNode_IsCurrentNode">IsCurrentNode</a> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>. A
+store that keeps no check-in history — the in-memory one, and a persistent one that is not
+clustered — answers with that single node, <a class="xref" href="Quartz.ClusterNodeState.html#Quartz_ClusterNodeState_Alive">Alive</a> and with no
+times, because a lone node has nobody to be late for.
+</p>
+<p>
+A clustered store reports every node it has a check-in record for, including nodes that are
+dead but not yet swept, and decides <a class="xref" href="Quartz.ClusterNode.html#Quartz_ClusterNode_State">State</a> with the same predicate its
+recovery pass uses — so a node this listing calls
+<a class="xref" href="Quartz.ClusterNodeState.html#Quartz_ClusterNodeState_Failed">Failed</a> is a node whose work the cluster is about to take over,
+rather than one that merely looks late to a second opinion.
+</p>
+<p>
+Unpaged, because a cluster is a handful of nodes rather than a data set; the listing that does
+need paging is <a class="xref" href="Quartz.Extensibility.IJobStore.html#Quartz_Extensibility_IJobStore_QueryFireInstances_Quartz_FireInstanceQuery_System_Threading_CancellationToken_">QueryFireInstances(FireInstanceQuery, CancellationToken)</a>, which reports what each node is running.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_QueryFireInstances_" data-uid="Quartz.Extensibility.IJobStore.QueryFireInstances*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_QueryFireInstances_Quartz_FireInstanceQuery_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.QueryFireInstances(Quartz.FireInstanceQuery,System.Threading.CancellationToken)">
+  QueryFireInstances(FireInstanceQuery, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L477"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lists firings matching the query, as <a class="xref" href="Quartz.FireInstance.html">FireInstance</a>s, ordered by trigger group,
+then trigger name, then fire instance id (all ordinal).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;PagedResult&lt;FireInstance&gt;&gt; QueryFireInstances(FireInstanceQuery query, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>query</code> <a class="xref" href="Quartz.FireInstanceQuery.html">FireInstanceQuery</a></dt>
+    <dd><p>What to select and which page of it to return.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.PagedResult-1.html">PagedResult</a>&lt;<a class="xref" href="Quartz.FireInstance.html">FireInstance</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IJobStore_QueryFireInstances_Quartz_FireInstanceQuery_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The tiebreaker is what makes a page deterministic here: one trigger can have several firings in
+flight, so a store must not collapse them and must not order two of them arbitrarily.
+</p>
+<p>
+A store that keeps firings durably answers for the whole cluster; the in-memory store answers for
+its own process, which is the whole of its world. Either way the reported
+<a class="xref" href="Quartz.FireInstance.html#Quartz_FireInstance_SchedulerInstanceId">SchedulerInstanceId</a> is the id the owning node was initialized with.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_QueryJobGroups_" data-uid="Quartz.Extensibility.IJobStore.QueryJobGroups*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_QueryJobGroups_Quartz_JobGroupQuery_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.QueryJobGroups(Quartz.JobGroupQuery,System.Threading.CancellationToken)">
+  QueryJobGroups(JobGroupQuery, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L440"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lists job groups matching the query, ordered by name (ordinal).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;PagedResult&lt;JobGroup&gt;&gt; QueryJobGroups(JobGroupQuery query, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>query</code> <a class="xref" href="Quartz.JobGroupQuery.html">JobGroupQuery</a></dt>
+    <dd><p>What to select and which page of it to return.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.PagedResult-1.html">PagedResult</a>&lt;<a class="xref" href="Quartz.JobGroup.html">JobGroup</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_QueryJobs_" data-uid="Quartz.Extensibility.IJobStore.QueryJobs*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_QueryJobs_Quartz_JobQuery_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.QueryJobs(Quartz.JobQuery,System.Threading.CancellationToken)">
+  QueryJobs(JobQuery, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L420"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lists jobs matching the query, as <a class="xref" href="Quartz.JobHeader.html">JobHeader</a>s, ordered by group and
+then name (ordinal).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;PagedResult&lt;JobHeader&gt;&gt; QueryJobs(JobQuery query, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>query</code> <a class="xref" href="Quartz.JobQuery.html">JobQuery</a></dt>
+    <dd><p>What to select and which page of it to return.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.PagedResult-1.html">PagedResult</a>&lt;<a class="xref" href="Quartz.JobHeader.html">JobHeader</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IJobStore_QueryJobs_Quartz_JobQuery_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A listing must not load or deserialize job data. When the query sets
+<a class="xref" href="Quartz.PagedQuery.html#Quartz_PagedQuery_IncludeTotalCount">IncludeTotalCount</a>, the result carries the total number of
+matching jobs regardless of paging.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_QueryTriggerGroups_" data-uid="Quartz.Extensibility.IJobStore.QueryTriggerGroups*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_QueryTriggerGroups_Quartz_TriggerGroupQuery_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.QueryTriggerGroups(Quartz.TriggerGroupQuery,System.Threading.CancellationToken)">
+  QueryTriggerGroups(TriggerGroupQuery, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L451"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lists trigger groups matching the query, ordered by name (ordinal).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;PagedResult&lt;TriggerGroup&gt;&gt; QueryTriggerGroups(TriggerGroupQuery query, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>query</code> <a class="xref" href="Quartz.TriggerGroupQuery.html">TriggerGroupQuery</a></dt>
+    <dd><p>What to select and which page of it to return.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.PagedResult-1.html">PagedResult</a>&lt;<a class="xref" href="Quartz.TriggerGroup.html">TriggerGroup</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IJobStore_QueryTriggerGroups_Quartz_TriggerGroupQuery_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>With <a class="xref" href="Quartz.TriggerGroupQuery.html#Quartz_TriggerGroupQuery_Paused">Paused</a> set to true, the listing reports every
+paused group, including a group that is paused but currently has no triggers.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_QueryTriggers_" data-uid="Quartz.Extensibility.IJobStore.QueryTriggers*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_QueryTriggers_Quartz_TriggerQuery_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.QueryTriggers(Quartz.TriggerQuery,System.Threading.CancellationToken)">
+  QueryTriggers(TriggerQuery, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L433"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lists triggers matching the query, as <a class="xref" href="Quartz.TriggerHeader.html">TriggerHeader</a>s, ordered by group
+and then name (ordinal).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;PagedResult&lt;TriggerHeader&gt;&gt; QueryTriggers(TriggerQuery query, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>query</code> <a class="xref" href="Quartz.TriggerQuery.html">TriggerQuery</a></dt>
+    <dd><p>What to select and which page of it to return.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.PagedResult-1.html">PagedResult</a>&lt;<a class="xref" href="Quartz.TriggerHeader.html">TriggerHeader</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IJobStore_QueryTriggers_Quartz_TriggerQuery_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A listing must not materialize triggers or their job data. The header carries the
+trigger's current state and execution group, so listing callers need no further
+round trips.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_ReleaseAcquiredTrigger_" data-uid="Quartz.Extensibility.IJobStore.ReleaseAcquiredTrigger*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_ReleaseAcquiredTrigger_Quartz_Extensibility_IOperableTrigger_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.ReleaseAcquiredTrigger(Quartz.Extensibility.IOperableTrigger,System.Threading.CancellationToken)">
+  ReleaseAcquiredTrigger(IOperableTrigger, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L829"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Inform the <a class="xref" href="Quartz.Extensibility.IJobStore.html">IJobStore</a> that the scheduler no longer plans to
+fire the given <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>, that it had previously acquired
+(reserved).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask ReleaseAcquiredTrigger(IOperableTrigger trigger, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>trigger</code> <a class="xref" href="Quartz.Extensibility.IOperableTrigger.html">IOperableTrigger</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_ReplaceTrigger_" data-uid="Quartz.Extensibility.IJobStore.ReplaceTrigger*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_ReplaceTrigger_Quartz_TriggerKey_Quartz_Extensibility_IOperableTrigger_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.ReplaceTrigger(Quartz.TriggerKey,Quartz.Extensibility.IOperableTrigger,System.Threading.CancellationToken)">
+  ReplaceTrigger(TriggerKey, IOperableTrigger, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L303"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Remove (delete) the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> with the
+given name, and store the new given one - which must be associated
+with the same job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;bool&gt; ReplaceTrigger(TriggerKey triggerKey, IOperableTrigger trigger, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>triggerKey</code> <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></dt>
+    <dd><p>The <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> to be replaced.</p>
+</dd>
+    <dt><code>trigger</code> <a class="xref" href="Quartz.Extensibility.IOperableTrigger.html">IOperableTrigger</a></dt>
+    <dd><p>The new <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> to be stored.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> was stored under
+<code class="paramref">triggerKey</code> and has been replaced by <code class="paramref">trigger</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_ResetTriggerFromErrorState_" data-uid="Quartz.Extensibility.IJobStore.ResetTriggerFromErrorState*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_ResetTriggerFromErrorState_Quartz_TriggerKey_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.ResetTriggerFromErrorState(Quartz.TriggerKey,System.Threading.CancellationToken)">
+  ResetTriggerFromErrorState(TriggerKey, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L556"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reset the current state of the identified <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> from <a class="xref" href="Quartz.TriggerState.html#Quartz_TriggerState_Error">Error</a>
+to <a class="xref" href="Quartz.TriggerState.html#Quartz_TriggerState_Normal">Normal</a> or <a class="xref" href="Quartz.TriggerState.html#Quartz_TriggerState_Paused">Paused</a> as appropriate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;bool&gt; ResetTriggerFromErrorState(TriggerKey triggerKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>triggerKey</code> <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the trigger existed in the error state and was reset by this
+call, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> if there is no trigger with the given key or it was not
+in the error state.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IJobStore_ResetTriggerFromErrorState_Quartz_TriggerKey_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Only affects triggers that are in <a class="xref" href="Quartz.TriggerState.html#Quartz_TriggerState_Error">Error</a> state - if identified trigger is not
+in that state then the result is a no-op.
+</p>
+<p>
+The result will be the trigger returning to the normal, waiting to be fired state, unless the trigger's
+group has been paused, in which case it will go into the <a class="xref" href="Quartz.TriggerState.html#Quartz_TriggerState_Paused">Paused</a> state.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.TriggerState.html">TriggerState</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Extensibility_IJobStore_ResetTriggersFromErrorState_" data-uid="Quartz.Extensibility.IJobStore.ResetTriggersFromErrorState*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_ResetTriggersFromErrorState_System_Collections_Generic_IReadOnlyCollection_Quartz_TriggerKey__System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.ResetTriggersFromErrorState(System.Collections.Generic.IReadOnlyCollection{Quartz.TriggerKey},System.Threading.CancellationToken)">
+  ResetTriggersFromErrorState(IReadOnlyCollection&lt;TriggerKey&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L572"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reset every one of the identified <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s from <a class="xref" href="Quartz.TriggerState.html#Quartz_TriggerState_Error">Error</a>
+to <a class="xref" href="Quartz.TriggerState.html#Quartz_TriggerState_Normal">Normal</a> or <a class="xref" href="Quartz.TriggerState.html#Quartz_TriggerState_Paused">Paused</a> as appropriate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;List&lt;TriggerKey&gt;&gt; ResetTriggersFromErrorState(IReadOnlyCollection&lt;TriggerKey&gt; triggerKeys, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>triggerKeys</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;&gt;</dt>
+    <dd><p>The keys this call reset, in the order they were given. A key that names no trigger, or one
+that was not in the error state, is simply absent — the plural of the single-key
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">bool</a>, not a failure.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IJobStore_ResetTriggersFromErrorState_System_Collections_Generic_IReadOnlyCollection_Quartz_TriggerKey__System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The default implementation walks the set one key at a time. A store overrides it to do the
+walk inside a single lock or connection scope; the answer must not change when it does.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.Extensibility.IJobStore.html#Quartz_Extensibility_IJobStore_ResetTriggerFromErrorState_Quartz_TriggerKey_System_Threading_CancellationToken_">ResetTriggerFromErrorState(TriggerKey, CancellationToken)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Extensibility_IJobStore_ResumeAll_" data-uid="Quartz.Extensibility.IJobStore.ResumeAll*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_ResumeAll_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.ResumeAll(System.Threading.CancellationToken)">
+  ResumeAll(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L798"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resume (un-pause) all triggers - equivalent of calling <a class="xref" href="Quartz.Extensibility.IJobStore.html#Quartz_Extensibility_IJobStore_ResumeTriggerGroups_Quartz_GroupMatcher_Quartz_TriggerKey__System_Threading_CancellationToken_">ResumeTriggerGroups(GroupMatcher&lt;TriggerKey&gt;, CancellationToken)</a>
+on every group.</p>
+<p>
+If any <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> missed one or more fire-times, then the
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>'s misfire instruction will be applied.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask ResumeAll(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.Extensibility.IJobStore.html#Quartz_Extensibility_IJobStore_PauseAll_System_Threading_CancellationToken_">PauseAll(CancellationToken)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Extensibility_IJobStore_ResumeJob_" data-uid="Quartz.Extensibility.IJobStore.ResumeJob*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_ResumeJob_Quartz_JobKey_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.ResumeJob(Quartz.JobKey,System.Threading.CancellationToken)">
+  ResumeJob(JobKey, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L738"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resume (un-pause) the <a class="xref" href="Quartz.IJob.html">IJob</a> with the
+given key.</p>
+<p>
+If any of the <a class="xref" href="Quartz.IJob.html">IJob</a>'s<a class="xref" href="Quartz.ITrigger.html">ITrigger</a> s missed one
+or more fire-times, then the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>'s misfire
+instruction will be applied.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;bool&gt; ResumeJob(JobKey jobKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>jobKey</code> <a class="xref" href="Quartz.JobKey.html">JobKey</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the job exists — including a job that currently has no
+triggers — <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> if there is no job with the given key.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_ResumeJobGroups_" data-uid="Quartz.Extensibility.IJobStore.ResumeJobGroups*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_ResumeJobGroups_Quartz_GroupMatcher_Quartz_JobKey__System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.ResumeJobGroups(Quartz.GroupMatcher{Quartz.JobKey},System.Threading.CancellationToken)">
+  ResumeJobGroups(GroupMatcher&lt;JobKey&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L775"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resume (un-pause) the job groups that match, and the <a class="xref" href="Quartz.IJob.html">IJob</a>s in them.</p>
+<p>
+If any of the <a class="xref" href="Quartz.IJob.html">IJob</a> s had <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> s that
+missed one or more fire-times, then the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>'s
+misfire instruction will be applied.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;List&lt;string&gt;&gt; ResumeJobGroups(GroupMatcher&lt;JobKey&gt; matcher, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matcher</code> <a class="xref" href="Quartz.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
+    <dd><p>The names of the job groups this call resumed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_ResumeJobs_" data-uid="Quartz.Extensibility.IJobStore.ResumeJobs*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_ResumeJobs_System_Collections_Generic_IReadOnlyCollection_Quartz_JobKey__System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.ResumeJobs(System.Collections.Generic.IReadOnlyCollection{Quartz.JobKey},System.Threading.CancellationToken)">
+  ResumeJobs(IReadOnlyCollection&lt;JobKey&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L759"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resume (un-pause) the <a class="xref" href="Quartz.IJob.html">IJob</a>s with the given keys.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;List&lt;JobKey&gt;&gt; ResumeJobs(IReadOnlyCollection&lt;JobKey&gt; jobKeys, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>jobKeys</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;&gt;</dt>
+    <dd><p>The keys this call found, in the order they were given — a job with no triggers is found and
+so is present. A key that names no job is simply absent — the plural of the single-key
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">bool</a>, not a failure.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IJobStore_ResumeJobs_System_Collections_Generic_IReadOnlyCollection_Quartz_JobKey__System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+If any of the jobs' <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s missed one or more fire-times, then those
+triggers' misfire instructions will be applied.
+</p>
+<p>
+The default implementation walks the set one key at a time. A store overrides it to do the
+walk inside a single lock or connection scope; the answer must not change when it does.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.Extensibility.IJobStore.html#Quartz_Extensibility_IJobStore_ResumeJob_Quartz_JobKey_System_Threading_CancellationToken_">ResumeJob(JobKey, CancellationToken)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Extensibility_IJobStore_ResumeTrigger_" data-uid="Quartz.Extensibility.IJobStore.ResumeTrigger*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_ResumeTrigger_Quartz_TriggerKey_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.ResumeTrigger(Quartz.TriggerKey,System.Threading.CancellationToken)">
+  ResumeTrigger(TriggerKey, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L687"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resume (un-pause) the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> with the
+given key.</p>
+<p>
+If the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> missed one or more fire-times, then the
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>'s misfire instruction will be applied.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;bool&gt; ResumeTrigger(TriggerKey triggerKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>triggerKey</code> <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the trigger existed in a paused state and was resumed by this
+call, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> if there is no trigger with the given key or it was not
+paused.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_ResumeTriggerGroups_" data-uid="Quartz.Extensibility.IJobStore.ResumeTriggerGroups*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_ResumeTriggerGroups_Quartz_GroupMatcher_Quartz_TriggerKey__System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.ResumeTriggerGroups(Quartz.GroupMatcher{Quartz.TriggerKey},System.Threading.CancellationToken)">
+  ResumeTriggerGroups(GroupMatcher&lt;TriggerKey&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L723"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resume (un-pause) the trigger groups that match, and every <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> in them.</p>
+<p>
+If any <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> missed one or more fire-times, then the
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>'s misfire instruction will be applied.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;List&lt;string&gt;&gt; ResumeTriggerGroups(GroupMatcher&lt;TriggerKey&gt; matcher, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matcher</code> <a class="xref" href="Quartz.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
+    <dd><p>The names of the trigger groups this call resumed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_ResumeTriggers_" data-uid="Quartz.Extensibility.IJobStore.ResumeTriggers*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_ResumeTriggers_System_Collections_Generic_IReadOnlyCollection_Quartz_TriggerKey__System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.ResumeTriggers(System.Collections.Generic.IReadOnlyCollection{Quartz.TriggerKey},System.Threading.CancellationToken)">
+  ResumeTriggers(IReadOnlyCollection&lt;TriggerKey&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L708"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resume (un-pause) the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s with the given keys.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;List&lt;TriggerKey&gt;&gt; ResumeTriggers(IReadOnlyCollection&lt;TriggerKey&gt; triggerKeys, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>triggerKeys</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;&gt;</dt>
+    <dd><p>The keys this call resumed, in the order they were given. A key that names no trigger, and
+one that was not paused, are each simply absent — the plural of the single-key
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">bool</a>, not a failure.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IJobStore_ResumeTriggers_System_Collections_Generic_IReadOnlyCollection_Quartz_TriggerKey__System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+If a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> missed one or more fire-times, then its misfire instruction
+will be applied.
+</p>
+<p>
+The default implementation walks the set one key at a time. A store overrides it to do the
+walk inside a single lock or connection scope; the answer must not change when it does.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.Extensibility.IJobStore.html#Quartz_Extensibility_IJobStore_ResumeTrigger_Quartz_TriggerKey_System_Threading_CancellationToken_">ResumeTrigger(TriggerKey, CancellationToken)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Extensibility_IJobStore_ScheduleJob_" data-uid="Quartz.Extensibility.IJobStore.ScheduleJob*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_ScheduleJob_Quartz_IJobDetail_Quartz_Extensibility_IOperableTrigger_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.ScheduleJob(Quartz.IJobDetail,Quartz.Extensibility.IOperableTrigger,System.Threading.CancellationToken)">
+  ScheduleJob(IJobDetail, IOperableTrigger, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Store the given <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> and <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask ScheduleJob(IJobDetail job, IOperableTrigger trigger, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>job</code> <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></dt>
+    <dd><p>The <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> to be stored.</p>
+</dd>
+    <dt><code>trigger</code> <a class="xref" href="Quartz.Extensibility.IOperableTrigger.html">IOperableTrigger</a></dt>
+    <dd><p>The <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> to be stored.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ObjectAlreadyExistsException.html">ObjectAlreadyExistsException</a></dt>
+    <dd><p>A job or a trigger is already stored under one of the two keys. Nothing is stored.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_ScheduleJobs_" data-uid="Quartz.Extensibility.IJobStore.ScheduleJobs*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_ScheduleJobs_System_Collections_Generic_IReadOnlyDictionary_Quartz_IJobDetail_System_Collections_Generic_IReadOnlyCollection_Quartz_Extensibility_IOperableTrigger___Quartz_ScheduleJobOptions_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.ScheduleJobs(System.Collections.Generic.IReadOnlyDictionary{Quartz.IJobDetail,System.Collections.Generic.IReadOnlyCollection{Quartz.Extensibility.IOperableTrigger}},Quartz.ScheduleJobOptions,System.Threading.CancellationToken)">
+  ScheduleJobs(IReadOnlyDictionary&lt;IJobDetail, IReadOnlyCollection&lt;IOperableTrigger&gt;&gt;, ScheduleJobOptions, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Store all the given jobs with their related triggers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask ScheduleJobs(IReadOnlyDictionary&lt;IJobDetail, IReadOnlyCollection&lt;IOperableTrigger&gt;&gt; triggersAndJobs, ScheduleJobOptions options = default, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>triggersAndJobs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Quartz.Extensibility.IOperableTrigger.html">IOperableTrigger</a>&gt;&gt;</dt>
+    <dd><p>The jobs to store, each with the triggers that fire it. <a class="xref" href="Quartz.Extensibility.IOperableTrigger.html">IOperableTrigger</a>,
+like the rest of the store contract — the scheduler validates and downcasts the caller's
+triggers before they reach the store.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Quartz.ScheduleJobOptions.html">ScheduleJobOptions</a></dt>
+    <dd><p>How to store them. <a class="xref" href="Quartz.ScheduleJobOptions.html#Quartz_ScheduleJobOptions_Replace">Replace</a> over-writes any job or trigger
+already stored under one of the same keys; without it, a key that exists throws
+<a class="xref" href="Quartz.ObjectAlreadyExistsException.html">ObjectAlreadyExistsException</a> and none of the batch is stored.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ObjectAlreadyExistsException.html">ObjectAlreadyExistsException</a></dt>
+    <dd><p>A key in the batch is already stored and <a class="xref" href="Quartz.ScheduleJobOptions.html#Quartz_ScheduleJobOptions_Replace">Replace</a> was not
+asked for. None of the batch is stored.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_SchedulerPaused_" data-uid="Quartz.Extensibility.IJobStore.SchedulerPaused*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_SchedulerPaused_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.SchedulerPaused(System.Threading.CancellationToken)">
+  SchedulerPaused(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the QuartzScheduler to inform the JobStore that
+the scheduler has been paused.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask SchedulerPaused(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_SchedulerResumed_" data-uid="Quartz.Extensibility.IJobStore.SchedulerResumed*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_SchedulerResumed_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.SchedulerResumed(System.Threading.CancellationToken)">
+  SchedulerResumed(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the QuartzScheduler to inform the JobStore that
+the scheduler has resumed after being paused.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask SchedulerResumed(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_SchedulerStarted_" data-uid="Quartz.Extensibility.IJobStore.SchedulerStarted*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_SchedulerStarted_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.SchedulerStarted(System.Threading.CancellationToken)">
+  SchedulerStarted(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the QuartzScheduler to inform the <a class="xref" href="Quartz.Extensibility.IJobStore.html">IJobStore</a> that
+the scheduler has started.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask SchedulerStarted(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_Shutdown_" data-uid="Quartz.Extensibility.IJobStore.Shutdown*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_Shutdown_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.Shutdown(System.Threading.CancellationToken)">
+  Shutdown(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the QuartzScheduler to inform the <a class="xref" href="Quartz.Extensibility.IJobStore.html">IJobStore</a> that
+it should free up all of its resources because the scheduler is shutting down.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask Shutdown(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_TriggeredJobComplete_" data-uid="Quartz.Extensibility.IJobStore.TriggeredJobComplete*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_TriggeredJobComplete_Quartz_Extensibility_IOperableTrigger_Quartz_IJobDetail_Quartz_SchedulerInstruction_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.TriggeredJobComplete(Quartz.Extensibility.IOperableTrigger,Quartz.IJobDetail,Quartz.SchedulerInstruction,System.Threading.CancellationToken)">
+  TriggeredJobComplete(IOperableTrigger, IJobDetail, SchedulerInstruction, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L851"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Inform the <a class="xref" href="Quartz.Extensibility.IJobStore.html">IJobStore</a> that the scheduler has completed the
+firing of the given <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> (and the execution its
+associated <a class="xref" href="Quartz.IJob.html">IJob</a>), and that the <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>
+in the given <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> should be updated if the <a class="xref" href="Quartz.IJob.html">IJob</a>
+is stateful.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask TriggeredJobComplete(IOperableTrigger trigger, IJobDetail jobDetail, SchedulerInstruction triggerInstructionCode, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>trigger</code> <a class="xref" href="Quartz.Extensibility.IOperableTrigger.html">IOperableTrigger</a></dt>
+    <dd></dd>
+    <dt><code>jobDetail</code> <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></dt>
+    <dd></dd>
+    <dt><code>triggerInstructionCode</code> <a class="xref" href="Quartz.SchedulerInstruction.html">SchedulerInstruction</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_TriggersFired_" data-uid="Quartz.Extensibility.IJobStore.TriggersFired*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_TriggersFired_System_Collections_Generic_IReadOnlyCollection_Quartz_Extensibility_IOperableTrigger__System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.TriggersFired(System.Collections.Generic.IReadOnlyCollection{Quartz.Extensibility.IOperableTrigger},System.Threading.CancellationToken)">
+  TriggersFired(IReadOnlyCollection&lt;IOperableTrigger&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L842"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Inform the <a class="xref" href="Quartz.Extensibility.IJobStore.html">IJobStore</a> that the scheduler is now firing the
+given <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> (executing its associated <a class="xref" href="Quartz.IJob.html">IJob</a>),
+that it had previously acquired (reserved).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;List&lt;TriggerFiredResult&gt;&gt; TriggersFired(IReadOnlyCollection&lt;IOperableTrigger&gt; triggers, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>triggers</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Quartz.Extensibility.IOperableTrigger.html">IOperableTrigger</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Quartz.Extensibility.TriggerFiredResult.html">TriggerFiredResult</a>&gt;&gt;</dt>
+    <dd><p>May return null if all the triggers or their calendars no longer exist, or
+if the trigger was not successfully put into the 'executing'
+state.  Preference is to return an empty list if none of the triggers
+could be fired.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IJobStore_UpdateTriggerDetails_" data-uid="Quartz.Extensibility.IJobStore.UpdateTriggerDetails*"></a>
+
+  <h3 id="Quartz_Extensibility_IJobStore_UpdateTriggerDetails_Quartz_TriggerKey_Quartz_TriggerDetailsUpdate_System_Threading_CancellationToken_" data-uid="Quartz.Extensibility.IJobStore.UpdateTriggerDetails(Quartz.TriggerKey,Quartz.TriggerDetailsUpdate,System.Threading.CancellationToken)">
+  UpdateTriggerDetails(TriggerKey, TriggerDetailsUpdate, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L316"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updates trigger metadata and selected settings without deleting/recreating
+the trigger and without resetting fire times or trigger state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;bool&gt; UpdateTriggerDetails(TriggerKey triggerKey, TriggerDetailsUpdate update, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>triggerKey</code> <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></dt>
+    <dd><p>The key identifying the trigger to update.</p>
+</dd>
+    <dt><code>update</code> <a class="xref" href="Quartz.TriggerDetailsUpdate.html">TriggerDetailsUpdate</a></dt>
+    <dd><p>The details to update. Only properties explicitly set will be changed.
+May include the calendar name and the misfire instruction, which can affect firing behavior.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the trigger was found and updated, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> if not found.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 id="seealso">See Also</h2>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></div>
+      <div><a class="xref" href="Quartz.IJob.html">IJob</a></div>
+      <div><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></div>
+      <div><a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a></div>
+      <div><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></div>
+  </div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IJobStore.cs/#L41" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

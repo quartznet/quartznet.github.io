@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DailyTimeIntervalTriggerImpl | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DailyTimeIntervalTriggerImpl | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="A concrete implementation of DailyTimeIntervalTrigger that is used to fire a  based upon daily repeating time intervals.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl.md&amp;value=---%0Auid%3A%20Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl">
+
+
+
+  <h1 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl" class="text-break">
+Class DailyTimeIntervalTriggerImpl  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<a class="xref" href="Quartz.Impl.html">Impl</a>.<a class="xref" href="Quartz.Impl.Triggers.html">Triggers</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A concrete implementation of DailyTimeIntervalTrigger that is used to fire a <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>
+based upon daily repeating time intervals.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Serializable]
+public class DailyTimeIntervalTriggerImpl : TriggerBase, IOperableTrigger, IMutableTrigger, IEquatable&lt;TriggerBase&gt;, IDailyTimeIntervalTrigger, ITrigger</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html">TriggerBase</a></div>
+      <div><span class="xref">DailyTimeIntervalTriggerImpl</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Quartz.Extensibility.IOperableTrigger.html">IOperableTrigger</a></div>
+      <div><a class="xref" href="Quartz.Extensibility.IMutableTrigger.html">IMutableTrigger</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html">TriggerBase</a>&gt;</div>
+      <div><a class="xref" href="Quartz.IDailyTimeIntervalTrigger.html">IDailyTimeIntervalTrigger</a></div>
+      <div><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_Key">TriggerBase.Key</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_JobKey">TriggerBase.JobKey</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_GetTriggerBuilder">TriggerBase.GetTriggerBuilder()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_Description">TriggerBase.Description</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_CalendarName">TriggerBase.CalendarName</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_ExecutionGroup">TriggerBase.ExecutionGroup</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_PreferredNode">TriggerBase.PreferredNode</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_RetryPolicy">TriggerBase.RetryPolicy</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_RetryAttempt">TriggerBase.RetryAttempt</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_JobDataMap">TriggerBase.JobDataMap</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_MisfireInstructionCode">TriggerBase.MisfireInstructionCode</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_FireInstanceId">TriggerBase.FireInstanceId</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_Priority">TriggerBase.Priority</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_ExecutionComplete_Quartz_IJobExecutionContext_Quartz_JobExecutionException_">TriggerBase.ExecutionComplete(IJobExecutionContext, JobExecutionException)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_HasAdditionalProperties">TriggerBase.HasAdditionalProperties</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_ToString">TriggerBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_Equals_System_Object_">TriggerBase.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_Equals_Quartz_Impl_Triggers_TriggerBase_">TriggerBase.Equals(TriggerBase)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_GetHashCode">TriggerBase.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_Clone">TriggerBase.Clone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+The trigger will fire every N (<a class="xref" href="Quartz.IDailyTimeIntervalTrigger.html#Quartz_IDailyTimeIntervalTrigger_RepeatInterval">RepeatInterval</a> ) seconds, minutes or hours
+(see <a class="xref" href="Quartz.IDailyTimeIntervalTrigger.html#Quartz_IDailyTimeIntervalTrigger_RepeatInterval">RepeatInterval</a>) during a given time window on specified days of the week.
+</p>
+<p>
+For example#1, a trigger can be set to fire every 72 minutes between 8:00 and 11:00 everyday. It's fire times would
+be 8:00, 9:12, 10:24, then next day would repeat: 8:00, 9:12, 10:24 again.
+</p>
+<p>
+For example#2, a trigger can be set to fire every 23 minutes between 9:20 and 16:47 Monday through Friday.
+</p>
+<p>
+On each day, the starting fire time is reset to startTimeOfDay value, and then it will add repeatInterval value to it until
+the endTimeOfDay is reached. If you set daysOfWeek values, then fire time will only occur during those week days period. Again,
+remember this trigger will reset fire time each day with startTimeOfDay, regardless of your interval or endTimeOfDay!
+</p>
+<p>
+The default values for fields if not set are: startTimeOfDay defaults to 00:00:00, the endTimeOfDay default to 23:59:59,
+and daysOfWeek is default to every day. The startTime default to current time-stamp now, while endTime has not value.
+</p>
+<p>
+If startTime is before startTimeOfDay, then startTimeOfDay will be used and startTime has no affect other than to specify
+the first day of firing. Else if startTime is  after startTimeOfDay, then the first fire time for that day will be the next
+interval after the startTime. For example, if you set startingTimeOfDay=9am, endingTimeOfDay=11am, interval=15 mins, and startTime=9:33am,
+then the next fire time will be 9:45pm. Note also that if you do not set startTime value, the trigger builder will default to current time, and current time
+maybe before or after the startTimeOfDay! So be aware how you set your startTime.
+</p>
+<p>
+This trigger also supports a "repeatCount" feature to limit the number of times the trigger
+fires per day. Setting repeatCount=0 means the trigger will fire once per day at startTimeOfDay.
+Setting repeatCount=N means the trigger will fire N+1 times per day (the initial fire plus N
+repeats), then advance to the next valid day and repeat. Unlike SimpleTrigger which uses
+repeatCount as a global total, DailyTimeIntervalTrigger applies repeatCount per day. The
+default value of repeatCount is set to REPEAT_INDEFINITELY.
+</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl__ctor_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.#ctor*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl__ctor_System_TimeProvider_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.#ctor(System.TimeProvider)">
+  DailyTimeIntervalTriggerImpl(TimeProvider?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a  <a class="xref" href="Quartz.IDailyTimeIntervalTrigger.html">IDailyTimeIntervalTrigger</a> with no settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DailyTimeIntervalTriggerImpl(TimeProvider? timeProvider = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeprovider">TimeProvider</a></dt>
+    <dd><p>Time provider instance to use, defaults to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeprovider.system">System</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl__ctor_System_TimeProvider__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Everything this trigger needs is a settable property, so the object-initializer form
+<code>new DailyTimeIntervalTriggerImpl { Key = ..., StartTimeOfDay = ..., EndTimeOfDay = ... }</code>
+replaces the constructor overloads that used to spell out each combination.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_RepeatIndefinitely" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.RepeatIndefinitely">
+  RepeatIndefinitely
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Used to indicate the 'repeat count' of the trigger is indefinite. Or in
+other words, the trigger should repeat continually until the trigger's
+ending timestamp.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int RepeatIndefinitely = -1</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_DaysOfWeek_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.DaysOfWeek*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_DaysOfWeek" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.DaysOfWeek">
+  DaysOfWeek
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L898"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The days of the week upon which to fire.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;DayOfWeek&gt; DaysOfWeek { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dayofweek">DayOfWeek</a>&gt;</dt>
+    <dd><p>A Set containing the integers representing the days of the week, per the values 0-6 as defined by
+DayOfWees.Sunday - DayOfWeek.Saturday.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_EndTimeOfDay_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.EndTimeOfDay*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_EndTimeOfDay" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.EndTimeOfDay">
+  EndTimeOfDay
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L951"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The time of day to complete firing at the given interval. Defaults to <code>23:59:59</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeOnly EndTimeOfDay { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeonly">TimeOnly</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The value carries precision finer than a whole second, or it comes before <a class="xref" href="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.html#Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_StartTimeOfDay">StartTimeOfDay</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_EndTimeUtc_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.EndTimeUtc*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_EndTimeUtc" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.EndTimeUtc">
+  EndTimeUtc
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>the time at which the <a class="xref" href="Quartz.IDailyTimeIntervalTrigger.html">IDailyTimeIntervalTrigger</a> should quit repeating, rounded
+down to the whole second.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DateTimeOffset? EndTimeUtc { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_EndTimeUtc_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><summary>
+This trigger's boundary times carry no sub-second part, the way <code>CronTriggerImpl</code>'s start
+time does not: <a class="xref" href="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.html#Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_GetFireTimeAfter_System_Nullable_System_DateTimeOffset__">GetFireTimeAfter(DateTimeOffset?)</a> counts whole seconds from the start of the day,
+so a start time of <code>22:50:00.68</code> truncated to 74100 seconds after a 02:15 start-of-day
+landed exactly on a 5-minute boundary and produced a first fire time of <code>22:50:00.000</code> —
+before the trigger's own start.
+</summary>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_FinalFireTimeUtc_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.FinalFireTimeUtc*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_FinalFireTimeUtc" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.FinalFireTimeUtc">
+  FinalFireTimeUtc
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L824"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the final time at which the <a class="xref" href="Quartz.IDailyTimeIntervalTrigger.html">IDailyTimeIntervalTrigger</a> will
+fire, if there is no end time set, null will be returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DateTimeOffset? FinalFireTimeUtc { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_FinalFireTimeUtc_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Note that the return time may be in the past.</p>
+<p>
+Unlike the other shipped trigger types this is the last instant at which the trigger may
+fire rather than a fire time its schedule produces: neither <a class="xref" href="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.html#Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_EndTimeUtc">EndTimeUtc</a> nor
+<a class="xref" href="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.html#Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_EndTimeOfDay">EndTimeOfDay</a> has to land on a repeat of the interval. It is never past
+<a class="xref" href="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.html#Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_EndTimeUtc">EndTimeUtc</a>, which is where every trigger's firing stops.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_HasMillisecondPrecision_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.HasMillisecondPrecision*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_HasMillisecondPrecision" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.HasMillisecondPrecision">
+  HasMillisecondPrecision
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L995"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tells whether this Trigger instance can handle events
+in millisecond precision.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool HasMillisecondPrecision { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_MayFireAgain_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.MayFireAgain*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_MayFireAgain" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.MayFireAgain">
+  MayFireAgain
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L849"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether or not the <a class="xref" href="Quartz.IDailyTimeIntervalTrigger.html">IDailyTimeIntervalTrigger</a> will occur
+again.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool MayFireAgain { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_MisfireInstruction_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.MisfireInstruction*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_MisfireInstruction" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.MisfireInstruction">
+  MisfireInstruction
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L998"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>What the scheduler does when this trigger misses a firing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DailyTimeIntervalTriggerMisfireInstruction MisfireInstruction { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.DailyTimeIntervalTriggerMisfireInstruction.html">DailyTimeIntervalTriggerMisfireInstruction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.DailyTimeIntervalScheduleBuilder.html#Quartz_DailyTimeIntervalScheduleBuilder_WithMisfireInstruction_Quartz_DailyTimeIntervalTriggerMisfireInstruction_">WithMisfireInstruction</a>(<a class="xref" href="Quartz.DailyTimeIntervalTriggerMisfireInstruction.html">DailyTimeIntervalTriggerMisfireInstruction</a>)</div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_NextFireTimeUtc_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.NextFireTimeUtc*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_NextFireTimeUtc" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.NextFireTimeUtc">
+  NextFireTimeUtc
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L525"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the next time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> is scheduled to fire. If
+the trigger will not fire again, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> will be returned.  Note that
+the time returned can possibly be in the past, if the time that was computed
+for the trigger to next fire has already arrived, but the scheduler has not yet
+been able to fire the trigger (which would likely be due to lack of resources
+e.g. threads).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DateTimeOffset? NextFireTimeUtc { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_NextFireTimeUtc_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The value returned is not guaranteed to be valid until after the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+has been added to the scheduler.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_PreviousFireTimeUtc_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.PreviousFireTimeUtc*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_PreviousFireTimeUtc" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.PreviousFireTimeUtc">
+  PreviousFireTimeUtc
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L531"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the previous time at which the <a class="xref" href="Quartz.ICalendarIntervalTrigger.html">ICalendarIntervalTrigger</a> fired.
+If the trigger has not yet fired, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> will be returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DateTimeOffset? PreviousFireTimeUtc { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_RepeatCount_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.RepeatCount*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_RepeatCount" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.RepeatCount">
+  RepeatCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the number of times per day this trigger should repeat.
+Setting to 0 means fire once per day; setting to N means fire N+1 times per day.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RepeatCount { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_RepeatInterval_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.RepeatInterval*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_RepeatInterval" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.RepeatInterval">
+  RepeatInterval
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L252"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>the time interval that will be added to the <a class="xref" href="Quartz.IDailyTimeIntervalTrigger.html">IDailyTimeIntervalTrigger</a>'s
+fire time (in the set repeat interval unit) in order to calculate the time of the
+next trigger repeat.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RepeatInterval { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_RepeatIntervalUnit_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.RepeatIntervalUnit*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_RepeatIntervalUnit" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.RepeatIntervalUnit">
+  RepeatIntervalUnit
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L231"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>the interval unit - the time unit on with the interval applies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IntervalUnit RepeatIntervalUnit { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IntervalUnit.html">IntervalUnit</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_RepeatIntervalUnit_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The repeat interval unit. The only intervals that are valid for this type of trigger are
+<a class="xref" href="Quartz.IntervalUnit.html#Quartz_IntervalUnit_Second">Second</a>, <a class="xref" href="Quartz.IntervalUnit.html#Quartz_IntervalUnit_Minute">Minute</a>, and <a class="xref" href="Quartz.IntervalUnit.html#Quartz_IntervalUnit_Hour">Hour</a>.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_StartTimeOfDay_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.StartTimeOfDay*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_StartTimeOfDay" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.StartTimeOfDay">
+  StartTimeOfDay
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L929"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The time of day to start firing at the given interval. Defaults to <code>00:00:00</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeOnly StartTimeOfDay { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeonly">TimeOnly</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The value carries precision finer than a whole second, or it comes after <a class="xref" href="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.html#Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_EndTimeOfDay">EndTimeOfDay</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_StartTimeUtc_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.StartTimeUtc*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_StartTimeUtc" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.StartTimeUtc">
+  StartTimeUtc
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The time at which the <a class="xref" href="Quartz.IDailyTimeIntervalTrigger.html">IDailyTimeIntervalTrigger</a> should occur, rounded down to
+the whole second.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DateTimeOffset StartTimeUtc { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_StartTimeUtc_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><summary>
+This trigger's boundary times carry no sub-second part, the way <code>CronTriggerImpl</code>'s start
+time does not: <a class="xref" href="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.html#Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_GetFireTimeAfter_System_Nullable_System_DateTimeOffset__">GetFireTimeAfter(DateTimeOffset?)</a> counts whole seconds from the start of the day,
+so a start time of <code>22:50:00.68</code> truncated to 74100 seconds after a 02:15 start-of-day
+landed exactly on a 5-minute boundary and produced a first fire time of <code>22:50:00.000</code> —
+before the trigger's own start.
+</summary>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_TimeZone_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.TimeZone*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_TimeZone" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.TimeZone">
+  TimeZone
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L273"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the time zone within which time calculations related to this trigger will be performed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeZoneInfo TimeZone { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timezoneinfo">TimeZoneInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_TimeZone_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If null, the system default TimeZone will be used.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_TimesTriggered_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.TimesTriggered*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_TimesTriggered" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.TimesTriggered">
+  TimesTriggered
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L270"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>the number of times the <a class="xref" href="Quartz.IDailyTimeIntervalTrigger.html">IDailyTimeIntervalTrigger</a> has already
+fired.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int TimesTriggered { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_ComputeFirstFireTimeUtc_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.ComputeFirstFireTimeUtc*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_ComputeFirstFireTimeUtc_Quartz_ICalendar_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.ComputeFirstFireTimeUtc(Quartz.ICalendar)">
+  ComputeFirstFireTimeUtc(ICalendar?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L483"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method should not be used by the Quartz client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DateTimeOffset? ComputeFirstFireTimeUtc(ICalendar? calendar)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>calendar</code> <a class="xref" href="Quartz.ICalendar.html">ICalendar</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd><p>The first time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> will be fired
+by the scheduler, which is also the same value <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_NextFireTimeUtc">NextFireTimeUtc</a>
+will return (until after the first firing of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_ComputeFirstFireTimeUtc_Quartz_ICalendar__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Called by the scheduler at the time a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> is first
+added to the scheduler, in order to have the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+compute its first fire time, based on any associated calendar.
+</p>
+<p>
+After this method has been called, <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_NextFireTimeUtc">NextFireTimeUtc</a>
+should return a valid answer.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_GetFireTimeAfter_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.GetFireTimeAfter*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_GetFireTimeAfter_System_Nullable_System_DateTimeOffset__" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.GetFireTimeAfter(System.Nullable{System.DateTimeOffset})">
+  GetFireTimeAfter(DateTimeOffset?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L542"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the next time at which the <a class="xref" href="Quartz.IDailyTimeIntervalTrigger.html">IDailyTimeIntervalTrigger</a> will
+fire, after the given time. If the trigger will not fire after the given
+time, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> will be returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DateTimeOffset? GetFireTimeAfter(DateTimeOffset? afterTime)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>afterTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_GetFireTimeAfter_System_Nullable_System_DateTimeOffset___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A fire time that lands exactly on <a class="xref" href="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.html#Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_EndTimeUtc">EndTimeUtc</a> is one the trigger fires: the
+end time is the last instant at which a trigger may fire.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_GetScheduleBuilder_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.GetScheduleBuilder*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_GetScheduleBuilder" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.GetScheduleBuilder">
+  GetScheduleBuilder()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L972"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get a <a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a> that is configured to produce a
+schedule identical to this trigger's schedule.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IScheduleBuilder GetScheduleBuilder()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_RetryFired_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.RetryFired*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_RetryFired_Quartz_ICalendar_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.RetryFired(Quartz.ICalendar)">
+  RetryFired(ICalendar?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L407"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method should not be used by the Quartz client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void RetryFired(ICalendar? calendar)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>calendar</code> <a class="xref" href="Quartz.ICalendar.html">ICalendar</a></dt>
+    <dd><p>The calendar the trigger observes, if any.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_RetryFired_Quartz_ICalendar__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Called by a job store when it is firing a retry rather than a scheduled occurrence — that is,
+when the trigger's next fire time is a retry instant <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_ExecutionComplete_Quartz_IJobExecutionContext_Quartz_JobExecutionException_">ExecutionComplete(IJobExecutionContext, JobExecutionException?)</a> put
+there. It advances <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_NextFireTimeUtc">NextFireTimeUtc</a> past the retry to the occurrence the
+schedule actually calls for, applying the trigger's calendar exactly as
+<a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_Triggered_Quartz_ICalendar_">Triggered(ICalendar?)</a> does.
+</p>
+<p>
+Unlike <a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_Triggered_Quartz_ICalendar_">Triggered(ICalendar?)</a> it touches no counter and does not move
+<a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_PreviousFireTimeUtc">PreviousFireTimeUtc</a>: a retry is another attempt at an occurrence that has
+already been counted, so it must not burn a repeat count or a recurrence rule's <code>COUNT</code>
+slot, and it reports the original occurrence as its scheduled fire time.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.Impl.Triggers.TriggerBase.html#Quartz_Impl_Triggers_TriggerBase_Triggered_Quartz_ICalendar_">Triggered</a>(<a class="xref" href="Quartz.ICalendar.html">ICalendar</a>)</div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_Triggered_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.Triggered*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_Triggered_Quartz_ICalendar_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.Triggered(Quartz.ICalendar)">
+  Triggered(ICalendar?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L371"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the scheduler has decided to 'fire'
+the trigger (execute the associated job), in order to
+give the trigger a chance to update itself for its next
+triggering (if any).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Triggered(ICalendar? calendar)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>calendar</code> <a class="xref" href="Quartz.ICalendar.html">ICalendar</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_UpdateAfterMisfire_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.UpdateAfterMisfire*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_UpdateAfterMisfire_Quartz_ICalendar_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.UpdateAfterMisfire(Quartz.ICalendar)">
+  UpdateAfterMisfire(ICalendar?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L319"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updates the <a class="xref" href="Quartz.ICalendarIntervalTrigger.html">ICalendarIntervalTrigger</a>'s state based on the
+MisfireInstruction.XXX that was selected when the <a class="xref" href="Quartz.IDailyTimeIntervalTrigger.html">IDailyTimeIntervalTrigger</a>
+was created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void UpdateAfterMisfire(ICalendar? calendar)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>calendar</code> <a class="xref" href="Quartz.ICalendar.html">ICalendar</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_UpdateAfterMisfire_Quartz_ICalendar__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If the misfire instruction is set to
+<a class="xref" href="Quartz.DailyTimeIntervalTriggerMisfireInstruction.html#Quartz_DailyTimeIntervalTriggerMisfireInstruction_SmartPolicy">SmartPolicy</a>, then the following
+scheme will be used:</p>
+<ul>
+    <li>The instruction will be interpreted as <a class="xref" href="Quartz.DailyTimeIntervalTriggerMisfireInstruction.html#Quartz_DailyTimeIntervalTriggerMisfireInstruction_FireAndProceed">FireAndProceed</a></li>
+</ul>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_UpdateWithNewCalendar_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.UpdateWithNewCalendar*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_UpdateWithNewCalendar_Quartz_ICalendar_System_TimeSpan_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.UpdateWithNewCalendar(Quartz.ICalendar,System.TimeSpan)">
+  UpdateWithNewCalendar(ICalendar, TimeSpan)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L427"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Moves the next fire time past whatever the calendar now excludes, so that a calendar added or
+changed after the trigger was stored takes effect on its next firing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void UpdateWithNewCalendar(ICalendar calendar, TimeSpan misfireThreshold)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>calendar</code> <a class="xref" href="Quartz.ICalendar.html">ICalendar</a></dt>
+    <dd><p>The calendar the trigger is now to observe.</p>
+</dd>
+    <dt><code>misfireThreshold</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>How far into the past a computed fire time may be before it counts as a misfire rather than as a
+firing that is merely late.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_Validate_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.Validate*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_Validate" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.Validate">
+  Validate()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L855"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Validates whether the properties of the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> are
+valid for submission into a <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Validate()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_ValidateMisfireInstruction_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.ValidateMisfireInstruction*"></a>
+
+  <h3 id="Quartz_Impl_Triggers_DailyTimeIntervalTriggerImpl_ValidateMisfireInstruction_System_Int32_" data-uid="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.ValidateMisfireInstruction(System.Int32)">
+  ValidateMisfireInstruction(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L292"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the code is one of <a class="xref" href="Quartz.DailyTimeIntervalTriggerMisfireInstruction.html">DailyTimeIntervalTriggerMisfireInstruction</a>'s values,
+or the family-agnostic &quot;not set&quot; and &quot;smart policy&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool ValidateMisfireInstruction(int misfireInstruction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>misfireInstruction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The code being assigned.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/Triggers/DailyTimeIntervalTriggerImpl.cs/#L73" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

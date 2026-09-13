@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class MicrosoftDependencyInjectionJobFactory | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class MicrosoftDependencyInjectionJobFactory | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Integrates job instantiation with Microsoft DI system.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Impl_MicrosoftDependencyInjectionJobFactory.md&amp;value=---%0Auid%3A%20Quartz.Impl.MicrosoftDependencyInjectionJobFactory%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Impl.MicrosoftDependencyInjectionJobFactory">
+
+
+
+  <h1 id="Quartz_Impl_MicrosoftDependencyInjectionJobFactory" data-uid="Quartz.Impl.MicrosoftDependencyInjectionJobFactory" class="text-break">
+Class MicrosoftDependencyInjectionJobFactory  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/MicrosoftDependencyInjectionJobFactory.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<a class="xref" href="Quartz.Impl.html">Impl</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Integrates job instantiation with Microsoft DI system.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MicrosoftDependencyInjectionJobFactory : PropertySettingJobFactory, IJobFactory</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Quartz.Impl.SimpleJobFactory.html">SimpleJobFactory</a></div>
+      <div><a class="xref" href="Quartz.Impl.PropertySettingJobFactory.html">PropertySettingJobFactory</a></div>
+      <div><span class="xref">MicrosoftDependencyInjectionJobFactory</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Quartz.Extensibility.IJobFactory.html">IJobFactory</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Quartz.Impl.PropertySettingJobFactory.html#Quartz_Impl_PropertySettingJobFactory_PropertyMismatchBehavior">PropertySettingJobFactory.PropertyMismatchBehavior</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.PropertySettingJobFactory.html#Quartz_Impl_PropertySettingJobFactory_CreateJob_Quartz_Extensibility_TriggerFiredBundle_Quartz_IScheduler_System_Threading_CancellationToken_">PropertySettingJobFactory.CreateJob(TriggerFiredBundle, IScheduler, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.PropertySettingJobFactory.html#Quartz_Impl_PropertySettingJobFactory_BuildJobDataMap_Quartz_Extensibility_TriggerFiredBundle_Quartz_IScheduler_">PropertySettingJobFactory.BuildJobDataMap(TriggerFiredBundle, IScheduler)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.PropertySettingJobFactory.html#Quartz_Impl_PropertySettingJobFactory_SetObjectProperties_System_Object_Quartz_JobDataMap_">PropertySettingJobFactory.SetObjectProperties(object, JobDataMap)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.PropertySettingJobFactory.html#Quartz_Impl_PropertySettingJobFactory_SetObjectProperty_System_Object_System_String_System_Object_">PropertySettingJobFactory.SetObjectProperty(object, string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.PropertySettingJobFactory.html#Quartz_Impl_PropertySettingJobFactory_ConvertValueIfNecessary_System_Type_System_Object_">PropertySettingJobFactory.ConvertValueIfNecessary(Type, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.SimpleJobFactory.html#Quartz_Impl_SimpleJobFactory_InstantiateJobCore_Quartz_Extensibility_TriggerFiredBundle_">SimpleJobFactory.InstantiateJobCore(TriggerFiredBundle)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.SimpleJobFactory.html#Quartz_Impl_SimpleJobFactory_DisposeIfDisposable_System_Object_System_Threading_CancellationToken_">SimpleJobFactory.DisposeIfDisposable(object, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Quartz_Impl_MicrosoftDependencyInjectionJobFactory__ctor_" data-uid="Quartz.Impl.MicrosoftDependencyInjectionJobFactory.#ctor*"></a>
+
+  <h3 id="Quartz_Impl_MicrosoftDependencyInjectionJobFactory__ctor_System_IServiceProvider_Microsoft_Extensions_Options_IOptions_Quartz_JobFactoryOptions__Microsoft_Extensions_Logging_ILoggerFactory_" data-uid="Quartz.Impl.MicrosoftDependencyInjectionJobFactory.#ctor(System.IServiceProvider,Microsoft.Extensions.Options.IOptions{Quartz.JobFactoryOptions},Microsoft.Extensions.Logging.ILoggerFactory)">
+  MicrosoftDependencyInjectionJobFactory(IServiceProvider, IOptions&lt;JobFactoryOptions&gt;?, ILoggerFactory?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/MicrosoftDependencyInjectionJobFactory.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MicrosoftDependencyInjectionJobFactory(IServiceProvider serviceProvider, IOptions&lt;JobFactoryOptions&gt;? options = null, ILoggerFactory? loggerFactory = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>serviceProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a></dt>
+    <dd><p>The container jobs are built from.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1">IOptions</a>&lt;<a class="xref" href="Quartz.JobFactoryOptions.html">JobFactoryOptions</a>&gt;</dt>
+    <dd><p>The factory's settings, which is where <a class="xref" href="Quartz.JobFactoryOptions.html#Quartz_JobFactoryOptions_ConfigureScope">ConfigureScope</a> arrives from.
+Optional so that a derived factory constructing this one by hand does not have to supply it; the
+container always does.</p>
+</dd>
+    <dt><code>loggerFactory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.iloggerfactory">ILoggerFactory</a></dt>
+    <dd><p>Where the base factories create their loggers, so that &quot;producing instance of job&quot; and a
+property that did not match reach the application's logging. Optional for the same reason
+<code class="paramref">options</code> is; the container always supplies it.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_Impl_MicrosoftDependencyInjectionJobFactory_ConfigureScope_" data-uid="Quartz.Impl.MicrosoftDependencyInjectionJobFactory.ConfigureScope*"></a>
+
+  <h3 id="Quartz_Impl_MicrosoftDependencyInjectionJobFactory_ConfigureScope_Microsoft_Extensions_DependencyInjection_IServiceScope_Quartz_Extensibility_TriggerFiredBundle_Quartz_IScheduler_" data-uid="Quartz.Impl.MicrosoftDependencyInjectionJobFactory.ConfigureScope(Microsoft.Extensions.DependencyInjection.IServiceScope,Quartz.Extensibility.TriggerFiredBundle,Quartz.IScheduler)">
+  ConfigureScope(IServiceScope, TriggerFiredBundle, IScheduler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/MicrosoftDependencyInjectionJobFactory.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Prepares the dependency injection scope a job is about to be built in.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ConfigureScope(IServiceScope scope, TriggerFiredBundle bundle, IScheduler scheduler)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scope</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicescope">IServiceScope</a></dt>
+    <dd></dd>
+    <dt><code>bundle</code> <a class="xref" href="Quartz.Extensibility.TriggerFiredBundle.html">TriggerFiredBundle</a></dt>
+    <dd></dd>
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_MicrosoftDependencyInjectionJobFactory_ConfigureScope_Microsoft_Extensions_DependencyInjection_IServiceScope_Quartz_Extensibility_TriggerFiredBundle_Quartz_IScheduler__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The configuration point for services that are scoped and need the ambient context of a job. It
+runs before the job is resolved, and is synchronous so that an
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.asynclocal-1">AsyncLocal&lt;T&gt;</a> set here survives into <code>Execute</code>.</p>
+<p>
+Overriding this is no longer the only way to reach it:
+<a class="xref" href="Quartz.JobFactoryOptions.html#Quartz_JobFactoryOptions_ConfigureScope">ConfigureScope</a> is the same hook as a delegate, for an application
+that has no other reason to write a job factory. An override that does not call base takes the
+delegate's place.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_MicrosoftDependencyInjectionJobFactory_CreateJobInstance_" data-uid="Quartz.Impl.MicrosoftDependencyInjectionJobFactory.CreateJobInstance*"></a>
+
+  <h3 id="Quartz_Impl_MicrosoftDependencyInjectionJobFactory_CreateJobInstance_Quartz_Extensibility_TriggerFiredBundle_Quartz_IScheduler_System_Threading_CancellationToken_" data-uid="Quartz.Impl.MicrosoftDependencyInjectionJobFactory.CreateJobInstance(Quartz.Extensibility.TriggerFiredBundle,Quartz.IScheduler,System.Threading.CancellationToken)">
+  CreateJobInstance(TriggerFiredBundle, IScheduler, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/MicrosoftDependencyInjectionJobFactory.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override ValueTask&lt;JobScope&gt; CreateJobInstance(TriggerFiredBundle bundle, IScheduler scheduler, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bundle</code> <a class="xref" href="Quartz.Extensibility.TriggerFiredBundle.html">TriggerFiredBundle</a></dt>
+    <dd></dd>
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.Extensibility.JobScope.html">JobScope</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_MicrosoftDependencyInjectionJobFactory_CreateJobInstance_Quartz_Extensibility_TriggerFiredBundle_Quartz_IScheduler_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Deliberately not an <code>async</code> method: an async state machine would restore the caller's
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.executioncontext">ExecutionContext</a> when its synchronous part returns, discarding
+any <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.asynclocal-1">AsyncLocal&lt;T&gt;</a> that <a class="xref" href="Quartz.Impl.MicrosoftDependencyInjectionJobFactory.html#Quartz_Impl_MicrosoftDependencyInjectionJobFactory_ConfigureScope_Microsoft_Extensions_DependencyInjection_IServiceScope_Quartz_Extensibility_TriggerFiredBundle_Quartz_IScheduler_">ConfigureScope(IServiceScope, TriggerFiredBundle, IScheduler)</a> set — which
+is most of the reason that hook exists (#1528).</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_MicrosoftDependencyInjectionJobFactory_ReturnJob_" data-uid="Quartz.Impl.MicrosoftDependencyInjectionJobFactory.ReturnJob*"></a>
+
+  <h3 id="Quartz_Impl_MicrosoftDependencyInjectionJobFactory_ReturnJob_Quartz_Extensibility_JobScope_System_Threading_CancellationToken_" data-uid="Quartz.Impl.MicrosoftDependencyInjectionJobFactory.ReturnJob(Quartz.Extensibility.JobScope,System.Threading.CancellationToken)">
+  ReturnJob(JobScope, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/MicrosoftDependencyInjectionJobFactory.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the job, closing the dependency injection scope it was built in.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ValueTask ReturnJob(JobScope scope, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scope</code> <a class="xref" href="Quartz.Extensibility.JobScope.html">JobScope</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_MicrosoftDependencyInjectionJobFactory_ReturnJob_Quartz_Extensibility_JobScope_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The scope is carried in <a class="xref" href="Quartz.Extensibility.JobScope.html#Quartz_Extensibility_JobScope_State">State</a>, and it knows whether the job is its to
+dispose: one the container resolved is registered with the scope and disposed by it, while one
+this factory activated itself is not, and is disposed here.</p>
+<p>
+A derived factory that overrides <a class="xref" href="Quartz.Impl.PropertySettingJobFactory.html#Quartz_Impl_PropertySettingJobFactory_CreateJobInstance_Quartz_Extensibility_TriggerFiredBundle_Quartz_IScheduler_System_Threading_CancellationToken_">CreateJobInstance(TriggerFiredBundle, IScheduler, CancellationToken)</a> and
+returns state of its own takes over that decision completely: this method will not touch the
+job, and it disposes the replacement state only if that state is itself disposable. The
+replacement's disposal must therefore cascade to the state this factory produced — wrap it
+rather than discard it; it is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable">IAsyncDisposable</a> for exactly that reason. A
+derived factory whose replacement state is not disposable must override this method as well
+and do its own teardown.
+</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/MicrosoftDependencyInjectionJobFactory.cs/#L15" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

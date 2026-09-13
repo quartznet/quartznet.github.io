@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class JobChainingJobListener | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class JobChainingJobListener | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Keeps a collection of mappings of which jobs to trigger after the completion of a given job.  If this listener is notified of a job completing that has a mapping, then it will then attempt to trigger each of its follow-up jobs.  This achieves &amp;quot;job chaining&amp;quot;, or a &amp;quot;poor man&#39;s workflow&amp;quot;.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Listeners_JobChainingJobListener.md&amp;value=---%0Auid%3A%20Quartz.Listeners.JobChainingJobListener%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Listeners.JobChainingJobListener">
+
+
+
+  <h1 id="Quartz_Listeners_JobChainingJobListener" data-uid="Quartz.Listeners.JobChainingJobListener" class="text-break">
+Class JobChainingJobListener  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Listeners/JobChainingJobListener.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<a class="xref" href="Quartz.Listeners.html">Listeners</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Keeps a collection of mappings of which jobs to trigger after the completion
+of a given job.  If this listener is notified of a job completing that has a
+mapping, then it will then attempt to trigger each of its follow-up jobs.  This
+achieves &quot;job chaining&quot;, or a &quot;poor man's workflow&quot;.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class JobChainingJobListener : IJobListener</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">JobChainingJobListener</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Quartz.IJobListener.html">IJobListener</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_Listeners_JobChainingJobListener_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Generally an instance of this listener would be registered as a global
+job listener, rather than being registered directly to a given job.
+</p>
+<p>
+A job can be chained to more than one follow-up job, by calling
+<a class="xref" href="Quartz.Listeners.JobChainingJobListener.html#Quartz_Listeners_JobChainingJobListener_AddJobChainLink_Quartz_JobKey_Quartz_JobKey_">AddJobChainLink(JobKey, JobKey)</a> once per follow-up or <a class="xref" href="Quartz.Listeners.JobChainingJobListener.html#Quartz_Listeners_JobChainingJobListener_AddJobChainLinks_Quartz_JobKey_System_Collections_Generic_IReadOnlyCollection_Quartz_JobKey__">AddJobChainLinks(JobKey, IReadOnlyCollection&lt;JobKey&gt;)</a>
+with all of them.  Each follow-up is triggered as its own firing, in the order the
+links were added, so the follow-ups run concurrently rather than one after another —
+as many at a time as the thread pool has threads to give them.  A follow-up that has to
+wait for a sibling is a chain link from that sibling, not a second link from the same job.
+</p>
+<p>
+If for some reason there is a failure creating the trigger for a
+follow-up job (which would generally only be caused by a rare serious
+failure in the system, or the non-existence of the follow-up job), an error
+message is logged, but no other action is taken: the remaining follow-ups of that
+job are still triggered. If you need more rigorous handling of the error, consider
+scheduling the triggering of the follow-up job within your job itself.
+</p>
+<p>
+The links are meant to be registered before the scheduler is started, and this type
+does not synchronize them; adding one while jobs are executing races with the
+notifications reading it.
+</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Quartz_Listeners_JobChainingJobListener__ctor_" data-uid="Quartz.Listeners.JobChainingJobListener.#ctor*"></a>
+
+  <h3 id="Quartz_Listeners_JobChainingJobListener__ctor_System_String_" data-uid="Quartz.Listeners.JobChainingJobListener.#ctor(System.String)">
+  JobChainingJobListener(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Listeners/JobChainingJobListener.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Construct an instance with the given name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobChainingJobListener(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of this instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_Listeners_JobChainingJobListener_Name_" data-uid="Quartz.Listeners.JobChainingJobListener.Name*"></a>
+
+  <h3 id="Quartz_Listeners_JobChainingJobListener_Name" data-uid="Quartz.Listeners.JobChainingJobListener.Name">
+  Name
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Listeners/JobChainingJobListener.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The name this listener is registered and removed under.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Listeners_JobChainingJobListener_Name_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Defaults to the implementing type's name, which is the right answer whenever a scheduler
+has at most one listener of a given type. Override it when several instances of one type
+are registered with the same scheduler, because the later registration would otherwise
+replace the earlier one.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_Listeners_JobChainingJobListener_AddJobChainLink_" data-uid="Quartz.Listeners.JobChainingJobListener.AddJobChainLink*"></a>
+
+  <h3 id="Quartz_Listeners_JobChainingJobListener_AddJobChainLink_Quartz_JobKey_Quartz_JobKey_" data-uid="Quartz.Listeners.JobChainingJobListener.AddJobChainLink(Quartz.JobKey,Quartz.JobKey)">
+  AddJobChainLink(JobKey, JobKey)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Listeners/JobChainingJobListener.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add a chain mapping - when the Job identified by the first key completes
+the job identified by the second key will be triggered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddJobChainLink(JobKey firstJob, JobKey secondJob)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>firstJob</code> <a class="xref" href="Quartz.JobKey.html">JobKey</a></dt>
+    <dd><p>a JobKey with the name and group of the first job</p>
+</dd>
+    <dt><code>secondJob</code> <a class="xref" href="Quartz.JobKey.html">JobKey</a></dt>
+    <dd><p>a JobKey with the name and group of the follow-up job</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Listeners_JobChainingJobListener_AddJobChainLink_Quartz_JobKey_Quartz_JobKey__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Calling this again with the same first job adds a second follow-up rather than
+replacing the first one; the two then run concurrently. Chaining the same follow-up
+to the same first job twice is a configuration mistake — it would fire that job twice
+for one completion — and is rejected.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Either key is null or has a null name, or <code class="paramref">secondJob</code> is already
+chained to <code class="paramref">firstJob</code>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_Listeners_JobChainingJobListener_AddJobChainLinks_" data-uid="Quartz.Listeners.JobChainingJobListener.AddJobChainLinks*"></a>
+
+  <h3 id="Quartz_Listeners_JobChainingJobListener_AddJobChainLinks_Quartz_JobKey_System_Collections_Generic_IReadOnlyCollection_Quartz_JobKey__" data-uid="Quartz.Listeners.JobChainingJobListener.AddJobChainLinks(Quartz.JobKey,System.Collections.Generic.IReadOnlyCollection{Quartz.JobKey})">
+  AddJobChainLinks(JobKey, IReadOnlyCollection&lt;JobKey&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Listeners/JobChainingJobListener.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add several chain mappings at once - when the Job identified by the first key
+completes, every one of the given follow-up jobs will be triggered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddJobChainLinks(JobKey firstJob, IReadOnlyCollection&lt;JobKey&gt; followUpJobs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>firstJob</code> <a class="xref" href="Quartz.JobKey.html">JobKey</a></dt>
+    <dd><p>a JobKey with the name and group of the first job</p>
+</dd>
+    <dt><code>followUpJobs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</dt>
+    <dd><p>the keys of the jobs to trigger when the first job completes</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Listeners_JobChainingJobListener_AddJobChainLinks_Quartz_JobKey_System_Collections_Generic_IReadOnlyCollection_Quartz_JobKey___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This is <a class="xref" href="Quartz.Listeners.JobChainingJobListener.html#Quartz_Listeners_JobChainingJobListener_AddJobChainLink_Quartz_JobKey_Quartz_JobKey_">AddJobChainLink(JobKey, JobKey)</a> for the fan-out case, and appends to whatever
+the first job is already chained to. The follow-ups are triggered in the order given,
+each as its own firing, so they run concurrently. Naming the same follow-up twice — in
+this collection or against a link added earlier — is a configuration mistake and is
+rejected; nothing is added when it is.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Any key is null or has a null name, <code class="paramref">followUpJobs</code> is null or empty,
+or a follow-up is named twice.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_Listeners_JobChainingJobListener_JobWasExecuted_" data-uid="Quartz.Listeners.JobChainingJobListener.JobWasExecuted*"></a>
+
+  <h3 id="Quartz_Listeners_JobChainingJobListener_JobWasExecuted_Quartz_IJobExecutionContext_Quartz_JobExecutionException_System_Threading_CancellationToken_" data-uid="Quartz.Listeners.JobChainingJobListener.JobWasExecuted(Quartz.IJobExecutionContext,Quartz.JobExecutionException,System.Threading.CancellationToken)">
+  JobWasExecuted(IJobExecutionContext, JobExecutionException?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Listeners/JobChainingJobListener.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> after a <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>
+has been executed, and be for the associated <a class="xref" href="Quartz.Extensibility.IOperableTrigger.html">IOperableTrigger</a>'s
+<a class="xref" href="Quartz.Extensibility.IOperableTrigger.html#Quartz_Extensibility_IOperableTrigger_Triggered_Quartz_ICalendar_">Triggered(ICalendar?)</a> method has been called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask JobWasExecuted(IJobExecutionContext context, JobExecutionException? jobException, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></dt>
+    <dd></dd>
+    <dt><code>jobException</code> <a class="xref" href="Quartz.JobExecutionException.html">JobExecutionException</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Listeners_JobChainingJobListener_JobWasExecuted_Quartz_IJobExecutionContext_Quartz_JobExecutionException_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The default implementation does nothing.</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Listeners/JobChainingJobListener.cs/#L64" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

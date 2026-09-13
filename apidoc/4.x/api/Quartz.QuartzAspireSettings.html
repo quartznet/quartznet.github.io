@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class QuartzAspireSettings | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class QuartzAspireSettings | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="The settings  reads, bound from Aspire:Quartz and then from Aspire:Quartz:&amp;lt;connection name&amp;gt; over it.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_QuartzAspireSettings.md&amp;value=---%0Auid%3A%20Quartz.QuartzAspireSettings%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.QuartzAspireSettings">
+
+
+
+  <h1 id="Quartz_QuartzAspireSettings" data-uid="Quartz.QuartzAspireSettings" class="text-break">
+Class QuartzAspireSettings  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Aspire/QuartzAspireSettings.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.Aspire.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The settings <a class="xref" href="Quartz.QuartzAspireHostApplicationBuilderExtensions.html#Quartz_QuartzAspireHostApplicationBuilderExtensions_AddQuartzPersistentStore_Microsoft_Extensions_Hosting_IHostApplicationBuilder_System_String_System_Action_Quartz_QuartzAspireSettings__">AddQuartzPersistentStore(IHostApplicationBuilder, string, Action&lt;QuartzAspireSettings&gt;?)</a> reads,
+bound from <code>Aspire:Quartz</code> and then from <code>Aspire:Quartz:&lt;connection name&gt;</code> over it.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class QuartzAspireSettings</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">QuartzAspireSettings</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_QuartzAspireSettings_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+The two-section shape is the one every Aspire client integration has: the outer section carries what
+is true of every connection in the application, and the inner one — named after the connection —
+overrides it for that connection alone. An application with a single database never writes the inner
+one.
+</p>
+<p>
+Everything here is deliberately small. This type is not a second spelling of Quartz's own
+configuration: <code>Quartz:JobStore</code>, <code>Quartz:Scheduler</code> and the rest still say what they always
+said, and <code>AddQuartz</code> still reads them. What these settings decide is the handful of things that
+follow from an Aspire <em>connection</em> — which database it is, and whether the signals that come
+with it are wired — because that is what a connection name is evidence of.
+</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_QuartzAspireSettings_Clustered_" data-uid="Quartz.QuartzAspireSettings.Clustered*"></a>
+
+  <h3 id="Quartz_QuartzAspireSettings_Clustered" data-uid="Quartz.QuartzAspireSettings.Clustered">
+  Clustered
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Aspire/QuartzAspireSettings.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this scheduler takes part in a cluster with every other scheduler sharing the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Clustered { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzAspireSettings_Clustered_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Aspire makes replicas cheap — <code>WithReplicas(2)</code> is one call — and two schedulers on one
+database that are not clustered will both fire every trigger. Turning this on turns database
+locking on with it, as <code>UseClustering()</code> always has.
+</p>
+<p>
+It also makes the scheduler derive its <code>InstanceId</code>, because a cluster needs distinct ids and
+a replica set has none of its own to borrow: a node recognises its own check-in row and its own
+fired triggers by that id, and every replica starts life carrying
+<a class="xref" href="Quartz.QuartzSchedulerOptions.html#Quartz_QuartzSchedulerOptions_DefaultInstanceId">DefaultInstanceId</a> — <code>NON_CLUSTERED</code>. An application that
+already set <code>GenerateInstanceId</code>, or that named its nodes by setting <code>InstanceId</code>, keeps
+what it said; this only fills the gap.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzAspireSettings_ConnectionString_" data-uid="Quartz.QuartzAspireSettings.ConnectionString*"></a>
+
+  <h3 id="Quartz_QuartzAspireSettings_ConnectionString" data-uid="Quartz.QuartzAspireSettings.ConnectionString">
+  ConnectionString
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Aspire/QuartzAspireSettings.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The connection string reaching the database, when it is not the one Aspire injected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? ConnectionString { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzAspireSettings_ConnectionString_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Left unset, <code>ConnectionStrings:&lt;connection name&gt;</code> supplies it — which is the
+environment variable the AppHost's <code>WithReference</code> sets, so an application under Aspire
+never writes this. It matters for the value that decides the provider: the string is read at
+configuration time whether or not the store ends up using it, because its shape is what says
+which database this is.</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzAspireSettings_DisableHealthChecks_" data-uid="Quartz.QuartzAspireSettings.DisableHealthChecks*"></a>
+
+  <h3 id="Quartz_QuartzAspireSettings_DisableHealthChecks" data-uid="Quartz.QuartzAspireSettings.DisableHealthChecks">
+  DisableHealthChecks
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Aspire/QuartzAspireSettings.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the scheduler's health check is left unregistered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DisableHealthChecks { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzAspireSettings_DisableHealthChecks_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The check is <code>AddQuartzHealthChecks()</code> from the core package, registered on the same
+<code>IHealthChecksBuilder</code> an Aspire ServiceDefaults project put its own <code>self</code> check on,
+so <code>MapDefaultEndpoints()</code> serves both.</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzAspireSettings_DisableMetrics_" data-uid="Quartz.QuartzAspireSettings.DisableMetrics*"></a>
+
+  <h3 id="Quartz_QuartzAspireSettings_DisableMetrics" data-uid="Quartz.QuartzAspireSettings.DisableMetrics">
+  DisableMetrics
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Aspire/QuartzAspireSettings.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether Quartz's <code>Meter</code> is left unsubscribed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DisableMetrics { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzAspireSettings_DisableMetrics_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Subscribing is <code>AddSource(QuartzInstrumentation.ActivitySourceName)</code> on the application's
+existing tracer provider. No exporter is added — a ServiceDefaults project already owns that, and
+<code>UseOtlpExporter()</code> may be called only once.</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzAspireSettings_DisableTracing_" data-uid="Quartz.QuartzAspireSettings.DisableTracing*"></a>
+
+  <h3 id="Quartz_QuartzAspireSettings_DisableTracing" data-uid="Quartz.QuartzAspireSettings.DisableTracing">
+  DisableTracing
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Aspire/QuartzAspireSettings.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether Quartz's <code>ActivitySource</code> is left unsubscribed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DisableTracing { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzAspireSettings_DisableTracing_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Subscribing is <code>AddSource(QuartzInstrumentation.ActivitySourceName)</code> on the application's
+existing tracer provider. No exporter is added — a ServiceDefaults project already owns that, and
+<code>UseOtlpExporter()</code> may be called only once.</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzAspireSettings_Provider_" data-uid="Quartz.QuartzAspireSettings.Provider*"></a>
+
+  <h3 id="Quartz_QuartzAspireSettings_Provider" data-uid="Quartz.QuartzAspireSettings.Provider">
+  Provider
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Aspire/QuartzAspireSettings.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Which ADO.NET driver reaches the database, as one of the names on
+<a class="xref" href="Quartz.DataSourceOptions.Providers.html">DataSourceOptions.Providers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Provider { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzAspireSettings_Provider_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Left unset, it is inferred from the connection string's shape. The inference recognises the five
+shapes Aspire's own database resources produce and throws for anything it cannot place — a
+guess would choose the driver delegate that writes the SQL, and SQL the database cannot run is a
+worse outcome than a startup failure that names this property.
+</p>
+<p>
+Three of the shipped provider names are never inferred, because nothing in a connection string
+distinguishes them: <code>MySql</code> from <code>MySqlConnector</code>, <code>SQLite</code> from
+<code>SQLite-Microsoft</code>, and <code>Firebird</code> from a connection string that looks like several
+others. Naming one here is how an application chooses.
+</p>
+<p>
+A name Quartz ships no description for is still usable: it selects the generic SQL dialect, and
+whatever <code>DbMetadataFactory</code> the application registered describes the driver.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzAspireSettings_SchedulerName_" data-uid="Quartz.QuartzAspireSettings.SchedulerName*"></a>
+
+  <h3 id="Quartz_QuartzAspireSettings_SchedulerName" data-uid="Quartz.QuartzAspireSettings.SchedulerName">
+  SchedulerName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Aspire/QuartzAspireSettings.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Which scheduler this store belongs to, for an application that registers more than one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? SchedulerName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzAspireSettings_SchedulerName_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Left unset, every scheduler in the container gets this store — which is right for the single
+scheduler an application normally has, and wrong the moment two of them talk to two databases.
+The name is the one passed to <code>AddQuartz(name, …)</code>, because a string means a scheduler
+everywhere in Quartz.</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzAspireSettings_SchemaProvisioning_" data-uid="Quartz.QuartzAspireSettings.SchemaProvisioning*"></a>
+
+  <h3 id="Quartz_QuartzAspireSettings_SchemaProvisioning" data-uid="Quartz.QuartzAspireSettings.SchemaProvisioning">
+  SchemaProvisioning
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Aspire/QuartzAspireSettings.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>What the store does about its schema when the scheduler starts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SchemaProvisioning? SchemaProvisioning { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.SchemaProvisioning.html">SchemaProvisioning</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzAspireSettings_SchemaProvisioning_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The same three-valued decision <code>AdoJobStoreOptions.SchemaProvisioning</code> and
+<code>IPersistentStoreBuilder.ProvisionSchema()</code> speak, said from the Aspire section instead:
+one vocabulary for one setting, whichever end an application reaches it from.
+</p>
+<p>
+Left unset — the default — the environment decides, read from
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostapplicationbuilder.environment">Environment</a> at the
+<code>AddQuartzPersistentStore</code> call: <a class="xref" href="Quartz.SchemaProvisioning.html#Quartz_SchemaProvisioning_CreateIfMissing">CreateIfMissing</a>
+under <code>Development</code>, and nothing said everywhere else. The two halves of that are the same
+observation from opposite ends — the AppHost's database container comes up empty on every start
+that has no data volume behind it, so a development scheduler that refuses to start until
+somebody applies a script is refusing on every first run; and a production account usually
+cannot run DDL at all, which it is right not to be able to.
+</p>
+<p>
+Set, it applies in every environment — which is what a deployment that applies its own schema
+wants to say once, in the shared <code>Aspire:Quartz</code> section, rather than per environment.
+<a class="xref" href="Quartz.SchemaProvisioning.html#Quartz_SchemaProvisioning_CreateIfMissing">CreateIfMissing</a> only ever creates: no object is altered
+and none is dropped, so it cannot turn a mis-typed <a class="xref" href="Quartz.QuartzAspireSettings.html#Quartz_QuartzAspireSettings_TablePrefix">TablePrefix</a> into data loss, and
+it is equally not an upgrade — <code>database/migrations/</code> is still what moves a schema forward.
+<a class="xref" href="Quartz.SchemaProvisioning.html#Quartz_SchemaProvisioning_None">None</a> is the one thing the old <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">bool</a>
+could not say: skip the startup check entirely.
+</p>
+<p>
+It fills a gap rather than overruling one. An <code>AdoJobStoreOptions.SchemaProvisioning</code> the
+application set itself — from <code>ConfigureStore</code> or from
+<code>Quartz:JobStore:SchemaProvisioning</code> — is a decision made about this store in particular and
+is kept, so this is read only by a store that was told nothing. That is also why
+<a class="xref" href="Quartz.SchemaProvisioning.html#Quartz_SchemaProvisioning_Validate">Validate</a> here means "leave it alone": it is what an
+unconfigured store already holds, so writing it changes nothing, and it is how a
+<code>Development</code> application declines the creating default.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzAspireSettings_TablePrefix_" data-uid="Quartz.QuartzAspireSettings.TablePrefix*"></a>
+
+  <h3 id="Quartz_QuartzAspireSettings_TablePrefix" data-uid="Quartz.QuartzAspireSettings.TablePrefix">
+  TablePrefix
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Aspire/QuartzAspireSettings.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The prefix on the Quartz table names, when the schema was created with something other than
+<code>QRTZ_</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? TablePrefix { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzAspireSettings_TablePrefix_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Left unset, <code>AdoJobStoreOptions.TablePrefix</code> keeps whatever it already had — its own
+default, or a value <code>Quartz:JobStore:TablePrefix</code> set.</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Aspire/QuartzAspireSettings.cs/#L22" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

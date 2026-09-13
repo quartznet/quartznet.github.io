@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class RetryPolicy | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class RetryPolicy | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="How often, and how far apart, the scheduler re-fires a trigger whose job has failed.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_RetryPolicy.md&amp;value=---%0Auid%3A%20Quartz.RetryPolicy%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.RetryPolicy">
+
+
+
+  <h1 id="Quartz_RetryPolicy" data-uid="Quartz.RetryPolicy" class="text-break">
+Class RetryPolicy  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/RetryPolicy.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>How often, and how far apart, the scheduler re-fires a trigger whose job has failed.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class RetryPolicy : IEquatable&lt;RetryPolicy&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">RetryPolicy</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Quartz.RetryPolicy.html">RetryPolicy</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_RetryPolicy_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+A policy is a value: two policies of the same shape that would produce the same waits are equal.
+There is no public constructor — <a class="xref" href="Quartz.RetryPolicy.html#Quartz_RetryPolicy_Fixed_System_Int32_System_TimeSpan_">Fixed(int, TimeSpan)</a>, <a class="xref" href="Quartz.RetryPolicy.html#Quartz_RetryPolicy_Exponential_System_Int32_System_TimeSpan_System_Double_System_Nullable_System_TimeSpan__">Exponential(int, TimeSpan, double, TimeSpan?)</a> and
+<a class="xref" href="Quartz.RetryPolicy.html#Quartz_RetryPolicy_Explicit_System_Collections_Generic_IReadOnlyList_System_TimeSpan__">Explicit(params IReadOnlyList&lt;TimeSpan&gt;)</a> are the only ways to make one, so a policy that could not be honoured
+(no attempts, a negative wait, a backoff that shrinks) cannot be built at all.
+</p>
+<p>
+<a class="xref" href="Quartz.RetryPolicy.html#Quartz_RetryPolicy_MaxAttempts">MaxAttempts</a> counts retries <i>after</i> the first failure, not fires: a trigger
+carrying <code>Fixed(2, …)</code> whose job keeps throwing runs three times in total and is then back
+on its ordinary schedule.
+</p>
+<p>
+A retry never displaces the trigger's own next occurrence. The scheduler drops a retry that
+would land at (or within a second of) the regular next fire time and lets the schedule win, so
+a policy whose waits are longer than the gap between occurrences quietly does nothing.
+</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_RetryPolicy_BackoffFactor_" data-uid="Quartz.RetryPolicy.BackoffFactor*"></a>
+
+  <h3 id="Quartz_RetryPolicy_BackoffFactor" data-uid="Quartz.RetryPolicy.BackoffFactor">
+  BackoffFactor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/RetryPolicy.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>What each wait is multiplied by to get the next one. <code>1</code> means a fixed wait.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double BackoffFactor { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_RetryPolicy_BackoffFactor_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Persisted with the round-trip (<code>&quot;R&quot;</code>) format and the invariant culture, so a policy
+written on one machine reads back bit for bit on another.</p>
+</div>
+
+
+
+
+  <a id="Quartz_RetryPolicy_Delays_" data-uid="Quartz.RetryPolicy.Delays*"></a>
+
+  <h3 id="Quartz_RetryPolicy_Delays" data-uid="Quartz.RetryPolicy.Delays">
+  Delays
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/RetryPolicy.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The explicit table of waits, longest-lived entry last; empty when the waits are computed
+from <a class="xref" href="Quartz.RetryPolicy.html#Quartz_RetryPolicy_InitialDelay">InitialDelay</a> and <a class="xref" href="Quartz.RetryPolicy.html#Quartz_RetryPolicy_BackoffFactor">BackoffFactor</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ImmutableArray&lt;TimeSpan&gt; Delays { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1">ImmutableArray</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_RetryPolicy_Delays_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A table shorter than the number of attempts cannot happen — <a class="xref" href="Quartz.RetryPolicy.html#Quartz_RetryPolicy_MaxAttempts">MaxAttempts</a> is
+its length — but the last entry repeats for any attempt beyond it, so the property is safe
+to index through <a class="xref" href="Quartz.RetryPolicy.html#Quartz_RetryPolicy_DelayFor_System_Int32_">DelayFor(int)</a> alone.</p>
+</div>
+
+
+
+
+  <a id="Quartz_RetryPolicy_InitialDelay_" data-uid="Quartz.RetryPolicy.InitialDelay*"></a>
+
+  <h3 id="Quartz_RetryPolicy_InitialDelay" data-uid="Quartz.RetryPolicy.InitialDelay">
+  InitialDelay
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/RetryPolicy.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The wait before the first retry. For an <a class="xref" href="Quartz.RetryPolicy.html#Quartz_RetryPolicy_Explicit_System_Collections_Generic_IReadOnlyList_System_TimeSpan__">Explicit(params IReadOnlyList&lt;TimeSpan&gt;)</a> policy this is the first
+entry of <a class="xref" href="Quartz.RetryPolicy.html#Quartz_RetryPolicy_Delays">Delays</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan InitialDelay { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_RetryPolicy_MaxAttempts_" data-uid="Quartz.RetryPolicy.MaxAttempts*"></a>
+
+  <h3 id="Quartz_RetryPolicy_MaxAttempts" data-uid="Quartz.RetryPolicy.MaxAttempts">
+  MaxAttempts
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/RetryPolicy.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How many times the scheduler retries after the first failure. Always at least one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxAttempts { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_RetryPolicy_MaxAttempts_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This is the authoritative count: an <a class="xref" href="Quartz.RetryPolicy.html#Quartz_RetryPolicy_Explicit_System_Collections_Generic_IReadOnlyList_System_TimeSpan__">Explicit(params IReadOnlyList&lt;TimeSpan&gt;)</a> policy's is the length of its
+delay table, and once the attempts are spent the trigger returns to its ordinary schedule
+rather than going into an error state.</p>
+</div>
+
+
+
+
+  <a id="Quartz_RetryPolicy_MaxDelay_" data-uid="Quartz.RetryPolicy.MaxDelay*"></a>
+
+  <h3 id="Quartz_RetryPolicy_MaxDelay" data-uid="Quartz.RetryPolicy.MaxDelay">
+  MaxDelay
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/RetryPolicy.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The ceiling every computed wait is clamped to, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when the backoff
+grows unbounded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan? MaxDelay { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_RetryPolicy_DelayFor_" data-uid="Quartz.RetryPolicy.DelayFor*"></a>
+
+  <h3 id="Quartz_RetryPolicy_DelayFor_System_Int32_" data-uid="Quartz.RetryPolicy.DelayFor(System.Int32)">
+  DelayFor(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/RetryPolicy.cs/#L273"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The wait before the given retry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan DelayFor(int attempt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>attempt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Which retry to compute the wait for, counting from one: <code>1</code> is the wait after the first
+failure.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>The wait, clamped to <a class="xref" href="Quartz.RetryPolicy.html#Quartz_RetryPolicy_MaxDelay">MaxDelay</a> when there is one. An attempt beyond
+<a class="xref" href="Quartz.RetryPolicy.html#Quartz_RetryPolicy_MaxAttempts">MaxAttempts</a> answers as the last one does rather than throwing, because the
+decision to stop retrying belongs to the scheduler and not to the arithmetic.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_RetryPolicy_DelayFor_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A wait too long to be represented is not an error. The arithmetic saturates, and the scheduler
+treats a retry it cannot express an instant for the way it treats one that would land on top of
+the next occurrence: there is no room for it, so the occurrence settles and the trigger keeps its
+ordinary schedule. Capping the waits when a policy is built or parsed instead would refuse a
+stored form that <a class="xref" href="Quartz.RetryPolicy.html#Quartz_RetryPolicy_ToStoredString">ToStoredString()</a> had just written, and would refuse a policy over
+attempts no trigger will reach.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p><code class="paramref">attempt</code> is less than one.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_RetryPolicy_Equals_" data-uid="Quartz.RetryPolicy.Equals*"></a>
+
+  <h3 id="Quartz_RetryPolicy_Equals_Quartz_RetryPolicy_" data-uid="Quartz.RetryPolicy.Equals(Quartz.RetryPolicy)">
+  Equals(RetryPolicy?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/RetryPolicy.cs/#L498"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the other policy has the same shape and would produce exactly the same waits, the
+same number of times.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(RetryPolicy? other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Quartz.RetryPolicy.html">RetryPolicy</a></dt>
+    <dd><p>The policy to compare with.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the two policies are the same value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_RetryPolicy_Equals_Quartz_RetryPolicy__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Written out by hand rather than left to a record: the delay table is a collection, and
+reference equality on it would make two policies built from the same numbers unequal — which
+the store contract tests compare through. The backoff factor is compared bit for bit, which
+is what round-tripping it through the <code>&quot;R&quot;</code> format guarantees and what &quot;the same policy
+came back out of the column&quot; means.</p>
+</div>
+
+
+
+
+  <a id="Quartz_RetryPolicy_Equals_" data-uid="Quartz.RetryPolicy.Equals*"></a>
+
+  <h3 id="Quartz_RetryPolicy_Equals_System_Object_" data-uid="Quartz.RetryPolicy.Equals(System.Object)">
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/RetryPolicy.cs/#L519"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the specified object is equal to the current object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The object to compare with the current object.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the specified object  is equal to the current object; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_RetryPolicy_Explicit_" data-uid="Quartz.RetryPolicy.Explicit*"></a>
+
+  <h3 id="Quartz_RetryPolicy_Explicit_System_Collections_Generic_IReadOnlyList_System_TimeSpan__" data-uid="Quartz.RetryPolicy.Explicit(System.Collections.Generic.IReadOnlyList{System.TimeSpan})">
+  Explicit(params IReadOnlyList&lt;TimeSpan&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/RetryPolicy.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A policy that waits the given amounts, in order. <a class="xref" href="Quartz.RetryPolicy.html#Quartz_RetryPolicy_MaxAttempts">MaxAttempts</a> is the number of
+waits given.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RetryPolicy Explicit(params IReadOnlyList&lt;TimeSpan&gt; delays)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>delays</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>&gt;</dt>
+    <dd><p>The wait before each retry, none of them negative and at least one of them present.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.RetryPolicy.html">RetryPolicy</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">delays</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p><code class="paramref">delays</code> is empty, holds a negative wait, or is long enough that the
+stored form would not fit the triggers table's 250-character retry policy column.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_RetryPolicy_Exponential_" data-uid="Quartz.RetryPolicy.Exponential*"></a>
+
+  <h3 id="Quartz_RetryPolicy_Exponential_System_Int32_System_TimeSpan_System_Double_System_Nullable_System_TimeSpan__" data-uid="Quartz.RetryPolicy.Exponential(System.Int32,System.TimeSpan,System.Double,System.Nullable{System.TimeSpan})">
+  Exponential(int, TimeSpan, double, TimeSpan?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/RetryPolicy.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A policy whose wait grows by a constant factor with every retry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RetryPolicy Exponential(int maxAttempts, TimeSpan initialDelay, double factor = 2, TimeSpan? maxDelay = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>maxAttempts</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>How many times to retry after the first failure; at least one.</p>
+</dd>
+    <dt><code>initialDelay</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>The wait before the first retry; not negative.</p>
+</dd>
+    <dt><code>factor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>What each wait is multiplied by to get the next one. At least <code>1</code>, which makes the
+policy wait the same amount every time; a shrinking backoff is not a backoff.</p>
+</dd>
+    <dt><code>maxDelay</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</dt>
+    <dd><p>A ceiling for the computed waits, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to let them grow unbounded.
+Not shorter than <code class="paramref">initialDelay</code>, which a ceiling below the first wait
+would silently undo.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.RetryPolicy.html">RetryPolicy</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_RetryPolicy_Exponential_System_Int32_System_TimeSpan_System_Double_System_Nullable_System_TimeSpan___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A factor of <code>1</code> is legal and produces the same waits as <a class="xref" href="Quartz.RetryPolicy.html#Quartz_RetryPolicy_Fixed_System_Int32_System_TimeSpan_">Fixed(int, TimeSpan)</a>, but it is
+a different value: it says the trigger's author chose a backoff and set its rate to one,
+which is a thing to change rather than a fixed wait spelled the long way.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p><code class="paramref">maxAttempts</code> is less than one, <code class="paramref">initialDelay</code> is
+negative, <code class="paramref">factor</code> is less than one or is not a number, or
+<code class="paramref">maxDelay</code> is shorter than <code class="paramref">initialDelay</code>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_RetryPolicy_Fixed_" data-uid="Quartz.RetryPolicy.Fixed*"></a>
+
+  <h3 id="Quartz_RetryPolicy_Fixed_System_Int32_System_TimeSpan_" data-uid="Quartz.RetryPolicy.Fixed(System.Int32,System.TimeSpan)">
+  Fixed(int, TimeSpan)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/RetryPolicy.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A policy that waits the same amount of time before every retry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RetryPolicy Fixed(int maxAttempts, TimeSpan delay)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>maxAttempts</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>How many times to retry after the first failure; at least one.</p>
+</dd>
+    <dt><code>delay</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>The wait before each retry; not negative.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.RetryPolicy.html">RetryPolicy</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p><code class="paramref">maxAttempts</code> is less than one, or <code class="paramref">delay</code> is negative.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_RetryPolicy_GetHashCode_" data-uid="Quartz.RetryPolicy.GetHashCode*"></a>
+
+  <h3 id="Quartz_RetryPolicy_GetHashCode" data-uid="Quartz.RetryPolicy.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/RetryPolicy.cs/#L525"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Serves as the default hash function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A hash code for the current object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_RetryPolicy_Parse_" data-uid="Quartz.RetryPolicy.Parse*"></a>
+
+  <h3 id="Quartz_RetryPolicy_Parse_System_String_" data-uid="Quartz.RetryPolicy.Parse(System.String)">
+  Parse(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/RetryPolicy.cs/#L326"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rebuilds a policy from the string <a class="xref" href="Quartz.RetryPolicy.html#Quartz_RetryPolicy_ToStoredString">ToStoredString()</a> produced.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RetryPolicy Parse(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The stored form.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.RetryPolicy.html">RetryPolicy</a></dt>
+    <dd><p>The policy.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">value</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
+    <dd><p><code class="paramref">value</code> is not a stored retry policy.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_RetryPolicy_ToStoredString_" data-uid="Quartz.RetryPolicy.ToStoredString*"></a>
+
+  <h3 id="Quartz_RetryPolicy_ToStoredString" data-uid="Quartz.RetryPolicy.ToStoredString">
+  ToStoredString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/RetryPolicy.cs/#L314"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The policy as the triggers table holds it: a compact, culture-invariant string that starts
+with a marker naming the policy's shape.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ToStoredString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The stored form. Two policies that are <a class="xref" href="Quartz.RetryPolicy.html#Quartz_RetryPolicy_Equals_Quartz_RetryPolicy_">equal</a> produce
+the same string, and <a class="xref" href="Quartz.RetryPolicy.html#Quartz_RetryPolicy_Parse_System_String_">Parse(string)</a> turns that string back into an equal policy.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_RetryPolicy_ToString_" data-uid="Quartz.RetryPolicy.ToString*"></a>
+
+  <h3 id="Quartz_RetryPolicy_ToString" data-uid="Quartz.RetryPolicy.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/RetryPolicy.cs/#L480"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The policy as the triggers table holds it, which is the whole of its state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_RetryPolicy_TryParse_" data-uid="Quartz.RetryPolicy.TryParse*"></a>
+
+  <h3 id="Quartz_RetryPolicy_TryParse_System_String_Quartz_RetryPolicy__" data-uid="Quartz.RetryPolicy.TryParse(System.String,Quartz.RetryPolicy@)">
+  TryParse(string?, out RetryPolicy?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/RetryPolicy.cs/#L352"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rebuilds a policy from the string <a class="xref" href="Quartz.RetryPolicy.html#Quartz_RetryPolicy_ToStoredString">ToStoredString()</a> produced, answering whether
+the string was one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryParse(string? value, out RetryPolicy? policy)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The stored form, which may be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> or blank.</p>
+</dd>
+    <dt><code>policy</code> <a class="xref" href="Quartz.RetryPolicy.html">RetryPolicy</a></dt>
+    <dd><p>The policy, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when there was not one.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when <code class="paramref">value</code> was a stored retry policy.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_RetryPolicy_TryParse_System_String_Quartz_RetryPolicy___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> or blank string answers <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> rather than
+throwing: that is what a trigger row with no retry policy reads as.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Quartz_RetryPolicy_op_Equality_" data-uid="Quartz.RetryPolicy.op_Equality*"></a>
+
+  <h3 id="Quartz_RetryPolicy_op_Equality_Quartz_RetryPolicy_Quartz_RetryPolicy_" data-uid="Quartz.RetryPolicy.op_Equality(Quartz.RetryPolicy,Quartz.RetryPolicy)">
+  operator ==(RetryPolicy?, RetryPolicy?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/RetryPolicy.cs/#L547"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether two policies are the same value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(RetryPolicy? left, RetryPolicy? right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Quartz.RetryPolicy.html">RetryPolicy</a></dt>
+    <dd><p>The first policy.</p>
+</dd>
+    <dt><code>right</code> <a class="xref" href="Quartz.RetryPolicy.html">RetryPolicy</a></dt>
+    <dd><p>The second policy.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when both are <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> or both are equal.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_RetryPolicy_op_Inequality_" data-uid="Quartz.RetryPolicy.op_Inequality*"></a>
+
+  <h3 id="Quartz_RetryPolicy_op_Inequality_Quartz_RetryPolicy_Quartz_RetryPolicy_" data-uid="Quartz.RetryPolicy.op_Inequality(Quartz.RetryPolicy,Quartz.RetryPolicy)">
+  operator !=(RetryPolicy?, RetryPolicy?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/RetryPolicy.cs/#L555"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether two policies are different values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(RetryPolicy? left, RetryPolicy? right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Quartz.RetryPolicy.html">RetryPolicy</a></dt>
+    <dd><p>The first policy.</p>
+</dd>
+    <dt><code>right</code> <a class="xref" href="Quartz.RetryPolicy.html">RetryPolicy</a></dt>
+    <dd><p>The second policy.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the two are not the same value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/RetryPolicy.cs/#L48" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

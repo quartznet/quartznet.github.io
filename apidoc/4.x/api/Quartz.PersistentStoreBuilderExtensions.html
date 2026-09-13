@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PersistentStoreBuilderExtensions | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PersistentStoreBuilderExtensions | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Database-specific configuration for a persistent job store.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_PersistentStoreBuilderExtensions.md&amp;value=---%0Auid%3A%20Quartz.PersistentStoreBuilderExtensions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.PersistentStoreBuilderExtensions">
+
+
+
+  <h1 id="Quartz_PersistentStoreBuilderExtensions" data-uid="Quartz.PersistentStoreBuilderExtensions" class="text-break">
+Class PersistentStoreBuilderExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Database-specific configuration for a persistent job store.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class PersistentStoreBuilderExtensions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">PersistentStoreBuilderExtensions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_PersistentStoreBuilderExtensions_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Each method selects the driver delegate that speaks the right SQL dialect and the ADO.NET provider
+that talks to it, so a connection string is all a caller has to supply — the shape every
+Entity Framework Core user already knows.
+</p>
+<p>
+The pairs that look redundant are not: <code>UseMySql</code> and <code>UseMySqlConnector</code>, like
+<code>UseSqlite</code> and <code>UseSystemDataSqlite</code>, choose between different ADO.NET drivers for the
+same database. In each pair the short name is the driver to reach for, and the longer name says
+which other driver it is.
+</p>
+<p>
+Each of them also takes the driver's <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbproviderfactory">DbProviderFactory</a> instead of only a connection
+string — <code>UseSqlServer(SqlClientFactory.Instance, connectionString)</code>. That overload names no
+type: it asks the factory for connections rather than resolving the driver's types from strings, so
+it is the one a trimmed or ahead-of-time-compiled application uses. The others resolve the driver by
+name and say so.
+</p>
+<p>
+Every provider therefore has the same three overloads, and <code>UseOracle</code> has a fourth. That is not
+an oversight: the name path reaches <code>BindByName</code> and <code>OracleDbType.Blob</code> by reflecting over
+the types the driver description names, and a factory names none, so the factory form of Oracle alone
+needs somewhere to say those two things in code. Oracle is the only driver Quartz ships a description
+for that needs either.
+</p>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UseFirebird_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseFirebird*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UseFirebird_Quartz_IPersistentStoreBuilder_System_Action_Quartz_DataSourceOptions__" data-uid="Quartz.PersistentStoreBuilderExtensions.UseFirebird(Quartz.IPersistentStoreBuilder,System.Action{Quartz.DataSourceOptions})">
+  UseFirebird(IPersistentStoreBuilder, Action&lt;DataSourceOptions&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in Firebird.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequiresUnreferencedCode(&quot;The driver is chosen by name, and Quartz names its connection, command and parameter types as strings, so a trimmed application has no guarantee they survived. Pass the driver&#39;s DbProviderFactory to the overload that takes one, or register a DbDataSource in the container.&quot;)]
+public static IPersistentStoreBuilder UseFirebird(this IPersistentStoreBuilder builder, Action&lt;DataSourceOptions&gt; configure)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.DataSourceOptions.html">DataSourceOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UseFirebird_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseFirebird*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UseFirebird_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseFirebird(Quartz.IPersistentStoreBuilder,System.Data.Common.DbProviderFactory,System.String)">
+  UseFirebird(IPersistentStoreBuilder, DbProviderFactory, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in Firebird, reached through
+<code>FirebirdSql.Data.FirebirdClient.FirebirdClientFactory.Instance</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IPersistentStoreBuilder UseFirebird(this IPersistentStoreBuilder builder, DbProviderFactory factory, string connectionString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+    <dt><code>factory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbproviderfactory">DbProviderFactory</a></dt>
+    <dd></dd>
+    <dt><code>connectionString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_PersistentStoreBuilderExtensions_UseFirebird_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The provider name still chooses the driver description — how parameters are spelled, and whether
+they bind by name — but only the half of it that names no type is read, because the factory
+supplies every object the store would otherwise have constructed. That is what makes this the
+overload a trimmed or ahead-of-time-compiled application uses: nothing on this path calls
+<code>Type.GetType</code>.
+</p>
+<p>
+The provider is registered directly rather than assembled from <a class="xref" href="Quartz.DataSourceOptions.html">DataSourceOptions</a>,
+because a factory and a driver description are values only code can supply and options are
+bound from configuration. Putting them on the options type made the configuration binder's
+source generator — which a native AOT publish turns on, and which issue #3430 is about turning
+on everywhere — try to construct a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbproviderfactory">DbProviderFactory</a> from a configuration section.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UseFirebird_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseFirebird*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UseFirebird_Quartz_IPersistentStoreBuilder_System_String_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseFirebird(Quartz.IPersistentStoreBuilder,System.String)">
+  UseFirebird(IPersistentStoreBuilder, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in Firebird.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequiresUnreferencedCode(&quot;The driver is chosen by name, and Quartz names its connection, command and parameter types as strings, so a trimmed application has no guarantee they survived. Pass the driver&#39;s DbProviderFactory to the overload that takes one, or register a DbDataSource in the container.&quot;)]
+public static IPersistentStoreBuilder UseFirebird(this IPersistentStoreBuilder builder, string connectionString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+    <dt><code>connectionString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UseGenericDatabase_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseGenericDatabase*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UseGenericDatabase_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String_Quartz_Impl_AdoJobStore_Common_DbMetadata_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseGenericDatabase(Quartz.IPersistentStoreBuilder,System.Data.Common.DbProviderFactory,System.String,Quartz.Impl.AdoJobStore.Common.DbMetadata)">
+  UseGenericDatabase(IPersistentStoreBuilder, DbProviderFactory, string, DbMetadata)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L384"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in a database Quartz has no specific support for, reached through the
+driver's own factory and described in code.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IPersistentStoreBuilder UseGenericDatabase(this IPersistentStoreBuilder builder, DbProviderFactory factory, string connectionString, DbMetadata metadata)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd><p>The store being configured.</p>
+</dd>
+    <dt><code>factory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbproviderfactory">DbProviderFactory</a></dt>
+    <dd><p>The driver's factory, normally its <code>Instance</code> singleton.</p>
+</dd>
+    <dt><code>connectionString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The connection string.</p>
+</dd>
+    <dt><code>metadata</code> <a class="xref" href="Quartz.Impl.AdoJobStore.Common.DbMetadata.html">DbMetadata</a></dt>
+    <dd><p>The ADO.NET driver description.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_PersistentStoreBuilderExtensions_UseGenericDatabase_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String_Quartz_Impl_AdoJobStore_Common_DbMetadata__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The registration that names nothing at all: the factory supplies the connections, and the
+description says how the driver spells a parameter. It needs no provider name, because a
+provider name exists to look a description up and this one arrived.
+</p>
+<p>
+A description here may still name the driver's types — nothing stops it, and
+<code>ParameterDbTypePropertyName</code> is how a blob gets the driver's own parameter type — but it
+does not have to, and a trimmed application should not:
+</p>
+<pre><code class="lang-csharp">store.UseGenericDatabase(MyFactory.Instance, connectionString, new DbMetadata
+{
+    ProductName = "My Database",
+    ParameterNamePrefix = "@",
+    UseParameterNamePrefixInParameterCollection = true,
+    BindByName = true,
+    ConfigureBinaryParameter = parameter =&gt; ((MyParameter) parameter).MyDbType = MyDbType.Blob,
+});</code></pre>
+</div>
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UseGenericDatabase_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseGenericDatabase*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UseGenericDatabase_Quartz_IPersistentStoreBuilder_System_String_System_Action_Quartz_DataSourceOptions__" data-uid="Quartz.PersistentStoreBuilderExtensions.UseGenericDatabase(Quartz.IPersistentStoreBuilder,System.String,System.Action{Quartz.DataSourceOptions})">
+  UseGenericDatabase(IPersistentStoreBuilder, string, Action&lt;DataSourceOptions&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L286"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in a database Quartz has no specific support for, using the generic SQL
+dialect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequiresUnreferencedCode(&quot;The driver is chosen by name, and Quartz names its connection, command and parameter types as strings, so a trimmed application has no guarantee they survived. Pass the driver&#39;s DbProviderFactory to the overload that takes one, or register a DbDataSource in the container.&quot;)]
+public static IPersistentStoreBuilder UseGenericDatabase(this IPersistentStoreBuilder builder, string provider, Action&lt;DataSourceOptions&gt; configure)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd><p>The store being configured.</p>
+</dd>
+    <dt><code>provider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The Quartz provider name identifying the ADO.NET driver.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.DataSourceOptions.html">DataSourceOptions</a>&gt;</dt>
+    <dd><p>Configures the data source, for example a named connection string.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UseGenericDatabase_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseGenericDatabase*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UseGenericDatabase_Quartz_IPersistentStoreBuilder_System_String_System_Action_Quartz_DataSourceOptions__System_Func_Quartz_Impl_AdoJobStore_Common_DbMetadata__" data-uid="Quartz.PersistentStoreBuilderExtensions.UseGenericDatabase(Quartz.IPersistentStoreBuilder,System.String,System.Action{Quartz.DataSourceOptions},System.Func{Quartz.Impl.AdoJobStore.Common.DbMetadata})">
+  UseGenericDatabase(IPersistentStoreBuilder, string, Action&lt;DataSourceOptions&gt;, Func&lt;DbMetadata&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L344"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in a database Quartz ships no ADO.NET driver description for, describing both
+the data source and the driver in code.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IPersistentStoreBuilder UseGenericDatabase(this IPersistentStoreBuilder builder, string provider, Action&lt;DataSourceOptions&gt; configureDataSource, Func&lt;DbMetadata&gt; describeMetadata)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd><p>The store being configured.</p>
+</dd>
+    <dt><code>provider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The provider name the driver description is registered under.</p>
+</dd>
+    <dt><code>configureDataSource</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.DataSourceOptions.html">DataSourceOptions</a>&gt;</dt>
+    <dd><p>Configures the data source, for example a named connection string.</p>
+</dd>
+    <dt><code>describeMetadata</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="Quartz.Impl.AdoJobStore.Common.DbMetadata.html">DbMetadata</a>&gt;</dt>
+    <dd><p>Builds the ADO.NET driver description.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UseGenericDatabase_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseGenericDatabase*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UseGenericDatabase_Quartz_IPersistentStoreBuilder_System_String_System_String_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseGenericDatabase(Quartz.IPersistentStoreBuilder,System.String,System.String)">
+  UseGenericDatabase(IPersistentStoreBuilder, string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L272"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in a database Quartz has no specific support for, using the generic SQL
+dialect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequiresUnreferencedCode(&quot;The driver is chosen by name, and Quartz names its connection, command and parameter types as strings, so a trimmed application has no guarantee they survived. Pass the driver&#39;s DbProviderFactory to the overload that takes one, or register a DbDataSource in the container.&quot;)]
+public static IPersistentStoreBuilder UseGenericDatabase(this IPersistentStoreBuilder builder, string provider, string connectionString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd><p>The store being configured.</p>
+</dd>
+    <dt><code>provider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The Quartz provider name identifying the ADO.NET driver.</p>
+</dd>
+    <dt><code>connectionString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The connection string.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UseGenericDatabase_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseGenericDatabase*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UseGenericDatabase_Quartz_IPersistentStoreBuilder_System_String_System_String_System_Func_Quartz_Impl_AdoJobStore_Common_DbMetadata__" data-uid="Quartz.PersistentStoreBuilderExtensions.UseGenericDatabase(Quartz.IPersistentStoreBuilder,System.String,System.String,System.Func{Quartz.Impl.AdoJobStore.Common.DbMetadata})">
+  UseGenericDatabase(IPersistentStoreBuilder, string, string, Func&lt;DbMetadata&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L326"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in a database Quartz ships no ADO.NET driver description for, describing the
+driver in code.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IPersistentStoreBuilder UseGenericDatabase(this IPersistentStoreBuilder builder, string provider, string connectionString, Func&lt;DbMetadata&gt; describeMetadata)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd><p>The store being configured.</p>
+</dd>
+    <dt><code>provider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The provider name the driver description is registered under.</p>
+</dd>
+    <dt><code>connectionString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The connection string.</p>
+</dd>
+    <dt><code>describeMetadata</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="Quartz.Impl.AdoJobStore.Common.DbMetadata.html">DbMetadata</a>&gt;</dt>
+    <dd><p>Builds the ADO.NET driver description.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_PersistentStoreBuilderExtensions_UseGenericDatabase_Quartz_IPersistentStoreBuilder_System_String_System_String_System_Func_Quartz_Impl_AdoJobStore_Common_DbMetadata___examples">Examples</h4>
+  <pre><code class="lang-csharp">store.UseGenericDatabase("MyDatabase", connectionString, () =&gt; new DbMetadata
+{
+    ProductName = "My Database",
+    AssemblyName = typeof(MyConnection).Assembly.FullName,
+    ConnectionType = typeof(MyConnection),
+    CommandType = typeof(MyCommand),
+    ParameterType = typeof(MyParameter),
+    ParameterDbType = typeof(MyDbType),
+    ParameterDbTypePropertyName = nameof(MyParameter.MyDbType),
+    ParameterNamePrefix = "@",
+    ExceptionType = typeof(MyException),
+    UseParameterNamePrefixInParameterCollection = true,
+    BindByName = true,
+    DbBinaryTypeName = "VarBinary",
+});</code></pre>
+
+
+  <h4 class="section" id="Quartz_PersistentStoreBuilderExtensions_UseGenericDatabase_Quartz_IPersistentStoreBuilder_System_String_System_String_System_Func_Quartz_Impl_AdoJobStore_Common_DbMetadata___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This is the code-first form of the <code>quartz.dbprovider.&lt;name&gt;.*</code> keys: it says which
+connection, command and parameter types to instantiate, how parameters are named, and which enum
+value means &quot;binary column&quot;. Registering a description under a name Quartz already ships one for
+replaces it.</p>
+</div>
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UseMySql_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseMySql*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UseMySql_Quartz_IPersistentStoreBuilder_System_Action_Quartz_DataSourceOptions__" data-uid="Quartz.PersistentStoreBuilderExtensions.UseMySql(Quartz.IPersistentStoreBuilder,System.Action{Quartz.DataSourceOptions})">
+  UseMySql(IPersistentStoreBuilder, Action&lt;DataSourceOptions&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in MySQL, using the MySql.Data driver.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequiresUnreferencedCode(&quot;The driver is chosen by name, and Quartz names its connection, command and parameter types as strings, so a trimmed application has no guarantee they survived. Pass the driver&#39;s DbProviderFactory to the overload that takes one, or register a DbDataSource in the container.&quot;)]
+public static IPersistentStoreBuilder UseMySql(this IPersistentStoreBuilder builder, Action&lt;DataSourceOptions&gt; configure)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.DataSourceOptions.html">DataSourceOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UseMySql_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseMySql*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UseMySql_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseMySql(Quartz.IPersistentStoreBuilder,System.Data.Common.DbProviderFactory,System.String)">
+  UseMySql(IPersistentStoreBuilder, DbProviderFactory, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in MySQL, reached through
+<code>MySql.Data.MySqlClient.MySqlClientFactory.Instance</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IPersistentStoreBuilder UseMySql(this IPersistentStoreBuilder builder, DbProviderFactory factory, string connectionString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+    <dt><code>factory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbproviderfactory">DbProviderFactory</a></dt>
+    <dd></dd>
+    <dt><code>connectionString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_PersistentStoreBuilderExtensions_UseMySql_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The provider name still chooses the driver description — how parameters are spelled, and whether
+they bind by name — but only the half of it that names no type is read, because the factory
+supplies every object the store would otherwise have constructed. That is what makes this the
+overload a trimmed or ahead-of-time-compiled application uses: nothing on this path calls
+<code>Type.GetType</code>.
+</p>
+<p>
+The provider is registered directly rather than assembled from <a class="xref" href="Quartz.DataSourceOptions.html">DataSourceOptions</a>,
+because a factory and a driver description are values only code can supply and options are
+bound from configuration. Putting them on the options type made the configuration binder's
+source generator — which a native AOT publish turns on, and which issue #3430 is about turning
+on everywhere — try to construct a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbproviderfactory">DbProviderFactory</a> from a configuration section.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UseMySql_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseMySql*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UseMySql_Quartz_IPersistentStoreBuilder_System_String_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseMySql(Quartz.IPersistentStoreBuilder,System.String)">
+  UseMySql(IPersistentStoreBuilder, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in MySQL, using the MySql.Data driver.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequiresUnreferencedCode(&quot;The driver is chosen by name, and Quartz names its connection, command and parameter types as strings, so a trimmed application has no guarantee they survived. Pass the driver&#39;s DbProviderFactory to the overload that takes one, or register a DbDataSource in the container.&quot;)]
+public static IPersistentStoreBuilder UseMySql(this IPersistentStoreBuilder builder, string connectionString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+    <dt><code>connectionString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UseMySqlConnector_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseMySqlConnector*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UseMySqlConnector_Quartz_IPersistentStoreBuilder_System_Action_Quartz_DataSourceOptions__" data-uid="Quartz.PersistentStoreBuilderExtensions.UseMySqlConnector(Quartz.IPersistentStoreBuilder,System.Action{Quartz.DataSourceOptions})">
+  UseMySqlConnector(IPersistentStoreBuilder, Action&lt;DataSourceOptions&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in MySQL, using the MySqlConnector driver.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequiresUnreferencedCode(&quot;The driver is chosen by name, and Quartz names its connection, command and parameter types as strings, so a trimmed application has no guarantee they survived. Pass the driver&#39;s DbProviderFactory to the overload that takes one, or register a DbDataSource in the container.&quot;)]
+public static IPersistentStoreBuilder UseMySqlConnector(this IPersistentStoreBuilder builder, Action&lt;DataSourceOptions&gt; configure)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.DataSourceOptions.html">DataSourceOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UseMySqlConnector_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseMySqlConnector*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UseMySqlConnector_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseMySqlConnector(Quartz.IPersistentStoreBuilder,System.Data.Common.DbProviderFactory,System.String)">
+  UseMySqlConnector(IPersistentStoreBuilder, DbProviderFactory, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in MySQL, reached through
+<code>MySqlConnector.MySqlConnectorFactory.Instance</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IPersistentStoreBuilder UseMySqlConnector(this IPersistentStoreBuilder builder, DbProviderFactory factory, string connectionString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+    <dt><code>factory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbproviderfactory">DbProviderFactory</a></dt>
+    <dd></dd>
+    <dt><code>connectionString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_PersistentStoreBuilderExtensions_UseMySqlConnector_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The provider name still chooses the driver description — how parameters are spelled, and whether
+they bind by name — but only the half of it that names no type is read, because the factory
+supplies every object the store would otherwise have constructed. That is what makes this the
+overload a trimmed or ahead-of-time-compiled application uses: nothing on this path calls
+<code>Type.GetType</code>.
+</p>
+<p>
+The provider is registered directly rather than assembled from <a class="xref" href="Quartz.DataSourceOptions.html">DataSourceOptions</a>,
+because a factory and a driver description are values only code can supply and options are
+bound from configuration. Putting them on the options type made the configuration binder's
+source generator — which a native AOT publish turns on, and which issue #3430 is about turning
+on everywhere — try to construct a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbproviderfactory">DbProviderFactory</a> from a configuration section.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UseMySqlConnector_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseMySqlConnector*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UseMySqlConnector_Quartz_IPersistentStoreBuilder_System_String_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseMySqlConnector(Quartz.IPersistentStoreBuilder,System.String)">
+  UseMySqlConnector(IPersistentStoreBuilder, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in MySQL, using the MySqlConnector driver.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequiresUnreferencedCode(&quot;The driver is chosen by name, and Quartz names its connection, command and parameter types as strings, so a trimmed application has no guarantee they survived. Pass the driver&#39;s DbProviderFactory to the overload that takes one, or register a DbDataSource in the container.&quot;)]
+public static IPersistentStoreBuilder UseMySqlConnector(this IPersistentStoreBuilder builder, string connectionString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+    <dt><code>connectionString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UseOracle_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseOracle*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UseOracle_Quartz_IPersistentStoreBuilder_System_Action_Quartz_DataSourceOptions__" data-uid="Quartz.PersistentStoreBuilderExtensions.UseOracle(Quartz.IPersistentStoreBuilder,System.Action{Quartz.DataSourceOptions})">
+  UseOracle(IPersistentStoreBuilder, Action&lt;DataSourceOptions&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in Oracle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequiresUnreferencedCode(&quot;The driver is chosen by name, and Quartz names its connection, command and parameter types as strings, so a trimmed application has no guarantee they survived. Pass the driver&#39;s DbProviderFactory to the overload that takes one, or register a DbDataSource in the container.&quot;)]
+public static IPersistentStoreBuilder UseOracle(this IPersistentStoreBuilder builder, Action&lt;DataSourceOptions&gt; configure)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.DataSourceOptions.html">DataSourceOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UseOracle_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseOracle*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UseOracle_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseOracle(Quartz.IPersistentStoreBuilder,System.Data.Common.DbProviderFactory,System.String)">
+  UseOracle(IPersistentStoreBuilder, DbProviderFactory, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in Oracle, reached through
+<code>Oracle.ManagedDataAccess.Client.OracleClientFactory.Instance</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IPersistentStoreBuilder UseOracle(this IPersistentStoreBuilder builder, DbProviderFactory factory, string connectionString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+    <dt><code>factory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbproviderfactory">DbProviderFactory</a></dt>
+    <dd></dd>
+    <dt><code>connectionString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_PersistentStoreBuilderExtensions_UseOracle_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Oracle is the driver that needs
+<a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseOracle_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String_System_Action_System_Data_Common_DbCommand__System_Action_System_Data_Common_DbParameter__">UseOracle(IPersistentStoreBuilder, DbProviderFactory, string, Action&lt;DbCommand&gt;?, Action&lt;DbParameter&gt;?)</a>
+rather than this overload for anything but the smallest job data: the managed driver binds
+parameters by position unless <code>BindByName</code> is set on its command, and it maps
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.dbtype#system-data-dbtype-binary">Binary</a> to <code>OracleDbType.Raw</code>, which holds two kilobytes.
+Quartz names neither of those types, so an application that references the driver has to say it.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UseOracle_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseOracle*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UseOracle_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String_System_Action_System_Data_Common_DbCommand__System_Action_System_Data_Common_DbParameter__" data-uid="Quartz.PersistentStoreBuilderExtensions.UseOracle(Quartz.IPersistentStoreBuilder,System.Data.Common.DbProviderFactory,System.String,System.Action{System.Data.Common.DbCommand},System.Action{System.Data.Common.DbParameter})">
+  UseOracle(IPersistentStoreBuilder, DbProviderFactory, string, Action&lt;DbCommand&gt;?, Action&lt;DbParameter&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in Oracle, reached through its factory and told the two things only an
+application that references the driver can say.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IPersistentStoreBuilder UseOracle(this IPersistentStoreBuilder builder, DbProviderFactory factory, string connectionString, Action&lt;DbCommand&gt;? configureCommand, Action&lt;DbParameter&gt;? configureBinaryParameter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd><p>The store being configured.</p>
+</dd>
+    <dt><code>factory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbproviderfactory">DbProviderFactory</a></dt>
+    <dd><p>The driver's factory, normally <code>OracleClientFactory.Instance</code>.</p>
+</dd>
+    <dt><code>connectionString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The connection string.</p>
+</dd>
+    <dt><code>configureCommand</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbcommand">DbCommand</a>&gt;</dt>
+    <dd><p>Applied to every command, for <code>BindByName</code>.</p>
+</dd>
+    <dt><code>configureBinaryParameter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbparameter">DbParameter</a>&gt;</dt>
+    <dd><p>Applied to every blob parameter, for <code>OracleDbType</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_PersistentStoreBuilderExtensions_UseOracle_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String_System_Action_System_Data_Common_DbCommand__System_Action_System_Data_Common_DbParameter___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The name path reaches <code>OracleCommand.BindByName</code> and <code>OracleParameter.OracleDbType</code> by
+reflecting over the types the driver description names. A factory names none, so the two are
+said in code:
+</p>
+<pre><code class="lang-csharp">store.UseOracle(
+    OracleClientFactory.Instance,
+    connectionString,
+    configureCommand: command =&gt; ((OracleCommand) command).BindByName = true,
+    configureBinaryParameter: parameter =&gt; ((OracleParameter) parameter).OracleDbType = OracleDbType.Blob);</code></pre>
+<p>
+Both matter. Without the first, every statement binds its parameters by position and the store
+reads the wrong columns; without the second, a job data map larger than two kilobytes will not go
+in, because <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.dbtype#system-data-dbtype-binary">Binary</a> is <code>OracleDbType.Raw</code> and not
+<code>Blob</code>. Oracle is the only driver Quartz ships a description for that needs either — this
+overload exists for it, and any other driver says the same things on its own
+<a class="xref" href="Quartz.Impl.AdoJobStore.Common.DbMetadata.html">DbMetadata</a> through
+<a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseGenericDatabase_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String_Quartz_Impl_AdoJobStore_Common_DbMetadata_">UseGenericDatabase(IPersistentStoreBuilder, DbProviderFactory, string, DbMetadata)</a>.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UseOracle_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseOracle*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UseOracle_Quartz_IPersistentStoreBuilder_System_String_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseOracle(Quartz.IPersistentStoreBuilder,System.String)">
+  UseOracle(IPersistentStoreBuilder, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in Oracle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequiresUnreferencedCode(&quot;The driver is chosen by name, and Quartz names its connection, command and parameter types as strings, so a trimmed application has no guarantee they survived. Pass the driver&#39;s DbProviderFactory to the overload that takes one, or register a DbDataSource in the container.&quot;)]
+public static IPersistentStoreBuilder UseOracle(this IPersistentStoreBuilder builder, string connectionString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+    <dt><code>connectionString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UsePostgres_" data-uid="Quartz.PersistentStoreBuilderExtensions.UsePostgres*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UsePostgres_Quartz_IPersistentStoreBuilder_System_Action_Quartz_DataSourceOptions__" data-uid="Quartz.PersistentStoreBuilderExtensions.UsePostgres(Quartz.IPersistentStoreBuilder,System.Action{Quartz.DataSourceOptions})">
+  UsePostgres(IPersistentStoreBuilder, Action&lt;DataSourceOptions&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in PostgreSQL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequiresUnreferencedCode(&quot;The driver is chosen by name, and Quartz names its connection, command and parameter types as strings, so a trimmed application has no guarantee they survived. Pass the driver&#39;s DbProviderFactory to the overload that takes one, or register a DbDataSource in the container.&quot;)]
+public static IPersistentStoreBuilder UsePostgres(this IPersistentStoreBuilder builder, Action&lt;DataSourceOptions&gt; configure)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.DataSourceOptions.html">DataSourceOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UsePostgres_" data-uid="Quartz.PersistentStoreBuilderExtensions.UsePostgres*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UsePostgres_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String_" data-uid="Quartz.PersistentStoreBuilderExtensions.UsePostgres(Quartz.IPersistentStoreBuilder,System.Data.Common.DbProviderFactory,System.String)">
+  UsePostgres(IPersistentStoreBuilder, DbProviderFactory, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in PostgreSQL, reached through <code>Npgsql.NpgsqlFactory.Instance</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IPersistentStoreBuilder UsePostgres(this IPersistentStoreBuilder builder, DbProviderFactory factory, string connectionString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+    <dt><code>factory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbproviderfactory">DbProviderFactory</a></dt>
+    <dd></dd>
+    <dt><code>connectionString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_PersistentStoreBuilderExtensions_UsePostgres_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The provider name still chooses the driver description — how parameters are spelled, and whether
+they bind by name — but only the half of it that names no type is read, because the factory
+supplies every object the store would otherwise have constructed. That is what makes this the
+overload a trimmed or ahead-of-time-compiled application uses: nothing on this path calls
+<code>Type.GetType</code>.
+</p>
+<p>
+The provider is registered directly rather than assembled from <a class="xref" href="Quartz.DataSourceOptions.html">DataSourceOptions</a>,
+because a factory and a driver description are values only code can supply and options are
+bound from configuration. Putting them on the options type made the configuration binder's
+source generator — which a native AOT publish turns on, and which issue #3430 is about turning
+on everywhere — try to construct a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbproviderfactory">DbProviderFactory</a> from a configuration section.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UsePostgres_" data-uid="Quartz.PersistentStoreBuilderExtensions.UsePostgres*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UsePostgres_Quartz_IPersistentStoreBuilder_System_String_" data-uid="Quartz.PersistentStoreBuilderExtensions.UsePostgres(Quartz.IPersistentStoreBuilder,System.String)">
+  UsePostgres(IPersistentStoreBuilder, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in PostgreSQL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequiresUnreferencedCode(&quot;The driver is chosen by name, and Quartz names its connection, command and parameter types as strings, so a trimmed application has no guarantee they survived. Pass the driver&#39;s DbProviderFactory to the overload that takes one, or register a DbDataSource in the container.&quot;)]
+public static IPersistentStoreBuilder UsePostgres(this IPersistentStoreBuilder builder, string connectionString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+    <dt><code>connectionString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UseSqlServer_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseSqlServer*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UseSqlServer_Quartz_IPersistentStoreBuilder_System_Action_Quartz_DataSourceOptions__" data-uid="Quartz.PersistentStoreBuilderExtensions.UseSqlServer(Quartz.IPersistentStoreBuilder,System.Action{Quartz.DataSourceOptions})">
+  UseSqlServer(IPersistentStoreBuilder, Action&lt;DataSourceOptions&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in Microsoft SQL Server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequiresUnreferencedCode(&quot;The driver is chosen by name, and Quartz names its connection, command and parameter types as strings, so a trimmed application has no guarantee they survived. Pass the driver&#39;s DbProviderFactory to the overload that takes one, or register a DbDataSource in the container.&quot;)]
+public static IPersistentStoreBuilder UseSqlServer(this IPersistentStoreBuilder builder, Action&lt;DataSourceOptions&gt; configure)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.DataSourceOptions.html">DataSourceOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UseSqlServer_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseSqlServer*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UseSqlServer_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseSqlServer(Quartz.IPersistentStoreBuilder,System.Data.Common.DbProviderFactory,System.String)">
+  UseSqlServer(IPersistentStoreBuilder, DbProviderFactory, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in Microsoft SQL Server, reached through
+<code>Microsoft.Data.SqlClient.SqlClientFactory.Instance</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IPersistentStoreBuilder UseSqlServer(this IPersistentStoreBuilder builder, DbProviderFactory factory, string connectionString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+    <dt><code>factory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbproviderfactory">DbProviderFactory</a></dt>
+    <dd></dd>
+    <dt><code>connectionString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_PersistentStoreBuilderExtensions_UseSqlServer_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The provider name still chooses the driver description — how parameters are spelled, and whether
+they bind by name — but only the half of it that names no type is read, because the factory
+supplies every object the store would otherwise have constructed. That is what makes this the
+overload a trimmed or ahead-of-time-compiled application uses: nothing on this path calls
+<code>Type.GetType</code>.
+</p>
+<p>
+The provider is registered directly rather than assembled from <a class="xref" href="Quartz.DataSourceOptions.html">DataSourceOptions</a>,
+because a factory and a driver description are values only code can supply and options are
+bound from configuration. Putting them on the options type made the configuration binder's
+source generator — which a native AOT publish turns on, and which issue #3430 is about turning
+on everywhere — try to construct a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbproviderfactory">DbProviderFactory</a> from a configuration section.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UseSqlServer_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseSqlServer*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UseSqlServer_Quartz_IPersistentStoreBuilder_System_String_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseSqlServer(Quartz.IPersistentStoreBuilder,System.String)">
+  UseSqlServer(IPersistentStoreBuilder, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in Microsoft SQL Server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequiresUnreferencedCode(&quot;The driver is chosen by name, and Quartz names its connection, command and parameter types as strings, so a trimmed application has no guarantee they survived. Pass the driver&#39;s DbProviderFactory to the overload that takes one, or register a DbDataSource in the container.&quot;)]
+public static IPersistentStoreBuilder UseSqlServer(this IPersistentStoreBuilder builder, string connectionString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+    <dt><code>connectionString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UseSqlite_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseSqlite*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UseSqlite_Quartz_IPersistentStoreBuilder_System_Action_Quartz_DataSourceOptions__" data-uid="Quartz.PersistentStoreBuilderExtensions.UseSqlite(Quartz.IPersistentStoreBuilder,System.Action{Quartz.DataSourceOptions})">
+  UseSqlite(IPersistentStoreBuilder, Action&lt;DataSourceOptions&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L231"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in SQLite, using the Microsoft.Data.Sqlite driver.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequiresUnreferencedCode(&quot;The driver is chosen by name, and Quartz names its connection, command and parameter types as strings, so a trimmed application has no guarantee they survived. Pass the driver&#39;s DbProviderFactory to the overload that takes one, or register a DbDataSource in the container.&quot;)]
+public static IPersistentStoreBuilder UseSqlite(this IPersistentStoreBuilder builder, Action&lt;DataSourceOptions&gt; configure)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.DataSourceOptions.html">DataSourceOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_PersistentStoreBuilderExtensions_UseSqlite_Quartz_IPersistentStoreBuilder_System_Action_Quartz_DataSourceOptions___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The modern driver, and what <code>UseSqlite</code> means: the short name goes to the default the way
+<code>UseMySql</code> does, and the way Entity Framework Core spells the same choice. The legacy
+System.Data.SQLite driver is <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseSystemDataSqlite_Quartz_IPersistentStoreBuilder_System_String_">UseSystemDataSqlite(IPersistentStoreBuilder, string)</a>.</p>
+</div>
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UseSqlite_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseSqlite*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UseSqlite_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseSqlite(Quartz.IPersistentStoreBuilder,System.Data.Common.DbProviderFactory,System.String)">
+  UseSqlite(IPersistentStoreBuilder, DbProviderFactory, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L240"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in SQLite, reached through
+<code>Microsoft.Data.Sqlite.SqliteFactory.Instance</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IPersistentStoreBuilder UseSqlite(this IPersistentStoreBuilder builder, DbProviderFactory factory, string connectionString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+    <dt><code>factory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbproviderfactory">DbProviderFactory</a></dt>
+    <dd></dd>
+    <dt><code>connectionString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_PersistentStoreBuilderExtensions_UseSqlite_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The provider name still chooses the driver description — how parameters are spelled, and whether
+they bind by name — but only the half of it that names no type is read, because the factory
+supplies every object the store would otherwise have constructed. That is what makes this the
+overload a trimmed or ahead-of-time-compiled application uses: nothing on this path calls
+<code>Type.GetType</code>.
+</p>
+<p>
+The provider is registered directly rather than assembled from <a class="xref" href="Quartz.DataSourceOptions.html">DataSourceOptions</a>,
+because a factory and a driver description are values only code can supply and options are
+bound from configuration. Putting them on the options type made the configuration binder's
+source generator — which a native AOT publish turns on, and which issue #3430 is about turning
+on everywhere — try to construct a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbproviderfactory">DbProviderFactory</a> from a configuration section.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UseSqlite_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseSqlite*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UseSqlite_Quartz_IPersistentStoreBuilder_System_String_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseSqlite(Quartz.IPersistentStoreBuilder,System.String)">
+  UseSqlite(IPersistentStoreBuilder, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L226"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in SQLite, using the Microsoft.Data.Sqlite driver.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequiresUnreferencedCode(&quot;The driver is chosen by name, and Quartz names its connection, command and parameter types as strings, so a trimmed application has no guarantee they survived. Pass the driver&#39;s DbProviderFactory to the overload that takes one, or register a DbDataSource in the container.&quot;)]
+public static IPersistentStoreBuilder UseSqlite(this IPersistentStoreBuilder builder, string connectionString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+    <dt><code>connectionString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_PersistentStoreBuilderExtensions_UseSqlite_Quartz_IPersistentStoreBuilder_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The modern driver, and what <code>UseSqlite</code> means: the short name goes to the default the way
+<code>UseMySql</code> does, and the way Entity Framework Core spells the same choice. The legacy
+System.Data.SQLite driver is <a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseSystemDataSqlite_Quartz_IPersistentStoreBuilder_System_String_">UseSystemDataSqlite(IPersistentStoreBuilder, string)</a>.</p>
+</div>
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UseSystemDataSqlite_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseSystemDataSqlite*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UseSystemDataSqlite_Quartz_IPersistentStoreBuilder_System_Action_Quartz_DataSourceOptions__" data-uid="Quartz.PersistentStoreBuilderExtensions.UseSystemDataSqlite(Quartz.IPersistentStoreBuilder,System.Action{Quartz.DataSourceOptions})">
+  UseSystemDataSqlite(IPersistentStoreBuilder, Action&lt;DataSourceOptions&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L253"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in SQLite, using the legacy System.Data.SQLite driver.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequiresUnreferencedCode(&quot;The driver is chosen by name, and Quartz names its connection, command and parameter types as strings, so a trimmed application has no guarantee they survived. Pass the driver&#39;s DbProviderFactory to the overload that takes one, or register a DbDataSource in the container.&quot;)]
+public static IPersistentStoreBuilder UseSystemDataSqlite(this IPersistentStoreBuilder builder, Action&lt;DataSourceOptions&gt; configure)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.DataSourceOptions.html">DataSourceOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_PersistentStoreBuilderExtensions_UseSystemDataSqlite_Quartz_IPersistentStoreBuilder_System_Action_Quartz_DataSourceOptions___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Named after its driver rather than after the database, because
+<a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseSqlite_Quartz_IPersistentStoreBuilder_System_String_">UseSqlite(IPersistentStoreBuilder, string)</a> is the one to reach for.</p>
+</div>
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UseSystemDataSqlite_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseSystemDataSqlite*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UseSystemDataSqlite_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseSystemDataSqlite(Quartz.IPersistentStoreBuilder,System.Data.Common.DbProviderFactory,System.String)">
+  UseSystemDataSqlite(IPersistentStoreBuilder, DbProviderFactory, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in SQLite, reached through
+<code>System.Data.SQLite.SQLiteFactory.Instance</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IPersistentStoreBuilder UseSystemDataSqlite(this IPersistentStoreBuilder builder, DbProviderFactory factory, string connectionString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+    <dt><code>factory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbproviderfactory">DbProviderFactory</a></dt>
+    <dd></dd>
+    <dt><code>connectionString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_PersistentStoreBuilderExtensions_UseSystemDataSqlite_Quartz_IPersistentStoreBuilder_System_Data_Common_DbProviderFactory_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The provider name still chooses the driver description — how parameters are spelled, and whether
+they bind by name — but only the half of it that names no type is read, because the factory
+supplies every object the store would otherwise have constructed. That is what makes this the
+overload a trimmed or ahead-of-time-compiled application uses: nothing on this path calls
+<code>Type.GetType</code>.
+</p>
+<p>
+The provider is registered directly rather than assembled from <a class="xref" href="Quartz.DataSourceOptions.html">DataSourceOptions</a>,
+because a factory and a driver description are values only code can supply and options are
+bound from configuration. Putting them on the options type made the configuration binder's
+source generator — which a native AOT publish turns on, and which issue #3430 is about turning
+on everywhere — try to construct a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbproviderfactory">DbProviderFactory</a> from a configuration section.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_PersistentStoreBuilderExtensions_UseSystemDataSqlite_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseSystemDataSqlite*"></a>
+
+  <h3 id="Quartz_PersistentStoreBuilderExtensions_UseSystemDataSqlite_Quartz_IPersistentStoreBuilder_System_String_" data-uid="Quartz.PersistentStoreBuilderExtensions.UseSystemDataSqlite(Quartz.IPersistentStoreBuilder,System.String)">
+  UseSystemDataSqlite(IPersistentStoreBuilder, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L248"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores the schedule in SQLite, using the legacy System.Data.SQLite driver.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequiresUnreferencedCode(&quot;The driver is chosen by name, and Quartz names its connection, command and parameter types as strings, so a trimmed application has no guarantee they survived. Pass the driver&#39;s DbProviderFactory to the overload that takes one, or register a DbDataSource in the container.&quot;)]
+public static IPersistentStoreBuilder UseSystemDataSqlite(this IPersistentStoreBuilder builder, string connectionString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+    <dt><code>connectionString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IPersistentStoreBuilder.html">IPersistentStoreBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_PersistentStoreBuilderExtensions_UseSystemDataSqlite_Quartz_IPersistentStoreBuilder_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Named after its driver rather than after the database, because
+<a class="xref" href="Quartz.PersistentStoreBuilderExtensions.html#Quartz_PersistentStoreBuilderExtensions_UseSqlite_Quartz_IPersistentStoreBuilder_System_String_">UseSqlite(IPersistentStoreBuilder, string)</a> is the one to reach for.</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/PersistentStoreBuilderExtensions.cs/#L41" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

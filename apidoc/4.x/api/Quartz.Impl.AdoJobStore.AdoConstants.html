@@ -1,0 +1,2470 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class AdoConstants | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class AdoConstants | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="The table, column and state names of the standard Quartz database schema, for  and  implementations that read and write it.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Impl_AdoJobStore_AdoConstants.md&amp;value=---%0Auid%3A%20Quartz.Impl.AdoJobStore.AdoConstants%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Impl.AdoJobStore.AdoConstants">
+
+
+
+  <h1 id="Quartz_Impl_AdoJobStore_AdoConstants" data-uid="Quartz.Impl.AdoJobStore.AdoConstants" class="text-break">
+Class AdoConstants  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<a class="xref" href="Quartz.Impl.html">Impl</a>.<a class="xref" href="Quartz.Impl.AdoJobStore.html">AdoJobStore</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The table, column and state names of the standard Quartz database schema, for
+<a class="xref" href="Quartz.Impl.AdoJobStore.IDriverDelegate.html">IDriverDelegate</a> and <a class="xref" href="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.html">ITriggerPersistenceDelegate</a> implementations
+that read and write it.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class AdoConstants</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">AdoConstants</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_Impl_AdoJobStore_AdoConstants_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>These used to be inherited: a delegate declared <code>: AdoConstants</code> and referred to the names
+unqualified. Inheritance is not how a constant container is consumed — it burns the single base
+class of every type that wants to name a column — so this is a static class now, named explicitly
+at the use site.</p>
+</div>
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_AllGroupsPaused" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.AllGroupsPaused">
+  AllGroupsPaused
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L465"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The group name a store records in the paused-groups table to mean that every group is paused,
+including the ones added next.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string AllGroupsPaused = &quot;_$_ALL_GROUPS_PAUSED_$_&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnBlob" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnBlob">
+  ColumnBlob
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L319"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>BLOB_DATA</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableBlobTriggers">TableBlobTriggers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnBlob = &quot;BLOB_DATA&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnCalendar" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnCalendar">
+  ColumnCalendar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L361"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>CALENDAR</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableCalendars">TableCalendars</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnCalendar = &quot;CALENDAR&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnCalendarName" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnCalendarName">
+  ColumnCalendarName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L356"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>CALENDAR_NAME</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableCalendars">TableCalendars</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnCalendarName = &quot;CALENDAR_NAME&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnCheckinInterval" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnCheckinInterval">
+  ColumnCheckinInterval
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L378"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>CHECKIN_INTERVAL</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableSchedulerState">TableSchedulerState</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnCheckinInterval = &quot;CHECKIN_INTERVAL&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnCronExpression" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnCronExpression">
+  ColumnCronExpression
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L313"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>CRON_EXPRESSION</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableCronTriggers">TableCronTriggers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnCronExpression = &quot;CRON_EXPRESSION&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnDescription" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnDescription">
+  ColumnDescription
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L208"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>DESCRIPTION</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableJobDetails">TableJobDetails</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnDescription = &quot;DESCRIPTION&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnEndTime" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnEndTime">
+  ColumnEndTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L249"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>END_TIME</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableTriggers">TableTriggers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnEndTime = &quot;END_TIME&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnEntryId" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnEntryId">
+  ColumnEntryId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L345"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>ENTRY_ID</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableFiredTriggers">TableFiredTriggers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnEntryId = &quot;ENTRY_ID&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnEntryState" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnEntryState">
+  ColumnEntryState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L350"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>STATE</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableFiredTriggers">TableFiredTriggers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnEntryState = &quot;STATE&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnExecutionGroup" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnExecutionGroup">
+  ColumnExecutionGroup
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>EXECUTION_GROUP</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableTriggers">TableTriggers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnExecutionGroup = &quot;EXECUTION_GROUP&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnFiredTime" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnFiredTime">
+  ColumnFiredTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L335"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>FIRED_TIME</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableFiredTriggers">TableFiredTriggers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnFiredTime = &quot;FIRED_TIME&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnInstanceName" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnInstanceName">
+  ColumnInstanceName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L330"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>INSTANCE_NAME</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableFiredTriggers">TableFiredTriggers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnInstanceName = &quot;INSTANCE_NAME&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnIsDurable" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnIsDurable">
+  ColumnIsDurable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>IS_DURABLE</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableJobDetails">TableJobDetails</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnIsDurable = &quot;IS_DURABLE&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnIsNonConcurrent" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnIsNonConcurrent">
+  ColumnIsNonConcurrent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L183"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>IS_NONCONCURRENT</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableJobDetails">TableJobDetails</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnIsNonConcurrent = &quot;IS_NONCONCURRENT&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnIsUpdateData" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnIsUpdateData">
+  ColumnIsUpdateData
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>IS_UPDATE_DATA</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableJobDetails">TableJobDetails</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnIsUpdateData = &quot;IS_UPDATE_DATA&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnJobClass" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnJobClass">
+  ColumnJobClass
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>JOB_CLASS_NAME</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableJobDetails">TableJobDetails</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnJobClass = &quot;JOB_CLASS_NAME&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnJobDataMap" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnJobDataMap">
+  ColumnJobDataMap
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L198"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>JOB_DATA</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableJobDetails">TableJobDetails</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnJobDataMap = &quot;JOB_DATA&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnJobGroup" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnJobGroup">
+  ColumnJobGroup
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>JOB_GROUP</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableJobDetails">TableJobDetails</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnJobGroup = &quot;JOB_GROUP&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnJobName" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnJobName">
+  ColumnJobName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>JOB_NAME</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableJobDetails">TableJobDetails</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnJobName = &quot;JOB_NAME&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnLastCheckinTime" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnLastCheckinTime">
+  ColumnLastCheckinTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L373"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>LAST_CHECKIN_TIME</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableSchedulerState">TableSchedulerState</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnLastCheckinTime = &quot;LAST_CHECKIN_TIME&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnLockName" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnLockName">
+  ColumnLockName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L367"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>LOCK_NAME</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableLocks">TableLocks</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnLockName = &quot;LOCK_NAME&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnMisfireInstruction" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnMisfireInstruction">
+  ColumnMisfireInstruction
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L254"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>MISFIRE_INSTR</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableTriggers">TableTriggers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnMisfireInstruction = &quot;MISFIRE_INSTR&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnMisfireOriginalFireTime" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnMisfireOriginalFireTime">
+  ColumnMisfireOriginalFireTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L264"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>MISFIRE_ORIG_FIRE_TIME</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableTriggers">TableTriggers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnMisfireOriginalFireTime = &quot;MISFIRE_ORIG_FIRE_TIME&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnNextFireTime" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnNextFireTime">
+  ColumnNextFireTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>NEXT_FIRE_TIME</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableTriggers">TableTriggers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnNextFireTime = &quot;NEXT_FIRE_TIME&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnPreferredNode" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnPreferredNode">
+  ColumnPreferredNode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L274"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>PREFERRED_NODE</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableTriggers">TableTriggers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnPreferredNode = &quot;PREFERRED_NODE&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnPreferredNodeAuto" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnPreferredNodeAuto">
+  ColumnPreferredNodeAuto
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L279"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>PREFERRED_NODE_AUTO</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableTriggers">TableTriggers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnPreferredNodeAuto = &quot;PREFERRED_NODE_AUTO&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnPreviousFireTime" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnPreviousFireTime">
+  ColumnPreviousFireTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>PREV_FIRE_TIME</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableTriggers">TableTriggers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnPreviousFireTime = &quot;PREV_FIRE_TIME&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnPriority" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnPriority">
+  ColumnPriority
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L259"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>PRIORITY</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableTriggers">TableTriggers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnPriority = &quot;PRIORITY&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnRepeatCount" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnRepeatCount">
+  ColumnRepeatCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L297"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>REPEAT_COUNT</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableSimpleTriggers">TableSimpleTriggers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnRepeatCount = &quot;REPEAT_COUNT&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnRepeatInterval" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnRepeatInterval">
+  ColumnRepeatInterval
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L302"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>REPEAT_INTERVAL</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableSimpleTriggers">TableSimpleTriggers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnRepeatInterval = &quot;REPEAT_INTERVAL&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnRequestsRecovery" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnRequestsRecovery">
+  ColumnRequestsRecovery
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L193"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>REQUESTS_RECOVERY</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableJobDetails">TableJobDetails</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnRequestsRecovery = &quot;REQUESTS_RECOVERY&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnRetryAttempt" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnRetryAttempt">
+  ColumnRetryAttempt
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L291"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>RETRY_ATTEMPT</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableTriggers">TableTriggers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnRetryAttempt = &quot;RETRY_ATTEMPT&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnRetryPolicy" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnRetryPolicy">
+  ColumnRetryPolicy
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L286"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>RETRY_POLICY</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableTriggers">TableTriggers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnRetryPolicy = &quot;RETRY_POLICY&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnScheduledTime" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnScheduledTime">
+  ColumnScheduledTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L340"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>SCHED_TIME</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableFiredTriggers">TableFiredTriggers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnScheduledTime = &quot;SCHED_TIME&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnSchedulerName" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnSchedulerName">
+  ColumnSchedulerName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>SCHED_NAME</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableJobDetails">TableJobDetails</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnSchedulerName = &quot;SCHED_NAME&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnStartTime" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnStartTime">
+  ColumnStartTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>START_TIME</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableTriggers">TableTriggers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnStartTime = &quot;START_TIME&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnTimeZoneId" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnTimeZoneId">
+  ColumnTimeZoneId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L324"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>TIME_ZONE_ID</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableBlobTriggers">TableBlobTriggers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnTimeZoneId = &quot;TIME_ZONE_ID&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnTimesTriggered" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnTimesTriggered">
+  ColumnTimesTriggered
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L307"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>TIMES_TRIGGERED</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableSimpleTriggers">TableSimpleTriggers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnTimesTriggered = &quot;TIMES_TRIGGERED&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnTriggerGroup" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnTriggerGroup">
+  ColumnTriggerGroup
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>TRIGGER_GROUP</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableTriggers">TableTriggers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnTriggerGroup = &quot;TRIGGER_GROUP&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnTriggerName" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnTriggerName">
+  ColumnTriggerName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L214"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>TRIGGER_NAME</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableTriggers">TableTriggers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnTriggerName = &quot;TRIGGER_NAME&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnTriggerState" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnTriggerState">
+  ColumnTriggerState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>TRIGGER_STATE</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableTriggers">TableTriggers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnTriggerState = &quot;TRIGGER_STATE&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ColumnTriggerType" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ColumnTriggerType">
+  ColumnTriggerType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>TRIGGER_TYPE</code> column of <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableTriggers">TableTriggers</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ColumnTriggerType = &quot;TRIGGER_TYPE&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_DefaultTablePrefix" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.DefaultTablePrefix">
+  DefaultTablePrefix
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L413"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The table prefix a store uses when the configuration names none.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DefaultTablePrefix = &quot;QRTZ_&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ParameterPageSkip" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ParameterPageSkip">
+  ParameterPageSkip
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L398"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The name of the parameter carrying how many rows a page skips.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ParameterPageSkip = &quot;pageSkip&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_AdoJobStore_AdoConstants_ParameterPageSkip_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+<a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoDelegate.html#Quartz_Impl_AdoJobStore_StdAdoDelegate_ApplyPaging_System_String_System_Boolean_">ApplyPaging(string, bool)</a> splices these two names into the statement and
+<a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoDelegate.html#Quartz_Impl_AdoJobStore_StdAdoDelegate_AddPagingParameters_System_Data_Common_DbCommand_System_Int32_System_Int32_System_Boolean_">AddPagingParameters(DbCommand, int, int, bool)</a> binds them, and a delegate that overrides one
+of those members has to spell the same names in the other — so they are a contract between two
+assemblies, not one delegate's private detail. They are here rather than only on the internal
+list Quartz's own statements use, because this class is where the names a delegate must agree
+with already live.
+</p>
+<p>
+The value is the bare name; the statement carries it prefixed, as <code>"@" + ParameterPageSkip</code>.
+</p>
+</div>
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_ParameterPageTake" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.ParameterPageTake">
+  ParameterPageTake
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L407"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The name of the parameter carrying how many rows a page reads.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ParameterPageTake = &quot;pageTake&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_AdoJobStore_AdoConstants_ParameterPageTake_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The other half of the pair <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ParameterPageSkip">ParameterPageSkip</a> describes. It is absent from the
+statement altogether when the caller asked for an unbounded page.</p>
+</div>
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_StateAcquired" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.StateAcquired">
+  StateAcquired
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L424"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The stored state of a trigger acquired by a node, which will fire it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string StateAcquired = &quot;ACQUIRED&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_StateBlocked" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.StateBlocked">
+  StateBlocked
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L439"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The stored state of a trigger held back because another firing of its non-concurrent job is running.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string StateBlocked = &quot;BLOCKED&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_StateComplete" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.StateComplete">
+  StateComplete
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L434"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The stored state of a trigger finished and will not fire again.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string StateComplete = &quot;COMPLETE&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_StateDeleted" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.StateDeleted">
+  StateDeleted
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L459"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The stored state of a trigger deleted, which is a transient marker rather than a resting state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string StateDeleted = &quot;DELETED&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_StateError" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.StateError">
+  StateError
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L444"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The stored state of a trigger in error, and will not fire until it is reset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string StateError = &quot;ERROR&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_StateExecuting" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.StateExecuting">
+  StateExecuting
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L429"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The stored state of a trigger firing now.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string StateExecuting = &quot;EXECUTING&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_StatePaused" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.StatePaused">
+  StatePaused
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L449"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The stored state of a trigger paused.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string StatePaused = &quot;PAUSED&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_StatePausedBlocked" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.StatePausedBlocked">
+  StatePausedBlocked
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L454"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The stored state of a trigger paused and blocked at once, so resuming it leaves it blocked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string StatePausedBlocked = &quot;PAUSED_BLOCKED&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_StateWaiting" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.StateWaiting">
+  StateWaiting
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L419"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The stored state of a trigger waiting for its next fire time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string StateWaiting = &quot;WAITING&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_TableBlobTriggers" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.TableBlobTriggers">
+  TableBlobTriggers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>BLOB_TRIGGERS</code> table, without the table prefix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string TableBlobTriggers = &quot;BLOB_TRIGGERS&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_TableCalendars" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.TableCalendars">
+  TableCalendars
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>CALENDARS</code> table, without the table prefix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string TableCalendars = &quot;CALENDARS&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_TableCronTriggers" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.TableCronTriggers">
+  TableCronTriggers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>CRON_TRIGGERS</code> table, without the table prefix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string TableCronTriggers = &quot;CRON_TRIGGERS&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_TableFiredTriggers" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.TableFiredTriggers">
+  TableFiredTriggers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>FIRED_TRIGGERS</code> table, without the table prefix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string TableFiredTriggers = &quot;FIRED_TRIGGERS&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_TableJobDetails" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.TableJobDetails">
+  TableJobDetails
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>JOB_DETAILS</code> table, without the table prefix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string TableJobDetails = &quot;JOB_DETAILS&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_TableLocks" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.TableLocks">
+  TableLocks
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>LOCKS</code> table, without the table prefix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string TableLocks = &quot;LOCKS&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_TablePausedJobs" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.TablePausedJobs">
+  TablePausedJobs
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>PAUSED_JOB_GRPS</code> table, without the table prefix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string TablePausedJobs = &quot;PAUSED_JOB_GRPS&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_TablePausedTriggers" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.TablePausedTriggers">
+  TablePausedTriggers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>PAUSED_TRIGGER_GRPS</code> table, without the table prefix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string TablePausedTriggers = &quot;PAUSED_TRIGGER_GRPS&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_TableSchedulerState" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.TableSchedulerState">
+  TableSchedulerState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>SCHEDULER_STATE</code> table, without the table prefix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string TableSchedulerState = &quot;SCHEDULER_STATE&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_TableSimplePropertiesTriggers" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.TableSimplePropertiesTriggers">
+  TableSimplePropertiesTriggers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>SIMPROP_TRIGGERS</code> table, without the table prefix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string TableSimplePropertiesTriggers = &quot;SIMPROP_TRIGGERS&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_TableSimpleTriggers" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.TableSimpleTriggers">
+  TableSimpleTriggers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>SIMPLE_TRIGGERS</code> table, without the table prefix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string TableSimpleTriggers = &quot;SIMPLE_TRIGGERS&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_TableTriggers" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.TableTriggers">
+  TableTriggers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>TRIGGERS</code> table, without the table prefix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string TableTriggers = &quot;TRIGGERS&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_TriggerTypeBlob" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.TriggerTypeBlob">
+  TriggerTypeBlob
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L496"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A general blob Trigger type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string TriggerTypeBlob = &quot;BLOB&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_TriggerTypeCalendarInterval" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.TriggerTypeCalendarInterval">
+  TriggerTypeCalendarInterval
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L481"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Calendar Interval Trigger type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string TriggerTypeCalendarInterval = &quot;CAL_INT&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_TriggerTypeCron" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.TriggerTypeCron">
+  TriggerTypeCron
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L476"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Cron Trigger type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string TriggerTypeCron = &quot;CRON&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_TriggerTypeDailyTimeInterval" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.TriggerTypeDailyTimeInterval">
+  TriggerTypeDailyTimeInterval
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L486"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Daily Time Interval Trigger type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string TriggerTypeDailyTimeInterval = &quot;DAILY_I&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_TriggerTypeRecurrence" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.TriggerTypeRecurrence">
+  TriggerTypeRecurrence
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L491"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Recurrence (RRULE) Trigger type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string TriggerTypeRecurrence = &quot;RECUR&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Impl_AdoJobStore_AdoConstants_TriggerTypeSimple" data-uid="Quartz.Impl.AdoJobStore.AdoConstants.TriggerTypeSimple">
+  TriggerTypeSimple
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L471"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Simple Trigger type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string TriggerTypeSimple = &quot;SIMPLE&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/AdoConstants.cs/#L36" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

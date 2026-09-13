@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IQuartzApiClient | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IQuartzApiClient | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="The data source behind the dashboard&#39;s pages: either the schedulers in this process or a Quartz HTTP API somewhere else.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Dashboard_Services_IQuartzApiClient.md&amp;value=---%0Auid%3A%20Quartz.Dashboard.Services.IQuartzApiClient%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Dashboard.Services.IQuartzApiClient">
+
+
+
+  <h1 id="Quartz_Dashboard_Services_IQuartzApiClient" data-uid="Quartz.Dashboard.Services.IQuartzApiClient" class="text-break">
+Interface IQuartzApiClient  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<a class="xref" href="Quartz.Dashboard.html">Dashboard</a>.<a class="xref" href="Quartz.Dashboard.Services.html">Services</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.Dashboard.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The data source behind the dashboard's pages: either the schedulers in this process or a Quartz HTTP
+API somewhere else.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IQuartzApiClient</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 id="Quartz_Dashboard_Services_IQuartzApiClient_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+This is the dashboard's own projection of the HTTP API, not the wire contract itself — it is shaped
+for the pages that read it, and it is public so that an application can replace it. It speaks Quartz's
+vocabulary throughout: <a class="xref" href="Quartz.TriggerState.html">TriggerState</a> and <a class="xref" href="Quartz.SchedulerStatus.html">SchedulerStatus</a> rather than
+strings, <a class="xref" href="Quartz.Dashboard.Services.JobKeyDto.html">JobKeyDto</a> and <a class="xref" href="Quartz.Dashboard.Services.TriggerKeyDto.html">TriggerKeyDto</a> rather than loose group/name pairs,
+<a class="xref" href="Quartz.PagedQuery.html">PagedQuery</a>'s <code>Skip</code>/<code>Take</code> with <a class="xref" href="Quartz.PagedResult-1.html">PagedResult&lt;T&gt;</a> rather than
+a paging model of its own, and <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>, <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> and
+<a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> rather than JSON.
+</p>
+<p>
+The verbs are <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>'s own, spelled the same way: an operation this interface
+forwards carries the name the scheduler gives it — <a class="xref" href="Quartz.Dashboard.Services.IQuartzApiClient.html#Quartz_Dashboard_Services_IQuartzApiClient_Start_System_String_System_Threading_CancellationToken_">Start(string, CancellationToken)</a>, <a class="xref" href="Quartz.Dashboard.Services.IQuartzApiClient.html#Quartz_Dashboard_Services_IQuartzApiClient_Interrupt_System_String_Quartz_Dashboard_Services_JobKeyDto_System_Threading_CancellationToken_">Interrupt(string, JobKeyDto, CancellationToken)</a>,
+one <a class="xref" href="Quartz.Dashboard.Services.IQuartzApiClient.html#Quartz_Dashboard_Services_IQuartzApiClient_TriggerJob_System_String_Quartz_Dashboard_Services_JobKeyDto_Quartz_JobDataMap_System_Threading_CancellationToken_">TriggerJob(string, JobKeyDto, JobDataMap?, CancellationToken)</a> with an optional map, and the <code>Query*</code> family for the paged
+listings. Only what has no counterpart on <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> — the scheduler listing, the
+execution history — names itself.
+</p>
+<p>
+A mutation that can find nothing to act on answers with the scheduler's own <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>:
+whether it applied. Every such member reports it, because a name shared with
+<a class="xref" href="Quartz.IScheduler.html">IScheduler</a> that dropped the answer would read as the same operation and quietly not
+be one — and a page cannot tell "deleted" from "was already gone" without it.
+</p>
+<p>
+A trigger and a calendar arrive as themselves because Quartz already owns the polymorphism they
+need: the serializer registry maps each kind to its own serializer, custom kinds an application
+registered included, and the wire format is that discriminated shape. A DTO family of the
+dashboard's own would have to be extended for every trigger kind and would still not describe a
+kind it had never heard of.
+</p>
+<p>
+<b>Missing things.</b> Every member that takes a <code>schedulerName</code> raises
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keynotfoundexception">KeyNotFoundException</a> when no scheduler goes by that name, and the four members that
+return the thing itself rather than a listing — <a class="xref" href="Quartz.Dashboard.Services.IQuartzApiClient.html#Quartz_Dashboard_Services_IQuartzApiClient_GetScheduler_System_String_System_Threading_CancellationToken_">GetScheduler(string, CancellationToken)</a>,
+<a class="xref" href="Quartz.Dashboard.Services.IQuartzApiClient.html#Quartz_Dashboard_Services_IQuartzApiClient_GetJobDetail_System_String_Quartz_Dashboard_Services_JobKeyDto_System_Threading_CancellationToken_">GetJobDetail(string, JobKeyDto, CancellationToken)</a>, <a class="xref" href="Quartz.Dashboard.Services.IQuartzApiClient.html#Quartz_Dashboard_Services_IQuartzApiClient_GetTrigger_System_String_Quartz_Dashboard_Services_TriggerKeyDto_System_Threading_CancellationToken_">GetTrigger(string, TriggerKeyDto, CancellationToken)</a> and <a class="xref" href="Quartz.Dashboard.Services.IQuartzApiClient.html#Quartz_Dashboard_Services_IQuartzApiClient_GetCalendar_System_String_System_String_System_Threading_CancellationToken_">GetCalendar(string, string, CancellationToken)</a> — raise it
+again when the thing is gone. Their return types are non-nullable, so there is no other answer
+available to them, and the dashboard's error boundary renders that exception as the "not found"
+page. A replacement that answered <code>null!</code> instead would fault the page with a
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullreferenceexception">NullReferenceException</a> somewhere further in.
+</p>
+<p>
+<b>Things this data source cannot report.</b> A capability the source does not have is a value,
+not an exception: <a class="xref" href="Quartz.Dashboard.Services.IQuartzApiClient.html#Quartz_Dashboard_Services_IQuartzApiClient_GetExecutionLimits_System_String_System_Threading_CancellationToken_">GetExecutionLimits(string, CancellationToken)</a> answers
+<a class="xref" href="Quartz.Dashboard.Services.ExecutionLimitsDto.html#Quartz_Dashboard_Services_ExecutionLimitsDto_CannotReport">CannotReport</a> where the underlying scheduler refuses with
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a>, because "this source cannot say" and "nothing is limited"
+are different facts and the overview draws them differently.
+</p>
+<p>
+<b>Additivity.</b> This interface is frozen from 4.0.0-beta.1 in the sense the release promises:
+a member added to it in 4.x arrives as a default interface member, so an implementation of an
+application's own keeps compiling. Its default body reports the datum as unavailable the way
+<a class="xref" href="Quartz.Dashboard.Services.ExecutionLimitsDto.html#Quartz_Dashboard_Services_ExecutionLimitsDto_CannotReport">CannotReport</a> does, rather than inventing one.
+</p>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_AddCalendar_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.AddCalendar*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_AddCalendar_System_String_Quartz_Dashboard_Services_AddCalendarRequest_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.AddCalendar(System.String,Quartz.Dashboard.Services.AddCalendarRequest,System.Threading.CancellationToken)">
+  AddCalendar(string, AddCalendarRequest, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L308"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores a calendar under a name, which triggers refer to in order to exclude times from firing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask AddCalendar(string schedulerName, AddCalendarRequest request, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>request</code> <a class="xref" href="Quartz.Dashboard.Services.AddCalendarRequest.html">AddCalendarRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_AddJob_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.AddJob*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_AddJob_System_String_Quartz_Dashboard_Services_AddJobRequest_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.AddJob(System.String,Quartz.Dashboard.Services.AddJobRequest,System.Threading.CancellationToken)">
+  AddJob(string, AddJobRequest, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores a job with no trigger, for one that is triggered by hand or scheduled later.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask AddJob(string schedulerName, AddJobRequest request, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>request</code> <a class="xref" href="Quartz.Dashboard.Services.AddJobRequest.html">AddJobRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_CountMisfires_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.CountMisfires*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_CountMisfires_System_String_System_DateTimeOffset_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.CountMisfires(System.String,System.DateTimeOffset,System.Threading.CancellationToken)">
+  CountMisfires(string, DateTimeOffset, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L342"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Counts the misfires the scheduler has recorded since <code class="paramref">since</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;int&gt; CountMisfires(string schedulerName, DateTimeOffset since, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>since</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Services_IQuartzApiClient_CountMisfires_System_String_System_DateTimeOffset_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A count rather than a page, because the overview's tile asks &quot;how bad is it right now&quot; and a
+store keeping its history in a database can answer that without loading rows it would discard.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_DeleteCalendar_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.DeleteCalendar*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_DeleteCalendar_System_String_System_String_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.DeleteCalendar(System.String,System.String,System.Threading.CancellationToken)">
+  DeleteCalendar(string, string, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L314"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deletes the calendar. Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when it existed and was deleted,
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> when there was nothing to delete.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;bool&gt; DeleteCalendar(string schedulerName, string calendarName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>calendarName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_DeleteJob_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.DeleteJob*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_DeleteJob_System_String_Quartz_Dashboard_Services_JobKeyDto_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.DeleteJob(System.String,Quartz.Dashboard.Services.JobKeyDto,System.Threading.CancellationToken)">
+  DeleteJob(string, JobKeyDto, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deletes the job and every trigger that fires it. Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the job
+existed and was deleted, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> when there was nothing to delete.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;bool&gt; DeleteJob(string schedulerName, JobKeyDto jobKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>jobKey</code> <a class="xref" href="Quartz.Dashboard.Services.JobKeyDto.html">JobKeyDto</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_GetCalendar_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.GetCalendar*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_GetCalendar_System_String_System_String_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.GetCalendar(System.String,System.String,System.Threading.CancellationToken)">
+  GetCalendar(string, string, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L303"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the calendar itself, of whichever kind it is.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;ICalendar&gt; GetCalendar(string schedulerName, string calendarName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>calendarName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.ICalendar.html">ICalendar</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keynotfoundexception">KeyNotFoundException</a></dt>
+    <dd><p>No scheduler goes by <code class="paramref">schedulerName</code>, or it holds no calendar named
+<code class="paramref">calendarName</code>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_GetCalendarNames_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.GetCalendarNames*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_GetCalendarNames_System_String_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.GetCalendarNames(System.String,System.Threading.CancellationToken)">
+  GetCalendarNames(string, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L294"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the names of every calendar the scheduler holds — a short list rather than a page.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;List&lt;string&gt;&gt; GetCalendarNames(string schedulerName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_GetExecutionLimits_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.GetExecutionLimits*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_GetExecutionLimits_System_String_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.GetExecutionLimits(System.String,System.Threading.CancellationToken)">
+  GetExecutionLimits(string, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L353"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the execution limits the scheduler is running with, or
+<a class="xref" href="Quartz.Dashboard.Services.ExecutionLimitsDto.html#Quartz_Dashboard_Services_ExecutionLimitsDto_CannotReport">CannotReport</a> when this data source cannot say.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;ExecutionLimitsDto&gt; GetExecutionLimits(string schedulerName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.Dashboard.Services.ExecutionLimitsDto.html">ExecutionLimitsDto</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Services_IQuartzApiClient_GetExecutionLimits_System_String_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Never <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>: a scheduler with nothing limited answers with an empty
+<a class="xref" href="Quartz.Dashboard.Services.ExecutionLimitsDto.html#Quartz_Dashboard_Services_ExecutionLimitsDto_Limits">Limits</a>, which is a different fact from a scheduler that cannot
+report limits at all, and the overview says which of the two it is looking at.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_GetJobDetail_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.GetJobDetail*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_GetJobDetail_System_String_Quartz_Dashboard_Services_JobKeyDto_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.GetJobDetail(System.String,Quartz.Dashboard.Services.JobKeyDto,System.Threading.CancellationToken)">
+  GetJobDetail(string, JobKeyDto, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the job's definition — its type, its durability and its data map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;JobDetailDto&gt; GetJobDetail(string schedulerName, JobKeyDto jobKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>jobKey</code> <a class="xref" href="Quartz.Dashboard.Services.JobKeyDto.html">JobKeyDto</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.Dashboard.Services.JobDetailDto.html">JobDetailDto</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keynotfoundexception">KeyNotFoundException</a></dt>
+    <dd><p>No scheduler goes by <code class="paramref">schedulerName</code>, or it holds no job under
+<code class="paramref">jobKey</code>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_GetScheduler_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.GetScheduler*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_GetScheduler_System_String_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.GetScheduler(System.String,System.Threading.CancellationToken)">
+  GetScheduler(string, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns one scheduler with the metadata it was built with. Only a scheduler that exists can
+answer; a registration nothing has built is reported by <a class="xref" href="Quartz.Dashboard.Services.IQuartzApiClient.html#Quartz_Dashboard_Services_IQuartzApiClient_GetSchedulers_System_Threading_CancellationToken_">GetSchedulers(CancellationToken)</a> and has no
+detail to read.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;SchedulerDetailDto&gt; GetScheduler(string schedulerName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.Dashboard.Services.SchedulerDetailDto.html">SchedulerDetailDto</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keynotfoundexception">KeyNotFoundException</a></dt>
+    <dd><p>No scheduler goes by <code class="paramref">schedulerName</code>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_GetSchedulers_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.GetSchedulers*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_GetSchedulers_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.GetSchedulers(System.Threading.CancellationToken)">
+  GetSchedulers(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns every scheduler the container knows about, ordered by name — the registrations included,
+so a scheduler nothing has built yet is listed with a null <a class="xref" href="Quartz.Dashboard.Services.SchedulerHeaderDto.html#Quartz_Dashboard_Services_SchedulerHeaderDto_Status">Status</a>
+rather than being invisible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;List&lt;SchedulerHeaderDto&gt;&gt; GetSchedulers(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Quartz.Dashboard.Services.SchedulerHeaderDto.html">SchedulerHeaderDto</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Services_IQuartzApiClient_GetSchedulers_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Nothing is created by asking. That is why the listing is the registrations rather than the
+repository: an operator enumerating tenants must not start every one of them.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_GetTrigger_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.GetTrigger*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_GetTrigger_System_String_Quartz_Dashboard_Services_TriggerKeyDto_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.GetTrigger(System.String,Quartz.Dashboard.Services.TriggerKeyDto,System.Threading.CancellationToken)">
+  GetTrigger(string, TriggerKeyDto, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L248"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the trigger itself — a <a class="xref" href="Quartz.ICronTrigger.html">ICronTrigger</a>, <a class="xref" href="Quartz.ISimpleTrigger.html">ISimpleTrigger</a> or
+whichever kind it is, including one an application registered its own serializer for.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;ITrigger&gt; GetTrigger(string schedulerName, TriggerKeyDto triggerKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>triggerKey</code> <a class="xref" href="Quartz.Dashboard.Services.TriggerKeyDto.html">TriggerKeyDto</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keynotfoundexception">KeyNotFoundException</a></dt>
+    <dd><p>No scheduler goes by <code class="paramref">schedulerName</code>, or it holds no trigger under
+<code class="paramref">triggerKey</code>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_GetTriggerState_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.GetTriggerState*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_GetTriggerState_System_String_Quartz_Dashboard_Services_TriggerKeyDto_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.GetTriggerState(System.String,Quartz.Dashboard.Services.TriggerKeyDto,System.Threading.CancellationToken)">
+  GetTriggerState(string, TriggerKeyDto, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L254"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the trigger's state, which is <a class="xref" href="Quartz.TriggerState.html#Quartz_TriggerState_None">None</a> when there is no such
+trigger — the one read here that answers rather than raising.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;TriggerState&gt; GetTriggerState(string schedulerName, TriggerKeyDto triggerKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>triggerKey</code> <a class="xref" href="Quartz.Dashboard.Services.TriggerKeyDto.html">TriggerKeyDto</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.TriggerState.html">TriggerState</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_GetTriggersOfJob_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.GetTriggersOfJob*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_GetTriggersOfJob_System_String_Quartz_Dashboard_Services_JobKeyDto_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.GetTriggersOfJob(System.String,Quartz.Dashboard.Services.JobKeyDto,System.Threading.CancellationToken)">
+  GetTriggersOfJob(string, JobKeyDto, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns every trigger scheduled against the job, which is a short list rather than a page: a job
+has as many triggers as somebody wrote for it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;List&lt;TriggerHeaderDto&gt;&gt; GetTriggersOfJob(string schedulerName, JobKeyDto jobKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>jobKey</code> <a class="xref" href="Quartz.Dashboard.Services.JobKeyDto.html">JobKeyDto</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Quartz.Dashboard.Services.TriggerHeaderDto.html">TriggerHeaderDto</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_Interrupt_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.Interrupt*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_Interrupt_System_String_Quartz_Dashboard_Services_JobKeyDto_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.Interrupt(System.String,Quartz.Dashboard.Services.JobKeyDto,System.Threading.CancellationToken)">
+  Interrupt(string, JobKeyDto, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Interrupts every execution of the job on this node. Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when at
+least one execution was asked to stop, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> when the job was not running
+here.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;bool&gt; Interrupt(string schedulerName, JobKeyDto jobKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>jobKey</code> <a class="xref" href="Quartz.Dashboard.Services.JobKeyDto.html">JobKeyDto</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Services_IQuartzApiClient_Interrupt_System_String_Quartz_Dashboard_Services_JobKeyDto_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A job that does not watch its cancellation token runs to completion regardless, so the flag says
+the interrupt was delivered rather than that the work stopped.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_InterruptFireInstance_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.InterruptFireInstance*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_InterruptFireInstance_System_String_System_String_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.InterruptFireInstance(System.String,System.String,System.Threading.CancellationToken)">
+  InterruptFireInstance(string, string, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L221"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Interrupts one execution, named by its fire instance id. Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when
+that execution was found and asked to stop, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> when it had already
+finished or belongs to another node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;bool&gt; InterruptFireInstance(string schedulerName, string fireInstanceId, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>fireInstanceId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Services_IQuartzApiClient_InterruptFireInstance_System_String_System_String_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The single-execution form of <a class="xref" href="Quartz.Dashboard.Services.IQuartzApiClient.html#Quartz_Dashboard_Services_IQuartzApiClient_Interrupt_System_String_Quartz_Dashboard_Services_JobKeyDto_System_Threading_CancellationToken_">Interrupt(string, JobKeyDto, CancellationToken)</a>, which interrupts every execution of the
+job. Node-local on the server side: a firing owned by another node is interrupted by asking that
+node.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_PauseAll_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.PauseAll*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_PauseAll_System_String_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.PauseAll(System.String,System.Threading.CancellationToken)">
+  PauseAll(string, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pauses every trigger group, so nothing fires until <a class="xref" href="Quartz.Dashboard.Services.IQuartzApiClient.html#Quartz_Dashboard_Services_IQuartzApiClient_ResumeAll_System_String_System_Threading_CancellationToken_">ResumeAll(string, CancellationToken)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask PauseAll(string schedulerName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_PauseJob_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.PauseJob*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_PauseJob_System_String_Quartz_Dashboard_Services_JobKeyDto_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.PauseJob(System.String,Quartz.Dashboard.Services.JobKeyDto,System.Threading.CancellationToken)">
+  PauseJob(string, JobKeyDto, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pauses the job. Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the job existed and was paused,
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> when there was nothing to pause.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;bool&gt; PauseJob(string schedulerName, JobKeyDto jobKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>jobKey</code> <a class="xref" href="Quartz.Dashboard.Services.JobKeyDto.html">JobKeyDto</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_PauseTrigger_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.PauseTrigger*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_PauseTrigger_System_String_Quartz_Dashboard_Services_TriggerKeyDto_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.PauseTrigger(System.String,Quartz.Dashboard.Services.TriggerKeyDto,System.Threading.CancellationToken)">
+  PauseTrigger(string, TriggerKeyDto, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L260"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pauses the trigger. Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the trigger existed and was moved
+into the paused state, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> when there was nothing to pause.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;bool&gt; PauseTrigger(string schedulerName, TriggerKeyDto triggerKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>triggerKey</code> <a class="xref" href="Quartz.Dashboard.Services.TriggerKeyDto.html">TriggerKeyDto</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_QueryClusterNodes_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.QueryClusterNodes*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_QueryClusterNodes_System_String_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.QueryClusterNodes(System.String,System.Threading.CancellationToken)">
+  QueryClusterNodes(string, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the scheduler's cluster nodes, the node that answered first. A scheduler that is not
+clustered answers with the one node it is, with no check-in times.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;List&lt;ClusterNodeDto&gt;&gt; QueryClusterNodes(string schedulerName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Quartz.Dashboard.Services.ClusterNodeDto.html">ClusterNodeDto</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Services_IQuartzApiClient_QueryClusterNodes_System_String_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Joins to <a class="xref" href="Quartz.Dashboard.Services.IQuartzApiClient.html#Quartz_Dashboard_Services_IQuartzApiClient_QueryFireInstances_System_String_Quartz_Dashboard_Services_DashboardFireInstanceQuery_System_Threading_CancellationToken_">QueryFireInstances(string, DashboardFireInstanceQuery, CancellationToken)</a> on <a class="xref" href="Quartz.Dashboard.Services.FireInstanceDto.html#Quartz_Dashboard_Services_FireInstanceDto_SchedulerInstanceId">SchedulerInstanceId</a>,
+which is how the Cluster page counts what each node is running.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_QueryExecutions_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.QueryExecutions*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_QueryExecutions_Quartz_Dashboard_Services_DashboardHistoryQuery_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.QueryExecutions(Quartz.Dashboard.Services.DashboardHistoryQuery,System.Threading.CancellationToken)">
+  QueryExecutions(DashboardHistoryQuery, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L325"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns one page of execution history, newest first.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;PagedResult&lt;DashboardHistoryEntry&gt;&gt; QueryExecutions(DashboardHistoryQuery query, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>query</code> <a class="xref" href="Quartz.Dashboard.Services.DashboardHistoryQuery.html">DashboardHistoryQuery</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.PagedResult-1.html">PagedResult</a>&lt;<a class="xref" href="Quartz.Dashboard.Services.DashboardHistoryEntry.html">DashboardHistoryEntry</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Services_IQuartzApiClient_QueryExecutions_Quartz_Dashboard_Services_DashboardHistoryQuery_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The history is <a class="xref" href="Quartz.Dashboard.Services.IDashboardHistoryStore.html">IDashboardHistoryStore</a>'s, and that store always answers: a store
+holding nothing returns an empty page, which is what &quot;no executions recorded&quot; is. This used to be
+nullable because the deleted remote client turned a 404 into &quot;no history at all&quot;, and nothing
+in this process has ever had that answer to give.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_QueryFireInstances_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.QueryFireInstances*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_QueryFireInstances_System_String_Quartz_Dashboard_Services_DashboardFireInstanceQuery_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.QueryFireInstances(System.String,Quartz.Dashboard.Services.DashboardFireInstanceQuery,System.Threading.CancellationToken)">
+  QueryFireInstances(string, DashboardFireInstanceQuery, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns one page of firings — by default the ones that are running — ordered by trigger group,
+then trigger name, then fire instance id. With a persistent job store this covers the whole
+cluster, so a firing owned by another node is listed too, marked with that node's
+<a class="xref" href="Quartz.Dashboard.Services.FireInstanceDto.html#Quartz_Dashboard_Services_FireInstanceDto_SchedulerInstanceId">SchedulerInstanceId</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;PagedResult&lt;FireInstanceDto&gt;&gt; QueryFireInstances(string schedulerName, DashboardFireInstanceQuery query, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>query</code> <a class="xref" href="Quartz.Dashboard.Services.DashboardFireInstanceQuery.html">DashboardFireInstanceQuery</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.PagedResult-1.html">PagedResult</a>&lt;<a class="xref" href="Quartz.Dashboard.Services.FireInstanceDto.html">FireInstanceDto</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_QueryJobGroups_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.QueryJobGroups*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_QueryJobGroups_System_String_Quartz_Dashboard_Services_DashboardGroupQuery_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.QueryJobGroups(System.String,Quartz.Dashboard.Services.DashboardGroupQuery,System.Threading.CancellationToken)">
+  QueryJobGroups(string, DashboardGroupQuery, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns one page of job groups, ordered by name, each carrying whether it is paused.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;PagedResult&lt;JobGroupDto&gt;&gt; QueryJobGroups(string schedulerName, DashboardGroupQuery query, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>query</code> <a class="xref" href="Quartz.Dashboard.Services.DashboardGroupQuery.html">DashboardGroupQuery</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.PagedResult-1.html">PagedResult</a>&lt;<a class="xref" href="Quartz.Dashboard.Services.JobGroupDto.html">JobGroupDto</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_QueryJobs_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.QueryJobs*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_QueryJobs_System_String_Quartz_Dashboard_Services_DashboardJobQuery_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.QueryJobs(System.String,Quartz.Dashboard.Services.DashboardJobQuery,System.Threading.CancellationToken)">
+  QueryJobs(string, DashboardJobQuery, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns one page of jobs, ordered by group and then name. The page always reports
+<a class="xref" href="Quartz.PagedResult-1.html#Quartz_PagedResult_1_HasMore">HasMore</a> and, because the dashboard asks for it, a
+<a class="xref" href="Quartz.PagedResult-1.html#Quartz_PagedResult_1_TotalCount">TotalCount</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;PagedResult&lt;JobKeyDto&gt;&gt; QueryJobs(string schedulerName, DashboardJobQuery query, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>query</code> <a class="xref" href="Quartz.Dashboard.Services.DashboardJobQuery.html">DashboardJobQuery</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.PagedResult-1.html">PagedResult</a>&lt;<a class="xref" href="Quartz.Dashboard.Services.JobKeyDto.html">JobKeyDto</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_QueryMisfires_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.QueryMisfires*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_QueryMisfires_Quartz_Dashboard_Services_DashboardMisfireQuery_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.QueryMisfires(Quartz.Dashboard.Services.DashboardMisfireQuery,System.Threading.CancellationToken)">
+  QueryMisfires(DashboardMisfireQuery, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L333"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns one page of the triggers that missed a firing, newest first.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;PagedResult&lt;DashboardMisfireEntry&gt;&gt; QueryMisfires(DashboardMisfireQuery query, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>query</code> <a class="xref" href="Quartz.Dashboard.Services.DashboardMisfireQuery.html">DashboardMisfireQuery</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.PagedResult-1.html">PagedResult</a>&lt;<a class="xref" href="Quartz.Dashboard.Services.DashboardMisfireEntry.html">DashboardMisfireEntry</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Services_IQuartzApiClient_QueryMisfires_Quartz_Dashboard_Services_DashboardMisfireQuery_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><remarks>
+The history is <a class="xref" href="Quartz.Dashboard.Services.IDashboardHistoryStore.html">IDashboardHistoryStore</a>'s, and that store always answers: a store
+holding nothing returns an empty page, which is what "no executions recorded" is. This used to be
+nullable because the deleted remote client turned a 404 into "no history at all", and nothing
+in this process has ever had that answer to give.
+</remarks>
+</div>
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_QueryTriggerGroups_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.QueryTriggerGroups*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_QueryTriggerGroups_System_String_Quartz_Dashboard_Services_DashboardGroupQuery_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.QueryTriggerGroups(System.String,Quartz.Dashboard.Services.DashboardGroupQuery,System.Threading.CancellationToken)">
+  QueryTriggerGroups(string, DashboardGroupQuery, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns one page of trigger groups, ordered by name, each carrying whether it is paused.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;PagedResult&lt;TriggerGroupDto&gt;&gt; QueryTriggerGroups(string schedulerName, DashboardGroupQuery query, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>query</code> <a class="xref" href="Quartz.Dashboard.Services.DashboardGroupQuery.html">DashboardGroupQuery</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.PagedResult-1.html">PagedResult</a>&lt;<a class="xref" href="Quartz.Dashboard.Services.TriggerGroupDto.html">TriggerGroupDto</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_QueryTriggers_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.QueryTriggers*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_QueryTriggers_System_String_Quartz_Dashboard_Services_DashboardTriggerQuery_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.QueryTriggers(System.String,Quartz.Dashboard.Services.DashboardTriggerQuery,System.Threading.CancellationToken)">
+  QueryTriggers(string, DashboardTriggerQuery, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L238"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns one page of triggers, ordered by group and then name, each carrying its state and
+execution group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;PagedResult&lt;TriggerHeaderDto&gt;&gt; QueryTriggers(string schedulerName, DashboardTriggerQuery query, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>query</code> <a class="xref" href="Quartz.Dashboard.Services.DashboardTriggerQuery.html">DashboardTriggerQuery</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.PagedResult-1.html">PagedResult</a>&lt;<a class="xref" href="Quartz.Dashboard.Services.TriggerHeaderDto.html">TriggerHeaderDto</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_RescheduleJob_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.RescheduleJob*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_RescheduleJob_System_String_Quartz_Dashboard_Services_TriggerKeyDto_Quartz_Dashboard_Services_RescheduleRequest_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.RescheduleJob(System.String,Quartz.Dashboard.Services.TriggerKeyDto,Quartz.Dashboard.Services.RescheduleRequest,System.Threading.CancellationToken)">
+  RescheduleJob(string, TriggerKeyDto, RescheduleRequest, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L289"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Replaces the trigger with the one in the request, keeping the job it fires.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask RescheduleJob(string schedulerName, TriggerKeyDto triggerKey, RescheduleRequest request, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>triggerKey</code> <a class="xref" href="Quartz.Dashboard.Services.TriggerKeyDto.html">TriggerKeyDto</a></dt>
+    <dd></dd>
+    <dt><code>request</code> <a class="xref" href="Quartz.Dashboard.Services.RescheduleRequest.html">RescheduleRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_ResetTriggerFromErrorState_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.ResetTriggerFromErrorState*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_ResetTriggerFromErrorState_System_String_Quartz_Dashboard_Services_TriggerKeyDto_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.ResetTriggerFromErrorState(System.String,Quartz.Dashboard.Services.TriggerKeyDto,System.Threading.CancellationToken)">
+  ResetTriggerFromErrorState(string, TriggerKeyDto, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L272"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resets the trigger from the error state. Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the trigger
+existed in the error state and was reset, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> otherwise.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;bool&gt; ResetTriggerFromErrorState(string schedulerName, TriggerKeyDto triggerKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>triggerKey</code> <a class="xref" href="Quartz.Dashboard.Services.TriggerKeyDto.html">TriggerKeyDto</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_ResumeAll_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.ResumeAll*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_ResumeAll_System_String_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.ResumeAll(System.String,System.Threading.CancellationToken)">
+  ResumeAll(string, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resumes every trigger group, applying each trigger's misfire instruction to what it missed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask ResumeAll(string schedulerName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_ResumeJob_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.ResumeJob*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_ResumeJob_System_String_Quartz_Dashboard_Services_JobKeyDto_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.ResumeJob(System.String,Quartz.Dashboard.Services.JobKeyDto,System.Threading.CancellationToken)">
+  ResumeJob(string, JobKeyDto, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L187"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resumes the job. Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the job existed and was resumed,
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> when there was nothing to resume.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;bool&gt; ResumeJob(string schedulerName, JobKeyDto jobKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>jobKey</code> <a class="xref" href="Quartz.Dashboard.Services.JobKeyDto.html">JobKeyDto</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_ResumeTrigger_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.ResumeTrigger*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_ResumeTrigger_System_String_Quartz_Dashboard_Services_TriggerKeyDto_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.ResumeTrigger(System.String,Quartz.Dashboard.Services.TriggerKeyDto,System.Threading.CancellationToken)">
+  ResumeTrigger(string, TriggerKeyDto, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L266"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resumes the trigger. Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the trigger existed in a paused
+state and was resumed, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> when there was nothing to resume.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;bool&gt; ResumeTrigger(string schedulerName, TriggerKeyDto triggerKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>triggerKey</code> <a class="xref" href="Quartz.Dashboard.Services.TriggerKeyDto.html">TriggerKeyDto</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_ScheduleJob_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.ScheduleJob*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_ScheduleJob_System_String_Quartz_Dashboard_Services_ScheduleJobRequest_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.ScheduleJob(System.String,Quartz.Dashboard.Services.ScheduleJobRequest,System.Threading.CancellationToken)">
+  ScheduleJob(string, ScheduleJobRequest, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L277"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Schedules a trigger, together with the job it fires when the request carries one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask ScheduleJob(string schedulerName, ScheduleJobRequest request, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>request</code> <a class="xref" href="Quartz.Dashboard.Services.ScheduleJobRequest.html">ScheduleJobRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_Shutdown_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.Shutdown*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_Shutdown_System_String_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.Shutdown(System.String,System.Threading.CancellationToken)">
+  Shutdown(string, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shuts the scheduler down, waiting for the jobs in flight. A scheduler that has shut down cannot
+be started again.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask Shutdown(string schedulerName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_Standby_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.Standby*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_Standby_System_String_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.Standby(System.String,System.Threading.CancellationToken)">
+  Standby(string, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Puts the scheduler in standby: it keeps its state and stops firing until it is started again.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask Standby(string schedulerName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_Start_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.Start*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_Start_System_String_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.Start(System.String,System.Threading.CancellationToken)">
+  Start(string, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starts the scheduler, so its triggers begin firing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask Start(string schedulerName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_TriggerJob_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.TriggerJob*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_TriggerJob_System_String_Quartz_Dashboard_Services_JobKeyDto_Quartz_JobDataMap_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.TriggerJob(System.String,Quartz.Dashboard.Services.JobKeyDto,Quartz.JobDataMap,System.Threading.CancellationToken)">
+  TriggerJob(string, JobKeyDto, JobDataMap?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L198"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Triggers the job once, with <code class="paramref">jobDataMap</code> merged over the job's own data for
+that one firing when a map is given.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask TriggerJob(string schedulerName, JobKeyDto jobKey, JobDataMap? jobDataMap = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>jobKey</code> <a class="xref" href="Quartz.Dashboard.Services.JobKeyDto.html">JobKeyDto</a></dt>
+    <dd></dd>
+    <dt><code>jobDataMap</code> <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Services_IQuartzApiClient_TriggerJob_System_String_Quartz_Dashboard_Services_JobKeyDto_Quartz_JobDataMap_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>One method with an optional map, exactly as <a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_TriggerJob_Quartz_JobKey_Quartz_JobDataMap_System_Threading_CancellationToken_">TriggerJob(JobKey, JobDataMap?, CancellationToken)</a> is: firing a job
+with data and firing it without are the same operation, and the pair of methods this replaces made
+them look like two.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Dashboard_Services_IQuartzApiClient_UnscheduleJob_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.UnscheduleJob*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_IQuartzApiClient_UnscheduleJob_System_String_Quartz_Dashboard_Services_TriggerKeyDto_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Services.IQuartzApiClient.UnscheduleJob(System.String,Quartz.Dashboard.Services.TriggerKeyDto,System.Threading.CancellationToken)">
+  UnscheduleJob(string, TriggerKeyDto, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L284"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes the trigger, and the job it fired if that job is not durable and has no triggers left.
+Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the trigger existed and was removed,
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> when there was nothing to remove.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;bool&gt; UnscheduleJob(string schedulerName, TriggerKeyDto triggerKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>triggerKey</code> <a class="xref" href="Quartz.Dashboard.Services.TriggerKeyDto.html">TriggerKeyDto</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L80" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

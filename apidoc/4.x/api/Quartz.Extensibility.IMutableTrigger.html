@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IMutableTrigger | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IMutableTrigger | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Should not be used by end users.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Extensibility_IMutableTrigger.md&amp;value=---%0Auid%3A%20Quartz.Extensibility.IMutableTrigger%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Extensibility.IMutableTrigger">
+
+
+
+  <h1 id="Quartz_Extensibility_IMutableTrigger" data-uid="Quartz.Extensibility.IMutableTrigger" class="text-break">
+Interface IMutableTrigger  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IMutableTrigger.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<a class="xref" href="Quartz.Extensibility.html">Extensibility</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Should not be used by end users.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IMutableTrigger : ITrigger</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_GetTriggerBuilder">ITrigger.GetTriggerBuilder()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_GetScheduleBuilder">ITrigger.GetScheduleBuilder()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_FinalFireTimeUtc">ITrigger.FinalFireTimeUtc</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_MayFireAgain">ITrigger.MayFireAgain</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_GetFireTimeAfter_System_Nullable_System_DateTimeOffset__">ITrigger.GetFireTimeAfter(DateTimeOffset?)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_Clone">ITrigger.Clone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_Extensibility_IMutableTrigger_CalendarName_" data-uid="Quartz.Extensibility.IMutableTrigger.CalendarName*"></a>
+
+  <h3 id="Quartz_Extensibility_IMutableTrigger_CalendarName" data-uid="Quartz.Extensibility.IMutableTrigger.CalendarName">
+  CalendarName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IMutableTrigger.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Associate the <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> with the given name with this Trigger. Use
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> - or a blank name, which the built-in triggers store as
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> - to dis-associate any calendar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string? CalendarName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IMutableTrigger_Description_" data-uid="Quartz.Extensibility.IMutableTrigger.Description*"></a>
+
+  <h3 id="Quartz_Extensibility_IMutableTrigger_Description" data-uid="Quartz.Extensibility.IMutableTrigger.Description">
+  Description
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IMutableTrigger.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set a description for the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> instance - may be
+useful for remembering/displaying the purpose of the trigger, though the
+description has no meaning to Quartz.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string? Description { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IMutableTrigger_EndTimeUtc_" data-uid="Quartz.Extensibility.IMutableTrigger.EndTimeUtc*"></a>
+
+  <h3 id="Quartz_Extensibility_IMutableTrigger_EndTimeUtc" data-uid="Quartz.Extensibility.IMutableTrigger.EndTimeUtc">
+  EndTimeUtc
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IMutableTrigger.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>
+Set the time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> should quit repeating -
+regardless of any remaining repeats (based on the trigger's particular
+repeat settings).
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTimeOffset? EndTimeUtc { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IMutableTrigger_EndTimeUtc_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The end time is inclusive: it is the last instant at which the trigger may fire.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Extensibility_IMutableTrigger_ExecutionGroup_" data-uid="Quartz.Extensibility.IMutableTrigger.ExecutionGroup*"></a>
+
+  <h3 id="Quartz_Extensibility_IMutableTrigger_ExecutionGroup" data-uid="Quartz.Extensibility.IMutableTrigger.ExecutionGroup">
+  ExecutionGroup
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IMutableTrigger.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the execution group for this trigger. Execution groups allow
+thread limits to be configured - per node or across the cluster - so that
+resource-intensive jobs do not saturate all available threads.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string? ExecutionGroup { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IMutableTrigger_ExecutionGroup_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> value means the trigger has no execution group
+(the default, backward-compatible behavior).</p>
+</div>
+
+
+
+
+  <a id="Quartz_Extensibility_IMutableTrigger_JobDataMap_" data-uid="Quartz.Extensibility.IMutableTrigger.JobDataMap*"></a>
+
+  <h3 id="Quartz_Extensibility_IMutableTrigger_JobDataMap" data-uid="Quartz.Extensibility.IMutableTrigger.JobDataMap">
+  JobDataMap
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IMutableTrigger.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the <a class="xref" href="Quartz.Extensibility.IMutableTrigger.html#Quartz_Extensibility_IMutableTrigger_JobDataMap">JobDataMap</a> to be associated with the
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">JobDataMap JobDataMap { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IMutableTrigger_JobKey_" data-uid="Quartz.Extensibility.IMutableTrigger.JobKey*"></a>
+
+  <h3 id="Quartz_Extensibility_IMutableTrigger_JobKey" data-uid="Quartz.Extensibility.IMutableTrigger.JobKey">
+  JobKey
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IMutableTrigger.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The job this trigger fires.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">JobKey JobKey { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.JobKey.html">JobKey</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IMutableTrigger_Key_" data-uid="Quartz.Extensibility.IMutableTrigger.Key*"></a>
+
+  <h3 id="Quartz_Extensibility_IMutableTrigger_Key" data-uid="Quartz.Extensibility.IMutableTrigger.Key">
+  Key
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IMutableTrigger.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The trigger's identity, which a store keys it by.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TriggerKey Key { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_IMutableTrigger_MisfireInstructionCode_" data-uid="Quartz.Extensibility.IMutableTrigger.MisfireInstructionCode*"></a>
+
+  <h3 id="Quartz_Extensibility_IMutableTrigger_MisfireInstructionCode" data-uid="Quartz.Extensibility.IMutableTrigger.MisfireInstructionCode">
+  MisfireInstructionCode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IMutableTrigger.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The raw code of the instruction the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> follows when this trigger
+misses a firing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int MisfireInstructionCode { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IMutableTrigger_MisfireInstructionCode_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The value is validated against the concrete trigger's family, which rejects a code outside
+its own range — but not one that is in range for two families and means something different
+in each. Assign a value cast from the family's own misfire enum.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.ISimpleTrigger.html#Quartz_ISimpleTrigger_MisfireInstruction">MisfireInstruction</a></div>
+    <div><a class="xref" href="Quartz.ICronTrigger.html#Quartz_ICronTrigger_MisfireInstruction">MisfireInstruction</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Extensibility_IMutableTrigger_NextFireTimeUtc_" data-uid="Quartz.Extensibility.IMutableTrigger.NextFireTimeUtc*"></a>
+
+  <h3 id="Quartz_Extensibility_IMutableTrigger_NextFireTimeUtc" data-uid="Quartz.Extensibility.IMutableTrigger.NextFireTimeUtc">
+  NextFireTimeUtc
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IMutableTrigger.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The next time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> is scheduled to fire.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTimeOffset? NextFireTimeUtc { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IMutableTrigger_NextFireTimeUtc_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><b>Not for client code.</b> The scheduler and job store advance this as the trigger fires.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Extensibility_IMutableTrigger_PreferredNode_" data-uid="Quartz.Extensibility.IMutableTrigger.PreferredNode*"></a>
+
+  <h3 id="Quartz_Extensibility_IMutableTrigger_PreferredNode" data-uid="Quartz.Extensibility.IMutableTrigger.PreferredNode">
+  PreferredNode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IMutableTrigger.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get or set which cluster node this trigger prefers to run on. Only that node acquires the
+trigger, with automatic failover while it is down.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PreferredNode PreferredNode { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.PreferredNode.html">PreferredNode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IMutableTrigger_PreferredNode_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a class="xref" href="Quartz.PreferredNode.html#Quartz_PreferredNode_None">None</a> means the trigger has no node preference. The
+assigned value is recorded as given, automatic-pin flag included.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Extensibility_IMutableTrigger_PreviousFireTimeUtc_" data-uid="Quartz.Extensibility.IMutableTrigger.PreviousFireTimeUtc*"></a>
+
+  <h3 id="Quartz_Extensibility_IMutableTrigger_PreviousFireTimeUtc" data-uid="Quartz.Extensibility.IMutableTrigger.PreviousFireTimeUtc">
+  PreviousFireTimeUtc
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IMutableTrigger.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The previous time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> fired.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTimeOffset? PreviousFireTimeUtc { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IMutableTrigger_PreviousFireTimeUtc_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><b>Not for client code.</b> The scheduler and job store record this as the trigger fires.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Extensibility_IMutableTrigger_Priority_" data-uid="Quartz.Extensibility.IMutableTrigger.Priority*"></a>
+
+  <h3 id="Quartz_Extensibility_IMutableTrigger_Priority" data-uid="Quartz.Extensibility.IMutableTrigger.Priority">
+  Priority
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IMutableTrigger.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The priority of a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> acts as a tie breaker such that if
+two <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s have the same scheduled fire time, then Quartz
+will do its best to give the one with the higher priority first access
+to a worker thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Priority { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IMutableTrigger_Priority_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If not explicitly set, the default value is 5.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.TriggerConstants.html#Quartz_TriggerConstants_DefaultPriority">DefaultPriority</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Extensibility_IMutableTrigger_RetryAttempt_" data-uid="Quartz.Extensibility.IMutableTrigger.RetryAttempt*"></a>
+
+  <h3 id="Quartz_Extensibility_IMutableTrigger_RetryAttempt" data-uid="Quartz.Extensibility.IMutableTrigger.RetryAttempt">
+  RetryAttempt
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IMutableTrigger.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How many times the occurrence currently being executed has already been retried.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int RetryAttempt { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_IMutableTrigger_RetryAttempt_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><b>Not for client code.</b> The scheduler and job store advance and clear this as the
+trigger's retries are scheduled and spent; it is settable so that a store can restore what
+it read from its own row.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Extensibility_IMutableTrigger_RetryPolicy_" data-uid="Quartz.Extensibility.IMutableTrigger.RetryPolicy*"></a>
+
+  <h3 id="Quartz_Extensibility_IMutableTrigger_RetryPolicy" data-uid="Quartz.Extensibility.IMutableTrigger.RetryPolicy">
+  RetryPolicy
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IMutableTrigger.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get or set how the scheduler re-fires this trigger when its job fails.
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> means a failed job is reported and the trigger waits for its next
+scheduled occurrence.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">RetryPolicy? RetryPolicy { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.RetryPolicy.html">RetryPolicy</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.RetryPolicy.html">RetryPolicy</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Extensibility_IMutableTrigger_StartTimeUtc_" data-uid="Quartz.Extensibility.IMutableTrigger.StartTimeUtc*"></a>
+
+  <h3 id="Quartz_Extensibility_IMutableTrigger_StartTimeUtc" data-uid="Quartz.Extensibility.IMutableTrigger.StartTimeUtc">
+  StartTimeUtc
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IMutableTrigger.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>
+The time at which the trigger's scheduling should start.  May or may not
+be the first actual fire time of the trigger, depending upon the type of
+trigger and the settings of the other properties of the trigger.  However
+the first actual first time will not be before this date.
+</p>
+<p>
+Setting a value in the past may cause a new trigger to compute a first
+fire time that is in the past, which may cause an immediate misfire
+of the trigger.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTimeOffset StartTimeUtc { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/IMutableTrigger.cs/#L6" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

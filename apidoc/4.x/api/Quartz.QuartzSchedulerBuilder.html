@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class QuartzSchedulerBuilder | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class QuartzSchedulerBuilder | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Builds a scheduler without an application-supplied dependency injection container.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_QuartzSchedulerBuilder.md&amp;value=---%0Auid%3A%20Quartz.QuartzSchedulerBuilder%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.QuartzSchedulerBuilder">
+
+
+
+  <h1 id="Quartz_QuartzSchedulerBuilder" data-uid="Quartz.QuartzSchedulerBuilder" class="text-break">
+Class QuartzSchedulerBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/QuartzSchedulerBuilder.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Builds a scheduler without an application-supplied dependency injection container.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class QuartzSchedulerBuilder</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">QuartzSchedulerBuilder</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+  <h2 id="Quartz_QuartzSchedulerBuilder_examples">Examples</h2>
+  <pre><code class="lang-csharp">IScheduler scheduler = await QuartzSchedulerBuilder
+    .Create(q =&gt; q
+        .ConfigureScheduler(options =&gt; options.InstanceName = "reporting")
+        .UseDefaultThreadPool(maxConcurrency: 20)
+        .UseInMemoryStore())
+    .BuildScheduler();</code></pre>
+
+
+  <h2 id="Quartz_QuartzSchedulerBuilder_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Console applications, tests and anything else without a host use this instead of registering Quartz
+into their own container. It is not a second configuration API: <a class="xref" href="Quartz.QuartzSchedulerBuilder.html#Quartz_QuartzSchedulerBuilder_Create_System_Action_Quartz_IQuartzBuilder__">Create(Action&lt;IQuartzBuilder&gt;?)</a> hands the
+callback an <a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a>, the very one <code>AddQuartz(q =&gt; …)</code> hands out, over a
+container it creates itself. The two paths are the same call written around a different receiver, so
+whatever works under a host works here and they cannot drift apart — there is one set of members to
+keep in step, and this type re-declares none of them.
+</p>
+<p>
+What it adds is what a standalone caller needs and a host already has: the terminal methods
+<a class="xref" href="Quartz.QuartzSchedulerBuilder.html#Quartz_QuartzSchedulerBuilder_Build">Build()</a> and <a class="xref" href="Quartz.QuartzSchedulerBuilder.html#Quartz_QuartzSchedulerBuilder_BuildScheduler_System_Threading_CancellationToken_">BuildScheduler(CancellationToken)</a>, and the two ways to say where configuration
+comes from when it does not come from code — <a class="xref" href="Quartz.QuartzSchedulerBuilder.html#Quartz_QuartzSchedulerBuilder_UseProperties_System_Collections_Specialized_NameValueCollection_">UseProperties(NameValueCollection)</a> and
+<a class="xref" href="Quartz.QuartzSchedulerBuilder.html#Quartz_QuartzSchedulerBuilder_UseConfiguration_Microsoft_Extensions_Configuration_IConfiguration_">UseConfiguration(IConfiguration)</a>.
+</p>
+<p>
+The builder owns the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a> it creates and disposes it when the returned
+factory is disposed, so callers that never dispose behave exactly as they did with the old
+process-lifetime scheduler.
+</p>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_QuartzSchedulerBuilder_Build_" data-uid="Quartz.QuartzSchedulerBuilder.Build*"></a>
+
+  <h3 id="Quartz_QuartzSchedulerBuilder_Build" data-uid="Quartz.QuartzSchedulerBuilder.Build">
+  Build()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/QuartzSchedulerBuilder.cs/#L166"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Builds the scheduler factory, along with the container backing it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StandaloneSchedulerFactory Build()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.StandaloneSchedulerFactory.html">StandaloneSchedulerFactory</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzSchedulerBuilder_Build_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The returned factory owns that container, so disposing it shuts the scheduler down and disposes
+everything the container built. See <a class="xref" href="Quartz.StandaloneSchedulerFactory.html">StandaloneSchedulerFactory</a>.</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzSchedulerBuilder_BuildScheduler_" data-uid="Quartz.QuartzSchedulerBuilder.BuildScheduler*"></a>
+
+  <h3 id="Quartz_QuartzSchedulerBuilder_BuildScheduler_System_Threading_CancellationToken_" data-uid="Quartz.QuartzSchedulerBuilder.BuildScheduler(System.Threading.CancellationToken)">
+  BuildScheduler(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/QuartzSchedulerBuilder.cs/#L193"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Builds the scheduler.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask&lt;IScheduler&gt; BuildScheduler(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.IScheduler.html">IScheduler</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzSchedulerBuilder_BuildScheduler_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The factory that owns the container is dropped, so the container outlives every reference to it:
+shutting this scheduler down is still <a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_Shutdown_System_Boolean_System_Threading_CancellationToken_">Shutdown(bool, CancellationToken)</a>, but nothing will ever
+dispose what built it. That is the right trade for a scheduler that lives as long as the process
+and the wrong one for anything shorter-lived — use <a class="xref" href="Quartz.QuartzSchedulerBuilder.html#Quartz_QuartzSchedulerBuilder_Build">Build()</a> and keep the factory there.</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzSchedulerBuilder_Create_" data-uid="Quartz.QuartzSchedulerBuilder.Create*"></a>
+
+  <h3 id="Quartz_QuartzSchedulerBuilder_Create_System_Action_Quartz_IQuartzBuilder__" data-uid="Quartz.QuartzSchedulerBuilder.Create(System.Action{Quartz.IQuartzBuilder})">
+  Create(Action&lt;IQuartzBuilder&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/QuartzSchedulerBuilder.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new builder and configures the scheduler it will build.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static QuartzSchedulerBuilder Create(Action&lt;IQuartzBuilder&gt;? configure = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a>&gt;</dt>
+    <dd><p>Configures the scheduler.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.QuartzSchedulerBuilder.html">QuartzSchedulerBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzSchedulerBuilder_Create_System_Action_Quartz_IQuartzBuilder___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The callback is the same one <code>AddQuartz</code> takes, and it runs immediately, as it does there.
+Leaving it out describes a scheduler that is configured entirely by
+<a class="xref" href="Quartz.QuartzSchedulerBuilder.html#Quartz_QuartzSchedulerBuilder_UseProperties_System_Collections_Specialized_NameValueCollection_">UseProperties(NameValueCollection)</a> or <a class="xref" href="Quartz.QuartzSchedulerBuilder.html#Quartz_QuartzSchedulerBuilder_UseConfiguration_Microsoft_Extensions_Configuration_IConfiguration_">UseConfiguration(IConfiguration)</a> — again as
+<code>AddQuartz()</code> does — and the defaults answer for anything neither of those mentions.</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzSchedulerBuilder_UseConfiguration_" data-uid="Quartz.QuartzSchedulerBuilder.UseConfiguration*"></a>
+
+  <h3 id="Quartz_QuartzSchedulerBuilder_UseConfiguration_Microsoft_Extensions_Configuration_IConfiguration_" data-uid="Quartz.QuartzSchedulerBuilder.UseConfiguration(Microsoft.Extensions.Configuration.IConfiguration)">
+  UseConfiguration(IConfiguration)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/QuartzSchedulerBuilder.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures the scheduler from a configuration section, the standalone counterpart of
+<code>AddQuartz(configuration)</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QuartzSchedulerBuilder UseConfiguration(IConfiguration configuration)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configuration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration">IConfiguration</a></dt>
+    <dd><p>The Quartz configuration section, typically <code>configuration.GetSection(&quot;Quartz&quot;)</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.QuartzSchedulerBuilder.html">QuartzSchedulerBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzSchedulerBuilder_UseConfiguration_Microsoft_Extensions_Configuration_IConfiguration__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The section is read exactly as it is under a host: hierarchical sections such as
+<code>Scheduler</code> and <code>ThreadPool</code> bind onto the typed options, a <code>Schedule</code> section
+becomes jobs and triggers, and flat <code>quartz.*</code> keys still mean what they always did. There
+is no flattening step for a caller to write.
+</p>
+<p>
+Configuration written in code wins, as it does everywhere else: the section is applied before
+anything <a class="xref" href="Quartz.QuartzSchedulerBuilder.html#Quartz_QuartzSchedulerBuilder_Create_System_Action_Quartz_IQuartzBuilder__">Create(Action&lt;IQuartzBuilder&gt;?)</a> was told.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzSchedulerBuilder_UseProperties_" data-uid="Quartz.QuartzSchedulerBuilder.UseProperties*"></a>
+
+  <h3 id="Quartz_QuartzSchedulerBuilder_UseProperties_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___" data-uid="Quartz.QuartzSchedulerBuilder.UseProperties(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+  UseProperties(IEnumerable&lt;KeyValuePair&lt;string, string?&gt;&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/QuartzSchedulerBuilder.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures the scheduler from flat <code>quartz.*</code> property keys.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QuartzSchedulerBuilder UseProperties(IEnumerable&lt;KeyValuePair&lt;string, string?&gt;&gt; properties)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>properties</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
+    <dd><p>The flat <code>quartz.*</code> properties.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.QuartzSchedulerBuilder.html">QuartzSchedulerBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzSchedulerBuilder_UseProperties_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This is the code-free path a properties file or an environment-derived bag takes, and the
+standalone counterpart of <code>AddQuartz(properties)</code>. The keys are translated into the same
+typed options and registrations everything else produces, so a scheduler configured this way is
+the same scheduler.
+</p>
+<p>
+The parameter is the shape every dictionary already has, so a
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary&lt;TKey, TValue&gt;</a>, an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary&lt;TKey, TValue&gt;</a> and
+<a class="xref" href="Quartz.QuartzOptions.html#Quartz_QuartzOptions_Properties">Properties</a> all go in without a conversion step.
+</p>
+<p>
+Configuration written in code wins, whichever order the two are applied in: values from the
+properties are applied before anything <a class="xref" href="Quartz.QuartzSchedulerBuilder.html#Quartz_QuartzSchedulerBuilder_Create_System_Action_Quartz_IQuartzBuilder__">Create(Action&lt;IQuartzBuilder&gt;?)</a> was told, and implementations they
+name are registered after — registration being first-wins and configuration last-wins.
+</p>
+<p>
+Keys are checked against the ones Quartz reads, so a misspelling is reported rather than
+silently ignored. Set <code>quartz.checkConfiguration</code> to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> to allow keys
+of your own.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzSchedulerBuilder_UseProperties_" data-uid="Quartz.QuartzSchedulerBuilder.UseProperties*"></a>
+
+  <h3 id="Quartz_QuartzSchedulerBuilder_UseProperties_System_Collections_Specialized_NameValueCollection_" data-uid="Quartz.QuartzSchedulerBuilder.UseProperties(System.Collections.Specialized.NameValueCollection)">
+  UseProperties(NameValueCollection)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/QuartzSchedulerBuilder.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures the scheduler from flat <code>quartz.*</code> property keys held in a
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.specialized.namevaluecollection">NameValueCollection</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QuartzSchedulerBuilder UseProperties(NameValueCollection properties)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>properties</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.specialized.namevaluecollection">NameValueCollection</a></dt>
+    <dd><p>The flat <code>quartz.*</code> properties.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.QuartzSchedulerBuilder.html">QuartzSchedulerBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzSchedulerBuilder_UseProperties_System_Collections_Specialized_NameValueCollection__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.specialized.namevaluecollection">NameValueCollection</a> is what a caller migrating from 3.x already holds — it is what
+<code>StdSchedulerFactory</code> took — so it stays a single call. Everything else about it is
+<a class="xref" href="Quartz.QuartzSchedulerBuilder.html#Quartz_QuartzSchedulerBuilder_UseProperties_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___">UseProperties(IEnumerable&lt;KeyValuePair&lt;string, string?&gt;&gt;)</a>, which this forwards to.</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/QuartzSchedulerBuilder.cs/#L48" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

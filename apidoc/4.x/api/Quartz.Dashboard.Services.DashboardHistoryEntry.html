@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DashboardHistoryEntry | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DashboardHistoryEntry | Quartz.NET 4.x API reference ">
+      
+      
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Dashboard_Services_DashboardHistoryEntry.md&amp;value=---%0Auid%3A%20Quartz.Dashboard.Services.DashboardHistoryEntry%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Dashboard.Services.DashboardHistoryEntry">
+
+
+
+  <h1 id="Quartz_Dashboard_Services_DashboardHistoryEntry" data-uid="Quartz.Dashboard.Services.DashboardHistoryEntry" class="text-break">
+Class DashboardHistoryEntry  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/DashboardHistoryStore.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<a class="xref" href="Quartz.Dashboard.html">Dashboard</a>.<a class="xref" href="Quartz.Dashboard.Services.html">Services</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.Dashboard.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed record DashboardHistoryEntry : IEquatable&lt;DashboardHistoryEntry&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">DashboardHistoryEntry</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Quartz.Dashboard.Services.DashboardHistoryEntry.html">DashboardHistoryEntry</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_Dashboard_Services_DashboardHistoryEntry_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p><a class="xref" href="Quartz.Dashboard.Services.DashboardHistoryEntry.html#Quartz_Dashboard_Services_DashboardHistoryEntry_Duration">Duration</a> is a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>, as every other duration the dashboard shows
+is; it used to be a count of whole milliseconds, which lost every execution shorter than one.</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Quartz_Dashboard_Services_DashboardHistoryEntry__ctor_" data-uid="Quartz.Dashboard.Services.DashboardHistoryEntry.#ctor*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_DashboardHistoryEntry__ctor_System_String_System_String_System_String_System_String_System_String_System_String_System_DateTimeOffset_System_TimeSpan_System_Boolean_System_String_" data-uid="Quartz.Dashboard.Services.DashboardHistoryEntry.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.DateTimeOffset,System.TimeSpan,System.Boolean,System.String)">
+  DashboardHistoryEntry(string, string, string, string, string, string, DateTimeOffset, TimeSpan, bool, string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/DashboardHistoryStore.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DashboardHistoryEntry(string SchedulerName, string SchedulerInstanceId, string JobGroup, string JobName, string TriggerGroup, string TriggerName, DateTimeOffset FiredAtUtc, TimeSpan Duration, bool Succeeded, string? ExceptionMessage)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>SchedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The scheduler the execution belongs to.</p>
+</dd>
+    <dt><code>SchedulerInstanceId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The node that ran it. Every node of a cluster keeps its own history of its own executions, so
+without this a row cannot say which machine it came from — and a store shared across the cluster
+cannot say it either.</p>
+</dd>
+    <dt><code>JobGroup</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The group of the job that ran.</p>
+</dd>
+    <dt><code>JobName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the job that ran.</p>
+</dd>
+    <dt><code>TriggerGroup</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The group of the trigger that fired it.</p>
+</dd>
+    <dt><code>TriggerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the trigger that fired it.</p>
+</dd>
+    <dt><code>FiredAtUtc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd><p>When the execution fired.</p>
+</dd>
+    <dt><code>Duration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>How long the job took.</p>
+</dd>
+    <dt><code>Succeeded</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the job completed without throwing.</p>
+</dd>
+    <dt><code>ExceptionMessage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>What it threw, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when it succeeded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Services_DashboardHistoryEntry__ctor_System_String_System_String_System_String_System_String_System_String_System_String_System_DateTimeOffset_System_TimeSpan_System_Boolean_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a class="xref" href="Quartz.Dashboard.Services.DashboardHistoryEntry.html#Quartz_Dashboard_Services_DashboardHistoryEntry_Duration">Duration</a> is a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>, as every other duration the dashboard shows
+is; it used to be a count of whole milliseconds, which lost every execution shorter than one.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_Dashboard_Services_DashboardHistoryEntry_Duration_" data-uid="Quartz.Dashboard.Services.DashboardHistoryEntry.Duration*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_DashboardHistoryEntry_Duration" data-uid="Quartz.Dashboard.Services.DashboardHistoryEntry.Duration">
+  Duration
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/DashboardHistoryStore.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How long the job took.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan Duration { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_DashboardHistoryEntry_ExceptionMessage_" data-uid="Quartz.Dashboard.Services.DashboardHistoryEntry.ExceptionMessage*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_DashboardHistoryEntry_ExceptionMessage" data-uid="Quartz.Dashboard.Services.DashboardHistoryEntry.ExceptionMessage">
+  ExceptionMessage
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/DashboardHistoryStore.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>What it threw, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when it succeeded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? ExceptionMessage { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_DashboardHistoryEntry_FiredAtUtc_" data-uid="Quartz.Dashboard.Services.DashboardHistoryEntry.FiredAtUtc*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_DashboardHistoryEntry_FiredAtUtc" data-uid="Quartz.Dashboard.Services.DashboardHistoryEntry.FiredAtUtc">
+  FiredAtUtc
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/DashboardHistoryStore.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When the execution fired.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset FiredAtUtc { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_DashboardHistoryEntry_JobGroup_" data-uid="Quartz.Dashboard.Services.DashboardHistoryEntry.JobGroup*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_DashboardHistoryEntry_JobGroup" data-uid="Quartz.Dashboard.Services.DashboardHistoryEntry.JobGroup">
+  JobGroup
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/DashboardHistoryStore.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The group of the job that ran.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string JobGroup { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_DashboardHistoryEntry_JobName_" data-uid="Quartz.Dashboard.Services.DashboardHistoryEntry.JobName*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_DashboardHistoryEntry_JobName" data-uid="Quartz.Dashboard.Services.DashboardHistoryEntry.JobName">
+  JobName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/DashboardHistoryStore.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The name of the job that ran.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string JobName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_DashboardHistoryEntry_SchedulerInstanceId_" data-uid="Quartz.Dashboard.Services.DashboardHistoryEntry.SchedulerInstanceId*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_DashboardHistoryEntry_SchedulerInstanceId" data-uid="Quartz.Dashboard.Services.DashboardHistoryEntry.SchedulerInstanceId">
+  SchedulerInstanceId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/DashboardHistoryStore.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The node that ran it. Every node of a cluster keeps its own history of its own executions, so
+without this a row cannot say which machine it came from — and a store shared across the cluster
+cannot say it either.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SchedulerInstanceId { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_DashboardHistoryEntry_SchedulerName_" data-uid="Quartz.Dashboard.Services.DashboardHistoryEntry.SchedulerName*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_DashboardHistoryEntry_SchedulerName" data-uid="Quartz.Dashboard.Services.DashboardHistoryEntry.SchedulerName">
+  SchedulerName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/DashboardHistoryStore.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The scheduler the execution belongs to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SchedulerName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_DashboardHistoryEntry_Succeeded_" data-uid="Quartz.Dashboard.Services.DashboardHistoryEntry.Succeeded*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_DashboardHistoryEntry_Succeeded" data-uid="Quartz.Dashboard.Services.DashboardHistoryEntry.Succeeded">
+  Succeeded
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/DashboardHistoryStore.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the job completed without throwing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Succeeded { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_DashboardHistoryEntry_TriggerGroup_" data-uid="Quartz.Dashboard.Services.DashboardHistoryEntry.TriggerGroup*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_DashboardHistoryEntry_TriggerGroup" data-uid="Quartz.Dashboard.Services.DashboardHistoryEntry.TriggerGroup">
+  TriggerGroup
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/DashboardHistoryStore.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The group of the trigger that fired it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TriggerGroup { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_DashboardHistoryEntry_TriggerName_" data-uid="Quartz.Dashboard.Services.DashboardHistoryEntry.TriggerName*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_DashboardHistoryEntry_TriggerName" data-uid="Quartz.Dashboard.Services.DashboardHistoryEntry.TriggerName">
+  TriggerName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/DashboardHistoryStore.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The name of the trigger that fired it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TriggerName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/DashboardHistoryStore.cs/#L40" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

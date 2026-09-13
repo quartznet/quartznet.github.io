@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DbMetadata | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DbMetadata | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Metadata information about specific ADO.NET driver library. Metadata is used to create correct types of object instances to interact with the underlying database.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Impl_AdoJobStore_Common_DbMetadata.md&amp;value=---%0Auid%3A%20Quartz.Impl.AdoJobStore.Common.DbMetadata%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata">
+
+
+
+  <h1 id="Quartz_Impl_AdoJobStore_Common_DbMetadata" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata" class="text-break">
+Class DbMetadata  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/Common/DbMetadata.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<a class="xref" href="Quartz.Impl.html">Impl</a>.<a class="xref" href="Quartz.Impl.AdoJobStore.html">AdoJobStore</a>.<a class="xref" href="Quartz.Impl.AdoJobStore.Common.html">Common</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Metadata information about specific ADO.NET driver library. Metadata is used to
+create correct types of object instances to interact with the underlying
+database.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed record DbMetadata : IEquatable&lt;DbMetadata&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">DbMetadata</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Quartz.Impl.AdoJobStore.Common.DbMetadata.html">DbMetadata</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_Impl_AdoJobStore_Common_DbMetadata_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+An init-only record: a description is built once — with an object initializer, or copied with a
+<code>with</code> expression — and cannot drift afterwards. Everything on it is something you say about a
+driver. The reflection lookups that description implies — <a class="xref" href="Quartz.Impl.AdoJobStore.Common.DbMetadata.html#Quartz_Impl_AdoJobStore_Common_DbMetadata_DbBinaryTypeName">DbBinaryTypeName</a> resolved
+against <a class="xref" href="Quartz.Impl.AdoJobStore.Common.DbMetadata.html#Quartz_Impl_AdoJobStore_Common_DbMetadata_ParameterDbType">ParameterDbType</a>, the property <a class="xref" href="Quartz.Impl.AdoJobStore.Common.DbMetadata.html#Quartz_Impl_AdoJobStore_Common_DbMetadata_ParameterDbTypePropertyName">ParameterDbTypePropertyName</a>
+names on <a class="xref" href="Quartz.Impl.AdoJobStore.Common.DbMetadata.html#Quartz_Impl_AdoJobStore_Common_DbMetadata_ParameterType">ParameterType</a>, and <code>BindByName</code> on <a class="xref" href="Quartz.Impl.AdoJobStore.Common.DbMetadata.html#Quartz_Impl_AdoJobStore_Common_DbMetadata_CommandType">CommandType</a> — are
+Quartz's own, and are internal.
+</p>
+<p>
+They replace the old two-phase <code>Initialize()</code> that had to be remembered. A description that
+cannot work still fails where it is made rather than at the first binary parameter: every lookup
+is performed once, as the metadata is registered.
+</p>
+<p>
+Every <code>Type</code> here is optional, because a description only needs them when Quartz has to
+<em>construct</em> the driver's objects — which is what <a class="xref" href="Quartz.Impl.AdoJobStore.Common.DbProvider.html">DbProvider</a> does and what a
+trimmed application cannot rely on. A description handed to <code>ProviderFactoryDbProvider</code> or
+<code>DataSourceDbProvider</code> gets its connections, commands and parameters from the factory or the
+data source, so it names no type at all; what is left is the driver's parameter naming, and the two
+typed seams below for a driver that needs a command or a binary parameter configured in a way
+Quartz cannot name.
+</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_Impl_AdoJobStore_Common_DbMetadata_AssemblyName_" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.AssemblyName*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_Common_DbMetadata_AssemblyName" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.AssemblyName">
+  AssemblyName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/Common/DbMetadata.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the name of the assembly that holds the connection library.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? AssemblyName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the assembly.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_Common_DbMetadata_BindByName_" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.BindByName*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_Common_DbMetadata_BindByName" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.BindByName">
+  BindByName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/Common/DbMetadata.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating whether parameters are bind by name when using
+ADO.NET parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool BindByName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if parameters are bind by name; otherwise, <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_Common_DbMetadata_CommandType_" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.CommandType*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_Common_DbMetadata_CommandType" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.CommandType">
+  CommandType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/Common/DbMetadata.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the type of the command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicConstructors|DynamicallyAccessedMemberTypes.PublicProperties)]
+public Type? CommandType { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type of the command.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_AdoJobStore_Common_DbMetadata_CommandType_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a class="xref" href="Quartz.Impl.AdoJobStore.Common.DbProvider.html">DbProvider</a> constructs one of these per command it runs and, for a driver that
+binds parameters by name, sets <code>BindByName</code> on it.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_Common_DbMetadata_ConfigureBinaryParameter_" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.ConfigureBinaryParameter*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_Common_DbMetadata_ConfigureBinaryParameter" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.ConfigureBinaryParameter">
+  ConfigureBinaryParameter
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/Common/DbMetadata.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Applied to a parameter carrying a binary column, in place of writing
+<a class="xref" href="Quartz.Impl.AdoJobStore.Common.DbMetadata.html#Quartz_Impl_AdoJobStore_Common_DbMetadata_DbBinaryTypeName">DbBinaryTypeName</a> to the property <a class="xref" href="Quartz.Impl.AdoJobStore.Common.DbMetadata.html#Quartz_Impl_AdoJobStore_Common_DbMetadata_ParameterDbTypePropertyName">ParameterDbTypePropertyName</a> names.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;DbParameter&gt;? ConfigureBinaryParameter { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbparameter">DbParameter</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_AdoJobStore_Common_DbMetadata_ConfigureBinaryParameter_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The same reasoning as <a class="xref" href="Quartz.Impl.AdoJobStore.Common.DbMetadata.html#Quartz_Impl_AdoJobStore_Common_DbMetadata_ConfigureCommand">ConfigureCommand</a>, for the one parameter type Quartz asks for
+by name. It matters most on Oracle, where <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.dbtype#system-data-dbtype-binary">Binary</a> means
+<code>OracleDbType.Raw</code> and caps a job data map at two kilobytes:
+<code>parameter =&gt; ((OracleParameter) parameter).OracleDbType = OracleDbType.Blob</code> is what an
+application says instead.
+</p>
+<p>
+Set, it wins over the reflective setter; with neither, a binary parameter is bound as plain
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.dbtype#system-data-dbtype-binary">Binary</a> and the driver maps it.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_Common_DbMetadata_ConfigureCommand_" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.ConfigureCommand*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_Common_DbMetadata_ConfigureCommand" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.ConfigureCommand">
+  ConfigureCommand
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/Common/DbMetadata.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Applied to every command Quartz mints for this driver, in place of the reflective
+<code>BindByName</code> probe.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;DbCommand&gt;? ConfigureCommand { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbcommand">DbCommand</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_AdoJobStore_Common_DbMetadata_ConfigureCommand_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Quartz sets <code>BindByName</code> on the managed Oracle driver's command by looking the property up
+on <a class="xref" href="Quartz.Impl.AdoJobStore.Common.DbMetadata.html#Quartz_Impl_AdoJobStore_Common_DbMetadata_CommandType">CommandType</a>, because it cannot name <code>OracleCommand</code>. A description that
+names no command type — one behind a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbproviderfactory">DbProviderFactory</a> or a
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbdatasource">DbDataSource</a> — has nothing to look the property up on, so it
+says what to do instead: <code>command =&gt; ((OracleCommand) command).BindByName = true</code>, in
+the application, which references the driver and can name the type.
+</p>
+<p>
+Set, it wins: the reflective probe is not attempted at all, and <a class="xref" href="Quartz.Impl.AdoJobStore.Common.DbMetadata.html#Quartz_Impl_AdoJobStore_Common_DbMetadata_BindByName">BindByName</a> is left
+to the parameter naming it also governs.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_Common_DbMetadata_ConnectionType_" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.ConnectionType*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_Common_DbMetadata_ConnectionType" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.ConnectionType">
+  ConnectionType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/Common/DbMetadata.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the type of the connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicConstructors)]
+public Type? ConnectionType { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type of the connection.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_AdoJobStore_Common_DbMetadata_ConnectionType_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a class="xref" href="Quartz.Impl.AdoJobStore.Common.DbProvider.html">DbProvider</a> constructs one of these per connection it opens, so the type has to
+keep its public constructors through trimming.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_Common_DbMetadata_DbBinaryTypeName_" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.DbBinaryTypeName*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_Common_DbMetadata_DbBinaryTypeName" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.DbBinaryTypeName">
+  DbBinaryTypeName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/Common/DbMetadata.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the type of the db binary column. This is a string representation of
+Enum element because this information is database driver specific.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? DbBinaryTypeName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The type of the db binary.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_Common_DbMetadata_ExceptionType_" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.ExceptionType*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_Common_DbMetadata_ExceptionType" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.ExceptionType">
+  ExceptionType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/Common/DbMetadata.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the type of the exception that is thrown when using driver
+library.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type? ExceptionType { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type of the exception.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_Common_DbMetadata_ParameterDbType_" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.ParameterDbType*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_Common_DbMetadata_ParameterDbType" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.ParameterDbType">
+  ParameterDbType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/Common/DbMetadata.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the type of the database parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type? ParameterDbType { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type of the parameter db.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_Common_DbMetadata_ParameterDbTypePropertyName_" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.ParameterDbTypePropertyName*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_Common_DbMetadata_ParameterDbTypePropertyName" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.ParameterDbTypePropertyName">
+  ParameterDbTypePropertyName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/Common/DbMetadata.cs/#L166"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The name of the property on <a class="xref" href="Quartz.Impl.AdoJobStore.Common.DbMetadata.html#Quartz_Impl_AdoJobStore_Common_DbMetadata_ParameterType">ParameterType</a> that carries a parameter's database
+type, which <a class="xref" href="Quartz.Impl.AdoJobStore.Common.DbMetadata.html#Quartz_Impl_AdoJobStore_Common_DbMetadata_DbBinaryTypeName">DbBinaryTypeName</a> is set through.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? ParameterDbTypePropertyName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Typically <code>&quot;DbType&quot;</code>, or the provider's own, such as <code>&quot;SqlDbType&quot;</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_AdoJobStore_Common_DbMetadata_ParameterDbTypePropertyName_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Required exactly when <a class="xref" href="Quartz.Impl.AdoJobStore.Common.DbMetadata.html#Quartz_Impl_AdoJobStore_Common_DbMetadata_DbBinaryTypeName">DbBinaryTypeName</a> is set, and unread otherwise — which is
+why it is nullable rather than <code>required</code>: a provider whose parameters need no explicit
+database type sets neither. Leaving it out while naming a binary type is reported at startup,
+naming the database, as every other half-configured provider is.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_Common_DbMetadata_ParameterNamePrefix_" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.ParameterNamePrefix*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_Common_DbMetadata_ParameterNamePrefix" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.ParameterNamePrefix">
+  ParameterNamePrefix
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/Common/DbMetadata.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the parameter name prefix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? ParameterNamePrefix { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The parameter name prefix.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_Common_DbMetadata_ParameterType_" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.ParameterType*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_Common_DbMetadata_ParameterType" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.ParameterType">
+  ParameterType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/Common/DbMetadata.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the type of the parameter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicProperties)]
+public Type? ParameterType { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type of the parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_AdoJobStore_Common_DbMetadata_ParameterType_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The property <a class="xref" href="Quartz.Impl.AdoJobStore.Common.DbMetadata.html#Quartz_Impl_AdoJobStore_Common_DbMetadata_ParameterDbTypePropertyName">ParameterDbTypePropertyName</a> names is looked up on this type.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_Common_DbMetadata_ProductName_" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.ProductName*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_Common_DbMetadata_ProductName" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.ProductName">
+  ProductName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/Common/DbMetadata.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the name of the product.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? ProductName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the product.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_Common_DbMetadata_UseParameterNamePrefixInParameterCollection_" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.UseParameterNamePrefixInParameterCollection*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_Common_DbMetadata_UseParameterNamePrefixInParameterCollection" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.UseParameterNamePrefixInParameterCollection">
+  UseParameterNamePrefixInParameterCollection
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/Common/DbMetadata.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating whether [use parameter name prefix in parameter collection].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseParameterNamePrefixInParameterCollection { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if [use parameter name prefix in parameter collection]; otherwise, <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_Impl_AdoJobStore_Common_DbMetadata_GetParameterName_" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.GetParameterName*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_Common_DbMetadata_GetParameterName_System_String_" data-uid="Quartz.Impl.AdoJobStore.Common.DbMetadata.GetParameterName(System.String)">
+  GetParameterName(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/Common/DbMetadata.cs/#L309"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the name of the parameter which includes the parameter prefix for this
+database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetParameterName(string parameterName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parameterName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Name of the parameter.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_AdoJobStore_Common_DbMetadata_GetParameterName_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Called once per parameter bound, which is seven times for a trigger acquisition and fifteen
+for a trigger write, and it was a concatenation each time. The set of names is small and
+settled — the statements name about eighty-five between them, and the generated ones
+(<code>tkn000</code>, <code>oldState00</code>, <code>excludedJobType0000</code>) are bounded by the predicate
+sizes — so each spelling is worked out once and handed back thereafter.</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/Common/DbMetadata.cs/#L61" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

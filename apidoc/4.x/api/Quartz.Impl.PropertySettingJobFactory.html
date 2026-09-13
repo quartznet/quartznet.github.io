@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PropertySettingJobFactory | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PropertySettingJobFactory | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="A JobFactory that instantiates the Job instance (using its public parameterless constructor), and then attempts to set all values from the &#39;s merged  onto properties of the job.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Impl_PropertySettingJobFactory.md&amp;value=---%0Auid%3A%20Quartz.Impl.PropertySettingJobFactory%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Impl.PropertySettingJobFactory">
+
+
+
+  <h1 id="Quartz_Impl_PropertySettingJobFactory" data-uid="Quartz.Impl.PropertySettingJobFactory" class="text-break">
+Class PropertySettingJobFactory  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/PropertySettingJobFactory.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<a class="xref" href="Quartz.Impl.html">Impl</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A JobFactory that instantiates the Job instance (using its public parameterless
+constructor), and
+then attempts to set all values from the <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a>'s merged
+<a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> onto properties of the job.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PropertySettingJobFactory : SimpleJobFactory, IJobFactory</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Quartz.Impl.SimpleJobFactory.html">SimpleJobFactory</a></div>
+      <div><span class="xref">PropertySettingJobFactory</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Quartz.Extensibility.IJobFactory.html">IJobFactory</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Quartz.Impl.MicrosoftDependencyInjectionJobFactory.html">MicrosoftDependencyInjectionJobFactory</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Quartz.Impl.SimpleJobFactory.html#Quartz_Impl_SimpleJobFactory_InstantiateJobCore_Quartz_Extensibility_TriggerFiredBundle_">SimpleJobFactory.InstantiateJobCore(TriggerFiredBundle)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.SimpleJobFactory.html#Quartz_Impl_SimpleJobFactory_ReturnJob_Quartz_Extensibility_JobScope_System_Threading_CancellationToken_">SimpleJobFactory.ReturnJob(JobScope, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.SimpleJobFactory.html#Quartz_Impl_SimpleJobFactory_DisposeIfDisposable_System_Object_System_Threading_CancellationToken_">SimpleJobFactory.DisposeIfDisposable(object, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_Impl_PropertySettingJobFactory_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>By default an entry in the <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> that does not map to a property on your job
+class is ignored, because a map is allowed to carry values the job reads for itself. Set
+<a class="xref" href="Quartz.Impl.PropertySettingJobFactory.html#Quartz_Impl_PropertySettingJobFactory_PropertyMismatchBehavior">PropertyMismatchBehavior</a> to <a class="xref" href="Quartz.Impl.PropertyMismatchBehavior.html#Quartz_Impl_PropertyMismatchBehavior_Warn">Warn</a>
+to log those — useful for troubleshooting a misspelled property name, noisy if you regularly (and
+purposely) have extra things in your map — or to
+<a class="xref" href="Quartz.Impl.PropertyMismatchBehavior.html#Quartz_Impl_PropertyMismatchBehavior_Throw">Throw</a> to fail the instantiation outright.</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Quartz_Impl_PropertySettingJobFactory__ctor_" data-uid="Quartz.Impl.PropertySettingJobFactory.#ctor*"></a>
+
+  <h3 id="Quartz_Impl_PropertySettingJobFactory__ctor_Microsoft_Extensions_Logging_ILoggerFactory_" data-uid="Quartz.Impl.PropertySettingJobFactory.#ctor(Microsoft.Extensions.Logging.ILoggerFactory)">
+  PropertySettingJobFactory(ILoggerFactory?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/PropertySettingJobFactory.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropertySettingJobFactory(ILoggerFactory? loggerFactory = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>loggerFactory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.iloggerfactory">ILoggerFactory</a></dt>
+    <dd><p>Where this factory and its derived types create their loggers. A factory the container builds is
+handed the application's; one constructed by hand — <code>UseJobFactory(instance)</code> — is handed
+nothing and reads <a class="xref" href="Quartz.Diagnostics.LogProvider.html">LogProvider</a>, as before. A factory rather than a logger, because
+<a class="xref" href="Quartz.Impl.PropertySettingJobFactory.html">PropertySettingJobFactory</a> logs under its own category and has to be able to pass
+the same source down.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_Impl_PropertySettingJobFactory_PropertyMismatchBehavior_" data-uid="Quartz.Impl.PropertySettingJobFactory.PropertyMismatchBehavior*"></a>
+
+  <h3 id="Quartz_Impl_PropertySettingJobFactory_PropertyMismatchBehavior" data-uid="Quartz.Impl.PropertySettingJobFactory.PropertyMismatchBehavior">
+  PropertyMismatchBehavior
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/PropertySettingJobFactory.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>What happens when a key (name) and value (type) found in the <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> does not
+correspond to a property setter on the job class. Defaults to
+<a class="xref" href="Quartz.Impl.PropertyMismatchBehavior.html#Quartz_Impl_PropertyMismatchBehavior_Ignore">Ignore</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PropertyMismatchBehavior PropertyMismatchBehavior { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.Impl.PropertyMismatchBehavior.html">PropertyMismatchBehavior</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_Impl_PropertySettingJobFactory_BuildJobDataMap_" data-uid="Quartz.Impl.PropertySettingJobFactory.BuildJobDataMap*"></a>
+
+  <h3 id="Quartz_Impl_PropertySettingJobFactory_BuildJobDataMap_Quartz_Extensibility_TriggerFiredBundle_Quartz_IScheduler_" data-uid="Quartz.Impl.PropertySettingJobFactory.BuildJobDataMap(Quartz.Extensibility.TriggerFiredBundle,Quartz.IScheduler)">
+  BuildJobDataMap(TriggerFiredBundle, IScheduler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/PropertySettingJobFactory.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Builds the map whose entries are applied to the job's properties: the trigger's data merged
+over the job's.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual JobDataMap BuildJobDataMap(TriggerFiredBundle bundle, IScheduler scheduler)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bundle</code> <a class="xref" href="Quartz.Extensibility.TriggerFiredBundle.html">TriggerFiredBundle</a></dt>
+    <dd></dd>
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_PropertySettingJobFactory_BuildJobDataMap_Quartz_Extensibility_TriggerFiredBundle_Quartz_IScheduler__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Until 4.0 the scheduler context was merged in as well, underneath both. That injected every
+context entry into every fire — including the service-provider entry the DI integration seeds,
+which no job has a property for, so with <a class="xref" href="Quartz.Impl.PropertyMismatchBehavior.html#Quartz_Impl_PropertyMismatchBehavior_Throw">Throw</a> every
+container-hosted fire failed. A job that wants a context value reads
+<code>context.Scheduler.Context</code> in <a class="xref" href="Quartz.IJob.html#Quartz_IJob_Execute_Quartz_IJobExecutionContext_System_Threading_CancellationToken_">Execute(IJobExecutionContext, CancellationToken)</a>; a factory that wants the old
+behavior overrides this method, which is handed the scheduler for exactly that reason.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_PropertySettingJobFactory_ConvertValueIfNecessary_" data-uid="Quartz.Impl.PropertySettingJobFactory.ConvertValueIfNecessary*"></a>
+
+  <h3 id="Quartz_Impl_PropertySettingJobFactory_ConvertValueIfNecessary_System_Type_System_Object_" data-uid="Quartz.Impl.PropertySettingJobFactory.ConvertValueIfNecessary(System.Type,System.Object)">
+  ConvertValueIfNecessary(Type, object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/PropertySettingJobFactory.cs/#L343"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Coerces a <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> value into the type the job's property takes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual object? ConvertValueIfNecessary(Type requiredType, object? newValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>requiredType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>newValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_PropertySettingJobFactory_ConvertValueIfNecessary_System_Type_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The seam a derived factory overrides to convert a value some other way. It is deliberately the
+only thing between the map and the property, so an override sees every value the factory binds.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_PropertySettingJobFactory_CreateJob_" data-uid="Quartz.Impl.PropertySettingJobFactory.CreateJob*"></a>
+
+  <h3 id="Quartz_Impl_PropertySettingJobFactory_CreateJob_Quartz_Extensibility_TriggerFiredBundle_Quartz_IScheduler_System_Threading_CancellationToken_" data-uid="Quartz.Impl.PropertySettingJobFactory.CreateJob(Quartz.Extensibility.TriggerFiredBundle,Quartz.IScheduler,System.Threading.CancellationToken)">
+  CreateJob(TriggerFiredBundle, IScheduler, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/PropertySettingJobFactory.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the scheduler at the time of the trigger firing, in order to
+produce a <a class="xref" href="Quartz.IJob.html">IJob</a> instance on which to call Execute.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ValueTask&lt;JobScope&gt; CreateJob(TriggerFiredBundle bundle, IScheduler scheduler, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bundle</code> <a class="xref" href="Quartz.Extensibility.TriggerFiredBundle.html">TriggerFiredBundle</a></dt>
+    <dd><p>The TriggerFiredBundle from which the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>
+and other info relating to the trigger firing can be obtained.</p>
+</dd>
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler the job will run under, made available to the job through its execution context.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.Extensibility.JobScope.html">JobScope</a>&gt;</dt>
+    <dd><p>the newly instantiated Job</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_PropertySettingJobFactory_CreateJob_Quartz_Extensibility_TriggerFiredBundle_Quartz_IScheduler_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+It should be extremely rare for this method to throw an exception -
+basically only the case where there is no way at all to instantiate
+and prepare the Job for execution.  When the exception is thrown, the
+Scheduler will move all triggers associated with the Job into the
+<a class="xref" href="Quartz.TriggerState.html#Quartz_TriggerState_Error">Error</a> state, which will require human
+intervention (e.g. an application restart after fixing whatever
+configuration problem led to the issue with instantiating the Job).
+</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.SchedulerException.html">SchedulerException</a></dt>
+    <dd><p>The job could not be instantiated, or a value in the merged job data map does not match a
+settable property of the job and <a class="xref" href="Quartz.Impl.PropertySettingJobFactory.html#Quartz_Impl_PropertySettingJobFactory_PropertyMismatchBehavior">PropertyMismatchBehavior</a> says to throw.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_Impl_PropertySettingJobFactory_CreateJobInstance_" data-uid="Quartz.Impl.PropertySettingJobFactory.CreateJobInstance*"></a>
+
+  <h3 id="Quartz_Impl_PropertySettingJobFactory_CreateJobInstance_Quartz_Extensibility_TriggerFiredBundle_Quartz_IScheduler_System_Threading_CancellationToken_" data-uid="Quartz.Impl.PropertySettingJobFactory.CreateJobInstance(Quartz.Extensibility.TriggerFiredBundle,Quartz.IScheduler,System.Threading.CancellationToken)">
+  CreateJobInstance(TriggerFiredBundle, IScheduler, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/PropertySettingJobFactory.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Produces the job instance, before any <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> properties are applied to it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual ValueTask&lt;JobScope&gt; CreateJobInstance(TriggerFiredBundle bundle, IScheduler scheduler, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bundle</code> <a class="xref" href="Quartz.Extensibility.TriggerFiredBundle.html">TriggerFiredBundle</a></dt>
+    <dd><p>The TriggerFiredBundle from which the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>
+and other info relating to the trigger firing can be obtained.</p>
+</dd>
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>a handle to the scheduler that is about to execute the job</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.Extensibility.JobScope.html">JobScope</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_PropertySettingJobFactory_CreateJobInstance_Quartz_Extensibility_TriggerFiredBundle_Quartz_IScheduler_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This is the extension point for derived factories that need to change how the job is built —
+resolving it from a container, for example — without overriding <a class="xref" href="Quartz.Impl.PropertySettingJobFactory.html#Quartz_Impl_PropertySettingJobFactory_CreateJob_Quartz_Extensibility_TriggerFiredBundle_Quartz_IScheduler_System_Threading_CancellationToken_">CreateJob(TriggerFiredBundle, IScheduler, CancellationToken)</a> and
+reimplementing the property setting this class exists to provide.</p>
+<p>
+It returns a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask&lt;TResult&gt;</a> so an override <i>can</i> await, but prefer to
+keep the synchronous path synchronous: an <code>async</code> override puts the work inside a state
+machine, which restores the caller's <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.executioncontext">ExecutionContext</a> when its
+synchronous part returns and so discards any <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.asynclocal-1">AsyncLocal&lt;T&gt;</a> the
+override set. Ambient context established here has to survive into <a class="xref" href="Quartz.IJob.html#Quartz_IJob_Execute_Quartz_IJobExecutionContext_System_Threading_CancellationToken_">Execute(IJobExecutionContext, CancellationToken)</a>
+(#1528). Return a completed <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask&lt;TResult&gt;</a> when nothing needs awaiting.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_PropertySettingJobFactory_SetObjectProperties_" data-uid="Quartz.Impl.PropertySettingJobFactory.SetObjectProperties*"></a>
+
+  <h3 id="Quartz_Impl_PropertySettingJobFactory_SetObjectProperties_System_Object_Quartz_JobDataMap_" data-uid="Quartz.Impl.PropertySettingJobFactory.SetObjectProperties(System.Object,Quartz.JobDataMap)">
+  SetObjectProperties(object, JobDataMap)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/PropertySettingJobFactory.cs/#L245"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the object properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void SetObjectProperties(object obj, JobDataMap data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The object to set properties to.</p>
+</dd>
+    <dt><code>data</code> <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a></dt>
+    <dd><p>The data to set.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_PropertySettingJobFactory_SetObjectProperty_" data-uid="Quartz.Impl.PropertySettingJobFactory.SetObjectProperty*"></a>
+
+  <h3 id="Quartz_Impl_PropertySettingJobFactory_SetObjectProperty_System_Object_System_String_System_Object_" data-uid="Quartz.Impl.PropertySettingJobFactory.SetObjectProperty(System.Object,System.String,System.Object)">
+  SetObjectProperty(object, string, object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/PropertySettingJobFactory.cs/#L268"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets specific property to object, handles conversion and error conditions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[UnconditionalSuppressMessage(&quot;Trimming&quot;, &quot;IL2075&quot;, Justification = &quot;The job instance is of the job detail&#39;s declared type or of a registered implementation of it, and both are annotated where they enter Quartz. See the remarks.&quot;)]
+protected virtual void SetObjectProperty(object job, string name, object? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>job</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Job instance to set property value to.</p>
+</dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Property name to set.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Value to set.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_PropertySettingJobFactory_SetObjectProperty_System_Object_System_String_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The property is found on the instance's own type rather than on the job detail's declared one,
+because a factory is allowed to hand back something else — <code>AddJobType&lt;TJob, TImpl&gt;</code>
+registers exactly that — and the data belongs to whatever was built. Both of those types are
+annotated where they enter Quartz, so their public properties survive trimming; the analyzer
+cannot see the link because the instance arrives here as an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>. A job factory
+written from scratch that returns a type nothing else references is the one case this does not
+cover, and such a factory has to root its own jobs.</p>
+</div>
+
+
+
+
+  <h2 id="seealso">See Also</h2>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.Extensibility.IJobFactory.html">IJobFactory</a></div>
+      <div><a class="xref" href="Quartz.Impl.SimpleJobFactory.html">SimpleJobFactory</a></div>
+      <div><a class="xref" href="Quartz.SchedulerContext.html">SchedulerContext</a></div>
+      <div><a class="xref" href="Quartz.IJobExecutionContext.html#Quartz_IJobExecutionContext_MergedJobDataMap">MergedJobDataMap</a></div>
+      <div><a class="xref" href="Quartz.Impl.PropertySettingJobFactory.html#Quartz_Impl_PropertySettingJobFactory_PropertyMismatchBehavior">PropertyMismatchBehavior</a></div>
+  </div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/PropertySettingJobFactory.cs/#L54" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

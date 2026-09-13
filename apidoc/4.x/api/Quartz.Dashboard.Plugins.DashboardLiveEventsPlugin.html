@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DashboardLiveEventsPlugin | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DashboardLiveEventsPlugin | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Pushes a scheduler&#39;s events straight into the dashboard&#39;s SignalR hub.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin.md&amp;value=---%0Auid%3A%20Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin">
+
+
+
+  <h1 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin" class="text-break">
+Class DashboardLiveEventsPlugin  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<a class="xref" href="Quartz.Dashboard.html">Dashboard</a>.<a class="xref" href="Quartz.Dashboard.Plugins.html">Plugins</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.Dashboard.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Pushes a scheduler's events straight into the dashboard's SignalR hub.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class DashboardLiveEventsPlugin : ISchedulerPlugin, IJobListener, ITriggerListener, ISchedulerListener</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">DashboardLiveEventsPlugin</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Quartz.Extensibility.ISchedulerPlugin.html">ISchedulerPlugin</a></div>
+      <div><a class="xref" href="Quartz.IJobListener.html">IJobListener</a></div>
+      <div><a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a></div>
+      <div><a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+<strong>Superseded, and no longer registered.</strong> The live events are Quartz's own from 4.1:
+<code>AddQuartzSchedulerEvents()</code> — which <code>AddQuartzDashboard()</code> calls — installs one publisher
+into every scheduler in the container, the dashboard's pages read that stream directly, and an
+internal forwarder feeds this hub from it for clients of an application's own. <strong>Do not register
+this plugin beside that</strong>: both would push, and every browser watching the hub would see each
+event twice.
+</p>
+<p>
+It stays public and it still works, for an application that named it in a
+<code>quartz.plugin.*.type</code> key or added it in code and wants exactly what it did in 4.0: the events
+of one scheduler, in this process, on this process's hub. It reaches no further than that, which is
+why it was superseded — a scheduler in another process has no hub here to push to, and a page that
+read this one had to connect back to its own public URL to do it.
+</p>
+<p>
+It is all three listener kinds at once because the live view draws all three: a job starting and
+finishing, a trigger firing and misfiring, and the scheduler's own lifecycle. It is told its own
+scheduler's name when it is initialized, which is the SignalR group it broadcasts to.
+</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin__ctor_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.#ctor*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin__ctor_System_IServiceProvider_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.#ctor(System.IServiceProvider)">
+  DashboardLiveEventsPlugin(IServiceProvider)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes the container the dashboard's SignalR hub is resolved from.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DashboardLiveEventsPlugin(IServiceProvider serviceProvider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>serviceProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin__ctor_System_IServiceProvider__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><remarks>
+A plugin is constructed by the container — this one is registered for every scheduler by
+<code>AddQuartzDashboard</code> — so it asks for what it needs the way any other component does. It used
+to read the container back out of <code>scheduler.Context["Quartz.ServiceProvider"]</code>, which put
+Quartz's plumbing into the application's own map, and left the scheduler-context endpoint of the
+HTTP API answering <code>500</code> for every scheduler a container had built.
+<p>
+The clock is this scheduler's: a named scheduler is built through a provider that resolves its own
+parts, so a scheduler given a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeprovider">TimeProvider</a> of its own stamps its misfires with it.
+An execution needs no clock — it carries the fire time the scheduler already recorded.
+</p>
+</remarks>
+</div>
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_Name_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.Name*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_Name" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.Name">
+  Name
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The name this listener is registered and removed under.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_Name_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Defaults to the implementing type's name, which is the right answer whenever a scheduler
+has at most one listener of a given type. Override it when several instances of one type
+are registered with the same scheduler, because the later registration would otherwise
+replace the earlier one.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_Initialize_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.Initialize*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_Initialize_System_String_Quartz_IScheduler_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.Initialize(System.String,Quartz.IScheduler,System.Threading.CancellationToken)">
+  Initialize(string, IScheduler, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called during creation of the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> in order to give
+the <a class="xref" href="Quartz.Extensibility.ISchedulerPlugin.html">ISchedulerPlugin</a> a chance to Initialize.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask Initialize(string pluginName, IScheduler scheduler, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pluginName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name by which the plugin is identified.</p>
+</dd>
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler to which the plugin is registered.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_Initialize_System_String_Quartz_IScheduler_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>At this point, the Scheduler's <a class="xref" href="Quartz.Extensibility.IJobStore.html">IJobStore</a> is not yet</p>
+<p>
+If you need direct access your plugin, you can have it explicitly put a
+reference to itself in the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>'s
+<a class="xref" href="Quartz.SchedulerContext.html">SchedulerContext</a> as part of its
+<a class="xref" href="Quartz.Extensibility.ISchedulerPlugin.html#Quartz_Extensibility_ISchedulerPlugin_Initialize_System_String_Quartz_IScheduler_System_Threading_CancellationToken_">Initialize(string, IScheduler, CancellationToken)</a> method.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobAdded_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.JobAdded*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobAdded_Quartz_IScheduler_Quartz_IJobDetail_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.JobAdded(Quartz.IScheduler,Quartz.IJobDetail,System.Threading.CancellationToken)">
+  JobAdded(IScheduler, IJobDetail, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> when a <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>
+has been added.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask JobAdded(IScheduler scheduler, IJobDetail jobDetail, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler raising the notification.</p>
+</dd>
+    <dt><code>jobDetail</code> <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></dt>
+    <dd><p>The job that was added.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobDeleted_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.JobDeleted*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobDeleted_Quartz_IScheduler_Quartz_JobKey_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.JobDeleted(Quartz.IScheduler,Quartz.JobKey,System.Threading.CancellationToken)">
+  JobDeleted(IScheduler, JobKey, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> when a <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>
+has been deleted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask JobDeleted(IScheduler scheduler, JobKey jobKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler raising the notification.</p>
+</dd>
+    <dt><code>jobKey</code> <a class="xref" href="Quartz.JobKey.html">JobKey</a></dt>
+    <dd><p>The job that was deleted.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobExecutionVetoed_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.JobExecutionVetoed*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobExecutionVetoed_Quartz_IJobExecutionContext_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.JobExecutionVetoed(Quartz.IJobExecutionContext,System.Threading.CancellationToken)">
+  JobExecutionVetoed(IJobExecutionContext, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> when a <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>
+was about to be executed (an associated <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+has occurred), but a <a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> vetoed it's
+execution.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask JobExecutionVetoed(IJobExecutionContext context, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobExecutionVetoed_Quartz_IJobExecutionContext_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The default implementation does nothing.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.IJobListener.html#Quartz_IJobListener_JobToBeExecuted_Quartz_IJobExecutionContext_System_Threading_CancellationToken_">JobToBeExecuted</a>(<a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>)</div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobInterrupted_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.JobInterrupted*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobInterrupted_Quartz_IScheduler_Quartz_JobKey_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.JobInterrupted(Quartz.IScheduler,Quartz.JobKey,System.Threading.CancellationToken)">
+  JobInterrupted(IScheduler, JobKey, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> when a <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>
+has been interrupted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask JobInterrupted(IScheduler scheduler, JobKey jobKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler raising the notification.</p>
+</dd>
+    <dt><code>jobKey</code> <a class="xref" href="Quartz.JobKey.html">JobKey</a></dt>
+    <dd><p>The job that was interrupted.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobInterrupted_Quartz_IScheduler_Quartz_JobKey_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The scheduler raises the <a class="xref" href="Quartz.ISchedulerListener.html#Quartz_ISchedulerListener_JobInterrupted_Quartz_IScheduler_Quartz_JobKey_System_String_System_Threading_CancellationToken_">JobInterrupted(IScheduler, JobKey, string, CancellationToken)</a>
+overload, which says <em>which</em> firing was interrupted; this one is what that overload's
+default body calls, so a listener written before the fire instance id existed keeps hearing about
+every interruption. Implement one or the other, not both.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobPaused_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.JobPaused*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobPaused_Quartz_IScheduler_Quartz_JobKey_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.JobPaused(Quartz.IScheduler,Quartz.JobKey,System.Threading.CancellationToken)">
+  JobPaused(IScheduler, JobKey, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> when a <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>
+has been  paused.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask JobPaused(IScheduler scheduler, JobKey jobKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler raising the notification.</p>
+</dd>
+    <dt><code>jobKey</code> <a class="xref" href="Quartz.JobKey.html">JobKey</a></dt>
+    <dd><p>The job that was paused.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobResumed_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.JobResumed*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobResumed_Quartz_IScheduler_Quartz_JobKey_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.JobResumed(Quartz.IScheduler,Quartz.JobKey,System.Threading.CancellationToken)">
+  JobResumed(IScheduler, JobKey, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> when a <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>
+has been  un-paused.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask JobResumed(IScheduler scheduler, JobKey jobKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler raising the notification.</p>
+</dd>
+    <dt><code>jobKey</code> <a class="xref" href="Quartz.JobKey.html">JobKey</a></dt>
+    <dd><p>The job that was resumed.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobScheduled_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.JobScheduled*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobScheduled_Quartz_IScheduler_Quartz_ITrigger_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.JobScheduled(Quartz.IScheduler,Quartz.ITrigger,System.Threading.CancellationToken)">
+  JobScheduled(IScheduler, ITrigger, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> when a <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>
+is scheduled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask JobScheduled(IScheduler scheduler, ITrigger trigger, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler raising the notification.</p>
+</dd>
+    <dt><code>trigger</code> <a class="xref" href="Quartz.ITrigger.html">ITrigger</a></dt>
+    <dd><p>The trigger the job was scheduled with.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobToBeExecuted_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.JobToBeExecuted*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobToBeExecuted_Quartz_IJobExecutionContext_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.JobToBeExecuted(Quartz.IJobExecutionContext,System.Threading.CancellationToken)">
+  JobToBeExecuted(IJobExecutionContext, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> when a <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>
+is about to be executed (an associated <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+has occurred).</p>
+<p>
+This method will not be invoked if the execution of the Job was vetoed
+by a <a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a>.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask JobToBeExecuted(IJobExecutionContext context, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobToBeExecuted_Quartz_IJobExecutionContext_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The default implementation does nothing.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.IJobListener.html#Quartz_IJobListener_JobExecutionVetoed_Quartz_IJobExecutionContext_System_Threading_CancellationToken_">JobExecutionVetoed</a>(<a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>)</div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobUnscheduled_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.JobUnscheduled*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobUnscheduled_Quartz_IScheduler_Quartz_TriggerKey_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.JobUnscheduled(Quartz.IScheduler,Quartz.TriggerKey,System.Threading.CancellationToken)">
+  JobUnscheduled(IScheduler, TriggerKey, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L184"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> when a <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>
+is unscheduled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask JobUnscheduled(IScheduler scheduler, TriggerKey triggerKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler raising the notification.</p>
+</dd>
+    <dt><code>triggerKey</code> <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></dt>
+    <dd><p>The trigger that was removed.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.ISchedulerListener.html#Quartz_ISchedulerListener_SchedulingDataCleared_Quartz_IScheduler_System_Threading_CancellationToken_">SchedulingDataCleared</a>(<a class="xref" href="Quartz.IScheduler.html">IScheduler</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>)</div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobWasExecuted_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.JobWasExecuted*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobWasExecuted_Quartz_IJobExecutionContext_Quartz_JobExecutionException_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.JobWasExecuted(Quartz.IJobExecutionContext,Quartz.JobExecutionException,System.Threading.CancellationToken)">
+  JobWasExecuted(IJobExecutionContext, JobExecutionException?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> after a <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>
+has been executed, and be for the associated <a class="xref" href="Quartz.Extensibility.IOperableTrigger.html">IOperableTrigger</a>'s
+<a class="xref" href="Quartz.Extensibility.IOperableTrigger.html#Quartz_Extensibility_IOperableTrigger_Triggered_Quartz_ICalendar_">Triggered(ICalendar?)</a> method has been called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask JobWasExecuted(IJobExecutionContext context, JobExecutionException? jobException, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></dt>
+    <dd></dd>
+    <dt><code>jobException</code> <a class="xref" href="Quartz.JobExecutionException.html">JobExecutionException</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobWasExecuted_Quartz_IJobExecutionContext_Quartz_JobExecutionException_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The default implementation does nothing.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobsPaused_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.JobsPaused*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobsPaused_Quartz_IScheduler_System_String_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.JobsPaused(Quartz.IScheduler,System.String,System.Threading.CancellationToken)">
+  JobsPaused(IScheduler, string?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L226"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> when a
+group of <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>s has been  paused.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask JobsPaused(IScheduler scheduler, string? jobGroup, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler raising the notification.</p>
+</dd>
+    <dt><code>jobGroup</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The job group, or null for all groups.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobsPaused_Quartz_IScheduler_System_String_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A null <code class="paramref">jobGroup</code> means every group, matching
+<a class="xref" href="Quartz.ISchedulerListener.html#Quartz_ISchedulerListener_TriggersPaused_Quartz_IScheduler_System_String_System_Threading_CancellationToken_">TriggersPaused(IScheduler, string?, CancellationToken)</a>. The scheduler's own pause-all path raises this once per
+group rather than once with no group, but a job store or a caller raising the event itself
+may report all groups that way.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobsResumed_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.JobsResumed*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobsResumed_Quartz_IScheduler_System_String_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.JobsResumed(Quartz.IScheduler,System.String,System.Threading.CancellationToken)">
+  JobsResumed(IScheduler, string?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L236"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> when a group of <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>s has
+been un-paused.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask JobsResumed(IScheduler scheduler, string? jobGroup, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler raising the notification.</p>
+</dd>
+    <dt><code>jobGroup</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The job group, or null for all groups.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_JobsResumed_Quartz_IScheduler_System_String_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A null <code class="paramref">jobGroup</code> means every group, matching
+<a class="xref" href="Quartz.ISchedulerListener.html#Quartz_ISchedulerListener_TriggersResumed_Quartz_IScheduler_System_String_System_Threading_CancellationToken_">TriggersResumed(IScheduler, string?, CancellationToken)</a>.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_SchedulerError_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.SchedulerError*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_SchedulerError_Quartz_IScheduler_Quartz_SchedulerErrorContext_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.SchedulerError(Quartz.IScheduler,Quartz.SchedulerErrorContext,System.Threading.CancellationToken)">
+  SchedulerError(IScheduler, SchedulerErrorContext, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> when a serious error has
+occurred within the scheduler - such as repeated failures in the <a class="xref" href="Quartz.Extensibility.IJobStore.html">IJobStore</a>,
+or the inability to instantiate a <a class="xref" href="Quartz.IJob.html">IJob</a> instance when its
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a> has fired.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask SchedulerError(IScheduler scheduler, SchedulerErrorContext errorContext, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler raising the notification.</p>
+</dd>
+    <dt><code>errorContext</code> <a class="xref" href="Quartz.SchedulerErrorContext.html">SchedulerErrorContext</a></dt>
+    <dd><p>What went wrong, and what it went wrong for.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_SchedulerError_Quartz_IScheduler_Quartz_SchedulerErrorContext_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a class="xref" href="Quartz.SchedulerErrorContext.html">SchedulerErrorContext</a> carries the trigger, job and firing the error was raised
+for wherever the scheduler knew them, so a listener can pause the offending trigger rather than
+read the keys out of the message text.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_SchedulerInStandbyMode_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.SchedulerInStandbyMode*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_SchedulerInStandbyMode_Quartz_IScheduler_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.SchedulerInStandbyMode(Quartz.IScheduler,System.Threading.CancellationToken)">
+  SchedulerInStandbyMode(IScheduler, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L253"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> to inform the listener
+that it has move to standby mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask SchedulerInStandbyMode(IScheduler scheduler, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler raising the notification.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_SchedulerShutdown_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.SchedulerShutdown*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_SchedulerShutdown_Quartz_IScheduler_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.SchedulerShutdown(Quartz.IScheduler,System.Threading.CancellationToken)">
+  SchedulerShutdown(IScheduler, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L275"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> to inform the listener
+that it has Shutdown.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask SchedulerShutdown(IScheduler scheduler, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler raising the notification.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_SchedulerShuttingDown_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.SchedulerShuttingDown*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_SchedulerShuttingDown_Quartz_IScheduler_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.SchedulerShuttingDown(Quartz.IScheduler,System.Threading.CancellationToken)">
+  SchedulerShuttingDown(IScheduler, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L281"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> to inform the listener
+that it has begun the shutdown sequence.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask SchedulerShuttingDown(IScheduler scheduler, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler raising the notification.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_SchedulerStarted_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.SchedulerStarted*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_SchedulerStarted_Quartz_IScheduler_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.SchedulerStarted(Quartz.IScheduler,System.Threading.CancellationToken)">
+  SchedulerStarted(IScheduler, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L259"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> to inform the listener
+that it has started.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask SchedulerStarted(IScheduler scheduler, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler raising the notification.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_SchedulerStarting_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.SchedulerStarting*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_SchedulerStarting_Quartz_IScheduler_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.SchedulerStarting(Quartz.IScheduler,System.Threading.CancellationToken)">
+  SchedulerStarting(IScheduler, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L272"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Nothing is pushed: a scheduler that is starting is an event, not a state it is in.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask SchedulerStarting(IScheduler scheduler, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_SchedulerStarting_Quartz_IScheduler_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The state it will be in arrives a moment later as <a class="xref" href="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.html#Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_SchedulerStarted_Quartz_IScheduler_System_Threading_CancellationToken_">SchedulerStarted(IScheduler, CancellationToken)</a>, and pushing
+&quot;starting&quot; first only gave a browser a value that is not a <a class="xref" href="Quartz.SchedulerStatus.html">SchedulerStatus</a> to
+render in the meantime.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_SchedulingDataCleared_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.SchedulingDataCleared*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_SchedulingDataCleared_Quartz_IScheduler_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.SchedulingDataCleared(Quartz.IScheduler,System.Threading.CancellationToken)">
+  SchedulingDataCleared(IScheduler, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L296"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> to inform the listener
+that all jobs, triggers and calendars were deleted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask SchedulingDataCleared(IScheduler scheduler, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler raising the notification.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_Shutdown_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.Shutdown*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_Shutdown_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.Shutdown(System.Threading.CancellationToken)">
+  Shutdown(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called in order to inform the <a class="xref" href="Quartz.Extensibility.ISchedulerPlugin.html">ISchedulerPlugin</a> that it
+should free up all of it's resources because the scheduler is shutting
+down.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask Shutdown(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_Shutdown_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Does nothing unless the plugin says otherwise. Most plugins do all their work in
+<a class="xref" href="Quartz.Extensibility.ISchedulerPlugin.html#Quartz_Extensibility_ISchedulerPlugin_Initialize_System_String_Quartz_IScheduler_System_Threading_CancellationToken_">Initialize(string, IScheduler, CancellationToken)</a> — attaching a listener, registering a resolver — and have nothing to say
+at the two lifecycle moments; implement this only when there is something that cannot happen until
+the scheduler is running.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_Start_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.Start*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_Start_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.Start(System.Threading.CancellationToken)">
+  Start(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the associated <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> is started, in order
+to let the plug-in know it can now make calls into the scheduler if it
+needs to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask Start(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_Start_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Does nothing unless the plugin says otherwise. Most plugins do all their work in
+<a class="xref" href="Quartz.Extensibility.ISchedulerPlugin.html#Quartz_Extensibility_ISchedulerPlugin_Initialize_System_String_Quartz_IScheduler_System_Threading_CancellationToken_">Initialize(string, IScheduler, CancellationToken)</a> — attaching a listener, registering a resolver — and have nothing to say
+at the two lifecycle moments; implement this only when there is something that cannot happen until
+the scheduler is running.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_TriggerComplete_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.TriggerComplete*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_TriggerComplete_Quartz_ITrigger_Quartz_IJobExecutionContext_Quartz_SchedulerInstruction_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.TriggerComplete(Quartz.ITrigger,Quartz.IJobExecutionContext,Quartz.SchedulerInstruction,System.Threading.CancellationToken)">
+  TriggerComplete(ITrigger, IJobExecutionContext, SchedulerInstruction, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> when a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+has fired, it's associated <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>
+has been executed, and it's <a class="xref" href="Quartz.Extensibility.IOperableTrigger.html#Quartz_Extensibility_IOperableTrigger_Triggered_Quartz_ICalendar_">Triggered(ICalendar?)</a> method has been
+called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask TriggerComplete(ITrigger trigger, IJobExecutionContext context, SchedulerInstruction triggerInstructionCode, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>trigger</code> <a class="xref" href="Quartz.ITrigger.html">ITrigger</a></dt>
+    <dd><p>The <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> that was fired.</p>
+</dd>
+    <dt><code>context</code> <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></dt>
+    <dd><p>The <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a> that was passed to the
+<a class="xref" href="Quartz.IJob.html">IJob</a>'s<a class="xref" href="Quartz.IJob.html#Quartz_IJob_Execute_Quartz_IJobExecutionContext_System_Threading_CancellationToken_">Execute(IJobExecutionContext, CancellationToken)</a> method.</p>
+</dd>
+    <dt><code>triggerInstructionCode</code> <a class="xref" href="Quartz.SchedulerInstruction.html">SchedulerInstruction</a></dt>
+    <dd><p>The result of the call on the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>'s<a class="xref" href="Quartz.Extensibility.IOperableTrigger.html#Quartz_Extensibility_IOperableTrigger_Triggered_Quartz_ICalendar_">Triggered(ICalendar?)</a>  method.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_TriggerComplete_Quartz_ITrigger_Quartz_IJobExecutionContext_Quartz_SchedulerInstruction_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The default implementation does nothing.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_TriggerFinalized_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.TriggerFinalized*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_TriggerFinalized_Quartz_IScheduler_Quartz_ITrigger_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.TriggerFinalized(Quartz.IScheduler,Quartz.ITrigger,System.Threading.CancellationToken)">
+  TriggerFinalized(IScheduler, ITrigger, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L187"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> when a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+has reached the condition in which it will never fire again.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask TriggerFinalized(IScheduler scheduler, ITrigger trigger, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler raising the notification.</p>
+</dd>
+    <dt><code>trigger</code> <a class="xref" href="Quartz.ITrigger.html">ITrigger</a></dt>
+    <dd><p>The trigger that will never fire again.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_TriggerFired_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.TriggerFired*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_TriggerFired_Quartz_ITrigger_Quartz_IJobExecutionContext_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.TriggerFired(Quartz.ITrigger,Quartz.IJobExecutionContext,System.Threading.CancellationToken)">
+  TriggerFired(ITrigger, IJobExecutionContext, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> when a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+has fired, and it's associated <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>
+is about to be executed.</p>
+<p>
+It is called before the <a class="xref" href="Quartz.ITriggerListener.html#Quartz_ITriggerListener_VetoJobExecution_Quartz_ITrigger_Quartz_IJobExecutionContext_System_Threading_CancellationToken_">VetoJobExecution(ITrigger, IJobExecutionContext, CancellationToken)</a> method of this
+interface.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask TriggerFired(ITrigger trigger, IJobExecutionContext context, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>trigger</code> <a class="xref" href="Quartz.ITrigger.html">ITrigger</a></dt>
+    <dd><p>The <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> that has fired.</p>
+</dd>
+    <dt><code>context</code> <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></dt>
+    <dd><p>The <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a> that will be passed to the <a class="xref" href="Quartz.IJob.html">IJob</a>'s<a class="xref" href="Quartz.IJob.html#Quartz_IJob_Execute_Quartz_IJobExecutionContext_System_Threading_CancellationToken_">Execute(IJobExecutionContext, CancellationToken)</a> method.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_TriggerFired_Quartz_ITrigger_Quartz_IJobExecutionContext_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The default implementation does nothing.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_TriggerMisfired_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.TriggerMisfired*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_TriggerMisfired_Quartz_ITrigger_Quartz_IScheduler_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.TriggerMisfired(Quartz.ITrigger,Quartz.IScheduler,System.Threading.CancellationToken)">
+  TriggerMisfired(ITrigger, IScheduler, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> when a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+has misfired.</p>
+<p>
+Consideration should be given to how much time is spent in this method,
+as it will affect all triggers that are misfiring.  If you have lots
+of triggers misfiring at once, it could be an issue it this method
+does a lot.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask TriggerMisfired(ITrigger trigger, IScheduler scheduler, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>trigger</code> <a class="xref" href="Quartz.ITrigger.html">ITrigger</a></dt>
+    <dd><p>The <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> that has misfired.</p>
+</dd>
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler raising the notification.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_TriggerMisfired_Quartz_ITrigger_Quartz_IScheduler_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The scheduler is passed because a misfire is noticed outside any execution, so there is no
+<a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a> here to reach it through. It comes after the trigger, as
+the context does on every other notification in this interface.</p>
+<p>
+The default implementation does nothing.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_TriggerPaused_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.TriggerPaused*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_TriggerPaused_Quartz_IScheduler_Quartz_TriggerKey_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.TriggerPaused(Quartz.IScheduler,Quartz.TriggerKey,System.Threading.CancellationToken)">
+  TriggerPaused(IScheduler, TriggerKey, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L190"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s has been paused.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask TriggerPaused(IScheduler scheduler, TriggerKey triggerKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler raising the notification.</p>
+</dd>
+    <dt><code>triggerKey</code> <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></dt>
+    <dd><p>The trigger that was paused.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_TriggerResumed_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.TriggerResumed*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_TriggerResumed_Quartz_IScheduler_Quartz_TriggerKey_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.TriggerResumed(Quartz.IScheduler,Quartz.TriggerKey,System.Threading.CancellationToken)">
+  TriggerResumed(IScheduler, TriggerKey, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L200"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> when a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+has been un-paused.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask TriggerResumed(IScheduler scheduler, TriggerKey triggerKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler raising the notification.</p>
+</dd>
+    <dt><code>triggerKey</code> <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></dt>
+    <dd><p>The trigger that was resumed.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_TriggersPaused_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.TriggersPaused*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_TriggersPaused_Quartz_IScheduler_System_String_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.TriggersPaused(Quartz.IScheduler,System.String,System.Threading.CancellationToken)">
+  TriggersPaused(IScheduler, string?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> a group of
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s has been paused.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask TriggersPaused(IScheduler scheduler, string? triggerGroup, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler raising the notification.</p>
+</dd>
+    <dt><code>triggerGroup</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The trigger group, or null for all groups.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_TriggersPaused_Quartz_IScheduler_System_String_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A null <code class="paramref">triggerGroup</code> means every group.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_TriggersResumed_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.TriggersResumed*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_TriggersResumed_Quartz_IScheduler_System_String_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.TriggersResumed(Quartz.IScheduler,System.String,System.Threading.CancellationToken)">
+  TriggersResumed(IScheduler, string?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> when a
+group of <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s has been un-paused.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask TriggersResumed(IScheduler scheduler, string? triggerGroup, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler raising the notification.</p>
+</dd>
+    <dt><code>triggerGroup</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The trigger group, or null for all groups.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_TriggersResumed_Quartz_IScheduler_System_String_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A null <code class="paramref">triggerGroup</code> means every group.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_VetoJobExecution_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.VetoJobExecution*"></a>
+
+  <h3 id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_VetoJobExecution_Quartz_ITrigger_Quartz_IJobExecutionContext_System_Threading_CancellationToken_" data-uid="Quartz.Dashboard.Plugins.DashboardLiveEventsPlugin.VetoJobExecution(Quartz.ITrigger,Quartz.IJobExecutionContext,System.Threading.CancellationToken)">
+  VetoJobExecution(ITrigger, IJobExecutionContext, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> when a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+has fired, and it's associated <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>
+is about to be executed.</p>
+<p>
+It is called after the <a class="xref" href="Quartz.ITriggerListener.html#Quartz_ITriggerListener_TriggerFired_Quartz_ITrigger_Quartz_IJobExecutionContext_System_Threading_CancellationToken_">TriggerFired(ITrigger, IJobExecutionContext, CancellationToken)</a> method of this
+interface.  If the implementation vetoes the execution (via
+returning <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>), the job's execute method will not be called.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask&lt;bool&gt; VetoJobExecution(ITrigger trigger, IJobExecutionContext context, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>trigger</code> <a class="xref" href="Quartz.ITrigger.html">ITrigger</a></dt>
+    <dd><p>The <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> that has fired.</p>
+</dd>
+    <dt><code>context</code> <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></dt>
+    <dd><p>The <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a> that will be passed to
+the <a class="xref" href="Quartz.IJob.html">IJob</a>'s<a class="xref" href="Quartz.IJob.html#Quartz_IJob_Execute_Quartz_IJobExecutionContext_System_Threading_CancellationToken_">Execute(IJobExecutionContext, CancellationToken)</a> method.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>Returns true if job execution should be vetoed, false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Dashboard_Plugins_DashboardLiveEventsPlugin_VetoJobExecution_Quartz_ITrigger_Quartz_IJobExecutionContext_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The default implementation vetoes nothing.</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Plugins/DashboardLiveEventsPlugin.cs/#L54" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

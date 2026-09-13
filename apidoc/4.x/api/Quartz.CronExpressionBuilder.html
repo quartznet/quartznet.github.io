@@ -1,0 +1,1999 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CronExpressionBuilder | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CronExpressionBuilder | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="CronExpressionBuilder provides a fluent API for composing cron expression strings programmatically, one field at a time - useful when a schedule is assembled from user input (e.g. a scheduling UI) rather than hand-written.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_CronExpressionBuilder.md&amp;value=---%0Auid%3A%20Quartz.CronExpressionBuilder%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.CronExpressionBuilder">
+
+
+
+  <h1 id="Quartz_CronExpressionBuilder" data-uid="Quartz.CronExpressionBuilder" class="text-break">
+Class CronExpressionBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>CronExpressionBuilder provides a fluent API for composing cron expression
+strings programmatically, one field at a time - useful when a schedule is
+assembled from user input (e.g. a scheduling UI) rather than hand-written.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class CronExpressionBuilder</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">CronExpressionBuilder</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_CronExpressionBuilder_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Unconfigured fields default to every value ('*'). One expression carries one
+day field here: configuring day-of-month and day-of-week both is refused, and
+the unused one renders as '?'. That is this builder's constraint rather than
+cron's — an expression naming both days fires on the union of the two, which
+<a class="xref" href="Quartz.CronExpression.html#Quartz_CronExpression_Parse_System_String_">Parse(string)</a> accepts and reads that way.
+Each field can be configured only once. Day-of-week values
+are emitted using their textual names (SUN-SAT) so that the produced
+expressions stay unambiguous across cron dialects that use different
+day-of-week numbering.
+</p>
+<p>
+Client code can use the builder to write code such as this:
+</p>
+<pre><code class="lang-csharp">ITrigger trigger = TriggerBuilder.Create()
+    .WithIdentity("myTrigger")
+    .WithCronSchedule(CronExpressionBuilder.Create()
+        .WithSecond(0)
+        .WithMinuteIncrements(0, 15)
+        .WithHourRange(8, 17)
+        .OnWeekdays()) // "0 0/15 8-17 ? * MON-FRI"
+    .Build();</code></pre>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_CronExpressionBuilder_AtTime_" data-uid="Quartz.CronExpressionBuilder.AtTime*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_AtTime_System_TimeOnly_" data-uid="Quartz.CronExpressionBuilder.AtTime(System.TimeOnly)">
+  AtTime(TimeOnly)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L273"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the second, minute and hour fields to one time of day, so the expression fires once a day
+— or once on each day the day-of-week or day-of-month field selects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder AtTime(TimeOnly time)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>time</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeonly">TimeOnly</a></dt>
+    <dd><p>the time of day to fire at.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_CronExpressionBuilder_AtTime_System_TimeOnly__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This is the whole of a "daily at 09:30" schedule: <code>AtTime(new TimeOnly(9, 30))</code> is
+"0 30 9 ? * *". Add <a class="xref" href="Quartz.CronExpressionBuilder.html#Quartz_CronExpressionBuilder_WithDaysOfWeek_System_ReadOnlySpan_System_DayOfWeek__">WithDaysOfWeek(params ReadOnlySpan&lt;DayOfWeek&gt;)</a>,
+<a class="xref" href="Quartz.CronExpressionBuilder.html#Quartz_CronExpressionBuilder_OnWeekdays">OnWeekdays()</a> or a day-of-month method for the days it applies to.
+</p>
+<p>
+Cron resolves to a whole second, so any sub-second part of
+<code class="paramref">time</code> is ignored.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_Build_" data-uid="Quartz.CronExpressionBuilder.Build*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_Build" data-uid="Quartz.CronExpressionBuilder.Build">
+  Build()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L608"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Build a validated <a class="xref" href="Quartz.CronExpression.html">CronExpression</a> from the configured fields.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpression Build()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpression.html">CronExpression</a></dt>
+    <dd><p>the new CronExpression</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
+    <dd><p>if the composed expression fails final validation</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_CronExpressionBuilder_Create_" data-uid="Quartz.CronExpressionBuilder.Create*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_Create" data-uid="Quartz.CronExpressionBuilder.Create">
+  Create()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a new CronExpressionBuilder with all fields unconfigured (&quot;* * * ? * *&quot;).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CronExpressionBuilder Create()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the new CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_OnLastDayOfMonth_" data-uid="Quartz.CronExpressionBuilder.OnLastDayOfMonth*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_OnLastDayOfMonth" data-uid="Quartz.CronExpressionBuilder.OnLastDayOfMonth">
+  OnLastDayOfMonth()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L349"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the day-of-month field to the last day of the month (&quot;L&quot;). Cannot be
+combined with configuring the day-of-week field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder OnLastDayOfMonth()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_OnLastDayOfWeek_" data-uid="Quartz.CronExpressionBuilder.OnLastDayOfWeek*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_OnLastDayOfWeek" data-uid="Quartz.CronExpressionBuilder.OnLastDayOfWeek">
+  OnLastDayOfWeek()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L524"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the day-of-week field to the last day of the cron week (&quot;L&quot;), which
+is Saturday. Cannot be combined with configuring the day-of-month field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder OnLastDayOfWeek()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_OnLastDayOfWeekOfMonth_" data-uid="Quartz.CronExpressionBuilder.OnLastDayOfWeekOfMonth*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_OnLastDayOfWeekOfMonth_System_DayOfWeek_" data-uid="Quartz.CronExpressionBuilder.OnLastDayOfWeekOfMonth(System.DayOfWeek)">
+  OnLastDayOfWeekOfMonth(DayOfWeek)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L514"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the day-of-week field to the last occurrence of the given day in the
+month, e.g. &quot;FRIL&quot; for the last Friday. Cannot be combined with
+configuring the day-of-month field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder OnLastDayOfWeekOfMonth(DayOfWeek dayOfWeek)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dayOfWeek</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dayofweek">DayOfWeek</a></dt>
+    <dd><p>the day of the week</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_OnNearestWeekdayOfMonth_" data-uid="Quartz.CronExpressionBuilder.OnNearestWeekdayOfMonth*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_OnNearestWeekdayOfMonth_System_Int32_" data-uid="Quartz.CronExpressionBuilder.OnNearestWeekdayOfMonth(System.Int32)">
+  OnNearestWeekdayOfMonth(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L361"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the day-of-month field to the weekday (Monday-Friday) nearest to the
+given day, e.g. &quot;15W&quot;. Cannot be combined with configuring the
+day-of-week field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder OnNearestWeekdayOfMonth(int day)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>day</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the day of month to fire nearest to (1-31)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_OnNthDayOfWeekOfMonth_" data-uid="Quartz.CronExpressionBuilder.OnNthDayOfWeekOfMonth*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_OnNthDayOfWeekOfMonth_System_DayOfWeek_System_Int32_" data-uid="Quartz.CronExpressionBuilder.OnNthDayOfWeekOfMonth(System.DayOfWeek,System.Int32)">
+  OnNthDayOfWeekOfMonth(DayOfWeek, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L501"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the day-of-week field to the nth occurrence of the given day in the
+month, e.g. &quot;FRI#3&quot; for the third Friday. Cannot be combined with
+configuring the day-of-month field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder OnNthDayOfWeekOfMonth(DayOfWeek dayOfWeek, int nth)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dayOfWeek</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dayofweek">DayOfWeek</a></dt>
+    <dd><p>the day of the week</p>
+</dd>
+    <dt><code>nth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the occurrence of the day within the month (1-5)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_OnWeekdays_" data-uid="Quartz.CronExpressionBuilder.OnWeekdays*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_OnWeekdays" data-uid="Quartz.CronExpressionBuilder.OnWeekdays">
+  OnWeekdays()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L534"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the day-of-week field to weekdays (&quot;MON-FRI&quot;). Cannot be combined
+with configuring the day-of-month field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder OnWeekdays()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_ToString_" data-uid="Quartz.CronExpressionBuilder.ToString*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_ToString" data-uid="Quartz.CronExpressionBuilder.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L616"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the cron expression string composed from the configured fields.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithDayOfMonth_" data-uid="Quartz.CronExpressionBuilder.WithDayOfMonth*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithDayOfMonth_System_Int32_" data-uid="Quartz.CronExpressionBuilder.WithDayOfMonth(System.Int32)">
+  WithDayOfMonth(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L290"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the day-of-month field to a single value. Cannot be combined with
+configuring the day-of-week field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithDayOfMonth(int day)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>day</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the day of month to fire on (1-31)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithDayOfMonthIncrements_" data-uid="Quartz.CronExpressionBuilder.WithDayOfMonthIncrements*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithDayOfMonthIncrements_System_Int32_System_Int32_" data-uid="Quartz.CronExpressionBuilder.WithDayOfMonthIncrements(System.Int32,System.Int32)">
+  WithDayOfMonthIncrements(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L337"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the day-of-month field to an incremental list of values, e.g. &quot;1/5&quot;
+(every 5 days starting on the 1st). Cannot be combined with configuring
+the day-of-week field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithDayOfMonthIncrements(int start, int increment)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>start</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the day of month to start at (1-31)</p>
+</dd>
+    <dt><code>increment</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the number of days between values (1-31)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithDayOfMonthRange_" data-uid="Quartz.CronExpressionBuilder.WithDayOfMonthRange*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithDayOfMonthRange_System_Int32_System_Int32_" data-uid="Quartz.CronExpressionBuilder.WithDayOfMonthRange(System.Int32,System.Int32)">
+  WithDayOfMonthRange(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L322"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the day-of-month field to a range of values, e.g. &quot;20-25&quot;. The range
+may wrap around, e.g. &quot;28-3&quot;. Cannot be combined with configuring the
+day-of-week field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithDayOfMonthRange(int start, int end)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>start</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the first day of the range (1-31)</p>
+</dd>
+    <dt><code>end</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the last day of the range (1-31)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithDayOfWeekIncrements_" data-uid="Quartz.CronExpressionBuilder.WithDayOfWeekIncrements*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithDayOfWeekIncrements_System_DayOfWeek_System_Int32_" data-uid="Quartz.CronExpressionBuilder.WithDayOfWeekIncrements(System.DayOfWeek,System.Int32)">
+  WithDayOfWeekIncrements(DayOfWeek, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L478"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the day-of-week field to every <code class="paramref">increment</code>th day
+starting from the given day, emitted as an explicit list of day names,
+e.g. Monday with increment 2 produces &quot;MON,WED,FRI&quot;. Cannot be combined
+with configuring the day-of-month field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithDayOfWeekIncrements(DayOfWeek start, int increment)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>start</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dayofweek">DayOfWeek</a></dt>
+    <dd><p>the day of the week to start at</p>
+</dd>
+    <dt><code>increment</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the number of days between values (1-7)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_CronExpressionBuilder_WithDayOfWeekIncrements_System_DayOfWeek_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The list stops at Saturday and does not wrap around, matching the
+semantics of a numeric cron day-of-week increment.</p>
+</div>
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithDayOfWeekRange_" data-uid="Quartz.CronExpressionBuilder.WithDayOfWeekRange*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithDayOfWeekRange_System_DayOfWeek_System_DayOfWeek_" data-uid="Quartz.CronExpressionBuilder.WithDayOfWeekRange(System.DayOfWeek,System.DayOfWeek)">
+  WithDayOfWeekRange(DayOfWeek, DayOfWeek)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L460"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the day-of-week field to a range of days, e.g. &quot;MON-FRI&quot;. The range
+may wrap around, e.g. &quot;FRI-MON&quot;. Cannot be combined with configuring the
+day-of-month field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithDayOfWeekRange(DayOfWeek start, DayOfWeek end)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>start</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dayofweek">DayOfWeek</a></dt>
+    <dd><p>the first day of the range</p>
+</dd>
+    <dt><code>end</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dayofweek">DayOfWeek</a></dt>
+    <dd><p>the last day of the range</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithDaysOfMonth_" data-uid="Quartz.CronExpressionBuilder.WithDaysOfMonth*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithDaysOfMonth_System_Int32___" data-uid="Quartz.CronExpressionBuilder.WithDaysOfMonth(System.Int32[])">
+  WithDaysOfMonth(params int[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L309"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the day-of-month field to a list of values, e.g. &quot;1,15&quot;. The values
+are emitted in the given order. Cannot be combined with configuring the
+day-of-week field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithDaysOfMonth(params int[] days)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>days</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>[]</dt>
+    <dd><p>the days of month to fire on (each 1-31)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithDaysOfMonth_" data-uid="Quartz.CronExpressionBuilder.WithDaysOfMonth*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithDaysOfMonth_System_ReadOnlySpan_System_Int32__" data-uid="Quartz.CronExpressionBuilder.WithDaysOfMonth(System.ReadOnlySpan{System.Int32})">
+  WithDaysOfMonth(params ReadOnlySpan&lt;int&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L303"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the day-of-month field to a list of values, e.g. &quot;1,15&quot;. The values
+are emitted in the given order. Cannot be combined with configuring the
+day-of-week field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithDaysOfMonth(params ReadOnlySpan&lt;int&gt; days)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>days</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd><p>the days of month to fire on (each 1-31)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithDaysOfWeek_" data-uid="Quartz.CronExpressionBuilder.WithDaysOfWeek*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithDaysOfWeek_System_DayOfWeek___" data-uid="Quartz.CronExpressionBuilder.WithDaysOfWeek(System.DayOfWeek[])">
+  WithDaysOfWeek(params DayOfWeek[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L447"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the day-of-week field to the given days, e.g. &quot;MON,THU,FRI&quot;. The
+values are emitted in the given order. Cannot be combined with
+configuring the day-of-month field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithDaysOfWeek(params DayOfWeek[] daysOfWeek)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>daysOfWeek</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dayofweek">DayOfWeek</a>[]</dt>
+    <dd><p>the days of the week to fire on</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithDaysOfWeek_" data-uid="Quartz.CronExpressionBuilder.WithDaysOfWeek*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithDaysOfWeek_System_ReadOnlySpan_System_DayOfWeek__" data-uid="Quartz.CronExpressionBuilder.WithDaysOfWeek(System.ReadOnlySpan{System.DayOfWeek})">
+  WithDaysOfWeek(params ReadOnlySpan&lt;DayOfWeek&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L430"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the day-of-week field to the given days, e.g. &quot;MON,THU,FRI&quot;. The
+values are emitted in the given order. Cannot be combined with
+configuring the day-of-month field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithDaysOfWeek(params ReadOnlySpan&lt;DayOfWeek&gt; daysOfWeek)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>daysOfWeek</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dayofweek">DayOfWeek</a>&gt;</dt>
+    <dd><p>the days of the week to fire on</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithHour_" data-uid="Quartz.CronExpressionBuilder.WithHour*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithHour_System_Int32_" data-uid="Quartz.CronExpressionBuilder.WithHour(System.Int32)">
+  WithHour(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the hour field to a single value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithHour(int hour)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hour</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the hour to fire on (0-23)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithHourIncrements_" data-uid="Quartz.CronExpressionBuilder.WithHourIncrements*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithHourIncrements_System_Int32_System_Int32_" data-uid="Quartz.CronExpressionBuilder.WithHourIncrements(System.Int32,System.Int32)">
+  WithHourIncrements(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L249"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the hour field to an incremental list of values, e.g. &quot;0/6&quot;
+(every 6 hours starting at hour 0).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithHourIncrements(int start, int increment)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>start</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the hour to start at (0-23)</p>
+</dd>
+    <dt><code>increment</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the number of hours between values (1-23)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithHourRange_" data-uid="Quartz.CronExpressionBuilder.WithHourRange*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithHourRange_System_Int32_System_Int32_" data-uid="Quartz.CronExpressionBuilder.WithHourRange(System.Int32,System.Int32)">
+  WithHourRange(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the hour field to a range of values, e.g. &quot;8-17&quot;. The range may
+wrap around, e.g. &quot;22-2&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithHourRange(int start, int end)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>start</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the first hour of the range (0-23)</p>
+</dd>
+    <dt><code>end</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the last hour of the range (0-23)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithHours_" data-uid="Quartz.CronExpressionBuilder.WithHours*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithHours_System_Int32___" data-uid="Quartz.CronExpressionBuilder.WithHours(System.Int32[])">
+  WithHours(params int[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the hour field to a list of values, e.g. &quot;8,12,16&quot;. The values are
+emitted in the given order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithHours(params int[] hours)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hours</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>[]</dt>
+    <dd><p>the hours to fire on (each 0-23)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithHours_" data-uid="Quartz.CronExpressionBuilder.WithHours*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithHours_System_ReadOnlySpan_System_Int32__" data-uid="Quartz.CronExpressionBuilder.WithHours(System.ReadOnlySpan{System.Int32})">
+  WithHours(params ReadOnlySpan&lt;int&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L217"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the hour field to a list of values, e.g. &quot;8,12,16&quot;. The values are
+emitted in the given order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithHours(params ReadOnlySpan&lt;int&gt; hours)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hours</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd><p>the hours to fire on (each 0-23)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithMinute_" data-uid="Quartz.CronExpressionBuilder.WithMinute*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithMinute_System_Int32_" data-uid="Quartz.CronExpressionBuilder.WithMinute(System.Int32)">
+  WithMinute(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the minute field to a single value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithMinute(int minute)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>minute</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the minute to fire on (0-59)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithMinuteIncrements_" data-uid="Quartz.CronExpressionBuilder.WithMinuteIncrements*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithMinuteIncrements_System_Int32_System_Int32_" data-uid="Quartz.CronExpressionBuilder.WithMinuteIncrements(System.Int32,System.Int32)">
+  WithMinuteIncrements(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L193"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the minute field to an incremental list of values, e.g. &quot;0/15&quot;
+(every 15 minutes starting at minute 0).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithMinuteIncrements(int start, int increment)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>start</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the minute to start at (0-59)</p>
+</dd>
+    <dt><code>increment</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the number of minutes between values (1-59)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithMinuteRange_" data-uid="Quartz.CronExpressionBuilder.WithMinuteRange*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithMinuteRange_System_Int32_System_Int32_" data-uid="Quartz.CronExpressionBuilder.WithMinuteRange(System.Int32,System.Int32)">
+  WithMinuteRange(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the minute field to a range of values, e.g. &quot;20-30&quot;. The range may
+wrap around, e.g. &quot;55-5&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithMinuteRange(int start, int end)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>start</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the first minute of the range (0-59)</p>
+</dd>
+    <dt><code>end</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the last minute of the range (0-59)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithMinutes_" data-uid="Quartz.CronExpressionBuilder.WithMinutes*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithMinutes_System_Int32___" data-uid="Quartz.CronExpressionBuilder.WithMinutes(System.Int32[])">
+  WithMinutes(params int[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the minute field to a list of values, e.g. &quot;0,30&quot;. The values are
+emitted in the given order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithMinutes(params int[] minutes)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>minutes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>[]</dt>
+    <dd><p>the minutes to fire on (each 0-59)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithMinutes_" data-uid="Quartz.CronExpressionBuilder.WithMinutes*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithMinutes_System_ReadOnlySpan_System_Int32__" data-uid="Quartz.CronExpressionBuilder.WithMinutes(System.ReadOnlySpan{System.Int32})">
+  WithMinutes(params ReadOnlySpan&lt;int&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the minute field to a list of values, e.g. &quot;0,30&quot;. The values are
+emitted in the given order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithMinutes(params ReadOnlySpan&lt;int&gt; minutes)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>minutes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd><p>the minutes to fire on (each 0-59)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithMonth_" data-uid="Quartz.CronExpressionBuilder.WithMonth*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithMonth_System_Int32_" data-uid="Quartz.CronExpressionBuilder.WithMonth(System.Int32)">
+  WithMonth(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L372"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the month field to a single value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithMonth(int month)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>month</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the month to fire on (1-12)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithMonthIncrements_" data-uid="Quartz.CronExpressionBuilder.WithMonthIncrements*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithMonthIncrements_System_Int32_System_Int32_" data-uid="Quartz.CronExpressionBuilder.WithMonthIncrements(System.Int32,System.Int32)">
+  WithMonthIncrements(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L416"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the month field to an incremental list of values, e.g. &quot;3/4&quot;
+(every 4 months starting in March).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithMonthIncrements(int start, int increment)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>start</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the month to start at (1-12)</p>
+</dd>
+    <dt><code>increment</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the number of months between values (1-12)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithMonthRange_" data-uid="Quartz.CronExpressionBuilder.WithMonthRange*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithMonthRange_System_Int32_System_Int32_" data-uid="Quartz.CronExpressionBuilder.WithMonthRange(System.Int32,System.Int32)">
+  WithMonthRange(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L402"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the month field to a range of values, e.g. &quot;2-8&quot;. The range may wrap
+around, e.g. &quot;11-2&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithMonthRange(int start, int end)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>start</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the first month of the range (1-12)</p>
+</dd>
+    <dt><code>end</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the last month of the range (1-12)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithMonths_" data-uid="Quartz.CronExpressionBuilder.WithMonths*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithMonths_System_Int32___" data-uid="Quartz.CronExpressionBuilder.WithMonths(System.Int32[])">
+  WithMonths(params int[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L390"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the month field to a list of values, e.g. &quot;3,6,9,12&quot;. The values are
+emitted in the given order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithMonths(params int[] months)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>months</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>[]</dt>
+    <dd><p>the months to fire on (each 1-12)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithMonths_" data-uid="Quartz.CronExpressionBuilder.WithMonths*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithMonths_System_ReadOnlySpan_System_Int32__" data-uid="Quartz.CronExpressionBuilder.WithMonths(System.ReadOnlySpan{System.Int32})">
+  WithMonths(params ReadOnlySpan&lt;int&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L384"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the month field to a list of values, e.g. &quot;3,6,9,12&quot;. The values are
+emitted in the given order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithMonths(params ReadOnlySpan&lt;int&gt; months)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>months</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd><p>the months to fire on (each 1-12)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithSecond_" data-uid="Quartz.CronExpressionBuilder.WithSecond*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithSecond_System_Int32_" data-uid="Quartz.CronExpressionBuilder.WithSecond(System.Int32)">
+  WithSecond(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the second field to a single value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithSecond(int second)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>second</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the second to fire on (0-59)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithSecondIncrements_" data-uid="Quartz.CronExpressionBuilder.WithSecondIncrements*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithSecondIncrements_System_Int32_System_Int32_" data-uid="Quartz.CronExpressionBuilder.WithSecondIncrements(System.Int32,System.Int32)">
+  WithSecondIncrements(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the second field to an incremental list of values, e.g. &quot;0/15&quot;
+(every 15 seconds starting at second 0).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithSecondIncrements(int start, int increment)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>start</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the second to start at (0-59)</p>
+</dd>
+    <dt><code>increment</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the number of seconds between values (1-59)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithSecondRange_" data-uid="Quartz.CronExpressionBuilder.WithSecondRange*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithSecondRange_System_Int32_System_Int32_" data-uid="Quartz.CronExpressionBuilder.WithSecondRange(System.Int32,System.Int32)">
+  WithSecondRange(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the second field to a range of values, e.g. &quot;20-30&quot;. The range may
+wrap around, e.g. &quot;55-5&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithSecondRange(int start, int end)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>start</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the first second of the range (0-59)</p>
+</dd>
+    <dt><code>end</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the last second of the range (0-59)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithSeconds_" data-uid="Quartz.CronExpressionBuilder.WithSeconds*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithSeconds_System_Int32___" data-uid="Quartz.CronExpressionBuilder.WithSeconds(System.Int32[])">
+  WithSeconds(params int[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the second field to a list of values, e.g. &quot;0,30&quot;. The values are
+emitted in the given order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithSeconds(params int[] seconds)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>seconds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>[]</dt>
+    <dd><p>the seconds to fire on (each 0-59)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithSeconds_" data-uid="Quartz.CronExpressionBuilder.WithSeconds*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithSeconds_System_ReadOnlySpan_System_Int32__" data-uid="Quartz.CronExpressionBuilder.WithSeconds(System.ReadOnlySpan{System.Int32})">
+  WithSeconds(params ReadOnlySpan&lt;int&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the second field to a list of values, e.g. &quot;0,30&quot;. The values are
+emitted in the given order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithSeconds(params ReadOnlySpan&lt;int&gt; seconds)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>seconds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd><p>the seconds to fire on (each 0-59)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithYear_" data-uid="Quartz.CronExpressionBuilder.WithYear*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithYear_System_Int32_" data-uid="Quartz.CronExpressionBuilder.WithYear(System.Int32)">
+  WithYear(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L544"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the year field to a single value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithYear(int year)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>year</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the year to fire on (1970 to circa 100 years from now)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithYearIncrements_" data-uid="Quartz.CronExpressionBuilder.WithYearIncrements*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithYearIncrements_System_Int32_System_Int32_" data-uid="Quartz.CronExpressionBuilder.WithYearIncrements(System.Int32,System.Int32)">
+  WithYearIncrements(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L593"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the year field to an incremental list of values, e.g. &quot;2030/2&quot;
+(every second year starting in 2030).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithYearIncrements(int start, int increment)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>start</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the year to start at</p>
+</dd>
+    <dt><code>increment</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the number of years between values (&gt;= 1)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithYearRange_" data-uid="Quartz.CronExpressionBuilder.WithYearRange*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithYearRange_System_Int32_System_Int32_" data-uid="Quartz.CronExpressionBuilder.WithYearRange(System.Int32,System.Int32)">
+  WithYearRange(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L574"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the year field to a range of values, e.g. &quot;2030-2035&quot;. Unlike the
+other fields, the year range cannot wrap around.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithYearRange(int start, int end)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>start</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the first year of the range</p>
+</dd>
+    <dt><code>end</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the last year of the range</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithYears_" data-uid="Quartz.CronExpressionBuilder.WithYears*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithYears_System_Int32___" data-uid="Quartz.CronExpressionBuilder.WithYears(System.Int32[])">
+  WithYears(params int[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L562"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the year field to a list of values, e.g. &quot;2030,2032&quot;. The values are
+emitted in the given order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithYears(params int[] years)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>years</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>[]</dt>
+    <dd><p>the years to fire on (each 1970 to circa 100 years from now)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_CronExpressionBuilder_WithYears_" data-uid="Quartz.CronExpressionBuilder.WithYears*"></a>
+
+  <h3 id="Quartz_CronExpressionBuilder_WithYears_System_ReadOnlySpan_System_Int32__" data-uid="Quartz.CronExpressionBuilder.WithYears(System.ReadOnlySpan{System.Int32})">
+  WithYears(params ReadOnlySpan&lt;int&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L556"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the year field to a list of values, e.g. &quot;2030,2032&quot;. The values are
+emitted in the given order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpressionBuilder WithYears(params ReadOnlySpan&lt;int&gt; years)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>years</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd><p>the years to fire on (each 1970 to circa 100 years from now)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.CronExpressionBuilder.html">CronExpressionBuilder</a></dt>
+    <dd><p>the updated CronExpressionBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 id="seealso">See Also</h2>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.CronExpression.html">CronExpression</a></div>
+      <div><a class="xref" href="Quartz.CronScheduleBuilder.html">CronScheduleBuilder</a></div>
+  </div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/CronExpressionBuilder.cs/#L59" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

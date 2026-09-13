@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class AdoJobStoreOptions | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class AdoJobStoreOptions | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Strongly typed configuration for the ADO.NET (persistent) job store.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_AdoJobStoreOptions.md&amp;value=---%0Auid%3A%20Quartz.AdoJobStoreOptions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.AdoJobStoreOptions">
+
+
+
+  <h1 id="Quartz_AdoJobStoreOptions" data-uid="Quartz.AdoJobStoreOptions" class="text-break">
+Class AdoJobStoreOptions  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/AdoJobStoreOptions.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Strongly typed configuration for the ADO.NET (persistent) job store.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class AdoJobStoreOptions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">AdoJobStoreOptions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_AdoJobStoreOptions_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Binds from the <code>JobStore</code> section of the Quartz configuration, and is the typed
+replacement for the <code>quartz.jobStore.*</code> property keys. Scheduler identity is not repeated
+here — components that need it inject <a class="xref" href="Quartz.QuartzSchedulerOptions.html">QuartzSchedulerOptions</a> as well, and neither
+are the clustering settings, which live once on <a class="xref" href="Quartz.ClusteringOptions.html">ClusteringOptions</a>.</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_AdoJobStoreOptions_AcceptEnlistedTransactions_" data-uid="Quartz.AdoJobStoreOptions.AcceptEnlistedTransactions*"></a>
+
+  <h3 id="Quartz_AdoJobStoreOptions_AcceptEnlistedTransactions" data-uid="Quartz.AdoJobStoreOptions.AcceptEnlistedTransactions">
+  AcceptEnlistedTransactions
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/AdoJobStoreOptions.cs/#L228"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the job store may take part in a transaction the application owns, rather than
+always managing an ADO.NET transaction of its own.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AcceptEnlistedTransactions { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_AdoJobStoreOptions_AcceptEnlistedTransactions_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+When enabled, the job store uses the connection the application enlisted with
+<a class="xref" href="Quartz.SchedulerEnlistmentExtensions.html#Quartz_SchedulerEnlistmentExtensions_EnlistTransaction_Quartz_IScheduler_System_Data_Common_DbTransaction_">EnlistTransaction(IScheduler, DbTransaction)</a> or
+<a class="xref" href="Quartz.SchedulerEnlistmentExtensions.html#Quartz_SchedulerEnlistmentExtensions_EnlistConnection_Quartz_IScheduler_System_Data_Common_DbConnection_System_Data_Common_DbTransaction_">EnlistConnection(IScheduler, DbConnection, DbTransaction?)</a> for operations on that
+asynchronous flow, so scheduling either commits with the rest of the application's work or
+not at all.
+</p>
+<p>
+Taking part always means handing over a connection. Operations with nothing enlisted keep
+using a connection of the job store's own, and on the default store —
+<a class="xref" href="Quartz.IQuartzBuilder.html#Quartz_IQuartzBuilder_UsePersistentStore_System_Action_Quartz_IPersistentStoreBuilder__">UsePersistentStore(Action&lt;IPersistentStoreBuilder&gt;)</a> without
+more — that connection is deliberately kept out of any ambient
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.transactions.transaction">Transaction</a>. The store
+<a class="xref" href="Quartz.IPersistentStoreBuilder.html#Quartz_IPersistentStoreBuilder_UseAmbientTransactions">UseAmbientTransactions()</a> selects is the exception, since
+running inside a container-managed transaction is that store's contract.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_AdoJobStoreOptions_AcquireTriggersWithinLock_" data-uid="Quartz.AdoJobStoreOptions.AcquireTriggersWithinLock*"></a>
+
+  <h3 id="Quartz_AdoJobStoreOptions_AcquireTriggersWithinLock" data-uid="Quartz.AdoJobStoreOptions.AcquireTriggersWithinLock">
+  AcquireTriggersWithinLock
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/AdoJobStoreOptions.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether trigger acquisition happens inside the database lock.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AcquireTriggersWithinLock { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_AdoJobStoreOptions_CommandTimeout_" data-uid="Quartz.AdoJobStoreOptions.CommandTimeout*"></a>
+
+  <h3 id="Quartz_AdoJobStoreOptions_CommandTimeout" data-uid="Quartz.AdoJobStoreOptions.CommandTimeout">
+  CommandTimeout
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/AdoJobStoreOptions.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How long a statement the job store issues may run before the provider cancels it. Left unset,
+each statement keeps whatever default the ADO.NET provider gives a new command — 30 seconds for
+most of them.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan? CommandTimeout { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_AdoJobStoreOptions_CommandTimeout_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This covers every statement the store issues, including the ones the lock handler takes its row
+lock with, which is where a timeout matters most: a node blocked on <code>QRTZ_LOCKS</code> behind a
+peer that has stopped without releasing it waits for the provider's default before it can fail
+and retry, and the scheduling loop is stalled for all of it.
+</p>
+<p>
+There is deliberately no per-statement override. A timeout that varies by statement is a way of
+saying some of the store's work is more expendable than the rest, and none of it is: every
+statement runs inside a lock the rest of the cluster is waiting on.
+</p>
+<p>
+ADO.NET's <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbcommand.commandtimeout">CommandTimeout</a> counts whole seconds, so a
+value is rounded <em>up</em> to the next second — a configured 1500ms is applied as 2 seconds.
+Rounding up rather than down keeps a sub-second value from becoming zero, which every provider
+reads as "wait forever".
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_AdoJobStoreOptions_DataSource_" data-uid="Quartz.AdoJobStoreOptions.DataSource*"></a>
+
+  <h3 id="Quartz_AdoJobStoreOptions_DataSource" data-uid="Quartz.AdoJobStoreOptions.DataSource">
+  DataSource
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/AdoJobStoreOptions.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The name of the data source this job store reads and writes through.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DataSource { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_AdoJobStoreOptions_DataSource_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Resolves the matching named <a class="xref" href="Quartz.DataSourceOptions.html">DataSourceOptions</a>.</p>
+</div>
+
+
+
+
+  <a id="Quartz_AdoJobStoreOptions_DbRetryInterval_" data-uid="Quartz.AdoJobStoreOptions.DbRetryInterval*"></a>
+
+  <h3 id="Quartz_AdoJobStoreOptions_DbRetryInterval" data-uid="Quartz.AdoJobStoreOptions.DbRetryInterval">
+  DbRetryInterval
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/AdoJobStoreOptions.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How long to wait before retrying after a database failure.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan DbRetryInterval { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_AdoJobStoreOptions_DbRetryInterval_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The back-off after a failure that was not transient — a database that is down rather than busy.
+The misfire handler sleeps for it between failing passes. The cluster check-in loop does so only
+once a failed check-in has spent the window its peers give it
+(<a class="xref" href="Quartz.ClusteringOptions.html#Quartz_ClusteringOptions_CheckinInterval">CheckinInterval</a> plus
+<a class="xref" href="Quartz.ClusteringOptions.html#Quartz_ClusteringOptions_CheckinMisfireThreshold">CheckinMisfireThreshold</a>); inside that window it retries sooner,
+and this value caps how long it may wait between those retries.</p>
+</div>
+
+
+
+
+  <a id="Quartz_AdoJobStoreOptions_DoubleCheckLockMisfireHandler_" data-uid="Quartz.AdoJobStoreOptions.DoubleCheckLockMisfireHandler*"></a>
+
+  <h3 id="Quartz_AdoJobStoreOptions_DoubleCheckLockMisfireHandler" data-uid="Quartz.AdoJobStoreOptions.DoubleCheckLockMisfireHandler">
+  DoubleCheckLockMisfireHandler
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/AdoJobStoreOptions.cs/#L233"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the misfire handler double-checks the lock before doing work.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DoubleCheckLockMisfireHandler { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_AdoJobStoreOptions_IsTransient_" data-uid="Quartz.AdoJobStoreOptions.IsTransient*"></a>
+
+  <h3 id="Quartz_AdoJobStoreOptions_IsTransient" data-uid="Quartz.AdoJobStoreOptions.IsTransient">
+  IsTransient
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/AdoJobStoreOptions.cs/#L164"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An extra answer to &quot;is this failure worth retrying&quot;, for a driver that reports a retryable
+condition Quartz does not recognise.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;Exception, bool&gt;? IsTransient { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_AdoJobStoreOptions_IsTransient_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Consulted first, and only additive: returning <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> — which is also what
+leaving this unset means — falls through to the built-in classification, so a predicate cannot
+make Quartz stop retrying something it already retries. That is deliberate. The built-in list is
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbexception.istransient">IsTransient</a>, a SQLSTATE in class <code>40</code>, SQL Server's transient
+error numbers, SQLite's busy and locked codes and <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeoutexception">TimeoutException</a>, over the whole
+chain of inner exceptions; a driver that misreports one of those is a bug to fix in
+<code>TransientErrorDetector</code> rather than to work around here.
+</p>
+<p>
+The exception handed over is the store's own, so the driver's exception is usually its
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.innerexception">InnerException</a> — <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.getbaseexception">GetBaseException()</a> is the short
+way to the one your driver threw.
+</p>
+<p>
+It is called on the failure path of a store operation, while a lock may be held, so it must be
+quick and must not throw: a predicate that throws would replace the database failure the store
+was about to report with one from the classification of it.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_AdoJobStoreOptions_LockOnInsert_" data-uid="Quartz.AdoJobStoreOptions.LockOnInsert*"></a>
+
+  <h3 id="Quartz_AdoJobStoreOptions_LockOnInsert" data-uid="Quartz.AdoJobStoreOptions.LockOnInsert">
+  LockOnInsert
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/AdoJobStoreOptions.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether a lock is taken when inserting new job or trigger rows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool LockOnInsert { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_AdoJobStoreOptions_LockWaitWarningThreshold_" data-uid="Quartz.AdoJobStoreOptions.LockWaitWarningThreshold*"></a>
+
+  <h3 id="Quartz_AdoJobStoreOptions_LockWaitWarningThreshold" data-uid="Quartz.AdoJobStoreOptions.LockWaitWarningThreshold">
+  LockWaitWarningThreshold
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/AdoJobStoreOptions.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How long one attempt to take a job store lock may go on before it is reported as slow, or
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to report nothing however long a lock takes. Defaults to 30 seconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan? LockWaitWarningThreshold { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_AdoJobStoreOptions_LockWaitWarningThreshold_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+A lock statement that is blocked throws nothing and returns nothing, so a node waiting behind a
+peer that stopped without releasing <code>QRTZ_LOCKS</code> — or behind a database session whose client
+is gone and which the server has not yet cleaned up — stops scheduling in complete silence: no
+retry runs, no failure is counted, and no listener is told. This is what breaks the silence. One
+warning is logged per acquisition, under event id 3716, and it names the lock, how long the wait
+has lasted and which requestor is waiting.
+</p>
+<p>
+It reports and nothing more: the wait is still the database's to end, and
+<a class="xref" href="Quartz.AdoJobStoreOptions.html#Quartz_AdoJobStoreOptions_CommandTimeout">CommandTimeout</a> — or a wait timeout written into the lock statement itself, through
+<a class="xref" href="Quartz.AdoJobStoreOptions.html#Quartz_AdoJobStoreOptions_SelectWithLockSql">SelectWithLockSql</a> — is what bounds it. Both are worth setting; this one only makes
+sure the operator finds out.
+</p>
+<p>
+Zero is refused rather than read as "warn immediately". Every acquisition takes some time, so a
+zero threshold is a warning per lock taken, which is the same as no signal at all; "report
+nothing" is spelled <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_AdoJobStoreOptions_MaxMisfiresToHandleAtATime_" data-uid="Quartz.AdoJobStoreOptions.MaxMisfiresToHandleAtATime*"></a>
+
+  <h3 id="Quartz_AdoJobStoreOptions_MaxMisfiresToHandleAtATime" data-uid="Quartz.AdoJobStoreOptions.MaxMisfiresToHandleAtATime">
+  MaxMisfiresToHandleAtATime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/AdoJobStoreOptions.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The maximum number of misfired triggers handled in a single pass.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxMisfiresToHandleAtATime { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_AdoJobStoreOptions_MaxTransientRetries_" data-uid="Quartz.AdoJobStoreOptions.MaxTransientRetries*"></a>
+
+  <h3 id="Quartz_AdoJobStoreOptions_MaxTransientRetries" data-uid="Quartz.AdoJobStoreOptions.MaxTransientRetries">
+  MaxTransientRetries
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/AdoJobStoreOptions.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The number of times a transient database failure is retried.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxTransientRetries { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_AdoJobStoreOptions_MisfireHandlerFrequency_" data-uid="Quartz.AdoJobStoreOptions.MisfireHandlerFrequency*"></a>
+
+  <h3 id="Quartz_AdoJobStoreOptions_MisfireHandlerFrequency" data-uid="Quartz.AdoJobStoreOptions.MisfireHandlerFrequency">
+  MisfireHandlerFrequency
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/AdoJobStoreOptions.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How often the misfire handler runs. Defaults to <a class="xref" href="Quartz.AdoJobStoreOptions.html#Quartz_AdoJobStoreOptions_MisfireThreshold">MisfireThreshold</a> when unset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan? MisfireHandlerFrequency { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_AdoJobStoreOptions_MisfireThreshold_" data-uid="Quartz.AdoJobStoreOptions.MisfireThreshold*"></a>
+
+  <h3 id="Quartz_AdoJobStoreOptions_MisfireThreshold" data-uid="Quartz.AdoJobStoreOptions.MisfireThreshold">
+  MisfireThreshold
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/AdoJobStoreOptions.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How far past its scheduled fire time a trigger may be before it is considered misfired.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan MisfireThreshold { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_AdoJobStoreOptions_OpenConnection_" data-uid="Quartz.AdoJobStoreOptions.OpenConnection*"></a>
+
+  <h3 id="Quartz_AdoJobStoreOptions_OpenConnection" data-uid="Quartz.AdoJobStoreOptions.OpenConnection">
+  OpenConnection
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/AdoJobStoreOptions.cs/#L290"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the ambient-transaction store opens the connections it creates before handing them to
+an operation. Defaults to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>, leaving the opening to the externally
+managed transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OpenConnection { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_AdoJobStoreOptions_OpenConnection_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Read only by that store, which is the one
+<a class="xref" href="Quartz.IPersistentStoreBuilder.html#Quartz_IPersistentStoreBuilder_UseAmbientTransactions">UseAmbientTransactions()</a> selects — or
+<code>quartz.jobStore.type = Quartz.Impl.AdoJobStore.ExternalTransactionJobStore, Quartz</code>. It
+says nothing on the default local-transaction store.</p>
+</div>
+
+
+
+
+  <a id="Quartz_AdoJobStoreOptions_RetryableActionErrorLogThreshold_" data-uid="Quartz.AdoJobStoreOptions.RetryableActionErrorLogThreshold*"></a>
+
+  <h3 id="Quartz_AdoJobStoreOptions_RetryableActionErrorLogThreshold" data-uid="Quartz.AdoJobStoreOptions.RetryableActionErrorLogThreshold">
+  RetryableActionErrorLogThreshold
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/AdoJobStoreOptions.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How many consecutive failures of a retryable action occur before they are logged as errors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RetryableActionErrorLogThreshold { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_AdoJobStoreOptions_SchemaProvisioning_" data-uid="Quartz.AdoJobStoreOptions.SchemaProvisioning*"></a>
+
+  <h3 id="Quartz_AdoJobStoreOptions_SchemaProvisioning" data-uid="Quartz.AdoJobStoreOptions.SchemaProvisioning">
+  SchemaProvisioning
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/AdoJobStoreOptions.cs/#L257"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>What the store does about its schema at startup: nothing, verify it, or create what is
+missing and then verify it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SchemaProvisioning SchemaProvisioning { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.SchemaProvisioning.html">SchemaProvisioning</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_AdoJobStoreOptions_SchemaProvisioning_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Defaults to <a class="xref" href="Quartz.SchemaProvisioning.html#Quartz_SchemaProvisioning_Validate">Validate</a>, which is what
+<code>PerformSchemaValidation = true</code> meant. <a class="xref" href="Quartz.SchemaProvisioning.html#Quartz_SchemaProvisioning_None">None</a> is
+the old <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</div>
+
+
+
+
+  <a id="Quartz_AdoJobStoreOptions_SelectWithLockSql_" data-uid="Quartz.AdoJobStoreOptions.SelectWithLockSql*"></a>
+
+  <h3 id="Quartz_AdoJobStoreOptions_SelectWithLockSql" data-uid="Quartz.AdoJobStoreOptions.SelectWithLockSql">
+  SelectWithLockSql
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/AdoJobStoreOptions.cs/#L277"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Overrides the SQL statement used to acquire the row lock. Defaulted for SQL Server to its
+<code>WITH (UPDLOCK,ROWLOCK)</code> form.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? SelectWithLockSql { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_AdoJobStoreOptions_SelectWithLockSql_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Read only when the job store builds a database-locking handler for itself, which is what it does
+when <a class="xref" href="Quartz.AdoJobStoreOptions.html#Quartz_AdoJobStoreOptions_UseDbLocks">UseDbLocks</a> is on — through clustering, enlisted transactions, or the setting
+itself — and no lock handler was supplied. A handler chosen with <code>UseLockHandler</code> takes its
+statement through its own constructor, and the store logs a warning at startup if this is set as
+well, since the value would silently do nothing.
+</p>
+<p>
+The statement must select the row in <code>{0}LOCKS</code> matching the <code>@schedulerName</code> and
+<code>@lockName</code> parameters, taking whatever lock the database needs to serialize the callers;
+<code>{0}</code> is the table prefix.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_AdoJobStoreOptions_StoreJobDataAsStrings_" data-uid="Quartz.AdoJobStoreOptions.StoreJobDataAsStrings*"></a>
+
+  <h3 id="Quartz_AdoJobStoreOptions_StoreJobDataAsStrings" data-uid="Quartz.AdoJobStoreOptions.StoreJobDataAsStrings">
+  StoreJobDataAsStrings
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/AdoJobStoreOptions.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, job data maps are persisted as name/value string pairs rather than
+serialized objects, which keeps stored data readable and version tolerant.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool StoreJobDataAsStrings { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_AdoJobStoreOptions_StoreJobDataAsStrings_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This was <code>UseProperties</code>, which read as a verb and collided with
+<code>QuartzSchedulerBuilder.UseProperties</code> and <code>AddQuartz(properties)</code> — an unrelated thing
+about flat <code>quartz.*</code> configuration keys. The flat key that sets it is still
+<code>quartz.jobStore.useProperties</code>.</p>
+</div>
+
+
+
+
+  <a id="Quartz_AdoJobStoreOptions_TablePrefix_" data-uid="Quartz.AdoJobStoreOptions.TablePrefix*"></a>
+
+  <h3 id="Quartz_AdoJobStoreOptions_TablePrefix" data-uid="Quartz.AdoJobStoreOptions.TablePrefix">
+  TablePrefix
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/AdoJobStoreOptions.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The prefix applied to every Quartz table name. Defaults to
+<a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_DefaultTablePrefix">DefaultTablePrefix</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TablePrefix { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_AdoJobStoreOptions_TransactionIsolationLevel_" data-uid="Quartz.AdoJobStoreOptions.TransactionIsolationLevel*"></a>
+
+  <h3 id="Quartz_AdoJobStoreOptions_TransactionIsolationLevel" data-uid="Quartz.AdoJobStoreOptions.TransactionIsolationLevel">
+  TransactionIsolationLevel
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/AdoJobStoreOptions.cs/#L204"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The isolation level the job store begins its own transactions at. Left unset, they are
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.isolationlevel#system-data-isolationlevel-readcommitted">ReadCommitted</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IsolationLevel? TransactionIsolationLevel { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.isolationlevel">IsolationLevel</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_AdoJobStoreOptions_TransactionIsolationLevel_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This replaced a <code>TxIsolationLevelSerializable</code> flag, which could say only "serializable" or
+"the default" and so could not express <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.isolationlevel#system-data-isolationlevel-snapshot">Snapshot</a>,
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.isolationlevel#system-data-isolationlevel-repeatableread">RepeatableRead</a> or a deliberate
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.isolationlevel#system-data-isolationlevel-readuncommitted">ReadUncommitted</a>. <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> means Quartz's default rather
+than the provider's, because those differ — MySQL's is repeatable read — and inheriting the
+provider's would silently change how the store behaves depending on which database it is talking
+to.
+</p>
+<p>
+SQLite is the exception: the store forces serializable there whatever this says, because
+concurrent SQLite transactions at a lower level fail with "database is locked".
+</p>
+<p>
+This applies only to connections the job store opens itself. An operation running on a connection
+the application enlisted uses whatever isolation level that transaction was begun at.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_AdoJobStoreOptions_TransientRetryInterval_" data-uid="Quartz.AdoJobStoreOptions.TransientRetryInterval*"></a>
+
+  <h3 id="Quartz_AdoJobStoreOptions_TransientRetryInterval" data-uid="Quartz.AdoJobStoreOptions.TransientRetryInterval">
+  TransientRetryInterval
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/AdoJobStoreOptions.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How long to wait between transient database failure retries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan TransientRetryInterval { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_AdoJobStoreOptions_UseBackgroundThreads_" data-uid="Quartz.AdoJobStoreOptions.UseBackgroundThreads*"></a>
+
+  <h3 id="Quartz_AdoJobStoreOptions_UseBackgroundThreads" data-uid="Quartz.AdoJobStoreOptions.UseBackgroundThreads">
+  UseBackgroundThreads
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/AdoJobStoreOptions.cs/#L246"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the misfire handler and cluster manager run on background threads, which do not keep
+the process alive on their own.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseBackgroundThreads { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_AdoJobStoreOptions_UseBackgroundThreads_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>These two are the only real threads Quartz creates — the scheduling loop is a
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> — so this is the whole of the &quot;do Quartz's threads
+hold my console application open&quot; question. <code>UseBackgroundThreads</code> rather than
+<code>MakeThreadsDaemons</code>: &quot;daemon&quot; is the Java word for what .NET calls
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.thread.isbackground">IsBackground</a>.</p>
+</div>
+
+
+
+
+  <a id="Quartz_AdoJobStoreOptions_UseDbLocks_" data-uid="Quartz.AdoJobStoreOptions.UseDbLocks*"></a>
+
+  <h3 id="Quartz_AdoJobStoreOptions_UseDbLocks" data-uid="Quartz.AdoJobStoreOptions.UseDbLocks">
+  UseDbLocks
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/AdoJobStoreOptions.cs/#L169"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether database row locks are used for synchronization. Required for clustering.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseDbLocks { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/AdoJobStoreOptions.cs/#L17" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
