@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class QuartzHttpClientServiceCollectionExtensions | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class QuartzHttpClientServiceCollectionExtensions | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Registers schedulers that live in another process and are driven over Quartz&#39;s HTTP API.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_QuartzHttpClientServiceCollectionExtensions.md&amp;value=---%0Auid%3A%20Quartz.QuartzHttpClientServiceCollectionExtensions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.QuartzHttpClientServiceCollectionExtensions">
+
+
+
+  <h1 id="Quartz_QuartzHttpClientServiceCollectionExtensions" data-uid="Quartz.QuartzHttpClientServiceCollectionExtensions" class="text-break">
+Class QuartzHttpClientServiceCollectionExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.HttpClient/QuartzHttpClientServiceCollectionExtensions.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.HttpClient.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Registers schedulers that live in another process and are driven over Quartz's HTTP API.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class QuartzHttpClientServiceCollectionExtensions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">QuartzHttpClientServiceCollectionExtensions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_QuartzHttpClientServiceCollectionExtensions_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+A remote scheduler is registered the same way a local one is: keyed by its name, so
+<code>GetRequiredKeyedService&lt;IScheduler&gt;("reporting")</code> and
+<code>[FromKeyedServices("reporting")] IScheduler</code> reach it, and unkeyed as well while it is the only
+scheduler in the container. Before 4.0 a second remote scheduler needed a marker interface of its own,
+implemented by a type emitted at runtime; the service key says the same thing without the reflection.
+</p>
+<p>
+That unkeyed registration is a <code>TryAdd</code>, so in a container that also holds a local scheduler the
+local one owns <code>GetRequiredService&lt;IScheduler&gt;()</code> and the remote one is reached by name. To
+get that, call <code>AddQuartz()</code> <em>before</em> this — the other order is refused rather than left
+to be discovered, since a container in which "the scheduler" turned out to be somebody else's process
+is not something anything downstream can notice.
+</p>
+<p>
+One registration is one target. A second call naming a scheduler name already registered is refused:
+the keyed registration is appended, so it would have replaced the first target without saying so, and
+two processes fronted under one name is a fleet — the model
+<a href="https://github.com/quartznet/quartznet/issues/3387">https://github.com/quartznet/quartznet/issues/3387</a> is for.
+</p>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_QuartzHttpClientServiceCollectionExtensions_AddQuartzHttpClient_" data-uid="Quartz.QuartzHttpClientServiceCollectionExtensions.AddQuartzHttpClient*"></a>
+
+  <h3 id="Quartz_QuartzHttpClientServiceCollectionExtensions_AddQuartzHttpClient_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Quartz_HttpClientOptions__" data-uid="Quartz.QuartzHttpClientServiceCollectionExtensions.AddQuartzHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Quartz.HttpClientOptions})">
+  AddQuartzHttpClient(IServiceCollection, Action&lt;HttpClientOptions&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.HttpClient/QuartzHttpClientServiceCollectionExtensions.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a scheduler that drives a remote one over HTTP.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddQuartzHttpClient(this IServiceCollection services, Action&lt;HttpClientOptions&gt; configure)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The service collection to register into.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.HttpClientOptions.html">HttpClientOptions</a>&gt;</dt>
+    <dd><p>Configures the client: the scheduler's name and how to reach it.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_QuartzHttpClientServiceCollectionExtensions_AddQuartzHttpClient_" data-uid="Quartz.QuartzHttpClientServiceCollectionExtensions.AddQuartzHttpClient*"></a>
+
+  <h3 id="Quartz_QuartzHttpClientServiceCollectionExtensions_AddQuartzHttpClient_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_System_Func_System_IServiceProvider_System_Net_Http_HttpClient__System_Text_Json_JsonSerializerOptions_" data-uid="Quartz.QuartzHttpClientServiceCollectionExtensions.AddQuartzHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Func{System.IServiceProvider,System.Net.Http.HttpClient},System.Text.Json.JsonSerializerOptions)">
+  AddQuartzHttpClient(IServiceCollection, string, Func&lt;IServiceProvider, HttpClient&gt;, JsonSerializerOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.HttpClient/QuartzHttpClientServiceCollectionExtensions.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a scheduler that drives a remote one over HTTP, with a client built by the given
+factory rather than resolved by name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddQuartzHttpClient(this IServiceCollection services, string schedulerName, Func&lt;IServiceProvider, HttpClient&gt; createHttpClient, JsonSerializerOptions? jsonSerializerOptions = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The service collection to register into.</p>
+</dd>
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The scheduler's name, which must match the remote scheduler's.</p>
+</dd>
+    <dt><code>createHttpClient</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a>&gt;</dt>
+    <dd><p>Builds the client to call the remote scheduler with.</p>
+</dd>
+    <dt><code>jsonSerializerOptions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions">JsonSerializerOptions</a></dt>
+    <dd><p>Optional serializer options for the HTTP scheduler.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzHttpClientServiceCollectionExtensions_AddQuartzHttpClient_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_System_Func_System_IServiceProvider_System_Net_Http_HttpClient__System_Text_Json_JsonSerializerOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The factory runs once, when the scheduler is first resolved, and is handed the container. The
+client it returns belongs to whoever created it and is never disposed by the scheduler.</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzHttpClientServiceCollectionExtensions_AddQuartzHttpClient_" data-uid="Quartz.QuartzHttpClientServiceCollectionExtensions.AddQuartzHttpClient*"></a>
+
+  <h3 id="Quartz_QuartzHttpClientServiceCollectionExtensions_AddQuartzHttpClient_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Quartz.QuartzHttpClientServiceCollectionExtensions.AddQuartzHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.String,System.Text.Json.JsonSerializerOptions)">
+  AddQuartzHttpClient(IServiceCollection, string, string, JsonSerializerOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.HttpClient/QuartzHttpClientServiceCollectionExtensions.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a scheduler that drives a remote one over HTTP, using a named
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.ihttpclientfactory">IHttpClientFactory</a> client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddQuartzHttpClient(this IServiceCollection services, string schedulerName, string httpClientName, JsonSerializerOptions? jsonSerializerOptions = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The service collection to register into.</p>
+</dd>
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The scheduler's name, which must match the remote scheduler's.</p>
+</dd>
+    <dt><code>httpClientName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name the client is registered under with <code>AddHttpClient</code>.</p>
+</dd>
+    <dt><code>jsonSerializerOptions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions">JsonSerializerOptions</a></dt>
+    <dd><p>Optional serializer options for the HTTP scheduler.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.HttpClient/QuartzHttpClientServiceCollectionExtensions.cs/#L60" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TriggerAcquisitionCriteria | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TriggerAcquisitionCriteria | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="What  should consider when picking the next triggers to fire.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Impl_AdoJobStore_TriggerAcquisitionCriteria.md&amp;value=---%0Auid%3A%20Quartz.Impl.AdoJobStore.TriggerAcquisitionCriteria%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Impl.AdoJobStore.TriggerAcquisitionCriteria">
+
+
+
+  <h1 id="Quartz_Impl_AdoJobStore_TriggerAcquisitionCriteria" data-uid="Quartz.Impl.AdoJobStore.TriggerAcquisitionCriteria" class="text-break">
+Class TriggerAcquisitionCriteria  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/TriggerAcquisitionCriteria.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<a class="xref" href="Quartz.Impl.html">Impl</a>.<a class="xref" href="Quartz.Impl.AdoJobStore.html">AdoJobStore</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>What <a class="xref" href="Quartz.Impl.AdoJobStore.IDriverDelegate.html#Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggersToAcquire_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_Impl_AdoJobStore_TriggerAcquisitionCriteria_System_Threading_CancellationToken_">SelectTriggersToAcquire(ConnectionAndTransactionHolder, TriggerAcquisitionCriteria, CancellationToken)</a> should consider when picking the next
+triggers to fire.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed record TriggerAcquisitionCriteria : IEquatable&lt;TriggerAcquisitionCriteria&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">TriggerAcquisitionCriteria</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Quartz.Impl.AdoJobStore.TriggerAcquisitionCriteria.html">TriggerAcquisitionCriteria</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_Impl_AdoJobStore_TriggerAcquisitionCriteria_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+This is the extension point for acquisition filtering (see issue #2238). Every future way of
+narrowing what a node will pick up — additional trigger predicates, per-node partitioning, more
+capacity dimensions than the execution groups already here — belongs on this record as another
+optional property, so that adding one is additive and does not change the delegate's signature or
+break dialect delegates that override it.
+</p>
+<p>
+Consequently a property added later must default to "no additional filtering", so that an
+implementation which ignores it keeps behaving as it did.
+</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_Impl_AdoJobStore_TriggerAcquisitionCriteria_ClusterInFlight_" data-uid="Quartz.Impl.AdoJobStore.TriggerAcquisitionCriteria.ClusterInFlight*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_TriggerAcquisitionCriteria_ClusterInFlight" data-uid="Quartz.Impl.AdoJobStore.TriggerAcquisitionCriteria.ClusterInFlight">
+  ClusterInFlight
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/TriggerAcquisitionCriteria.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>What the whole cluster already holds in flight per (execution group, trigger group) pair, which
+is what a <a class="xref" href="Quartz.ExecutionLimitScope.html#Quartz_ExecutionLimitScope_Cluster">Cluster</a> limit is counted against.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;ExecutionGroupInFlight&gt;? ClusterInFlight { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Quartz.ExecutionGroupInFlight.html">ExecutionGroupInFlight</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_AdoJobStore_TriggerAcquisitionCriteria_ClusterInFlight_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The ADO store fills this from
+<a class="xref" href="Quartz.Impl.AdoJobStore.IDriverDelegate.html#Quartz_Impl_AdoJobStore_IDriverDelegate_SelectExecutionGroupsInFlight_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_Threading_CancellationToken_">SelectExecutionGroupsInFlight(ConnectionAndTransactionHolder, CancellationToken)</a> once per acquisition attempt, and
+only when <a class="xref" href="Quartz.ExecutionLimits.html#Quartz_ExecutionLimits_HasClusterScopedLimits">HasClusterScopedLimits</a> says a cluster-scoped
+limit exists — so a configuration that uses none pays nothing. A store that set the value
+itself is left alone, which is how one keeping the count somewhere other than the fired-triggers
+table says so.
+</p>
+<p>
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> means "not counted", not "nothing in flight": a delegate handed
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> enforces the configured numbers as written, which is correct when no
+limit is cluster-scoped and would be wrong if it were treated as an empty cluster.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_TriggerAcquisitionCriteria_ExcludedJobTypeNames_" data-uid="Quartz.Impl.AdoJobStore.TriggerAcquisitionCriteria.ExcludedJobTypeNames*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_TriggerAcquisitionCriteria_ExcludedJobTypeNames" data-uid="Quartz.Impl.AdoJobStore.TriggerAcquisitionCriteria.ExcludedJobTypeNames">
+  ExcludedJobTypeNames
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/TriggerAcquisitionCriteria.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Job type names to exclude from acquisition, copied from
+<a class="xref" href="Quartz.Extensibility.TriggerAcquisitionRequest.html#Quartz_Extensibility_TriggerAcquisitionRequest_ExcludedJobTypeNames">ExcludedJobTypeNames</a> — or set by
+a derived store's <code>CreateAcquisitionCriteria</code>, which is how a deployment says what this
+node will not pick up.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;string&gt;? ExcludedJobTypeNames { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_AdoJobStore_TriggerAcquisitionCriteria_ExcludedJobTypeNames_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+<a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoDelegate.html">StdAdoDelegate</a> keeps the rows out in the acquisition SQL, where comparison
+follows the job-class column's collation. A delegate is free to ignore the property, as it is
+with every other one here — the ADO store drops the excluded candidates
+ordinally as they come back, before it reads any of them, so an uncooperative delegate degrades
+to a wider result set rather than to running work the deployment excluded. A delegate that
+answers <a class="xref" href="Quartz.Impl.AdoJobStore.IDriverDelegate.html#Quartz_Impl_AdoJobStore_IDriverDelegate_FiltersAcquisitionJobTypeExclusions">FiltersAcquisitionJobTypeExclusions</a> with
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> is taken at its word and that pass is skipped.
+</p>
+<p>
+Entries must be non-blank, and there may be at most 1,000 of them — Oracle's ceiling on an
+<code>IN</code> list. Blank is rejected rather than skipped because one would make the clause
+<code>NOT IN (…, NULL)</code>, which matches no row at all and would stop the node acquiring
+anything.
+</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>An entry is blank, or there are too many of them.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_TriggerAcquisitionCriteria_ExecutionLimits_" data-uid="Quartz.Impl.AdoJobStore.TriggerAcquisitionCriteria.ExecutionLimits*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_TriggerAcquisitionCriteria_ExecutionLimits" data-uid="Quartz.Impl.AdoJobStore.TriggerAcquisitionCriteria.ExecutionLimits">
+  ExecutionLimits
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/TriggerAcquisitionCriteria.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Available slots per execution group, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when no execution limits are
+configured. The snapshot is immutable; a delegate that counts slots down as it takes rows
+works on <code>ToWorkingCopy()</code>, because the caller may reuse this instance across retries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExecutionLimits? ExecutionLimits { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ExecutionLimits.html">ExecutionLimits</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_TriggerAcquisitionCriteria_LiveNodeCutoff_" data-uid="Quartz.Impl.AdoJobStore.TriggerAcquisitionCriteria.LiveNodeCutoff*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_TriggerAcquisitionCriteria_LiveNodeCutoff" data-uid="Quartz.Impl.AdoJobStore.TriggerAcquisitionCriteria.LiveNodeCutoff">
+  LiveNodeCutoff
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/TriggerAcquisitionCriteria.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Instant before which a node's last check-in is considered stale, releasing its pinned
+triggers to other nodes (preferred node / node affinity).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required DateTimeOffset LiveNodeCutoff { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_TriggerAcquisitionCriteria_MaxCount_" data-uid="Quartz.Impl.AdoJobStore.TriggerAcquisitionCriteria.MaxCount*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_TriggerAcquisitionCriteria_MaxCount" data-uid="Quartz.Impl.AdoJobStore.TriggerAcquisitionCriteria.MaxCount">
+  MaxCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/TriggerAcquisitionCriteria.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Maximum number of triggers to return.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required int MaxCount { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_TriggerAcquisitionCriteria_NoEarlierThan_" data-uid="Quartz.Impl.AdoJobStore.TriggerAcquisitionCriteria.NoEarlierThan*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_TriggerAcquisitionCriteria_NoEarlierThan" data-uid="Quartz.Impl.AdoJobStore.TriggerAcquisitionCriteria.NoEarlierThan">
+  NoEarlierThan
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/TriggerAcquisitionCriteria.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lowest value of <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_NextFireTimeUtc">NextFireTimeUtc</a> of the triggers to acquire, which is
+what keeps a misfired trigger out of the acquisition path. Only applies to triggers that have a
+misfire instruction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required DateTimeOffset NoEarlierThan { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_TriggerAcquisitionCriteria_NoLaterThan_" data-uid="Quartz.Impl.AdoJobStore.TriggerAcquisitionCriteria.NoLaterThan*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_TriggerAcquisitionCriteria_NoLaterThan" data-uid="Quartz.Impl.AdoJobStore.TriggerAcquisitionCriteria.NoLaterThan">
+  NoLaterThan
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/TriggerAcquisitionCriteria.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Highest value of <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_NextFireTimeUtc">NextFireTimeUtc</a> of the triggers to acquire.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required DateTimeOffset NoLaterThan { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/TriggerAcquisitionCriteria.cs/#L43" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

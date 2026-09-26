@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SendMailJob | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SendMailJob | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="A Job which sends an e-mail with the configured content to the configured recipient.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Jobs_SendMailJob.md&amp;value=---%0Auid%3A%20Quartz.Jobs.SendMailJob%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Jobs.SendMailJob">
+
+
+
+  <h1 id="Quartz_Jobs_SendMailJob" data-uid="Quartz.Jobs.SendMailJob" class="text-break">
+Class SendMailJob  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/SendMailJob.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<a class="xref" href="Quartz.Jobs.html">Jobs</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.Jobs.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A Job which sends an e-mail with the configured content to the configured
+recipient.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SendMailJob : IJob</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">SendMailJob</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Quartz.IJob.html">IJob</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_Jobs_SendMailJob_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+The message is configured through the job data keys below. <a class="xref" href="Quartz.Jobs.SendMailOptions.html">SendMailOptions</a> names
+them all, and <a class="xref" href="Quartz.Jobs.JobConfiguratorExtensions.html#Quartz_Jobs_JobConfiguratorExtensions_UsingSendMailOptions__1___0_Quartz_Jobs_SendMailOptions_">UsingSendMailOptions&lt;TConfigurator&gt;(TConfigurator, SendMailOptions)</a> writes
+them, so the settings can be given as a value rather than as string keys; the keys stay the
+persisted form either way.
+</p>
+<p>
+The SMTP credential is the exception, and is taken from the container: register an
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.icredentialsbyhost">ICredentialsByHost</a> and the job authenticates with it. Job data is durable,
+cluster-replicated and visible in the dashboard, which is no place for a password. The
+<a class="xref" href="Quartz.Jobs.SendMailJob.html#Quartz_Jobs_SendMailJob_PropertyUsername">PropertyUsername</a> and <a class="xref" href="Quartz.Jobs.SendMailJob.html#Quartz_Jobs_SendMailJob_PropertyPassword">PropertyPassword</a> keys are still read when
+nothing is registered, so a job scheduled by an earlier version keeps sending — with a warning.
+</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Quartz_Jobs_SendMailJob__ctor_" data-uid="Quartz.Jobs.SendMailJob.#ctor*"></a>
+
+  <h3 id="Quartz_Jobs_SendMailJob__ctor_System_Net_ICredentialsByHost_" data-uid="Quartz.Jobs.SendMailJob.#ctor(System.Net.ICredentialsByHost)">
+  SendMailJob(ICredentialsByHost?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/SendMailJob.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Quartz.Jobs.SendMailJob.html">SendMailJob</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SendMailJob(ICredentialsByHost? credentials = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>credentials</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.icredentialsbyhost">ICredentialsByHost</a></dt>
+    <dd><p>What to authenticate to the SMTP server with, taken from the container. A
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.networkcredential">NetworkCredential</a> covers one account; a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.credentialcache">CredentialCache</a> covers
+several servers. <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> falls back to the credential in job data, if there is
+one, and otherwise sends unauthenticated.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Quartz_Jobs_SendMailJob_PropertyCcRecipient" data-uid="Quartz.Jobs.SendMailJob.PropertyCcRecipient">
+  PropertyCcRecipient
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/SendMailJob.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The e-mail address to cc the mail to. Optional.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyCcRecipient = &quot;cc_recipient&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Jobs_SendMailJob_PropertyEnableSsl" data-uid="Quartz.Jobs.SendMailJob.PropertyEnableSsl">
+  PropertyEnableSsl
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/SendMailJob.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether to negotiate TLS with the SMTP server (<code>STARTTLS</code>). Optional; defaults to
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>, which is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.mail.smtpclient">SmtpClient</a>'s own default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyEnableSsl = &quot;smtp_enable_ssl&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Quartz_Jobs_SendMailJob_PropertyEnableSsl_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Off by default because turning it on fails outright against a server that does not offer TLS,
+and a job that has been sending for years through a relay on the same host would stop. Turn it
+on for anything that crosses a network you do not own, and for anything that authenticates:
+SMTP <code>AUTH LOGIN</code> is base64, which is not encryption.</p>
+</div>
+
+
+
+
+
+  <h3 id="Quartz_Jobs_SendMailJob_PropertyEncoding" data-uid="Quartz.Jobs.SendMailJob.PropertyEncoding">
+  PropertyEncoding
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/SendMailJob.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The message subject and body content type. Optional.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyEncoding = &quot;encoding&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Jobs_SendMailJob_PropertyMessage" data-uid="Quartz.Jobs.SendMailJob.PropertyMessage">
+  PropertyMessage
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/SendMailJob.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The e-mail message body. REQUIRED.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyMessage = &quot;message&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Jobs_SendMailJob_PropertyPassword" data-uid="Quartz.Jobs.SendMailJob.PropertyPassword">
+  PropertyPassword
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/SendMailJob.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Password for authenticated session. Optional.</p>
+<p>
+Legacy, and a credential written to <code>QRTZ_JOB_DETAILS</code> in whatever the configured
+serializer emits. Register an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.icredentialsbyhost">ICredentialsByHost</a> with the container instead.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyPassword = &quot;smtp_password&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Jobs_SendMailJob_PropertyRecipient" data-uid="Quartz.Jobs.SendMailJob.PropertyRecipient">
+  PropertyRecipient
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/SendMailJob.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The e-mail address to send the mail to. REQUIRED.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyRecipient = &quot;recipient&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Jobs_SendMailJob_PropertyReplyTo" data-uid="Quartz.Jobs.SendMailJob.PropertyReplyTo">
+  PropertyReplyTo
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/SendMailJob.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The e-mail address the message should say to reply to. Optional.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyReplyTo = &quot;reply_to&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Jobs_SendMailJob_PropertySender" data-uid="Quartz.Jobs.SendMailJob.PropertySender">
+  PropertySender
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/SendMailJob.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The e-mail address to claim the mail is from. REQUIRED.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertySender = &quot;sender&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Jobs_SendMailJob_PropertySmtpHost" data-uid="Quartz.Jobs.SendMailJob.PropertySmtpHost">
+  PropertySmtpHost
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/SendMailJob.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The host name of the smtp server. REQUIRED.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertySmtpHost = &quot;smtp_host&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Jobs_SendMailJob_PropertySmtpPort" data-uid="Quartz.Jobs.SendMailJob.PropertySmtpPort">
+  PropertySmtpPort
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/SendMailJob.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The port of the smtp server. Optional.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertySmtpPort = &quot;smtp_port&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Jobs_SendMailJob_PropertySubject" data-uid="Quartz.Jobs.SendMailJob.PropertySubject">
+  PropertySubject
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/SendMailJob.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The subject to place on the e-mail. REQUIRED.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertySubject = &quot;subject&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Jobs_SendMailJob_PropertyUsername" data-uid="Quartz.Jobs.SendMailJob.PropertyUsername">
+  PropertyUsername
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/SendMailJob.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Username for authenticated session. Password must also be set if username is used. Optional.</p>
+<p>
+Legacy. Register an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.icredentialsbyhost">ICredentialsByHost</a> with the container instead — job data is
+persisted, replicated to every node and readable from the dashboard.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyUsername = &quot;smtp_username&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_Jobs_SendMailJob_BuildMessage_" data-uid="Quartz.Jobs.SendMailJob.BuildMessage*"></a>
+
+  <h3 id="Quartz_Jobs_SendMailJob_BuildMessage_Quartz_Jobs_SendMailOptions_" data-uid="Quartz.Jobs.SendMailJob.BuildMessage(Quartz.Jobs.SendMailOptions)">
+  BuildMessage(SendMailOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/SendMailJob.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Builds the message to send. Override to add to it — an attachment, a header — or to build a
+different one entirely.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual MailMessage BuildMessage(SendMailOptions options)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="Quartz.Jobs.SendMailOptions.html">SendMailOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.mail.mailmessage">MailMessage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Jobs_SendMailJob_Execute_" data-uid="Quartz.Jobs.SendMailJob.Execute*"></a>
+
+  <h3 id="Quartz_Jobs_SendMailJob_Execute_Quartz_IJobExecutionContext_System_Threading_CancellationToken_" data-uid="Quartz.Jobs.SendMailJob.Execute(Quartz.IJobExecutionContext,System.Threading.CancellationToken)">
+  Execute(IJobExecutionContext, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/SendMailJob.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Executes the job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ValueTask Execute(IJobExecutionContext context, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></dt>
+    <dd><p>The job execution context.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Jobs_SendMailJob_Send_" data-uid="Quartz.Jobs.SendMailJob.Send*"></a>
+
+  <h3 id="Quartz_Jobs_SendMailJob_Send_Quartz_Jobs_MailInfo_System_Threading_CancellationToken_" data-uid="Quartz.Jobs.SendMailJob.Send(Quartz.Jobs.MailInfo,System.Threading.CancellationToken)">
+  Send(MailInfo, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/SendMailJob.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sends the built message. Override to route mail through something other than
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.mail.smtpclient">SmtpClient</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual ValueTask Send(MailInfo mailInfo, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>mailInfo</code> <a class="xref" href="Quartz.Jobs.MailInfo.html">MailInfo</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/SendMailJob.cs/#L53" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class QuartzSchedulerOptions | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class QuartzSchedulerOptions | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Strongly typed configuration for the scheduler itself.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_QuartzSchedulerOptions.md&amp;value=---%0Auid%3A%20Quartz.QuartzSchedulerOptions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.QuartzSchedulerOptions">
+
+
+
+  <h1 id="Quartz_QuartzSchedulerOptions" data-uid="Quartz.QuartzSchedulerOptions" class="text-break">
+Class QuartzSchedulerOptions  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/QuartzSchedulerOptions.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Strongly typed configuration for the scheduler itself.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class QuartzSchedulerOptions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">QuartzSchedulerOptions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_QuartzSchedulerOptions_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Binds from the <code>Scheduler</code> section of the Quartz configuration, and is the typed
+replacement for the <code>quartz.scheduler.*</code> property keys.</p>
+</div>
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Quartz_QuartzSchedulerOptions_DefaultInstanceId" data-uid="Quartz.QuartzSchedulerOptions.DefaultInstanceId">
+  DefaultInstanceId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/QuartzSchedulerOptions.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The value for <a class="xref" href="Quartz.QuartzSchedulerOptions.html#Quartz_QuartzSchedulerOptions_InstanceId">InstanceId</a> that marks a scheduler as not participating in a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DefaultInstanceId = &quot;NON_CLUSTERED&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_QuartzSchedulerOptions_DefaultInstanceName" data-uid="Quartz.QuartzSchedulerOptions.DefaultInstanceName">
+  DefaultInstanceName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/QuartzSchedulerOptions.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The default value for <a class="xref" href="Quartz.QuartzSchedulerOptions.html#Quartz_QuartzSchedulerOptions_InstanceName">InstanceName</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DefaultInstanceName = &quot;QuartzScheduler&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_QuartzSchedulerOptions_BatchTriggerAcquisitionFireAheadTimeWindow_" data-uid="Quartz.QuartzSchedulerOptions.BatchTriggerAcquisitionFireAheadTimeWindow*"></a>
+
+  <h3 id="Quartz_QuartzSchedulerOptions_BatchTriggerAcquisitionFireAheadTimeWindow" data-uid="Quartz.QuartzSchedulerOptions.BatchTriggerAcquisitionFireAheadTimeWindow">
+  BatchTriggerAcquisitionFireAheadTimeWindow
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/QuartzSchedulerOptions.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How far past the current time a trigger may fire in order to be included in the current
+acquisition batch.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan BatchTriggerAcquisitionFireAheadTimeWindow { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzSchedulerOptions_BatchTriggerAcquisitionFireAheadTimeWindow_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The other half of <a class="xref" href="Quartz.QuartzSchedulerOptions.html#Quartz_QuartzSchedulerOptions_MaxBatchSize">MaxBatchSize</a>; neither batches anything on its own. At the default
+of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan.zero">Zero</a> a batch holds the triggers due at the same instant and nothing
+else. Widening it fires triggers early by up to this much, which is what the batching costs.</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzSchedulerOptions_Context_" data-uid="Quartz.QuartzSchedulerOptions.Context*"></a>
+
+  <h3 id="Quartz_QuartzSchedulerOptions_Context" data-uid="Quartz.QuartzSchedulerOptions.Context">
+  Context
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/QuartzSchedulerOptions.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Values seeded into <a class="xref" href="Quartz.SchedulerContext.html">SchedulerContext</a> when the scheduler is created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, string&gt; Context { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzSchedulerOptions_Context_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Replaces the <code>quartz.context.key.*</code> property keys.</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzSchedulerOptions_GenerateInstanceId_" data-uid="Quartz.QuartzSchedulerOptions.GenerateInstanceId*"></a>
+
+  <h3 id="Quartz_QuartzSchedulerOptions_GenerateInstanceId" data-uid="Quartz.QuartzSchedulerOptions.GenerateInstanceId">
+  GenerateInstanceId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/QuartzSchedulerOptions.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, <a class="xref" href="Quartz.QuartzSchedulerOptions.html#Quartz_QuartzSchedulerOptions_InstanceId">InstanceId</a> is generated at startup by the registered
+<a class="xref" href="Quartz.Extensibility.IInstanceIdGenerator.html">IInstanceIdGenerator</a> instead of being taken from <a class="xref" href="Quartz.QuartzSchedulerOptions.html#Quartz_QuartzSchedulerOptions_InstanceId">InstanceId</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GenerateInstanceId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_QuartzSchedulerOptions_IdleWaitTime_" data-uid="Quartz.QuartzSchedulerOptions.IdleWaitTime*"></a>
+
+  <h3 id="Quartz_QuartzSchedulerOptions_IdleWaitTime" data-uid="Quartz.QuartzSchedulerOptions.IdleWaitTime">
+  IdleWaitTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/QuartzSchedulerOptions.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How long the scheduler waits before re-querying the job store when it finds no triggers to fire.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan IdleWaitTime { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzSchedulerOptions_IdleWaitTime_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Must be at least one second. Lower values increase job store load for little benefit.</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzSchedulerOptions_InstanceId_" data-uid="Quartz.QuartzSchedulerOptions.InstanceId*"></a>
+
+  <h3 id="Quartz_QuartzSchedulerOptions_InstanceId" data-uid="Quartz.QuartzSchedulerOptions.InstanceId">
+  InstanceId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/QuartzSchedulerOptions.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The id of the scheduler, which must be unique within a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string InstanceId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzSchedulerOptions_InstanceId_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Leave at the default to opt out of clustering. Set <a class="xref" href="Quartz.QuartzSchedulerOptions.html#Quartz_QuartzSchedulerOptions_GenerateInstanceId">GenerateInstanceId</a> instead of
+assigning a literal id when the id should be derived at startup.</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzSchedulerOptions_InstanceName_" data-uid="Quartz.QuartzSchedulerOptions.InstanceName*"></a>
+
+  <h3 id="Quartz_QuartzSchedulerOptions_InstanceName" data-uid="Quartz.QuartzSchedulerOptions.InstanceName">
+  InstanceName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/QuartzSchedulerOptions.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The name of the scheduler, which must be unique within the process.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string InstanceName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_QuartzSchedulerOptions_MaxBatchSize_" data-uid="Quartz.QuartzSchedulerOptions.MaxBatchSize*"></a>
+
+  <h3 id="Quartz_QuartzSchedulerOptions_MaxBatchSize" data-uid="Quartz.QuartzSchedulerOptions.MaxBatchSize">
+  MaxBatchSize
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/QuartzSchedulerOptions.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The maximum number of triggers the scheduler acquires in a single batch.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxBatchSize { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzSchedulerOptions_MaxBatchSize_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Defaults to 1, which is also the point at which a database-backed store needs no cluster-wide
+lock to acquire: raising it makes every acquisition cycle take the <code>TRIGGER_ACCESS</code> row
+lock, including cycles that acquire nothing. It pays off where triggers genuinely arrive in
+bunches, and costs lock traffic where they do not.
+</p>
+<p>
+This is only the upper bound. What decides the size of a batch is
+<a class="xref" href="Quartz.QuartzSchedulerOptions.html#Quartz_QuartzSchedulerOptions_BatchTriggerAcquisitionFireAheadTimeWindow">BatchTriggerAcquisitionFireAheadTimeWindow</a>: after the first trigger, only triggers
+due within that window of it join the batch, and the window defaults to
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan.zero">Zero</a>. Raising this alone leaves the effective batch at one trigger for any
+schedule whose fire times are spread out — the two are one setting in two halves, so move them
+together.
+</p>
+<p>
+Must not exceed <a class="xref" href="Quartz.ThreadPoolOptions.html#Quartz_ThreadPoolOptions_MaxConcurrency">MaxConcurrency</a>: triggers acquired beyond the
+number of threads there are to run them on are held by this node, unfireable by any other, until
+the pool drains.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzSchedulerOptions_PropagateTraceContext_" data-uid="Quartz.QuartzSchedulerOptions.PropagateTraceContext*"></a>
+
+  <h3 id="Quartz_QuartzSchedulerOptions_PropagateTraceContext" data-uid="Quartz.QuartzSchedulerOptions.PropagateTraceContext">
+  PropagateTraceContext
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/QuartzSchedulerOptions.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the scheduler records the trace context of the call that scheduled a trigger, so that the
+firing links back to it. On by default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PropagateTraceContext { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzSchedulerOptions_PropagateTraceContext_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+A scheduled job runs minutes, hours or days after the call that asked for it, quite possibly on
+another node. With this on, a scheduling call made inside an activity leaves the W3C
+<code>traceparent</code> on the trigger — under <a class="xref" href="Quartz.SchedulerConstants.html#Quartz_SchedulerConstants_TraceParent">TraceParent</a> and
+<a class="xref" href="Quartz.SchedulerConstants.html#Quartz_SchedulerConstants_TraceState">TraceState</a> — and the firing's <code>Quartz.Job.Execute</code> span
+carries an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activitylink">ActivityLink</a> to it. A link and not a parent: the
+firing is its own trace root, because a trace spanning the wait would be a trace nothing could
+display.
+</p>
+<p>
+Turn it off to keep the two reserved keys out of trigger data entirely — for a store whose rows
+are read by something that does not expect them, or where the extra two entries per trigger are
+not worth what they buy. Nothing else changes: the execute span is emitted either way.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzSchedulerOptions_ShutdownJobInterruption_" data-uid="Quartz.QuartzSchedulerOptions.ShutdownJobInterruption*"></a>
+
+  <h3 id="Quartz_QuartzSchedulerOptions_ShutdownJobInterruption" data-uid="Quartz.QuartzSchedulerOptions.ShutdownJobInterruption">
+  ShutdownJobInterruption
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/QuartzSchedulerOptions.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When a shutting-down scheduler signals cancellation to the jobs still executing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ShutdownJobInterruption ShutdownJobInterruption { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ShutdownJobInterruption.html">ShutdownJobInterruption</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzSchedulerOptions_ShutdownJobInterruption_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This was two independent booleans, one for a shutdown that waits for jobs and one for a shutdown
+that does not. They were never independent: together they answered a single four-way question,
+and the pair could be set to a combination — both false — that spelled the default in two ways.</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/QuartzSchedulerOptions.cs/#L10" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

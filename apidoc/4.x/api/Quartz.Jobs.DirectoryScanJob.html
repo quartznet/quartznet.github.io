@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DirectoryScanJob | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DirectoryScanJob | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Inspects a directory and compares whether any files&#39; &amp;quot;last modified dates&amp;quot; have changed since the last time it was inspected.  If one or more files have been updated (or created), the job invokes a &amp;quot;call-back&amp;quot; method on an identified  that can be resolved from dependency injection or found in the .">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Jobs_DirectoryScanJob.md&amp;value=---%0Auid%3A%20Quartz.Jobs.DirectoryScanJob%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Jobs.DirectoryScanJob">
+
+
+
+  <h1 id="Quartz_Jobs_DirectoryScanJob" data-uid="Quartz.Jobs.DirectoryScanJob" class="text-break">
+Class DirectoryScanJob  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/DirectoryScanJob.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<a class="xref" href="Quartz.Jobs.html">Jobs</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.Jobs.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Inspects a directory and compares whether any files' &quot;last modified dates&quot;
+have changed since the last time it was inspected.  If one or more files
+have been updated (or created), the job invokes a &quot;call-back&quot; method on an
+identified <a class="xref" href="Quartz.Jobs.IDirectoryScanListener.html">IDirectoryScanListener</a> that can be resolved from
+dependency injection or found in the <a class="xref" href="Quartz.SchedulerContext.html">SchedulerContext</a>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DirectoryScanJob : IJob</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">DirectoryScanJob</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Quartz.IJob.html">IJob</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_Jobs_DirectoryScanJob_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+What is scanned is configured through the job data keys below.
+<a class="xref" href="Quartz.Jobs.DirectoryScanOptions.html">DirectoryScanOptions</a> names them all, and
+<a class="xref" href="Quartz.Jobs.JobConfiguratorExtensions.html#Quartz_Jobs_JobConfiguratorExtensions_UsingDirectoryScanOptions__1___0_Quartz_Jobs_DirectoryScanOptions_">UsingDirectoryScanOptions&lt;TConfigurator&gt;(TConfigurator, DirectoryScanOptions)</a> writes them, so
+the settings can be given as a value rather than as string keys; the keys stay the persisted form
+either way.
+</p>
+<p>The listener can be provided in two ways:</p>
+<ol><li>Via dependency injection (recommended): Register the listener implementation
+in the DI container and specify its type name using <a class="xref" href="Quartz.Jobs.DirectoryScanJob.html#Quartz_Jobs_DirectoryScanJob_DirectoryScanListenerName">DirectoryScanListenerName</a>.
+</li><li>Via SchedulerContext (legacy): Store the listener instance in the SchedulerContext
+with a key matching the value specified in <a class="xref" href="Quartz.Jobs.DirectoryScanJob.html#Quartz_Jobs_DirectoryScanJob_DirectoryScanListenerName">DirectoryScanListenerName</a>.
+</li></ol>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Quartz_Jobs_DirectoryScanJob__ctor_" data-uid="Quartz.Jobs.DirectoryScanJob.#ctor*"></a>
+
+  <h3 id="Quartz_Jobs_DirectoryScanJob__ctor_System_IServiceProvider_System_TimeProvider_" data-uid="Quartz.Jobs.DirectoryScanJob.#ctor(System.IServiceProvider,System.TimeProvider)">
+  DirectoryScanJob(IServiceProvider, TimeProvider?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/DirectoryScanJob.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Quartz.Jobs.DirectoryScanJob.html">DirectoryScanJob</a> class that resolves its
+<a class="xref" href="Quartz.Jobs.IDirectoryScanListener.html">IDirectoryScanListener</a> from the container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DirectoryScanJob(IServiceProvider serviceProvider, TimeProvider? timeProvider = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>serviceProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a></dt>
+    <dd><p>The container the listener is registered in.</p>
+</dd>
+    <dt><code>timeProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeprovider">TimeProvider</a></dt>
+    <dd><p>The clock deciding how recently a file must have been written to still count as being written
+to. <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> takes <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeprovider.system">System</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Jobs_DirectoryScanJob__ctor_" data-uid="Quartz.Jobs.DirectoryScanJob.#ctor*"></a>
+
+  <h3 id="Quartz_Jobs_DirectoryScanJob__ctor_System_TimeProvider_" data-uid="Quartz.Jobs.DirectoryScanJob.#ctor(System.TimeProvider)">
+  DirectoryScanJob(TimeProvider?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/DirectoryScanJob.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Quartz.Jobs.DirectoryScanJob.html">DirectoryScanJob</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DirectoryScanJob(TimeProvider? timeProvider = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeprovider">TimeProvider</a></dt>
+    <dd><p>The clock deciding how recently a file must have been written to still count as being written
+to. <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> takes <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeprovider.system">System</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Quartz_Jobs_DirectoryScanJob_DirectoryName" data-uid="Quartz.Jobs.DirectoryScanJob.DirectoryName">
+  DirectoryName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/DirectoryScanJob.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DirectoryName = &quot;DIRECTORY_NAME&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Jobs_DirectoryScanJob_DirectoryNames" data-uid="Quartz.Jobs.DirectoryScanJob.DirectoryNames">
+  DirectoryNames
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/DirectoryScanJob.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DirectoryNames = &quot;DIRECTORY_NAMES&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Jobs_DirectoryScanJob_DirectoryProviderName" data-uid="Quartz.Jobs.DirectoryScanJob.DirectoryProviderName">
+  DirectoryProviderName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/DirectoryScanJob.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DirectoryProviderName = &quot;DIRECTORY_PROVIDER_NAME&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Jobs_DirectoryScanJob_DirectoryScanListenerName" data-uid="Quartz.Jobs.DirectoryScanJob.DirectoryScanListenerName">
+  DirectoryScanListenerName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/DirectoryScanJob.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DirectoryScanListenerName = &quot;DIRECTORY_SCAN_LISTENER_NAME&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Jobs_DirectoryScanJob_IncludeSubDirectories" data-uid="Quartz.Jobs.DirectoryScanJob.IncludeSubDirectories">
+  IncludeSubDirectories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/DirectoryScanJob.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string IncludeSubDirectories = &quot;INCLUDE_SUB_DIRECTORIES&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Jobs_DirectoryScanJob_MinimumUpdateAge" data-uid="Quartz.Jobs.DirectoryScanJob.MinimumUpdateAge">
+  MinimumUpdateAge
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/DirectoryScanJob.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string MinimumUpdateAge = &quot;MINIMUM_UPDATE_AGE&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quartz_Jobs_DirectoryScanJob_SearchPattern" data-uid="Quartz.Jobs.DirectoryScanJob.SearchPattern">
+  SearchPattern
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/DirectoryScanJob.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> key with which to specify the search string to match against the
+names of files. Can contain a combination of valid literal path and wildcard (* and ?)
+characters. Defaults to <code>*</code>, every file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string SearchPattern = &quot;SEARCH_PATTERN&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_Jobs_DirectoryScanJob_Execute_" data-uid="Quartz.Jobs.DirectoryScanJob.Execute*"></a>
+
+  <h3 id="Quartz_Jobs_DirectoryScanJob_Execute_Quartz_IJobExecutionContext_System_Threading_CancellationToken_" data-uid="Quartz.Jobs.DirectoryScanJob.Execute(Quartz.IJobExecutionContext,System.Threading.CancellationToken)">
+  Execute(IJobExecutionContext, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/DirectoryScanJob.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This is the main entry point for job execution. The scheduler will call this method on the
+job once it is triggered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask Execute(IJobExecutionContext context, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></dt>
+    <dd><p>The <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a> that
+the job will use during execution.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/DirectoryScanJob.cs/#L42" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

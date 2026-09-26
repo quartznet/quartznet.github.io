@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ObjectAlreadyExistsException | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ObjectAlreadyExistsException | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="An exception that is thrown to indicate that an attempt to store a new object (i.e. , or ) in a  failed, because one with the same name and group already exists.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_ObjectAlreadyExistsException.md&amp;value=---%0Auid%3A%20Quartz.ObjectAlreadyExistsException%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.ObjectAlreadyExistsException">
+
+
+
+  <h1 id="Quartz_ObjectAlreadyExistsException" data-uid="Quartz.ObjectAlreadyExistsException" class="text-break">
+Class ObjectAlreadyExistsException  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/ObjectAlreadyExistsException.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>An exception that is thrown to indicate that an attempt to store a new
+object (i.e. <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>,<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+or <a class="xref" href="Quartz.ICalendar.html">ICalendar</a>) in a <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>
+failed, because one with the same name and group already exists.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class ObjectAlreadyExistsException : JobPersistenceException, ISerializable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></div>
+      <div><a class="xref" href="Quartz.SchedulerException.html">SchedulerException</a></div>
+      <div><a class="xref" href="Quartz.JobPersistenceException.html">JobPersistenceException</a></div>
+      <div><span class="xref">ObjectAlreadyExistsException</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.iserializable">ISerializable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Quartz.SchedulerException.html#Quartz_SchedulerException_ToString">SchedulerException.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.getbaseexception">Exception.GetBaseException()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.gettype">Exception.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.data">Exception.Data</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.helplink">Exception.HelpLink</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.hresult">Exception.HResult</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.innerexception">Exception.InnerException</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.message">Exception.Message</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.source">Exception.Source</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.stacktrace">Exception.StackTrace</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.targetsite">Exception.TargetSite</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Quartz_ObjectAlreadyExistsException__ctor_" data-uid="Quartz.ObjectAlreadyExistsException.#ctor*"></a>
+
+  <h3 id="Quartz_ObjectAlreadyExistsException__ctor_Quartz_IJobDetail_" data-uid="Quartz.ObjectAlreadyExistsException.#ctor(Quartz.IJobDetail)">
+  ObjectAlreadyExistsException(IJobDetail)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/ObjectAlreadyExistsException.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>
+    Create a <a class="xref" href="Quartz.ObjectAlreadyExistsException.html">ObjectAlreadyExistsException</a> and auto-generate a
+    message using the name/group from the given <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>.
+    </p>
+<pre><code>&lt;p&gt;
+The message will read: &lt;br /&gt;&quot;Unable to store Job with name: '__' and
+group: '__', because one already exists with this identification.&quot;
+&lt;/p&gt;
+</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ObjectAlreadyExistsException(IJobDetail offendingJob)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>offendingJob</code> <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_ObjectAlreadyExistsException__ctor_" data-uid="Quartz.ObjectAlreadyExistsException.#ctor*"></a>
+
+  <h3 id="Quartz_ObjectAlreadyExistsException__ctor_Quartz_ITrigger_" data-uid="Quartz.ObjectAlreadyExistsException.#ctor(Quartz.ITrigger)">
+  ObjectAlreadyExistsException(ITrigger)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/ObjectAlreadyExistsException.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>
+    Create a <a class="xref" href="Quartz.ObjectAlreadyExistsException.html">ObjectAlreadyExistsException</a> and auto-generate a
+    message using the name/group from the given <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>.
+    </p>
+<pre><code>&lt;p&gt;
+The message will read: &lt;br /&gt;&quot;Unable to store Trigger with name: '__' and
+group: '__', because one already exists with this identification.&quot;
+&lt;/p&gt;
+</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ObjectAlreadyExistsException(ITrigger offendingTrigger)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>offendingTrigger</code> <a class="xref" href="Quartz.ITrigger.html">ITrigger</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_ObjectAlreadyExistsException__ctor_" data-uid="Quartz.ObjectAlreadyExistsException.#ctor*"></a>
+
+  <h3 id="Quartz_ObjectAlreadyExistsException__ctor_System_String_" data-uid="Quartz.ObjectAlreadyExistsException.#ctor(System.String)">
+  ObjectAlreadyExistsException(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/ObjectAlreadyExistsException.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>
+   Create a <a class="xref" href="Quartz.ObjectAlreadyExistsException.html">ObjectAlreadyExistsException</a> with the given
+   message.
+   </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ObjectAlreadyExistsException(string message)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_ObjectAlreadyExistsException__ctor_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Both <a class="xref" href="Quartz.ObjectAlreadyExistsException.html#Quartz_ObjectAlreadyExistsException_JobKey">JobKey</a> and <a class="xref" href="Quartz.ObjectAlreadyExistsException.html#Quartz_ObjectAlreadyExistsException_TriggerKey">TriggerKey</a> are <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>: nothing
+here says which object clashed.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_ObjectAlreadyExistsException_JobKey_" data-uid="Quartz.ObjectAlreadyExistsException.JobKey*"></a>
+
+  <h3 id="Quartz_ObjectAlreadyExistsException_JobKey" data-uid="Quartz.ObjectAlreadyExistsException.JobKey">
+  JobKey
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/ObjectAlreadyExistsException.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The job whose identity was already taken, when the exception was raised for one; otherwise
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>. It saves a caller parsing the key back out of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.message">Message</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobKey? JobKey { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.JobKey.html">JobKey</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_ObjectAlreadyExistsException_TriggerKey_" data-uid="Quartz.ObjectAlreadyExistsException.TriggerKey*"></a>
+
+  <h3 id="Quartz_ObjectAlreadyExistsException_TriggerKey" data-uid="Quartz.ObjectAlreadyExistsException.TriggerKey">
+  TriggerKey
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/ObjectAlreadyExistsException.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The trigger whose identity was already taken, when the exception was raised for one; otherwise
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>. It saves a caller parsing the key back out of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.message">Message</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TriggerKey? TriggerKey { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/ObjectAlreadyExistsException.cs/#L30" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
