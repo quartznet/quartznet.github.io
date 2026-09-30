@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TriggerAcquisitionRequest | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TriggerAcquisitionRequest | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="What the scheduler asks an  for when it acquires the next triggers to fire.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Extensibility_TriggerAcquisitionRequest.md&amp;value=---%0Auid%3A%20Quartz.Extensibility.TriggerAcquisitionRequest%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Extensibility.TriggerAcquisitionRequest">
+
+
+
+  <h1 id="Quartz_Extensibility_TriggerAcquisitionRequest" data-uid="Quartz.Extensibility.TriggerAcquisitionRequest" class="text-break">
+Class TriggerAcquisitionRequest  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/TriggerAcquisitionRequest.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<a class="xref" href="Quartz.Extensibility.html">Extensibility</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>What the scheduler asks an <a class="xref" href="Quartz.Extensibility.IJobStore.html">IJobStore</a> for when it acquires the next triggers
+to fire.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed record TriggerAcquisitionRequest : IEquatable&lt;TriggerAcquisitionRequest&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">TriggerAcquisitionRequest</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Quartz.Extensibility.TriggerAcquisitionRequest.html">TriggerAcquisitionRequest</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_Extensibility_TriggerAcquisitionRequest_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+This is the store-level counterpart of the delegate-level
+<code>Quartz.Impl.AdoJobStore.TriggerAcquisitionCriteria</code>: a store translates a request into
+whatever criteria its backing storage understands. Keeping it a record means a future
+acquisition dimension is an added optional property rather than another overload, and a
+property added later must default to "no additional filtering" so that a store which ignores
+it keeps behaving as it did.
+</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_Extensibility_TriggerAcquisitionRequest_ExcludedJobTypeNames_" data-uid="Quartz.Extensibility.TriggerAcquisitionRequest.ExcludedJobTypeNames*"></a>
+
+  <h3 id="Quartz_Extensibility_TriggerAcquisitionRequest_ExcludedJobTypeNames" data-uid="Quartz.Extensibility.TriggerAcquisitionRequest.ExcludedJobTypeNames">
+  ExcludedJobTypeNames
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/TriggerAcquisitionRequest.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Job type names to exclude, spelled as
+<a class="xref" href="Quartz.Impl.AdoJobStore.TriggerAcquireResult.html#Quartz_Impl_AdoJobStore_TriggerAcquireResult_JobTypeName">JobTypeName</a> stores them.
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> means no exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;string&gt;? ExcludedJobTypeNames { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_TriggerAcquisitionRequest_ExcludedJobTypeNames_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Every shipped store honours this. The in-memory store compares
+<a class="xref" href="Quartz.JobType.html#Quartz_JobType_FullName">FullName</a> ordinally; the ADO.NET store threads the names into
+<a class="xref" href="Quartz.Impl.AdoJobStore.TriggerAcquisitionCriteria.html#Quartz_Impl_AdoJobStore_TriggerAcquisitionCriteria_ExcludedJobTypeNames">ExcludedJobTypeNames</a> and
+excludes the rows in SQL, where comparison is exact according to the job-class column's
+collation — case sensitivity follows that collation and is not guaranteed to be ordinal. The
+two agree in practice because 4.x writes the name the same way it compares it.
+</p>
+<p>
+A row written by 2.x or 3.x can carry an older spelling, and the read side deliberately never
+rewrites a stored name, so an exclusion will not match such a row. Matching is exact: there is
+no prefix or wildcard form.
+</p>
+<p>
+Entries must be non-blank, and there may be at most 1,000 of them — Oracle's ceiling on an
+<code>IN</code> list. Both are checked here rather than at acquisition time.
+</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>An entry is blank, or there are too many of them.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_Extensibility_TriggerAcquisitionRequest_ExecutionLimits_" data-uid="Quartz.Extensibility.TriggerAcquisitionRequest.ExecutionLimits*"></a>
+
+  <h3 id="Quartz_Extensibility_TriggerAcquisitionRequest_ExecutionLimits" data-uid="Quartz.Extensibility.TriggerAcquisitionRequest.ExecutionLimits">
+  ExecutionLimits
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/TriggerAcquisitionRequest.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Per-execution-group thread counts still available, which is the configured
+<a class="xref" href="Quartz.ExecutionLimits.html">ExecutionLimits</a> less what is already running here. A limit of
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> means unlimited and <code>0</code> means the group must not fire.
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when no execution limits are configured, in which case a store may
+ignore execution groups entirely.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExecutionLimits? ExecutionLimits { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ExecutionLimits.html">ExecutionLimits</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_TriggerAcquisitionRequest_ExecutionLimits_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Only <a class="xref" href="Quartz.ExecutionLimitScope.html#Quartz_ExecutionLimitScope_Node">Node</a> limits arrive already lowered. A
+<a class="xref" href="Quartz.ExecutionLimitScope.html#Quartz_ExecutionLimitScope_Cluster">Cluster</a> limit arrives as configured, because this node's own
+firings are reservations the store is holding and taking them off here as well would count them
+twice. A store that means to honour cluster-scoped limits — every store whose
+<a class="xref" href="Quartz.Extensibility.IJobStore.html#Quartz_Extensibility_IJobStore_Clustered">Clustered</a> can be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> — subtracts its own in-flight
+count when it builds the ledger, through
+<a class="xref" href="Quartz.ExecutionLimits.html#Quartz_ExecutionLimits_CreateSlots_System_Collections_Generic_IReadOnlyCollection_Quartz_ExecutionGroupInFlight__">CreateSlots(IReadOnlyCollection&lt;ExecutionGroupInFlight&gt;?)</a>. A store that does not, or one that has no
+cluster to speak of, simply enforces the configured number, which for a single node is the same
+thing.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_Extensibility_TriggerAcquisitionRequest_MaxCount_" data-uid="Quartz.Extensibility.TriggerAcquisitionRequest.MaxCount*"></a>
+
+  <h3 id="Quartz_Extensibility_TriggerAcquisitionRequest_MaxCount" data-uid="Quartz.Extensibility.TriggerAcquisitionRequest.MaxCount">
+  MaxCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/TriggerAcquisitionRequest.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The maximum number of triggers to return. Must be at least one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxCount { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_TriggerAcquisitionRequest_NoLaterThan_" data-uid="Quartz.Extensibility.TriggerAcquisitionRequest.NoLaterThan*"></a>
+
+  <h3 id="Quartz_Extensibility_TriggerAcquisitionRequest_NoLaterThan" data-uid="Quartz.Extensibility.TriggerAcquisitionRequest.NoLaterThan">
+  NoLaterThan
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/TriggerAcquisitionRequest.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Highest value of <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_NextFireTimeUtc">NextFireTimeUtc</a> of the triggers to acquire. A
+store must not return a trigger that would fire later than this.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required DateTimeOffset NoLaterThan { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_TriggerAcquisitionRequest_TimeWindow_" data-uid="Quartz.Extensibility.TriggerAcquisitionRequest.TimeWindow*"></a>
+
+  <h3 id="Quartz_Extensibility_TriggerAcquisitionRequest_TimeWindow" data-uid="Quartz.Extensibility.TriggerAcquisitionRequest.TimeWindow">
+  TimeWindow
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/TriggerAcquisitionRequest.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How far past <a class="xref" href="Quartz.Extensibility.TriggerAcquisitionRequest.html#Quartz_Extensibility_TriggerAcquisitionRequest_NoLaterThan">NoLaterThan</a> a trigger may fire and still be batched into the
+same acquisition. Must not be negative.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan TimeWindow { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 id="seealso">See Also</h2>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.Extensibility.IJobStore.html#Quartz_Extensibility_IJobStore_AcquireNextTriggers_Quartz_Extensibility_TriggerAcquisitionRequest_System_Threading_CancellationToken_">AcquireNextTriggers</a>(<a class="xref" href="Quartz.Extensibility.TriggerAcquisitionRequest.html">TriggerAcquisitionRequest</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>)</div>
+  </div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/TriggerAcquisitionRequest.cs/#L37" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

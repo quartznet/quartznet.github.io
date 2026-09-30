@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DriverDelegateContext | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DriverDelegateContext | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="The settings a  works from, handed to  once by the job store before the delegate is used.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Impl_AdoJobStore_DriverDelegateContext.md&amp;value=---%0Auid%3A%20Quartz.Impl.AdoJobStore.DriverDelegateContext%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Impl.AdoJobStore.DriverDelegateContext">
+
+
+
+  <h1 id="Quartz_Impl_AdoJobStore_DriverDelegateContext" data-uid="Quartz.Impl.AdoJobStore.DriverDelegateContext" class="text-break">
+Class DriverDelegateContext  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/DriverDelegateContext.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<a class="xref" href="Quartz.Impl.html">Impl</a>.<a class="xref" href="Quartz.Impl.AdoJobStore.html">AdoJobStore</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The settings a <a class="xref" href="Quartz.Impl.AdoJobStore.IDriverDelegate.html">IDriverDelegate</a> works from, handed to
+<a class="xref" href="Quartz.Impl.AdoJobStore.IDriverDelegate.html#Quartz_Impl_AdoJobStore_IDriverDelegate_Initialize_Quartz_Impl_AdoJobStore_DriverDelegateContext_">Initialize(DriverDelegateContext)</a> once by the job store before the delegate is used.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed record DriverDelegateContext : IEquatable&lt;DriverDelegateContext&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">DriverDelegateContext</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Quartz.Impl.AdoJobStore.DriverDelegateContext.html">DriverDelegateContext</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_Impl_AdoJobStore_DriverDelegateContext_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>This arrives after construction rather than through the delegate's constructor because
+<a class="xref" href="Quartz.Impl.AdoJobStore.DriverDelegateContext.html#Quartz_Impl_AdoJobStore_DriverDelegateContext_InstanceId">InstanceId</a> can be generated once the scheduler starts — see the remarks on
+<code>AdoJobStoreBase.InstanceId</code> — so it is not known when the container builds the delegate.</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_Impl_AdoJobStore_DriverDelegateContext_CommandTimeout_" data-uid="Quartz.Impl.AdoJobStore.DriverDelegateContext.CommandTimeout*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_DriverDelegateContext_CommandTimeout" data-uid="Quartz.Impl.AdoJobStore.DriverDelegateContext.CommandTimeout">
+  CommandTimeout
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/DriverDelegateContext.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How long a statement may run before the provider cancels it. <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> leaves the
+provider's own default in place.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan? CommandTimeout { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_DriverDelegateContext_DbProvider_" data-uid="Quartz.Impl.AdoJobStore.DriverDelegateContext.DbProvider*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_DriverDelegateContext_DbProvider" data-uid="Quartz.Impl.AdoJobStore.DriverDelegateContext.DbProvider">
+  DbProvider
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/DriverDelegateContext.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The db provider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required IDbProvider DbProvider { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.Impl.AdoJobStore.Common.IDbProvider.html">IDbProvider</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_DriverDelegateContext_InstanceId_" data-uid="Quartz.Impl.AdoJobStore.DriverDelegateContext.InstanceId*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_DriverDelegateContext_InstanceId" data-uid="Quartz.Impl.AdoJobStore.DriverDelegateContext.InstanceId">
+  InstanceId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/DriverDelegateContext.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The identifier of this scheduler node within a cluster, stored in <code>INSTANCE_NAME</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required string InstanceId { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_DriverDelegateContext_LoggerFactory_" data-uid="Quartz.Impl.AdoJobStore.DriverDelegateContext.LoggerFactory*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_DriverDelegateContext_LoggerFactory" data-uid="Quartz.Impl.AdoJobStore.DriverDelegateContext.LoggerFactory">
+  LoggerFactory
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/DriverDelegateContext.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The factory the delegate creates its logger from, defaulting to
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.abstractions.nullloggerfactory.instance">Instance</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ILoggerFactory LoggerFactory { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.iloggerfactory">ILoggerFactory</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_AdoJobStore_DriverDelegateContext_LoggerFactory_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The job store passes the factory its container gave it, which is what makes a delegate's
+statements and failures visible in an application that never set
+<a class="xref" href="Quartz.Diagnostics.LogProvider.html">LogProvider</a>. A delegate initialized by hand — in a test, in a
+benchmark — is handed nothing and logs nowhere, which is what a delegate outside a scheduler
+should do.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_DriverDelegateContext_ObjectSerializer_" data-uid="Quartz.Impl.AdoJobStore.DriverDelegateContext.ObjectSerializer*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_DriverDelegateContext_ObjectSerializer" data-uid="Quartz.Impl.AdoJobStore.DriverDelegateContext.ObjectSerializer">
+  ObjectSerializer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/DriverDelegateContext.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Object serializer and deserializer strategy to use.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IObjectSerializer? ObjectSerializer { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.Extensibility.IObjectSerializer.html">IObjectSerializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_DriverDelegateContext_SchedulerName_" data-uid="Quartz.Impl.AdoJobStore.DriverDelegateContext.SchedulerName*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_DriverDelegateContext_SchedulerName" data-uid="Quartz.Impl.AdoJobStore.DriverDelegateContext.SchedulerName">
+  SchedulerName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/DriverDelegateContext.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Name of the scheduler whose rows the delegate reads and writes, stored in <code>SCHED_NAME</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required string SchedulerName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_DriverDelegateContext_TablePrefix_" data-uid="Quartz.Impl.AdoJobStore.DriverDelegateContext.TablePrefix*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_DriverDelegateContext_TablePrefix" data-uid="Quartz.Impl.AdoJobStore.DriverDelegateContext.TablePrefix">
+  TablePrefix
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/DriverDelegateContext.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The prefix of all table names.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required string TablePrefix { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_DriverDelegateContext_TimeProvider_" data-uid="Quartz.Impl.AdoJobStore.DriverDelegateContext.TimeProvider*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_DriverDelegateContext_TimeProvider" data-uid="Quartz.Impl.AdoJobStore.DriverDelegateContext.TimeProvider">
+  TimeProvider
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/DriverDelegateContext.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Time provider to use, defaults to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeprovider.system">System</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeProvider TimeProvider { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeprovider">TimeProvider</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_DriverDelegateContext_TriggerPersistenceDelegates_" data-uid="Quartz.Impl.AdoJobStore.DriverDelegateContext.TriggerPersistenceDelegates*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_DriverDelegateContext_TriggerPersistenceDelegates" data-uid="Quartz.Impl.AdoJobStore.DriverDelegateContext.TriggerPersistenceDelegates">
+  TriggerPersistenceDelegates
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/DriverDelegateContext.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Custom trigger persistence delegates the delegate serves beyond the built-in five, registered
+through <code>UseTriggerPersistenceDelegate&lt;T&gt;()</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;ITriggerPersistenceDelegate&gt; TriggerPersistenceDelegates { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.html">ITriggerPersistenceDelegate</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_DriverDelegateContext_TypeLoader_" data-uid="Quartz.Impl.AdoJobStore.DriverDelegateContext.TypeLoader*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_DriverDelegateContext_TypeLoader" data-uid="Quartz.Impl.AdoJobStore.DriverDelegateContext.TypeLoader">
+  TypeLoader
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/DriverDelegateContext.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The type loading strategy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required ITypeLoader TypeLoader { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.Extensibility.ITypeLoader.html">ITypeLoader</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_DriverDelegateContext_UseProperties_" data-uid="Quartz.Impl.AdoJobStore.DriverDelegateContext.UseProperties*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_DriverDelegateContext_UseProperties" data-uid="Quartz.Impl.AdoJobStore.DriverDelegateContext.UseProperties">
+  UseProperties
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/DriverDelegateContext.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether simple <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.specialized.namevaluecollection">NameValueCollection</a> should be used (for serialization safety).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseProperties { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/DriverDelegateContext.cs/#L20" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

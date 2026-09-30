@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Enum SchedulerInstruction | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Enum SchedulerInstruction | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Instructs Scheduler what to do with a trigger and job.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_SchedulerInstruction.md&amp;value=---%0Auid%3A%20Quartz.SchedulerInstruction%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.SchedulerInstruction">
+
+
+
+
+  <h1 id="Quartz_SchedulerInstruction" data-uid="Quartz.SchedulerInstruction" class="text-break">
+Enum SchedulerInstruction  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SchedulerInstruction.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Instructs Scheduler what to do with a trigger and job.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum SchedulerInstruction</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h2 id="fields">Fields
+</h2>
+  <dl class="parameters">
+    <dt id="Quartz_SchedulerInstruction_DeleteTrigger"><code>DeleteTrigger = 3</code></dt>
+  
+  <dd><p>Instructs the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> that the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+wants itself deleted.</p>
+</dd>
+    <dt id="Quartz_SchedulerInstruction_NoInstruction"><code>NoInstruction = 0</code></dt>
+  
+  <dd><p>Instructs the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> that the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+has no further instructions.</p>
+</dd>
+    <dt id="Quartz_SchedulerInstruction_ReExecuteJob"><code>ReExecuteJob = 1</code></dt>
+  
+  <dd><p>Instructs the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> that the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+wants the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> to re-Execute
+immediately. If not in a 'RECOVERING' or 'FAILED_OVER' situation, the
+execution context will be re-used (giving the <a class="xref" href="Quartz.IJob.html">IJob</a> the
+ability to 'see' anything placed in the context by its last execution).</p>
+</dd>
+    <dt id="Quartz_SchedulerInstruction_RetryTrigger"><code>RetryTrigger = 7</code></dt>
+  <dd><p>Instructs the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> that the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> has scheduled a
+retry of the occurrence that just failed, and that the job store should store the retry
+instant and the attempt count it now carries.</p>
+<p>
+A retry needs an instruction of its own because <a class="xref" href="Quartz.SchedulerInstruction.html#Quartz_SchedulerInstruction_NoInstruction">NoInstruction</a> means the
+opposite: neither store writes the trigger at completion, since the regular next fire time
+was already written when the trigger fired. A retry moves that time, so it has to be said.
+</p>
+<p>
+The trigger is left waiting, not in error — a failed occurrence with attempts left is not a
+broken trigger. It is decided by <code>TriggerBase.ExecutionComplete</code> from the trigger's
+<a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_RetryPolicy">RetryPolicy</a>, and never returned by a trigger that has none.
+</p>
+</dd>
+  
+    <dt id="Quartz_SchedulerInstruction_SetAllJobTriggersComplete"><code>SetAllJobTriggersComplete = 4</code></dt>
+  
+  <dd><p>Instructs the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> that all <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+s referencing the same <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> as
+this one should be put in the <a class="xref" href="Quartz.TriggerState.html#Quartz_TriggerState_Complete">Complete</a> state.</p>
+</dd>
+    <dt id="Quartz_SchedulerInstruction_SetAllJobTriggersError"><code>SetAllJobTriggersError = 5</code></dt>
+  
+  <dd><p>Instructs the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> that all <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+s referencing the same <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> as
+this one should be put in the <a class="xref" href="Quartz.TriggerState.html#Quartz_TriggerState_Error">Error</a> state.</p>
+</dd>
+    <dt id="Quartz_SchedulerInstruction_SetTriggerComplete"><code>SetTriggerComplete = 2</code></dt>
+  
+  <dd><p>Instructs the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> that the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+should be put in the <a class="xref" href="Quartz.TriggerState.html#Quartz_TriggerState_Complete">Complete</a> state.</p>
+</dd>
+    <dt id="Quartz_SchedulerInstruction_SetTriggerError"><code>SetTriggerError = 6</code></dt>
+  
+  <dd><p>Instructs the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> that the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+should be put in the <a class="xref" href="Quartz.TriggerState.html#Quartz_TriggerState_Error">Error</a> state.</p>
+</dd>
+  </dl>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SchedulerInstruction.cs/#L26" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
