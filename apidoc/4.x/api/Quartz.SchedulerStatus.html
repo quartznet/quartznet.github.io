@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Enum SchedulerStatus | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Enum SchedulerStatus | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Where a scheduler is in its lifecycle. This is , and it is the whole of a scheduler&#39;s lifecycle state: one value to read and one value to match on, rather than several booleans a reader would have to combine in the right order.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_SchedulerStatus.md&amp;value=---%0Auid%3A%20Quartz.SchedulerStatus%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.SchedulerStatus">
+
+
+
+
+  <h1 id="Quartz_SchedulerStatus" data-uid="Quartz.SchedulerStatus" class="text-break">
+Enum SchedulerStatus  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SchedulerStatus.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Where a scheduler is in its lifecycle. This is <a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_Status">Status</a>, and it is the whole
+of a scheduler's lifecycle state: one value to read and one value to match on, rather than several
+booleans a reader would have to combine in the right order.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum SchedulerStatus</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h2 id="fields">Fields
+</h2>
+  <dl class="parameters">
+    <dt id="Quartz_SchedulerStatus_Created"><code>Created = 1</code></dt>
+  <dd><p>The scheduler has been built but never started, so it fires nothing yet.</p>
+<p>Distinct from <a class="xref" href="Quartz.SchedulerStatus.html#Quartz_SchedulerStatus_Standby">Standby</a>, which a scheduler reaches by being started and then stood
+down: both fire nothing, but only one of them has ever run, and only one has a
+<a class="xref" href="Quartz.SchedulerMetadata.html#Quartz_SchedulerMetadata_RunningSince">RunningSince</a>. Standing a never-started scheduler down leaves it
+here, since it already fires nothing and &quot;never started&quot; is the more precise answer.</p>
+</dd>
+  
+    <dt id="Quartz_SchedulerStatus_Running"><code>Running = 2</code></dt>
+  
+  <dd><p>The scheduler has been started and is firing triggers.</p>
+</dd>
+    <dt id="Quartz_SchedulerStatus_Shutdown"><code>Shutdown = 5</code></dt>
+  
+  <dd><p>The scheduler has been shut down and cannot be restarted. Its plugins, job store and thread pool
+are down with it.</p>
+</dd>
+    <dt id="Quartz_SchedulerStatus_ShuttingDown"><code>ShuttingDown = 4</code></dt>
+  
+  <dd><p><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_Shutdown_System_Boolean_System_Threading_CancellationToken_">Shutdown(bool, CancellationToken)</a> has been called and is running. The
+scheduler no longer fires triggers and no longer accepts work, and it can neither be restarted
+nor stood down - the only state left is <a class="xref" href="Quartz.SchedulerStatus.html#Quartz_SchedulerStatus_Shutdown">Shutdown</a>.</p>
+</dd>
+    <dt id="Quartz_SchedulerStatus_Standby"><code>Standby = 3</code></dt>
+  
+  <dd><p>The scheduler is in standby: it is alive, but fires nothing until it is started again.</p>
+</dd>
+    <dt id="Quartz_SchedulerStatus_Unknown"><code>Unknown = 0</code></dt>
+  
+  <dd><p>The scheduler's state could not be determined - a remote scheduler that did not answer, for
+instance. It is not a state a scheduler is ever in, only one a reader can be left with.</p>
+</dd>
+  </dl>
+
+
+  <h2 id="Quartz_SchedulerStatus_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+The members are declared in lifecycle order, and a scheduler moves through them one way:
+<a class="xref" href="Quartz.SchedulerStatus.html#Quartz_SchedulerStatus_Created">Created</a> to <a class="xref" href="Quartz.SchedulerStatus.html#Quartz_SchedulerStatus_Running">Running</a>, back and forth between <a class="xref" href="Quartz.SchedulerStatus.html#Quartz_SchedulerStatus_Running">Running</a> and
+<a class="xref" href="Quartz.SchedulerStatus.html#Quartz_SchedulerStatus_Standby">Standby</a>, then <a class="xref" href="Quartz.SchedulerStatus.html#Quartz_SchedulerStatus_ShuttingDown">ShuttingDown</a> and finally <a class="xref" href="Quartz.SchedulerStatus.html#Quartz_SchedulerStatus_Shutdown">Shutdown</a>. Only
+the middle pair is reversible; <a class="xref" href="Quartz.SchedulerStatus.html#Quartz_SchedulerStatus_Shutdown">Shutdown</a> is terminal.
+</p>
+<p>
+The member names are a wire contract: the HTTP API returns this enum as its name, and still accepts
+the numeric form. Names are never changed, and new members are appended.
+</p>
+</div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SchedulerStatus.cs/#L41" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
