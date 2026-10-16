@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class QuartzServiceCollectionExtensions | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class QuartzServiceCollectionExtensions | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Registers Quartz schedulers, and the hosted service that runs them, into an application&#39;s container.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_QuartzServiceCollectionExtensions.md&amp;value=---%0Auid%3A%20Quartz.QuartzServiceCollectionExtensions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.QuartzServiceCollectionExtensions">
+
+
+
+  <h1 id="Quartz_QuartzServiceCollectionExtensions" data-uid="Quartz.QuartzServiceCollectionExtensions" class="text-break">
+Class QuartzServiceCollectionExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Hosting/QuartzServiceCollectionExtensions.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Registers Quartz schedulers, and the hosted service that runs them, into an application's
+container.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class QuartzServiceCollectionExtensions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">QuartzServiceCollectionExtensions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_QuartzServiceCollectionExtensions_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>The other half of this class lives beside the hosted service it registers, in
+<code>Hosting/QuartzServiceCollectionExtensions.cs</code>. What a scheduler <em>carries</em> — jobs,
+triggers, calendars — is added through <a class="xref" href="Quartz.QuartzBuilderExtensions.html">QuartzBuilderExtensions</a>, which extends
+<a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a> rather than <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a>.</p>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_QuartzServiceCollectionExtensions_AddQuartz_" data-uid="Quartz.QuartzServiceCollectionExtensions.AddQuartz*"></a>
+
+  <h3 id="Quartz_QuartzServiceCollectionExtensions_AddQuartz_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_Configuration_IConfiguration_System_Action_Quartz_IQuartzBuilder__" data-uid="Quartz.QuartzServiceCollectionExtensions.AddQuartz(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Quartz.IQuartzBuilder})">
+  AddQuartz(IServiceCollection, IConfiguration, Action&lt;IQuartzBuilder&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/QuartzServiceCollectionExtensions.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a Quartz scheduler from a configuration section.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddQuartz(this IServiceCollection services, IConfiguration configuration, Action&lt;IQuartzBuilder&gt;? configure = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+    <dt><code>configuration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration">IConfiguration</a></dt>
+    <dd></dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzServiceCollectionExtensions_AddQuartz_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_Configuration_IConfiguration_System_Action_Quartz_IQuartzBuilder___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Hierarchical sections such as <code>Scheduler</code> and <code>ThreadPool</code> bind onto the typed options
+directly. Flat <code>quartz.*</code> keys are still accepted and mean the same thing. Several
+schedulers described by one section are registered with
+<a class="xref" href="Quartz.QuartzServiceCollectionExtensions.html#Quartz_QuartzServiceCollectionExtensions_AddQuartzSchedulers_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_Configuration_IConfiguration_System_Action_Quartz_IQuartzBuilder__">AddQuartzSchedulers(IServiceCollection, IConfiguration, Action&lt;IQuartzBuilder&gt;?)</a>.
+</p>
+<p>
+A scheduler is described by six things, applied in this order — which is what decides who wins
+when two of them say something about the same setting:
+</p>
+<ol><li>
+The flat <code>quartz.*</code> properties are recorded in <a class="xref" href="Quartz.QuartzOptions.html#Quartz_QuartzOptions_Properties">Properties</a>, so
+the parts that read the property bag directly — plugins, execution limits — can see them.
+</li><li>
+Those properties are translated into typed options.
+</li><li>
+Properties contributed later by configuring <a class="xref" href="Quartz.QuartzOptions.html">QuartzOptions</a> are translated too, which
+is what makes <code>services.Configure&lt;QuartzOptions&gt;</code> equivalent to passing them here.
+</li><li>
+The <code class="paramref">configure</code> callback runs. Options are <em>last-wins</em>, so anything it
+sets is applied over the property-derived values: configuration written in code beats a string.
+</li><li>
+The implementations the properties name — a job store type, a thread pool type, a serializer —
+are registered. Registration is <em>first-wins</em>, so this comes after the callback: a store
+chosen by <code>UsePersistentStore</code> has to beat a leftover <code>quartz.jobStore.type</code> from an
+old configuration file. Code beats strings in both directions, opposite orders notwithstanding.
+</li><li>
+Quartz's own defaults are registered last, so an explicitly configured job store, thread pool or
+serializer is never beaten to the registration by the fallback it was meant to replace.
+</li></ol>
+<p>
+The scheduler this registers is the container's unkeyed <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>, which is what
+<code>GetRequiredService&lt;IScheduler&gt;()</code> answers with. Registering it when something else
+already owns that slot throws an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a> rather than quietly
+leaving "the scheduler" meaning the other one; <code>AddQuartzHttpClient</code> is the one in the box
+that takes it. The other order is fine and needs no thought: <code>AddQuartz()</code> followed by
+<code>AddQuartzHttpClient(…)</code> leaves the local default scheduler unkeyed and the remote one
+reachable as <code>GetRequiredKeyedService&lt;IScheduler&gt;(schedulerName)</code>.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzServiceCollectionExtensions_AddQuartz_" data-uid="Quartz.QuartzServiceCollectionExtensions.AddQuartz*"></a>
+
+  <h3 id="Quartz_QuartzServiceCollectionExtensions_AddQuartz_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Quartz_IQuartzBuilder__" data-uid="Quartz.QuartzServiceCollectionExtensions.AddQuartz(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Quartz.IQuartzBuilder})">
+  AddQuartz(IServiceCollection, Action&lt;IQuartzBuilder&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/QuartzServiceCollectionExtensions.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a Quartz scheduler.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddQuartz(this IServiceCollection services, Action&lt;IQuartzBuilder&gt;? configure = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzServiceCollectionExtensions_AddQuartz_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Quartz_IQuartzBuilder___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Hierarchical sections such as <code>Scheduler</code> and <code>ThreadPool</code> bind onto the typed options
+directly. Flat <code>quartz.*</code> keys are still accepted and mean the same thing. Several
+schedulers described by one section are registered with
+<a class="xref" href="Quartz.QuartzServiceCollectionExtensions.html#Quartz_QuartzServiceCollectionExtensions_AddQuartzSchedulers_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_Configuration_IConfiguration_System_Action_Quartz_IQuartzBuilder__">AddQuartzSchedulers(IServiceCollection, IConfiguration, Action&lt;IQuartzBuilder&gt;?)</a>.
+</p>
+<p>
+A scheduler is described by six things, applied in this order — which is what decides who wins
+when two of them say something about the same setting:
+</p>
+<ol><li>
+The flat <code>quartz.*</code> properties are recorded in <a class="xref" href="Quartz.QuartzOptions.html#Quartz_QuartzOptions_Properties">Properties</a>, so
+the parts that read the property bag directly — plugins, execution limits — can see them.
+</li><li>
+Those properties are translated into typed options.
+</li><li>
+Properties contributed later by configuring <a class="xref" href="Quartz.QuartzOptions.html">QuartzOptions</a> are translated too, which
+is what makes <code>services.Configure&lt;QuartzOptions&gt;</code> equivalent to passing them here.
+</li><li>
+The <code class="paramref">configure</code> callback runs. Options are <em>last-wins</em>, so anything it
+sets is applied over the property-derived values: configuration written in code beats a string.
+</li><li>
+The implementations the properties name — a job store type, a thread pool type, a serializer —
+are registered. Registration is <em>first-wins</em>, so this comes after the callback: a store
+chosen by <code>UsePersistentStore</code> has to beat a leftover <code>quartz.jobStore.type</code> from an
+old configuration file. Code beats strings in both directions, opposite orders notwithstanding.
+</li><li>
+Quartz's own defaults are registered last, so an explicitly configured job store, thread pool or
+serializer is never beaten to the registration by the fallback it was meant to replace.
+</li></ol>
+<p>
+The scheduler this registers is the container's unkeyed <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>, which is what
+<code>GetRequiredService&lt;IScheduler&gt;()</code> answers with. Registering it when something else
+already owns that slot throws an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a> rather than quietly
+leaving "the scheduler" meaning the other one; <code>AddQuartzHttpClient</code> is the one in the box
+that takes it. The other order is fine and needs no thought: <code>AddQuartz()</code> followed by
+<code>AddQuartzHttpClient(…)</code> leaves the local default scheduler unkeyed and the remote one
+reachable as <code>GetRequiredKeyedService&lt;IScheduler&gt;(schedulerName)</code>.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzServiceCollectionExtensions_AddQuartz_" data-uid="Quartz.QuartzServiceCollectionExtensions.AddQuartz*"></a>
+
+  <h3 id="Quartz_QuartzServiceCollectionExtensions_AddQuartz_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___System_Action_Quartz_IQuartzBuilder__" data-uid="Quartz.QuartzServiceCollectionExtensions.AddQuartz(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}},System.Action{Quartz.IQuartzBuilder})">
+  AddQuartz(IServiceCollection, IEnumerable&lt;KeyValuePair&lt;string, string?&gt;&gt;, Action&lt;IQuartzBuilder&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/QuartzServiceCollectionExtensions.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a Quartz scheduler, seeded with flat <code>quartz.*</code> properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddQuartz(this IServiceCollection services, IEnumerable&lt;KeyValuePair&lt;string, string?&gt;&gt; properties, Action&lt;IQuartzBuilder&gt;? configure = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The service collection to register into.</p>
+</dd>
+    <dt><code>properties</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
+    <dd><p>The flat <code>quartz.*</code> properties, in the shape every dictionary already has — a
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary&lt;TKey, TValue&gt;</a>, an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary&lt;TKey, TValue&gt;</a> and
+<a class="xref" href="Quartz.QuartzOptions.html#Quartz_QuartzOptions_Properties">Properties</a> all go in without a conversion step. They are checked
+against the keys Quartz reads, as they are on the standalone builder, so a misspelling — or a key
+4.0 stopped reading — is reported rather than silently ignored. Set
+<code>quartz.checkConfiguration</code> to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> to allow keys of your own.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a>&gt;</dt>
+    <dd><p>Configures the scheduler.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzServiceCollectionExtensions_AddQuartz_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___System_Action_Quartz_IQuartzBuilder___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Hierarchical sections such as <code>Scheduler</code> and <code>ThreadPool</code> bind onto the typed options
+directly. Flat <code>quartz.*</code> keys are still accepted and mean the same thing. Several
+schedulers described by one section are registered with
+<a class="xref" href="Quartz.QuartzServiceCollectionExtensions.html#Quartz_QuartzServiceCollectionExtensions_AddQuartzSchedulers_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_Configuration_IConfiguration_System_Action_Quartz_IQuartzBuilder__">AddQuartzSchedulers(IServiceCollection, IConfiguration, Action&lt;IQuartzBuilder&gt;?)</a>.
+</p>
+<p>
+A scheduler is described by six things, applied in this order — which is what decides who wins
+when two of them say something about the same setting:
+</p>
+<ol><li>
+The flat <code>quartz.*</code> properties are recorded in <a class="xref" href="Quartz.QuartzOptions.html#Quartz_QuartzOptions_Properties">Properties</a>, so
+the parts that read the property bag directly — plugins, execution limits — can see them.
+</li><li>
+Those properties are translated into typed options.
+</li><li>
+Properties contributed later by configuring <a class="xref" href="Quartz.QuartzOptions.html">QuartzOptions</a> are translated too, which
+is what makes <code>services.Configure&lt;QuartzOptions&gt;</code> equivalent to passing them here.
+</li><li>
+The <code class="paramref">configure</code> callback runs. Options are <em>last-wins</em>, so anything it
+sets is applied over the property-derived values: configuration written in code beats a string.
+</li><li>
+The implementations the properties name — a job store type, a thread pool type, a serializer —
+are registered. Registration is <em>first-wins</em>, so this comes after the callback: a store
+chosen by <code>UsePersistentStore</code> has to beat a leftover <code>quartz.jobStore.type</code> from an
+old configuration file. Code beats strings in both directions, opposite orders notwithstanding.
+</li><li>
+Quartz's own defaults are registered last, so an explicitly configured job store, thread pool or
+serializer is never beaten to the registration by the fallback it was meant to replace.
+</li></ol>
+<p>
+The scheduler this registers is the container's unkeyed <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>, which is what
+<code>GetRequiredService&lt;IScheduler&gt;()</code> answers with. Registering it when something else
+already owns that slot throws an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a> rather than quietly
+leaving "the scheduler" meaning the other one; <code>AddQuartzHttpClient</code> is the one in the box
+that takes it. The other order is fine and needs no thought: <code>AddQuartz()</code> followed by
+<code>AddQuartzHttpClient(…)</code> leaves the local default scheduler unkeyed and the remote one
+reachable as <code>GetRequiredKeyedService&lt;IScheduler&gt;(schedulerName)</code>.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzServiceCollectionExtensions_AddQuartz_" data-uid="Quartz.QuartzServiceCollectionExtensions.AddQuartz*"></a>
+
+  <h3 id="Quartz_QuartzServiceCollectionExtensions_AddQuartz_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Collections_Specialized_NameValueCollection_System_Action_Quartz_IQuartzBuilder__" data-uid="Quartz.QuartzServiceCollectionExtensions.AddQuartz(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Collections.Specialized.NameValueCollection,System.Action{Quartz.IQuartzBuilder})">
+  AddQuartz(IServiceCollection, NameValueCollection, Action&lt;IQuartzBuilder&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/QuartzServiceCollectionExtensions.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a Quartz scheduler, seeded with flat <code>quartz.*</code> properties held in a
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.specialized.namevaluecollection">NameValueCollection</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddQuartz(this IServiceCollection services, NameValueCollection properties, Action&lt;IQuartzBuilder&gt;? configure = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The service collection to register into.</p>
+</dd>
+    <dt><code>properties</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.specialized.namevaluecollection">NameValueCollection</a></dt>
+    <dd><p>The flat <code>quartz.*</code> properties.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a>&gt;</dt>
+    <dd><p>Configures the scheduler.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzServiceCollectionExtensions_AddQuartz_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Collections_Specialized_NameValueCollection_System_Action_Quartz_IQuartzBuilder___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.specialized.namevaluecollection">NameValueCollection</a> is what a caller migrating from 3.x already holds — it is what
+<code>StdSchedulerFactory</code> took — so it stays a single call. Everything else about it is
+<a class="xref" href="Quartz.QuartzServiceCollectionExtensions.html#Quartz_QuartzServiceCollectionExtensions_AddQuartz_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___System_Action_Quartz_IQuartzBuilder__">AddQuartz(IServiceCollection, IEnumerable&lt;KeyValuePair&lt;string, string?&gt;&gt;, Action&lt;IQuartzBuilder&gt;?)</a>,
+which this forwards to.</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzServiceCollectionExtensions_AddQuartz_" data-uid="Quartz.QuartzServiceCollectionExtensions.AddQuartz*"></a>
+
+  <h3 id="Quartz_QuartzServiceCollectionExtensions_AddQuartz_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_Microsoft_Extensions_Configuration_IConfiguration_System_Action_Quartz_IQuartzBuilder__" data-uid="Quartz.QuartzServiceCollectionExtensions.AddQuartz(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Quartz.IQuartzBuilder})">
+  AddQuartz(IServiceCollection, string, IConfiguration, Action&lt;IQuartzBuilder&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/QuartzServiceCollectionExtensions.cs/#L336"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a named Quartz scheduler from a configuration section.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddQuartz(this IServiceCollection services, string name, IConfiguration configuration, Action&lt;IQuartzBuilder&gt;? configure = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>configuration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration">IConfiguration</a></dt>
+    <dd></dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_QuartzServiceCollectionExtensions_AddQuartz_" data-uid="Quartz.QuartzServiceCollectionExtensions.AddQuartz*"></a>
+
+  <h3 id="Quartz_QuartzServiceCollectionExtensions_AddQuartz_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_System_Action_Quartz_IQuartzBuilder__" data-uid="Quartz.QuartzServiceCollectionExtensions.AddQuartz(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Action{Quartz.IQuartzBuilder})">
+  AddQuartz(IServiceCollection, string, Action&lt;IQuartzBuilder&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/QuartzServiceCollectionExtensions.cs/#L293"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a named Quartz scheduler, so several independent schedulers can share a container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddQuartz(this IServiceCollection services, string name, Action&lt;IQuartzBuilder&gt;? configure = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzServiceCollectionExtensions_AddQuartz_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_System_Action_Quartz_IQuartzBuilder___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The name is the scheduler's instance name, the key its components are registered under, and the
+name of its options, so its registrations and its configuration always agree.</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzServiceCollectionExtensions_AddQuartz_" data-uid="Quartz.QuartzServiceCollectionExtensions.AddQuartz*"></a>
+
+  <h3 id="Quartz_QuartzServiceCollectionExtensions_AddQuartz_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___System_Action_Quartz_IQuartzBuilder__" data-uid="Quartz.QuartzServiceCollectionExtensions.AddQuartz(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}},System.Action{Quartz.IQuartzBuilder})">
+  AddQuartz(IServiceCollection, string, IEnumerable&lt;KeyValuePair&lt;string, string?&gt;&gt;, Action&lt;IQuartzBuilder&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/QuartzServiceCollectionExtensions.cs/#L306"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a named Quartz scheduler, seeded with flat <code>quartz.*</code> properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddQuartz(this IServiceCollection services, string name, IEnumerable&lt;KeyValuePair&lt;string, string?&gt;&gt; properties, Action&lt;IQuartzBuilder&gt;? configure = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>properties</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
+    <dd><p>The flat <code>quartz.*</code> properties, in the shape every dictionary already has — a
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary&lt;TKey, TValue&gt;</a>, an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary&lt;TKey, TValue&gt;</a> and
+<a class="xref" href="Quartz.QuartzOptions.html#Quartz_QuartzOptions_Properties">Properties</a> all go in without a conversion step. They are checked
+against the keys Quartz reads, as they are on the standalone builder, so a misspelling — or a key
+4.0 stopped reading — is reported rather than silently ignored. Set
+<code>quartz.checkConfiguration</code> to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> to allow keys of your own.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_QuartzServiceCollectionExtensions_AddQuartz_" data-uid="Quartz.QuartzServiceCollectionExtensions.AddQuartz*"></a>
+
+  <h3 id="Quartz_QuartzServiceCollectionExtensions_AddQuartz_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_System_Collections_Specialized_NameValueCollection_System_Action_Quartz_IQuartzBuilder__" data-uid="Quartz.QuartzServiceCollectionExtensions.AddQuartz(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Collections.Specialized.NameValueCollection,System.Action{Quartz.IQuartzBuilder})">
+  AddQuartz(IServiceCollection, string, NameValueCollection, Action&lt;IQuartzBuilder&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/QuartzServiceCollectionExtensions.cs/#L322"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a named Quartz scheduler, seeded with flat <code>quartz.*</code> properties held in a
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.specialized.namevaluecollection">NameValueCollection</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddQuartz(this IServiceCollection services, string name, NameValueCollection properties, Action&lt;IQuartzBuilder&gt;? configure = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>properties</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.specialized.namevaluecollection">NameValueCollection</a></dt>
+    <dd></dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzServiceCollectionExtensions_AddQuartz_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_System_Collections_Specialized_NameValueCollection_System_Action_Quartz_IQuartzBuilder___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.specialized.namevaluecollection">NameValueCollection</a> is what a caller migrating from 3.x already holds — it is what
+<code>StdSchedulerFactory</code> took — so it stays a single call. Everything else about it is
+<a class="xref" href="Quartz.QuartzServiceCollectionExtensions.html#Quartz_QuartzServiceCollectionExtensions_AddQuartz_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___System_Action_Quartz_IQuartzBuilder__">AddQuartz(IServiceCollection, IEnumerable&lt;KeyValuePair&lt;string, string?&gt;&gt;, Action&lt;IQuartzBuilder&gt;?)</a>,
+which this forwards to.</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzServiceCollectionExtensions_AddQuartzExecutionHistory_" data-uid="Quartz.QuartzServiceCollectionExtensions.AddQuartzExecutionHistory*"></a>
+
+  <h3 id="Quartz_QuartzServiceCollectionExtensions_AddQuartzExecutionHistory_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Quartz_ExecutionHistoryOptions__" data-uid="Quartz.QuartzServiceCollectionExtensions.AddQuartzExecutionHistory(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Quartz.ExecutionHistoryOptions})">
+  AddQuartzExecutionHistory(IServiceCollection, Action&lt;ExecutionHistoryOptions&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/QuartzExecutionHistoryServiceCollectionExtensions.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Records what every scheduler in the container runs and misses, so that a dashboard, the HTTP API
+or code of your own can read it back.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddQuartzExecutionHistory(this IServiceCollection services, Action&lt;ExecutionHistoryOptions&gt;? configure = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The service collection to register into.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.ExecutionHistoryOptions.html">ExecutionHistoryOptions</a>&gt;</dt>
+    <dd><p>Configures the bounds the history is kept under.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The same collection, so calls can be chained.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzServiceCollectionExtensions_AddQuartzExecutionHistory_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Quartz_ExecutionHistoryOptions___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Registers three things: the recorder, added to every scheduler in the container through
+<a class="xref" href="Quartz.QuartzServiceCollectionExtensions.html#Quartz_QuartzServiceCollectionExtensions_ConfigureAllQuartzSchedulers_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Quartz_IQuartzBuilder__">ConfigureAllQuartzSchedulers(IServiceCollection, Action&lt;IQuartzBuilder&gt;)</a> so a named scheduler is covered too; the bounds the
+history is kept under; and an <a class="xref" href="Quartz.Extensibility.IExecutionHistoryStore.html">IExecutionHistoryStore</a> to record into, with
+<code>TryAdd</code> — so an application that registers a store of its own <em>before</em> this keeps it,
+and one that wants history it can query after a restart registers that store rather than
+configuring this one.
+</p>
+<p>
+Calling it twice installs one recorder. It is called by <code>AddQuartzHttpApi()</code> and by
+<code>AddQuartzDashboard()</code>, so an application that maps both — or that calls it itself as well —
+must not end up with every execution recorded two or three times. As with
+<a class="xref" href="Quartz.QuartzServiceCollectionExtensions.html#Quartz_QuartzServiceCollectionExtensions_ConfigureAllQuartzSchedulers_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Quartz_IQuartzBuilder__">ConfigureAllQuartzSchedulers(IServiceCollection, Action&lt;IQuartzBuilder&gt;)</a>, the order against <code>AddQuartz</code> does not matter.
+</p>
+<p>
+Set <a class="xref" href="Quartz.ExecutionHistoryOptions.html#Quartz_ExecutionHistoryOptions_MaxEntriesPerScheduler">MaxEntriesPerScheduler</a> to <code>0</code> to record nothing,
+which is how a process that maps the HTTP API opts out of the history it turns on.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzServiceCollectionExtensions_AddQuartzHostedService_" data-uid="Quartz.QuartzServiceCollectionExtensions.AddQuartzHostedService*"></a>
+
+  <h3 id="Quartz_QuartzServiceCollectionExtensions_AddQuartzHostedService_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Quartz_QuartzHostedServiceOptions__" data-uid="Quartz.QuartzServiceCollectionExtensions.AddQuartzHostedService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Quartz.QuartzHostedServiceOptions})">
+  AddQuartzHostedService(IServiceCollection, Action&lt;QuartzHostedServiceOptions&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Hosting/QuartzServiceCollectionExtensions.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Quartz.QuartzHostedService.html">QuartzHostedService</a> to the <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a>, which starts
+and stops every scheduler in the container with the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddQuartzHostedService(this IServiceCollection services, Action&lt;QuartzHostedServiceOptions&gt;? configure = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a>.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.QuartzHostedServiceOptions.html">QuartzHostedServiceOptions</a>&gt;</dt>
+    <dd><p>A delegate that is used to configure an <a class="xref" href="Quartz.QuartzHostedServiceOptions.html">QuartzHostedServiceOptions</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzServiceCollectionExtensions_AddQuartzHostedService_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Quartz_QuartzHostedServiceOptions___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The options configured here apply to every scheduler, which is what they have always meant. One
+scheduler that has to differ says so with
+<a class="xref" href="Quartz.QuartzServiceCollectionExtensions.html#Quartz_QuartzServiceCollectionExtensions_AddQuartzHostedService_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_System_Action_Quartz_QuartzHostedServiceOptions__">AddQuartzHostedService(IServiceCollection, string, Action&lt;QuartzHostedServiceOptions&gt;?)</a>.</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzServiceCollectionExtensions_AddQuartzHostedService_" data-uid="Quartz.QuartzServiceCollectionExtensions.AddQuartzHostedService*"></a>
+
+  <h3 id="Quartz_QuartzServiceCollectionExtensions_AddQuartzHostedService_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_System_Action_Quartz_QuartzHostedServiceOptions__" data-uid="Quartz.QuartzServiceCollectionExtensions.AddQuartzHostedService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Action{Quartz.QuartzHostedServiceOptions})">
+  AddQuartzHostedService(IServiceCollection, string, Action&lt;QuartzHostedServiceOptions&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Hosting/QuartzServiceCollectionExtensions.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures how a named scheduler is started and stopped by the hosted service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddQuartzHostedService(this IServiceCollection services, string schedulerName, Action&lt;QuartzHostedServiceOptions&gt;? configure = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a>.</p>
+</dd>
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name the scheduler was registered under with <code>AddQuartz(name, …)</code>.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.QuartzHostedServiceOptions.html">QuartzHostedServiceOptions</a>&gt;</dt>
+    <dd><p>A delegate that is used to configure an <a class="xref" href="Quartz.QuartzHostedServiceOptions.html">QuartzHostedServiceOptions</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzServiceCollectionExtensions_AddQuartzHostedService_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_System_Action_Quartz_QuartzHostedServiceOptions___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The hosted service starts every scheduler in the container; this says how one of them is treated.
+A scheduler that should wait for application startup while another does not, or that needs longer
+to drain on shutdown, is configured here. It refines the settings shared by every scheduler,
+whichever order the two calls are made in.</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzServiceCollectionExtensions_AddQuartzHostedService_" data-uid="Quartz.QuartzServiceCollectionExtensions.AddQuartzHostedService*"></a>
+
+  <h3 id="Quartz_QuartzServiceCollectionExtensions_AddQuartzHostedService__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Quartz_QuartzHostedServiceOptions__" data-uid="Quartz.QuartzServiceCollectionExtensions.AddQuartzHostedService``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Quartz.QuartzHostedServiceOptions})">
+  AddQuartzHostedService&lt;T&gt;(IServiceCollection, Action&lt;QuartzHostedServiceOptions&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Hosting/QuartzServiceCollectionExtensions.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a hosted service of your own deriving from <a class="xref" href="Quartz.QuartzHostedService.html">QuartzHostedService</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddQuartzHostedService&lt;T&gt;(this IServiceCollection services, Action&lt;QuartzHostedServiceOptions&gt;? configure = null) where T : QuartzHostedService</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a>.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.QuartzHostedServiceOptions.html">QuartzHostedServiceOptions</a>&gt;</dt>
+    <dd><p>A delegate that is used to configure an <a class="xref" href="Quartz.QuartzHostedServiceOptions.html">QuartzHostedServiceOptions</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>Type extending the <a class="xref" href="Quartz.QuartzHostedService.html">QuartzHostedService</a> class.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzServiceCollectionExtensions_AddQuartzHostedService__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Quartz_QuartzHostedServiceOptions___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The options configured here apply to every scheduler, which is what they have always meant. One
+scheduler that has to differ says so with
+<a class="xref" href="Quartz.QuartzServiceCollectionExtensions.html#Quartz_QuartzServiceCollectionExtensions_AddQuartzHostedService_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_System_Action_Quartz_QuartzHostedServiceOptions__">AddQuartzHostedService(IServiceCollection, string, Action&lt;QuartzHostedServiceOptions&gt;?)</a>.</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzServiceCollectionExtensions_AddQuartzSchedulers_" data-uid="Quartz.QuartzServiceCollectionExtensions.AddQuartzSchedulers*"></a>
+
+  <h3 id="Quartz_QuartzServiceCollectionExtensions_AddQuartzSchedulers_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_Configuration_IConfiguration_System_Action_Quartz_IQuartzBuilder__" data-uid="Quartz.QuartzServiceCollectionExtensions.AddQuartzSchedulers(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Quartz.IQuartzBuilder})">
+  AddQuartzSchedulers(IServiceCollection, IConfiguration, Action&lt;IQuartzBuilder&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/QuartzServiceCollectionExtensions.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers one named Quartz scheduler per child of the section's <code>Schedulers</code> sub-section.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddQuartzSchedulers(this IServiceCollection services, IConfiguration configuration, Action&lt;IQuartzBuilder&gt;? configure = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The service collection to register into.</p>
+</dd>
+    <dt><code>configuration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration">IConfiguration</a></dt>
+    <dd><p>The Quartz configuration section, containing a <code>Schedulers</code> sub-section.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a>&gt;</dt>
+    <dd><p>Applied to every scheduler described by the section.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzServiceCollectionExtensions_AddQuartzSchedulers_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_Configuration_IConfiguration_System_Action_Quartz_IQuartzBuilder___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Each child's key is the scheduler's name, and its contents are that scheduler's configuration —
+exactly what <code>AddQuartz(name, section)</code> would be given. The fan-out is its own method
+because registering several schedulers is a different act from registering one, and reading it
+out of the shape of a configuration file made <code>AddQuartz</code> mean two things depending on data
+it was handed.
+</p>
+<p>
+The section is a parameter because this receiver has no configuration of its own, which is the
+rule every method here follows: a service collection is handed its configuration and never goes
+looking for one, so <code>AddQuartz(configure)</code> means a scheduler configured entirely in code
+rather than one that quietly reads whatever <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration">IConfiguration</a> the container holds. On
+a host application builder, which does hold configuration, this is
+<code>builder.AddQuartzSchedulers(…)</code> and takes no section — the same difference
+<code>AddQuartz</code> has between the two receivers.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzServiceCollectionExtensions_ConfigureAllQuartzSchedulers_" data-uid="Quartz.QuartzServiceCollectionExtensions.ConfigureAllQuartzSchedulers*"></a>
+
+  <h3 id="Quartz_QuartzServiceCollectionExtensions_ConfigureAllQuartzSchedulers_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Quartz_IQuartzBuilder__" data-uid="Quartz.QuartzServiceCollectionExtensions.ConfigureAllQuartzSchedulers(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Quartz.IQuartzBuilder})">
+  ConfigureAllQuartzSchedulers(IServiceCollection, Action&lt;IQuartzBuilder&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Configuration/QuartzServiceCollectionExtensions.cs/#L258"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures every Quartz scheduler in the container, whenever it was registered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection ConfigureAllQuartzSchedulers(this IServiceCollection services, Action&lt;IQuartzBuilder&gt; configure)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The service collection to register into.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a>&gt;</dt>
+    <dd><p>Applied to every scheduler in the container.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzServiceCollectionExtensions_ConfigureAllQuartzSchedulers_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Quartz_IQuartzBuilder___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This is the options pattern's <code>ConfigureAll</code>, for schedulers. <code class="paramref">configure</code> is
+applied to every scheduler <code>AddQuartz()</code>, <code>AddQuartz(name, …)</code> or
+<code>AddQuartzSchedulers(…)</code> registers in this container: the ones already registered when this
+is called, and the ones registered after it. <strong>The order of the calls does not matter</strong>
+— which is the point, since a package that adds something to every scheduler cannot know whether
+the application registers its schedulers before or after calling it.
+</p>
+<p>
+The delegate is given a builder <em>per scheduler</em>, so what it registers lands under that
+scheduler's own service key, exactly as if it had been written inside that scheduler's
+<code>AddQuartz(name, q =&gt; …)</code> callback. A plugin or listener added here is therefore one
+instance per scheduler, each initialized with the name of the scheduler it belongs to — not one
+instance shared between them, which would leave each scheduler but the last with a component
+pointing at somebody else's.
+</p>
+<p>
+It runs after each scheduler's own configuration callback, which is what makes the order of the two
+calls immaterial: a scheduler registered later is configured then, and one registered earlier is
+configured here, and both are after its own callback either way. One consequence is worth naming:
+a middleware added here always composes <em>inside</em> one a scheduler's own <code>AddQuartz</code>
+callback added, because middleware runs in registration order and this registration is always the
+later of the two. That is the right way round — what a library wraps, an outbox or a unit of work,
+belongs within what the application wraps, such as its tenant scope. The usual precedence follows —
+registration is first-wins, so a component a scheduler chose for itself is not replaced by one
+chosen here; options are last-wins, so a value set here overrides the same option set on one
+scheduler, exactly as <code>ConfigureAll&lt;TOptions&gt;</code> overrides an earlier named
+<code>Configure</code>.
+</p>
+<p>
+Remote schedulers registered with <code>AddQuartzHttpClient</code> are not built by a builder and are
+skipped. Calling this when no scheduler is registered at all is not an error: the delegate simply
+applies to nothing.
+</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Hosting/QuartzServiceCollectionExtensions.cs/#L9" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

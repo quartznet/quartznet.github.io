@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SimpleScheduleBuilder | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SimpleScheduleBuilder | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="SimpleScheduleBuilder is a  that defines strict/literal interval-based schedules for s.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_SimpleScheduleBuilder.md&amp;value=---%0Auid%3A%20Quartz.SimpleScheduleBuilder%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.SimpleScheduleBuilder">
+
+
+
+  <h1 id="Quartz_SimpleScheduleBuilder" data-uid="Quartz.SimpleScheduleBuilder" class="text-break">
+Class SimpleScheduleBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SimpleScheduleBuilder.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>SimpleScheduleBuilder is a <a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a>
+that defines strict/literal interval-based schedules for
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class SimpleScheduleBuilder : IScheduleBuilder</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">SimpleScheduleBuilder</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_SimpleScheduleBuilder_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Quartz provides a builder-style API for constructing scheduling-related
+entities via a Domain-Specific Language (DSL).  The DSL can best be
+utilized through the usage of static imports of the methods on the classes
+<a class="xref" href="Quartz.TriggerBuilder.html">TriggerBuilder</a>, <a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a>,
+<a class="xref" href="Quartz.DateBuilder.html">DateBuilder</a>, <a class="xref" href="Quartz.JobKey.html">JobKey</a>, <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>
+and the various <a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a> implementations.
+</p>
+<p>Client code can then use the DSL to write code such as this:</p>
+<pre><code class="lang-csharp">IJobDetail job = JobBuilder.Create&lt;MyJob&gt;()
+    .WithIdentity("myJob")
+    .Build();
+ITrigger trigger = TriggerBuilder.Create()
+    .WithIdentity("myTrigger", "myTriggerGroup")
+    .WithSimpleSchedule(x =&gt; x
+        .WithInterval(TimeSpan.FromHours(1))
+        .RepeatForever())
+    .StartAt(DateBuilder.Create().AtHourMinuteAndSecond(10, 0, 0).Build())
+    .Build();
+await scheduler.ScheduleJob(job, trigger);</code></pre>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_SimpleScheduleBuilder_Build_" data-uid="Quartz.SimpleScheduleBuilder.Build*"></a>
+
+  <h3 id="Quartz_SimpleScheduleBuilder_Build" data-uid="Quartz.SimpleScheduleBuilder.Build">
+  Build()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SimpleScheduleBuilder.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Build the actual Trigger -- NOT intended to be invoked by end users,
+but will rather be invoked by a TriggerBuilder which this
+ScheduleBuilder is given to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IMutableTrigger Build()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.Extensibility.IMutableTrigger.html">IMutableTrigger</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.TriggerBuilder-1.html#Quartz_TriggerBuilder_1_WithSchedule_Quartz_IScheduleBuilder_">WithSchedule</a>(<a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a>)</div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_SimpleScheduleBuilder_Create_" data-uid="Quartz.SimpleScheduleBuilder.Create*"></a>
+
+  <h3 id="Quartz_SimpleScheduleBuilder_Create" data-uid="Quartz.SimpleScheduleBuilder.Create">
+  Create()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SimpleScheduleBuilder.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a SimpleScheduleBuilder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SimpleScheduleBuilder Create()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></dt>
+    <dd><p>the new SimpleScheduleBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_SimpleScheduleBuilder_RepeatForever_" data-uid="Quartz.SimpleScheduleBuilder.RepeatForever*"></a>
+
+  <h3 id="Quartz_SimpleScheduleBuilder_RepeatForever" data-uid="Quartz.SimpleScheduleBuilder.RepeatForever">
+  RepeatForever()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SimpleScheduleBuilder.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Specify that the trigger will repeat indefinitely.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimpleScheduleBuilder RepeatForever()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></dt>
+    <dd><p>the updated SimpleScheduleBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.ISimpleTrigger.html#Quartz_ISimpleTrigger_RepeatCount">RepeatCount</a></div>
+    <div><a class="xref" href="Quartz.Impl.Triggers.SimpleTriggerImpl.html#Quartz_Impl_Triggers_SimpleTriggerImpl_RepeatIndefinitely">RepeatIndefinitely</a></div>
+    <div><a class="xref" href="Quartz.SimpleScheduleBuilder.html#Quartz_SimpleScheduleBuilder_WithInterval_System_TimeSpan_">WithInterval(TimeSpan)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_SimpleScheduleBuilder_WithInterval_" data-uid="Quartz.SimpleScheduleBuilder.WithInterval*"></a>
+
+  <h3 id="Quartz_SimpleScheduleBuilder_WithInterval_System_TimeSpan_" data-uid="Quartz.SimpleScheduleBuilder.WithInterval(System.TimeSpan)">
+  WithInterval(TimeSpan)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SimpleScheduleBuilder.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Specify the interval at which the trigger repeats.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimpleScheduleBuilder WithInterval(TimeSpan timeSpan)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeSpan</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>the time span at which the trigger should repeat.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></dt>
+    <dd><p>the updated SimpleScheduleBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.ISimpleTrigger.html#Quartz_ISimpleTrigger_RepeatInterval">RepeatInterval</a></div>
+    <div><a class="xref" href="Quartz.SimpleScheduleBuilder.html#Quartz_SimpleScheduleBuilder_WithRepeatCount_System_Int32_">WithRepeatCount(int)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_SimpleScheduleBuilder_WithMisfireInstruction_" data-uid="Quartz.SimpleScheduleBuilder.WithMisfireInstruction*"></a>
+
+  <h3 id="Quartz_SimpleScheduleBuilder_WithMisfireInstruction_Quartz_SimpleTriggerMisfireInstruction_" data-uid="Quartz.SimpleScheduleBuilder.WithMisfireInstruction(Quartz.SimpleTriggerMisfireInstruction)">
+  WithMisfireInstruction(SimpleTriggerMisfireInstruction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SimpleScheduleBuilder.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Say what the trigger should do when it misses a firing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimpleScheduleBuilder WithMisfireInstruction(SimpleTriggerMisfireInstruction instruction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>instruction</code> <a class="xref" href="Quartz.SimpleTriggerMisfireInstruction.html">SimpleTriggerMisfireInstruction</a></dt>
+    <dd><p>the policy to apply; defaults to
+<a class="xref" href="Quartz.SimpleTriggerMisfireInstruction.html#Quartz_SimpleTriggerMisfireInstruction_SmartPolicy">SmartPolicy</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></dt>
+    <dd><p>the updated SimpleScheduleBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.SimpleTriggerMisfireInstruction.html">SimpleTriggerMisfireInstruction</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_SimpleScheduleBuilder_WithRepeatCount_" data-uid="Quartz.SimpleScheduleBuilder.WithRepeatCount*"></a>
+
+  <h3 id="Quartz_SimpleScheduleBuilder_WithRepeatCount_System_Int32_" data-uid="Quartz.SimpleScheduleBuilder.WithRepeatCount(System.Int32)">
+  WithRepeatCount(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SimpleScheduleBuilder.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Specify a the number of time the trigger will repeat - total number of
+firings will be this number + 1.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimpleScheduleBuilder WithRepeatCount(int repeatCount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>repeatCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the number of times the trigger should repeat.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></dt>
+    <dd><p>the updated SimpleScheduleBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.ISimpleTrigger.html#Quartz_ISimpleTrigger_RepeatCount">RepeatCount</a></div>
+    <div><a class="xref" href="Quartz.SimpleScheduleBuilder.html#Quartz_SimpleScheduleBuilder_RepeatForever">RepeatForever()</a></div>
+    </dd>
+  </dl>
+
+
+  <h2 id="seealso">See Also</h2>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ISimpleTrigger.html">ISimpleTrigger</a></div>
+      <div><a class="xref" href="Quartz.CalendarIntervalScheduleBuilder.html">CalendarIntervalScheduleBuilder</a></div>
+      <div><a class="xref" href="Quartz.CronScheduleBuilder.html">CronScheduleBuilder</a></div>
+      <div><a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a></div>
+      <div><a class="xref" href="Quartz.TriggerBuilder.html">TriggerBuilder</a></div>
+  </div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SimpleScheduleBuilder.cs/#L61" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

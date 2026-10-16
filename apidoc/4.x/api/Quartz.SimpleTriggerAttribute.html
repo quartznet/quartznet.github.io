@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SimpleTriggerAttribute | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SimpleTriggerAttribute | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="A fixed-interval schedule for the job this class declares with . Write it as many times as the job has schedules, beside any ; the generator emits one AddTrigger&amp;lt;T&amp;gt; call per attribute.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_SimpleTriggerAttribute.md&amp;value=---%0Auid%3A%20Quartz.SimpleTriggerAttribute%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.SimpleTriggerAttribute">
+
+
+
+  <h1 id="Quartz_SimpleTriggerAttribute" data-uid="Quartz.SimpleTriggerAttribute" class="text-break">
+Class SimpleTriggerAttribute  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SimpleTriggerAttribute.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A fixed-interval schedule for the job this class declares with <a class="xref" href="Quartz.QuartzJobAttribute.html">QuartzJobAttribute</a>.
+Write it as many times as the job has schedules, beside any <a class="xref" href="Quartz.CronTriggerAttribute.html">CronTriggerAttribute</a>;
+the generator emits one <code>AddTrigger&lt;T&gt;</code> call per attribute.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
+public sealed class SimpleTriggerAttribute : Attribute</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute">Attribute</a></div>
+      <div><span class="xref">SimpleTriggerAttribute</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.equals">Attribute.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattribute#system-attribute-getcustomattribute(system-reflection-assembly-system-type)">Attribute.GetCustomAttribute(Assembly, Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattribute#system-attribute-getcustomattribute(system-reflection-assembly-system-type-system-boolean)">Attribute.GetCustomAttribute(Assembly, Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattribute#system-attribute-getcustomattribute(system-reflection-memberinfo-system-type)">Attribute.GetCustomAttribute(MemberInfo, Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattribute#system-attribute-getcustomattribute(system-reflection-memberinfo-system-type-system-boolean)">Attribute.GetCustomAttribute(MemberInfo, Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattribute#system-attribute-getcustomattribute(system-reflection-module-system-type)">Attribute.GetCustomAttribute(Module, Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattribute#system-attribute-getcustomattribute(system-reflection-module-system-type-system-boolean)">Attribute.GetCustomAttribute(Module, Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattribute#system-attribute-getcustomattribute(system-reflection-parameterinfo-system-type)">Attribute.GetCustomAttribute(ParameterInfo, Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattribute#system-attribute-getcustomattribute(system-reflection-parameterinfo-system-type-system-boolean)">Attribute.GetCustomAttribute(ParameterInfo, Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-assembly)">Attribute.GetCustomAttributes(Assembly)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-assembly-system-boolean)">Attribute.GetCustomAttributes(Assembly, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-assembly-system-type)">Attribute.GetCustomAttributes(Assembly, Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-assembly-system-type-system-boolean)">Attribute.GetCustomAttributes(Assembly, Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-memberinfo)">Attribute.GetCustomAttributes(MemberInfo)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-memberinfo-system-boolean)">Attribute.GetCustomAttributes(MemberInfo, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-memberinfo-system-type)">Attribute.GetCustomAttributes(MemberInfo, Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-memberinfo-system-type-system-boolean)">Attribute.GetCustomAttributes(MemberInfo, Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-module)">Attribute.GetCustomAttributes(Module)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-module-system-boolean)">Attribute.GetCustomAttributes(Module, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-module-system-type)">Attribute.GetCustomAttributes(Module, Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-module-system-type-system-boolean)">Attribute.GetCustomAttributes(Module, Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-parameterinfo)">Attribute.GetCustomAttributes(ParameterInfo)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-parameterinfo-system-boolean)">Attribute.GetCustomAttributes(ParameterInfo, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-parameterinfo-system-type)">Attribute.GetCustomAttributes(ParameterInfo, Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-parameterinfo-system-type-system-boolean)">Attribute.GetCustomAttributes(ParameterInfo, Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.gethashcode">Attribute.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.isdefaultattribute">Attribute.IsDefaultAttribute()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.isdefined#system-attribute-isdefined(system-reflection-assembly-system-type)">Attribute.IsDefined(Assembly, Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.isdefined#system-attribute-isdefined(system-reflection-assembly-system-type-system-boolean)">Attribute.IsDefined(Assembly, Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.isdefined#system-attribute-isdefined(system-reflection-memberinfo-system-type)">Attribute.IsDefined(MemberInfo, Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.isdefined#system-attribute-isdefined(system-reflection-memberinfo-system-type-system-boolean)">Attribute.IsDefined(MemberInfo, Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.isdefined#system-attribute-isdefined(system-reflection-module-system-type)">Attribute.IsDefined(Module, Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.isdefined#system-attribute-isdefined(system-reflection-module-system-type-system-boolean)">Attribute.IsDefined(Module, Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.isdefined#system-attribute-isdefined(system-reflection-parameterinfo-system-type)">Attribute.IsDefined(ParameterInfo, Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.isdefined#system-attribute-isdefined(system-reflection-parameterinfo-system-type-system-boolean)">Attribute.IsDefined(ParameterInfo, Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.match">Attribute.Match(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.typeid">Attribute.TypeId</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+  <h2 id="Quartz_SimpleTriggerAttribute_examples">Examples</h2>
+  <pre><code class="lang-csharp">[QuartzJob]
+[SimpleTrigger("00:10:00")]
+[SimpleTrigger("00:00:05", Name = "warm-up", RepeatCount = 3)]
+public sealed class PollInboxJob : IJob
+{
+    public ValueTask Execute(IJobExecutionContext context, CancellationToken cancellationToken = default)
+    {
+        return default;
+    }
+}</code></pre>
+
+
+  <h2 id="Quartz_SimpleTriggerAttribute_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+The trigger starts when the scheduler is built, as any <code>AddTrigger&lt;T&gt;</code> without
+<code>StartAt</code> does: it fires as the scheduler starts, then once per interval.
+</p>
+<p>
+The interval is read at build time. One that is not a positive <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>, and a
+<a class="xref" href="Quartz.SimpleTriggerAttribute.html#Quartz_SimpleTriggerAttribute_RepeatCount">RepeatCount</a> below <code>-1</code>, are <code>QZ0005</code> rather than an exception while the
+host starts, and the generated registration carries the interval as ticks, so nothing parses it at
+run time.
+</p>
+<p>
+This attribute says nothing on a class that does not also carry
+<a class="xref" href="Quartz.QuartzJobAttribute.html">QuartzJobAttribute</a>, and the generator reports <code>QZ1003</code> rather than letting a
+schedule be declared and silently ignored.
+</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Quartz_SimpleTriggerAttribute__ctor_" data-uid="Quartz.SimpleTriggerAttribute.#ctor*"></a>
+
+  <h3 id="Quartz_SimpleTriggerAttribute__ctor_System_String_" data-uid="Quartz.SimpleTriggerAttribute.#ctor(System.String)">
+  SimpleTriggerAttribute(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SimpleTriggerAttribute.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Declares the interval as a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a> in its invariant form — <code>&quot;00:10:00&quot;</code> is
+ten minutes, <code>&quot;1.00:00:00&quot;</code> is a day.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimpleTriggerAttribute(string interval)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>interval</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The time between firings, as a positive invariant <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_SimpleTriggerAttribute__ctor_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A string, because <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a> is not something an attribute argument can be. The
+format is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan.parse#system-timespan-parse(system-string-system-iformatprovider)">Parse(string, IFormatProvider)</a>'s, parsed with the invariant
+culture, as <a class="xref" href="Quartz.JobTimeoutAttribute.html">JobTimeoutAttribute</a>'s is.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">interval</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p><code class="paramref">interval</code> is not a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p><code class="paramref">interval</code> is zero or negative.</p>
+</dd>
+  </dl>
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_SimpleTriggerAttribute_ConfigurationKey_" data-uid="Quartz.SimpleTriggerAttribute.ConfigurationKey*"></a>
+
+  <h3 id="Quartz_SimpleTriggerAttribute_ConfigurationKey" data-uid="Quartz.SimpleTriggerAttribute.ConfigurationKey">
+  ConfigurationKey
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SimpleTriggerAttribute.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A configuration key whose value, when it is set, is the interval the trigger fires on instead
+of <a class="xref" href="Quartz.SimpleTriggerAttribute.html#Quartz_SimpleTriggerAttribute_Interval">Interval</a>. Defaults to none: the schedule is the attribute's.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? ConfigurationKey { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_SimpleTriggerAttribute_ConfigurationKey_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Read from the container's <code>IConfiguration</code> as the scheduler is built, so
+<code>"Jobs:Poll:Interval"</code> is the <code>Interval</code> value of the <code>Jobs:Poll</code> section, or the
+environment variable <code>Jobs__Poll__Interval</code>. The constructor's interval stays required: it is
+checked at build time, and it is the schedule wherever the key is not set or no
+<code>IConfiguration</code> is registered. Only the interval is read; <a class="xref" href="Quartz.SimpleTriggerAttribute.html#Quartz_SimpleTriggerAttribute_RepeatCount">RepeatCount</a> and
+the rest stay the attribute's.
+</p>
+<p>
+A configured value is not checked at build time. One that is not a positive invariant
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>, an empty one included, stops the host from starting with a
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a> naming the key, rather than leaving a schedule that never fires.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_SimpleTriggerAttribute_Description_" data-uid="Quartz.SimpleTriggerAttribute.Description*"></a>
+
+  <h3 id="Quartz_SimpleTriggerAttribute_Description" data-uid="Quartz.SimpleTriggerAttribute.Description">
+  Description
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SimpleTriggerAttribute.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>What the schedule is for, carried on the trigger. Defaults to none.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Description { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_SimpleTriggerAttribute_ExecutionGroup_" data-uid="Quartz.SimpleTriggerAttribute.ExecutionGroup*"></a>
+
+  <h3 id="Quartz_SimpleTriggerAttribute_ExecutionGroup" data-uid="Quartz.SimpleTriggerAttribute.ExecutionGroup">
+  ExecutionGroup
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SimpleTriggerAttribute.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The execution group the firing counts against, for a deployment that caps how many of a kind
+run at once. Defaults to none.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? ExecutionGroup { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_SimpleTriggerAttribute_Group_" data-uid="Quartz.SimpleTriggerAttribute.Group*"></a>
+
+  <h3 id="Quartz_SimpleTriggerAttribute_Group" data-uid="Quartz.SimpleTriggerAttribute.Group">
+  Group
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SimpleTriggerAttribute.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The trigger key's group. Defaults to the job's group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Group { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_SimpleTriggerAttribute_Interval_" data-uid="Quartz.SimpleTriggerAttribute.Interval*"></a>
+
+  <h3 id="Quartz_SimpleTriggerAttribute_Interval" data-uid="Quartz.SimpleTriggerAttribute.Interval">
+  Interval
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SimpleTriggerAttribute.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The time between firings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan Interval { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_SimpleTriggerAttribute_MisfireInstruction_" data-uid="Quartz.SimpleTriggerAttribute.MisfireInstruction*"></a>
+
+  <h3 id="Quartz_SimpleTriggerAttribute_MisfireInstruction" data-uid="Quartz.SimpleTriggerAttribute.MisfireInstruction">
+  MisfireInstruction
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SimpleTriggerAttribute.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>What the trigger should do about a firing it missed. Defaults to
+<a class="xref" href="Quartz.SimpleTriggerMisfireInstruction.html#Quartz_SimpleTriggerMisfireInstruction_SmartPolicy">SmartPolicy</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimpleTriggerMisfireInstruction MisfireInstruction { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.SimpleTriggerMisfireInstruction.html">SimpleTriggerMisfireInstruction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_SimpleTriggerAttribute_Name_" data-uid="Quartz.SimpleTriggerAttribute.Name*"></a>
+
+  <h3 id="Quartz_SimpleTriggerAttribute_Name" data-uid="Quartz.SimpleTriggerAttribute.Name">
+  Name
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SimpleTriggerAttribute.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The trigger key's name. Defaults to the job's name, then that name with <code>-2</code>, <code>-3</code>
+and so on for the second and later schedules a job declares, <a class="xref" href="Quartz.CronTriggerAttribute.html">CronTriggerAttribute</a>
+included.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Name { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_SimpleTriggerAttribute_Priority_" data-uid="Quartz.SimpleTriggerAttribute.Priority*"></a>
+
+  <h3 id="Quartz_SimpleTriggerAttribute_Priority" data-uid="Quartz.SimpleTriggerAttribute.Priority">
+  Priority
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SimpleTriggerAttribute.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The trigger's priority, which decides who wins when two triggers want the same moment and
+only one worker is free. Defaults to <a class="xref" href="Quartz.TriggerConstants.html#Quartz_TriggerConstants_DefaultPriority">DefaultPriority</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Priority { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_SimpleTriggerAttribute_RepeatCount_" data-uid="Quartz.SimpleTriggerAttribute.RepeatCount*"></a>
+
+  <h3 id="Quartz_SimpleTriggerAttribute_RepeatCount" data-uid="Quartz.SimpleTriggerAttribute.RepeatCount">
+  RepeatCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SimpleTriggerAttribute.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How many times the trigger repeats after its first firing, so the total number of firings is one
+more than this. Defaults to <a class="xref" href="Quartz.Impl.Triggers.SimpleTriggerImpl.html#Quartz_Impl_Triggers_SimpleTriggerImpl_RepeatIndefinitely">RepeatIndefinitely</a>, <code>-1</code>, which
+repeats forever.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RepeatCount { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>The value is below <code>-1</code>.</p>
+</dd>
+  </dl>
+
+
+
+  <h2 id="seealso">See Also</h2>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.QuartzJobAttribute.html">QuartzJobAttribute</a></div>
+      <div><a class="xref" href="Quartz.CronTriggerAttribute.html">CronTriggerAttribute</a></div>
+  </div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SimpleTriggerAttribute.cs/#L64" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

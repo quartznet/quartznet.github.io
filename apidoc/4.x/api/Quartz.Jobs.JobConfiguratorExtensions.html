@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class JobConfiguratorExtensions | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class JobConfiguratorExtensions | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Configures a job from Quartz.Jobs with named options rather than with its job data keys.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Jobs_JobConfiguratorExtensions.md&amp;value=---%0Auid%3A%20Quartz.Jobs.JobConfiguratorExtensions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Jobs.JobConfiguratorExtensions">
+
+
+
+  <h1 id="Quartz_Jobs_JobConfiguratorExtensions" data-uid="Quartz.Jobs.JobConfiguratorExtensions" class="text-break">
+Class JobConfiguratorExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/JobConfiguratorExtensions.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<a class="xref" href="Quartz.Jobs.html">Jobs</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.Jobs.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Configures a job from <code>Quartz.Jobs</code> with named options rather than with its job data keys.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class JobConfiguratorExtensions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">JobConfiguratorExtensions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_Jobs_JobConfiguratorExtensions_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Each of these writes the same <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> entries the job has always read, so the
+stored job is identical to one configured key by key and reads back the same on any version. What
+changes is the writing: the key cannot be misspelled, the value cannot be of the wrong type, and
+a setting the job supports cannot go missing from the documentation — the options type lists them.
+</p>
+<p>
+They are generic in the configurator so that the call keeps its receiver's type: a
+<a class="xref" href="Quartz.JobBuilder-1.html">JobBuilder&lt;TJob&gt;</a> chain still ends in <code>Build()</code>, and the
+<a class="xref" href="Quartz.IJobConfigurator-1.html">IJobConfigurator&lt;TJob&gt;</a> handed to <code>AddJob</code> still chains its own members.
+</p>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_Jobs_JobConfiguratorExtensions_UsingDirectoryScanOptions_" data-uid="Quartz.Jobs.JobConfiguratorExtensions.UsingDirectoryScanOptions*"></a>
+
+  <h3 id="Quartz_Jobs_JobConfiguratorExtensions_UsingDirectoryScanOptions__1___0_Quartz_Jobs_DirectoryScanOptions_" data-uid="Quartz.Jobs.JobConfiguratorExtensions.UsingDirectoryScanOptions``1(``0,Quartz.Jobs.DirectoryScanOptions)">
+  UsingDirectoryScanOptions&lt;TConfigurator&gt;(TConfigurator, DirectoryScanOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/JobConfiguratorExtensions.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures a <a class="xref" href="Quartz.Jobs.DirectoryScanJob.html">DirectoryScanJob</a> with the directories to scan, the pattern to
+match, whether to recurse, and how long a file must have settled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TConfigurator UsingDirectoryScanOptions&lt;TConfigurator&gt;(this TConfigurator configurator, DirectoryScanOptions options) where TConfigurator : class, IJobConfigurator&lt;DirectoryScanJob&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configurator</code> <span class="xref">TConfigurator</span></dt>
+    <dd></dd>
+    <dt><code>options</code> <a class="xref" href="Quartz.Jobs.DirectoryScanOptions.html">DirectoryScanOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TConfigurator</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TConfigurator</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Quartz_Jobs_JobConfiguratorExtensions_UsingDirectoryScanOptions__1___0_Quartz_Jobs_DirectoryScanOptions__examples">Examples</h4>
+  <pre><code class="lang-csharp">IJobDetail job = JobBuilder.Create&lt;DirectoryScanJob&gt;()
+    .WithIdentity("inboxScan")
+    .UsingDirectoryScanOptions(new DirectoryScanOptions
+    {
+        Directories = ["/var/spool/inbox"],
+        SearchPattern = "*.csv",
+        IncludeSubDirectories = true,
+        ScanListenerName = nameof(InboxListener),
+    })
+    .Build();</code></pre>
+
+
+
+
+
+
+  <a id="Quartz_Jobs_JobConfiguratorExtensions_UsingFileScanOptions_" data-uid="Quartz.Jobs.JobConfiguratorExtensions.UsingFileScanOptions*"></a>
+
+  <h3 id="Quartz_Jobs_JobConfiguratorExtensions_UsingFileScanOptions__1___0_Quartz_Jobs_FileScanOptions_" data-uid="Quartz.Jobs.JobConfiguratorExtensions.UsingFileScanOptions``1(``0,Quartz.Jobs.FileScanOptions)">
+  UsingFileScanOptions&lt;TConfigurator&gt;(TConfigurator, FileScanOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/JobConfiguratorExtensions.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures a <a class="xref" href="Quartz.Jobs.FileScanJob.html">FileScanJob</a> with the file to watch, the listener to tell, and how
+long the file must have settled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TConfigurator UsingFileScanOptions&lt;TConfigurator&gt;(this TConfigurator configurator, FileScanOptions options) where TConfigurator : class, IJobConfigurator&lt;FileScanJob&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configurator</code> <span class="xref">TConfigurator</span></dt>
+    <dd></dd>
+    <dt><code>options</code> <a class="xref" href="Quartz.Jobs.FileScanOptions.html">FileScanOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TConfigurator</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TConfigurator</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Jobs_JobConfiguratorExtensions_UsingNativeJobOptions_" data-uid="Quartz.Jobs.JobConfiguratorExtensions.UsingNativeJobOptions*"></a>
+
+  <h3 id="Quartz_Jobs_JobConfiguratorExtensions_UsingNativeJobOptions__1___0_Quartz_Jobs_NativeJobOptions_" data-uid="Quartz.Jobs.JobConfiguratorExtensions.UsingNativeJobOptions``1(``0,Quartz.Jobs.NativeJobOptions)">
+  UsingNativeJobOptions&lt;TConfigurator&gt;(TConfigurator, NativeJobOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/JobConfiguratorExtensions.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures a <a class="xref" href="Quartz.Jobs.NativeJob.html">NativeJob</a> with the command to run and how to run it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TConfigurator UsingNativeJobOptions&lt;TConfigurator&gt;(this TConfigurator configurator, NativeJobOptions options) where TConfigurator : class, IJobConfigurator&lt;NativeJob&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configurator</code> <span class="xref">TConfigurator</span></dt>
+    <dd></dd>
+    <dt><code>options</code> <a class="xref" href="Quartz.Jobs.NativeJobOptions.html">NativeJobOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TConfigurator</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TConfigurator</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Quartz_Jobs_JobConfiguratorExtensions_UsingNativeJobOptions__1___0_Quartz_Jobs_NativeJobOptions__examples">Examples</h4>
+  <pre><code class="lang-csharp">IJobDetail job = JobBuilder.Create&lt;NativeJob&gt;()
+    .WithIdentity("nightlyReport")
+    .UsingNativeJobOptions(new NativeJobOptions
+    {
+        Command = "report.exe",
+        Parameters = "--nightly",
+        ConsumeStreams = true,
+    })
+    .Build();</code></pre>
+
+
+
+
+
+
+  <a id="Quartz_Jobs_JobConfiguratorExtensions_UsingSendMailOptions_" data-uid="Quartz.Jobs.JobConfiguratorExtensions.UsingSendMailOptions*"></a>
+
+  <h3 id="Quartz_Jobs_JobConfiguratorExtensions_UsingSendMailOptions__1___0_Quartz_Jobs_SendMailOptions_" data-uid="Quartz.Jobs.JobConfiguratorExtensions.UsingSendMailOptions``1(``0,Quartz.Jobs.SendMailOptions)">
+  UsingSendMailOptions&lt;TConfigurator&gt;(TConfigurator, SendMailOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/JobConfiguratorExtensions.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures a <a class="xref" href="Quartz.Jobs.SendMailJob.html">SendMailJob</a> with the message to send and the server to send it
+through.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TConfigurator UsingSendMailOptions&lt;TConfigurator&gt;(this TConfigurator configurator, SendMailOptions options) where TConfigurator : class, IJobConfigurator&lt;SendMailJob&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configurator</code> <span class="xref">TConfigurator</span></dt>
+    <dd></dd>
+    <dt><code>options</code> <a class="xref" href="Quartz.Jobs.SendMailOptions.html">SendMailOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TConfigurator</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TConfigurator</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Jobs_JobConfiguratorExtensions_UsingSendMailOptions__1___0_Quartz_Jobs_SendMailOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a class="xref" href="Quartz.Jobs.SendMailOptions.html">SendMailOptions</a> has no credentials on purpose; register an
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.icredentialsbyhost">ICredentialsByHost</a> with the container instead of putting a password
+in job data.</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Jobs/Jobs/JobConfiguratorExtensions.cs/#L40" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class QuartzHostApplicationBuilderExtensions | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class QuartzHostApplicationBuilderExtensions | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Registers Quartz on a host application builder, which is how an application built by Host.CreateApplicationBuilder or WebApplication.CreateBuilder adds anything else.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_QuartzHostApplicationBuilderExtensions.md&amp;value=---%0Auid%3A%20Quartz.QuartzHostApplicationBuilderExtensions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.QuartzHostApplicationBuilderExtensions">
+
+
+
+  <h1 id="Quartz_QuartzHostApplicationBuilderExtensions" data-uid="Quartz.QuartzHostApplicationBuilderExtensions" class="text-break">
+Class QuartzHostApplicationBuilderExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Hosting/QuartzHostApplicationBuilderExtensions.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Registers Quartz on a host application builder, which is how an application built by
+<code>Host.CreateApplicationBuilder</code> or <code>WebApplication.CreateBuilder</code> adds anything else.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class QuartzHostApplicationBuilderExtensions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">QuartzHostApplicationBuilderExtensions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_QuartzHostApplicationBuilderExtensions_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+These are the <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> overloads with
+the application's configuration already found. A builder has both halves — its services and its
+configuration — so <code>builder.AddQuartz(…)</code> reads the <code>Quartz</code> configuration section without
+being handed it, which is what the two-line <code>builder.Services.AddQuartz(builder.Configuration.GetSection("Quartz"), …)</code>
+was for.
+</p>
+<p>
+Nothing is removed: <code>builder.Services.AddQuartz(…)</code> keeps working and means what it always did,
+including with a configuration section of a different name.
+</p>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_QuartzHostApplicationBuilderExtensions_AddQuartz_" data-uid="Quartz.QuartzHostApplicationBuilderExtensions.AddQuartz*"></a>
+
+  <h3 id="Quartz_QuartzHostApplicationBuilderExtensions_AddQuartz_Microsoft_Extensions_Hosting_IHostApplicationBuilder_System_Action_Quartz_IQuartzBuilder__" data-uid="Quartz.QuartzHostApplicationBuilderExtensions.AddQuartz(Microsoft.Extensions.Hosting.IHostApplicationBuilder,System.Action{Quartz.IQuartzBuilder})">
+  AddQuartz(IHostApplicationBuilder, Action&lt;IQuartzBuilder&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Hosting/QuartzHostApplicationBuilderExtensions.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a Quartz scheduler, configured from the application's <code>Quartz</code> configuration section.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IHostApplicationBuilder AddQuartz(this IHostApplicationBuilder builder, Action&lt;IQuartzBuilder&gt;? configure = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostapplicationbuilder">IHostApplicationBuilder</a></dt>
+    <dd><p>The host application builder.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a>&gt;</dt>
+    <dd><p>Configures the scheduler, over whatever the section said.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostapplicationbuilder">IHostApplicationBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzHostApplicationBuilderExtensions_AddQuartz_Microsoft_Extensions_Hosting_IHostApplicationBuilder_System_Action_Quartz_IQuartzBuilder___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>An application with no such section gets a scheduler configured entirely by
+<code class="paramref">configure</code>, which is what <code>services.AddQuartz(configure)</code> would have given
+it.</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzHostApplicationBuilderExtensions_AddQuartz_" data-uid="Quartz.QuartzHostApplicationBuilderExtensions.AddQuartz*"></a>
+
+  <h3 id="Quartz_QuartzHostApplicationBuilderExtensions_AddQuartz_Microsoft_Extensions_Hosting_IHostApplicationBuilder_System_String_System_Action_Quartz_IQuartzBuilder__" data-uid="Quartz.QuartzHostApplicationBuilderExtensions.AddQuartz(Microsoft.Extensions.Hosting.IHostApplicationBuilder,System.String,System.Action{Quartz.IQuartzBuilder})">
+  AddQuartz(IHostApplicationBuilder, string, Action&lt;IQuartzBuilder&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Hosting/QuartzHostApplicationBuilderExtensions.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a named Quartz scheduler, configured from the application's <code>Quartz</code> configuration
+section.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IHostApplicationBuilder AddQuartz(this IHostApplicationBuilder builder, string name, Action&lt;IQuartzBuilder&gt;? configure = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostapplicationbuilder">IHostApplicationBuilder</a></dt>
+    <dd><p>The host application builder.</p>
+</dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The scheduler's name.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a>&gt;</dt>
+    <dd><p>Configures the scheduler, over whatever the section said.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostapplicationbuilder">IHostApplicationBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzHostApplicationBuilderExtensions_AddQuartz_Microsoft_Extensions_Hosting_IHostApplicationBuilder_System_String_System_Action_Quartz_IQuartzBuilder___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The name is the scheduler's, exactly as in <code>services.AddQuartz(name, …)</code> — a string means a
+scheduler here as it does everywhere else in Quartz, never a configuration section. Its settings
+are read from <code>Quartz:Schedulers:&lt;name&gt;</code> when the section describes several schedulers.</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzHostApplicationBuilderExtensions_AddQuartzHostedService_" data-uid="Quartz.QuartzHostApplicationBuilderExtensions.AddQuartzHostedService*"></a>
+
+  <h3 id="Quartz_QuartzHostApplicationBuilderExtensions_AddQuartzHostedService_Microsoft_Extensions_Hosting_IHostApplicationBuilder_System_Action_Quartz_QuartzHostedServiceOptions__" data-uid="Quartz.QuartzHostApplicationBuilderExtensions.AddQuartzHostedService(Microsoft.Extensions.Hosting.IHostApplicationBuilder,System.Action{Quartz.QuartzHostedServiceOptions})">
+  AddQuartzHostedService(IHostApplicationBuilder, Action&lt;QuartzHostedServiceOptions&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Hosting/QuartzHostApplicationBuilderExtensions.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds the hosted service that starts and stops every scheduler in the container with the
+application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IHostApplicationBuilder AddQuartzHostedService(this IHostApplicationBuilder builder, Action&lt;QuartzHostedServiceOptions&gt;? configure = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostapplicationbuilder">IHostApplicationBuilder</a></dt>
+    <dd><p>The host application builder.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.QuartzHostedServiceOptions.html">QuartzHostedServiceOptions</a>&gt;</dt>
+    <dd><p>Configures how the schedulers are started and stopped.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostapplicationbuilder">IHostApplicationBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_QuartzHostApplicationBuilderExtensions_AddQuartzHostedService_" data-uid="Quartz.QuartzHostApplicationBuilderExtensions.AddQuartzHostedService*"></a>
+
+  <h3 id="Quartz_QuartzHostApplicationBuilderExtensions_AddQuartzHostedService_Microsoft_Extensions_Hosting_IHostApplicationBuilder_System_String_System_Action_Quartz_QuartzHostedServiceOptions__" data-uid="Quartz.QuartzHostApplicationBuilderExtensions.AddQuartzHostedService(Microsoft.Extensions.Hosting.IHostApplicationBuilder,System.String,System.Action{Quartz.QuartzHostedServiceOptions})">
+  AddQuartzHostedService(IHostApplicationBuilder, string, Action&lt;QuartzHostedServiceOptions&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Hosting/QuartzHostApplicationBuilderExtensions.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures how one named scheduler is started and stopped by the hosted service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IHostApplicationBuilder AddQuartzHostedService(this IHostApplicationBuilder builder, string schedulerName, Action&lt;QuartzHostedServiceOptions&gt;? configure = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostapplicationbuilder">IHostApplicationBuilder</a></dt>
+    <dd><p>The host application builder.</p>
+</dd>
+    <dt><code>schedulerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name the scheduler was registered under.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.QuartzHostedServiceOptions.html">QuartzHostedServiceOptions</a>&gt;</dt>
+    <dd><p>Configures how that scheduler is started and stopped.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostapplicationbuilder">IHostApplicationBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_QuartzHostApplicationBuilderExtensions_AddQuartzHostedService_" data-uid="Quartz.QuartzHostApplicationBuilderExtensions.AddQuartzHostedService*"></a>
+
+  <h3 id="Quartz_QuartzHostApplicationBuilderExtensions_AddQuartzHostedService__1_Microsoft_Extensions_Hosting_IHostApplicationBuilder_System_Action_Quartz_QuartzHostedServiceOptions__" data-uid="Quartz.QuartzHostApplicationBuilderExtensions.AddQuartzHostedService``1(Microsoft.Extensions.Hosting.IHostApplicationBuilder,System.Action{Quartz.QuartzHostedServiceOptions})">
+  AddQuartzHostedService&lt;T&gt;(IHostApplicationBuilder, Action&lt;QuartzHostedServiceOptions&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Hosting/QuartzHostApplicationBuilderExtensions.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a hosted service of your own deriving from <a class="xref" href="Quartz.QuartzHostedService.html">QuartzHostedService</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IHostApplicationBuilder AddQuartzHostedService&lt;T&gt;(this IHostApplicationBuilder builder, Action&lt;QuartzHostedServiceOptions&gt;? configure = null) where T : QuartzHostedService</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostapplicationbuilder">IHostApplicationBuilder</a></dt>
+    <dd><p>The host application builder.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.QuartzHostedServiceOptions.html">QuartzHostedServiceOptions</a>&gt;</dt>
+    <dd><p>Configures how the schedulers are started and stopped.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostapplicationbuilder">IHostApplicationBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>Type extending the <a class="xref" href="Quartz.QuartzHostedService.html">QuartzHostedService</a> class.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_QuartzHostApplicationBuilderExtensions_AddQuartzSchedulers_" data-uid="Quartz.QuartzHostApplicationBuilderExtensions.AddQuartzSchedulers*"></a>
+
+  <h3 id="Quartz_QuartzHostApplicationBuilderExtensions_AddQuartzSchedulers_Microsoft_Extensions_Hosting_IHostApplicationBuilder_System_Action_Quartz_IQuartzBuilder__" data-uid="Quartz.QuartzHostApplicationBuilderExtensions.AddQuartzSchedulers(Microsoft.Extensions.Hosting.IHostApplicationBuilder,System.Action{Quartz.IQuartzBuilder})">
+  AddQuartzSchedulers(IHostApplicationBuilder, Action&lt;IQuartzBuilder&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Hosting/QuartzHostApplicationBuilderExtensions.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers one named Quartz scheduler per child of the <code>Quartz</code> section's <code>Schedulers</code>
+sub-section.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IHostApplicationBuilder AddQuartzSchedulers(this IHostApplicationBuilder builder, Action&lt;IQuartzBuilder&gt;? configure = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostapplicationbuilder">IHostApplicationBuilder</a></dt>
+    <dd><p>The host application builder.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a>&gt;</dt>
+    <dd><p>Applied to every scheduler described by the section.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostapplicationbuilder">IHostApplicationBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzHostApplicationBuilderExtensions_AddQuartzSchedulers_Microsoft_Extensions_Hosting_IHostApplicationBuilder_System_Action_Quartz_IQuartzBuilder___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This is <a class="xref" href="Quartz.QuartzServiceCollectionExtensions.html#Quartz_QuartzServiceCollectionExtensions_AddQuartzSchedulers_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_Configuration_IConfiguration_System_Action_Quartz_IQuartzBuilder__">AddQuartzSchedulers(IServiceCollection, IConfiguration, Action&lt;IQuartzBuilder&gt;?)</a>
+with the section found for you, and it says exactly what that one says — including refusing a
+section that describes one scheduler rather than several.
+</p>
+<p>
+The receiver decides where configuration comes from, and it decides it the same way for every
+method here: a service collection is <em>handed</em> its configuration, a builder already holds
+its own. That is why this takes no <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration">IConfiguration</a> and the service collection
+overload requires one — the same difference <code>AddQuartz</code> has, for the same reason. Neither
+receiver goes looking for a configuration it was not given: <code>services.AddQuartz(configure)</code>
+means a scheduler configured entirely in code, not one that quietly reads whatever
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration">IConfiguration</a> the container happens to hold, and there is no
+<code>services.AddQuartzSchedulers(configure)</code> because a fan-out with nothing to fan out over is
+not a scheduler registration at all.
+</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Hosting/QuartzHostApplicationBuilderExtensions.cs/#L25" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
