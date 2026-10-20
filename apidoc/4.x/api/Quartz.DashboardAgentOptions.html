@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DashboardAgentOptions | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DashboardAgentOptions | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="How a scheduler dials out to a dashboard, and what it lets the dashboard do once it has.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_DashboardAgentOptions.md&amp;value=---%0Auid%3A%20Quartz.DashboardAgentOptions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.DashboardAgentOptions">
+
+
+
+  <h1 id="Quartz_DashboardAgentOptions" data-uid="Quartz.DashboardAgentOptions" class="text-break">
+Class DashboardAgentOptions  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard.Agent/DashboardAgentOptions.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.Dashboard.Agent.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>How a scheduler dials out to a dashboard, and what it lets the dashboard do once it has.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class DashboardAgentOptions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">DashboardAgentOptions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_DashboardAgentOptions_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+The agent is a plugin: <code>UseDashboardAgent</code> installs it on one scheduler, and that scheduler opens
+one outbound connection to <a class="xref" href="Quartz.DashboardAgentOptions.html#Quartz_DashboardAgentOptions_Endpoint">Endpoint</a> — the dashboard's agent hub — and keeps it open for
+as long as it runs. The dashboard then lists the scheduler as <a class="xref" href="Quartz.SchedulerOrigin.html#Quartz_SchedulerOrigin_Agent">Agent</a>,
+under the key <code>{Target}/{scheduler name}</code>, and drives it through that connection: every page, every
+action, the execution history and the live events.
+</p>
+<p>
+The connection crosses a trust boundary by design, and the narrowings here are the only ones that hold
+against a dashboard that has been taken over: <a class="xref" href="Quartz.DashboardAgentOptions.html#Quartz_DashboardAgentOptions_ReadOnly">ReadOnly</a>, <a class="xref" href="Quartz.DashboardAgentOptions.html#Quartz_DashboardAgentOptions_IsOperationAllowed">IsOperationAllowed</a>
+and <a class="xref" href="Quartz.DashboardAgentOptions.html#Quartz_DashboardAgentOptions_IsJobTypeAllowed">IsJobTypeAllowed</a> are the agent's own decisions, made in the worker's process, and
+nothing the dashboard sends can widen them. The dashboard's own <code>ReadOnly</code> hides its buttons; it
+does not bind an agent.
+</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_DashboardAgentOptions_AccessTokenProvider_" data-uid="Quartz.DashboardAgentOptions.AccessTokenProvider*"></a>
+
+  <h3 id="Quartz_DashboardAgentOptions_AccessTokenProvider" data-uid="Quartz.DashboardAgentOptions.AccessTokenProvider">
+  AccessTokenProvider
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard.Agent/DashboardAgentOptions.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Where the bearer token comes from when it is the host's own credential rather than a shared secret:
+a managed identity, an OIDC client-credentials flow. Asked before every connection, so a token that
+expires is renewed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;CancellationToken, ValueTask&lt;string?&gt;&gt;? AccessTokenProvider { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_DashboardAgentOptions_ConfigureConnection_" data-uid="Quartz.DashboardAgentOptions.ConfigureConnection*"></a>
+
+  <h3 id="Quartz_DashboardAgentOptions_ConfigureConnection" data-uid="Quartz.DashboardAgentOptions.ConfigureConnection">
+  ConfigureConnection
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard.Agent/DashboardAgentOptions.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures the connection the agent dials out on: a proxy, a client certificate, which transports
+to try, or the handler a test routes it through.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;HttpConnectionOptions&gt;? ConfigureConnection { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.connections.client.httpconnectionoptions">HttpConnectionOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_DashboardAgentOptions_Endpoint_" data-uid="Quartz.DashboardAgentOptions.Endpoint*"></a>
+
+  <h3 id="Quartz_DashboardAgentOptions_Endpoint" data-uid="Quartz.DashboardAgentOptions.Endpoint">
+  Endpoint
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard.Agent/DashboardAgentOptions.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The dashboard's agent hub: the dashboard's path followed by <code>/agents</code>, for example
+<code>https://ops.example.com/quartz/agents</code>. Required.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Uri? Endpoint { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uri">Uri</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_DashboardAgentOptions_HeartbeatInterval_" data-uid="Quartz.DashboardAgentOptions.HeartbeatInterval*"></a>
+
+  <h3 id="Quartz_DashboardAgentOptions_HeartbeatInterval" data-uid="Quartz.DashboardAgentOptions.HeartbeatInterval">
+  HeartbeatInterval
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard.Agent/DashboardAgentOptions.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How often the agent tells the dashboard it is alive. Fifteen seconds by default; the dashboard may
+ask for another interval when it accepts the registration, and the agent adopts it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan HeartbeatInterval { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_DashboardAgentOptions_IsJobTypeAllowed_" data-uid="Quartz.DashboardAgentOptions.IsJobTypeAllowed*"></a>
+
+  <h3 id="Quartz_DashboardAgentOptions_IsJobTypeAllowed" data-uid="Quartz.DashboardAgentOptions.IsJobTypeAllowed">
+  IsJobTypeAllowed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard.Agent/DashboardAgentOptions.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Which job types a request through this agent may name. <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> — the default —
+refuses every one: an agent crosses a trust boundary, and with <code>Quartz.Jobs</code> on the probing
+path a dashboard that may name any <a class="xref" href="Quartz.IJob.html">IJob</a> may run any executable on this machine.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;string, bool&gt;? IsJobTypeAllowed { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_DashboardAgentOptions_IsJobTypeAllowed_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Only the operations that store a job <em>by type name</em> are refused — add-job, schedule-job with
+a job, and schedule-jobs. Triggering, pausing, rescheduling and deleting a job the scheduler already
+holds work with the predicate unset. The refusal is <code>403</code> with problem details naming this
+option as the remedy.
+</p>
+<p>
+The predicate is given the job type name as it was written, and nothing resolves it first — the
+name is data until the scheduler loads it. Match on the string, and remember that one type has more
+than one spelling: <code>Acme.Jobs.Nightly, Acme.Jobs</code> and the same name carrying <code>Version</code>,
+<code>Culture</code> and <code>PublicKeyToken</code> are both it. A <code>StartsWith</code> on the namespace covers
+every spelling at once. The HTTP API's <code>QuartzHttpApiOptions.IsJobTypeAllowed</code> is the same
+predicate with the opposite default, because that surface is on the application's own network.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_DashboardAgentOptions_IsOperationAllowed_" data-uid="Quartz.DashboardAgentOptions.IsOperationAllowed*"></a>
+
+  <h3 id="Quartz_DashboardAgentOptions_IsOperationAllowed" data-uid="Quartz.DashboardAgentOptions.IsOperationAllowed">
+  IsOperationAllowed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard.Agent/DashboardAgentOptions.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Which operations the agent accepts, by route name — <code>Shutdown</code>, <code>PauseJob</code>,
+<code>ScheduleJob</code>, the names the HTTP API publishes as its operation ids. <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>
+— the default — accepts every one. A refused operation is <code>403</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;string, bool&gt;? IsOperationAllowed { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_DashboardAgentOptions_MaxConcurrentOperations_" data-uid="Quartz.DashboardAgentOptions.MaxConcurrentOperations*"></a>
+
+  <h3 id="Quartz_DashboardAgentOptions_MaxConcurrentOperations" data-uid="Quartz.DashboardAgentOptions.MaxConcurrentOperations">
+  MaxConcurrentOperations
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard.Agent/DashboardAgentOptions.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How many of the dashboard's requests run at once. Four by default. The rest queue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxConcurrentOperations { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_DashboardAgentOptions_MaxPageSize_" data-uid="Quartz.DashboardAgentOptions.MaxPageSize*"></a>
+
+  <h3 id="Quartz_DashboardAgentOptions_MaxPageSize" data-uid="Quartz.DashboardAgentOptions.MaxPageSize">
+  MaxPageSize
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard.Agent/DashboardAgentOptions.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The most items one paged request may return: 1000 by default, and <code>0</code> for no limit, as
+<code>QuartzHttpApiOptions.MaxPageSize</code> bounds the HTTP API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxPageSize { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_DashboardAgentOptions_ReadOnly_" data-uid="Quartz.DashboardAgentOptions.ReadOnly*"></a>
+
+  <h3 id="Quartz_DashboardAgentOptions_ReadOnly" data-uid="Quartz.DashboardAgentOptions.ReadOnly">
+  ReadOnly
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard.Agent/DashboardAgentOptions.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the agent refuses every operation that changes something. <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> by
+default. A refused operation is <code>403</code> to the dashboard, which shows the refusal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ReadOnly { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_DashboardAgentOptions_Target_" data-uid="Quartz.DashboardAgentOptions.Target*"></a>
+
+  <h3 id="Quartz_DashboardAgentOptions_Target" data-uid="Quartz.DashboardAgentOptions.Target">
+  Target
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard.Agent/DashboardAgentOptions.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The name this process registers under, which is the first half of its scheduler's key on the
+dashboard. Defaults to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.environment.machinename">MachineName</a>. Cannot contain <code>/</code> or <code>+</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Target { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_DashboardAgentOptions_Target_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Two processes cannot share a target: the second to connect is refused until the first is gone, and
+an agent that reconnects under the same target and the same scheduler instance id takes its own
+entry over. Give each process a target of its own where the machine name is not one — containers
+that restart under new names, or several workers on one machine.</p>
+</div>
+
+
+
+
+  <a id="Quartz_DashboardAgentOptions_Token_" data-uid="Quartz.DashboardAgentOptions.Token*"></a>
+
+  <h3 id="Quartz_DashboardAgentOptions_Token" data-uid="Quartz.DashboardAgentOptions.Token">
+  Token
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard.Agent/DashboardAgentOptions.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The bearer token the dashboard accepts — its <code>AcceptAgents(a =&gt; a.Tokens.Primary = …)</code>, or the
+secondary one while a rotation is under way. Required unless <a class="xref" href="Quartz.DashboardAgentOptions.html#Quartz_DashboardAgentOptions_AccessTokenProvider">AccessTokenProvider</a> is set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Token { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_DashboardAgentOptions_Token_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Sent as an <code>Authorization: Bearer</code> header on every connection, never in a URL.</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard.Agent/DashboardAgentOptions.cs/#L45" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
