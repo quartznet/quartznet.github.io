@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct SchedulerRestartOptions | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct SchedulerRestartOptions | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="How long a restart waits for the outgoing scheduler&#39;s work, and what it leaves the new one doing.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_SchedulerRestartOptions.md&amp;value=---%0Auid%3A%20Quartz.SchedulerRestartOptions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.SchedulerRestartOptions">
+
+
+
+  <h1 id="Quartz_SchedulerRestartOptions" data-uid="Quartz.SchedulerRestartOptions" class="text-break">
+Struct SchedulerRestartOptions  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SchedulerRestartOptions.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>How long a restart waits for the outgoing scheduler's work, and what it leaves the new one doing.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly record struct SchedulerRestartOptions : IEquatable&lt;SchedulerRestartOptions&gt;</code></pre>
+  </div>
+
+
+
+
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Quartz.SchedulerRestartOptions.html">SchedulerRestartOptions</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode">ValueType.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring">ValueType.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_SchedulerRestartOptions_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Two settings, and both defaults say "as it was": wait long enough for a job to finish but not
+indefinitely, and leave the new scheduler running exactly if the old one was. So
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/default">default</a> — which is what omitting the argument gives — is a restart that changes
+nothing but the instances.
+</p>
+<p>
+There is no <code>WaitForJobsToComplete</code>. A restart always waits, because the next generation's first
+act is a recovery sweep over the whole scheduler name — it moves acquired and blocked triggers back
+to waiting and deletes every fired-trigger row — and running that while the previous generation's
+jobs are still writing would corrupt them. <a class="xref" href="Quartz.SchedulerRestartOptions.html#Quartz_SchedulerRestartOptions_DrainTimeout">DrainTimeout</a> is how long that wait may
+take, and giving up on it fails the restart rather than proceeding.
+</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_SchedulerRestartOptions_DrainTimeout_" data-uid="Quartz.SchedulerRestartOptions.DrainTimeout*"></a>
+
+  <h3 id="Quartz_SchedulerRestartOptions_DrainTimeout" data-uid="Quartz.SchedulerRestartOptions.DrainTimeout">
+  DrainTimeout
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SchedulerRestartOptions.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How long to wait for the outgoing scheduler's running jobs before giving up on the restart.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan? DrainTimeout { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_SchedulerRestartOptions_DrainTimeout_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> — the default — is thirty seconds.
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.timeout.infinitetimespan">InfiniteTimeSpan</a> waits until the jobs finish or the cancellation token
+fires, whichever comes first. The wait covers each job's job store update as well as the job
+itself, because the thread pool is handed the whole of an execution and that update is its last
+act.</p>
+<p>
+A wait that expires leaves the old scheduler shut down and the new one unbuilt, and reports a
+<a class="xref" href="Quartz.SchedulerRestartException.html">SchedulerRestartException</a>. Ask again once the work has finished — nothing else is
+needed, and until then the name is listed with no status. Long-running jobs that must be cut
+short are what <a class="xref" href="Quartz.ShutdownJobInterruption.html">ShutdownJobInterruption</a> and <a class="xref" href="Quartz.JobTimeoutAttribute.html">JobTimeoutAttribute</a> are
+for.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_SchedulerRestartOptions_Start_" data-uid="Quartz.SchedulerRestartOptions.Start*"></a>
+
+  <h3 id="Quartz_SchedulerRestartOptions_Start" data-uid="Quartz.SchedulerRestartOptions.Start">
+  Start
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SchedulerRestartOptions.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the new scheduler is started.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? Start { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_SchedulerRestartOptions_Start_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> — the default — starts it if the old one was running, and leaves it
+created if the old one was in standby, had never been started, or had already been shut down.
+A restart that changed whether a scheduler fires would be a second decision hidden inside the
+first. Say <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> to decide it deliberately.</p>
+</div>
+
+
+
+
+  <a id="Quartz_SchedulerRestartOptions_WithoutStarting_" data-uid="Quartz.SchedulerRestartOptions.WithoutStarting*"></a>
+
+  <h3 id="Quartz_SchedulerRestartOptions_WithoutStarting" data-uid="Quartz.SchedulerRestartOptions.WithoutStarting">
+  WithoutStarting
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SchedulerRestartOptions.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Leave the new scheduler for the application to start, whatever the old one was doing. The name
+for <code>new SchedulerRestartOptions { Start = false }</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SchedulerRestartOptions WithoutStarting { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.SchedulerRestartOptions.html">SchedulerRestartOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 id="seealso">See Also</h2>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ISchedulerRuntime.html#Quartz_ISchedulerRuntime_Restart_System_String_Quartz_SchedulerRestartOptions_System_Threading_CancellationToken_">Restart</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="Quartz.SchedulerRestartOptions.html">SchedulerRestartOptions</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>)</div>
+  </div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SchedulerRestartOptions.cs/#L43" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
