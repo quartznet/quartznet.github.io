@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IJobConfigurator&lt;TJob&gt; | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IJobConfigurator&lt;TJob&gt; | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Declares one job inside AddQuartz(…): its key, its description, its durability and its job data.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_IJobConfigurator_1.md&amp;value=---%0Auid%3A%20Quartz.IJobConfigurator%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.IJobConfigurator`1">
+
+
+
+  <h1 id="Quartz_IJobConfigurator_1" data-uid="Quartz.IJobConfigurator`1" class="text-break">
+Interface IJobConfigurator&lt;TJob&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/IJobConfigurator.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Declares one job inside <code>AddQuartz(…)</code>: its key, its description, its durability and its
+job data.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IJobConfigurator&lt;TJob&gt; where TJob : IJob</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TJob</code></dt>
+    <dd><p>The job type being declared.</p>
+</dd>
+  </dl>
+
+
+
+
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Quartz.JobInputBuilderExtensions.html#Quartz_JobInputBuilderExtensions_UsingInput__2_Quartz_IJobConfigurator___0____1_">JobInputBuilderExtensions.UsingInput&lt;TJob, TInput&gt;(IJobConfigurator&lt;TJob&gt;, TInput)</a>
+  </div>
+  </dd></dl>
+
+
+
+  <h2 id="Quartz_IJobConfigurator_1_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>The job type is the type argument rather than a value, which is what lets the data-map members
+take a property expression and what carries the trimming annotation to the container.</p>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_IJobConfigurator_1_DisallowConcurrentExecution_" data-uid="Quartz.IJobConfigurator`1.DisallowConcurrentExecution*"></a>
+
+  <h3 id="Quartz_IJobConfigurator_1_DisallowConcurrentExecution_System_Boolean_" data-uid="Quartz.IJobConfigurator`1.DisallowConcurrentExecution(System.Boolean)">
+  DisallowConcurrentExecution(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/IJobConfigurator.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Instructs the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> whether or not concurrent execution of the job should be disallowed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IJobConfigurator&lt;TJob&gt; DisallowConcurrentExecution(bool concurrentExecutionDisallowed = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>concurrentExecutionDisallowed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Indicates whether or not concurrent execution of the job should be disallowed.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IJobConfigurator-1.html">IJobConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>The updated <a class="xref" href="Quartz.IJobConfigurator-1.html">IJobConfigurator&lt;TJob&gt;</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IJobConfigurator_1_DisallowConcurrentExecution_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If not explicitly set, concurrent execution of a job is only disallowed if either the <a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_JobType">JobType</a> itself,
+one of its ancestors or one of the interfaces that it implements, is annotated with <a class="xref" href="Quartz.DisallowConcurrentExecutionAttribute.html">DisallowConcurrentExecutionAttribute</a>.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.DisallowConcurrentExecutionAttribute.html">DisallowConcurrentExecutionAttribute</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_IJobConfigurator_1_PersistJobDataAfterExecution_" data-uid="Quartz.IJobConfigurator`1.PersistJobDataAfterExecution*"></a>
+
+  <h3 id="Quartz_IJobConfigurator_1_PersistJobDataAfterExecution_System_Boolean_" data-uid="Quartz.IJobConfigurator`1.PersistJobDataAfterExecution(System.Boolean)">
+  PersistJobDataAfterExecution(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/IJobConfigurator.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Instructs the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> whether or not job data should be re-stored when execution of the job completes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IJobConfigurator&lt;TJob&gt; PersistJobDataAfterExecution(bool persistJobDataAfterExecution = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>persistJobDataAfterExecution</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Indicates whether or not job data should be re-stored when execution of the job completes.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IJobConfigurator-1.html">IJobConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>The updated <a class="xref" href="Quartz.IJobConfigurator-1.html">IJobConfigurator&lt;TJob&gt;</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IJobConfigurator_1_PersistJobDataAfterExecution_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If not explicitly set, job data is only re-stored if either the <a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_JobType">JobType</a> itself, one of
+its ancestors or one of the interfaces that it implements, is annotated with <a class="xref" href="Quartz.PersistJobDataAfterExecutionAttribute.html">PersistJobDataAfterExecutionAttribute</a>.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.PersistJobDataAfterExecutionAttribute.html">PersistJobDataAfterExecutionAttribute</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_IJobConfigurator_1_RequestRecovery_" data-uid="Quartz.IJobConfigurator`1.RequestRecovery*"></a>
+
+  <h3 id="Quartz_IJobConfigurator_1_RequestRecovery_System_Boolean_" data-uid="Quartz.IJobConfigurator`1.RequestRecovery(System.Boolean)">
+  RequestRecovery(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/IJobConfigurator.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Instructs the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> whether or not the job
+should be re-executed if a 'recovery' or 'fail-over' situation is
+encountered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IJobConfigurator&lt;TJob&gt; RequestRecovery(bool shouldRecover = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shouldRecover</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IJobConfigurator-1.html">IJobConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated JobBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IJobConfigurator_1_RequestRecovery_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If not explicitly set, the default value is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</div>
+
+
+
+
+  <a id="Quartz_IJobConfigurator_1_StoreDurably_" data-uid="Quartz.IJobConfigurator`1.StoreDurably*"></a>
+
+  <h3 id="Quartz_IJobConfigurator_1_StoreDurably_System_Boolean_" data-uid="Quartz.IJobConfigurator`1.StoreDurably(System.Boolean)">
+  StoreDurably(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/IJobConfigurator.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether or not the job should remain stored after it is
+orphaned (no <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s point to it).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IJobConfigurator&lt;TJob&gt; StoreDurably(bool durability = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>durability</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>the value to set for the durability property.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IJobConfigurator-1.html">IJobConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated JobBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IJobConfigurator_1_StoreDurably_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If not explicitly set, the default value is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_Durable">Durable</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_IJobConfigurator_1_UsingJobData_" data-uid="Quartz.IJobConfigurator`1.UsingJobData*"></a>
+
+  <h3 id="Quartz_IJobConfigurator_1_UsingJobData_Quartz_JobDataMap_" data-uid="Quartz.IJobConfigurator`1.UsingJobData(Quartz.JobDataMap)">
+  UsingJobData(JobDataMap)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/IJobConfigurator.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add all the data from the given <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> to the
+<a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>'s <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IJobConfigurator&lt;TJob&gt; UsingJobData(JobDataMap newJobDataMap)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newJobDataMap</code> <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IJobConfigurator-1.html">IJobConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated JobBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_JobDataMap">JobDataMap</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_IJobConfigurator_1_UsingJobData_" data-uid="Quartz.IJobConfigurator`1.UsingJobData*"></a>
+
+  <h3 id="Quartz_IJobConfigurator_1_UsingJobData_System_String_System_Object_" data-uid="Quartz.IJobConfigurator`1.UsingJobData(System.String,System.Object)">
+  UsingJobData(string, object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/IJobConfigurator.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add the given key-value pair to the JobDetail's <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IJobConfigurator&lt;TJob&gt; UsingJobData(string key, object? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the key to store the value under</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>the value to store</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IJobConfigurator-1.html">IJobConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated JobBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IJobConfigurator_1_UsingJobData_System_String_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The value is stored as given. A persistent job store can only hold what its serializer
+round-trips, and AdoJobStore's <code>StoreJobDataAsStrings</code> mode only strings.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_JobDataMap">JobDataMap</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_IJobConfigurator_1_UsingJobData_" data-uid="Quartz.IJobConfigurator`1.UsingJobData*"></a>
+
+  <h3 id="Quartz_IJobConfigurator_1_UsingJobData__1_System_Linq_Expressions_Expression_System_Func__0___0_____0_" data-uid="Quartz.IJobConfigurator`1.UsingJobData``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},``0)">
+  UsingJobData&lt;TValue&gt;(Expression&lt;Func&lt;TJob, TValue&gt;&gt;, TValue)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/IJobConfigurator.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add a value to the JobDetail's <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> under the name of the job property it is
+meant to end up on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IJobConfigurator&lt;TJob&gt; UsingJobData&lt;TValue&gt;(Expression&lt;Func&lt;TJob, TValue&gt;&gt; jobProperty, TValue value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>jobProperty</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TJob, TValue&gt;&gt;</dt>
+    <dd><p>an expression naming the job property, such as <code>job =&gt; job.Parameter</code></p>
+</dd>
+    <dt><code>value</code> <span class="xref">TValue</span></dt>
+    <dd><p>the value to bind to that property</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IJobConfigurator-1.html">IJobConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated JobBuilder</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TValue</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IJobConfigurator_1_UsingJobData__1_System_Linq_Expressions_Expression_System_Func__0___0_____0__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The property is named rather than spelled, so the key cannot be mistyped and the value cannot be of
+the wrong type. It has to be a public settable property read directly off the job - a path through
+another property has nowhere to land, since the job factory sets properties on the job instance
+itself - and it is rejected here rather than dropped silently when the job runs. Properties
+inherited from a base job are fine.
+</p>
+<p>
+The value is stored in the property's own type, so an implicit widening at the call site is undone
+and a value that does not fit is rejected here. An enum property takes the enum's name.
+</p>
+<p>
+The same care applies as to any other job data: a persistent job store can only hold what its
+serializer round-trips, and AdoJobStore's <code>StoreJobDataAsStrings</code> mode only strings. Nothing beyond
+enums is converted for you.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_JobDataMap">JobDataMap</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_IJobConfigurator_1_WithDescription_" data-uid="Quartz.IJobConfigurator`1.WithDescription*"></a>
+
+  <h3 id="Quartz_IJobConfigurator_1_WithDescription_System_String_" data-uid="Quartz.IJobConfigurator`1.WithDescription(System.String)">
+  WithDescription(string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/IJobConfigurator.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the given (human-meaningful) description of the Job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IJobConfigurator&lt;TJob&gt; WithDescription(string? description)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>description</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the description for the Job</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IJobConfigurator-1.html">IJobConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated JobBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_Description">Description</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_IJobConfigurator_1_WithIdentity_" data-uid="Quartz.IJobConfigurator`1.WithIdentity*"></a>
+
+  <h3 id="Quartz_IJobConfigurator_1_WithIdentity_Quartz_JobKey_" data-uid="Quartz.IJobConfigurator`1.WithIdentity(Quartz.JobKey)">
+  WithIdentity(JobKey)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/IJobConfigurator.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Use a <a class="xref" href="Quartz.JobKey.html">JobKey</a> to identify the JobDetail.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IJobConfigurator&lt;TJob&gt; WithIdentity(JobKey key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="Quartz.JobKey.html">JobKey</a></dt>
+    <dd><p>the Job's JobKey</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IJobConfigurator-1.html">IJobConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated JobBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IJobConfigurator_1_WithIdentity_Quartz_JobKey__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If none of the 'withIdentity' methods are set on the JobBuilder,
+then a random, unique JobKey will be generated.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.JobKey.html">JobKey</a></div>
+    <div><a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_Key">Key</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_IJobConfigurator_1_WithIdentity_" data-uid="Quartz.IJobConfigurator`1.WithIdentity*"></a>
+
+  <h3 id="Quartz_IJobConfigurator_1_WithIdentity_System_String_" data-uid="Quartz.IJobConfigurator`1.WithIdentity(System.String)">
+  WithIdentity(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/IJobConfigurator.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Use a <a class="xref" href="Quartz.JobKey.html">JobKey</a> with the given name and default group to
+identify the JobDetail.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IJobConfigurator&lt;TJob&gt; WithIdentity(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the name element for the Job's JobKey</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IJobConfigurator-1.html">IJobConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated JobBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IJobConfigurator_1_WithIdentity_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If none of the 'withIdentity' methods are set on the JobBuilder,
+then a random, unique JobKey will be generated.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.JobKey.html">JobKey</a></div>
+    <div><a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_Key">Key</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_IJobConfigurator_1_WithIdentity_" data-uid="Quartz.IJobConfigurator`1.WithIdentity*"></a>
+
+  <h3 id="Quartz_IJobConfigurator_1_WithIdentity_System_String_System_String_" data-uid="Quartz.IJobConfigurator`1.WithIdentity(System.String,System.String)">
+  WithIdentity(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/IJobConfigurator.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Use a <a class="xref" href="Quartz.JobKey.html">JobKey</a> with the given name and group to
+identify the JobDetail.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IJobConfigurator&lt;TJob&gt; WithIdentity(string name, string group)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the name element for the Job's JobKey</p>
+</dd>
+    <dt><code>group</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the group element for the Job's JobKey</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IJobConfigurator-1.html">IJobConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>the updated JobBuilder</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IJobConfigurator_1_WithIdentity_System_String_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If none of the 'withIdentity' methods are set on the JobBuilder,
+then a random, unique JobKey will be generated.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.JobKey.html">JobKey</a></div>
+    <div><a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_Key">Key</a></div>
+    </dd>
+  </dl>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/IJobConfigurator.cs/#L15" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

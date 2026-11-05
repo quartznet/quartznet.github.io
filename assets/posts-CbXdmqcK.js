@@ -1,0 +1,1 @@
+var e=e=>Object.entries(e).filter(([,e])=>e.meta?.post&&!e.meta.post.hidden).map(([e,t])=>({path:e,...t.meta.post})).sort((e,t)=>t.date.localeCompare(e.date)||t.path.localeCompare(e.path)),t=(t,n)=>e(t).filter(e=>e.promote).slice(0,n);export{e as n,t};

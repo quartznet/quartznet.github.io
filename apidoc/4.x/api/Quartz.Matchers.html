@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Matchers | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Matchers | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="The entry point for building matchers: the roots live here as static factories, and the combinators — ,  and  — are extension methods on any , so an expression reads left to right:">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Matchers.md&amp;value=---%0Auid%3A%20Quartz.Matchers%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Matchers">
+
+
+
+  <h1 id="Quartz_Matchers" data-uid="Quartz.Matchers" class="text-break">
+Class Matchers  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Matchers/Matchers.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The entry point for building matchers: the roots live here as static factories, and the
+combinators — <a class="xref" href="Quartz.Matchers.html#Quartz_Matchers_And__1_Quartz_IMatcher___0__Quartz_IMatcher___0__">And&lt;TKey&gt;(IMatcher&lt;TKey&gt;, IMatcher&lt;TKey&gt;)</a>, <a class="xref" href="Quartz.Matchers.html#Quartz_Matchers_Or__1_Quartz_IMatcher___0__Quartz_IMatcher___0__">Or&lt;TKey&gt;(IMatcher&lt;TKey&gt;, IMatcher&lt;TKey&gt;)</a> and <a class="xref" href="Quartz.Matchers.html#Quartz_Matchers_Not__1_Quartz_IMatcher___0__">Not&lt;TKey&gt;(IMatcher&lt;TKey&gt;)</a> —
+are extension methods on any <a class="xref" href="Quartz.IMatcher-1.html">IMatcher&lt;T&gt;</a>, so an expression reads left to
+right:</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class Matchers</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Matchers</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+  <h2 id="Quartz_Matchers_examples">Examples</h2>
+  <pre><code class="lang-csharp">IMatcher&lt;JobKey&gt; matcher = Matchers.Group&lt;JobKey&gt;(StringOperator.StartsWith, "reporting")
+    .And(Matchers.Name&lt;JobKey&gt;(StringOperator.Contains, "cleanup"))
+    .Not();</code></pre>
+
+
+  <h2 id="Quartz_Matchers_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+<a class="xref" href="Quartz.GroupMatcher-1.html">GroupMatcher&lt;TKey&gt;</a> and <a class="xref" href="Quartz.NameMatcher-1.html">NameMatcher&lt;TKey&gt;</a> also carry factories of
+their own — <code>GroupEquals</code>, <code>NameStartsWith</code>, … — and that split is deliberate rather
+than an unfinished move. The two answer different questions. A factory on the concrete type
+<em>names</em> its comparison, so a call site that knows which comparison it wants reads as a
+sentence and returns the concrete type the scheduler members that take a
+<a class="xref" href="Quartz.GroupMatcher-1.html">GroupMatcher&lt;TKey&gt;</a> require. The roots here take the comparison as a
+<a class="xref" href="Quartz.StringOperator.html">StringOperator</a> <em>value</em>, which is what a caller who read the operator from
+configuration, from a query string or off the wire actually holds — the HTTP API builds every
+matcher it receives this way — and there is no way to spell that with a method per operator.
+</p>
+<p>
+What does not live on a concrete type is a root that names no comparison:
+<a class="xref" href="Quartz.Matchers.html#Quartz_Matchers_AllJobs">AllJobs()</a>, <a class="xref" href="Quartz.Matchers.html#Quartz_Matchers_AllTriggers">AllTriggers()</a> and <a class="xref" href="Quartz.Matchers.html#Quartz_Matchers_Key_Quartz_JobKey_">Key(JobKey)</a> have nothing to
+name themselves after, so they are built here and nowhere else.
+</p>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_Matchers_AllJobs_" data-uid="Quartz.Matchers.AllJobs*"></a>
+
+  <h3 id="Quartz_Matchers_AllJobs" data-uid="Quartz.Matchers.AllJobs">
+  AllJobs()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Matchers/Matchers.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A matcher that matches every job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static EverythingMatcher&lt;JobKey&gt; AllJobs()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.EverythingMatcher-1.html">EverythingMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Matchers_AllTriggers_" data-uid="Quartz.Matchers.AllTriggers*"></a>
+
+  <h3 id="Quartz_Matchers_AllTriggers" data-uid="Quartz.Matchers.AllTriggers">
+  AllTriggers()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Matchers/Matchers.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A matcher that matches every trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static EverythingMatcher&lt;TriggerKey&gt; AllTriggers()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.EverythingMatcher-1.html">EverythingMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Matchers_And_" data-uid="Quartz.Matchers.And*"></a>
+
+  <h3 id="Quartz_Matchers_And__1_Quartz_IMatcher___0__Quartz_IMatcher___0__" data-uid="Quartz.Matchers.And``1(Quartz.IMatcher{``0},Quartz.IMatcher{``0})">
+  And&lt;TKey&gt;(IMatcher&lt;TKey&gt;, IMatcher&lt;TKey&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Matchers/Matchers.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A matcher that matches when both this matcher and <code class="paramref">other</code> match.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AndMatcher&lt;TKey&gt; And&lt;TKey&gt;(this IMatcher&lt;TKey&gt; matcher, IMatcher&lt;TKey&gt; other) where TKey : Key&lt;TKey&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matcher</code> <a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;TKey&gt;</dt>
+    <dd></dd>
+    <dt><code>other</code> <a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;TKey&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.AndMatcher-1.html">AndMatcher</a>&lt;TKey&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKey</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Matchers_Group_" data-uid="Quartz.Matchers.Group*"></a>
+
+  <h3 id="Quartz_Matchers_Group__1_Quartz_StringOperator_System_String_" data-uid="Quartz.Matchers.Group``1(Quartz.StringOperator,System.String)">
+  Group&lt;TKey&gt;(StringOperator, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Matchers/Matchers.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A matcher that compares the group of a key with the given value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GroupMatcher&lt;TKey&gt; Group&lt;TKey&gt;(StringOperator matchOperator, string compareTo) where TKey : Key&lt;TKey&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matchOperator</code> <a class="xref" href="Quartz.StringOperator.html">StringOperator</a></dt>
+    <dd><p>How to compare, e.g. <a class="xref" href="Quartz.StringOperator.html#Quartz_StringOperator_Equality">Equality</a> or <a class="xref" href="Quartz.StringOperator.html#Quartz_StringOperator_StartsWith">StartsWith</a>.</p>
+</dd>
+    <dt><code>compareTo</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The value to compare the group with.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.GroupMatcher-1.html">GroupMatcher</a>&lt;TKey&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKey</code></dt>
+    <dd><p>Which kind of key to match: <a class="xref" href="Quartz.JobKey.html">JobKey</a> or <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Matchers_Key_" data-uid="Quartz.Matchers.Key*"></a>
+
+  <h3 id="Quartz_Matchers_Key_Quartz_JobKey_" data-uid="Quartz.Matchers.Key(Quartz.JobKey)">
+  Key(JobKey)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Matchers/Matchers.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A matcher that matches exactly the job with the given key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static KeyMatcher&lt;JobKey&gt; Key(JobKey key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="Quartz.JobKey.html">JobKey</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.KeyMatcher-1.html">KeyMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Matchers_Key_" data-uid="Quartz.Matchers.Key*"></a>
+
+  <h3 id="Quartz_Matchers_Key_Quartz_TriggerKey_" data-uid="Quartz.Matchers.Key(Quartz.TriggerKey)">
+  Key(TriggerKey)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Matchers/Matchers.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A matcher that matches exactly the trigger with the given key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static KeyMatcher&lt;TriggerKey&gt; Key(TriggerKey key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.KeyMatcher-1.html">KeyMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Matchers_Name_" data-uid="Quartz.Matchers.Name*"></a>
+
+  <h3 id="Quartz_Matchers_Name__1_Quartz_StringOperator_System_String_" data-uid="Quartz.Matchers.Name``1(Quartz.StringOperator,System.String)">
+  Name&lt;TKey&gt;(StringOperator, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Matchers/Matchers.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A matcher that compares the name of a key with the given value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NameMatcher&lt;TKey&gt; Name&lt;TKey&gt;(StringOperator matchOperator, string compareTo) where TKey : Key&lt;TKey&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matchOperator</code> <a class="xref" href="Quartz.StringOperator.html">StringOperator</a></dt>
+    <dd><p>How to compare, e.g. <a class="xref" href="Quartz.StringOperator.html#Quartz_StringOperator_Equality">Equality</a> or <a class="xref" href="Quartz.StringOperator.html#Quartz_StringOperator_StartsWith">StartsWith</a>.</p>
+</dd>
+    <dt><code>compareTo</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The value to compare the name with.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.NameMatcher-1.html">NameMatcher</a>&lt;TKey&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKey</code></dt>
+    <dd><p>Which kind of key to match: <a class="xref" href="Quartz.JobKey.html">JobKey</a> or <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Matchers_Not_" data-uid="Quartz.Matchers.Not*"></a>
+
+  <h3 id="Quartz_Matchers_Not__1_Quartz_IMatcher___0__" data-uid="Quartz.Matchers.Not``1(Quartz.IMatcher{``0})">
+  Not&lt;TKey&gt;(IMatcher&lt;TKey&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Matchers/Matchers.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A matcher that matches when this matcher does not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NotMatcher&lt;TKey&gt; Not&lt;TKey&gt;(this IMatcher&lt;TKey&gt; matcher) where TKey : Key&lt;TKey&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matcher</code> <a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;TKey&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.NotMatcher-1.html">NotMatcher</a>&lt;TKey&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKey</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Matchers_Or_" data-uid="Quartz.Matchers.Or*"></a>
+
+  <h3 id="Quartz_Matchers_Or__1_Quartz_IMatcher___0__Quartz_IMatcher___0__" data-uid="Quartz.Matchers.Or``1(Quartz.IMatcher{``0},Quartz.IMatcher{``0})">
+  Or&lt;TKey&gt;(IMatcher&lt;TKey&gt;, IMatcher&lt;TKey&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Matchers/Matchers.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A matcher that matches when this matcher, <code class="paramref">other</code>, or both match.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static OrMatcher&lt;TKey&gt; Or&lt;TKey&gt;(this IMatcher&lt;TKey&gt; matcher, IMatcher&lt;TKey&gt; other) where TKey : Key&lt;TKey&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matcher</code> <a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;TKey&gt;</dt>
+    <dd></dd>
+    <dt><code>other</code> <a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;TKey&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.OrMatcher-1.html">OrMatcher</a>&lt;TKey&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKey</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h2 id="seealso">See Also</h2>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.GroupMatcher-1.html">GroupMatcher</a>&lt;TKey&gt;</div>
+      <div><a class="xref" href="Quartz.NameMatcher-1.html">NameMatcher</a>&lt;TKey&gt;</div>
+      <div><a class="xref" href="Quartz.StringOperator.html">StringOperator</a></div>
+  </div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Matchers/Matchers.cs/#L58" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

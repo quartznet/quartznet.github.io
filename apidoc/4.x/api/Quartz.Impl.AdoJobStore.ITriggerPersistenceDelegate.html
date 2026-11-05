@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface ITriggerPersistenceDelegate | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface ITriggerPersistenceDelegate | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="An interface which provides an implementation for storing a particular type of &#39;s extended properties.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate.md&amp;value=---%0Auid%3A%20Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate">
+
+
+
+  <h1 id="Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate" data-uid="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate" class="text-break">
+Interface ITriggerPersistenceDelegate  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/ITriggerPersistenceDelegate.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<a class="xref" href="Quartz.Impl.html">Impl</a>.<a class="xref" href="Quartz.Impl.AdoJobStore.html">AdoJobStore</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>An interface which provides an implementation for storing a particular
+type of <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>'s extended properties.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ITriggerPersistenceDelegate</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate_CanHandleTriggerType_" data-uid="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.CanHandleTriggerType*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate_CanHandleTriggerType_Quartz_Extensibility_IOperableTrigger_" data-uid="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.CanHandleTriggerType(Quartz.Extensibility.IOperableTrigger)">
+  CanHandleTriggerType(IOperableTrigger)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/ITriggerPersistenceDelegate.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns whether the trigger type can be handled by delegate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CanHandleTriggerType(IOperableTrigger trigger)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>trigger</code> <a class="xref" href="Quartz.Extensibility.IOperableTrigger.html">IOperableTrigger</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate_DeleteExtendedTriggerProperties_" data-uid="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.DeleteExtendedTriggerProperties*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate_DeleteExtendedTriggerProperties_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_TriggerKey_System_Threading_CancellationToken_" data-uid="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.DeleteExtendedTriggerProperties(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.TriggerKey,System.Threading.CancellationToken)">
+  DeleteExtendedTriggerProperties(ConnectionAndTransactionHolder, TriggerKey, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/ITriggerPersistenceDelegate.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deletes trigger's special properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;int&gt; DeleteExtendedTriggerProperties(ConnectionAndTransactionHolder conn, TriggerKey triggerKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>conn</code> <a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></dt>
+    <dd></dd>
+    <dt><code>triggerKey</code> <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate_GetHandledTriggerTypeDiscriminator_" data-uid="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.GetHandledTriggerTypeDiscriminator*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate_GetHandledTriggerTypeDiscriminator" data-uid="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.GetHandledTriggerTypeDiscriminator">
+  GetHandledTriggerTypeDiscriminator()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/ITriggerPersistenceDelegate.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns database discriminator value for trigger type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetHandledTriggerTypeDiscriminator()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate_Initialize_" data-uid="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.Initialize*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate_Initialize_Quartz_Impl_AdoJobStore_TriggerPersistenceDelegateContext_" data-uid="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.Initialize(Quartz.Impl.AdoJobStore.TriggerPersistenceDelegateContext)">
+  Initialize(TriggerPersistenceDelegateContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/ITriggerPersistenceDelegate.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes the persistence delegate with the settings it works from.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Initialize(TriggerPersistenceDelegateContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="Quartz.Impl.AdoJobStore.TriggerPersistenceDelegateContext.html">TriggerPersistenceDelegateContext</a></dt>
+    <dd><p>The settings the driver delegate was initialized with.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate_Initialize_Quartz_Impl_AdoJobStore_TriggerPersistenceDelegateContext__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Called once by the driver delegate before this delegate is used. There is no default
+implementation: a delegate that does not read the context has no accessor to prepare its
+commands with, and would fail at its first statement rather than at startup.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate_InsertExtendedTriggerProperties_" data-uid="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.InsertExtendedTriggerProperties*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate_InsertExtendedTriggerProperties_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_Extensibility_IOperableTrigger_Quartz_Extensibility_StoredTriggerState_Quartz_IJobDetail_System_Threading_CancellationToken_" data-uid="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.InsertExtendedTriggerProperties(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.Extensibility.IOperableTrigger,Quartz.Extensibility.StoredTriggerState,Quartz.IJobDetail,System.Threading.CancellationToken)">
+  InsertExtendedTriggerProperties(ConnectionAndTransactionHolder, IOperableTrigger, StoredTriggerState, IJobDetail, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/ITriggerPersistenceDelegate.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Inserts trigger's special properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;int&gt; InsertExtendedTriggerProperties(ConnectionAndTransactionHolder conn, IOperableTrigger trigger, StoredTriggerState state, IJobDetail jobDetail, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>conn</code> <a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></dt>
+    <dd></dd>
+    <dt><code>trigger</code> <a class="xref" href="Quartz.Extensibility.IOperableTrigger.html">IOperableTrigger</a></dt>
+    <dd></dd>
+    <dt><code>state</code> <a class="xref" href="Quartz.Extensibility.StoredTriggerState.html">StoredTriggerState</a></dt>
+    <dd></dd>
+    <dt><code>jobDetail</code> <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate_LoadExtendedTriggerProperties_" data-uid="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.LoadExtendedTriggerProperties*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate_LoadExtendedTriggerProperties_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_TriggerKey_System_Threading_CancellationToken_" data-uid="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.LoadExtendedTriggerProperties(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.TriggerKey,System.Threading.CancellationToken)">
+  LoadExtendedTriggerProperties(ConnectionAndTransactionHolder, TriggerKey, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/ITriggerPersistenceDelegate.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads trigger's special properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;TriggerPropertyBundle&gt; LoadExtendedTriggerProperties(ConnectionAndTransactionHolder conn, TriggerKey triggerKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>conn</code> <a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></dt>
+    <dd></dd>
+    <dt><code>triggerKey</code> <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.Impl.AdoJobStore.TriggerPropertyBundle.html">TriggerPropertyBundle</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate_LoadExtendedTriggerProperties_" data-uid="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.LoadExtendedTriggerProperties*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate_LoadExtendedTriggerProperties_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_Collections_Generic_IReadOnlyCollection_Quartz_TriggerKey__System_Threading_CancellationToken_" data-uid="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.LoadExtendedTriggerProperties(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.Collections.Generic.IReadOnlyCollection{Quartz.TriggerKey},System.Threading.CancellationToken)">
+  LoadExtendedTriggerProperties(ConnectionAndTransactionHolder, IReadOnlyCollection&lt;TriggerKey&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/ITriggerPersistenceDelegate.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads the special properties of several triggers of this delegate's type in as few round trips
+as the delegate can manage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;Dictionary&lt;TriggerKey, TriggerPropertyBundle&gt;&gt; LoadExtendedTriggerProperties(ConnectionAndTransactionHolder conn, IReadOnlyCollection&lt;TriggerKey&gt; triggerKeys, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>conn</code> <a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></dt>
+    <dd><p>The DB connection.</p>
+</dd>
+    <dt><code>triggerKeys</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</dt>
+    <dd><p>The keys of the triggers to load properties for.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>, <a class="xref" href="Quartz.Impl.AdoJobStore.TriggerPropertyBundle.html">TriggerPropertyBundle</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate_LoadExtendedTriggerProperties_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_Collections_Generic_IReadOnlyCollection_Quartz_TriggerKey__System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The default implementation loops the single-key overload, so a delegate that does not override
+this keeps working unchanged. Keys whose row is missing — the trigger was deleted concurrently,
+QTZ-386 — are simply absent from the result rather than failing the whole batch.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate_ReadTriggerPropertyBundle_" data-uid="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.ReadTriggerPropertyBundle*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate_ReadTriggerPropertyBundle_System_Data_Common_DbDataReader_" data-uid="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.ReadTriggerPropertyBundle(System.Data.Common.DbDataReader)">
+  ReadTriggerPropertyBundle(DbDataReader)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/ITriggerPersistenceDelegate.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Read trigger state data from open data reader.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TriggerPropertyBundle ReadTriggerPropertyBundle(DbDataReader rs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.common.dbdatareader">DbDataReader</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.Impl.AdoJobStore.TriggerPropertyBundle.html">TriggerPropertyBundle</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate_TryDescribeUpdateExtendedTriggerProperties_" data-uid="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.TryDescribeUpdateExtendedTriggerProperties*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate_TryDescribeUpdateExtendedTriggerProperties_Quartz_Extensibility_IOperableTrigger_Quartz_Extensibility_StoredTriggerState_Quartz_IJobDetail_System_Collections_Generic_ICollection_Quartz_Impl_AdoJobStore_SqlStatement__" data-uid="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.TryDescribeUpdateExtendedTriggerProperties(Quartz.Extensibility.IOperableTrigger,Quartz.Extensibility.StoredTriggerState,Quartz.IJobDetail,System.Collections.Generic.ICollection{Quartz.Impl.AdoJobStore.SqlStatement})">
+  TryDescribeUpdateExtendedTriggerProperties(IOperableTrigger, StoredTriggerState, IJobDetail, ICollection&lt;SqlStatement&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/ITriggerPersistenceDelegate.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Describes what <a class="xref" href="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.html#Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate_UpdateExtendedTriggerProperties_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_Extensibility_IOperableTrigger_Quartz_Extensibility_StoredTriggerState_Quartz_IJobDetail_System_Threading_CancellationToken_">UpdateExtendedTriggerProperties(ConnectionAndTransactionHolder, IOperableTrigger, StoredTriggerState, IJobDetail, CancellationToken)</a> would issue, instead of issuing it,
+so that the caller can send it in the same round trip as the trigger's own row.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool TryDescribeUpdateExtendedTriggerProperties(IOperableTrigger trigger, StoredTriggerState state, IJobDetail jobDetail, ICollection&lt;SqlStatement&gt; statements)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>trigger</code> <a class="xref" href="Quartz.Extensibility.IOperableTrigger.html">IOperableTrigger</a></dt>
+    <dd><p>The trigger whose properties are being written.</p>
+</dd>
+    <dt><code>state</code> <a class="xref" href="Quartz.Extensibility.StoredTriggerState.html">StoredTriggerState</a></dt>
+    <dd><p>The state being written on the trigger's own row.</p>
+</dd>
+    <dt><code>jobDetail</code> <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></dt>
+    <dd><p>The job the trigger fires.</p>
+</dd>
+    <dt><code>statements</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="Quartz.Impl.AdoJobStore.SqlStatement.html">SqlStatement</a>&gt;</dt>
+    <dd><p>The statements to append to.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the update was appended and must not also be issued through
+<a class="xref" href="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.html#Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate_UpdateExtendedTriggerProperties_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_Extensibility_IOperableTrigger_Quartz_Extensibility_StoredTriggerState_Quartz_IJobDetail_System_Threading_CancellationToken_">UpdateExtendedTriggerProperties(ConnectionAndTransactionHolder, IOperableTrigger, StoredTriggerState, IJobDetail, CancellationToken)</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate_TryDescribeUpdateExtendedTriggerProperties_Quartz_Extensibility_IOperableTrigger_Quartz_Extensibility_StoredTriggerState_Quartz_IJobDetail_System_Collections_Generic_ICollection_Quartz_Impl_AdoJobStore_SqlStatement___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The default implementation describes nothing and reports <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>, so a delegate
+written before this existed — or one whose update is not expressible as plain parameterized
+statements, a blob it has to serialize under its own control being the case that matters — keeps
+being given a round trip of its own and behaves exactly as it did.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate_UpdateExtendedTriggerProperties_" data-uid="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.UpdateExtendedTriggerProperties*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_ITriggerPersistenceDelegate_UpdateExtendedTriggerProperties_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_Extensibility_IOperableTrigger_Quartz_Extensibility_StoredTriggerState_Quartz_IJobDetail_System_Threading_CancellationToken_" data-uid="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.UpdateExtendedTriggerProperties(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.Extensibility.IOperableTrigger,Quartz.Extensibility.StoredTriggerState,Quartz.IJobDetail,System.Threading.CancellationToken)">
+  UpdateExtendedTriggerProperties(ConnectionAndTransactionHolder, IOperableTrigger, StoredTriggerState, IJobDetail, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/ITriggerPersistenceDelegate.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updates trigger's special properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;int&gt; UpdateExtendedTriggerProperties(ConnectionAndTransactionHolder conn, IOperableTrigger trigger, StoredTriggerState state, IJobDetail jobDetail, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>conn</code> <a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></dt>
+    <dd></dd>
+    <dt><code>trigger</code> <a class="xref" href="Quartz.Extensibility.IOperableTrigger.html">IOperableTrigger</a></dt>
+    <dd></dd>
+    <dt><code>state</code> <a class="xref" href="Quartz.Extensibility.StoredTriggerState.html">StoredTriggerState</a></dt>
+    <dd></dd>
+    <dt><code>jobDetail</code> <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/ITriggerPersistenceDelegate.cs/#L33" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
