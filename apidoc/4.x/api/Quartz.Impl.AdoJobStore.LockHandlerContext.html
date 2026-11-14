@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class LockHandlerContext | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class LockHandlerContext | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="The identity of the scheduler a lock handler locks for and the environment it locks in, handed to  once by the job store before the handler is used.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Impl_AdoJobStore_LockHandlerContext.md&amp;value=---%0Auid%3A%20Quartz.Impl.AdoJobStore.LockHandlerContext%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Impl.AdoJobStore.LockHandlerContext">
+
+
+
+  <h1 id="Quartz_Impl_AdoJobStore_LockHandlerContext" data-uid="Quartz.Impl.AdoJobStore.LockHandlerContext" class="text-break">
+Class LockHandlerContext  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/LockHandlerContext.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<a class="xref" href="Quartz.Impl.html">Impl</a>.<a class="xref" href="Quartz.Impl.AdoJobStore.html">AdoJobStore</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The identity of the scheduler a lock handler locks for and the environment it locks in, handed to
+<a class="xref" href="Quartz.Impl.AdoJobStore.ILockHandler.html#Quartz_Impl_AdoJobStore_ILockHandler_Initialize_Quartz_Impl_AdoJobStore_LockHandlerContext_">Initialize(LockHandlerContext)</a> once by the job store before the handler is used.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed record LockHandlerContext : IEquatable&lt;LockHandlerContext&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">LockHandlerContext</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Quartz.Impl.AdoJobStore.LockHandlerContext.html">LockHandlerContext</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_Impl_AdoJobStore_LockHandlerContext_CommandTimeout_" data-uid="Quartz.Impl.AdoJobStore.LockHandlerContext.CommandTimeout*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_LockHandlerContext_CommandTimeout" data-uid="Quartz.Impl.AdoJobStore.LockHandlerContext.CommandTimeout">
+  CommandTimeout
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/LockHandlerContext.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How long the handler's statements may run before the provider cancels them, from
+<a class="xref" href="Quartz.AdoJobStoreOptions.html#Quartz_AdoJobStoreOptions_CommandTimeout">CommandTimeout</a>. <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> leaves the provider's
+own default in place, and a handler that does not lock in the database ignores this.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan? CommandTimeout { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_AdoJobStore_LockHandlerContext_CommandTimeout_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The lock statement is where a timeout earns its keep: a node waiting on <code>QRTZ_LOCKS</code> behind
+a peer that stopped without releasing the row cannot make progress until the statement gives up.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_LockHandlerContext_InstanceId_" data-uid="Quartz.Impl.AdoJobStore.LockHandlerContext.InstanceId*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_LockHandlerContext_InstanceId" data-uid="Quartz.Impl.AdoJobStore.LockHandlerContext.InstanceId">
+  InstanceId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/LockHandlerContext.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The identifier of this scheduler node within a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required string InstanceId { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_LockHandlerContext_LockWaitWarningThreshold_" data-uid="Quartz.Impl.AdoJobStore.LockHandlerContext.LockWaitWarningThreshold*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_LockHandlerContext_LockWaitWarningThreshold" data-uid="Quartz.Impl.AdoJobStore.LockHandlerContext.LockWaitWarningThreshold">
+  LockWaitWarningThreshold
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/LockHandlerContext.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How long one attempt to take a lock may go on before it is reported as slow, from
+<a class="xref" href="Quartz.AdoJobStoreOptions.html#Quartz_AdoJobStoreOptions_LockWaitWarningThreshold">LockWaitWarningThreshold</a>. <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> reports
+nothing, and is what a context built by hand carries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan? LockWaitWarningThreshold { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_AdoJobStore_LockHandlerContext_LockWaitWarningThreshold_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A blocked lock statement neither throws nor returns, so nothing else in the store notices a wait
+that never ends. <a class="xref" href="Quartz.Impl.AdoJobStore.DbLockHandler.html">DbLockHandler</a> logs one warning per acquisition once the wait has
+lasted this long; it does not end the wait, which is <a class="xref" href="Quartz.Impl.AdoJobStore.LockHandlerContext.html#Quartz_Impl_AdoJobStore_LockHandlerContext_CommandTimeout">CommandTimeout</a>'s job or the
+lock statement's own.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_LockHandlerContext_LoggerFactory_" data-uid="Quartz.Impl.AdoJobStore.LockHandlerContext.LoggerFactory*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_LockHandlerContext_LoggerFactory" data-uid="Quartz.Impl.AdoJobStore.LockHandlerContext.LoggerFactory">
+  LoggerFactory
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/LockHandlerContext.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The factory the handler creates its logger from, defaulting to
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.abstractions.nullloggerfactory.instance">Instance</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ILoggerFactory LoggerFactory { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.iloggerfactory">ILoggerFactory</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Impl_AdoJobStore_LockHandlerContext_LoggerFactory_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The job store passes the factory its container gave it, so lock contention, retries and the
+handler's own failures reach an application that never set
+<a class="xref" href="Quartz.Diagnostics.LogProvider.html">LogProvider</a>. A handler initialized by hand is handed nothing
+and logs nowhere.</p>
+</div>
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_LockHandlerContext_SchedulerName_" data-uid="Quartz.Impl.AdoJobStore.LockHandlerContext.SchedulerName*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_LockHandlerContext_SchedulerName" data-uid="Quartz.Impl.AdoJobStore.LockHandlerContext.SchedulerName">
+  SchedulerName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/LockHandlerContext.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Name of the scheduler whose scheduling data the lock protects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required string SchedulerName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_LockHandlerContext_TablePrefix_" data-uid="Quartz.Impl.AdoJobStore.LockHandlerContext.TablePrefix*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_LockHandlerContext_TablePrefix" data-uid="Quartz.Impl.AdoJobStore.LockHandlerContext.TablePrefix">
+  TablePrefix
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/LockHandlerContext.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Table prefix of the tables the ADO.NET job store uses. A handler that does not lock in the
+database ignores this.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required string TablePrefix { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Impl_AdoJobStore_LockHandlerContext_TimeProvider_" data-uid="Quartz.Impl.AdoJobStore.LockHandlerContext.TimeProvider*"></a>
+
+  <h3 id="Quartz_Impl_AdoJobStore_LockHandlerContext_TimeProvider" data-uid="Quartz.Impl.AdoJobStore.LockHandlerContext.TimeProvider">
+  TimeProvider
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/LockHandlerContext.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The clock the store runs on, defaulting to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeprovider.system">System</a>. A handler
+that backs off between attempts waits on this rather than on wall time, so its retry behaviour
+can be tested without the test waiting too.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeProvider TimeProvider { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeprovider">TimeProvider</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Impl/AdoJobStore/LockHandlerContext.cs/#L31" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

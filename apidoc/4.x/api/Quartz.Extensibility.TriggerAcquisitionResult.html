@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TriggerAcquisitionResult | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TriggerAcquisitionResult | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="What  acquired: the triggers it fired as it acquired them, what became of each, and the ones it left for the scheduler to fire when they are due.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Extensibility_TriggerAcquisitionResult.md&amp;value=---%0Auid%3A%20Quartz.Extensibility.TriggerAcquisitionResult%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Extensibility.TriggerAcquisitionResult">
+
+
+
+  <h1 id="Quartz_Extensibility_TriggerAcquisitionResult" data-uid="Quartz.Extensibility.TriggerAcquisitionResult" class="text-break">
+Class TriggerAcquisitionResult  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/TriggerAcquisitionResult.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<a class="xref" href="Quartz.Extensibility.html">Extensibility</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>What <a class="xref" href="Quartz.Extensibility.IJobStore.html#Quartz_Extensibility_IJobStore_AcquireNextTriggersAndFireDue_Quartz_Extensibility_TriggerAcquisitionRequest_System_Threading_CancellationToken_">AcquireNextTriggersAndFireDue(TriggerAcquisitionRequest, CancellationToken)</a> acquired: the triggers it fired as it
+acquired them, what became of each, and the ones it left for the scheduler to fire when they are due.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class TriggerAcquisitionResult</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">TriggerAcquisitionResult</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_Extensibility_TriggerAcquisitionResult_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+<a class="xref" href="Quartz.Extensibility.TriggerAcquisitionResult.html#Quartz_Extensibility_TriggerAcquisitionResult_Due">Due</a> and <a class="xref" href="Quartz.Extensibility.TriggerAcquisitionResult.html#Quartz_Extensibility_TriggerAcquisitionResult_Fired">Fired</a> are index-aligned, as a <a class="xref" href="Quartz.Extensibility.IJobStore.html#Quartz_Extensibility_IJobStore_TriggersFired_System_Collections_Generic_IReadOnlyCollection_Quartz_Extensibility_IOperableTrigger__System_Threading_CancellationToken_">TriggersFired(IReadOnlyCollection&lt;IOperableTrigger&gt;, CancellationToken)</a>
+batch is with its results, and the scheduler reads each pair the way it reads that batch: it runs a
+fired bundle, releases a trigger that did not fire or failed to, and leaves a declined one alone.
+</p>
+<p>
+A property left unset reads as an empty list, so a store that fires nothing on acquisition sets
+<a class="xref" href="Quartz.Extensibility.TriggerAcquisitionResult.html#Quartz_Extensibility_TriggerAcquisitionResult_Pending">Pending</a> alone.
+</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_Extensibility_TriggerAcquisitionResult_Due_" data-uid="Quartz.Extensibility.TriggerAcquisitionResult.Due*"></a>
+
+  <h3 id="Quartz_Extensibility_TriggerAcquisitionResult_Due" data-uid="Quartz.Extensibility.TriggerAcquisitionResult.Due">
+  Due
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/TriggerAcquisitionResult.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The acquired triggers the store fired as it acquired them, in the order it fired them.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;IOperableTrigger&gt; Due { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Quartz.Extensibility.IOperableTrigger.html">IOperableTrigger</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_TriggerAcquisitionResult_Fired_" data-uid="Quartz.Extensibility.TriggerAcquisitionResult.Fired*"></a>
+
+  <h3 id="Quartz_Extensibility_TriggerAcquisitionResult_Fired" data-uid="Quartz.Extensibility.TriggerAcquisitionResult.Fired">
+  Fired
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/TriggerAcquisitionResult.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>What became of each trigger in <a class="xref" href="Quartz.Extensibility.TriggerAcquisitionResult.html#Quartz_Extensibility_TriggerAcquisitionResult_Due">Due</a>, at the same index: what
+<a class="xref" href="Quartz.Extensibility.IJobStore.html#Quartz_Extensibility_IJobStore_TriggersFired_System_Collections_Generic_IReadOnlyCollection_Quartz_Extensibility_IOperableTrigger__System_Threading_CancellationToken_">TriggersFired(IReadOnlyCollection&lt;IOperableTrigger&gt;, CancellationToken)</a> would have answered for it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;TriggerFiredResult&gt; Fired { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Quartz.Extensibility.TriggerFiredResult.html">TriggerFiredResult</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Extensibility_TriggerAcquisitionResult_Pending_" data-uid="Quartz.Extensibility.TriggerAcquisitionResult.Pending*"></a>
+
+  <h3 id="Quartz_Extensibility_TriggerAcquisitionResult_Pending" data-uid="Quartz.Extensibility.TriggerAcquisitionResult.Pending">
+  Pending
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/TriggerAcquisitionResult.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The acquired triggers not fired yet, in fire-time order. The scheduler waits for the first of
+them and fires them with <a class="xref" href="Quartz.Extensibility.IJobStore.html#Quartz_Extensibility_IJobStore_TriggersFired_System_Collections_Generic_IReadOnlyCollection_Quartz_Extensibility_IOperableTrigger__System_Threading_CancellationToken_">TriggersFired(IReadOnlyCollection&lt;IOperableTrigger&gt;, CancellationToken)</a>, as it does what
+<a class="xref" href="Quartz.Extensibility.IJobStore.html#Quartz_Extensibility_IJobStore_AcquireNextTriggers_Quartz_Extensibility_TriggerAcquisitionRequest_System_Threading_CancellationToken_">AcquireNextTriggers(TriggerAcquisitionRequest, CancellationToken)</a> returns.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;IOperableTrigger&gt; Pending { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Quartz.Extensibility.IOperableTrigger.html">IOperableTrigger</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_Extensibility_TriggerAcquisitionResult_Pending_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Like that list, this one may be one the store keeps: the scheduler copies it before working with it.</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Extensibility/TriggerAcquisitionResult.cs/#L39" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

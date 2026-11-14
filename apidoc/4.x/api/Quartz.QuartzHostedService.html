@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class QuartzHostedService | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class QuartzHostedService | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Runs the schedulers registered in the container for as long as the application runs.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_QuartzHostedService.md&amp;value=---%0Auid%3A%20Quartz.QuartzHostedService%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.QuartzHostedService">
+
+
+
+  <h1 id="Quartz_QuartzHostedService" data-uid="Quartz.QuartzHostedService" class="text-break">
+Class QuartzHostedService  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Hosting/QuartzHostedService.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Runs the schedulers registered in the container for as long as the application runs.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class QuartzHostedService : IHostedLifecycleService, IHostedService</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">QuartzHostedService</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostedlifecycleservice">IHostedLifecycleService</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostedservice">IHostedService</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_QuartzHostedService_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Every scheduler in the container is started, the default one and each named one, and each is
+configured by <a class="xref" href="Quartz.QuartzHostedServiceOptions.html">QuartzHostedServiceOptions</a> under its own name — so one scheduler can
+wait for application startup while another starts immediately, and one whose
+<a class="xref" href="Quartz.QuartzHostedServiceOptions.html#Quartz_QuartzHostedServiceOptions_AutoStart">AutoStart</a> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> is created and bound
+but left for the application to start.
+</p>
+<p>
+The schedulers are resolved when the host starts rather than when the service is registered, so
+<code>AddQuartzHostedService</code> and <code>AddQuartz</code> can be called in either order. Registering the
+hosted service first used to leave the default scheduler unstarted and say nothing about it.
+</p>
+<p>
+Deriving from this and registering the derived type with <code>AddQuartzHostedService&lt;T&gt;</code> is a
+supported extension point, but only through the four lifecycle hooks —
+<a class="xref" href="Quartz.QuartzHostedService.html#Quartz_QuartzHostedService_StartingAsync_System_Threading_CancellationToken_">StartingAsync(CancellationToken)</a>, <a class="xref" href="Quartz.QuartzHostedService.html#Quartz_QuartzHostedService_StartedAsync_System_Threading_CancellationToken_">StartedAsync(CancellationToken)</a>, <a class="xref" href="Quartz.QuartzHostedService.html#Quartz_QuartzHostedService_StoppingAsync_System_Threading_CancellationToken_">StoppingAsync(CancellationToken)</a> and
+<a class="xref" href="Quartz.QuartzHostedService.html#Quartz_QuartzHostedService_StoppedAsync_System_Threading_CancellationToken_">StoppedAsync(CancellationToken)</a> — which exist for nothing else.
+<a class="xref" href="Quartz.QuartzHostedService.html#Quartz_QuartzHostedService_StartAsync_System_Threading_CancellationToken_">StartAsync(CancellationToken)</a> and <a class="xref" href="Quartz.QuartzHostedService.html#Quartz_QuartzHostedService_StopAsync_System_Threading_CancellationToken_">StopAsync(CancellationToken)</a> are not overridable: they maintain state a
+subclass cannot see, and an override that did not call base left the schedulers bound to the
+repository with nothing left to shut them down. What a subclass would have overridden them for is
+reading the running schedulers, and that is <a class="xref" href="Quartz.QuartzHostedService.html#Quartz_QuartzHostedService_Schedulers">Schedulers</a>.
+</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Quartz_QuartzHostedService__ctor_" data-uid="Quartz.QuartzHostedService.#ctor*"></a>
+
+  <h3 id="Quartz_QuartzHostedService__ctor_Microsoft_Extensions_Hosting_IHostApplicationLifetime_System_IServiceProvider_Microsoft_Extensions_Options_IOptionsMonitor_Quartz_QuartzHostedServiceOptions__" data-uid="Quartz.QuartzHostedService.#ctor(Microsoft.Extensions.Hosting.IHostApplicationLifetime,System.IServiceProvider,Microsoft.Extensions.Options.IOptionsMonitor{Quartz.QuartzHostedServiceOptions})">
+  QuartzHostedService(IHostApplicationLifetime, IServiceProvider, IOptionsMonitor&lt;QuartzHostedServiceOptions&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Hosting/QuartzHostedService.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructed by the container; an application registers this service with
+<code>AddQuartzHostedService</code> rather than building one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QuartzHostedService(IHostApplicationLifetime applicationLifetime, IServiceProvider serviceProvider, IOptionsMonitor&lt;QuartzHostedServiceOptions&gt; options)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>applicationLifetime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostapplicationlifetime">IHostApplicationLifetime</a></dt>
+    <dd><p>The host's lifetime, which <code>AwaitApplicationStarted</code> waits on.</p>
+</dd>
+    <dt><code>serviceProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a></dt>
+    <dd><p>The container the schedulers are resolved from.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptionsmonitor-1">IOptionsMonitor</a>&lt;<a class="xref" href="Quartz.QuartzHostedServiceOptions.html">QuartzHostedServiceOptions</a>&gt;</dt>
+    <dd><p>One <a class="xref" href="Quartz.QuartzHostedServiceOptions.html">QuartzHostedServiceOptions</a> per scheduler name.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_QuartzHostedService_Schedulers_" data-uid="Quartz.QuartzHostedService.Schedulers*"></a>
+
+  <h3 id="Quartz_QuartzHostedService_Schedulers" data-uid="Quartz.QuartzHostedService.Schedulers">
+  Schedulers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Hosting/QuartzHostedService.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The schedulers this service is running, from the moment they are resolved until they are shut
+down.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IReadOnlyList&lt;IScheduler&gt; Schedulers { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Quartz.IScheduler.html">IScheduler</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzHostedService_Schedulers_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A snapshot rather than a live view, so a hook cannot be handed a list that empties underneath it.
+Empty before <a class="xref" href="Quartz.QuartzHostedService.html#Quartz_QuartzHostedService_StartAsync_System_Threading_CancellationToken_">StartAsync(CancellationToken)</a> has resolved them and after <a class="xref" href="Quartz.QuartzHostedService.html#Quartz_QuartzHostedService_StopAsync_System_Threading_CancellationToken_">StopAsync(CancellationToken)</a> has shut
+them down, which makes <a class="xref" href="Quartz.QuartzHostedService.html#Quartz_QuartzHostedService_StartedAsync_System_Threading_CancellationToken_">StartedAsync(CancellationToken)</a> and <a class="xref" href="Quartz.QuartzHostedService.html#Quartz_QuartzHostedService_StoppingAsync_System_Threading_CancellationToken_">StoppingAsync(CancellationToken)</a> the two hooks it
+is worth reading from.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_QuartzHostedService_StartAsync_" data-uid="Quartz.QuartzHostedService.StartAsync*"></a>
+
+  <h3 id="Quartz_QuartzHostedService_StartAsync_System_Threading_CancellationToken_" data-uid="Quartz.QuartzHostedService.StartAsync(System.Threading.CancellationToken)">
+  StartAsync(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Hosting/QuartzHostedService.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resolves every scheduler the container holds, binds it to the repository and starts it as its
+options say.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task StartAsync(CancellationToken cancellationToken)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The host's start token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzHostedService_StartAsync_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Not overridable: it maintains state a subclass cannot see, and an override that did not call
+base left the schedulers bound with nothing to shut them down. The four hooks are the extension
+point.</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzHostedService_StartedAsync_" data-uid="Quartz.QuartzHostedService.StartedAsync*"></a>
+
+  <h3 id="Quartz_QuartzHostedService_StartedAsync_System_Threading_CancellationToken_" data-uid="Quartz.QuartzHostedService.StartedAsync(System.Threading.CancellationToken)">
+  StartedAsync(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Hosting/QuartzHostedService.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Runs once every scheduler has started. Does nothing; override it to do something —
+<a class="xref" href="Quartz.QuartzHostedService.html#Quartz_QuartzHostedService_Schedulers">Schedulers</a> is what it is for.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task StartedAsync(CancellationToken cancellationToken)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The host's start token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_QuartzHostedService_StartingAsync_" data-uid="Quartz.QuartzHostedService.StartingAsync*"></a>
+
+  <h3 id="Quartz_QuartzHostedService_StartingAsync_System_Threading_CancellationToken_" data-uid="Quartz.QuartzHostedService.StartingAsync(System.Threading.CancellationToken)">
+  StartingAsync(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Hosting/QuartzHostedService.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Runs before any scheduler has been resolved. Does nothing; override it to do something.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task StartingAsync(CancellationToken cancellationToken)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The host's start token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_QuartzHostedService_StopAsync_" data-uid="Quartz.QuartzHostedService.StopAsync*"></a>
+
+  <h3 id="Quartz_QuartzHostedService_StopAsync_System_Threading_CancellationToken_" data-uid="Quartz.QuartzHostedService.StopAsync(System.Threading.CancellationToken)">
+  StopAsync(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Hosting/QuartzHostedService.cs/#L264"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits for whatever start-up is still running and shuts every scheduler down, unbinding it from
+the repository.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task StopAsync(CancellationToken cancellationToken)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The host's shutdown token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_QuartzHostedService_StopAsync_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Not overridable, for the reason <a class="xref" href="Quartz.QuartzHostedService.html#Quartz_QuartzHostedService_StartAsync_System_Threading_CancellationToken_">StartAsync(CancellationToken)</a> is not.
+</p>
+<p>
+Safe to call more than once, and safe to call concurrently, because the generic host does both:
+<code>StopAsync</code> while <code>RunAsync</code> is pending raises <code>ApplicationStopping</code>,
+<code>WaitForShutdownAsync</code> wakes on it and stops the host again, and the two stops reach every
+hosted service at once. Every call after the first joins the stop already under way and observes
+its outcome — the same completion, and the same failure if a shutdown threw.
+</p>
+</div>
+
+
+
+
+  <a id="Quartz_QuartzHostedService_StoppedAsync_" data-uid="Quartz.QuartzHostedService.StoppedAsync*"></a>
+
+  <h3 id="Quartz_QuartzHostedService_StoppedAsync_System_Threading_CancellationToken_" data-uid="Quartz.QuartzHostedService.StoppedAsync(System.Threading.CancellationToken)">
+  StoppedAsync(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Hosting/QuartzHostedService.cs/#L308"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Runs once every scheduler has been shut down. Does nothing; override it to do something.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task StoppedAsync(CancellationToken cancellationToken)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The host's shutdown token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_QuartzHostedService_StoppingAsync_" data-uid="Quartz.QuartzHostedService.StoppingAsync*"></a>
+
+  <h3 id="Quartz_QuartzHostedService_StoppingAsync_System_Threading_CancellationToken_" data-uid="Quartz.QuartzHostedService.StoppingAsync(System.Threading.CancellationToken)">
+  StoppingAsync(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Hosting/QuartzHostedService.cs/#L242"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Runs before the schedulers are shut down, while <a class="xref" href="Quartz.QuartzHostedService.html#Quartz_QuartzHostedService_Schedulers">Schedulers</a> still lists them.
+Does nothing; override it to do something.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task StoppingAsync(CancellationToken cancellationToken)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The host's shutdown token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/Hosting/QuartzHostedService.cs/#L39" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
