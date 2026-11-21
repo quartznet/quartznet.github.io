@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Enum FiringOrigin | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Enum FiringOrigin | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Why a firing runs: on its trigger&#39;s schedule, because somebody asked for it, or as a backfill of a slot the schedule had.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_FiringOrigin.md&amp;value=---%0Auid%3A%20Quartz.FiringOrigin%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.FiringOrigin">
+
+
+
+
+  <h1 id="Quartz_FiringOrigin" data-uid="Quartz.FiringOrigin" class="text-break">
+Enum FiringOrigin  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/FiringOrigin.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Why a firing runs: on its trigger's schedule, because somebody asked for it, or as a backfill of a
+slot the schedule had.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum FiringOrigin</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h2 id="fields">Fields
+</h2>
+  <dl class="parameters">
+    <dt id="Quartz_FiringOrigin_Backfill"><code>Backfill = 2</code></dt>
+  
+  <dd><p><a class="xref" href="Quartz.SchedulerBackfillExtensions.html#Quartz_SchedulerBackfillExtensions_Backfill_Quartz_IScheduler_Quartz_TriggerKey_System_DateTimeOffset_System_DateTimeOffset_Quartz_BackfillOptions_System_Threading_CancellationToken_">Backfill(IScheduler, TriggerKey, DateTimeOffset, DateTimeOffset, BackfillOptions, CancellationToken)</a> scheduled it for a slot the trigger had.
+<a class="xref" href="Quartz.FiringOccurrence.html#Quartz_FiringOccurrence_OccurrenceUtc">OccurrenceUtc</a> is the slot, not when the backfill ran it.</p>
+</dd>
+    <dt id="Quartz_FiringOrigin_Manual"><code>Manual = 1</code></dt>
+  
+  <dd><p><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_TriggerJob_Quartz_JobKey_Quartz_JobDataMap_System_Threading_CancellationToken_">TriggerJob(JobKey, JobDataMap?, CancellationToken)</a> or <a class="xref" href="Quartz.SchedulerJobExtensions.html#Quartz_SchedulerJobExtensions_TriggerJob__1_Quartz_IScheduler_Quartz_JobKey___0_System_Threading_CancellationToken_">TriggerJob&lt;TInput&gt;(IScheduler, JobKey, TInput, CancellationToken)</a>
+asked for it. <a class="xref" href="Quartz.FiringOccurrence.html#Quartz_FiringOccurrence_OccurrenceUtc">OccurrenceUtc</a> is when the run was asked for.</p>
+</dd>
+    <dt id="Quartz_FiringOrigin_Schedule"><code>Schedule = 0</code></dt>
+  
+  <dd><p>The trigger's schedule called for it. <a class="xref" href="Quartz.FiringOccurrence.html#Quartz_FiringOccurrence_OccurrenceUtc">OccurrenceUtc</a> is the fire time
+the schedule named.</p>
+</dd>
+  </dl>
+
+
+  <h2 id="Quartz_FiringOrigin_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Every firing has one, so there is no &quot;none&quot;: <a class="xref" href="Quartz.FiringOrigin.html#Quartz_FiringOrigin_Schedule">Schedule</a> is the default. A retry, a misfire
+catch-up and a recovery keep the origin of the firing they continue.</p>
+</div>
+
+  <h2 id="seealso">See Also</h2>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.FiringOccurrence.html">FiringOccurrence</a></div>
+      <div><a class="xref" href="Quartz.JobExecutionContextOccurrenceExtensions.html#Quartz_JobExecutionContextOccurrenceExtensions_GetOccurrence_Quartz_IJobExecutionContext_">GetOccurrence</a>(<a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a>)</div>
+  </div>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/FiringOrigin.cs/#L34" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

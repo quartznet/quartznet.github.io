@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PluginConfigurationExtensions | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PluginConfigurationExtensions | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Adds the plugins shipped in Quartz.Plugins to a scheduler.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_PluginConfigurationExtensions.md&amp;value=---%0Auid%3A%20Quartz.PluginConfigurationExtensions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.PluginConfigurationExtensions">
+
+
+
+  <h1 id="Quartz_PluginConfigurationExtensions" data-uid="Quartz.PluginConfigurationExtensions" class="text-break">
+Class PluginConfigurationExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Plugins/PluginConfigurationExtensions.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.Plugins.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Adds the plugins shipped in <code>Quartz.Plugins</code> to a scheduler.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class PluginConfigurationExtensions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">PluginConfigurationExtensions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_PluginConfigurationExtensions_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Each plugin is registered as an ordinary service, constructed by the container so it gets
+constructor injection, and then configured from typed options. No plugin is named by a string.
+</p>
+<p>
+The options are the scheduler's own named options, so a plugin is configurable from
+<code>appsettings.json</code> like anything else the container builds:
+<code>services.Configure&lt;FileSchedulingOptions&gt;(configuration.GetSection("…"))</code> reaches the
+plugin, and the callback passed here is applied over whatever bound onto them. The flat
+<code>quartz.plugin.&lt;name&gt;.*</code> keys still work and are applied first, so configuration written
+in code beats the same setting written as a string.
+</p>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_PluginConfigurationExtensions_UseJobHistoryLogging_" data-uid="Quartz.PluginConfigurationExtensions.UseJobHistoryLogging*"></a>
+
+  <h3 id="Quartz_PluginConfigurationExtensions_UseJobHistoryLogging_Quartz_IQuartzBuilder_System_Action_Quartz_JobHistoryLoggingOptions__" data-uid="Quartz.PluginConfigurationExtensions.UseJobHistoryLogging(Quartz.IQuartzBuilder,System.Action{Quartz.JobHistoryLoggingOptions})">
+  UseJobHistoryLogging(IQuartzBuilder, Action&lt;JobHistoryLoggingOptions&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Plugins/PluginConfigurationExtensions.cs/#L158"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs job execution history using classic numbered format strings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IQuartzBuilder UseJobHistoryLogging(this IQuartzBuilder builder, Action&lt;JobHistoryLoggingOptions&gt;? configure = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.JobHistoryLoggingOptions.html">JobHistoryLoggingOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_PluginConfigurationExtensions_UseJobHistoryLogging_Quartz_IQuartzBuilder_System_Action_Quartz_JobHistoryLoggingOptions___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a class="xref" href="Quartz.PluginConfigurationExtensions.html#Quartz_PluginConfigurationExtensions_UseStructuredJobLogging_Quartz_IQuartzBuilder_System_Action_Quartz_JobHistoryLoggingOptions__">UseStructuredJobLogging(IQuartzBuilder, Action&lt;JobHistoryLoggingOptions&gt;?)</a> is the better default; this one exists for deployments
+whose log pipeline expects the 3.x message shape.</p>
+</div>
+
+
+
+
+  <a id="Quartz_PluginConfigurationExtensions_UseJsonSchedulingConfiguration_" data-uid="Quartz.PluginConfigurationExtensions.UseJsonSchedulingConfiguration*"></a>
+
+  <h3 id="Quartz_PluginConfigurationExtensions_UseJsonSchedulingConfiguration_Quartz_IQuartzBuilder_System_Action_Quartz_FileSchedulingOptions__" data-uid="Quartz.PluginConfigurationExtensions.UseJsonSchedulingConfiguration(Quartz.IQuartzBuilder,System.Action{Quartz.FileSchedulingOptions})">
+  UseJsonSchedulingConfiguration(IQuartzBuilder, Action&lt;FileSchedulingOptions&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Plugins/PluginConfigurationExtensions.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads jobs and triggers from JSON files, optionally rescanning them for changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IQuartzBuilder UseJsonSchedulingConfiguration(this IQuartzBuilder builder, Action&lt;FileSchedulingOptions&gt; configure)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.FileSchedulingOptions.html">FileSchedulingOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_PluginConfigurationExtensions_UseJsonSchedulingConfiguration_" data-uid="Quartz.PluginConfigurationExtensions.UseJsonSchedulingConfiguration*"></a>
+
+  <h3 id="Quartz_PluginConfigurationExtensions_UseJsonSchedulingConfiguration_Quartz_IQuartzBuilder_System_String___" data-uid="Quartz.PluginConfigurationExtensions.UseJsonSchedulingConfiguration(Quartz.IQuartzBuilder,System.String[])">
+  UseJsonSchedulingConfiguration(IQuartzBuilder, params string[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Plugins/PluginConfigurationExtensions.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads jobs and triggers from the named JSON files, read once.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IQuartzBuilder UseJsonSchedulingConfiguration(this IQuartzBuilder builder, params string[] files)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd><p>The scheduler's builder.</p>
+</dd>
+    <dt><code>files</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>The files to load, in the plugin's own path syntax — <code>~/</code> is the content root.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_PluginConfigurationExtensions_UseJsonSchedulingConfiguration_Quartz_IQuartzBuilder_System_String____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The shorthand for the commonest case, which is one file and nothing else to say about it. It
+adds to <a class="xref" href="Quartz.FileSchedulingOptions.html#Quartz_FileSchedulingOptions_Files">Files</a> rather than replacing it, exactly as the
+callback form's <code>options.Files.Add(…)</code> does, so calling both — or calling this twice — is
+additive. Rescanning, or any of the other settings, needs the callback overload.</p>
+</div>
+
+
+
+
+  <a id="Quartz_PluginConfigurationExtensions_UseStructuredJobLogging_" data-uid="Quartz.PluginConfigurationExtensions.UseStructuredJobLogging*"></a>
+
+  <h3 id="Quartz_PluginConfigurationExtensions_UseStructuredJobLogging_Quartz_IQuartzBuilder_System_Action_Quartz_JobHistoryLoggingOptions__" data-uid="Quartz.PluginConfigurationExtensions.UseStructuredJobLogging(Quartz.IQuartzBuilder,System.Action{Quartz.JobHistoryLoggingOptions})">
+  UseStructuredJobLogging(IQuartzBuilder, Action&lt;JobHistoryLoggingOptions&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Plugins/PluginConfigurationExtensions.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs job execution history using structured message templates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IQuartzBuilder UseStructuredJobLogging(this IQuartzBuilder builder, Action&lt;JobHistoryLoggingOptions&gt;? configure = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.JobHistoryLoggingOptions.html">JobHistoryLoggingOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_PluginConfigurationExtensions_UseStructuredJobLogging_Quartz_IQuartzBuilder_System_Action_Quartz_JobHistoryLoggingOptions___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The templates name their values — <code>{JobGroup}</code>, <code>{FireTime}</code> — so a structured log
+pipeline can index them, which is why this is the better default. They are overridable for the
+same reason the numbered ones are.</p>
+</div>
+
+
+
+
+  <a id="Quartz_PluginConfigurationExtensions_UseStructuredTriggerLogging_" data-uid="Quartz.PluginConfigurationExtensions.UseStructuredTriggerLogging*"></a>
+
+  <h3 id="Quartz_PluginConfigurationExtensions_UseStructuredTriggerLogging_Quartz_IQuartzBuilder_System_Action_Quartz_TriggerHistoryLoggingOptions__" data-uid="Quartz.PluginConfigurationExtensions.UseStructuredTriggerLogging(Quartz.IQuartzBuilder,System.Action{Quartz.TriggerHistoryLoggingOptions})">
+  UseStructuredTriggerLogging(IQuartzBuilder, Action&lt;TriggerHistoryLoggingOptions&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Plugins/PluginConfigurationExtensions.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs trigger firing history using structured message templates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IQuartzBuilder UseStructuredTriggerLogging(this IQuartzBuilder builder, Action&lt;TriggerHistoryLoggingOptions&gt;? configure = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.TriggerHistoryLoggingOptions.html">TriggerHistoryLoggingOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_PluginConfigurationExtensions_UseStructuredTriggerLogging_Quartz_IQuartzBuilder_System_Action_Quartz_TriggerHistoryLoggingOptions___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The templates name their values — <code>{JobGroup}</code>, <code>{FireTime}</code> — so a structured log
+pipeline can index them, which is why this is the better default. They are overridable for the
+same reason the numbered ones are.</p>
+</div>
+
+
+
+
+  <a id="Quartz_PluginConfigurationExtensions_UseTriggerHistoryLogging_" data-uid="Quartz.PluginConfigurationExtensions.UseTriggerHistoryLogging*"></a>
+
+  <h3 id="Quartz_PluginConfigurationExtensions_UseTriggerHistoryLogging_Quartz_IQuartzBuilder_System_Action_Quartz_TriggerHistoryLoggingOptions__" data-uid="Quartz.PluginConfigurationExtensions.UseTriggerHistoryLogging(Quartz.IQuartzBuilder,System.Action{Quartz.TriggerHistoryLoggingOptions})">
+  UseTriggerHistoryLogging(IQuartzBuilder, Action&lt;TriggerHistoryLoggingOptions&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Plugins/PluginConfigurationExtensions.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs trigger firing history using classic numbered format strings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IQuartzBuilder UseTriggerHistoryLogging(this IQuartzBuilder builder, Action&lt;TriggerHistoryLoggingOptions&gt;? configure = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.TriggerHistoryLoggingOptions.html">TriggerHistoryLoggingOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_PluginConfigurationExtensions_UseTriggerHistoryLogging_Quartz_IQuartzBuilder_System_Action_Quartz_TriggerHistoryLoggingOptions___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a class="xref" href="Quartz.PluginConfigurationExtensions.html#Quartz_PluginConfigurationExtensions_UseStructuredTriggerLogging_Quartz_IQuartzBuilder_System_Action_Quartz_TriggerHistoryLoggingOptions__">UseStructuredTriggerLogging(IQuartzBuilder, Action&lt;TriggerHistoryLoggingOptions&gt;?)</a> is the better default; this one exists for
+deployments whose log pipeline expects the 3.x message shape.</p>
+</div>
+
+
+
+
+  <a id="Quartz_PluginConfigurationExtensions_UseXmlSchedulingConfiguration_" data-uid="Quartz.PluginConfigurationExtensions.UseXmlSchedulingConfiguration*"></a>
+
+  <h3 id="Quartz_PluginConfigurationExtensions_UseXmlSchedulingConfiguration_Quartz_IQuartzBuilder_System_Action_Quartz_FileSchedulingOptions__" data-uid="Quartz.PluginConfigurationExtensions.UseXmlSchedulingConfiguration(Quartz.IQuartzBuilder,System.Action{Quartz.FileSchedulingOptions})">
+  UseXmlSchedulingConfiguration(IQuartzBuilder, Action&lt;FileSchedulingOptions&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Plugins/PluginConfigurationExtensions.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads jobs and triggers from XML files, optionally rescanning them for changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IQuartzBuilder UseXmlSchedulingConfiguration(this IQuartzBuilder builder, Action&lt;FileSchedulingOptions&gt; configure)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Quartz.FileSchedulingOptions.html">FileSchedulingOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_PluginConfigurationExtensions_UseXmlSchedulingConfiguration_" data-uid="Quartz.PluginConfigurationExtensions.UseXmlSchedulingConfiguration*"></a>
+
+  <h3 id="Quartz_PluginConfigurationExtensions_UseXmlSchedulingConfiguration_Quartz_IQuartzBuilder_System_String___" data-uid="Quartz.PluginConfigurationExtensions.UseXmlSchedulingConfiguration(Quartz.IQuartzBuilder,System.String[])">
+  UseXmlSchedulingConfiguration(IQuartzBuilder, params string[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Plugins/PluginConfigurationExtensions.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads jobs and triggers from the named XML files, read once.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IQuartzBuilder UseXmlSchedulingConfiguration(this IQuartzBuilder builder, params string[] files)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd><p>The scheduler's builder.</p>
+</dd>
+    <dt><code>files</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>The files to load, in the plugin's own path syntax — <code>~/</code> is the content root.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IQuartzBuilder.html">IQuartzBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_PluginConfigurationExtensions_UseXmlSchedulingConfiguration_Quartz_IQuartzBuilder_System_String____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The shorthand for the commonest case, which is one file and nothing else to say about it. It
+adds to <a class="xref" href="Quartz.FileSchedulingOptions.html#Quartz_FileSchedulingOptions_Files">Files</a> rather than replacing it, exactly as the
+callback form's <code>options.Files.Add(…)</code> does, so calling both — or calling this twice — is
+additive. Rescanning, or any of the other settings, needs the callback overload.</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Plugins/PluginConfigurationExtensions.cs/#L25" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
