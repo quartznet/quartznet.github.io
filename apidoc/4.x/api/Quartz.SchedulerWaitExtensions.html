@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SchedulerWaitExtensions | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SchedulerWaitExtensions | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Firing a stored job and waiting for how its run ended, or waiting for a firing already triggered (#4414).">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_SchedulerWaitExtensions.md&amp;value=---%0Auid%3A%20Quartz.SchedulerWaitExtensions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.SchedulerWaitExtensions">
+
+
+
+  <h1 id="Quartz_SchedulerWaitExtensions" data-uid="Quartz.SchedulerWaitExtensions" class="text-break">
+Class SchedulerWaitExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SchedulerWaitExtensions.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Firing a stored job and waiting for how its run ended, or waiting for a firing already triggered (#4414).</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class SchedulerWaitExtensions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">SchedulerWaitExtensions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_SchedulerWaitExtensions_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Extensions rather than <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> members, so no interface grows. They need the scheduler Quartz
+builds, the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> the container injects, a <a class="xref" href="Quartz.Impl.DelegatingScheduler.html">DelegatingScheduler</a> over one, or
+<code>HttpScheduler</code>; any other scheduler is refused with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a>.
+</p>
+<p>
+The wait is keyed by the trigger. It answers the trigger's next final completion after the wait begins, or,
+for a trigger already gone, its newest final row in the execution history. A retried occurrence ends at its
+last attempt. A veto and a firing the job never ran for end the wait too.
+</p>
+<p>
+In process the run shell answers it as the store commits the completion: when the wait returns, a one-off is
+gone and a <a class="xref" href="Quartz.DisallowConcurrentExecutionAttribute.html">DisallowConcurrentExecutionAttribute</a> block is lifted. On a cluster the firing may
+run on another node, so the wait reads the execution history every node writes,
+<code>UsePersistentStore(store =&gt; store.UseExecutionHistory())</code>, and the trigger's state: from 200 ms
+apart, doubling to 5 s. A cluster without that history is refused before anything is stored. Over
+<code>HttpScheduler</code> it reads the host's history and trigger routes the same way.
+</p>
+<p>
+The timeout stops the wait and never the job: a wait that runs out answers
+<a class="xref" href="Quartz.FiringWaitStatus.html#Quartz_FiringWaitStatus_Pending">Pending</a> with the key to wait again with. <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan.zero">Zero</a> looks
+once, and <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.timeout.infinitetimespan">InfiniteTimeSpan</a> has no limit. It is measured on the system clock, whatever
+clock the scheduler keeps. The token throws <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a> and leaves the job
+alone. A wait still open when the scheduler shuts down throws <a class="xref" href="Quartz.SchedulerException.html">SchedulerException</a>.
+</p>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_SchedulerWaitExtensions_TriggerJobAndWait_" data-uid="Quartz.SchedulerWaitExtensions.TriggerJobAndWait*"></a>
+
+  <h3 id="Quartz_SchedulerWaitExtensions_TriggerJobAndWait_Quartz_IScheduler_Quartz_JobKey_Quartz_JobDataMap_System_TimeSpan_System_Threading_CancellationToken_" data-uid="Quartz.SchedulerWaitExtensions.TriggerJobAndWait(Quartz.IScheduler,Quartz.JobKey,Quartz.JobDataMap,System.TimeSpan,System.Threading.CancellationToken)">
+  TriggerJobAndWait(IScheduler, JobKey, JobDataMap?, TimeSpan, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SchedulerWaitExtensions.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fires the stored job now with the given data and waits up to <code class="paramref">timeout</code> for how its run
+ended.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ValueTask&lt;FiringResult&gt; TriggerJobAndWait(this IScheduler scheduler, JobKey jobKey, JobDataMap? data, TimeSpan timeout, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler to fire the job on.</p>
+</dd>
+    <dt><code>jobKey</code> <a class="xref" href="Quartz.JobKey.html">JobKey</a></dt>
+    <dd><p>The stored job to fire.</p>
+</dd>
+    <dt><code>data</code> <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a></dt>
+    <dd><p>The firing's own job data, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> for none.</p>
+</dd>
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>How long to wait; it stops the wait, never the job.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction; it stops the wait, never the job.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.FiringResult.html">FiringResult</a>&gt;</dt>
+    <dd><p>How the firing ended, or <a class="xref" href="Quartz.FiringWaitStatus.html#Quartz_FiringWaitStatus_Pending">Pending</a> when the timeout ran out first.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_SchedulerWaitExtensions_TriggerJobAndWait_Quartz_IScheduler_Quartz_JobKey_Quartz_JobDataMap_System_TimeSpan_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><remarks>
+The firing <a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_TriggerJob_Quartz_JobKey_Quartz_JobDataMap_System_Threading_CancellationToken_">TriggerJob(JobKey, JobDataMap?, CancellationToken)</a> makes: a one-shot trigger named <code>MT_</code> and a number in
+the default group, marked manual, in the execution group <code>TriggerJob</code> would give it. Its key is on
+<a class="xref" href="Quartz.FiringResult.html#Quartz_FiringResult_TriggerKey">TriggerKey</a>.
+</remarks>
+The map is copied onto the trigger; the one passed in is left as it was.
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">scheduler</code> or <code class="paramref">jobKey</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p><code class="paramref">timeout</code> is negative and is not <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.timeout.infinitetimespan">InfiniteTimeSpan</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
+    <dd><p>The scheduler cannot wait for a firing, or it is clustered without a history every node writes. Nothing is
+stored.</p>
+</dd>
+    <dt><a class="xref" href="Quartz.SchedulerException.html">SchedulerException</a></dt>
+    <dd><p>The scheduler has been shut down, or shut down while waiting.</p>
+</dd>
+    <dt><a class="xref" href="Quartz.JobPersistenceException.html">JobPersistenceException</a></dt>
+    <dd><p>No job is stored under <code class="paramref">jobKey</code>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_SchedulerWaitExtensions_TriggerJobAndWait_" data-uid="Quartz.SchedulerWaitExtensions.TriggerJobAndWait*"></a>
+
+  <h3 id="Quartz_SchedulerWaitExtensions_TriggerJobAndWait_Quartz_IScheduler_Quartz_JobKey_System_TimeSpan_System_Threading_CancellationToken_" data-uid="Quartz.SchedulerWaitExtensions.TriggerJobAndWait(Quartz.IScheduler,Quartz.JobKey,System.TimeSpan,System.Threading.CancellationToken)">
+  TriggerJobAndWait(IScheduler, JobKey, TimeSpan, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SchedulerWaitExtensions.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fires the stored job now and waits up to <code class="paramref">timeout</code> for how its run ended.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ValueTask&lt;FiringResult&gt; TriggerJobAndWait(this IScheduler scheduler, JobKey jobKey, TimeSpan timeout, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler to fire the job on.</p>
+</dd>
+    <dt><code>jobKey</code> <a class="xref" href="Quartz.JobKey.html">JobKey</a></dt>
+    <dd><p>The stored job to fire.</p>
+</dd>
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>How long to wait; it stops the wait, never the job.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction; it stops the wait, never the job.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.FiringResult.html">FiringResult</a>&gt;</dt>
+    <dd><p>How the firing ended, or <a class="xref" href="Quartz.FiringWaitStatus.html#Quartz_FiringWaitStatus_Pending">Pending</a> when the timeout ran out first.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_SchedulerWaitExtensions_TriggerJobAndWait_Quartz_IScheduler_Quartz_JobKey_System_TimeSpan_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The firing <a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_TriggerJob_Quartz_JobKey_Quartz_JobDataMap_System_Threading_CancellationToken_">TriggerJob(JobKey, JobDataMap?, CancellationToken)</a> makes: a one-shot trigger named <code>MT_</code> and a number in
+the default group, marked manual, in the execution group <code>TriggerJob</code> would give it. Its key is on
+<a class="xref" href="Quartz.FiringResult.html#Quartz_FiringResult_TriggerKey">TriggerKey</a>.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">scheduler</code> or <code class="paramref">jobKey</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p><code class="paramref">timeout</code> is negative and is not <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.timeout.infinitetimespan">InfiniteTimeSpan</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
+    <dd><p>The scheduler cannot wait for a firing, or it is clustered without a history every node writes. Nothing is
+stored.</p>
+</dd>
+    <dt><a class="xref" href="Quartz.SchedulerException.html">SchedulerException</a></dt>
+    <dd><p>The scheduler has been shut down, or shut down while waiting.</p>
+</dd>
+    <dt><a class="xref" href="Quartz.JobPersistenceException.html">JobPersistenceException</a></dt>
+    <dd><p>No job is stored under <code class="paramref">jobKey</code>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_SchedulerWaitExtensions_TriggerJobAndWait_" data-uid="Quartz.SchedulerWaitExtensions.TriggerJobAndWait*"></a>
+
+  <h3 id="Quartz_SchedulerWaitExtensions_TriggerJobAndWait__1_Quartz_IScheduler_Quartz_JobKey___0_System_TimeSpan_System_Threading_CancellationToken_" data-uid="Quartz.SchedulerWaitExtensions.TriggerJobAndWait``1(Quartz.IScheduler,Quartz.JobKey,``0,System.TimeSpan,System.Threading.CancellationToken)">
+  TriggerJobAndWait&lt;TInput&gt;(IScheduler, JobKey, TInput, TimeSpan, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SchedulerWaitExtensions.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fires the stored job now with the given input and waits up to <code class="paramref">timeout</code> for how its run
+ended.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ValueTask&lt;FiringResult&gt; TriggerJobAndWait&lt;TInput&gt;(this IScheduler scheduler, JobKey jobKey, TInput input, TimeSpan timeout, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler to fire the job on.</p>
+</dd>
+    <dt><code>jobKey</code> <a class="xref" href="Quartz.JobKey.html">JobKey</a></dt>
+    <dd><p>The stored job to fire.</p>
+</dd>
+    <dt><code>input</code> <span class="xref">TInput</span></dt>
+    <dd><p>The payload the firing carries, put on the trigger.</p>
+</dd>
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>How long to wait; it stops the wait, never the job.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction; it stops the wait, never the job.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.FiringResult.html">FiringResult</a>&gt;</dt>
+    <dd><p>How the firing ended, or <a class="xref" href="Quartz.FiringWaitStatus.html#Quartz_FiringWaitStatus_Pending">Pending</a> when the timeout ran out first.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TInput</code></dt>
+    <dd><p>The input's type, inferred from <code class="paramref">input</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_SchedulerWaitExtensions_TriggerJobAndWait__1_Quartz_IScheduler_Quartz_JobKey___0_System_TimeSpan_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><remarks>
+The firing <a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_TriggerJob_Quartz_JobKey_Quartz_JobDataMap_System_Threading_CancellationToken_">TriggerJob(JobKey, JobDataMap?, CancellationToken)</a> makes: a one-shot trigger named <code>MT_</code> and a number in
+the default group, marked manual, in the execution group <code>TriggerJob</code> would give it. Its key is on
+<a class="xref" href="Quartz.FiringResult.html#Quartz_FiringResult_TriggerKey">TriggerKey</a>.
+</remarks>
+The input goes under <a class="xref" href="Quartz.SchedulerConstants.html#Quartz_SchedulerConstants_JobInput">JobInput</a>, as with
+<a class="xref" href="Quartz.SchedulerJobExtensions.html#Quartz_SchedulerJobExtensions_TriggerJob__1_Quartz_IScheduler_Quartz_JobKey___0_System_Threading_CancellationToken_">TriggerJob&lt;TInput&gt;(IScheduler, JobKey, TInput, CancellationToken)</a>, whose trimming and HTTP notes apply.
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">scheduler</code> or <code class="paramref">jobKey</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p><code class="paramref">input</code> is a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>: the token goes last, as in
+<code>TriggerJobAndWait(jobKey, timeout, token)</code>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p><code class="paramref">timeout</code> is negative and is not <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.timeout.infinitetimespan">InfiniteTimeSpan</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
+    <dd><p>The scheduler cannot wait for a firing, or it is clustered without a history every node writes. Nothing is
+stored.</p>
+</dd>
+    <dt><a class="xref" href="Quartz.SchedulerException.html">SchedulerException</a></dt>
+    <dd><p>The scheduler has been shut down, or shut down while waiting.</p>
+</dd>
+    <dt><a class="xref" href="Quartz.JobPersistenceException.html">JobPersistenceException</a></dt>
+    <dd><p>No job is stored under <code class="paramref">jobKey</code>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_SchedulerWaitExtensions_WaitForFiring_" data-uid="Quartz.SchedulerWaitExtensions.WaitForFiring*"></a>
+
+  <h3 id="Quartz_SchedulerWaitExtensions_WaitForFiring_Quartz_IScheduler_Quartz_TriggerKey_System_TimeSpan_System_Threading_CancellationToken_" data-uid="Quartz.SchedulerWaitExtensions.WaitForFiring(Quartz.IScheduler,Quartz.TriggerKey,System.TimeSpan,System.Threading.CancellationToken)">
+  WaitForFiring(IScheduler, TriggerKey, TimeSpan, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SchedulerWaitExtensions.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits up to <code class="paramref">timeout</code> for how the next firing of the trigger ends, or, for a trigger
+already gone, for what its newest row in the execution history says.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ValueTask&lt;FiringResult&gt; WaitForFiring(this IScheduler scheduler, TriggerKey triggerKey, TimeSpan timeout, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scheduler</code> <a class="xref" href="Quartz.IScheduler.html">IScheduler</a></dt>
+    <dd><p>The scheduler the trigger is stored in.</p>
+</dd>
+    <dt><code>triggerKey</code> <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></dt>
+    <dd><p>The trigger whose firing to wait for.</p>
+</dd>
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>How long to wait; it stops the wait, never the job.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation instruction; it stops the wait, never the job.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Quartz.FiringResult.html">FiringResult</a>&gt;</dt>
+    <dd><p>How the firing ended, or where the wait stood when it answered.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_SchedulerWaitExtensions_WaitForFiring_Quartz_IScheduler_Quartz_TriggerKey_System_TimeSpan_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The second half of <code>TriggerJobAndWait</code>: after <a class="xref" href="Quartz.FiringWaitStatus.html#Quartz_FiringWaitStatus_Pending">Pending</a>, wait again with
+<a class="xref" href="Quartz.FiringResult.html#Quartz_FiringResult_TriggerKey">TriggerKey</a>. Also the wait for a trigger stored another way, such as by
+<a class="xref" href="Quartz.SchedulerJobExtensions.html#Quartz_SchedulerJobExtensions_TriggerJob__1_Quartz_IScheduler_Quartz_JobKey___0_System_Threading_CancellationToken_">TriggerJob&lt;TInput&gt;(IScheduler, JobKey, TInput, CancellationToken)</a> or the named-key
+<a class="xref" href="Quartz.SchedulerJobExtensions.html#Quartz_SchedulerJobExtensions_TriggerJob_Quartz_IScheduler_Quartz_JobKey_Quartz_JobDataMap_Quartz_TriggerKey_System_Threading_CancellationToken_">TriggerJob(IScheduler, JobKey, JobDataMap?, TriggerKey, CancellationToken)</a>.
+</p>
+<p>
+A firing that ended before the wait began is read from the execution history. Without one it answers
+<a class="xref" href="Quartz.FiringWaitStatus.html#Quartz_FiringWaitStatus_Unknown">Unknown</a>, as it does for a trigger unscheduled or whose job was deleted while
+waited on, and for a row retention has trimmed.
+</p>
+<p>
+The timeout stops the wait and never the job, as the token does.
+</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">scheduler</code> or <code class="paramref">triggerKey</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p><code class="paramref">timeout</code> is negative and is not <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.timeout.infinitetimespan">InfiniteTimeSpan</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
+    <dd><p>The scheduler cannot wait for a firing, or it is clustered without a history every node writes.</p>
+</dd>
+    <dt><a class="xref" href="Quartz.SchedulerException.html">SchedulerException</a></dt>
+    <dd><p>The scheduler has been shut down, or shut down while waiting.</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/SchedulerWaitExtensions.cs/#L58" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

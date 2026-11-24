@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class FireInstanceLogDto | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class FireInstanceLogDto | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="One read of a running firing&#39;s log, as the dashboard shows it (#4437). Added in 4.9.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_Dashboard_Services_FireInstanceLogDto.md&amp;value=---%0Auid%3A%20Quartz.Dashboard.Services.FireInstanceLogDto%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.Dashboard.Services.FireInstanceLogDto">
+
+
+
+  <h1 id="Quartz_Dashboard_Services_FireInstanceLogDto" data-uid="Quartz.Dashboard.Services.FireInstanceLogDto" class="text-break">
+Class FireInstanceLogDto  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L1772"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a>.<span class="xref">Dashboard</span>.<a class="xref" href="Quartz.Dashboard.Services.html">Services</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.Dashboard.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>One read of a running firing's log, as the dashboard shows it (#4437). Added in 4.9.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed record FireInstanceLogDto : IEquatable&lt;FireInstanceLogDto&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">FireInstanceLogDto</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Quartz.Dashboard.Services.FireInstanceLogDto.html">FireInstanceLogDto</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Quartz_Dashboard_Services_FireInstanceLogDto__ctor_" data-uid="Quartz.Dashboard.Services.FireInstanceLogDto.#ctor*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_FireInstanceLogDto__ctor_Quartz_Dashboard_Services_FireInstanceLogStatus_System_String_System_Collections_Generic_List_System_String__System_Int64_" data-uid="Quartz.Dashboard.Services.FireInstanceLogDto.#ctor(Quartz.Dashboard.Services.FireInstanceLogStatus,System.String,System.Collections.Generic.List{System.String},System.Int64)">
+  FireInstanceLogDto(FireInstanceLogStatus, string?, List&lt;string&gt;, long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L1772"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>One read of a running firing's log, as the dashboard shows it (#4437). Added in 4.9.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FireInstanceLogDto(FireInstanceLogStatus Status, string? SchedulerInstanceId, List&lt;string&gt; Entries, long Next)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Status</code> <a class="xref" href="Quartz.Dashboard.Services.FireInstanceLogStatus.html">FireInstanceLogStatus</a></dt>
+    <dd><p>Whether there are lines to read where it was asked, and why not when there are none.</p>
+</dd>
+    <dt><code>SchedulerInstanceId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The node that answered; with <a class="xref" href="Quartz.Dashboard.Services.FireInstanceLogStatus.html#Quartz_Dashboard_Services_FireInstanceLogStatus_NotRunning">NotRunning</a>, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when the
+store lists no such firing, and with <a class="xref" href="Quartz.Dashboard.Services.FireInstanceLogStatus.html#Quartz_Dashboard_Services_FireInstanceLogStatus_Unreachable">Unreachable</a> the node no member fronts.</p>
+</dd>
+    <dt><code>Entries</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>The entries after the cursor, oldest first, as Execution Detail prints them.</p>
+</dd>
+    <dt><code>Next</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The <a class="xref" href="Quartz.Dashboard.Services.DashboardFireInstanceLogQuery.html#Quartz_Dashboard_Services_DashboardFireInstanceLogQuery_After">After</a> of the next read.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quartz_Dashboard_Services_FireInstanceLogDto_Entries_" data-uid="Quartz.Dashboard.Services.FireInstanceLogDto.Entries*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_FireInstanceLogDto_Entries" data-uid="Quartz.Dashboard.Services.FireInstanceLogDto.Entries">
+  Entries
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L1775"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The entries after the cursor, oldest first, as Execution Detail prints them.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; Entries { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_FireInstanceLogDto_HasMore_" data-uid="Quartz.Dashboard.Services.FireInstanceLogDto.HasMore*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_FireInstanceLogDto_HasMore" data-uid="Quartz.Dashboard.Services.FireInstanceLogDto.HasMore">
+  HasMore
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L1788"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>More entries are kept than this answer carried: read again now.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasMore { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_FireInstanceLogDto_Missed_" data-uid="Quartz.Dashboard.Services.FireInstanceLogDto.Missed*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_FireInstanceLogDto_Missed" data-uid="Quartz.Dashboard.Services.FireInstanceLogDto.Missed">
+  Missed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L1783"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Entries the capture dropped after <a class="xref" href="Quartz.Dashboard.Services.DashboardFireInstanceLogQuery.html#Quartz_Dashboard_Services_DashboardFireInstanceLogQuery_After">After</a> and before this read: it
+keeps only its newest lines, <a class="xref" href="Quartz.ExecutionLogCaptureOptions.html#Quartz_ExecutionLogCaptureOptions_MaxLines">MaxLines</a> and
+<a class="xref" href="Quartz.ExecutionLogCaptureOptions.html#Quartz_ExecutionLogCaptureOptions_MaxBytes">MaxBytes</a> of them.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long Missed { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_FireInstanceLogDto_Next_" data-uid="Quartz.Dashboard.Services.FireInstanceLogDto.Next*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_FireInstanceLogDto_Next" data-uid="Quartz.Dashboard.Services.FireInstanceLogDto.Next">
+  Next
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L1776"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Quartz.Dashboard.Services.DashboardFireInstanceLogQuery.html#Quartz_Dashboard_Services_DashboardFireInstanceLogQuery_After">After</a> of the next read.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long Next { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_FireInstanceLogDto_SchedulerInstanceId_" data-uid="Quartz.Dashboard.Services.FireInstanceLogDto.SchedulerInstanceId*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_FireInstanceLogDto_SchedulerInstanceId" data-uid="Quartz.Dashboard.Services.FireInstanceLogDto.SchedulerInstanceId">
+  SchedulerInstanceId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L1774"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The node that answered; with <a class="xref" href="Quartz.Dashboard.Services.FireInstanceLogStatus.html#Quartz_Dashboard_Services_FireInstanceLogStatus_NotRunning">NotRunning</a>, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when the
+store lists no such firing, and with <a class="xref" href="Quartz.Dashboard.Services.FireInstanceLogStatus.html#Quartz_Dashboard_Services_FireInstanceLogStatus_Unreachable">Unreachable</a> the node no member fronts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? SchedulerInstanceId { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quartz_Dashboard_Services_FireInstanceLogDto_Status_" data-uid="Quartz.Dashboard.Services.FireInstanceLogDto.Status*"></a>
+
+  <h3 id="Quartz_Dashboard_Services_FireInstanceLogDto_Status" data-uid="Quartz.Dashboard.Services.FireInstanceLogDto.Status">
+  Status
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L1773"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether there are lines to read where it was asked, and why not when there are none.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FireInstanceLogStatus Status { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.Dashboard.Services.FireInstanceLogStatus.html">FireInstanceLogStatus</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz.Dashboard/Services/IQuartzApiClient.cs/#L1772" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

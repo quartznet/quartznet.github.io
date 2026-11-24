@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IListenerManager | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IListenerManager | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Client programs may be interested in the &#39;listener&#39; interfaces that are available from Quartz. The  interface provides notifications of Job executions. The  interface provides notifications of  firings. The  interface provides notifications of scheduler events and errors.  Listeners can be associated with local schedulers through the  interface.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_IListenerManager.md&amp;value=---%0Auid%3A%20Quartz.IListenerManager%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.IListenerManager">
+
+
+
+  <h1 id="Quartz_IListenerManager" data-uid="Quartz.IListenerManager" class="text-break">
+Interface IListenerManager  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/IListenerManager.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Client programs may be interested in the 'listener' interfaces that are
+available from Quartz. The <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> interface
+provides notifications of Job executions. The
+<a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> interface provides notifications of
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a> firings. The <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a>
+interface provides notifications of scheduler events and
+errors.  Listeners can be associated with local schedulers through the
+<a class="xref" href="Quartz.IListenerManager.html">IListenerManager</a> interface.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IListenerManager</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 id="Quartz_IListenerManager_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>All three kinds of listener are managed the same way: a listener is identified by its name,
+registering one under a name that is already taken replaces it, and it is removed by that
+same name.</p>
+<p>
+The matchers that decide which jobs and triggers a listener hears about are part of that
+registration, because registration is the moment anyone knows them. A listener that has to hear
+about something else is registered again under the same name, with the matchers it needs.
+</p>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_IListenerManager_AddJobListener_" data-uid="Quartz.IListenerManager.AddJobListener*"></a>
+
+  <h3 id="Quartz_IListenerManager_AddJobListener_Quartz_IJobListener_System_Collections_Generic_IReadOnlyCollection_Quartz_IMatcher_Quartz_JobKey___" data-uid="Quartz.IListenerManager.AddJobListener(Quartz.IJobListener,System.Collections.Generic.IReadOnlyCollection{Quartz.IMatcher{Quartz.JobKey}})">
+  AddJobListener(IJobListener, params IReadOnlyCollection&lt;IMatcher&lt;JobKey&gt;&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/IListenerManager.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add the given <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> to the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>,
+and register it to receive events for Jobs that are matched by ANY of the
+given Matchers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AddJobListener(IJobListener jobListener, params IReadOnlyCollection&lt;IMatcher&lt;JobKey&gt;&gt; matchers)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>jobListener</code> <a class="xref" href="Quartz.IJobListener.html">IJobListener</a></dt>
+    <dd></dd>
+    <dt><code>matchers</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IListenerManager_AddJobListener_Quartz_IJobListener_System_Collections_Generic_IReadOnlyCollection_Quartz_IMatcher_Quartz_JobKey____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+If no matchers are provided, the <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> will receive all events.
+</p>
+<p>
+If a <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> with the same name is already registered, that listener
+and the associated matchers will be replaced.
+</p>
+<p>
+The listener's shape is checked as it is added. Every member of <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> has a
+default implementation, so a public method carrying a notification's name but not its signature
+still compiles — it just stops implementing anything, and the default runs in its place with
+nothing to say the method is dead. Such a listener is refused rather than attached and never
+called.
+</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.SchedulerConfigException.html">SchedulerConfigException</a></dt>
+    <dd><p><code class="paramref">jobListener</code> has a public method with an <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> member's
+name but not its signature, so that member is not implemented.</p>
+</dd>
+  </dl>
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;T&gt;</div>
+    <div><a class="xref" href="Quartz.EverythingMatcher-1.html">EverythingMatcher</a>&lt;TKey&gt;</div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_IListenerManager_AddSchedulerListener_" data-uid="Quartz.IListenerManager.AddSchedulerListener*"></a>
+
+  <h3 id="Quartz_IListenerManager_AddSchedulerListener_Quartz_ISchedulerListener_" data-uid="Quartz.IListenerManager.AddSchedulerListener(Quartz.ISchedulerListener)">
+  AddSchedulerListener(ISchedulerListener)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/IListenerManager.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Register the given <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a> with the
+<a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AddSchedulerListener(ISchedulerListener schedulerListener)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>schedulerListener</code> <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IListenerManager_AddSchedulerListener_Quartz_ISchedulerListener__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+If a <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a> with the same <a class="xref" href="Quartz.ISchedulerListener.html#Quartz_ISchedulerListener_Name">Name</a>
+is already registered, that listener will be replaced.
+</p>
+<p>
+The listener's shape is checked as it is added. Every member of <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a>
+has a default implementation, so a public method carrying a notification's name but not its
+signature still compiles — it just stops implementing anything, and the default runs in its place
+with nothing to say the method is dead. Such a listener is refused rather than attached and never
+called.
+</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.SchedulerConfigException.html">SchedulerConfigException</a></dt>
+    <dd><p><code class="paramref">schedulerListener</code> has a public method with an <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a>
+member's name but not its signature, so that member is not implemented.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_IListenerManager_AddTriggerListener_" data-uid="Quartz.IListenerManager.AddTriggerListener*"></a>
+
+  <h3 id="Quartz_IListenerManager_AddTriggerListener_Quartz_ITriggerListener_System_Collections_Generic_IReadOnlyCollection_Quartz_IMatcher_Quartz_TriggerKey___" data-uid="Quartz.IListenerManager.AddTriggerListener(Quartz.ITriggerListener,System.Collections.Generic.IReadOnlyCollection{Quartz.IMatcher{Quartz.TriggerKey}})">
+  AddTriggerListener(ITriggerListener, params IReadOnlyCollection&lt;IMatcher&lt;TriggerKey&gt;&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/IListenerManager.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add the given <a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> to the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>,
+and register it to receive events for Triggers that are matched by ANY of the
+given Matchers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AddTriggerListener(ITriggerListener triggerListener, params IReadOnlyCollection&lt;IMatcher&lt;TriggerKey&gt;&gt; matchers)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>triggerListener</code> <a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a></dt>
+    <dd></dd>
+    <dt><code>matchers</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_IListenerManager_AddTriggerListener_Quartz_ITriggerListener_System_Collections_Generic_IReadOnlyCollection_Quartz_IMatcher_Quartz_TriggerKey____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+If no matchers are provided, the <a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> will receive all events.
+</p>
+<p>
+If a <a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> with the same name is already registered, that listener
+and the associated matchers will be replaced.
+</p>
+<p>
+The listener's shape is checked as it is added. Every member of <a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> has
+a default implementation, so a public method carrying a notification's name but not its signature
+still compiles — it just stops implementing anything, and the default runs in its place with
+nothing to say the method is dead. Such a listener is refused rather than attached and never
+called.
+</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.SchedulerConfigException.html">SchedulerConfigException</a></dt>
+    <dd><p><code class="paramref">triggerListener</code> has a public method with an <a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a>
+member's name but not its signature, so that member is not implemented.</p>
+</dd>
+  </dl>
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;T&gt;</div>
+    <div><a class="xref" href="Quartz.EverythingMatcher-1.html">EverythingMatcher</a>&lt;TKey&gt;</div>
+    </dd>
+  </dl>
+
+
+  <a id="Quartz_IListenerManager_GetJobListener_" data-uid="Quartz.IListenerManager.GetJobListener*"></a>
+
+  <h3 id="Quartz_IListenerManager_GetJobListener_System_String_" data-uid="Quartz.IListenerManager.GetJobListener(System.String)">
+  GetJobListener(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/IListenerManager.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> that has the given name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IJobListener? GetJobListener(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> to retrieve.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IJobListener.html">IJobListener</a></dt>
+    <dd><p>The <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> registered under the name, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when
+there is none.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">name</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_IListenerManager_GetJobListeners_" data-uid="Quartz.IListenerManager.GetJobListeners*"></a>
+
+  <h3 id="Quartz_IListenerManager_GetJobListeners" data-uid="Quartz.IListenerManager.GetJobListeners">
+  GetJobListeners()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/IListenerManager.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all of the <a class="xref" href="Quartz.IJobListener.html">IJobListener</a>s in the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyList&lt;IJobListener&gt; GetJobListeners()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Quartz.IJobListener.html">IJobListener</a>&gt;</dt>
+    <dd><p>A shallow copy of all <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> instances that are registered.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_IListenerManager_GetSchedulerListener_" data-uid="Quartz.IListenerManager.GetSchedulerListener*"></a>
+
+  <h3 id="Quartz_IListenerManager_GetSchedulerListener_System_String_" data-uid="Quartz.IListenerManager.GetSchedulerListener(System.String)">
+  GetSchedulerListener(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/IListenerManager.cs/#L201"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a> registered under the given name, or
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when there is none.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ISchedulerListener? GetSchedulerListener(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">name</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_IListenerManager_GetSchedulerListeners_" data-uid="Quartz.IListenerManager.GetSchedulerListeners*"></a>
+
+  <h3 id="Quartz_IListenerManager_GetSchedulerListeners" data-uid="Quartz.IListenerManager.GetSchedulerListeners">
+  GetSchedulerListeners()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/IListenerManager.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all of the <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a> instances in the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyList&lt;ISchedulerListener&gt; GetSchedulerListeners()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a>&gt;</dt>
+    <dd><p>A shallow copy of all <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a> instances that are registered.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_IListenerManager_GetTriggerListener_" data-uid="Quartz.IListenerManager.GetTriggerListener*"></a>
+
+  <h3 id="Quartz_IListenerManager_GetTriggerListener_System_String_" data-uid="Quartz.IListenerManager.GetTriggerListener(System.String)">
+  GetTriggerListener(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/IListenerManager.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the <a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> registered under the given name, or
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when there is none.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITriggerListener? GetTriggerListener(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_IListenerManager_GetTriggerListeners_" data-uid="Quartz.IListenerManager.GetTriggerListeners*"></a>
+
+  <h3 id="Quartz_IListenerManager_GetTriggerListeners" data-uid="Quartz.IListenerManager.GetTriggerListeners">
+  GetTriggerListeners()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/IListenerManager.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all of the <a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> instances in the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyList&lt;ITriggerListener&gt; GetTriggerListeners()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a>&gt;</dt>
+    <dd><p>A shallow copy of all <a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> instances that are registered.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_IListenerManager_RemoveJobListener_" data-uid="Quartz.IListenerManager.RemoveJobListener*"></a>
+
+  <h3 id="Quartz_IListenerManager_RemoveJobListener_System_String_" data-uid="Quartz.IListenerManager.RemoveJobListener(System.String)">
+  RemoveJobListener(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/IListenerManager.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Remove the identified <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> from the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool RemoveJobListener(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the identified listener was found in the list, and removed;
+otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">name</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_IListenerManager_RemoveSchedulerListener_" data-uid="Quartz.IListenerManager.RemoveSchedulerListener*"></a>
+
+  <h3 id="Quartz_IListenerManager_RemoveSchedulerListener_System_String_" data-uid="Quartz.IListenerManager.RemoveSchedulerListener(System.String)">
+  RemoveSchedulerListener(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/IListenerManager.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Remove the identified <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a> from the
+<a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool RemoveSchedulerListener(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The <a class="xref" href="Quartz.ISchedulerListener.html#Quartz_ISchedulerListener_Name">Name</a> of the listener to remove.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>true if the identified listener was found in the list, and removed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">name</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Quartz_IListenerManager_RemoveTriggerListener_" data-uid="Quartz.IListenerManager.RemoveTriggerListener*"></a>
+
+  <h3 id="Quartz_IListenerManager_RemoveTriggerListener_System_String_" data-uid="Quartz.IListenerManager.RemoveTriggerListener(System.String)">
+  RemoveTriggerListener(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/IListenerManager.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes the identified <a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> from the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool RemoveTriggerListener(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>true if the identified listener was found in the list, and removed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/IListenerManager.cs/#L47" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

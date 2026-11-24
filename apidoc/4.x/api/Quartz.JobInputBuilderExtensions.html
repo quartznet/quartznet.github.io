@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class JobInputBuilderExtensions | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class JobInputBuilderExtensions | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Puts an &#39;s input on the job or the trigger being built.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_JobInputBuilderExtensions.md&amp;value=---%0Auid%3A%20Quartz.JobInputBuilderExtensions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.JobInputBuilderExtensions">
+
+
+
+  <h1 id="Quartz_JobInputBuilderExtensions" data-uid="Quartz.JobInputBuilderExtensions" class="text-break">
+Class JobInputBuilderExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/JobInputBuilderExtensions.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Puts an <a class="xref" href="Quartz.IJob-1.html">IJob&lt;TInput&gt;</a>'s input on the job or the trigger being built.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class JobInputBuilderExtensions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">JobInputBuilderExtensions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_JobInputBuilderExtensions_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Extensions rather than members, because a method cannot constrain its own type's type parameter:
+<code>JobBuilder&lt;TJob&gt;</code> is declared for any <code>TJob : IJob</code>, and a member saying
+<code>where TJob : IJob&lt;TInput&gt;</code> is CS0699. Written here, the constraint is the method's own
+and the compiler can check it — so <code>UsingInput</code> is offered on a builder for a typed job and
+refused on a builder for a job that takes no input.
+</p>
+<p>
+The input type is inferred from the argument's <em>static</em> type. A payload held as a base type —
+or as <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> — is stored and read back as that type unless the type argument is given
+explicitly: <code>builder.UsingInput&lt;SendEmailJob, SendEmail&gt;(payload)</code>.
+</p>
+<p>
+The value goes into the map as it is; the scheduler serializes it as the job or trigger is stored,
+which is the only point at which a serializer exists. So a builder needs none, and a job data map
+built here can still be inspected before it is scheduled.
+</p>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_JobInputBuilderExtensions_UsingInput_" data-uid="Quartz.JobInputBuilderExtensions.UsingInput*"></a>
+
+  <h3 id="Quartz_JobInputBuilderExtensions_UsingInput__2_Quartz_IJobConfigurator___0____1_" data-uid="Quartz.JobInputBuilderExtensions.UsingInput``2(Quartz.IJobConfigurator{``0},``1)">
+  UsingInput&lt;TJob, TInput&gt;(IJobConfigurator&lt;TJob&gt;, TInput)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/JobInputBuilderExtensions.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the input the job carries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IJobConfigurator&lt;TJob&gt; UsingInput&lt;TJob, TInput&gt;(this IJobConfigurator&lt;TJob&gt; configurator, TInput input) where TJob : IJob&lt;TInput&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configurator</code> <a class="xref" href="Quartz.IJobConfigurator-1.html">IJobConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>The job being configured.</p>
+</dd>
+    <dt><code>input</code> <span class="xref">TInput</span></dt>
+    <dd><p>The payload the job runs with.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.IJobConfigurator-1.html">IJobConfigurator</a>&lt;TJob&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TJob</code></dt>
+    <dd></dd>
+    <dt><code>TInput</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_JobInputBuilderExtensions_UsingInput_" data-uid="Quartz.JobInputBuilderExtensions.UsingInput*"></a>
+
+  <h3 id="Quartz_JobInputBuilderExtensions_UsingInput__2_Quartz_ITriggerConfigurator___0____1_" data-uid="Quartz.JobInputBuilderExtensions.UsingInput``2(Quartz.ITriggerConfigurator{``0},``1)">
+  UsingInput&lt;TJob, TInput&gt;(ITriggerConfigurator&lt;TJob&gt;, TInput)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/JobInputBuilderExtensions.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the input this trigger's firings carry, overriding any input on the job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ITriggerConfigurator&lt;TJob&gt; UsingInput&lt;TJob, TInput&gt;(this ITriggerConfigurator&lt;TJob&gt; configurator, TInput input) where TJob : IJob&lt;TInput&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configurator</code> <a class="xref" href="Quartz.ITriggerConfigurator-1.html">ITriggerConfigurator</a>&lt;TJob&gt;</dt>
+    <dd><p>The trigger being configured.</p>
+</dd>
+    <dt><code>input</code> <span class="xref">TInput</span></dt>
+    <dd><p>The payload the job runs with when this trigger fires it.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.ITriggerConfigurator-1.html">ITriggerConfigurator</a>&lt;TJob&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TJob</code></dt>
+    <dd></dd>
+    <dt><code>TInput</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Quartz_JobInputBuilderExtensions_UsingInput_" data-uid="Quartz.JobInputBuilderExtensions.UsingInput*"></a>
+
+  <h3 id="Quartz_JobInputBuilderExtensions_UsingInput__2_Quartz_JobBuilder___0____1_" data-uid="Quartz.JobInputBuilderExtensions.UsingInput``2(Quartz.JobBuilder{``0},``1)">
+  UsingInput&lt;TJob, TInput&gt;(JobBuilder&lt;TJob&gt;, TInput)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/JobInputBuilderExtensions.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the input the job carries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JobBuilder&lt;TJob&gt; UsingInput&lt;TJob, TInput&gt;(this JobBuilder&lt;TJob&gt; builder, TInput input) where TJob : IJob&lt;TInput&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.JobBuilder-1.html">JobBuilder</a>&lt;TJob&gt;</dt>
+    <dd><p>The job being built.</p>
+</dd>
+    <dt><code>input</code> <span class="xref">TInput</span></dt>
+    <dd><p>The payload the job runs with.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.JobBuilder-1.html">JobBuilder</a>&lt;TJob&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TJob</code></dt>
+    <dd></dd>
+    <dt><code>TInput</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_JobInputBuilderExtensions_UsingInput__2_Quartz_JobBuilder___0____1__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>An input on the job is the default for every one of its triggers, and any trigger can override
+it. Note that a <a class="xref" href="Quartz.PersistJobDataAfterExecutionAttribute.html">PersistJobDataAfterExecutionAttribute</a> job re-stores its own map
+after every firing, so an input meant to differ per firing belongs on the trigger.</p>
+</div>
+
+
+
+
+  <a id="Quartz_JobInputBuilderExtensions_UsingInput_" data-uid="Quartz.JobInputBuilderExtensions.UsingInput*"></a>
+
+  <h3 id="Quartz_JobInputBuilderExtensions_UsingInput__2_Quartz_TriggerBuilder___0____1_" data-uid="Quartz.JobInputBuilderExtensions.UsingInput``2(Quartz.TriggerBuilder{``0},``1)">
+  UsingInput&lt;TJob, TInput&gt;(TriggerBuilder&lt;TJob&gt;, TInput)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/JobInputBuilderExtensions.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the input this trigger's firings carry, overriding any input on the job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TriggerBuilder&lt;TJob&gt; UsingInput&lt;TJob, TInput&gt;(this TriggerBuilder&lt;TJob&gt; builder, TInput input) where TJob : IJob&lt;TInput&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="Quartz.TriggerBuilder-1.html">TriggerBuilder</a>&lt;TJob&gt;</dt>
+    <dd><p>The trigger being built.</p>
+</dd>
+    <dt><code>input</code> <span class="xref">TInput</span></dt>
+    <dd><p>The payload the job runs with when this trigger fires it.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.TriggerBuilder-1.html">TriggerBuilder</a>&lt;TJob&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TJob</code></dt>
+    <dd></dd>
+    <dt><code>TInput</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h2 id="seealso">See Also</h2>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IJob-1.html">IJob</a>&lt;TInput&gt;</div>
+      <div><a class="xref" href="Quartz.SchedulerConstants.html#Quartz_SchedulerConstants_JobInput">JobInput</a></div>
+  </div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/JobInputBuilderExtensions.cs/#L50" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

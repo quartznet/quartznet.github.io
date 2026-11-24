@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class JobExecutionContextOccurrenceExtensions | Quartz.NET 4.x API reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class JobExecutionContextOccurrenceExtensions | Quartz.NET 4.x API reference ">
+      
+      <meta name="description" content="Reads which occurrence a firing serves, and why it runs.">
+      <link rel="icon" href="..//favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/quartznet/quartznet/new/main/apiSpec/new?filename=Quartz_JobExecutionContextOccurrenceExtensions.md&amp;value=---%0Auid%3A%20Quartz.JobExecutionContextOccurrenceExtensions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//quartz-logo-small.png" alt="Quartz.NET">
+            Quartz.NET
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quartz.JobExecutionContextOccurrenceExtensions">
+
+
+
+  <h1 id="Quartz_JobExecutionContextOccurrenceExtensions" data-uid="Quartz.JobExecutionContextOccurrenceExtensions" class="text-break">
+Class JobExecutionContextOccurrenceExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/JobExecutionContextOccurrenceExtensions.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quartz.html">Quartz</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quartz.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Reads which occurrence a firing serves, and why it runs.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class JobExecutionContextOccurrenceExtensions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">JobExecutionContextOccurrenceExtensions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Quartz_JobExecutionContextOccurrenceExtensions_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>An extension rather than a member of <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a>, so that every hand-written
+context — a test double, an adapter — keeps compiling, and reads the answer from what it already has.</p>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quartz_JobExecutionContextOccurrenceExtensions_GetOccurrence_" data-uid="Quartz.JobExecutionContextOccurrenceExtensions.GetOccurrence*"></a>
+
+  <h3 id="Quartz_JobExecutionContextOccurrenceExtensions_GetOccurrence_Quartz_IJobExecutionContext_" data-uid="Quartz.JobExecutionContextOccurrenceExtensions.GetOccurrence(Quartz.IJobExecutionContext)">
+  GetOccurrence(IJobExecutionContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/JobExecutionContextOccurrenceExtensions.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The occurrence this firing serves, why it runs, and which attempt at it this is.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FiringOccurrence GetOccurrence(this IJobExecutionContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></dt>
+    <dd><p>The firing.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quartz.FiringOccurrence.html">FiringOccurrence</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Quartz_JobExecutionContextOccurrenceExtensions_GetOccurrence_Quartz_IJobExecutionContext__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The first that applies decides the origin:
+</p>
+<ul><li>
+<a class="xref" href="Quartz.FiringOrigin.html#Quartz_FiringOrigin_Backfill">Backfill</a> when <a class="xref" href="Quartz.JobExecutionContextBackfillExtensions.html#Quartz_JobExecutionContextBackfillExtensions_GetBackfillSlot_Quartz_IJobExecutionContext_">GetBackfillSlot(IJobExecutionContext)</a>
+answers a slot. The occurrence is the slot. A backfill of a firing that was itself asked for by hand is a
+backfill.
+</li><li>
+<a class="xref" href="Quartz.FiringOrigin.html#Quartz_FiringOrigin_Manual">Manual</a> when the trigger carries <a class="xref" href="Quartz.SchedulerConstants.html#Quartz_SchedulerConstants_ManualTrigger">ManualTrigger</a>,
+as the one <a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_TriggerJob_Quartz_JobKey_Quartz_JobDataMap_System_Threading_CancellationToken_">TriggerJob(JobKey, JobDataMap?, CancellationToken)</a> stores does. The occurrence is
+<a class="xref" href="Quartz.IJobExecutionContext.html#Quartz_IJobExecutionContext_ScheduledFireTimeUtc">ScheduledFireTimeUtc</a>, which for such a trigger is when the run was
+asked for.
+</li><li>
+<a class="xref" href="Quartz.FiringOrigin.html#Quartz_FiringOrigin_Schedule">Schedule</a> otherwise. The occurrence is
+<a class="xref" href="Quartz.IJobExecutionContext.html#Quartz_IJobExecutionContext_ScheduledFireTimeUtc">ScheduledFireTimeUtc</a>: the same on every retry, and the missed time
+on a misfire catch-up.
+</li></ul>
+<p>
+A recovery keeps the origin and occurrence of the firing it runs again: the recovery trigger carries
+that firing's job data, and is scheduled for the time that firing was, so its
+<a class="xref" href="Quartz.IJobExecutionContext.html#Quartz_IJobExecutionContext_ScheduledFireTimeUtc">ScheduledFireTimeUtc</a> is the original's. One gap: when the firing
+recovered was itself a retry or a misfire catch-up, the job store recorded the time that attempt was
+due rather than the occurrence, and the recovery serves that time, with
+<a class="xref" href="Quartz.FiringOccurrence.html#Quartz_FiringOccurrence_RetryAttempt">RetryAttempt</a> back at <code>0</code>.
+</p>
+<p>
+A firing with no scheduled fire time is taken to be due when it fired.
+</p>
+<p>
+The markers are read from <a class="xref" href="Quartz.IJobExecutionContext.html#Quartz_IJobExecutionContext_Trigger">Trigger</a>'s own
+<a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>, never the merged one, so a job whose own data happened to carry one does
+not make every firing of it look manual or backfilled.
+</p>
+<p>
+Two backfills of one slot answer the same, and their triggers share a key, because a backfill names its
+trigger after the slot. What tells them apart is <a class="xref" href="Quartz.IJobExecutionContext.html#Quartz_IJobExecutionContext_ScheduledFireTimeUtc">ScheduledFireTimeUtc</a>:
+the time each backfill started its firing, the same on every retry of it.
+</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">context</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <h2 id="seealso">See Also</h2>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.JobExecutionContextBackfillExtensions.html">JobExecutionContextBackfillExtensions</a></div>
+  </div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/quartznet/quartznet/blob/main/src/Quartz/JobExecutionContextOccurrenceExtensions.cs/#L34" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Quartz.NET 4.x API reference &middot; <a href="https://www.quartz-scheduler.net/documentation/">Documentation</a> &middot; <a href="https://github.com/quartznet/quartznet">GitHub</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
